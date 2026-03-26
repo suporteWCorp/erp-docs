@@ -1,0 +1,37 @@
+site_name: Guia de Suporte WCorp
+theme:
+  name: readthedocs
+  logo: wcorp-logo.png
+  highlightjs: true
+  hljs_languages:
+    - yaml
+    - sql
+    - dockerfile
+
+nav:
+  - Início: index.md
+  
+  - Módulo Comercial:
+      - 'Clientes': comercial/comercial-clientes.md
+      - 'Grupo Clientes': comercial/comercial-grupo-clientes.md
+      - 'Pedidos': comercial/pedidos.md      
+  - Módulo Faturamento:
+      - 'Nota Fiscal': faturamento/faturamento-nf.md
+      - 'Cupom Fiscal': fiscal/erros-notas.md
+  - Módulo Materiais:
+      - 'Cadastro de Materiais': materiais/materiais.md
+      - 'Lote / Estoque': materiais/lote-estoque.md
+  - Módulo Administração:
+      - 'Usuários': administracao/usuarios.md
+      - 'Grupo Usuários': administracao/grupo-usuarios.md
+      - 'Empresas': administracao/empresas.md
+      - 'Natureza de operação': administracao/natureza-op.md
+      - 'NCMs': administracao/ncms.md
+      - 'Condições de pagamento': administracao/condicoes-pagamento.md
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  
+extra_css:
+  - extra.css

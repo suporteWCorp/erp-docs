@@ -1,0 +1,160 @@
+/* ============================================================
+   ESTILO GERAL E COMPONENTES (WCORP)
+   ============================================================ */
+
+code {
+    background-color: #4D4D4D !important;
+    color: #C2C2C2 !important;
+    padding: 2px 5px !important;
+    border-radius: 4px !important;
+    border: 1px solid #111111 !important;
+    font-weight: bold !important;
+}
+
+img {
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    margin: 20px auto !important;
+    border: 1px solid #ddd;
+    display: block;
+}
+
+table thead tr th {
+    background-color: #028090 !important;
+    color: white !important;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+a, a:visited {
+    color: #028090; 
+    font-weight: bold;
+}
+
+h1, h2, h3 {
+    color: #005f66;
+    border-bottom: 1px solid #00A896;
+    padding-bottom: 5px;
+}
+
+/* ============================================================
+   IDENTIDADE VISUAL E FIXAÇÃO DO TOPO
+   ============================================================ */
+
+.wy-nav-side {
+    background: #028090 !important;
+}
+
+/* Área da Logo e Busca */
+.wy-side-nav-search {
+    background-color: #028090 !important;
+    border-bottom: none !important;
+    padding: 20px 15px !important;
+}
+
+.wy-side-nav-search > a img.logo {
+    background-color: transparent !important;
+    border: none !important;
+    max-width: 160px !important;
+    height: auto !important;
+    margin-bottom: 10px;
+}
+
+.wy-side-nav-search input[type="text"] {
+    border-radius: 20px !important;
+    border: 2px solid #005f66 !important;
+    background-color: #ffffff !important;
+}
+
+/* ============================================================
+   MENU LATERAL (REGRAS DE OURO)
+   ============================================================ */
+
+/* 1. Esconder o bloco de 'Início' que fica em cima do Comercial */
+.wy-menu-vertical > ul[data-md-level="0"] > li.toctree-l1:first-child,
+.wy-menu-vertical li.toctree-l1.current > a[href*="index"] {
+    display: none !important;
+}
+
+/* 2. Títulos dos Módulos (COMERCIAL, FATURAMENTO...) */
+.wy-menu-vertical p.caption {
+    color: #ffffff !important;
+    background: rgba(0,0,0,0.15) !important;
+    margin: 20px 0 10px 0 !important;
+    padding: 10px 15px !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+}
+
+/* 3. Itens de navegação (Links) */
+.wy-menu-vertical li a {
+    color: #e0e0e0 !important;
+    padding: 10px 15px 10px 25px !important;
+    display: block !important;
+    background: transparent !important; /* Evita o fundo cinza que apareceu */
+}
+
+/* 4. Item Ativo ou quando passa o mouse */
+.wy-menu-vertical li.current a, 
+.wy-menu-vertical li a:hover {
+    background: #00A896 !important;
+    color: white !important;
+}
+
+/* Limpezas extras */
+.wy-menu-vertical li.toctree-l1 button.toctree-expand {
+    display: none !important;
+}
+
+.wy-menu-vertical {
+    padding-top: 0 !important;
+}
+
+/* ============================================================
+   MENU LATERAL (REVISADO - ALINHAMENTO DE TÍTULOS)
+   ============================================================ */
+
+/* 1. Esconder o bloco de 'Início' que fica em cima do Comercial */
+.wy-menu-vertical > ul[data-md-level="0"] > li.toctree-l1:first-child,
+.wy-menu-vertical li.toctree-l1.current > a[href*="index"] {
+    display: none !important;
+}
+
+/* 2. Títulos dos Módulos (COMERCIAL, FATURAMENTO...) */
+.wy-menu-vertical p.caption {
+    color: #ffffff !important;
+    background: rgba(0,0,0,0.15) !important;
+    margin: 10px 0 0 0 !important; /* Tirei o margin-bottom para não empurrar os itens */
+    padding: 12px 15px !important; /* Aumentei um pouco o respiro interno */
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+    line-height: 1 !important; /* Garante que o texto não "caia" dentro da caixa */
+}
+
+/* 3. Itens de navegação (Links: Clientes, Pedidos...) */
+.wy-menu-vertical li a {
+    color: #e0e0e0 !important;
+    padding: 8px 15px 8px 25px !important; /* Espaçamento equilibrado */
+    display: block !important;
+    background: transparent !important;
+    border: none !important;
+    line-height: 1.5 !important;
+}
+
+/* 4. Item Ativo ou Hover */
+.wy-menu-vertical li.current a, 
+.wy-menu-vertical li a:hover {
+    background: #00A896 !important;
+    color: white !important;
+}
+
+/* Limpeza de botões e espaços sobrando */
+.wy-menu-vertical li.toctree-l1 button.toctree-expand {
+    display: none !important;
+}
+
+.wy-menu-vertical ul {
+    margin-bottom: 0 !important; /* Remove o buraco que ficava embaixo dos grupos */
+}
