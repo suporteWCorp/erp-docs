@@ -1,8 +1,9 @@
 Módulo Comercial - Cadastro de Grupo de Cliente
 
-Para cadastrar um grupo de cliente é  necessário preencher um nome e marcar as opções que se adequam a operação.
+Para cadastrar um grupo de cliente é  necessário preencher o nome. O restante das opções ficam a critério da decisão e do funcionamento da empresa do usuário.
 
-(Deve ser preenchido pelo usuário conforme definição interna da empresa)
+!!! info "Importante"
+    O cadastro deve ser feito pelo usuário.
 
 ![Menu Principal do Comercial](../assets/comercial-grupo-clientes.png)
 
