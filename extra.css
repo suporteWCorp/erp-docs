@@ -2,22 +2,33 @@
    ESTILO WCORP PARA TEMA MATERIAL
    ============================================================ */
 
-/* Ajuste da Logo no Topo */
+/* Ajuste da Logo no Topo - Deixa ela com destaque na barra */
 .md-header__button.md-logo img {
-    height: 40px !important; /* Ajuste o tamanho da logo aqui */
-    width: auto;
+    height: 80px !important; /* Aumentamos um pouco mais */
+    width: auto !important;
+    min-height: 45px; /* Garante que ela não encolha */
+    transform: scale(1.2); /* Dá um leve zoom na imagem */
+    margin-right: 10px; /* Afasta um pouco do título */
+    margin-top: -2px; /* Ajuste fino de centralização */
 }
 
-/* Cor dos Títulos (H1, H2, H3) para bater com o Verde WCorp */
-h1, h2, h3 {
+.md-header__topic {
+    margin-left: 20px;
+}
+
+/* Cor dos Títulos para bater com a identidade WCorp */
+h1, h2, h3, h4 {
     color: #005f66 !important;
+    font-weight: 700;
 }
 
-/* Customização das Tabelas (Grade do Sistema) */
-.md-typeset table {
+/* Customização das Tabelas (Visual de Grade de Sistema) */
+.md-typeset table:not([class]) {
+    width: 100%; /* Garante que a tabela use o espaço todo */
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    display: table; /* Melhora o render no mobile */
 }
 
 .md-typeset thead {
@@ -27,19 +38,31 @@ h1, h2, h3 {
 .md-typeset thead th {
     color: #ffffff !important;
     font-weight: bold;
+    padding: 12px;
 }
 
-/* Estilo para o código entre crases */
+/* Estilo para termos técnicos entre crases (ex: `SELECT`) */
 code {
-    background-color: #f4f4f4;
-    color: #d81b60; /* Cor de destaque clássica do Material, pode mudar se quiser */
-    padding: 2px 4px;
+    background-color: #f0f7f7; /* Fundo levemente esverdeado */
+    color: #028090; /* Texto na cor da WCorp */
+    padding: 2px 5px;
     border-radius: 4px;
+    font-family: 'Roboto Mono', monospace;
 }
 
-/* Imagens com sombra e borda arredondada */
+/* Imagens (Prints do ERP) com sombra e borda arredondada */
 .md-typeset img {
     border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    margin-top: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    margin: 20px 0;
+    border: 1px solid #eee;
+}
+
+/* Ajuste do rodapé (Avisos de versão) */
+center {
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 40px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
 }
