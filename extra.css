@@ -1,0 +1,45 @@
+/* ============================================================
+   ESTILO WCORP PARA TEMA MATERIAL
+   ============================================================ */
+
+/* Ajuste da Logo no Topo */
+.md-header__button.md-logo img {
+    height: 40px !important; /* Ajuste o tamanho da logo aqui */
+    width: auto;
+}
+
+/* Cor dos Títulos (H1, H2, H3) para bater com o Verde WCorp */
+h1, h2, h3 {
+    color: #005f66 !important;
+}
+
+/* Customização das Tabelas (Grade do Sistema) */
+.md-typeset table {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.md-typeset thead {
+    background-color: #028090;
+}
+
+.md-typeset thead th {
+    color: #ffffff !important;
+    font-weight: bold;
+}
+
+/* Estilo para o código entre crases */
+code {
+    background-color: #f4f4f4;
+    color: #d81b60; /* Cor de destaque clássica do Material, pode mudar se quiser */
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+/* Imagens com sombra e borda arredondada */
+.md-typeset img {
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
