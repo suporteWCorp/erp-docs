@@ -1,37 +1,133 @@
-site_name: Guia de Suporte WCorp
+site_name: Guia ERP WCorp
+site_description: Central de ajuda do ERP para usuários, suporte e desenvolvimento.
+site_author: WCorp
+
 theme:
-  name: readthedocs
-  logo: wcorp-logo.png
-  highlightjs: true
-  hljs_languages:
-    - yaml
-    - sql
-    - dockerfile
+  name: material
+  language: pt-BR
+  logo: assets/wcorp-logo.png
+  favicon: assets/wcorp-logo.png
+  palette:
+    - scheme: default
+      primary: teal
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: Modo Escuro
+    - scheme: slate
+      primary: teal
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: Modo Claro
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
 
 nav:
   - Início: index.md
-  
-  - Módulo Comercial:
-      - 'Clientes': comercial/comercial-clientes.md
-      - 'Grupo Clientes': comercial/comercial-grupo-clientes.md
-      - 'Pedidos': comercial/pedidos.md      
-  - Módulo Faturamento:
-      - 'Nota Fiscal': faturamento/faturamento-nf.md
-      - 'Cupom Fiscal': fiscal/erros-notas.md
-  - Módulo Materiais:
-      - 'Cadastro de Materiais': materiais/materiais.md
-      - 'Lote / Estoque': materiais/lote-estoque.md
-  - Módulo Administração:
-      - 'Usuários': administracao/usuarios.md
-      - 'Grupo Usuários': administracao/grupo-usuarios.md
-      - 'Empresas': administracao/empresas.md
-      - 'Natureza de operação': administracao/natureza-op.md
-      - 'NCMs': administracao/ncms.md
-      - 'Condições de pagamento': administracao/condicoes-pagamento.md
+  - Guia do usuário:
+      - Comercial:
+          - Visão geral: comercial/comercial-geral.md
+          - Clientes: comercial/comercial-clientes.md
+          - Grupo de clientes: comercial/comercial-grupo-clientes.md
+          - Separação de pedido: comercial/comercial-separacao-pedido.md
+          - Orçamento: comercial/comercial-orcamento.md
+          - Pedido: comercial/pedidos.md
+          - Devolução: comercial/devolucao.md
+          - Ficha técnica de material: comercial/ficha-tecnica-material.md
+          - Comissões de vendedores: comercial/comissoes-vendedores.md
+          - Transportadora: comercial/transportadora.md
+          - Despacho: comercial/despacho.md
+          - Projeção de vendas: comercial/projecao-vendas.md
+          - Importar NFe para Remessa: comercial/importar-nfe-remessa.md
+      - Faturamento:
+          - Visão geral: faturamento/faturamento-geral.md
+          - Nota Fiscal: faturamento/faturamento-nf.md
+          - Nota Fiscal (Lote): faturamento/nota-fiscal-lote.md
+          - Cupom Fiscal: faturamento/faturamento-nfce.md
+          - Entrada de Nota Fiscal: faturamento/entrada-nota-fiscal.md
+          - Radar de Nota Fiscal: faturamento/radar-nota-fiscal.md
+          - Carta de Correção: faturamento/carta-correcao.md
+          - Inutilização Nota Fiscal: faturamento/inutilizacao-nota-fiscal.md
+          - Nota Fiscal de Serviço: faturamento/nota-fiscal-servico.md
+          - CFOP Entrada: faturamento/cfop-entrada.md
+      - Financeiro:
+          - Visão geral: financeiro/financeiro-geral.md
+          - Transferência entre Contas: financeiro/transferencia-entre-contas.md
+          - Contas a Pagar: financeiro/contas-a-pagar.md
+          - Contas a Receber: financeiro/contas-a-receber.md
+          - Cheque: financeiro/cheque.md
+          - Boleto: financeiro/boleto.md
+          - Ferramentas CNAB: financeiro/ferramentas-cnab.md
+          - Arquivo de Remessa: financeiro/arquivo-remessa.md
+          - Contas: financeiro/contas.md
+          - Veículos: financeiro/veiculos.md
+          - Solicitação de Pagamento: financeiro/solicitacao-pagamento.md
+          - Cartão: financeiro/cartao.md
+          - Conciliação Bancária: financeiro/conciliacao-bancaria.md
+      - Colaboradores:
+          - Visão geral: colaboradores/colaboradores-geral.md
+          - Funcionários / Colaboradores: colaboradores/funcionarios-colaboradores.md
+          - Cargos: colaboradores/cargos.md
+          - Comissões: colaboradores/comissoes.md
+          - Planejamento de Pagamento: colaboradores/planejamento-pagamento.md
+          - Pagamento de Funcionário: colaboradores/pagamento-funcionario.md
+      - Materiais:
+          - Cadastro de materiais: materiais/materiais.md
+          - Lote / Estoque: materiais/lote-estoque.md
+      - Administração:
+          - Usuários: administracao/usuarios.md
+          - Grupo de usuários: administracao/grupo-usuarios.md
+          - Empresas: administracao/empresas.md
+          - Natureza de operação: administracao/natureza-op.md
+          - NCMs: administracao/ncms.md
+          - Condições de pagamento: administracao/condicoes-pagamento.md
+  - Suporte:
+      - Visão geral: suporte/index.md
+      - Triagem de atendimento: suporte/triagem.md
+      - Abertura de chamado: suporte/abertura-de-chamado.md
+      - Coleta de evidências: suporte/coleta-de-evidencias.md
+      - Base de erros: suporte/base-de-erros.md
+  - Referência:
+      - Glossário: referencia/glossario.md
+      - Erros comuns: referencia/erros-comuns.md
+      - Perguntas frequentes: referencia/faq.md
+  - Como documentar:
+      - Padrão das páginas: como-documentar/padrao-das-paginas.md
+      - Checklist de processo: como-documentar/checklist-de-processo.md
+      - Plano de documentação: como-documentar/plano-de-documentacao.md
+
 markdown_extensions:
   - admonition
+  - attr_list
+  - def_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
   - pymdownx.details
   - pymdownx.superfences
-  
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
 extra_css:
   - extra.css
+
+plugins:
+  - search:
+      lang: pt
+  - glightbox
+
+
+

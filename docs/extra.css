@@ -1,160 +1,94 @@
 /* ============================================================
-   ESTILO GERAL E COMPONENTES (WCORP)
+   ESTILO WCORP PARA TEMA MATERIAL
    ============================================================ */
 
-code {
-    background-color: #4D4D4D !important;
-    color: #C2C2C2 !important;
-    padding: 2px 5px !important;
-    border-radius: 4px !important;
-    border: 1px solid #111111 !important;
-    font-weight: bold !important;
+/* Ajuste da Logo no Topo - Deixa ela com destaque na barra */
+.md-header__button.md-logo img {
+    height: 80px !important; /* Aumentamos um pouco mais */
+    width: auto !important;
+    min-height: 45px; /* Garante que ela não encolha */
+    transform: scale(1.2); /* Dá um leve zoom na imagem */
+    margin-right: 10px; /* Afasta um pouco do título */
+    margin-top: -2px; /* Ajuste fino de centralização */
 }
 
-img {
+.md-header__topic {
+    margin-left: 20px;
+}
+
+/* Cor dos Títulos para bater com a identidade WCorp */
+h1, h2, h3, h4 {
+    color: #005f66 !important;
+    font-weight: 700;
+}
+
+/* Customização das Tabelas (Visual de Grade de Sistema) */
+.md-typeset table:not([class]) {
+    width: 100%; /* Garante que a tabela use o espaço todo */
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    margin: 20px auto !important;
-    border: 1px solid #ddd;
-    display: block;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    display: table; /* Melhora o render no mobile */
 }
 
-table thead tr th {
-    background-color: #028090 !important;
-    color: white !important;
+.md-typeset thead {
+    background-color: #028090;
 }
 
-table tbody tr:nth-child(even) {
-    background-color: #f8f8f8;
-}
-
-a, a:visited {
-    color: #028090; 
+.md-typeset thead th {
+    color: #ffffff !important;
     font-weight: bold;
+    padding: 12px;
 }
 
-h1, h2, h3 {
-    color: #005f66;
-    border-bottom: 1px solid #00A896;
-    padding-bottom: 5px;
+/* Estilo para termos técnicos entre crases (ex: `SELECT`) */
+code {
+    background-color: #f0f7f7; /* Fundo levemente esverdeado */
+    color: #028090; /* Texto na cor da WCorp */
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-family: 'Roboto Mono', monospace;
 }
 
-/* ============================================================
-   IDENTIDADE VISUAL E FIXAÇÃO DO TOPO
-   ============================================================ */
-
-.wy-nav-side {
-    background: #028090 !important;
+/* Imagens (Prints do ERP) com sombra e borda arredondada */
+.md-typeset img {
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    margin: 20px 0;
+    border: 1px solid #eee;
 }
 
-/* Área da Logo e Busca */
-.wy-side-nav-search {
-    background-color: #028090 !important;
-    border-bottom: none !important;
-    padding: 20px 15px !important;
+/* Ajuste do rodapé (Avisos de versão) */
+center {
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 40px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
 }
 
-.wy-side-nav-search > a img.logo {
-    background-color: transparent !important;
-    border: none !important;
-    max-width: 160px !important;
-    height: auto !important;
-    margin-bottom: 10px;
+.md-header__inner {
+    height: 3rem; /* Diminui a altura da barra */
+    display: flex;
+    align-items: center;
 }
 
-.wy-side-nav-search input[type="text"] {
-    border-radius: 20px !important;
-    border: 2px solid #005f66 !important;
-    background-color: #ffffff !important;
+
+/* Cards da página inicial */
+.wc-home-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin: 1.2rem 0 1.6rem;
 }
 
-/* ============================================================
-   MENU LATERAL (REGRAS DE OURO)
-   ============================================================ */
-
-/* 1. Esconder o bloco de 'Início' que fica em cima do Comercial */
-.wy-menu-vertical > ul[data-md-level="0"] > li.toctree-l1:first-child,
-.wy-menu-vertical li.toctree-l1.current > a[href*="index"] {
-    display: none !important;
+.wc-card {
+    border: 1px solid rgba(2, 128, 144, 0.2);
+    border-radius: 8px;
+    padding: 18px;
+    background: rgba(2, 128, 144, 0.04);
 }
 
-/* 2. Títulos dos Módulos (COMERCIAL, FATURAMENTO...) */
-.wy-menu-vertical p.caption {
-    color: #ffffff !important;
-    background: rgba(0,0,0,0.15) !important;
-    margin: 20px 0 10px 0 !important;
-    padding: 10px 15px !important;
-    font-weight: bold !important;
-    text-transform: uppercase !important;
-}
-
-/* 3. Itens de navegação (Links) */
-.wy-menu-vertical li a {
-    color: #e0e0e0 !important;
-    padding: 10px 15px 10px 25px !important;
-    display: block !important;
-    background: transparent !important; /* Evita o fundo cinza que apareceu */
-}
-
-/* 4. Item Ativo ou quando passa o mouse */
-.wy-menu-vertical li.current a, 
-.wy-menu-vertical li a:hover {
-    background: #00A896 !important;
-    color: white !important;
-}
-
-/* Limpezas extras */
-.wy-menu-vertical li.toctree-l1 button.toctree-expand {
-    display: none !important;
-}
-
-.wy-menu-vertical {
-    padding-top: 0 !important;
-}
-
-/* ============================================================
-   MENU LATERAL (REVISADO - ALINHAMENTO DE TÍTULOS)
-   ============================================================ */
-
-/* 1. Esconder o bloco de 'Início' que fica em cima do Comercial */
-.wy-menu-vertical > ul[data-md-level="0"] > li.toctree-l1:first-child,
-.wy-menu-vertical li.toctree-l1.current > a[href*="index"] {
-    display: none !important;
-}
-
-/* 2. Títulos dos Módulos (COMERCIAL, FATURAMENTO...) */
-.wy-menu-vertical p.caption {
-    color: #ffffff !important;
-    background: rgba(0,0,0,0.15) !important;
-    margin: 10px 0 0 0 !important; /* Tirei o margin-bottom para não empurrar os itens */
-    padding: 12px 15px !important; /* Aumentei um pouco o respiro interno */
-    font-weight: bold !important;
-    text-transform: uppercase !important;
-    line-height: 1 !important; /* Garante que o texto não "caia" dentro da caixa */
-}
-
-/* 3. Itens de navegação (Links: Clientes, Pedidos...) */
-.wy-menu-vertical li a {
-    color: #e0e0e0 !important;
-    padding: 8px 15px 8px 25px !important; /* Espaçamento equilibrado */
-    display: block !important;
-    background: transparent !important;
-    border: none !important;
-    line-height: 1.5 !important;
-}
-
-/* 4. Item Ativo ou Hover */
-.wy-menu-vertical li.current a, 
-.wy-menu-vertical li a:hover {
-    background: #00A896 !important;
-    color: white !important;
-}
-
-/* Limpeza de botões e espaços sobrando */
-.wy-menu-vertical li.toctree-l1 button.toctree-expand {
-    display: none !important;
-}
-
-.wy-menu-vertical ul {
-    margin-bottom: 0 !important; /* Remove o buraco que ficava embaixo dos grupos */
+.wc-card h3 {
+    margin-top: 0;
 }

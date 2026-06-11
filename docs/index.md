@@ -1,30 +1,55 @@
 # Central de Ajuda - ERP WCorp
 
-Bem-vindo ao guia oficial de suporte e operações do sistema **WCorp**. Este portal foi criado para padronizar os processos e facilitar a resolução de chamados.
+Bem-vindo à central de ajuda do **ERP WCorp**. Este portal reúne orientações para usuários finais, rotinas de atendimento para o Suporte e registros de regras importantes do sistema.
 
----
+<div class="wc-home-grid" markdown>
 
-### Módulos Principais
-Escolha o módulo abaixo para acessar os tutoriais detalhados:
+<div class="wc-card" markdown>
 
-| Módulo | Descrição | Link Direto |
+### Sou usuário
+
+Acesse tutoriais por módulo, siga o passo a passo das rotinas e consulte dúvidas frequentes antes de acionar o suporte.
+
+[Abrir guia do usuário](comercial/comercial-geral.md){ .md-button .md-button--primary }
+
+</div>
+
+<div class="wc-card" markdown>
+
+### Sou Suporte
+
+Use roteiros de triagem, checklist de evidências e base de erros para padronizar o atendimento.
+
+[Abrir área de Suporte](suporte/index.md){ .md-button .md-button--primary }
+
+</div>
+
+</div>
+
+## Módulos principais
+
+| Módulo | Para que serve | Link direto |
 | :--- | :--- | :--- |
-| **Comercial** | Cadastro de clientes, grupos e pedidos de venda. | [Acessar](comercial/comercial-clientes.md) |
-| **Faturamento** | Emissão de NF-e, Cupom Fiscal, Emissão Nota Fiscal de Serviço e etc. | [Acessar](faturamento/faturamento-nf.md) |
-| **Materiais** | Cadastro de materiais, Categoria de materiais, Lote/Estoque . | [Acessar](materiais/materiais.md) |
-| **Técnico** | Configurações de Servidor, Docker e Banco de Dados. | [Acessar](tecnico/docker.md) |
+| **Comercial** | Clientes, grupos, pedidos, orçamentos e separação. | [Acessar](comercial/comercial-geral.md) |
+| **Faturamento** | NF-e, NFCe, notas de serviço e rotinas fiscais. | [Acessar](faturamento/faturamento-nf.md) |
+| **Materiais** | Cadastro de materiais, categorias, lote e estoque. | [Acessar](materiais/materiais.md) |
+| **Administração** | Usuários, grupos, empresas, NCMs, natureza de operação e condições de pagamento. | [Acessar](administracao/usuarios.md) |
 
----
+## Caminho rápido
 
-### Avisos Rápidos
-!!! info "Reforma Tributária 2026"
-    Lembre-se que as regras de **IBS e CBS** já estão em vigor. Verifique sempre o NCM dos produtos antes de faturar.
+- Para aprender uma rotina, procure pelo módulo no menu **Guia do usuário**.
+- Para resolver um problema, consulte **Suporte > Triagem de atendimento**.
+- Para registrar uma nova página, use **Como documentar > Padrão das páginas**.
+- Para entender termos do ERP, consulte o **Glossário**.
 
-!!! warning "Suporte Nível 2"
-    Erros de banco de dados (SQL Server) devem ser encaminhados diretamente para a equipe de infraestrutura.
+!!! warning "Regras fiscais"
+    Regras fiscais podem mudar por operação, estado, cliente, produto e configuração tributária. Sempre valide a fonte da regra antes de orientar o usuário.
+
+!!! info "Suporte"
+    Ao abrir um chamado, informe módulo, tela, usuário afetado, mensagem exibida e prints do erro.
 
 ---
 
 <center>
-*Desenvolvido pela equipe de Suporte - VERSÃO TESTE 2026*
+*Desenvolvido pela equipe de Suporte - versão teste 2026*
 </center>
