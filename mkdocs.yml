@@ -78,16 +78,103 @@ nav:
           - Comissões: colaboradores/comissoes.md
           - Planejamento de Pagamento: colaboradores/planejamento-pagamento.md
           - Pagamento de Funcionário: colaboradores/pagamento-funcionario.md
+      - Fornecedores:
+          - Visão geral: fornecedores/fornecedores-geral.md
+          - Fornecedores: fornecedores/fornecedores.md
+          - Categoria de Fornecedor: fornecedores/categoria-fornecedor.md
+          - Certificado: fornecedores/certificado.md
       - Materiais:
-          - Cadastro de materiais: materiais/materiais.md
-          - Lote / Estoque: materiais/lote-estoque.md
+          - Visão geral: materiais/materiais-geral.md
+          - Materiais: materiais/materiais.md
+          - Categoria de Materiais: materiais/categoria-materiais.md
+          - Locais de Armazenagem: materiais/locais-armazenagem.md
+          - Entrada de Material: materiais/entrada-material.md
+          - Romaneio: materiais/romaneio.md
+          - Ferramentas: materiais/ferramentas.md
+          - Ajustar Inventário: materiais/ajustar-inventario.md
+          - Lote/Estoque: materiais/lote-estoque.md
+          - Tabela de Preços: materiais/tabela-precos.md
+          - Palete: materiais/palete.md
+          - Conversão de Unidades: materiais/conversao-unidades.md
+          - Etiqueta: materiais/etiqueta.md
+      - Serviços:
+          - Visão geral: servicos/servicos-geral.md
+          - Cadastro de Serviço: servicos/cadastro-servico.md
+          - Cadastro de Atividade: servicos/cadastro-atividade.md
+          - Grupo de Serviço: servicos/grupo-servico.md
+          - Orçamento OS: servicos/orcamento-os.md
+          - Ordem de Serviço: servicos/ordem-servico.md
+          - Tipo de Ordem de Serviço: servicos/tipo-ordem-servico.md
+          - Faturamento de Recorrência: servicos/faturamento-recorrencia.md
+          - Rateio de Centro de Custo: servicos/rateio-centro-custo.md
+      - Contratos:
+          - Visão geral: contratos/contratos-geral.md
+          - Contratos: contratos/contratos.md
+          - Fases do Contrato: contratos/fases-contrato.md
+          - Materiais e Serviços Previstos: contratos/materiais-servicos-previstos.md
+          - Manutenção de Contratos: contratos/manutencao-contratos.md
+      - Compras:
+          - Visão geral: compras/compras-geral.md
+          - Requisição de Compras: compras/requisicao-compras.md
+          - Planilha de Equalização: compras/planilha-equalizacao.md
+          - Aprovação de Compras: compras/aprovacao-compras.md
+          - Aprovação Diretoria: compras/aprovacao-diretoria.md
+          - Pedido de Compra: compras/pedido-compra.md
+          - Requisições x Projeção de Vendas: compras/requisicoes-projecao-vendas.md
+      - Produção:
+          - Visão geral: producao/producao-geral.md
+          - Ordem de Produção: producao/ordem-producao.md
+          - PCP: producao/pcp.md
+          - Processo: producao/processo.md
+          - Grupo de Processo: producao/grupo-processo.md
+          - Inspeção: producao/inspecao.md
+          - Separar Material: producao/separar-material.md
+          - Equipamento: producao/equipamento.md
+          - Acessório: producao/acessorio.md
+          - Custos de Produção: producao/custos-producao.md
+          - Parâmetro: producao/parametro.md
+          - Motivo de Parada: producao/motivo-parada.md
+          - Qualidade: producao/qualidade.md
+      - Transportes:
+          - Visão geral: transportes/transportes-geral.md
+          - Regiões: transportes/regioes.md
+          - Tabela de Preços: transportes/tabela-precos.md
+          - Orçamento CTe: transportes/orcamento-cte.md
+          - Conhecimento de Transporte: transportes/conhecimento-transporte.md
+          - Conhecimento de Transp.(Lote): transportes/conhecimento-transporte-lote.md
+          - Manifesto de Transporte: transportes/manifesto-transporte.md
+          - Carta de Correção: transportes/carta-correcao.md
+          - Inutilização CTe: transportes/inutilizacao-cte.md
+          - Alíquotas de Transporte: transportes/aliquotas-transporte.md
+          - Faturamento: transportes/faturamento.md
+          - Coleta: transportes/coleta.md
+          - Averbação Seguradora: transportes/averbacao-seguradora.md
+          - Carga: transportes/carga.md
+      - Relatórios:
+          - Visão geral: relatorios/relatorios-geral.md
+          - Relatórios: relatorios/relatorios.md
+          - XML(s) NFe: relatorios/xml-nfe.md
+          - XML(s) CFe: relatorios/xml-cfe.md
+          - XML(s) CTe: relatorios/xml-cte.md
+          - Sped Fiscal: relatorios/sped-fiscal.md
+          - Relatório de Não Conformidade: relatorios/relatorio-nao-conformidade.md
+          - Relatório de Ocorrência: relatorios/relatorio-ocorrencia.md
+          - Relatório WhatsApp: relatorios/relatorio-whatsapp.md
       - Administração:
+          - Visão geral: administracao/administracao-geral.md
           - Usuários: administracao/usuarios.md
-          - Grupo de usuários: administracao/grupo-usuarios.md
+          - Grupo Usuários: administracao/grupo-usuarios.md
           - Empresas: administracao/empresas.md
-          - Natureza de operação: administracao/natureza-op.md
-          - NCMs: administracao/ncms.md
-          - Condições de pagamento: administracao/condicoes-pagamento.md
+          - Natureza de Operação: administracao/natureza-op.md
+          - Unidades: administracao/unidades.md
+          - Embalagem: administracao/embalagem.md
+          - NCMS: administracao/ncms.md
+          - Centro de Custo: administracao/centro-custo.md
+          - Rateio de Centro de Custo: administracao/rateio-centro-custo.md
+          - Condições de Pagamento: administracao/condicoes-pagamento.md
+          - Layout de Ficha Técnica: administracao/layout-ficha-tecnica.md
+          - Parâmetros Sistema: administracao/parametros-sistema.md
+          - Município: administracao/municipio.md
   - Suporte:
       - Visão geral: suporte/index.md
       - Triagem de atendimento: suporte/triagem.md
@@ -128,6 +215,9 @@ plugins:
   - search:
       lang: pt
   - glightbox
+
+
+
 
 
 
