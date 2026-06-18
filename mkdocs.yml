@@ -1,4 +1,4 @@
-site_name: Guia ERP WCorp
+site_name: Guia WCorp
 site_description: Central de ajuda do ERP para usuários, suporte e desenvolvimento.
 site_author: WCorp
 
@@ -31,7 +31,20 @@ theme:
 
 nav:
   - Início: index.md
-  - Guia do usuário:
+  - Guia:
+      - Visão geral: como-fazer/index.md
+      - Como cadastrar cliente: como-fazer/cadastrar-cliente.md
+      - Como cadastrar uma natureza de operação: como-fazer/cadastrar-natureza-operacao.md
+      - Como cadastrar um material: como-fazer/cadastrar-material.md
+      - Como fazer um pedido de venda: como-fazer/fazer-pedido-venda.md
+      - Como faturar uma nota: como-fazer/faturar-nota.md
+  - FAQ:
+      - Glossário: referencia/glossario.md
+      - Erros comuns: referencia/erros-comuns.md
+      - Perguntas frequentes: referencia/faq.md
+      - Links úteis: referencia/links-uteis.md
+  - Manual:
+      - Visão geral: manual/index.md
       - Comercial:
           - Visão geral: comercial/comercial-geral.md
           - Clientes: comercial/comercial-clientes.md
@@ -175,21 +188,6 @@ nav:
           - Layout de Ficha Técnica: administracao/layout-ficha-tecnica.md
           - Parâmetros Sistema: administracao/parametros-sistema.md
           - Município: administracao/municipio.md
-  - Suporte:
-      - Visão geral: suporte/index.md
-      - Triagem de atendimento: suporte/triagem.md
-      - Abertura de chamado: suporte/abertura-de-chamado.md
-      - Coleta de evidências: suporte/coleta-de-evidencias.md
-      - Base de erros: suporte/base-de-erros.md
-  - Referência:
-      - Glossário: referencia/glossario.md
-      - Erros comuns: referencia/erros-comuns.md
-      - Perguntas frequentes: referencia/faq.md
-  - Como documentar:
-      - Padrão das páginas: como-documentar/padrao-das-paginas.md
-      - Checklist de processo: como-documentar/checklist-de-processo.md
-      - Plano de documentação: como-documentar/plano-de-documentacao.md
-
 markdown_extensions:
   - admonition
   - attr_list
@@ -211,13 +209,12 @@ markdown_extensions:
 extra_css:
   - extra.css
 
+extra_javascript:
+  - assets/javascripts/wcorp-nav.js
+
 plugins:
   - search:
       lang: pt
   - glightbox
-
-
-
-
 
 

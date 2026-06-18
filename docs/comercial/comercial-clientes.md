@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Cadastrar e consultar clientes no ERP WCorp para uso em pedidos, orçamentos, faturamento e demais rotinas comerciais.
+Cadastrar e consultar clientes no WCorp para uso em pedidos, orçamentos, faturamento e demais funcionalidades.
 
 ![Tela de clientes](../assets/comercial-clientes.png)
 

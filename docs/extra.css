@@ -2,18 +2,26 @@
    ESTILO WCORP PARA TEMA MATERIAL
    ============================================================ */
 
-/* Ajuste da Logo no Topo - Deixa ela com destaque na barra */
+/* Ajuste da Logo no Topo */
+.md-header__button.md-logo {
+    align-items: center;
+    display: flex;
+    height: 4.4rem;
+    margin: 0 8px 0 0;
+    padding: 0 0.35rem;
+}
+
 .md-header__button.md-logo img {
-    height: 80px !important; /* Aumentamos um pouco mais */
+    height: 68px !important;
+    max-height: 68px;
     width: auto !important;
-    min-height: 45px; /* Garante que ela não encolha */
-    transform: scale(1.2); /* Dá um leve zoom na imagem */
-    margin-right: 10px; /* Afasta um pouco do título */
-    margin-top: -2px; /* Ajuste fino de centralização */
+    min-height: 0;
+    transform: none;
+    margin: 0;
 }
 
 .md-header__topic {
-    margin-left: 20px;
+    margin-left: 6px;
 }
 
 /* Cor dos Títulos para bater com a identidade WCorp */
@@ -91,4 +99,242 @@ center {
 
 .wc-card h3 {
     margin-top: 0;
+}
+
+/* Navegação superior: atalhos principais + abas no estilo ERP */
+.md-header {
+    background-color: #009688;
+}
+
+.md-header__inner {
+    min-height: 4.8rem;
+    height: auto;
+    gap: 10px;
+    padding-right: 1.1rem;
+}
+
+.md-header__title {
+    flex: 0 1 128px;
+    font-weight: 700;
+    margin-left: 4px;
+    min-width: 112px;
+}
+
+.md-header__topic {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.wc-shortcuts {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    flex: 1 1 auto;
+    min-width: 360px;
+    overflow: hidden;
+}
+
+.wc-shortcuts__link {
+    color: #ffffff;
+    border-radius: 4px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    line-height: 1;
+    padding: 10px 10px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.wc-shortcuts__link:hover,
+.wc-shortcuts__link:focus {
+    background: rgba(255, 255, 255, 0.14);
+    color: #ffffff;
+}
+
+.wc-shortcuts__theme {
+    align-items: center;
+    display: flex;
+    height: 36px;
+    justify-content: center;
+    margin-left: 8px;
+    width: 36px;
+}
+
+.wc-shortcuts__theme .md-header__button {
+    margin: 0;
+}
+
+.md-header .md-search {
+    flex: 0 0 min(235px, 18vw);
+}
+
+.md-tabs {
+    background: #008f83;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.08);
+}
+
+.md-tabs__inner {
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+}
+
+.md-tabs__list {
+    display: flex;
+    gap: 1px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.md-tabs__item {
+    flex: 0 1 auto;
+    height: 2.45rem;
+}
+
+.md-tabs__link {
+    border-radius: 4px 4px 0 0;
+    color: rgba(255, 255, 255, 0.84);
+    font-size: 0.66rem;
+    font-weight: 700;
+    margin-top: 0.28rem;
+    max-width: 96px;
+    overflow: hidden;
+    padding: 0.62rem 0.42rem 0.58rem;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.md-tabs__link:hover,
+.md-tabs__link--active {
+    background: rgba(0, 95, 102, 0.46);
+    color: #ffffff;
+}
+
+@media screen and (min-width: 76.25em) and (max-width: 88em) {
+    .md-header__button.md-logo img {
+        height: 58px !important;
+        max-height: 58px;
+    }
+
+    .md-header__title {
+        flex-basis: 132px;
+        min-width: 105px;
+    }
+
+    .wc-shortcuts__link {
+        font-size: 0.68rem;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .md-header .md-search {
+        flex-basis: 210px;
+    }
+
+    .md-tabs__link {
+        font-size: 0.61rem;
+        max-width: 86px;
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+    }
+}
+
+@media screen and (max-width: 76.2344em) {
+    .wc-shortcuts {
+        display: none;
+    }
+
+    .md-header .md-search {
+        flex-basis: auto;
+    }
+}
+
+
+
+/* Rodapé discreto de ajuda */
+.wc-support-footer {
+    align-items: center;
+    border-top: 1px solid rgba(2, 128, 144, 0.16);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 2.5rem;
+    padding-top: 1rem;
+}
+
+.wc-support-footer__text {
+    color: #667085;
+    font-size: 0.72rem;
+    font-weight: 700;
+    margin-right: 2px;
+}
+
+.wc-support-footer__button {
+    align-items: center;
+    border-radius: 999px;
+    color: #ffffff !important;
+    display: inline-flex;
+    font-size: 0.68rem;
+    font-weight: 700;
+    gap: 5px;
+    min-height: 28px;
+    padding: 6px 10px;
+    text-decoration: none !important;
+}
+
+.wc-support-footer__button:hover {
+    filter: brightness(0.95);
+}
+
+.wc-support-footer__button--whatsapp {
+    background: #128c7e;
+}
+
+.wc-support-footer__button--youtube {
+    background: #c4302b;
+}
+
+
+/* Vídeos curtos de demonstração */
+.wc-video {
+    background: #111;
+    border: 1px solid rgba(2, 128, 144, 0.18);
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.14);
+    display: block;
+    margin: 1rem 0 1.4rem;
+    max-width: 920px;
+    width: 100%;
+}
+
+
+/* Menu secundário do Manual no mesmo fluxo das abas do ERP */
+.md-tabs__list.wc-erp-tabs {
+    gap: 1px;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scrollbar-width: thin;
+}
+
+.md-tabs__list.wc-erp-tabs .md-tabs__item {
+    flex: 0 0 auto;
+}
+
+.md-tabs__list.wc-erp-tabs .md-tabs__link {
+    max-width: none;
+    min-width: 88px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+@media screen and (min-width: 88.01em) {
+    .md-tabs__list.wc-erp-tabs {
+        justify-content: space-between;
+    }
+
+    .md-tabs__list.wc-erp-tabs .md-tabs__link {
+        min-width: 82px;
+    }
 }

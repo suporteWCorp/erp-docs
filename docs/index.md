@@ -1,49 +1,54 @@
-# Central de Ajuda - ERP WCorp
+# Central de Ajuda - WCorp
 
-Bem-vindo à central de ajuda do **ERP WCorp**. Este portal reúne orientações para usuários finais, rotinas de atendimento para o Suporte e registros de regras importantes do sistema.
+Bem-vindo à central de ajuda do **WCorp**. Este portal tem duas formas de navegação: guias rápidos por tarefa e guia por tarefa, FAQ e manual por aba do ERP.
 
 <div class="wc-home-grid" markdown>
 
 <div class="wc-card" markdown>
 
-### Sou usuário
+### Quero fazer uma rotina
 
-Acesse tutoriais por módulo, siga o passo a passo das rotinas e consulte dúvidas frequentes antes de acionar o suporte.
+Acesse guias diretos como cadastrar cliente, cadastrar material, faturar nota e consultar estoque.
 
-[Abrir guia do usuário](comercial/comercial-geral.md){ .md-button .md-button--primary }
+[Ver Como fazer](como-fazer/index.md){ .md-button .md-button--primary }
 
 </div>
 
 <div class="wc-card" markdown>
 
-### Sou Suporte
+### Quero consultar uma tela
 
-Use roteiros de triagem, checklist de evidências e base de erros para padronizar o atendimento.
+Use o manual por abas do ERP, seguindo a mesma organização visual do sistema.
 
-[Abrir área de Suporte](suporte/index.md){ .md-button .md-button--primary }
+[Abrir Manual](manual/index.md){ .md-button .md-button--primary }
+
+</div>
+
+<div class="wc-card" markdown>
+
+### Estou com erro
+
+Veja orientações de triagem, coleta de evidências e base de erros recorrentes.
+
+[Abrir Suporte](suporte/index.md){ .md-button .md-button--primary }
 
 </div>
 
 </div>
 
-## Módulos principais
+## Guias rápidos
 
-| Módulo | Para que serve | Link direto |
-| :--- | :--- | :--- |
-| **Comercial** | Clientes, grupos, pedidos, orçamentos e separação. | [Acessar](comercial/comercial-geral.md) |
-| **Faturamento** | NF-e, NFCe, notas de serviço e rotinas fiscais. | [Acessar](faturamento/faturamento-nf.md) |
-| **Materiais** | Cadastro de materiais, categorias, lote e estoque. | [Acessar](materiais/materiais.md) |
-| **Administração** | Usuários, grupos, empresas, NCMs, natureza de operação e condições de pagamento. | [Acessar](administracao/usuarios.md) |
+| Tarefa | Atalho |
+| --- | --- |
+| Como cadastrar cliente | [Abrir](como-fazer/cadastrar-cliente.md) |
+| Como cadastrar uma natureza de operação | [Abrir](como-fazer/cadastrar-natureza-operacao.md) |
+| Como cadastrar um material | [Abrir](como-fazer/cadastrar-material.md) |
+| Como fazer um pedido de venda | [Abrir](como-fazer/fazer-pedido-venda.md) |
+| Como faturar uma nota | [Abrir](como-fazer/faturar-nota.md) |
 
-## Caminho rápido
+## Manual por abas do ERP
 
-- Para aprender uma rotina, procure pelo módulo no menu **Guia do usuário**.
-- Para resolver um problema, consulte **Suporte > Triagem de atendimento**.
-- Para registrar uma nova página, use **Como documentar > Padrão das páginas**.
-- Para entender termos do ERP, consulte o **Glossário**.
-
-!!! warning "Regras fiscais"
-    Regras fiscais podem mudar por operação, estado, cliente, produto e configuração tributária. Sempre valide a fonte da regra antes de orientar o usuário.
+Use a barra superior para navegar pelos módulos do ERP: **Comercial**, **Faturamento**, **Financeiro**, **Materiais**, **Compras**, **Produção**, **Transportes**, **Relatórios** e demais abas.
 
 !!! info "Suporte"
     Ao abrir um chamado, informe módulo, tela, usuário afetado, mensagem exibida e prints do erro.
@@ -53,3 +58,5 @@ Use roteiros de triagem, checklist de evidências e base de erros para padroniza
 <center>
 *Desenvolvido pela equipe de Suporte - versão teste 2026*
 </center>
+
+
