@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Emitir nota fiscal de saída no ERP WCorp, de forma manual ou vinculada a pedidos.
+Emitir nota fiscal de saída no WCorp, de forma manual ou vinculada a pedidos.
 
 ![Tela principal de Nota Fiscal](../assets/faturamento-nf.png)
 
@@ -16,7 +16,7 @@ Use esta rotina quando for necessário:
 - Conferir impostos antes da transmissão.
 - Transmitir a nota para a SEFAZ.
 
-## Caminho no ERP
+## Caminho no WCorp
 
 `Faturamento > Nota Fiscal`
 
@@ -60,7 +60,7 @@ Use esta rotina quando for necessário:
 | --- | --- |
 | Posso emitir nota manualmente? | Sim. A tela permite emissão manual ou por pedido. |
 | Quando devo usar emissão por pedido? | Use quando a nota deve ser gerada a partir de um pedido já cadastrado. |
-| O sistema informa se faltar algum campo? | Sim. Ao salvar ou transmitir, o ERP indica campos obrigatórios pendentes. |
+| O sistema informa se faltar algum campo? | Sim. Ao salvar ou transmitir, o Sistema indica campos obrigatórios pendentes. |
 | Preciso conferir impostos se vier do pedido? | Sim. Mesmo com cálculo automático, confira material e aba de impostos antes de transmitir. |
 
 ??? info "Ver mais para Suporte"
@@ -76,7 +76,7 @@ Use esta rotina quando for necessário:
     - Número da nota, pedido ou documento de origem.
     - Cliente envolvido.
     - Natureza de operação e CFOP, se aplicável.
-    - Mensagem completa exibida pelo ERP ou pela SEFAZ.
+    - Mensagem completa exibida pelo Sistema ou pela SEFAZ.
     - Print da tela, principalmente da aba de impostos.
     - Informação se a emissão é manual ou por pedido.
 

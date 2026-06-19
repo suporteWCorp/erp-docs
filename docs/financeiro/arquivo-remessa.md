@@ -8,7 +8,7 @@ Gerar ou consultar arquivos de remessa para envio ao banco.
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Arquivo de Remessa**.
 
-## Caminho no ERP
+## Caminho no WCorp
 
 Financeiro > Arquivo de Remessa
 
@@ -47,5 +47,5 @@ Financeiro > Arquivo de Remessa
     - Número do título, lançamento, remessa, boleto ou conta, quando houver.
     - Cliente, fornecedor, colaborador, banco ou conta envolvida.
     - Valor, vencimento, período filtrado e status atual.
-    - Mensagem completa exibida pelo ERP.
+    - Mensagem completa exibida pelo Sistema.
     - Print da tela e horário aproximado da tentativa.

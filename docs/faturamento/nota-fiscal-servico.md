@@ -8,7 +8,7 @@ Emitir ou consultar nota fiscal de serviço conforme a operação da empresa.
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Nota Fiscal de Serviço**.
 
-## Caminho no ERP
+## Caminho no WCorp
 
 Faturamento > Nota Fiscal de Serviço
 
@@ -46,6 +46,6 @@ Faturamento > Nota Fiscal de Serviço
     - Empresa e usuário afetado.
     - Número da nota ou documento relacionado, quando houver.
     - Cliente, fornecedor ou material envolvido.
-    - Mensagem completa exibida pelo ERP ou pela SEFAZ.
+    - Mensagem completa exibida pelo Sistema ou pela SEFAZ.
     - Print da tela e horário aproximado do erro.
     - Informação se o problema ocorre em um documento específico ou em todos.

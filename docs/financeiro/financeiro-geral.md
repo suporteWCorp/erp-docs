@@ -2,7 +2,7 @@
 
 A aba **Financeiro** reúne rotinas de contas a pagar, contas a receber, boletos, remessas, contas bancárias, cartões e conciliação bancária.
 
-A documentação desta seção segue a mesma ordem dos botões exibidos no ERP.
+A documentação desta seção segue a mesma ordem dos botões exibidos no WCorp.
 
 ![Aba Financeiro](../assets/aba-financeiro-geral.png)
 

@@ -1,4 +1,4 @@
-Módulo Administração - Cadastro de Usuários
+# Módulo Administração - Cadastro de Usuários
 
 Para cadastrar um usuário é necessário preencher o Nome, Login, Senha e Grupo de Usuário.
 O restante das opções fica a critério do usuário administrador.

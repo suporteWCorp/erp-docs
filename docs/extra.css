@@ -58,7 +58,7 @@ code {
     font-family: 'Roboto Mono', monospace;
 }
 
-/* Imagens (Prints do ERP) com sombra e borda arredondada */
+/* Imagens (Prints do WCorp) com sombra e borda arredondada */
 .md-typeset img {
     border-radius: 8px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
@@ -91,7 +91,7 @@ center {
 }
 
 .wc-card {
-    border: 1px solid rgba(2, 128, 144, 0.2);
+    border: 1.5px solid rgba(2, 128, 144, 0.32);
     border-radius: 8px;
     padding: 18px;
     background: rgba(2, 128, 144, 0.04);
@@ -101,7 +101,136 @@ center {
     margin-top: 0;
 }
 
-/* Navegação superior: atalhos principais + abas no estilo ERP */
+/* Hub de links oficiais */
+.wc-link-hub {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    margin: 1rem 0 1.6rem;
+}
+
+.wc-link-item {
+    background: rgba(2, 128, 144, 0.035);
+    border: 1.5px solid rgba(2, 128, 144, 0.32);
+    border-radius: 8px;
+    padding: 14px 16px;
+}
+
+.wc-link-item h3 {
+    align-items: center;
+    display: flex;
+    font-size: 0.86rem;
+    gap: 6px;
+    margin: 0 0 0.45rem;
+}
+
+.wc-link-item p {
+    color: #4f5f63;
+    font-size: 0.74rem;
+    line-height: 1.45;
+    margin: 0;
+}
+
+.wc-link-item a {
+    color: #006b73;
+    text-decoration: none;
+}
+
+.wc-link-item a:hover,
+.wc-link-item a:focus {
+    color: #009688;
+    text-decoration: underline;
+}
+
+.wc-link-item .headerlink,
+.wc-portal-block .headerlink,
+.wc-card .headerlink {
+    display: none;
+}
+
+/* Portal interno: sidebar útil para Home e FAQ */
+.wc-portal-layout {
+    display: block;
+}
+
+.wc-portal-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 1rem 0 1.4rem;
+}
+
+.wc-portal-main {
+    min-width: 0;
+}
+
+.wc-portal-sidebar-host {
+    margin-top: 1rem;
+}
+
+.wc-portal-sidebar-host .wc-portal-sidebar {
+    margin: 0;
+}
+
+.wc-portal-block {
+    background: rgba(2, 128, 144, 0.035);
+    border: 1.5px solid rgba(2, 128, 144, 0.32);
+    border-radius: 8px;
+    padding: 12px 14px;
+}
+
+.wc-portal-block h3 {
+    color: #005f66 !important;
+    font-size: 0.84rem;
+    margin: 0 0 0.55rem;
+}
+
+.wc-portal-block ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.wc-portal-block li {
+    border-top: 1px solid rgba(2, 128, 144, 0.1);
+    color: #394b4f;
+    font-size: 0.72rem;
+    line-height: 1.35;
+    margin: 0;
+    padding: 0.42rem 0;
+}
+
+.wc-portal-block li:first-child {
+    border-top: 0;
+    padding-top: 0;
+}
+
+.wc-portal-block li:last-child {
+    padding-bottom: 0;
+}
+
+.wc-portal-block a {
+    color: #006b73;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.wc-portal-block a:hover,
+.wc-portal-block a:focus {
+    color: #009688;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 76.2344em) {
+    .wc-portal-sidebar {
+        display: grid;
+        gap: 12px;
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        position: static;
+    }
+}
+
+/* Navegação superior: atalhos principais + abas no estilo WCorp */
 .md-header {
     background-color: #009688;
 }
@@ -271,46 +400,50 @@ center {
     margin-right: 2px;
 }
 
-.wc-support-footer__button {
-    align-items: center;
-    border-radius: 999px;
-    color: #ffffff !important;
+.wc-support-footer__link {
+    color: #006b73 !important;
     display: inline-flex;
-    font-size: 0.68rem;
+    font-size: 0.72rem;
     font-weight: 700;
-    gap: 5px;
-    min-height: 28px;
-    padding: 6px 10px;
+    gap: 4px;
     text-decoration: none !important;
 }
 
-.wc-support-footer__button:hover {
-    filter: brightness(0.95);
+.wc-support-footer__link:hover,
+.wc-support-footer__link:focus {
+    color: #009688 !important;
+    text-decoration: underline !important;
 }
 
-.wc-support-footer__button--whatsapp {
-    background: #128c7e;
-}
-
-.wc-support-footer__button--youtube {
-    background: #c4302b;
+.wc-support-footer__separator {
+    color: #98a2b3;
+    font-size: 0.72rem;
 }
 
 
 /* Vídeos curtos de demonstração */
 .wc-video {
+    aspect-ratio: 16 / 9;
     background: #111;
     border: 1px solid rgba(2, 128, 144, 0.18);
     border-radius: 8px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.14);
     display: block;
+    min-height: 420px;
     margin: 1rem 0 1.4rem;
     max-width: 920px;
+    object-fit: contain;
     width: 100%;
 }
 
+@media screen and (max-width: 76.2344em) {
+    .wc-video {
+        min-height: 0;
+    }
+}
 
-/* Menu secundário do Manual no mesmo fluxo das abas do ERP */
+
+/* Menu secundário do Manual no mesmo fluxo das abas do WCorp */
 .md-tabs__list.wc-erp-tabs {
     gap: 1px;
     justify-content: flex-start;
@@ -337,4 +470,9 @@ center {
     .md-tabs__list.wc-erp-tabs .md-tabs__link {
         min-width: 82px;
     }
+}
+
+/* Esconde a faixa secundária fora do Manual */
+body:not(.wc-manual-tabs) .md-tabs {
+    display: none;
 }

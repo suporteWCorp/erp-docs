@@ -8,7 +8,7 @@ Consultar projeções, previsões e acompanhamento comercial de vendas.
 
 Preencha aqui em quais situações o usuário deve acessar esta rotina.
 
-## Caminho no ERP
+## Caminho no WCorp
 
 Comercial > Projeção de Vendas
 

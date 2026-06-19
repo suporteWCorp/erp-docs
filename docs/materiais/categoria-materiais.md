@@ -8,7 +8,7 @@ Cadastrar ou consultar categorias usadas para organizar materiais.
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Categoria de Materiais**.
 
-## Caminho no ERP
+## Caminho no WCorp
 
 Materiais > Categoria de Materiais
 
@@ -46,5 +46,5 @@ Materiais > Categoria de Materiais
     - Empresa e usuário afetado.
     - Código ou descrição do material.
     - Lote, local de armazenagem, unidade e quantidade, quando aplicável.
-    - Mensagem completa exibida pelo ERP.
+    - Mensagem completa exibida pelo Sistema.
     - Print da tela e horário aproximado da tentativa.

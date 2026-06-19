@@ -8,7 +8,7 @@ Criar, consultar ou acompanhar pedidos de compra.
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Pedido de Compra**.
 
-## Caminho no ERP
+## Caminho no WCorp
 
 $Tab > Pedido de Compra
 
@@ -45,6 +45,6 @@ $Tab > Pedido de Compra
 
     - Empresa e usuário afetado.
     - Código, número ou registro relacionado, quando houver.
-    - Mensagem completa exibida pelo ERP.
+    - Mensagem completa exibida pelo Sistema.
     - Print da tela e horário aproximado da tentativa.
     - Informação se o problema ocorre em um registro específico ou em todos.

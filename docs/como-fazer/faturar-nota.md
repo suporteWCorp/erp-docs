@@ -1,32 +1,55 @@
-# Como faturar uma nota
+# Como emitir uma NF-e
 
-## Antes de começar
+## Objetivo
 
-- Cliente cadastrado.
-- Pedido ou dados da venda disponíveis.
-- Produto com dados fiscais revisados.
-- Natureza de operação e impostos configurados.
+Emitir uma nota fiscal eletrônica de saída, de forma manual ou vinculada a um pedido.
 
-## Caminho no ERP
+## Quando utilizar
 
-`Faturamento > Nota Fiscal`
+Use quando for necessário documentar fiscalmente uma venda, remessa ou outra operação de saída.
 
-## Passo a passo rápido
+## Pré-requisitos
 
-1. Acesse a aba **Faturamento**.
-2. Clique em **Nota Fiscal**.
-3. Escolha emissão manual ou por pedido.
-4. Se for por pedido, adicione o pedido correspondente.
-5. Confira cliente, itens, valores e impostos.
-6. Salve a nota.
-7. Clique em **Transmitir**.
-8. Confira o retorno da SEFAZ.
+- Cliente cadastrado.<br>
+  [Como cadastrar um cliente](cadastrar-cliente.md){: target="_blank" rel="noopener" }.
+- Material cadastrado.<br>
+  [Como cadastrar um material](cadastrar-material.md){: target="_blank" rel="noopener" }.
+- Natureza de operação cadastrada.<br>
+  [Como cadastrar uma natureza de operação](cadastrar-natureza-operacao.md){: target="_blank" rel="noopener" }.
+- Pedido criado, quando a emissão for por pedido.<br>
+  [Como gerar um pedido](fazer-pedido-venda.md){: target="_blank" rel="noopener" }.
+- Certificado e parâmetros fiscais configurados.
 
-## Se der erro
+--8<-- "shared/avisos/validacao-fiscal.md"
 
-Copie a mensagem completa e consulte a orientação da página de nota fiscal.
+--8<-- "shared/avisos/permissoes.md"
 
-## Ver também
+## Onde encontrar
 
-- [Manual: Nota Fiscal](../faturamento/faturamento-nf.md)
-- [Suporte: Base de erros](../suporte/base-de-erros.md)
+Caminho: `Faturamento > Nota Fiscal`.
+
+![Onde encontrar](../assets/images/guias/faturamento_emitir_nfe.png)
+
+## Como fazer
+
+1. Acesse **Faturamento > Nota Fiscal**.
+2. Escolha emissão manual ou por pedido.
+3. Se for por pedido, adicione o pedido correspondente.
+4. Confira cliente, itens, valores e impostos.
+5. Salve a nota.
+6. Clique em **Transmitir**.
+7. Confira o retorno da SEFAZ.
+
+## Erros comuns
+
+- Cliente não encontrado: veja [Como cadastrar um cliente](cadastrar-cliente.md).
+- Material sem informação fiscal: veja [Como cadastrar um material](cadastrar-material.md).
+- Natureza incorreta ou ausente: veja [Como cadastrar uma natureza de operação](cadastrar-natureza-operacao.md).
+- Rejeição da SEFAZ: copie a mensagem completa e consulte [Suporte > Base de erros](../suporte/base-de-erros.md).
+
+## Veja também
+
+- [Como cancelar uma NF-e](cancelar-nfe.md){: target="_blank" rel="noopener" }
+- [Como emitir uma devolução](emitir-devolucao.md){: target="_blank" rel="noopener" }
+- [Como emitir uma carta de correção](emitir-carta-correcao.md){: target="_blank" rel="noopener" }
+- [Manual > Faturamento > Nota Fiscal](../faturamento/faturamento-nf.md){: target="_blank" rel="noopener" }

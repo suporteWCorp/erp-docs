@@ -2,7 +2,7 @@
 
 A aba **Comercial** concentra as rotinas ligadas a clientes, pedidos, orçamento, separação, devolução, comissão e apoio ao fluxo de venda.
 
-A documentação desta seção deve seguir a mesma ordem dos botões exibidos no ERP, para que o usuário encontre no guia o mesmo caminho visual que vê na tela.
+A documentação desta seção deve seguir a mesma ordem dos botões exibidos no WCorp, para que o usuário encontre no guia o mesmo caminho visual que vê na tela.
 
 ![Aba Comercial](../assets/aba-comercial-geral.png)
 
@@ -29,7 +29,7 @@ Cada página deve explicar:
 
 - Para que a rotina serve.
 - Quando o usuário deve usar.
-- Qual caminho seguir no ERP.
+- Qual caminho seguir no WCorp.
 - Quais campos precisam de atenção.
 - Qual resultado esperado.
 - Quais erros ou dúvidas chegam ao Suporte.

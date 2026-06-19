@@ -8,7 +8,7 @@ Gerar, consultar ou acompanhar boletos vinculados a contas a receber.
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Boleto**.
 
-## Caminho no ERP
+## Caminho no WCorp
 
 Financeiro > Boleto
 
@@ -47,5 +47,5 @@ Financeiro > Boleto
     - Número do título, lançamento, remessa, boleto ou conta, quando houver.
     - Cliente, fornecedor, colaborador, banco ou conta envolvida.
     - Valor, vencimento, período filtrado e status atual.
-    - Mensagem completa exibida pelo ERP.
+    - Mensagem completa exibida pelo Sistema.
     - Print da tela e horário aproximado da tentativa.

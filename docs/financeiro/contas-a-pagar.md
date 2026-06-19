@@ -8,7 +8,7 @@ Cadastrar, consultar e acompanhar títulos que a empresa precisa pagar.
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Contas a Pagar**.
 
-## Caminho no ERP
+## Caminho no WCorp
 
 Financeiro > Contas a Pagar
 
@@ -47,5 +47,5 @@ Financeiro > Contas a Pagar
     - Número do título, lançamento, remessa, boleto ou conta, quando houver.
     - Cliente, fornecedor, colaborador, banco ou conta envolvida.
     - Valor, vencimento, período filtrado e status atual.
-    - Mensagem completa exibida pelo ERP.
+    - Mensagem completa exibida pelo Sistema.
     - Print da tela e horário aproximado da tentativa.

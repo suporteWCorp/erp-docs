@@ -2,13 +2,13 @@
 
 ## Objetivo
 
-Conferir movimentações do ERP com extratos ou retornos bancários.
+Conferir movimentações do WCorp com extratos ou retornos bancários.
 
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Conciliação Bancária**.
 
-## Caminho no ERP
+## Caminho no WCorp
 
 Financeiro > Conciliação Bancária
 
@@ -47,5 +47,5 @@ Financeiro > Conciliação Bancária
     - Número do título, lançamento, remessa, boleto ou conta, quando houver.
     - Cliente, fornecedor, colaborador, banco ou conta envolvida.
     - Valor, vencimento, período filtrado e status atual.
-    - Mensagem completa exibida pelo ERP.
+    - Mensagem completa exibida pelo Sistema.
     - Print da tela e horário aproximado da tentativa.

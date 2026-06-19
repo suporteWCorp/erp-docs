@@ -8,7 +8,7 @@ Cadastrar ou consultar atividades vinculadas a serviços.
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Cadastro de Atividade**.
 
-## Caminho no ERP
+## Caminho no WCorp
 
 $Tab > Cadastro de Atividade
 
@@ -45,6 +45,6 @@ $Tab > Cadastro de Atividade
 
     - Empresa e usuário afetado.
     - Código, número ou registro relacionado, quando houver.
-    - Mensagem completa exibida pelo ERP.
+    - Mensagem completa exibida pelo Sistema.
     - Print da tela e horário aproximado da tentativa.
     - Informação se o problema ocorre em um registro específico ou em todos.

@@ -1,6 +1,6 @@
 # Suporte
 
-Esta área organiza os procedimentos internos de atendimento do ERP WCorp. O objetivo é padronizar a coleta de informações, reduzir retrabalho e facilitar a resolução de incidentes recorrentes.
+Esta área organiza os procedimentos internos de atendimento do WCorp. O objetivo é padronizar a coleta de informações, reduzir retrabalho e facilitar a resolução de incidentes recorrentes.
 
 !!! tip "Antes de chamar o suporte"
     Informe módulo, tela, usuário afetado, mensagem exibida e prints do erro. Isso ajuda a resolver mais rápido.

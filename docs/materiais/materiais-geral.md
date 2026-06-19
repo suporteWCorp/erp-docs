@@ -2,7 +2,7 @@
 
 A aba **Materiais** reúne rotinas de cadastro, categorias, locais de armazenagem, entrada, romaneio, inventário, lote/estoque, preços, paletes, conversão de unidades e etiquetas.
 
-A documentação desta seção segue a mesma ordem dos botões exibidos no ERP.
+A documentação desta seção segue a mesma ordem dos botões exibidos no WCorp.
 
 ![Aba Materiais](../assets/aba-materiais-geral.png)
 

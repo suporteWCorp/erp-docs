@@ -2,7 +2,7 @@
 
 A aba **Administração** reúne usuários, empresas, naturezas de operação, unidades, embalagens, NCMs, centros de custo, condições de pagamento e parâmetros do sistema.
 
-A documentação desta seção segue a mesma ordem dos botões exibidos no ERP.
+A documentação desta seção segue a mesma ordem dos botões exibidos no WCorp.
 
 ![Aba Administração](../assets/aba-adm-geral.png)
 

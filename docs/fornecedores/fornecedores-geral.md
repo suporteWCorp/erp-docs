@@ -2,7 +2,7 @@
 
 A aba **Fornecedores** reúne rotinas de cadastro de fornecedores, categorias e certificados utilizados em processos de compra, recebimento e controle fiscal.
 
-A documentação desta seção segue a mesma ordem dos botões exibidos no ERP.
+A documentação desta seção segue a mesma ordem dos botões exibidos no WCorp.
 
 ![Aba Fornecedores](../assets/aba-fornecedores-geral.png)
 

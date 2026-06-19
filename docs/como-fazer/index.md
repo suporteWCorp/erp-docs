@@ -1,14 +1,14 @@
-# Como fazer
+# Guia
 
-Use esta seção quando você sabe o que precisa realizar, mas não quer procurar pela tela do ERP. Aqui os guias são organizados por tarefa do dia a dia.
+Use esta seção quando você sabe o que precisa realizar, mas não quer procurar pela tela do WCorp. O Guia é organizado por processos do dia a dia; o Manual continua sendo a referência detalhada de cada tela.
 
-## Guias rápidos
+## Comercial
 
 <div class="wc-home-grid" markdown>
 
 <div class="wc-card" markdown>
 
-### Como cadastrar cliente
+### Como cadastrar um cliente
 
 Cadastrar um cliente pesquisando pelo CNPJ e deixar o registro pronto para pedidos, faturamento e consultas.
 
@@ -18,46 +18,98 @@ Cadastrar um cliente pesquisando pelo CNPJ e deixar o registro pronto para pedid
 
 <div class="wc-card" markdown>
 
-### Como cadastrar uma natureza de operação
+### Como criar um orçamento
 
-Cadastrar ou revisar a natureza usada em notas, entradas, saídas e operações fiscais.
+Registrar uma proposta comercial antes de confirmar o pedido.
 
-[Abrir guia](cadastrar-natureza-operacao.md){ .md-button .md-button--primary }
-
-</div>
-
-<div class="wc-card" markdown>
-
-### Como cadastrar um material
-
-Cadastrar um material e revisar os principais dados usados em estoque, vendas e faturamento.
-
-[Abrir guia](cadastrar-material.md){ .md-button .md-button--primary }
+[Abrir guia](criar-orcamento.md){ .md-button .md-button--primary }
 
 </div>
 
 <div class="wc-card" markdown>
 
-### Como fazer um pedido de venda
+### Como gerar um pedido
 
-Criar um pedido de venda e preparar o fluxo para separação ou faturamento.
+Criar um pedido de venda a partir de cliente, itens e condição de pagamento.
 
 [Abrir guia](fazer-pedido-venda.md){ .md-button .md-button--primary }
 
 </div>
 
+</div>
+
+## Faturamento
+
+<div class="wc-home-grid" markdown>
+
 <div class="wc-card" markdown>
 
-### Como faturar uma nota
+### Como emitir uma NF-e
 
-Emitir uma nota fiscal de saída a partir de pedido ou lançamento manual.
+Emitir uma nota fiscal de saída manualmente ou a partir de um pedido.
 
 [Abrir guia](faturar-nota.md){ .md-button .md-button--primary }
 
 </div>
 
+<div class="wc-card" markdown>
+
+### Como cancelar uma NF-e
+
+Solicitar o cancelamento de uma nota já autorizada, quando permitido.
+
+[Abrir guia](cancelar-nfe.md){ .md-button .md-button--primary }
+
 </div>
 
-## Quando usar o manual do ERP
+<div class="wc-card" markdown>
 
-Se você já sabe qual tela deseja consultar, use a barra de módulos do ERP no topo da página. Ela funciona como manual por aba do sistema.
+### Como emitir uma carta de correção
+
+Corrigir informações permitidas em uma NF-e autorizada.
+
+[Abrir guia](emitir-carta-correcao.md){ .md-button .md-button--primary }
+
+</div>
+
+</div>
+
+## Compras, estoque e financeiro
+
+<div class="wc-home-grid" markdown>
+
+<div class="wc-card" markdown>
+
+### Como importar XML
+
+Importar um XML de nota fiscal para apoiar a conferência e entrada.
+
+[Abrir guia](importar-xml.md){ .md-button .md-button--primary }
+
+</div>
+
+<div class="wc-card" markdown>
+
+### Como fazer inventário
+
+Conferir estoque físico e registrar ajustes no WCorp.
+
+[Abrir guia](fazer-inventario.md){ .md-button .md-button--primary }
+
+</div>
+
+<div class="wc-card" markdown>
+
+### Como gerar boleto
+
+Gerar boleto a partir de um título financeiro.
+
+[Abrir guia](gerar-boleto.md){ .md-button .md-button--primary }
+
+</div>
+
+</div>
+
+## Quando usar o manual do WCorp
+
+Se você já sabe qual tela deseja consultar, use **Manual**. O Guia explica como realizar uma tarefa; o Manual explica como funciona a tela.

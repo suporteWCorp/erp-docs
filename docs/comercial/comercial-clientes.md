@@ -15,7 +15,7 @@ Use esta rotina quando for necessário:
 - Completar informações antes de lançar orçamento, pedido ou nota fiscal.
 - Corrigir dados cadastrais que estejam impedindo uma operação comercial ou fiscal.
 
-## Caminho no ERP
+## Caminho no WCorp
 
 `Comercial > Clientes`
 

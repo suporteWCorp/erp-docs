@@ -8,7 +8,7 @@ Acompanhar aprovações de compra que dependem da diretoria.
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Aprovação Diretoria**.
 
-## Caminho no ERP
+## Caminho no WCorp
 
 $Tab > Aprovação Diretoria
 
@@ -45,6 +45,6 @@ $Tab > Aprovação Diretoria
 
     - Empresa e usuário afetado.
     - Código, número ou registro relacionado, quando houver.
-    - Mensagem completa exibida pelo ERP.
+    - Mensagem completa exibida pelo Sistema.
     - Print da tela e horário aproximado da tentativa.
     - Informação se o problema ocorre em um registro específico ou em todos.

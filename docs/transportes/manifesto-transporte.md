@@ -8,7 +8,7 @@ Emitir ou consultar manifesto de transporte.
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Manifesto de Transporte**.
 
-## Caminho no ERP
+## Caminho no WCorp
 
 $Tab > Manifesto de Transporte
 
@@ -45,6 +45,6 @@ $Tab > Manifesto de Transporte
 
     - Empresa e usuário afetado.
     - Código, número ou registro relacionado, quando houver.
-    - Mensagem completa exibida pelo ERP.
+    - Mensagem completa exibida pelo Sistema.
     - Print da tela e horário aproximado da tentativa.
     - Informação se o problema ocorre em um registro específico ou em todos.

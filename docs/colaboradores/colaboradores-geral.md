@@ -2,7 +2,7 @@
 
 A aba **Colaboradores** reúne rotinas relacionadas a funcionários, cargos, comissões, planejamento de pagamento e pagamento de funcionário.
 
-A documentação desta seção segue a mesma ordem dos botões exibidos no ERP.
+A documentação desta seção segue a mesma ordem dos botões exibidos no WCorp.
 
 ![Aba Colaboradores](../assets/aba-colaboradores-geral.png)
 
@@ -32,5 +32,5 @@ A documentação desta seção segue a mesma ordem dos botões exibidos no ERP.
     - Nome ou código do colaborador.
     - Cargo ou rotina envolvida.
     - Período de pagamento, quando aplicável.
-    - Mensagem completa exibida pelo ERP.
+    - Mensagem completa exibida pelo Sistema.
     - Print da tela e horário aproximado da tentativa.

@@ -8,7 +8,7 @@ Cadastrar ou consultar municípios utilizados nos cadastros e rotinas fiscais.
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Município**.
 
-## Caminho no ERP
+## Caminho no WCorp
 
 $Tab > Município
 
@@ -45,6 +45,6 @@ $Tab > Município
 
     - Empresa e usuário afetado.
     - Código, número ou registro relacionado, quando houver.
-    - Mensagem completa exibida pelo ERP.
+    - Mensagem completa exibida pelo Sistema.
     - Print da tela e horário aproximado da tentativa.
     - Informação se o problema ocorre em um registro específico ou em todos.

@@ -8,7 +8,7 @@ Cadastrar ou consultar categorias usadas para classificar fornecedores.
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Categoria de Fornecedor**.
 
-## Caminho no ERP
+## Caminho no WCorp
 
 Fornecedores > Categoria de Fornecedor
 
@@ -46,5 +46,5 @@ Fornecedores > Categoria de Fornecedor
     - Empresa e usuário afetado.
     - Nome, código ou documento do fornecedor.
     - Categoria, certificado ou cadastro envolvido, quando aplicável.
-    - Mensagem completa exibida pelo ERP.
+    - Mensagem completa exibida pelo Sistema.
     - Print da tela e horário aproximado da tentativa.

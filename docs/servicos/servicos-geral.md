@@ -2,7 +2,7 @@
 
 A aba **Serviços** reúne rotinas de cadastro de serviços, atividades, grupos, orçamentos, ordens de serviço e recorrência.
 
-A documentação desta seção segue a mesma ordem dos botões exibidos no ERP.
+A documentação desta seção segue a mesma ordem dos botões exibidos no WCorp.
 
 ![Aba Serviços](../assets/aba-servicos-geral.png)
 

@@ -8,7 +8,7 @@ Executar rotinas auxiliares relacionadas a materiais e estoque.
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Ferramentas**.
 
-## Caminho no ERP
+## Caminho no WCorp
 
 Materiais > Ferramentas
 
@@ -46,5 +46,5 @@ Materiais > Ferramentas
     - Empresa e usuário afetado.
     - Código ou descrição do material.
     - Lote, local de armazenagem, unidade e quantidade, quando aplicável.
-    - Mensagem completa exibida pelo ERP.
+    - Mensagem completa exibida pelo Sistema.
     - Print da tela e horário aproximado da tentativa.

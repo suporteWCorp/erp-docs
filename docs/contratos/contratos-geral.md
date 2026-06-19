@@ -2,7 +2,7 @@
 
 A aba **Contratos** reúne cadastros e manutenções ligados a contratos, fases e materiais ou serviços previstos.
 
-A documentação desta seção segue a mesma ordem dos botões exibidos no ERP.
+A documentação desta seção segue a mesma ordem dos botões exibidos no WCorp.
 
 ![Aba Contratos](../assets/aba-contratos-geral.png)
 

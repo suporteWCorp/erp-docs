@@ -8,7 +8,7 @@ Acompanhar informações de despacho e envio relacionadas aos pedidos.
 
 Preencha aqui em quais situações o usuário deve acessar esta rotina.
 
-## Caminho no ERP
+## Caminho no WCorp
 
 Comercial > Despacho
 

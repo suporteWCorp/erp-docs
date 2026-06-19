@@ -8,7 +8,7 @@ Emitir ou processar notas fiscais em lote quando houver mais de um documento a s
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Nota Fiscal (Lote)**.
 
-## Caminho no ERP
+## Caminho no WCorp
 
 Faturamento > Nota Fiscal (Lote)
 
@@ -46,6 +46,6 @@ Faturamento > Nota Fiscal (Lote)
     - Empresa e usuário afetado.
     - Número da nota ou documento relacionado, quando houver.
     - Cliente, fornecedor ou material envolvido.
-    - Mensagem completa exibida pelo ERP ou pela SEFAZ.
+    - Mensagem completa exibida pelo Sistema ou pela SEFAZ.
     - Print da tela e horário aproximado do erro.
     - Informação se o problema ocorre em um documento específico ou em todos.

@@ -1,5 +1,5 @@
 site_name: Guia WCorp
-site_description: Central de ajuda do ERP para usuários, suporte e desenvolvimento.
+site_description: Central de ajuda do WCorp para usuários, suporte e desenvolvimento.
 site_author: WCorp
 
 theme:
@@ -33,16 +33,35 @@ nav:
   - Início: index.md
   - Guia:
       - Visão geral: como-fazer/index.md
-      - Como cadastrar cliente: como-fazer/cadastrar-cliente.md
-      - Como cadastrar uma natureza de operação: como-fazer/cadastrar-natureza-operacao.md
-      - Como cadastrar um material: como-fazer/cadastrar-material.md
-      - Como fazer um pedido de venda: como-fazer/fazer-pedido-venda.md
-      - Como faturar uma nota: como-fazer/faturar-nota.md
-  - FAQ:
-      - Glossário: referencia/glossario.md
-      - Erros comuns: referencia/erros-comuns.md
-      - Perguntas frequentes: referencia/faq.md
-      - Links úteis: referencia/links-uteis.md
+      - Comercial:
+          - Como cadastrar um cliente: como-fazer/cadastrar-cliente.md
+          - Como cadastrar um fornecedor: como-fazer/cadastrar-fornecedor.md
+          - Como criar um orçamento: como-fazer/criar-orcamento.md
+          - Como gerar um pedido: como-fazer/fazer-pedido-venda.md
+          - Como cancelar um pedido: como-fazer/cancelar-pedido.md
+      - Faturamento:
+          - Como emitir uma NF-e: como-fazer/faturar-nota.md
+          - Como cancelar uma NF-e: como-fazer/cancelar-nfe.md
+          - Como emitir uma devolução: como-fazer/emitir-devolucao.md
+          - Como emitir uma carta de correção: como-fazer/emitir-carta-correcao.md
+          - Como emitir uma nota complementar: como-fazer/emitir-nota-complementar.md
+      - Compras:
+          - Como importar XML: como-fazer/importar-xml.md
+          - Como lançar uma nota de entrada: como-fazer/lancar-nota-entrada.md
+          - Como criar um pedido de compra: como-fazer/criar-pedido-compra.md
+      - Estoque:
+          - Como consultar estoque: como-fazer/consultar-estoque.md
+          - Como ajustar estoque: como-fazer/ajustar-estoque.md
+          - Como fazer inventário: como-fazer/fazer-inventario.md
+          - Como transferir estoque: como-fazer/transferir-estoque.md
+          - Como cadastrar um material: como-fazer/cadastrar-material.md
+      - Financeiro:
+          - Como gerar boleto: como-fazer/gerar-boleto.md
+          - Como baixar um título: como-fazer/baixar-titulo.md
+          - Como lançar contas a pagar: como-fazer/lancar-contas-a-pagar.md
+      - Configurações de apoio:
+          - Como cadastrar uma natureza de operação: como-fazer/cadastrar-natureza-operacao.md
+  - FAQ: referencia/index.md
   - Manual:
       - Visão geral: manual/index.md
       - Comercial:
@@ -198,6 +217,9 @@ markdown_extensions:
       permalink: true
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.snippets:
+      base_path:
+        - docs
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tasklist:

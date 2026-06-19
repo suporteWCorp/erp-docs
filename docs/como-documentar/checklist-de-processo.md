@@ -5,7 +5,7 @@ Antes de considerar uma página pronta, confira se ela responde aos pontos abaix
 - O objetivo da rotina está claro?
 - O caminho de menu está documentado?
 - Os pré-requisitos foram listados?
-- O passo a passo foi testado no ERP?
+- O passo a passo foi testado no WCorp?
 - Campos obrigatórios e regras importantes foram explicados?
 - O resultado esperado foi descrito?
 - Erros comuns e formas de correção foram incluídos?

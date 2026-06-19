@@ -8,7 +8,7 @@ Registrar, consultar ou controlar operações financeiras relacionadas a cheques
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Cheque**.
 
-## Caminho no ERP
+## Caminho no WCorp
 
 Financeiro > Cheque
 
@@ -47,5 +47,5 @@ Financeiro > Cheque
     - Número do título, lançamento, remessa, boleto ou conta, quando houver.
     - Cliente, fornecedor, colaborador, banco ou conta envolvida.
     - Valor, vencimento, período filtrado e status atual.
-    - Mensagem completa exibida pelo ERP.
+    - Mensagem completa exibida pelo Sistema.
     - Print da tela e horário aproximado da tentativa.

@@ -8,7 +8,7 @@ Cadastrar, consultar ou controlar certificados vinculados a fornecedores ou roti
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Certificado**.
 
-## Caminho no ERP
+## Caminho no WCorp
 
 Fornecedores > Certificado
 
@@ -46,5 +46,5 @@ Fornecedores > Certificado
     - Empresa e usuário afetado.
     - Nome, código ou documento do fornecedor.
     - Categoria, certificado ou cadastro envolvido, quando aplicável.
-    - Mensagem completa exibida pelo ERP.
+    - Mensagem completa exibida pelo Sistema.
     - Print da tela e horário aproximado da tentativa.

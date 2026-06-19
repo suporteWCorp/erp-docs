@@ -1,20 +1,47 @@
 # Links úteis
 
-## Atendimento
+Atalhos para consultas oficiais usadas no dia a dia do suporte.
 
-- [WhatsApp do Suporte](https://wa.me/5512991583055)
-- [Canal da WCorp no YouTube](https://www.youtube.com/@wcorpsoftwaredegestao5422)
-- [Página de Suporte](../suporte/index.md)
+<div class="wc-link-hub" markdown>
 
-## Páginas internas
+<div class="wc-link-item" markdown>
 
-- [Triagem de atendimento](../suporte/triagem.md)
-- [Abertura de chamado](../suporte/abertura-de-chamado.md)
-- [Coleta de evidências](../suporte/coleta-de-evidencias.md)
-- [Base de erros](../suporte/base-de-erros.md)
+### :material-file-search-outline: [Consulta Chave NF-e](https://www.nfe.fazenda.gov.br/portal/consultaRecaptcha.aspx){ target="_blank" rel="noopener" }
 
-## Para documentar
+Consulta uma NF-e pela chave de acesso no portal nacional.
 
-- [Padrão das páginas](../como-documentar/padrao-das-paginas.md)
-- [Checklist de processo](../como-documentar/checklist-de-processo.md)
-- [Plano de documentação](../como-documentar/plano-de-documentacao.md)
+</div>
+
+<div class="wc-link-item" markdown>
+
+### :material-truck-check-outline: [Consulta Chave CT-e](https://www.cte.fazenda.gov.br/portal/consultaRecaptcha.aspx){ target="_blank" rel="noopener" }
+
+Consulta um CT-e pela chave de acesso no portal nacional.
+
+</div>
+
+<div class="wc-link-item" markdown>
+
+### :material-domain-search-outline: [Consulta CNPJ](https://solucoes.receita.fazenda.gov.br/Servicos/cnpjreva/Cnpjreva_Solicitacao.asp){ target="_blank" rel="noopener" }
+
+Consulta situação cadastral de pessoa jurídica na Receita Federal.
+
+</div>
+
+<div class="wc-link-item" markdown>
+
+### :material-database-search-outline: [SINTEGRA](https://www.sintegra.gov.br/){ target="_blank" rel="noopener" }
+
+Consulta dados cadastrais estaduais de contribuintes.
+
+</div>
+
+<div class="wc-link-item" markdown>
+
+### :material-map-marker-radius-outline: [Consulta CEP](https://buscacepinter.correios.com.br/app/endereco/index.php){ target="_blank" rel="noopener" }
+
+Consulta endereços e CEPs na base dos Correios.
+
+</div>
+
+</div>

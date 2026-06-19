@@ -8,7 +8,7 @@ Registrar e acompanhar devoluções vinculadas ao fluxo comercial.
 
 Preencha aqui em quais situações o usuário deve acessar esta rotina.
 
-## Caminho no ERP
+## Caminho no WCorp
 
 Comercial > Devolução
 

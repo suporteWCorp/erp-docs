@@ -1,5 +1,13 @@
-Módulo Comercial - Cadastro de Clientes
+# Natureza de Operação
 
-Para cadastrar o cliente basta preencher as informações e salvar ou digitar o CNPJ e clicar na lupa para preenchimento automático com base nos dados cadastrados na base da sefaz.
+Esta página documenta a tela de natureza de operação do WCorp.
 
-![Menu Principal do Comercial](../assets/comercial-clientes.png)
+Use esta rotina para cadastrar, consultar ou revisar regras operacionais e fiscais usadas em notas, entradas, saídas e movimentações.
+
+## Caminho no WCorp
+
+`Administração > Natureza de Operação`
+
+## Observação
+
+O detalhamento dos campos e regras desta tela ainda precisa ser complementado.

@@ -8,7 +8,7 @@ Registrar ou acompanhar pagamentos de funcionários.
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Pagamento de Funcionário**.
 
-## Caminho no ERP
+## Caminho no WCorp
 
 Colaboradores > Pagamento de Funcionário
 
@@ -46,5 +46,5 @@ Colaboradores > Pagamento de Funcionário
     - Empresa e usuário afetado.
     - Nome ou código do colaborador.
     - Cargo, período ou pagamento envolvido, quando aplicável.
-    - Mensagem completa exibida pelo ERP.
+    - Mensagem completa exibida pelo Sistema.
     - Print da tela e horário aproximado da tentativa.

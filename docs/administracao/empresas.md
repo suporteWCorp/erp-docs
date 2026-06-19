@@ -1,5 +1,13 @@
-Módulo Comercial - Cadastro de Clientes
+# Empresas
 
-Para cadastrar o cliente basta preencher as informações e salvar ou digitar o CNPJ e clicar na lupa para preenchimento automático com base nos dados cadastrados na base da sefaz.
+Esta página documenta a tela de empresas do WCorp.
 
-![Menu Principal do Comercial](../assets/comercial-clientes.png)
+Use esta rotina para consultar ou manter os dados das empresas utilizadas nas operações do sistema.
+
+## Caminho no WCorp
+
+`Administração > Empresas`
+
+## Observação
+
+O detalhamento dos campos e regras desta tela ainda precisa ser complementado.

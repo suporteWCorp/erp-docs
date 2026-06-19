@@ -8,7 +8,7 @@ Criar ou acompanhar solicitações de pagamento antes da efetivação financeira
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Solicitação de Pagamento**.
 
-## Caminho no ERP
+## Caminho no WCorp
 
 Financeiro > Solicitação de Pagamento
 
@@ -47,5 +47,5 @@ Financeiro > Solicitação de Pagamento
     - Número do título, lançamento, remessa, boleto ou conta, quando houver.
     - Cliente, fornecedor, colaborador, banco ou conta envolvida.
     - Valor, vencimento, período filtrado e status atual.
-    - Mensagem completa exibida pelo ERP.
+    - Mensagem completa exibida pelo Sistema.
     - Print da tela e horário aproximado da tentativa.

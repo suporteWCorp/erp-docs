@@ -2,7 +2,7 @@
 
 A aba **Relatórios** reúne consultas, extrações fiscais, SPED, não conformidades, ocorrências e relatórios de WhatsApp.
 
-A documentação desta seção segue a mesma ordem dos botões exibidos no ERP.
+A documentação desta seção segue a mesma ordem dos botões exibidos no WCorp.
 
 ![Aba Relatórios](../assets/aba-relatorios-geral.png)
 

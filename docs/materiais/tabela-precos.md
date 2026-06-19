@@ -8,7 +8,7 @@ Consultar ou manter tabelas de preços vinculadas a materiais.
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Tabela de Preços**.
 
-## Caminho no ERP
+## Caminho no WCorp
 
 Materiais > Tabela de Preços
 
@@ -46,5 +46,5 @@ Materiais > Tabela de Preços
     - Empresa e usuário afetado.
     - Código ou descrição do material.
     - Lote, local de armazenagem, unidade e quantidade, quando aplicável.
-    - Mensagem completa exibida pelo ERP.
+    - Mensagem completa exibida pelo Sistema.
     - Print da tela e horário aproximado da tentativa.

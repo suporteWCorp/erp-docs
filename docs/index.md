@@ -1,6 +1,16 @@
 # Central de Ajuda - WCorp
 
-Bem-vindo à central de ajuda do **WCorp**. Este portal tem duas formas de navegação: guias rápidos por tarefa e guia por tarefa, FAQ e manual por aba do ERP.
+<div class="wc-portal-layout" markdown>
+
+<aside class="wc-portal-sidebar" markdown>
+
+--8<-- "shared/portal/sidebar.md"
+
+</aside>
+
+<main class="wc-portal-main" markdown>
+
+Bem-vindo à central de ajuda do **WCorp**. Este portal tem duas formas de navegação: guias rápidos por tarefa e guia por tarefa, FAQ e manual por aba do WCorp.
 
 <div class="wc-home-grid" markdown>
 
@@ -18,7 +28,7 @@ Acesse guias diretos como cadastrar cliente, cadastrar material, faturar nota e 
 
 ### Quero consultar uma tela
 
-Use o manual por abas do ERP, seguindo a mesma organização visual do sistema.
+Use o manual por abas do WCorp, seguindo a mesma organização visual do sistema.
 
 [Abrir Manual](manual/index.md){ .md-button .md-button--primary }
 
@@ -46,9 +56,9 @@ Veja orientações de triagem, coleta de evidências e base de erros recorrentes
 | Como fazer um pedido de venda | [Abrir](como-fazer/fazer-pedido-venda.md) |
 | Como faturar uma nota | [Abrir](como-fazer/faturar-nota.md) |
 
-## Manual por abas do ERP
+## Manual por abas do WCorp
 
-Use a barra superior para navegar pelos módulos do ERP: **Comercial**, **Faturamento**, **Financeiro**, **Materiais**, **Compras**, **Produção**, **Transportes**, **Relatórios** e demais abas.
+Use a barra superior para navegar pelos módulos do WCorp: **Comercial**, **Faturamento**, **Financeiro**, **Materiais**, **Compras**, **Produção**, **Transportes**, **Relatórios** e demais abas.
 
 !!! info "Suporte"
     Ao abrir um chamado, informe módulo, tela, usuário afetado, mensagem exibida e prints do erro.
@@ -59,4 +69,7 @@ Use a barra superior para navegar pelos módulos do ERP: **Comercial**, **Fatura
 *Desenvolvido pela equipe de Suporte - versão teste 2026*
 </center>
 
+</main>
+
+</div>
 

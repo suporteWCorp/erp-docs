@@ -8,7 +8,7 @@ Planejar pagamentos de colaboradores antes da efetivação.
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Planejamento de Pagamento**.
 
-## Caminho no ERP
+## Caminho no WCorp
 
 Colaboradores > Planejamento de Pagamento
 
@@ -46,5 +46,5 @@ Colaboradores > Planejamento de Pagamento
     - Empresa e usuário afetado.
     - Nome ou código do colaborador.
     - Cargo, período ou pagamento envolvido, quando aplicável.
-    - Mensagem completa exibida pelo ERP.
+    - Mensagem completa exibida pelo Sistema.
     - Print da tela e horário aproximado da tentativa.

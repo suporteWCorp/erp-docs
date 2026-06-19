@@ -2,13 +2,13 @@
 
 ## Objetivo
 
-Registrar entrada de nota fiscal no ERP, geralmente vinculada a compras, remessas ou movimentações de entrada.
+Registrar entrada de nota fiscal no WCorp, geralmente vinculada a compras, remessas ou movimentações de entrada.
 
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Entrada de Nota Fiscal**.
 
-## Caminho no ERP
+## Caminho no WCorp
 
 Faturamento > Entrada de Nota Fiscal
 
@@ -46,6 +46,6 @@ Faturamento > Entrada de Nota Fiscal
     - Empresa e usuário afetado.
     - Número da nota ou documento relacionado, quando houver.
     - Cliente, fornecedor ou material envolvido.
-    - Mensagem completa exibida pelo ERP ou pela SEFAZ.
+    - Mensagem completa exibida pelo Sistema ou pela SEFAZ.
     - Print da tela e horário aproximado do erro.
     - Informação se o problema ocorre em um documento específico ou em todos.

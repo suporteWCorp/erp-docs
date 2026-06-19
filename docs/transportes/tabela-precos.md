@@ -8,7 +8,7 @@ Cadastrar ou consultar tabelas de preços de transporte.
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Tabela de Preços**.
 
-## Caminho no ERP
+## Caminho no WCorp
 
 $Tab > Tabela de Preços
 
@@ -45,6 +45,6 @@ $Tab > Tabela de Preços
 
     - Empresa e usuário afetado.
     - Código, número ou registro relacionado, quando houver.
-    - Mensagem completa exibida pelo ERP.
+    - Mensagem completa exibida pelo Sistema.
     - Print da tela e horário aproximado da tentativa.
     - Informação se o problema ocorre em um registro específico ou em todos.

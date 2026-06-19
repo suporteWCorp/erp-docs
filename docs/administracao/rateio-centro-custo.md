@@ -8,7 +8,7 @@ Cadastrar ou consultar rateios de centro de custo.
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Rateio de Centro de Custo**.
 
-## Caminho no ERP
+## Caminho no WCorp
 
 $Tab > Rateio de Centro de Custo
 
@@ -45,6 +45,6 @@ $Tab > Rateio de Centro de Custo
 
     - Empresa e usuário afetado.
     - Código, número ou registro relacionado, quando houver.
-    - Mensagem completa exibida pelo ERP.
+    - Mensagem completa exibida pelo Sistema.
     - Print da tela e horário aproximado da tentativa.
     - Informação se o problema ocorre em um registro específico ou em todos.

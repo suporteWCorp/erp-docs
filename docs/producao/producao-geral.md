@@ -2,7 +2,7 @@
 
 A aba **Produção** reúne ordem de produção, PCP, processos, inspeção, separação de material, equipamentos, custos, parâmetros, paradas e qualidade.
 
-A documentação desta seção segue a mesma ordem dos botões exibidos no ERP.
+A documentação desta seção segue a mesma ordem dos botões exibidos no WCorp.
 
 ![Aba Produção](../assets/aba-producao-geral.png)
 

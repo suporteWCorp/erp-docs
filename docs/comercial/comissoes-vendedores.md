@@ -8,7 +8,7 @@ Consultar, calcular ou acompanhar comissões relacionadas às vendas.
 
 Preencha aqui em quais situações o usuário deve acessar esta rotina.
 
-## Caminho no ERP
+## Caminho no WCorp
 
 Comercial > Comissões de Vendedores
 

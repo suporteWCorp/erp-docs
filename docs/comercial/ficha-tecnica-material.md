@@ -8,7 +8,7 @@ Consultar ou informar dados técnicos do material usados no processo comercial.
 
 Preencha aqui em quais situações o usuário deve acessar esta rotina.
 
-## Caminho no ERP
+## Caminho no WCorp
 
 Comercial > Ficha Técnica de Material
 

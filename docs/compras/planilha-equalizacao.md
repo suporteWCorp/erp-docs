@@ -8,7 +8,7 @@ Comparar propostas ou condições de fornecedores para apoio à decisão de comp
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Planilha de Equalização**.
 
-## Caminho no ERP
+## Caminho no WCorp
 
 $Tab > Planilha de Equalização
 
@@ -45,6 +45,6 @@ $Tab > Planilha de Equalização
 
     - Empresa e usuário afetado.
     - Código, número ou registro relacionado, quando houver.
-    - Mensagem completa exibida pelo ERP.
+    - Mensagem completa exibida pelo Sistema.
     - Print da tela e horário aproximado da tentativa.
     - Informação se o problema ocorre em um registro específico ou em todos.

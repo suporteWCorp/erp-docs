@@ -1,14 +1,14 @@
-# Manual do ERP
+# Manual do WCorp
 
-O **Manual do ERP** serve para documentar as telas do WCorp do mesmo jeito que elas aparecem no sistema.
+O **Manual do WCorp** serve para documentar as telas do WCorp do mesmo jeito que elas aparecem no sistema.
 
 Use esta área quando precisar consultar uma página, entender a função de um botão, revisar campos principais ou registrar orientações específicas de uma aba.
 
 ## Como usar
 
-- Escolha a aba do ERP no menu lateral.
+- Escolha a aba do WCorp no menu lateral.
 - Abra a tela que deseja consultar.
-- Use o índice da página para navegar entre objetivo, caminho no ERP, passo a passo, dúvidas frequentes e orientação para suporte.
+- Use o índice da página para navegar entre objetivo, caminho no WCorp, passo a passo, dúvidas frequentes e orientação para suporte.
 
 ## Abas documentadas
 
@@ -24,4 +24,4 @@ Use esta área quando precisar consultar uma página, entender a função de um 
 | Administração | Usuários, empresas, natureza de operação, NCMs e parâmetros. |
 
 !!! info "Diferença entre Guia e Manual"
-    O **Guia** é organizado por tarefa, como "Como cadastrar cliente". O **Manual** é organizado por tela e aba do ERP.
+    O **Guia** é organizado por tarefa, como "Como cadastrar cliente". O **Manual** é organizado por tela e aba do WCorp.

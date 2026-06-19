@@ -1,5 +1,13 @@
-Módulo Comercial - Cadastro de Clientes
+# Grupo Usuários
 
-Para cadastrar o cliente basta preencher as informações e salvar ou digitar o CNPJ e clicar na lupa para preenchimento automático com base nos dados cadastrados na base da sefaz.
+Esta página documenta a tela de grupos de usuários do WCorp.
 
-![Menu Principal do Comercial](../assets/comercial-clientes.png)
+Use esta rotina para organizar permissões de acesso por perfil, função ou área de trabalho.
+
+## Caminho no WCorp
+
+`Administração > Grupo Usuários`
+
+## Observação
+
+O detalhamento dos campos e regras desta tela ainda precisa ser complementado.

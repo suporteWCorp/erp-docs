@@ -1,8 +1,8 @@
 # Faturamento
 
-A aba **Faturamento** reúne as rotinas fiscais do ERP WCorp, incluindo emissão de nota fiscal, cupom fiscal, entrada de notas, carta de correção, inutilização e configurações de entrada.
+A aba **Faturamento** reúne as rotinas fiscais do WCorp, incluindo emissão de nota fiscal, cupom fiscal, entrada de notas, carta de correção, inutilização e configurações de entrada.
 
-A documentação desta seção segue a mesma ordem dos botões exibidos no ERP, para facilitar a localização pelo usuário.
+A documentação desta seção segue a mesma ordem dos botões exibidos no WCorp, para facilitar a localização pelo usuário.
 
 ![Aba Faturamento](../assets/aba-faturamento-geral.png)
 
@@ -36,6 +36,6 @@ A documentação desta seção segue a mesma ordem dos botões exibidos no ERP, 
     - Número da nota, pedido ou documento de origem.
     - Cliente ou fornecedor envolvido.
     - Natureza de operação, CFOP e tipo de documento.
-    - Mensagem completa da SEFAZ ou do ERP.
+    - Mensagem completa da SEFAZ ou do Sistema.
     - Print da tela e horário aproximado da tentativa.
     - Informação se o problema ocorre em uma nota específica ou em todas.

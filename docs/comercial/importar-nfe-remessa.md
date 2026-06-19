@@ -8,7 +8,7 @@ Importar nota fiscal eletrônica para gerar ou apoiar processos de remessa.
 
 Preencha aqui em quais situações o usuário deve acessar esta rotina.
 
-## Caminho no ERP
+## Caminho no WCorp
 
 Comercial > Importar NFe para Remessa
 

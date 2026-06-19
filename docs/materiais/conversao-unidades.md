@@ -8,7 +8,7 @@ Cadastrar ou consultar regras de conversão entre unidades de medida.
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Conversão de Unidades**.
 
-## Caminho no ERP
+## Caminho no WCorp
 
 Materiais > Conversão de Unidades
 
@@ -46,5 +46,5 @@ Materiais > Conversão de Unidades
     - Empresa e usuário afetado.
     - Código ou descrição do material.
     - Lote, local de armazenagem, unidade e quantidade, quando aplicável.
-    - Mensagem completa exibida pelo ERP.
+    - Mensagem completa exibida pelo Sistema.
     - Print da tela e horário aproximado da tentativa.

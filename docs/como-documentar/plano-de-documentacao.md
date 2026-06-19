@@ -34,7 +34,7 @@ Use este plano para priorizar o que documentar primeiro.
 
 Uma página pode ser considerada pronta quando:
 
-- O passo a passo foi validado no ERP.
+- O passo a passo foi validado no WCorp.
 - Os campos obrigatórios estão explicados.
 - As principais regras de negócio foram registradas.
 - Os erros comuns foram incluídos ou vinculados.

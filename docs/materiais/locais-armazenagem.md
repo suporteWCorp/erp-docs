@@ -8,7 +8,7 @@ Cadastrar ou consultar locais utilizados para controle físico e lógico do esto
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Locais de Armazenagem**.
 
-## Caminho no ERP
+## Caminho no WCorp
 
 Materiais > Locais de Armazenagem
 
@@ -46,5 +46,5 @@ Materiais > Locais de Armazenagem
     - Empresa e usuário afetado.
     - Código ou descrição do material.
     - Lote, local de armazenagem, unidade e quantidade, quando aplicável.
-    - Mensagem completa exibida pelo ERP.
+    - Mensagem completa exibida pelo Sistema.
     - Print da tela e horário aproximado da tentativa.

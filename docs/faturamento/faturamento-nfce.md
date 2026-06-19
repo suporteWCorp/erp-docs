@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Emitir ou consultar cupom fiscal no ERP WCorp, conforme a operação de venda e o ambiente fiscal utilizado pela empresa.
+Emitir ou consultar cupom fiscal no WCorp, conforme a operação de venda e o ambiente fiscal utilizado pela empresa.
 
 ## Quando usar
 
@@ -13,7 +13,7 @@ Use esta rotina quando for necessário:
 - Verificar status de emissão.
 - Apoiar atendimento relacionado a venda fiscal no ponto de venda.
 
-## Caminho no ERP
+## Caminho no WCorp
 
 `Faturamento > Cupom Fiscal`
 

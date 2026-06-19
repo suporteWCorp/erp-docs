@@ -8,7 +8,7 @@ Cadastrar, consultar ou alterar fornecedores usados em compras, entradas e rotin
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Fornecedores**.
 
-## Caminho no ERP
+## Caminho no WCorp
 
 Fornecedores > Fornecedores
 
@@ -46,5 +46,5 @@ Fornecedores > Fornecedores
     - Empresa e usuário afetado.
     - Nome, código ou documento do fornecedor.
     - Categoria, certificado ou cadastro envolvido, quando aplicável.
-    - Mensagem completa exibida pelo ERP.
+    - Mensagem completa exibida pelo Sistema.
     - Print da tela e horário aproximado da tentativa.

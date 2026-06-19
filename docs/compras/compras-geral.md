@@ -2,7 +2,7 @@
 
 A aba **Compras** reúne requisições, equalização, aprovações, pedidos de compra e vínculos com projeção de vendas.
 
-A documentação desta seção segue a mesma ordem dos botões exibidos no ERP.
+A documentação desta seção segue a mesma ordem dos botões exibidos no WCorp.
 
 ![Aba Compras](../assets/aba-compras-geral.png)
 

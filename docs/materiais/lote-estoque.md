@@ -1,4 +1,4 @@
-Materiais - Lote/Estoque
+# Materiais - Lote/Estoque
 
 Para cadastrar um Lote novo é necessário preencher as informações obrigatórias.
 Primeiro selecionar o material, após isso selecionar o local de armazenagem e informar o nome do Lote.

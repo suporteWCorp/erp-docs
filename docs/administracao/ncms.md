@@ -1,5 +1,13 @@
-Módulo Comercial - Cadastro de Clientes
+# NCMS
 
-Para cadastrar o cliente basta preencher as informações e salvar ou digitar o CNPJ e clicar na lupa para preenchimento automático com base nos dados cadastrados na base da sefaz.
+Esta página documenta a tela de NCMs do WCorp.
 
-![Menu Principal do Comercial](../assets/comercial-clientes.png)
+Use esta rotina para consultar ou manter classificações fiscais de mercadorias utilizadas em cadastros e documentos fiscais.
+
+## Caminho no WCorp
+
+`Administração > NCMS`
+
+## Observação
+
+O detalhamento dos campos e regras desta tela ainda precisa ser complementado.

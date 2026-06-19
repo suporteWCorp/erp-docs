@@ -8,7 +8,7 @@ Consultar ou controlar comissões vinculadas a colaboradores.
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Comissões**.
 
-## Caminho no ERP
+## Caminho no WCorp
 
 Colaboradores > Comissões
 
@@ -46,5 +46,5 @@ Colaboradores > Comissões
     - Empresa e usuário afetado.
     - Nome ou código do colaborador.
     - Cargo, período ou pagamento envolvido, quando aplicável.
-    - Mensagem completa exibida pelo ERP.
+    - Mensagem completa exibida pelo Sistema.
     - Print da tela e horário aproximado da tentativa.

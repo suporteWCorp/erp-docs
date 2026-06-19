@@ -8,7 +8,7 @@ Consultar, acompanhar ou localizar notas fiscais e seus respectivos status.
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Radar de Nota Fiscal**.
 
-## Caminho no ERP
+## Caminho no WCorp
 
 Faturamento > Radar de Nota Fiscal
 
@@ -46,6 +46,6 @@ Faturamento > Radar de Nota Fiscal
     - Empresa e usuário afetado.
     - Número da nota ou documento relacionado, quando houver.
     - Cliente, fornecedor ou material envolvido.
-    - Mensagem completa exibida pelo ERP ou pela SEFAZ.
+    - Mensagem completa exibida pelo Sistema ou pela SEFAZ.
     - Print da tela e horário aproximado do erro.
     - Informação se o problema ocorre em um documento específico ou em todos.

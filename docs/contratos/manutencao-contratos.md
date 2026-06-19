@@ -8,7 +8,7 @@ Executar manutenções ou ajustes em contratos existentes.
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Manutenção de Contratos**.
 
-## Caminho no ERP
+## Caminho no WCorp
 
 $Tab > Manutenção de Contratos
 
@@ -45,6 +45,6 @@ $Tab > Manutenção de Contratos
 
     - Empresa e usuário afetado.
     - Código, número ou registro relacionado, quando houver.
-    - Mensagem completa exibida pelo ERP.
+    - Mensagem completa exibida pelo Sistema.
     - Print da tela e horário aproximado da tentativa.
     - Informação se o problema ocorre em um registro específico ou em todos.

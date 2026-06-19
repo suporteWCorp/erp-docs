@@ -2,7 +2,7 @@
 
 A aba **Transportes** reúne regiões, tabelas de preço, CT-e, MDF-e, carta de correção, inutilização, alíquotas, faturamento, coleta, averbação e carga.
 
-A documentação desta seção segue a mesma ordem dos botões exibidos no ERP.
+A documentação desta seção segue a mesma ordem dos botões exibidos no WCorp.
 
 ![Aba Transportes](../assets/aba-transportes-geral.png)
 

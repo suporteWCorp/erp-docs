@@ -8,7 +8,7 @@ Controlar averbação junto à seguradora.
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Averbação Seguradora**.
 
-## Caminho no ERP
+## Caminho no WCorp
 
 $Tab > Averbação Seguradora
 
@@ -45,6 +45,6 @@ $Tab > Averbação Seguradora
 
     - Empresa e usuário afetado.
     - Código, número ou registro relacionado, quando houver.
-    - Mensagem completa exibida pelo ERP.
+    - Mensagem completa exibida pelo Sistema.
     - Print da tela e horário aproximado da tentativa.
     - Informação se o problema ocorre em um registro específico ou em todos.

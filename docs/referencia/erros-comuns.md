@@ -1,6 +1,6 @@
 # Erros comuns
 
-Use esta página como base de conhecimento para mensagens recorrentes do ERP.
+Use esta página como base de conhecimento para mensagens recorrentes do Sistema.
 
 | Mensagem | Onde ocorre | Causa provável | Como resolver |
 | --- | --- | --- | --- |
