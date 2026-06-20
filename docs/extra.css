@@ -101,6 +101,80 @@ center {
     margin-top: 0;
 }
 
+/* Central de Referências */
+.wc-reference-grid .wc-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.wc-reference-grid .wc-card .md-button {
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+/* Módulos expansíveis da página principal do Guia */
+.wc-guide-modules {
+    border-bottom: 1px solid rgba(2, 128, 144, 0.2);
+    margin: 1.25rem 0 1.6rem;
+}
+
+.wc-guide-module {
+    border-top: 1px solid rgba(2, 128, 144, 0.2);
+}
+
+.wc-guide-module summary {
+    color: var(--md-default-fg-color);
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 650;
+    list-style: none;
+    padding: 0.85rem 2.2rem 0.85rem 0.25rem;
+    position: relative;
+}
+
+.wc-guide-module summary::-webkit-details-marker {
+    display: none;
+}
+
+.wc-guide-module summary::after {
+    border-bottom: 1.5px solid currentColor;
+    border-right: 1.5px solid currentColor;
+    content: "";
+    height: 0.4rem;
+    position: absolute;
+    right: 0.55rem;
+    top: 1rem;
+    transform: rotate(45deg);
+    transition: transform 120ms ease;
+    width: 0.4rem;
+}
+
+.wc-guide-module[open] summary {
+    color: var(--md-primary-fg-color);
+}
+
+.wc-guide-module[open] summary::after {
+    transform: rotate(225deg);
+}
+
+.wc-guide-module ul {
+    margin: 0 0 0.8rem;
+    padding-left: 1.25rem;
+}
+
+.wc-guide-module li {
+    margin: 0.3rem 0;
+}
+
+.wc-guide-module a {
+    text-decoration: none;
+}
+
+.wc-guide-module a:hover,
+.wc-guide-module a:focus {
+    text-decoration: underline;
+}
+
 /* Hub de links oficiais */
 .wc-link-hub {
     display: grid;

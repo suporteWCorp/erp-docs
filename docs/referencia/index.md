@@ -1,46 +1,16 @@
 # Referências
 
-<div class="wc-portal-layout" markdown>
-
-<aside class="wc-portal-sidebar" markdown>
-
---8<-- "shared/portal/sidebar.md"
-
-</aside>
-
-<main class="wc-portal-main" markdown>
-
 Consulte materiais de apoio, erros conhecidos, termos utilizados no WCorp, links úteis e conteúdos de referência para auxiliar na utilização do sistema.
 
-<div class="wc-home-grid" markdown>
-
-<div class="wc-card" markdown>
-
-### FAQ
-
-Encontre respostas objetivas para as perguntas mais frequentes sobre o WCorp e a documentação.
-
-[Abrir FAQ](faq.md){ .md-button .md-button--primary }
-
-</div>
-
-<div class="wc-card" markdown>
-
-### Glossário
-
-Consulte o significado dos principais termos usados no WCorp e na documentação.
-
-[Abrir glossário](glossario.md){ .md-button .md-button--primary }
-
-</div>
+<div class="wc-home-grid wc-reference-grid" markdown>
 
 <div class="wc-card" markdown>
 
 ### Erros comuns
 
-Veja mensagens recorrentes, possíveis causas e orientações iniciais de correção.
+Mensagens de erro, causas prováveis e orientações de correção.
 
-[Abrir erros comuns](erros-comuns.md){ .md-button .md-button--primary }
+[Consultar erros](erros-comuns.md){ .md-button .md-button--primary }
 
 </div>
 
@@ -48,9 +18,9 @@ Veja mensagens recorrentes, possíveis causas e orientações iniciais de corre�
 
 ### Links úteis
 
-Acesse páginas e recursos externos importantes para consulta.
+Portais oficiais, consultas fiscais e materiais externos importantes.
 
-[Abrir links úteis](links-uteis.md){ .md-button .md-button--primary }
+[Acessar links úteis](links-uteis.md){ .md-button .md-button--primary }
 
 </div>
 
@@ -58,14 +28,20 @@ Acesse páginas e recursos externos importantes para consulta.
 
 ### Atualizações fiscais
 
-Consulte comunicados e conteúdos de referência relacionados às rotinas fiscais do WCorp.
+Reforma Tributária, CBS, IBS, Notas Técnicas e mudanças relevantes.
 
-[Abrir atualizações fiscais](atualizacoes-fiscais.md){ .md-button .md-button--primary }
-
-</div>
+[Consultar atualizações](atualizacoes-fiscais.md){ .md-button .md-button--primary }
 
 </div>
 
-</main>
+<div class="wc-card" markdown>
+
+### Glossário
+
+Termos e conceitos utilizados no WCorp.
+
+[Abrir glossário](glossario.md){ .md-button .md-button--primary }
+
+</div>
 
 </div>
