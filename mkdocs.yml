@@ -1,6 +1,7 @@
 site_name: Guia WCorp
 site_description: Central de ajuda do WCorp para usuários, suporte e desenvolvimento.
 site_author: WCorp
+site_url: https://suportewcorp.github.io/erp-docs/
 
 theme:
   name: material
