@@ -1,13 +1,5 @@
 # Como cadastrar um fornecedor
 
-## Objetivo
-
-Cadastrar um fornecedor para compras, entradas fiscais, contas a pagar e consultas.
-
-## Quando utilizar
-
-Use quando uma empresa ou pessoa ainda não existir como fornecedor no WCorp.
-
 ## Pré-requisitos
 
 - CNPJ, CPF ou dados cadastrais do fornecedor.
@@ -31,8 +23,14 @@ Caminho: `Fornecedores > Fornecedores`.
 
 ## Erros comuns
 
-- Fornecedor duplicado: pesquise por CNPJ, CPF, razão social ou nome fantasia antes de cadastrar.
-- Dados fiscais incompletos: complete o cadastro antes de lançar nota ou título.
+Caso encontre algum dos erros abaixo, clique para visualizar a causa e como resolver.
+
+- Fornecedor duplicado — **Pendente**
+- Dados fiscais incompletos — **Pendente**
+
+## Quando utilizar
+
+Use quando uma empresa ou pessoa ainda não existir como fornecedor no WCorp.
 
 ## Veja também
 

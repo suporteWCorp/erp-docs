@@ -1,24 +1,40 @@
 # Suporte
 
-Esta área organiza os procedimentos internos de atendimento do WCorp. O objetivo é padronizar a coleta de informações, reduzir retrabalho e facilitar a resolução de incidentes recorrentes.
+Antes de abrir um chamado, verifique se alguma das opções abaixo pode ajudar a resolver sua dúvida.
 
-!!! tip "Antes de chamar o suporte"
-    Informe módulo, tela, usuário afetado, mensagem exibida e prints do erro. Isso ajuda a resolver mais rápido.
+## Não sabe como realizar uma operação?
 
-## Como usar esta seção
+Consulte os Guias para aprender como executar as principais rotinas do WCorp.
 
-| Situação | Página recomendada |
-| --- | --- |
-| Usuário não sabe executar uma rotina | Consulte o módulo correspondente no guia |
-| Usuário relata erro ou travamento | [Triagem de atendimento](triagem.md) |
-| É necessário abrir chamado para análise | [Abertura de chamado](abertura-de-chamado.md) |
-| Falta informação para investigar | [Coleta de evidências](coleta-de-evidencias.md) |
-| Mensagem já conhecida | [Base de erros](base-de-erros.md) |
+[Abrir Guias](../como-fazer/index.md){ .md-button .md-button--primary }
 
-## Princípios de atendimento
+## Encontrou uma mensagem de erro?
 
-- Entender o que o usuário tentou fazer antes de concluir a causa.
-- Reproduzir o cenário quando possível.
-- Coletar evidências antes de encaminhar para desenvolvimento.
-- Registrar a solução encontrada para reaproveitamento futuro.
-- Separar dúvida de uso, erro operacional, falha de configuração e possível bug.
+Consulte a Base de Erros para verificar possíveis causas e soluções.
+
+[Consultar Erros](base-de-erros.md){ .md-button .md-button--primary }
+
+## Tem uma dúvida rápida?
+
+Consulte as Perguntas Frequentes.
+
+[Abrir FAQ](../referencia/faq.md){ .md-button .md-button--primary }
+
+## Deseja entender como funciona uma tela?
+
+Consulte o Manual do WCorp.
+
+[Abrir Manual](../manual/index.md){ .md-button .md-button--primary }
+
+## Ainda precisa de ajuda?
+
+Antes de entrar em contato, procure informar:
+
+- descrição clara do problema;
+- rotina ou tela onde ocorreu;
+- prints da tela ou da mensagem apresentada;
+- caso envolva NF-e, NFC-e, NFS-e, CT-e ou MDF-e, o número ou ID do documento;
+- quais testes ou tentativas já foram realizados;
+- sempre que possível, como reproduzir o problema.
+
+Essas informações ajudam nossa equipe a identificar o problema mais rapidamente e reduzem o tempo de atendimento.

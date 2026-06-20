@@ -32,19 +32,3 @@ $Tab > Grupo de Serviço
 | --- | --- |
 | Quando devo usar esta rotina? | Use quando o processo estiver relacionado a **Grupo de Serviço**. |
 | O que devo conferir antes de salvar? | Confira os dados obrigatórios, filtros e mensagens exibidas pelo sistema. |
-
-??? info "Ver mais para Suporte"
-
-    ## Resultado esperado
-
-    A rotina deve registrar, consultar ou concluir o processo com status claro para o usuário.
-
-    ## Orientação para Suporte
-
-    Ao atender problemas em **Serviços > Grupo de Serviço**, colete:
-
-    - Empresa e usuário afetado.
-    - Código, número ou registro relacionado, quando houver.
-    - Mensagem completa exibida pelo Sistema.
-    - Print da tela e horário aproximado da tentativa.
-    - Informação se o problema ocorre em um registro específico ou em todos.

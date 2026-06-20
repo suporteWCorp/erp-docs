@@ -32,19 +32,3 @@ Fornecedores > Categoria de Fornecedor
 | --- | --- |
 | Quando devo usar esta rotina? | Use quando o processo estiver relacionado a **Categoria de Fornecedor**. |
 | O que devo conferir antes de salvar? | Confira documento, cadastro, categoria e informações obrigatórias da tela. |
-
-??? info "Ver mais para Suporte"
-
-    ## Resultado esperado
-
-    A rotina deve registrar, consultar ou concluir o processo de fornecedores com status claro para o usuário.
-
-    ## Orientação para Suporte
-
-    Ao atender problemas em **Fornecedores > Categoria de Fornecedor**, colete:
-
-    - Empresa e usuário afetado.
-    - Nome, código ou documento do fornecedor.
-    - Categoria, certificado ou cadastro envolvido, quando aplicável.
-    - Mensagem completa exibida pelo Sistema.
-    - Print da tela e horário aproximado da tentativa.

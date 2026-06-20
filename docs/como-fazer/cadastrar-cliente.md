@@ -1,13 +1,5 @@
 # Como cadastrar um cliente
 
-## Objetivo
-
-Cadastrar um cliente para uso em orçamentos, pedidos, faturamento, financeiro e consultas.
-
-## Quando utilizar
-
-Use quando um cliente ainda não existir no WCorp ou quando for necessário completar os dados cadastrais antes de vender ou faturar.
-
 ## Pré-requisitos
 
 - CNPJ, CPF ou dados cadastrais do cliente.
@@ -38,13 +30,16 @@ Caminho: `Comercial > Clientes`.
 
 ## Erros comuns
 
-!!! info "Importante"
-    Caso seja um CNPJ recém-cadastrado, a atualização na base da SEFAZ pode levar mais de 30 dias. Nesses casos, pode ser necessário preencher as informações manualmente.
+Caso encontre algum dos erros abaixo, clique para visualizar a causa e como resolver.
+
+- CNPJ recém-cadastrado não localizado — **Pendente**
+
+## Quando utilizar
+
+Use quando um cliente ainda não existir no WCorp ou quando for necessário completar os dados cadastrais antes de vender ou faturar.
 
 ## Veja também
 
 - [Como gerar um pedido](fazer-pedido-venda.md){: target="_blank" rel="noopener" }
 - [Como emitir uma NF-e](faturar-nota.md){: target="_blank" rel="noopener" }
 - [Manual > Comercial > Clientes](../comercial/comercial-clientes.md){: target="_blank" rel="noopener" }
-
-

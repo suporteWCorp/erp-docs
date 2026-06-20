@@ -1,13 +1,5 @@
 # Como fazer inventário
 
-## Objetivo
-
-Conferir o estoque físico e registrar diferenças no WCorp.
-
-## Quando utilizar
-
-Use em contagens periódicas, auditorias, encerramentos, reorganização de estoque ou correção de divergências.
-
 ## Pré-requisitos
 
 - [Como consultar estoque](consultar-estoque.md){: target="_blank" rel="noopener" }.
@@ -33,9 +25,15 @@ Caminho: `Materiais > Ajustar Inventário`.
 
 ## Erros comuns
 
-- Contagem feita com movimentações abertas: alinhe uma janela de conferência antes de ajustar.
-- Local ou lote trocado: revise os filtros da consulta.
-- Diferença sem justificativa: registre observação para auditoria.
+Caso encontre algum dos erros abaixo, clique para visualizar a causa e como resolver.
+
+- Contagem feita com movimentações abertas — **Pendente**
+- Local ou lote trocado — **Pendente**
+- Diferença sem justificativa — **Pendente**
+
+## Quando utilizar
+
+Use em contagens periódicas, auditorias, encerramentos, reorganização de estoque ou correção de divergências.
 
 ## Veja também
 

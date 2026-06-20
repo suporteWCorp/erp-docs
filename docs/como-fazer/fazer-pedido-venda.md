@@ -1,13 +1,5 @@
 # Como gerar um pedido
 
-## Objetivo
-
-Criar um pedido de venda para registrar a negociação e preparar separação, faturamento ou acompanhamento comercial.
-
-## Quando utilizar
-
-Use quando uma venda foi confirmada ou quando a empresa precisa registrar itens, quantidades, preços e condição de pagamento antes do faturamento.
-
 ## Pré-requisitos
 
 - Cliente cadastrado.<br>
@@ -40,11 +32,28 @@ Caminho: `Comercial > Pedido`.
   Seu navegador não conseguiu reproduzir este vídeo.
 </video>
 
+### Criar pedido a partir de um orçamento
+
+Caso já exista um orçamento aprovado, é possível gerar um pedido diretamente a partir dele, sem a necessidade de realizar um novo cadastro.
+
+### Demonstração em vídeo
+
+<video class="wc-video" controls preload="auto" playsinline>
+  <source src="../../assets/videos/comercial_pedido_orcamento.mp4" type="video/mp4">
+  Seu navegador não conseguiu reproduzir este vídeo.
+</video>
+
 ## Erros comuns
 
-- Cliente não encontrado: veja [Como cadastrar um cliente](cadastrar-cliente.md).
-- Material não encontrado: veja [Como cadastrar um material](cadastrar-material.md).
-- Pedido não aparece para faturamento: confira status, filtros e regras da tela em [Manual > Comercial > Pedido](../comercial/pedidos.md).
+Caso encontre algum dos erros abaixo, clique para visualizar a causa e como resolver.
+
+- Cliente não encontrado — **Pendente**
+- Material não encontrado — **Pendente**
+- Pedido não aparece para faturamento — **Pendente**
+
+## Quando utilizar
+
+Use quando uma venda foi confirmada ou quando a empresa precisa registrar itens, quantidades, preços e condição de pagamento antes do faturamento.
 
 ## Veja também
 

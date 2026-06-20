@@ -26,9 +26,3 @@ A documentação desta seção segue a mesma ordem dos botões exibidos no WCorp
 ## Antes de operar rotinas de Produção
 
 - Confira ordem de produção, material, processo e quantidade.`r`n- Em apontamentos, valide etapa, recurso, equipamento e status.`r`n- Em qualidade, registre evidências e resultados da inspeção.
-
-??? info "Ver mais para Suporte"
-
-    ## Orientação para Suporte
-
-    Em atendimentos de Produção, colete número da ordem, material, processo, status, mensagem completa e print da tela.

@@ -1,13 +1,5 @@
 # Como importar XML
 
-## Objetivo
-
-Importar um XML de nota fiscal para facilitar conferência, entrada fiscal ou registro de compra.
-
-## Quando utilizar
-
-Use quando a empresa recebeu um XML de fornecedor ou precisa consultar documentos fiscais eletrônicos no WCorp.
-
 ## Pré-requisitos
 
 - Arquivo XML válido ou documento disponível para consulta.
@@ -34,9 +26,15 @@ Caminho: `Faturamento > Entrada de Nota Fiscal ou Radar de Nota Fiscal`.
 
 ## Erros comuns
 
-- Fornecedor não encontrado: veja [Como cadastrar um fornecedor](cadastrar-fornecedor.md).
-- Item não vinculado: veja [Como cadastrar um material](cadastrar-material.md).
-- XML inválido: solicite o arquivo correto ao emissor.
+Caso encontre algum dos erros abaixo, clique para visualizar a causa e como resolver.
+
+- Fornecedor não encontrado — **Pendente**
+- Item não vinculado — **Pendente**
+- XML inválido — **Pendente**
+
+## Quando utilizar
+
+Use quando a empresa recebeu um XML de fornecedor ou precisa consultar documentos fiscais eletrônicos no WCorp.
 
 ## Veja também
 

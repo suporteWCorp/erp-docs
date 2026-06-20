@@ -27,9 +27,3 @@ A documentação desta seção segue a mesma ordem dos botões exibidos no WCorp
 ## Antes de operar rotinas de Transportes
 
 - Confira região, transportadora, valores e documentos fiscais.`r`n- Em CT-e/MDF-e, preserve mensagens de retorno fiscal.`r`n- Em coletas e cargas, valide status e vínculo com documentos.
-
-??? info "Ver mais para Suporte"
-
-    ## Orientação para Suporte
-
-    Em atendimentos de Transportes, colete número do CT-e/MDF-e/carga, transportadora, cliente, status, mensagem completa e print da tela.

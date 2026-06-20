@@ -1,13 +1,5 @@
 # Como lançar contas a pagar
 
-## Objetivo
-
-Registrar uma obrigação financeira a pagar para fornecedor, colaborador ou outro participante.
-
-## Quando utilizar
-
-Use quando a empresa precisa controlar vencimento, valor e pagamento de uma despesa ou compra.
-
 ## Pré-requisitos
 
 - [Como cadastrar um fornecedor](cadastrar-fornecedor.md){: target="_blank" rel="noopener" }, quando o fornecedor ainda não existir.
@@ -33,9 +25,15 @@ Caminho: `Financeiro > Contas a Pagar`.
 
 ## Erros comuns
 
-- Fornecedor não encontrado: veja [Como cadastrar um fornecedor](cadastrar-fornecedor.md).
-- Centro de custo ausente: consulte [Manual > Administração > Centro de Custo](../administracao/centro-custo.md).
-- Vencimento ou valor incorreto: corrija antes de baixar o título.
+Caso encontre algum dos erros abaixo, clique para visualizar a causa e como resolver.
+
+- Fornecedor não encontrado — **Pendente**
+- Centro de custo ausente — **Pendente**
+- Vencimento ou valor incorreto — **Pendente**
+
+## Quando utilizar
+
+Use quando a empresa precisa controlar vencimento, valor e pagamento de uma despesa ou compra.
 
 ## Veja também
 

@@ -32,19 +32,3 @@ $Tab > Materiais e Serviços Previstos
 | --- | --- |
 | Quando devo usar esta rotina? | Use quando o processo estiver relacionado a **Materiais e Serviços Previstos**. |
 | O que devo conferir antes de salvar? | Confira os dados obrigatórios, filtros e mensagens exibidas pelo sistema. |
-
-??? info "Ver mais para Suporte"
-
-    ## Resultado esperado
-
-    A rotina deve registrar, consultar ou concluir o processo com status claro para o usuário.
-
-    ## Orientação para Suporte
-
-    Ao atender problemas em **Contratos > Materiais e Serviços Previstos**, colete:
-
-    - Empresa e usuário afetado.
-    - Código, número ou registro relacionado, quando houver.
-    - Mensagem completa exibida pelo Sistema.
-    - Print da tela e horário aproximado da tentativa.
-    - Informação se o problema ocorre em um registro específico ou em todos.

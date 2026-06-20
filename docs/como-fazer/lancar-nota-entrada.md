@@ -1,13 +1,5 @@
 # Como lançar uma nota de entrada
 
-## Objetivo
-
-Registrar uma nota fiscal de entrada para atualizar compras, estoque, fiscal e financeiro.
-
-## Quando utilizar
-
-Use quando a empresa recebeu mercadorias ou serviços e precisa registrar a entrada no WCorp.
-
 ## Pré-requisitos
 
 - [Como importar XML](importar-xml.md){: target="_blank" rel="noopener" }, quando houver XML disponível.
@@ -36,9 +28,16 @@ Caminho: `Faturamento > Entrada de Nota Fiscal`.
 
 ## Erros comuns
 
-- Fornecedor não encontrado: veja [Como cadastrar um fornecedor](cadastrar-fornecedor.md).
-- Material não encontrado: veja [Como cadastrar um material](cadastrar-material.md).
-- Natureza de operação incompatível: veja [Como cadastrar uma natureza de operação](cadastrar-natureza-operacao.md).
+Caso encontre algum dos erros abaixo, clique para visualizar a causa e como resolver.
+
+- Fornecedor não encontrado — **Pendente**
+- Material não encontrado — **Pendente**
+- Natureza de Operação incompatível — **Pendente**
+- Não é possível finalizar o cálculo automático — **Pendente**
+
+## Quando utilizar
+
+Use quando a empresa recebeu mercadorias ou serviços e precisa registrar a entrada no WCorp.
 
 ## Veja também
 

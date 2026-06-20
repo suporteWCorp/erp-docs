@@ -1,13 +1,5 @@
 # Como emitir uma carta de correção
 
-## Objetivo
-
-Emitir uma carta de correção eletrônica para ajustar informações permitidas em uma NF-e autorizada.
-
-## Quando utilizar
-
-Use quando a NF-e autorizada possui erro que pode ser corrigido por CC-e, sem alterar valores, impostos, destinatário ou informações vedadas pela legislação.
-
 ## Pré-requisitos
 
 - NF-e autorizada e localizada.
@@ -32,11 +24,25 @@ Caminho: `Faturamento > Carta de Correção`.
 6. Envie o evento.
 7. Confira o retorno da SEFAZ.
 
+## Demonstração em vídeo
+
+<video class="wc-video" controls preload="auto" playsinline>
+  <source src="../../assets/videos/faturamento_carta_correcao.mp4" type="video/mp4">
+  Seu navegador não conseguiu reproduzir este vídeo.
+</video>
+
 ## Erros comuns
 
-- Tentativa de corrigir dado não permitido: valide com o responsável fiscal.
-- Texto incompleto ou ambíguo: ajuste o texto antes do envio.
-- Rejeição da SEFAZ: copie a mensagem completa e consulte [Suporte > Base de erros](../suporte/base-de-erros.md).
+Caso encontre algum dos erros abaixo, clique para visualizar a causa e como resolver.
+
+- Tentativa de corrigir dado não permitido — **Pendente**
+- Texto incompleto ou ambíguo — **Pendente**
+- Falha de Schema — **Pendente**
+- Rejeição 651 - Consumo Indevido — **Pendente**
+
+## Quando utilizar
+
+Use quando a NF-e autorizada possui erro que pode ser corrigido por CC-e, sem alterar valores, impostos, destinatário ou informações vedadas pela legislação.
 
 ## Veja também
 

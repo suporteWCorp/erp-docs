@@ -18,9 +18,3 @@ A documentação desta seção segue a mesma ordem dos botões exibidos no WCorp
 ## Antes de operar rotinas de Contratos
 
 - Confira cliente, vigência, fase e itens previstos antes de salvar.`r`n- Em manutenção, valide status do contrato e histórico de alterações.
-
-??? info "Ver mais para Suporte"
-
-    ## Orientação para Suporte
-
-    Em atendimentos de Contratos, colete número do contrato, cliente, fase, mensagem completa e print da tela.

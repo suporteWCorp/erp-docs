@@ -62,29 +62,3 @@ Use esta rotina quando for necessário:
 | Quando devo usar emissão por pedido? | Use quando a nota deve ser gerada a partir de um pedido já cadastrado. |
 | O sistema informa se faltar algum campo? | Sim. Ao salvar ou transmitir, o Sistema indica campos obrigatórios pendentes. |
 | Preciso conferir impostos se vier do pedido? | Sim. Mesmo com cálculo automático, confira material e aba de impostos antes de transmitir. |
-
-??? info "Ver mais para Suporte"
-
-    ## Resultado esperado
-
-    A nota fiscal deve ser salva e transmitida à SEFAZ, retornando status de autorização ou uma mensagem de rejeição para correção.
-
-    ## Orientação para Suporte
-
-    Ao atender problemas em **Faturamento > Nota Fiscal**, colete:
-
-    - Número da nota, pedido ou documento de origem.
-    - Cliente envolvido.
-    - Natureza de operação e CFOP, se aplicável.
-    - Mensagem completa exibida pelo Sistema ou pela SEFAZ.
-    - Print da tela, principalmente da aba de impostos.
-    - Informação se a emissão é manual ou por pedido.
-
-    Classifique o caso antes de encaminhar:
-
-    | Situação | Possível causa | Ação inicial |
-    | --- | --- | --- |
-    | Campo obrigatório pendente | Cadastro incompleto ou regra fiscal sem informação | Conferir campos destacados pelo sistema |
-    | Rejeição da SEFAZ | Dados fiscais inconsistentes | Copiar retorno completo e validar cadastros fiscais |
-    | Nota não transmite | Certificado, conexão ou dados fiscais | Verificar certificado e mensagem retornada |
-    | Pedido não aparece | Status, filtro ou vínculo indisponível | Conferir pedido e situação comercial |

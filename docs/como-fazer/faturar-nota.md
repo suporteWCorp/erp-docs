@@ -1,13 +1,5 @@
 # Como emitir uma NF-e
 
-## Objetivo
-
-Emitir uma nota fiscal eletrônica de saída, de forma manual ou vinculada a um pedido.
-
-## Quando utilizar
-
-Use quando for necessário documentar fiscalmente uma venda, remessa ou outra operação de saída.
-
 ## Pré-requisitos
 
 - Cliente cadastrado.<br>
@@ -40,12 +32,27 @@ Caminho: `Faturamento > Nota Fiscal`.
 6. Clique em **Transmitir**.
 7. Confira o retorno da SEFAZ.
 
+## Demonstração em vídeo
+
+<video class="wc-video" controls preload="auto" playsinline>
+  <source src="../../assets/videos/faturamento_nfe.mp4" type="video/mp4">
+  Seu navegador não conseguiu reproduzir este vídeo.
+</video>
+
 ## Erros comuns
 
-- Cliente não encontrado: veja [Como cadastrar um cliente](cadastrar-cliente.md).
-- Material sem informação fiscal: veja [Como cadastrar um material](cadastrar-material.md).
-- Natureza incorreta ou ausente: veja [Como cadastrar uma natureza de operação](cadastrar-natureza-operacao.md).
-- Rejeição da SEFAZ: copie a mensagem completa e consulte [Suporte > Base de erros](../suporte/base-de-erros.md).
+Caso encontre algum dos erros abaixo, clique para visualizar a causa e como resolver.
+
+- Cliente não encontrado — **Pendente**
+- Material sem informação fiscal — **Pendente**
+- Natureza incorreta ou ausente — **Pendente**
+- Não é possível finalizar o cálculo automático — **Pendente**
+- Falha de Schema — **Pendente**
+- Rejeição 651 - Consumo Indevido — **Pendente**
+
+## Quando utilizar
+
+Use quando for necessário documentar fiscalmente uma venda, remessa ou outra operação de saída.
 
 ## Veja também
 

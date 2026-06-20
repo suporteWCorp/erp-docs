@@ -1,13 +1,5 @@
 # Como gerar boleto
 
-## Objetivo
-
-Gerar boleto para cobrança de um título financeiro.
-
-## Quando utilizar
-
-Use quando a empresa precisa cobrar um cliente por boleto bancário a partir de uma conta a receber.
-
 ## Pré-requisitos
 
 - [Como cadastrar um cliente](cadastrar-cliente.md){: target="_blank" rel="noopener" }.
@@ -34,9 +26,15 @@ Caminho: `Financeiro > Boleto`.
 
 ## Erros comuns
 
-- Título não encontrado: revise filtros, cliente e período.
-- Conta bancária sem configuração: confira os parâmetros bancários antes de gerar.
-- Valor ou vencimento incorreto: ajuste o título antes de emitir o boleto.
+Caso encontre algum dos erros abaixo, clique para visualizar a causa e como resolver.
+
+- Título não encontrado — **Pendente**
+- Conta bancária sem configuração — **Pendente**
+- Valor ou vencimento incorreto — **Pendente**
+
+## Quando utilizar
+
+Use quando a empresa precisa cobrar um cliente por boleto bancário a partir de uma conta a receber.
 
 ## Veja também
 

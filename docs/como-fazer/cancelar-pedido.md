@@ -1,13 +1,5 @@
 # Como cancelar um pedido
 
-## Objetivo
-
-Cancelar um pedido de venda que não deve seguir para separação, faturamento ou entrega.
-
-## Quando utilizar
-
-Use quando a venda foi desistida, lançada incorretamente ou substituída por outro pedido.
-
 ## Pré-requisitos
 
 - Pedido localizado no WCorp.
@@ -21,8 +13,6 @@ Use quando a venda foi desistida, lançada incorretamente ou substituída por ou
 
 Caminho: `Comercial > Pedido`.
 
-![Onde encontrar](../assets/images/guias/comercial_cancelar_pedido.png)
-
 ## Como fazer
 
 1. Acesse **Comercial > Pedido**.
@@ -35,8 +25,14 @@ Caminho: `Comercial > Pedido`.
 
 ## Erros comuns
 
-- Pedido já faturado: avalie [Como cancelar uma NF-e](cancelar-nfe.md) ou [Como emitir uma devolução](emitir-devolucao.md).
-- Pedido não localizado: revise filtros, período e status na tela.
+Caso encontre algum dos erros abaixo, clique para visualizar a causa e como resolver.
+
+- Pedido já faturado — **Pendente**
+- Pedido não localizado — **Pendente**
+
+## Quando utilizar
+
+Use quando a venda foi desistida, lançada incorretamente ou substituída por outro pedido.
 
 ## Veja também
 

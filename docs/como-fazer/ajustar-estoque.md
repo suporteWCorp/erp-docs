@@ -1,13 +1,5 @@
 # Como ajustar estoque
 
-## Objetivo
-
-Registrar ajuste de estoque para corrigir saldo, local, lote ou quantidade.
-
-## Quando utilizar
-
-Use quando houver diferença identificada por conferência, inventário, perda, sobra ou correção operacional.
-
 ## Pré-requisitos
 
 - [Como consultar estoque](consultar-estoque.md){: target="_blank" rel="noopener" }.
@@ -32,9 +24,15 @@ Caminho: `Materiais > Ajustar Inventário`.
 
 ## Erros comuns
 
-- Local ou lote incorreto: revise a consulta antes de salvar.
-- Ajuste sem justificativa: informe o motivo para rastreabilidade.
-- Material não encontrado: veja [Como cadastrar um material](cadastrar-material.md).
+Caso encontre algum dos erros abaixo, clique para visualizar a causa e como resolver.
+
+- Local ou lote incorreto — **Pendente**
+- Ajuste sem justificativa — **Pendente**
+- Material não encontrado — **Pendente**
+
+## Quando utilizar
+
+Use quando houver diferença identificada por conferência, inventário, perda, sobra ou correção operacional.
 
 ## Veja também
 

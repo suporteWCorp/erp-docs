@@ -26,9 +26,3 @@ A documentação desta seção segue a mesma ordem dos botões exibidos no WCorp
 ## Antes de operar rotinas de Materiais
 
 - Confira se o material já existe antes de criar um novo cadastro.`r`n- Valide categoria, unidade, local de armazenagem e controle de lote quando aplicável.`r`n- Em movimentações, confira quantidade, origem, destino e tipo de operação.
-
-??? info "Ver mais para Suporte"
-
-    ## Orientação para Suporte
-
-    Em atendimentos de Materiais, colete código ou descrição do material, local de armazenagem, lote, quantidade, operação, mensagem completa e print da tela.

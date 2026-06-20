@@ -37,20 +37,3 @@ Use esta rotina quando for necessário:
 | --- | --- |
 | Quando devo usar Cupom Fiscal? | Use para operações fiscais de venda que utilizam cupom fiscal. |
 | O que conferir antes de emitir? | Confira itens, valores, cliente e forma de pagamento, quando aplicável. |
-
-??? info "Ver mais para Suporte"
-
-    ## Resultado esperado
-
-    O cupom fiscal deve ser emitido ou consultado com status claro para o usuário.
-
-    ## Orientação para Suporte
-
-    Ao atender problemas em **Faturamento > Cupom Fiscal**, colete:
-
-    - Número do cupom ou venda.
-    - Empresa e usuário afetado.
-    - Mensagem completa exibida.
-    - Print da tela.
-    - Horário aproximado da tentativa.
-    - Informação se o problema ocorre em uma venda específica ou em todas.

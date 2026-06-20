@@ -148,6 +148,50 @@ center {
     display: none;
 }
 
+.wc-home-grid--actions {
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
+}
+
+@media screen and (max-width: 44em) {
+    .wc-home-grid--actions {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Atalhos discretos na coluna direita da Visão Geral do Guia */
+.wc-guide-quicklinks__section {
+    padding: 0.35rem 0 0.55rem;
+}
+
+.wc-guide-quicklinks__section + .wc-guide-quicklinks__section {
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+    padding-top: 0.7rem;
+}
+
+.wc-guide-quicklinks__title {
+    color: var(--md-default-fg-color--light);
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 0 0.6rem 0.25rem;
+}
+
+.wc-guide-quicklinks .md-nav__link {
+    margin-top: 0.35rem;
+}
+
+.wc-guide-quicklinks__pending {
+    cursor: default;
+    opacity: 0.68;
+}
+
+.wc-guide-quicklinks__pending small {
+    display: block;
+    font-size: 0.55rem;
+    font-weight: 500;
+    margin-top: 0.08rem;
+}
+
 /* Portal interno: sidebar útil para Home e FAQ */
 .wc-portal-layout {
     display: block;
@@ -172,6 +216,14 @@ center {
     margin: 0;
 }
 
+body.wc-has-portal-sidebar .md-sidebar--primary .md-nav--primary {
+    display: none;
+}
+
+.wc-guide-nav-hidden {
+    display: none !important;
+}
+
 .wc-portal-block {
     background: rgba(2, 128, 144, 0.035);
     border: 1.5px solid rgba(2, 128, 144, 0.32);
@@ -180,9 +232,14 @@ center {
 }
 
 .wc-portal-block h3 {
+    border-bottom: 1px solid rgba(2, 128, 144, 0.18);
     color: #005f66 !important;
-    font-size: 0.84rem;
-    margin: 0 0 0.55rem;
+    font-size: 0.9rem;
+    font-weight: 800;
+    letter-spacing: 0.01em;
+    line-height: 1.25;
+    margin: 0 0 0.7rem;
+    padding-bottom: 0.45rem;
 }
 
 .wc-portal-block ul {
@@ -243,10 +300,10 @@ center {
 }
 
 .md-header__title {
-    flex: 0 1 128px;
+    flex: 0 0 260px;
     font-weight: 700;
     margin-left: 4px;
-    min-width: 112px;
+    min-width: 260px;
 }
 
 .md-header__topic {
@@ -259,8 +316,8 @@ center {
     display: flex;
     align-items: center;
     gap: 3px;
-    flex: 1 1 auto;
-    min-width: 360px;
+    flex: 0 0 auto;
+    min-width: 0;
     overflow: hidden;
 }
 
@@ -335,6 +392,19 @@ center {
     white-space: nowrap;
 }
 
+.wc-page-context {
+    color: rgba(255, 255, 255, 0.76);
+    flex: 1 1 180px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    min-width: 130px;
+    overflow: hidden;
+    padding: 0 1rem;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 .md-tabs__link:hover,
 .md-tabs__link--active {
     background: rgba(0, 95, 102, 0.46);
@@ -348,8 +418,16 @@ center {
     }
 
     .md-header__title {
-        flex-basis: 132px;
-        min-width: 105px;
+        flex-basis: 235px;
+        min-width: 235px;
+    }
+
+    .wc-page-context {
+        flex-basis: 140px;
+        font-size: 0.74rem;
+        min-width: 110px;
+        padding-left: 0.6rem;
+        padding-right: 0.6rem;
     }
 
     .wc-shortcuts__link {
@@ -371,7 +449,8 @@ center {
 }
 
 @media screen and (max-width: 76.2344em) {
-    .wc-shortcuts {
+    .wc-shortcuts,
+    .wc-page-context {
         display: none;
     }
 
@@ -420,6 +499,11 @@ center {
     font-size: 0.72rem;
 }
 
+.wc-support-footer__note {
+    color: #667085;
+    font-size: 0.72rem;
+}
+
 
 /* Vídeos curtos de demonstração */
 .wc-video {
@@ -443,36 +527,121 @@ center {
 }
 
 
-/* Menu secundário do Manual no mesmo fluxo das abas do WCorp */
+/* Primeiro nível do Manual: módulos do WCorp com visual do portal */
+.wc-manual-tabs .md-tabs {
+    background: #f7fbfb;
+    border-bottom: 1px solid rgba(2, 128, 144, 0.16);
+    border-top: 0;
+    box-shadow: none;
+    height: auto;
+}
+
+.wc-manual-tabs .md-tabs__inner {
+    height: auto;
+}
+
 .md-tabs__list.wc-erp-tabs {
-    gap: 1px;
-    justify-content: flex-start;
-    overflow-x: auto;
-    scrollbar-width: thin;
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 0.15rem;
+    justify-content: center;
+    overflow: visible;
+    padding: 0.18rem 0;
 }
 
 .md-tabs__list.wc-erp-tabs .md-tabs__item {
-    flex: 0 0 auto;
+    flex: 1 1 82px;
+    height: auto;
+    max-width: 118px;
+    min-height: 2.45rem;
+    min-width: 76px;
 }
 
 .md-tabs__list.wc-erp-tabs .md-tabs__link {
+    align-items: center;
+    background: transparent;
+    border-bottom: 2px solid transparent;
+    border-radius: 0;
+    color: #397477;
+    display: flex;
+    font-size: 0.64rem;
+    height: 100%;
+    justify-content: center;
+    line-height: 1.15;
+    margin: 0;
     max-width: none;
-    min-width: 88px;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    min-width: 0;
+    overflow: visible;
+    padding: 0.48rem 0.32rem 0.38rem;
+    text-overflow: clip;
+    transition: border-color 120ms ease, color 120ms ease, background-color 120ms ease;
+    white-space: normal;
+    width: 100%;
 }
 
-@media screen and (min-width: 88.01em) {
-    .md-tabs__list.wc-erp-tabs {
-        justify-content: space-between;
-    }
+.md-tabs__list.wc-erp-tabs .md-tabs__link:hover,
+.md-tabs__list.wc-erp-tabs .md-tabs__link:focus {
+    background: rgba(2, 128, 144, 0.045);
+    color: #006b73;
+}
 
-    .md-tabs__list.wc-erp-tabs .md-tabs__link {
-        min-width: 82px;
-    }
+.md-tabs__list.wc-erp-tabs .md-tabs__link--active {
+    background: rgba(2, 128, 144, 0.055);
+    border-bottom-color: #028090;
+    color: #005f66;
 }
 
 /* Esconde a faixa secundária fora do Manual */
 body:not(.wc-manual-tabs) .md-tabs {
     display: none;
+}
+
+/* Funcionalidades do módulo selecionado no Manual */
+.wc-manual-subnav {
+    background: #ffffff;
+    border-bottom: 1px solid rgba(2, 128, 144, 0.12);
+    box-shadow: none;
+}
+
+.wc-manual-subnav__inner {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.18rem 0.3rem;
+    justify-content: center;
+    min-height: 2.85rem;
+    overflow: visible;
+    padding: 0.36rem 0.8rem;
+}
+
+.wc-manual-subnav__link {
+    border-bottom: 1px solid transparent;
+    border-radius: 3px;
+    color: #58777a;
+    flex: 0 0 auto;
+    font-size: 0.62rem;
+    font-weight: 600;
+    padding: 0.38rem 0.52rem;
+    text-decoration: none;
+    transition: border-color 120ms ease, color 120ms ease, background-color 120ms ease;
+    white-space: nowrap;
+}
+
+.wc-manual-subnav__link:hover,
+.wc-manual-subnav__link:focus {
+    background: rgba(2, 128, 144, 0.045);
+    color: #005f66;
+}
+
+.wc-manual-subnav__link--active {
+    background: rgba(2, 128, 144, 0.065);
+    border-bottom-color: rgba(2, 128, 144, 0.65);
+    color: #005f66;
+}
+
+@media screen and (max-width: 76.2344em) {
+    .wc-manual-subnav {
+        display: none;
+    }
 }

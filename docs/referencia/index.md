@@ -1,4 +1,4 @@
-# FAQ
+# Referências
 
 <div class="wc-portal-layout" markdown>
 
@@ -10,9 +10,19 @@
 
 <main class="wc-portal-main" markdown>
 
-Use esta seção para consultar materiais de referência, dúvidas recorrentes e links úteis da documentação WCorp.
+Consulte materiais de apoio, erros conhecidos, termos utilizados no WCorp, links úteis e conteúdos de referência para auxiliar na utilização do sistema.
 
 <div class="wc-home-grid" markdown>
+
+<div class="wc-card" markdown>
+
+### FAQ
+
+Encontre respostas objetivas para as perguntas mais frequentes sobre o WCorp e a documentação.
+
+[Abrir FAQ](faq.md){ .md-button .md-button--primary }
+
+</div>
 
 <div class="wc-card" markdown>
 
@@ -36,21 +46,21 @@ Veja mensagens recorrentes, possíveis causas e orientações iniciais de corre�
 
 <div class="wc-card" markdown>
 
-### Perguntas frequentes
+### Links úteis
 
-Encontre respostas rápidas para dúvidas comuns de uso, suporte e operação.
+Acesse páginas e recursos externos importantes para consulta.
 
-[Abrir perguntas frequentes](faq.md){ .md-button .md-button--primary }
+[Abrir links úteis](links-uteis.md){ .md-button .md-button--primary }
 
 </div>
 
 <div class="wc-card" markdown>
 
-### Links úteis
+### Atualizações fiscais
 
-Acesse páginas, canais e recursos externos importantes para consulta.
+Consulte comunicados e conteúdos de referência relacionados às rotinas fiscais do WCorp.
 
-[Abrir links úteis](links-uteis.md){ .md-button .md-button--primary }
+[Abrir atualizações fiscais](atualizacoes-fiscais.md){ .md-button .md-button--primary }
 
 </div>
 

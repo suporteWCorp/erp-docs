@@ -32,20 +32,3 @@ Faturamento > Radar de Nota Fiscal
 | --- | --- |
 | Quando devo usar esta rotina? | Use quando o processo estiver relacionado a **Radar de Nota Fiscal**. |
 | O que devo conferir antes de salvar? | Confira dados fiscais, documento de origem e mensagens exibidas pelo sistema. |
-
-??? info "Ver mais para Suporte"
-
-    ## Resultado esperado
-
-    A rotina deve concluir a operação fiscal ou apresentar uma mensagem clara para correção dos dados informados.
-
-    ## Orientação para Suporte
-
-    Ao atender problemas em **Faturamento > Radar de Nota Fiscal**, colete:
-
-    - Empresa e usuário afetado.
-    - Número da nota ou documento relacionado, quando houver.
-    - Cliente, fornecedor ou material envolvido.
-    - Mensagem completa exibida pelo Sistema ou pela SEFAZ.
-    - Print da tela e horário aproximado do erro.
-    - Informação se o problema ocorre em um documento específico ou em todos.

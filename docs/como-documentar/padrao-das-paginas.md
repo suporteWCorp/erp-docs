@@ -3,15 +3,7 @@
 Use este modelo para manter as páginas consistentes e fáceis de revisar.
 
 ```markdown
-# Nome da rotina ou tela
-
-## Objetivo
-
-Explique em poucas linhas para que esta rotina serve.
-
-## Quando usar
-
-Liste as situações em que o usuário deve usar esta tela ou processo.
+# Como realizar o processo
 
 ## Pré-requisitos
 
@@ -19,29 +11,32 @@ Liste as situações em que o usuário deve usar esta tela ou processo.
 - Cadastros que precisam existir.
 - Configurações envolvidas.
 
-## Passo a passo
+## Onde encontrar
+
+Caminho: `Módulo > Rotina`.
+
+## Como fazer
 
 1. Acesse o menu `Caminho > Da > Tela`.
 2. Preencha os campos obrigatórios.
 3. Clique em `Salvar`.
 
-## Campos principais
+## Demonstração em vídeo
 
-| Campo | Descrição | Obrigatório | Observações |
-| --- | --- | --- | --- |
-| Campo exemplo | O que ele controla | Sim | Regra ou cuidado |
-
-## Resultado esperado
-
-Descreva o que deve acontecer quando o processo termina corretamente.
+Inclua somente quando houver um vídeo correspondente.
 
 ## Erros comuns
 
-| Mensagem | Causa provável | Como resolver |
-| --- | --- | --- |
-| Mensagem exemplo | Cadastro incompleto | Corrigir o cadastro e tentar novamente |
+Caso encontre algum dos erros abaixo, clique para visualizar a causa e como resolver.
 
-## Observações
+- [Mensagem do erro](../caminho/para-pagina-do-erro.md)
+- Mensagem sem página específica — **Pendente**
 
-Inclua regras de negócio, exceções e cuidados importantes.
+## Quando utilizar
+
+- Liste brevemente as situações em que este processo deve ser usado.
+
+## Veja também
+
+- Adicione processos relacionados e, quando necessário, a página correspondente do Manual.
 ```

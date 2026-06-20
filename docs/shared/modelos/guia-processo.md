@@ -1,16 +1,9 @@
 # Como realizar o processo
 
-## Objetivo
-
-Explique em uma frase o que o procedimento faz.
-
-## Quando utilizar
-
-Informe em quais situações o procedimento deve ser usado.
-
 ## Pré-requisitos
 
 - Liste cadastros e configurações necessários.
+- Informe permissões necessárias, quando aplicável.
 - Use links para outros artigos sempre que possível.
 
 ## Onde encontrar
@@ -25,10 +18,20 @@ Inclua um print da tela quando ele ajudar o usuário a reconhecer o caminho ou a
 2. Mantenha uma ação principal por passo.
 3. Inclua imagens apenas quando agregarem valor.
 
+## Demonstração em vídeo
+
+Inclua esta seção somente quando houver um vídeo correspondente.
+
 ## Erros comuns
 
-- Liste erros recorrentes, quando existirem.
-- Linke artigos específicos em vez de repetir correções longas.
+Caso encontre algum dos erros abaixo, clique para visualizar a causa e como resolver.
+
+- Use o formato `[Mensagem do erro](caminho-da-pagina-do-erro.md)` quando a página específica existir.
+- Mensagem sem página específica — **Pendente**
+
+## Quando utilizar
+
+- Liste brevemente as situações em que o procedimento deve ser usado.
 
 ## Veja também
 

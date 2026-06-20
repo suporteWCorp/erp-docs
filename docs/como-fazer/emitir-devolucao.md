@@ -1,13 +1,5 @@
 # Como emitir uma devolução
 
-## Objetivo
-
-Emitir uma nota de devolução para registrar o retorno total ou parcial de mercadoria.
-
-## Quando utilizar
-
-Use quando uma venda ou compra precisa ser devolvida por erro, desistência, troca, recusa ou ajuste fiscal.
-
 ## Pré-requisitos
 
 - Documento fiscal original localizado.
@@ -24,8 +16,6 @@ Use quando uma venda ou compra precisa ser devolvida por erro, desistência, tro
 
 Caminho: `Comercial > Devolução ou Faturamento > Nota Fiscal`.
 
-![Onde encontrar](../assets/images/guias/faturamento_devolucao.png)
-
 ## Como fazer
 
 1. Localize o documento fiscal original.
@@ -38,9 +28,18 @@ Caminho: `Comercial > Devolução ou Faturamento > Nota Fiscal`.
 
 ## Erros comuns
 
-- Natureza de devolução ausente: veja [Como cadastrar uma natureza de operação](cadastrar-natureza-operacao.md).
-- Documento original não localizado: revise chave, número, série e participante.
-- Quantidade divergente: confira o saldo disponível para devolução.
+Caso encontre algum dos erros abaixo, clique para visualizar a causa e como resolver.
+
+- Natureza de devolução ausente — **Pendente**
+- Documento original não localizado — **Pendente**
+- Quantidade divergente — **Pendente**
+- Não é possível finalizar o cálculo automático — **Pendente**
+- Falha de Schema — **Pendente**
+- Rejeição 651 - Consumo Indevido — **Pendente**
+
+## Quando utilizar
+
+Use quando uma venda ou compra precisa ser devolvida por erro, desistência, troca, recusa ou ajuste fiscal.
 
 ## Veja também
 

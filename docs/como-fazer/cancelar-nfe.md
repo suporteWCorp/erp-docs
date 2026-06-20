@@ -1,13 +1,5 @@
 # Como cancelar uma NF-e
 
-## Objetivo
-
-Solicitar o cancelamento de uma NF-e autorizada quando a operação não deve permanecer válida.
-
-## Quando utilizar
-
-Use quando a nota foi emitida com erro ou quando a operação foi desfeita dentro das regras e prazos permitidos.
-
 ## Pré-requisitos
 
 - NF-e autorizada e localizada.
@@ -23,8 +15,6 @@ Use quando a nota foi emitida com erro ou quando a operação foi desfeita dentr
 
 Caminho: `Faturamento > Nota Fiscal`.
 
-![Onde encontrar](../assets/images/guias/faturamento_cancelar_nfe.png)
-
 ## Como fazer
 
 1. Acesse **Faturamento > Nota Fiscal**.
@@ -35,11 +25,25 @@ Caminho: `Faturamento > Nota Fiscal`.
 6. Confirme o envio do evento.
 7. Confira o retorno da SEFAZ.
 
+## Demonstração em vídeo
+
+<video class="wc-video" controls preload="auto" playsinline>
+  <source src="../../assets/videos/faturamento_cancelar_nfe.mp4" type="video/mp4">
+  Seu navegador não conseguiu reproduzir este vídeo.
+</video>
+
 ## Erros comuns
 
-- Prazo de cancelamento expirado: valide a alternativa com o responsável fiscal.
-- Nota não autorizada: corrija ou inutilize conforme o caso, sem enviar cancelamento.
-- Rejeição da SEFAZ: copie a mensagem completa e consulte [Suporte > Base de erros](../suporte/base-de-erros.md).
+Caso encontre algum dos erros abaixo, clique para visualizar a causa e como resolver.
+
+- Prazo de cancelamento expirado — **Pendente**
+- Nota não autorizada — **Pendente**
+- Falha de Schema — **Pendente**
+- Rejeição 651 - Consumo Indevido — **Pendente**
+
+## Quando utilizar
+
+Use quando a nota foi emitida com erro ou quando a operação foi desfeita dentro das regras e prazos permitidos.
 
 ## Veja também
 

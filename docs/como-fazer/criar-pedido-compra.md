@@ -1,13 +1,5 @@
 # Como criar um pedido de compra
 
-## Objetivo
-
-Registrar uma solicitação de compra aprovada para fornecedor, itens, valores e prazos.
-
-## Quando utilizar
-
-Use quando a empresa precisa formalizar uma compra antes da entrada da nota fiscal.
-
 ## Pré-requisitos
 
 - [Como cadastrar um fornecedor](cadastrar-fornecedor.md){: target="_blank" rel="noopener" }.
@@ -33,9 +25,15 @@ Caminho: `Compras > Pedido de Compra`.
 
 ## Erros comuns
 
-- Fornecedor não encontrado: veja [Como cadastrar um fornecedor](cadastrar-fornecedor.md).
-- Material não encontrado: veja [Como cadastrar um material](cadastrar-material.md).
-- Pedido bloqueado para aprovação: consulte o fluxo em [Manual > Compras > Aprovação de Compras](../compras/aprovacao-compras.md).
+Caso encontre algum dos erros abaixo, clique para visualizar a causa e como resolver.
+
+- Fornecedor não encontrado — **Pendente**
+- Material não encontrado — **Pendente**
+- Pedido bloqueado para aprovação — **Pendente**
+
+## Quando utilizar
+
+Use quando a empresa precisa formalizar uma compra antes da entrada da nota fiscal.
 
 ## Veja também
 

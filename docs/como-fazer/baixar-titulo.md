@@ -1,13 +1,5 @@
 # Como baixar um título
 
-## Objetivo
-
-Registrar o pagamento ou recebimento de um título financeiro no WCorp.
-
-## Quando utilizar
-
-Use quando um cliente pagou, um fornecedor foi pago ou quando a baixa precisa ser registrada manualmente.
-
 ## Pré-requisitos
 
 - Título financeiro localizado.
@@ -33,9 +25,15 @@ Caminho: `Financeiro > Contas a Receber / Contas a Pagar`.
 
 ## Erros comuns
 
-- Título já baixado: consulte histórico e status antes de lançar nova baixa.
-- Valor divergente: confira juros, desconto, multa ou baixa parcial.
-- Conta incorreta: revise a conta antes de confirmar.
+Caso encontre algum dos erros abaixo, clique para visualizar a causa e como resolver.
+
+- Título já baixado — **Pendente**
+- Valor divergente — **Pendente**
+- Conta incorreta — **Pendente**
+
+## Quando utilizar
+
+Use quando um cliente pagou, um fornecedor foi pago ou quando a baixa precisa ser registrada manualmente.
 
 ## Veja também
 

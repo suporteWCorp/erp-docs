@@ -22,9 +22,3 @@ A documentação desta seção segue a mesma ordem dos botões exibidos no WCorp
 ## Antes de operar rotinas de Relatórios
 
 - Confira período, empresa e filtros antes de gerar.`r`n- Em XML e SPED, valide tipo de documento e competência.`r`n- Ao exportar, registre filtros usados para reproduzir o resultado.
-
-??? info "Ver mais para Suporte"
-
-    ## Orientação para Suporte
-
-    Em atendimentos de Relatórios, colete nome do relatório, filtros usados, período, resultado esperado, print e arquivo exportado quando houver.

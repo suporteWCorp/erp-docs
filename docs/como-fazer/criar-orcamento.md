@@ -1,13 +1,5 @@
 # Como criar um orçamento
 
-## Objetivo
-
-Registrar uma proposta comercial antes de gerar um pedido de venda.
-
-## Quando utilizar
-
-Use quando o cliente ainda está avaliando preços, quantidades, prazos ou condições comerciais.
-
 ## Pré-requisitos
 
 - [Como cadastrar um cliente](cadastrar-cliente.md){: target="_blank" rel="noopener" }.
@@ -30,11 +22,24 @@ Caminho: `Comercial > Orçamento`.
 5. Informe condição de pagamento, prazo e observações.
 6. Salve o orçamento.
 
+## Demonstração em vídeo
+
+<video class="wc-video" controls preload="auto" playsinline>
+  <source src="../../assets/videos/comercial_orcamento.mp4" type="video/mp4">
+  Seu navegador não conseguiu reproduzir este vídeo.
+</video>
+
 ## Erros comuns
 
-- Cliente não encontrado: veja [Como cadastrar um cliente](cadastrar-cliente.md).
-- Material não encontrado: veja [Como cadastrar um material](cadastrar-material.md).
-- Valores divergentes: confira tabela de preço e descontos antes de gerar o pedido.
+Caso encontre algum dos erros abaixo, clique para visualizar a causa e como resolver.
+
+- Cliente não encontrado — **Pendente**
+- Material não encontrado — **Pendente**
+- Valores divergentes — **Pendente**
+
+## Quando utilizar
+
+Use quando o cliente ainda está avaliando preços, quantidades, prazos ou condições comerciais.
 
 ## Veja também
 

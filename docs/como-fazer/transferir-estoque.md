@@ -1,13 +1,5 @@
 # Como transferir estoque
 
-## Objetivo
-
-Transferir saldo de material entre locais, depósitos, lotes ou unidades de controle permitidas.
-
-## Quando utilizar
-
-Use quando um material muda de local físico ou precisa ser reorganizado para venda, produção, separação ou armazenagem.
-
 ## Pré-requisitos
 
 - [Como consultar estoque](consultar-estoque.md){: target="_blank" rel="noopener" }.
@@ -21,8 +13,6 @@ Use quando um material muda de local físico ou precisa ser reorganizado para ve
 
 Caminho: `Materiais > Lote/Estoque`.
 
-![Onde encontrar](../assets/images/guias/estoque_transferencia.png)
-
 ## Como fazer
 
 1. Consulte o saldo do material.
@@ -34,9 +24,15 @@ Caminho: `Materiais > Lote/Estoque`.
 
 ## Erros comuns
 
-- Saldo insuficiente: confira local, lote e quantidade disponível.
-- Destino incorreto: revise o local antes de confirmar.
-- Material não localizado: veja [Como cadastrar um material](cadastrar-material.md).
+Caso encontre algum dos erros abaixo, clique para visualizar a causa e como resolver.
+
+- Saldo insuficiente — **Pendente**
+- Destino incorreto — **Pendente**
+- Material não localizado — **Pendente**
+
+## Quando utilizar
+
+Use quando um material muda de local físico ou precisa ser reorganizado para venda, produção, separação ou armazenagem.
 
 ## Veja também
 

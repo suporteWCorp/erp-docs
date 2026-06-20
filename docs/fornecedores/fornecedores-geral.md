@@ -17,9 +17,3 @@ A documentação desta seção segue a mesma ordem dos botões exibidos no WCorp
 ## Antes de operar rotinas de Fornecedores
 
 - Confira se o fornecedor já existe antes de criar um novo cadastro.`r`n- Valide documento, razão social, endereço e contatos.`r`n- Em processos fiscais, confira dados tributários e certificado quando aplicável.
-
-??? info "Ver mais para Suporte"
-
-    ## Orientação para Suporte
-
-    Em atendimentos de Fornecedores, colete nome, código ou documento do fornecedor, rotina acessada, mensagem completa e print da tela.

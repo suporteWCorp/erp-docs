@@ -1,13 +1,5 @@
 # Como consultar estoque
 
-## Objetivo
-
-Consultar saldo, localização e movimentações de materiais em estoque.
-
-## Quando utilizar
-
-Use antes de vender, comprar, produzir, transferir ou ajustar materiais.
-
 ## Pré-requisitos
 
 - [Como cadastrar um material](cadastrar-material.md){: target="_blank" rel="noopener" }.
@@ -20,8 +12,6 @@ Use antes de vender, comprar, produzir, transferir ou ajustar materiais.
 
 Caminho: `Materiais > Lote/Estoque`.
 
-![Onde encontrar](../assets/images/guias/estoque_consulta.png)
-
 ## Como fazer
 
 1. Acesse a rotina de estoque em **Materiais**.
@@ -32,9 +22,15 @@ Caminho: `Materiais > Lote/Estoque`.
 
 ## Erros comuns
 
-- Saldo não localizado: revise local, lote, unidade e filtros.
-- Material não encontrado: veja [Como cadastrar um material](cadastrar-material.md).
-- Divergência de saldo: avalie [Como fazer inventário](fazer-inventario.md).
+Caso encontre algum dos erros abaixo, clique para visualizar a causa e como resolver.
+
+- Saldo não localizado — **Pendente**
+- Material não encontrado — **Pendente**
+- Divergência de saldo — **Pendente**
+
+## Quando utilizar
+
+Use antes de vender, comprar, produzir, transferir ou ajustar materiais.
 
 ## Veja também
 

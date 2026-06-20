@@ -1,13 +1,5 @@
 # Como emitir uma nota complementar
 
-## Objetivo
-
-Emitir uma nota complementar para acrescentar valor, imposto ou informação fiscal a uma NF-e já emitida.
-
-## Quando utilizar
-
-Use quando a operação original precisa de complemento fiscal autorizado pela regra tributária aplicável.
-
 ## Pré-requisitos
 
 - NF-e original localizada.
@@ -23,8 +15,6 @@ Use quando a operação original precisa de complemento fiscal autorizado pela r
 
 Caminho: `Faturamento > Nota Fiscal`.
 
-![Onde encontrar](../assets/images/guias/faturamento_nota_complementar.png)
-
 ## Como fazer
 
 1. Acesse **Faturamento > Nota Fiscal**.
@@ -38,9 +28,18 @@ Caminho: `Faturamento > Nota Fiscal`.
 
 ## Erros comuns
 
-- Nota original não informada: revise a referência antes de transmitir.
-- Natureza incompatível: veja [Como cadastrar uma natureza de operação](cadastrar-natureza-operacao.md).
-- Complemento fiscal incorreto: valide com o responsável fiscal antes de reenviar.
+Caso encontre algum dos erros abaixo, clique para visualizar a causa e como resolver.
+
+- Nota original não informada — **Pendente**
+- Natureza incompatível — **Pendente**
+- Complemento fiscal incorreto — **Pendente**
+- Não é possível finalizar o cálculo automático — **Pendente**
+- Falha de Schema — **Pendente**
+- Rejeição 651 - Consumo Indevido — **Pendente**
+
+## Quando utilizar
+
+Use quando a operação original precisa de complemento fiscal autorizado pela regra tributária aplicável.
 
 ## Veja também
 

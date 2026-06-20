@@ -20,9 +20,3 @@ A documentação desta seção segue a mesma ordem dos botões exibidos no WCorp
 ## Antes de operar rotinas de Compras
 
 - Confira solicitante, itens, quantidades e fornecedor.`r`n- Em aprovações, valide status, alçada e observações.`r`n- Em pedido de compra, confira condições comerciais antes de finalizar.
-
-??? info "Ver mais para Suporte"
-
-    ## Orientação para Suporte
-
-    Em atendimentos de Compras, colete número da requisição ou pedido, solicitante, fornecedor, status, mensagem completa e print da tela.

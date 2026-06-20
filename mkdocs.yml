@@ -11,15 +11,6 @@ theme:
     - scheme: default
       primary: teal
       accent: cyan
-      toggle:
-        icon: material/brightness-7
-        name: Modo Escuro
-    - scheme: slate
-      primary: teal
-      accent: cyan
-      toggle:
-        icon: material/brightness-4
-        name: Modo Claro
   features:
     - navigation.tabs
     - navigation.sections
@@ -33,12 +24,23 @@ nav:
   - Início: index.md
   - Guia:
       - Visão geral: como-fazer/index.md
+      - Administração:
+          - Como cadastrar uma Natureza de Operação: como-fazer/cadastrar-natureza-operacao.md
+          - Como cadastrar uma Condição de Pagamento: como-fazer/cadastrar-condicao-pagamento.md
+          - Como cadastrar um Centro de Custo: como-fazer/cadastrar-centro-custo.md
+          - Como cadastrar um usuário: como-fazer/cadastrar-usuario.md
+          - Como configurar um Grupo de Usuário: como-fazer/configurar-grupo-usuario.md
       - Comercial:
           - Como cadastrar um cliente: como-fazer/cadastrar-cliente.md
           - Como cadastrar um fornecedor: como-fazer/cadastrar-fornecedor.md
           - Como criar um orçamento: como-fazer/criar-orcamento.md
           - Como gerar um pedido: como-fazer/fazer-pedido-venda.md
-          - Como cancelar um pedido: como-fazer/cancelar-pedido.md
+      - Estoque:
+          - Cadastro de Material: como-fazer/cadastrar-material.md
+          - Como consultar estoque: como-fazer/consultar-estoque.md
+          - Como ajustar estoque: como-fazer/ajustar-estoque.md
+          - Como fazer inventário: como-fazer/fazer-inventario.md
+          - Como transferir estoque: como-fazer/transferir-estoque.md
       - Faturamento:
           - Como emitir uma NF-e: como-fazer/faturar-nota.md
           - Como cancelar uma NF-e: como-fazer/cancelar-nfe.md
@@ -49,19 +51,17 @@ nav:
           - Como importar XML: como-fazer/importar-xml.md
           - Como lançar uma nota de entrada: como-fazer/lancar-nota-entrada.md
           - Como criar um pedido de compra: como-fazer/criar-pedido-compra.md
-      - Estoque:
-          - Como consultar estoque: como-fazer/consultar-estoque.md
-          - Como ajustar estoque: como-fazer/ajustar-estoque.md
-          - Como fazer inventário: como-fazer/fazer-inventario.md
-          - Como transferir estoque: como-fazer/transferir-estoque.md
-          - Como cadastrar um material: como-fazer/cadastrar-material.md
       - Financeiro:
           - Como gerar boleto: como-fazer/gerar-boleto.md
           - Como baixar um título: como-fazer/baixar-titulo.md
           - Como lançar contas a pagar: como-fazer/lancar-contas-a-pagar.md
-      - Configurações de apoio:
-          - Como cadastrar uma natureza de operação: como-fazer/cadastrar-natureza-operacao.md
-  - FAQ: referencia/index.md
+  - Referências:
+      - Visão geral: referencia/index.md
+      - FAQ: referencia/faq.md
+      - Glossário: referencia/glossario.md
+      - Erros comuns: referencia/erros-comuns.md
+      - Links úteis: referencia/links-uteis.md
+      - Atualizações fiscais: referencia/atualizacoes-fiscais.md
   - Manual:
       - Visão geral: manual/index.md
       - Comercial:

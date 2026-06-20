@@ -2,6 +2,62 @@
 
 Use esta seção quando você sabe o que precisa realizar, mas não quer procurar pela tela do WCorp. O Guia é organizado por processos do dia a dia; o Manual continua sendo a referência detalhada de cada tela.
 
+## Administração
+
+<div class="wc-home-grid" markdown>
+
+<div class="wc-card" markdown>
+
+### Como cadastrar uma Natureza de Operação
+
+Cadastrar uma Natureza de Operação e configurar as Regras Fiscais utilizadas durante o faturamento.
+
+[Abrir guia](cadastrar-natureza-operacao.md){ .md-button .md-button--primary }
+
+</div>
+
+<div class="wc-card" markdown>
+
+### Como cadastrar uma Condição de Pagamento
+
+Cadastrar formas e prazos de pagamento utilizados nas operações do WCorp.
+
+[Abrir guia](cadastrar-condicao-pagamento.md){ .md-button .md-button--primary }
+
+</div>
+
+<div class="wc-card" markdown>
+
+### Como cadastrar um Centro de Custo
+
+Cadastrar um Centro de Custo para organizar lançamentos e controles internos.
+
+[Abrir guia](cadastrar-centro-custo.md){ .md-button .md-button--primary }
+
+</div>
+
+<div class="wc-card" markdown>
+
+### Como cadastrar um usuário
+
+Aprenda como criar um novo usuário no WCorp.
+
+[Abrir guia](cadastrar-usuario.md){ .md-button .md-button--primary }
+
+</div>
+
+<div class="wc-card" markdown>
+
+### Como configurar um Grupo de Usuário
+
+Configure grupos e permissões para organizar o acesso dos usuários ao WCorp.
+
+[Abrir guia](configurar-grupo-usuario.md){ .md-button .md-button--primary }
+
+</div>
+
+</div>
+
 ## Comercial
 
 <div class="wc-home-grid" markdown>
@@ -33,6 +89,32 @@ Registrar uma proposta comercial antes de confirmar o pedido.
 Criar um pedido de venda a partir de cliente, itens e condição de pagamento.
 
 [Abrir guia](fazer-pedido-venda.md){ .md-button .md-button--primary }
+
+</div>
+
+</div>
+
+## Estoque
+
+<div class="wc-home-grid" markdown>
+
+<div class="wc-card" markdown>
+
+### Cadastro de Material
+
+Cadastrar materiais e suas informações operacionais e fiscais.
+
+[Abrir guia](cadastrar-material.md){ .md-button .md-button--primary }
+
+</div>
+
+<div class="wc-card" markdown>
+
+### Como fazer inventário
+
+Conferir estoque físico e registrar ajustes no WCorp.
+
+[Abrir guia](fazer-inventario.md){ .md-button .md-button--primary }
 
 </div>
 
@@ -74,7 +156,7 @@ Corrigir informações permitidas em uma NF-e autorizada.
 
 </div>
 
-## Compras, estoque e financeiro
+## Compras
 
 <div class="wc-home-grid" markdown>
 
@@ -88,15 +170,11 @@ Importar um XML de nota fiscal para apoiar a conferência e entrada.
 
 </div>
 
-<div class="wc-card" markdown>
-
-### Como fazer inventário
-
-Conferir estoque físico e registrar ajustes no WCorp.
-
-[Abrir guia](fazer-inventario.md){ .md-button .md-button--primary }
-
 </div>
+
+## Financeiro
+
+<div class="wc-home-grid" markdown>
 
 <div class="wc-card" markdown>
 

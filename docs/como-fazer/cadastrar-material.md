@@ -1,13 +1,5 @@
 # Como cadastrar um material
 
-## Objetivo
-
-Cadastrar um material para uso em estoque, compras, vendas, produção e faturamento.
-
-## Quando utilizar
-
-Use quando um produto, insumo, peça ou serviço controlado como material ainda não existir no WCorp.
-
 ## Pré-requisitos
 
 - Descrição, unidade, categoria e dados fiscais ou comerciais do material.
@@ -38,8 +30,14 @@ Caminho: `Materiais > Materiais`.
 
 ## Erros comuns
 
-- Material duplicado: pesquise por descrição, código interno ou referência antes de cadastrar novamente.
-- Unidade ou categoria não encontrada: consulte [Manual > Materiais > Categoria de Materiais](../materiais/categoria-materiais.md).
+Caso encontre algum dos erros abaixo, clique para visualizar a causa e como resolver.
+
+- Material duplicado — **Pendente**
+- Unidade ou categoria não encontrada — **Pendente**
+
+## Quando utilizar
+
+Use quando um produto, insumo, peça ou serviço controlado como material ainda não existir no WCorp.
 
 ## Veja também
 

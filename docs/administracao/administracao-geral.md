@@ -27,9 +27,3 @@ A documentação desta seção segue a mesma ordem dos botões exibidos no WCorp
 ## Antes de operar rotinas de Administração
 
 - Altere configurações administrativas com atenção ao impacto em outras rotinas.`r`n- Confira permissões, empresa e regras fiscais antes de salvar.`r`n- Em parâmetros, registre a regra de negócio que motivou a alteração.
-
-??? info "Ver mais para Suporte"
-
-    ## Orientação para Suporte
-
-    Em atendimentos de Administração, colete usuário, empresa, parâmetro ou cadastro alterado, mensagem completa e print da tela.
