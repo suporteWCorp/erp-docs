@@ -51,10 +51,14 @@
     headerInner.insertBefore(nav, palette || search || null);
   }
 
-  function currentPageTitle() {
+  function relativePortalPath() {
     const root = new URL(rootUrl()).pathname.replace(/\/+$/, "");
     const path = window.location.pathname.replace(/\/+$/, "");
-    const relativePath = path.startsWith(root) ? path.slice(root.length) || "/" : path;
+    return path.startsWith(root) ? path.slice(root.length) || "/" : path;
+  }
+
+  function currentPageTitle() {
+    const relativePath = relativePortalPath();
 
     const routeTitles = {
       "/": "Início",
@@ -72,6 +76,60 @@
     const copy = heading.cloneNode(true);
     copy.querySelectorAll(".headerlink").forEach((link) => link.remove());
     return copy.textContent.trim();
+  }
+
+  function addBreadcrumb() {
+    const existing = document.querySelector(".wc-breadcrumb");
+    if (existing) existing.remove();
+
+    const relativePath = relativePortalPath();
+    if (relativePath === "/") return;
+
+    const content = document.querySelector(".md-content__inner");
+    const heading = content ? content.querySelector(":scope > h1") : null;
+    if (!content || !heading) return;
+
+    let section = null;
+    if (relativePath.startsWith("/como-fazer")) {
+      section = { label: "Guia", href: "como-fazer/", path: "/como-fazer" };
+    } else if (relativePath.startsWith("/referencia")) {
+      section = { label: "Referências", href: "referencia/", path: "/referencia" };
+    } else if (relativePath.startsWith("/suporte")) {
+      section = { label: "Suporte", href: "suporte/", path: "/suporte" };
+    } else if (isManualPage()) {
+      section = { label: "Manual", href: "manual/", path: "/manual" };
+    }
+
+    const breadcrumb = document.createElement("nav");
+    breadcrumb.className = "wc-breadcrumb";
+    breadcrumb.setAttribute("aria-label", "Navegação estrutural");
+
+    const list = document.createElement("ol");
+    list.className = "wc-breadcrumb__list";
+
+    const addItem = (label, href, current = false) => {
+      const item = document.createElement("li");
+      item.className = "wc-breadcrumb__item";
+      if (current) item.setAttribute("aria-current", "page");
+
+      if (href) {
+        const link = document.createElement("a");
+        link.href = new URL(href, rootUrl()).href;
+        link.textContent = label;
+        item.appendChild(link);
+      } else {
+        item.textContent = label;
+      }
+      list.appendChild(item);
+    };
+
+    addItem("Início", "");
+    const title = currentPageTitle();
+    if (section && relativePath !== section.path) addItem(section.label, section.href);
+    addItem(section && relativePath === section.path ? section.label : title, null, true);
+
+    breadcrumb.appendChild(list);
+    content.insertBefore(breadcrumb, heading);
   }
 
   function updateHeaderIdentity() {
@@ -395,6 +453,86 @@
     document.body.classList.add("wc-guide-nav-focused");
   }
 
+  function configureGuideOverviewSidebar() {
+    const primaryNav = document.querySelector(".md-sidebar--primary .md-nav--primary");
+    if (!primaryNav) return;
+
+    primaryNav.querySelectorAll(".wc-guide-overview-module").forEach((item) => {
+      item.classList.remove("wc-guide-overview-module", "wc-guide-overview-module--open");
+      const originalTrigger = item.querySelector(":scope > .wc-guide-overview-original-trigger");
+      if (originalTrigger) originalTrigger.classList.remove("wc-guide-overview-original-trigger");
+      const trigger = item.querySelector(":scope > button.wc-guide-overview-trigger");
+      if (trigger) trigger.hidden = true;
+    });
+    primaryNav.querySelectorAll(".wc-guide-overview-home-link").forEach((item) => {
+      item.classList.remove("wc-guide-overview-home-link");
+    });
+    document.body.classList.remove("wc-guide-overview");
+
+    if (!isGuideOverview()) return;
+
+    const currentPath = normalizedPagePath(window.location.href);
+    const overviewLink = Array.from(primaryNav.querySelectorAll("a.md-nav__link[href]"))
+      .find((link) => normalizedPagePath(link.href) === currentPath);
+    const guideList = overviewLink
+      ? overviewLink.closest("li.md-nav__item")?.parentElement
+      : null;
+    if (!guideList) return;
+
+    const overviewItem = overviewLink.closest("li.md-nav__item");
+    if (overviewItem) overviewItem.classList.add("wc-guide-overview-home-link");
+
+    const modules = Array.from(guideList.children)
+      .filter((item) => item.matches("li.md-nav__item--section.md-nav__item--nested"));
+
+    modules.forEach((item) => {
+      item.classList.add("wc-guide-overview-module");
+      const toggle = item.querySelector(":scope > input.md-nav__toggle");
+      const originalTrigger = item.querySelector(":scope > .md-nav__link");
+      const moduleNav = item.querySelector(":scope > nav.md-nav");
+      if (!toggle || !originalTrigger || !moduleNav) return;
+
+      let trigger = item.querySelector(":scope > button.wc-guide-overview-trigger");
+      if (!trigger) {
+        trigger = document.createElement("button");
+        trigger.type = "button";
+        trigger.className = "wc-guide-overview-trigger";
+        trigger.textContent = originalTrigger.textContent.trim();
+        item.insertBefore(trigger, moduleNav);
+      }
+
+      toggle.checked = false;
+      item.classList.remove("wc-guide-overview-module--open");
+      originalTrigger.classList.add("wc-guide-overview-original-trigger");
+      trigger.hidden = false;
+      trigger.setAttribute("aria-expanded", "false");
+
+      if (trigger.dataset.wcGuideAccordion) return;
+
+      trigger.dataset.wcGuideAccordion = "true";
+      trigger.addEventListener("click", () => {
+        if (!document.body.classList.contains("wc-guide-overview")) return;
+        const shouldOpen = !item.classList.contains("wc-guide-overview-module--open");
+
+        modules.forEach((otherItem) => {
+          const otherToggle = otherItem.querySelector(":scope > input.md-nav__toggle");
+          if (otherToggle) otherToggle.checked = false;
+          otherItem.classList.remove("wc-guide-overview-module--open");
+          const otherTrigger = otherItem.querySelector(":scope > button.wc-guide-overview-trigger");
+          if (otherTrigger) otherTrigger.setAttribute("aria-expanded", "false");
+        });
+
+        if (shouldOpen) {
+          toggle.checked = true;
+          item.classList.add("wc-guide-overview-module--open");
+          trigger.setAttribute("aria-expanded", "true");
+        }
+      });
+    });
+
+    document.body.classList.add("wc-guide-overview");
+  }
+
   function createQuickLinksSection(title, items, root) {
     const section = document.createElement("section");
     section.className = "wc-guide-quicklinks__section";
@@ -455,12 +593,6 @@
       { label: "Como cadastrar uma Natureza de Operação", href: "como-fazer/cadastrar-natureza-operacao/" }
     ], root));
 
-    nav.appendChild(createQuickLinksSection("Erros frequentes", [
-      { label: "Não é possível finalizar o cálculo automático", slug: "calculo-automatico" },
-      { label: "Falha de Schema", slug: "falha-schema" },
-      { label: "Rejeição 651 – Consumo Indevido", slug: "rejeicao-651-consumo-indevido" }
-    ], root));
-
     nav.appendChild(createQuickLinksSection("Links rápidos", [
       { label: "FAQ", href: "referencia/faq/" },
       { label: "Manual", href: "manual/" },
@@ -473,10 +605,12 @@
   function initWcorpUi() {
     addShortcuts();
     updateHeaderIdentity();
+    addBreadcrumb();
     replaceTabsWithErpMenu();
     updateManualSubnav();
     movePortalSidebar();
     focusGuideSidebar();
+    configureGuideOverviewSidebar();
     replaceGuideOverviewToc();
     addSupportFooter();
     prepareSeekableVideos();

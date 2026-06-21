@@ -1,4 +1,4 @@
-<section class="wc-portal-block" markdown>
+<section class="wc-portal-block wc-portal-block--external-links" markdown>
 
 ### Links úteis
 
