@@ -4,13 +4,13 @@
 
 Cadastrar ou consultar categorias usadas para organizar materiais.
 
+## Print da tela com caminho
+
+Materiais > Categoria de Materiais
+
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Categoria de Materiais**.
-
-## Caminho no WCorp
-
-Materiais > Categoria de Materiais
 
 ## Passo a passo
 
@@ -20,13 +20,13 @@ Materiais > Categoria de Materiais
 4. Confira material, quantidade, unidade, lote ou local de armazenagem, quando aplicável.
 5. Salve, confirme ou finalize conforme a ação disponível na tela.
 
-## Campos principais
+### Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |
 | A definir | A definir | A definir |
 
-## Dúvidas Frequentes
+## Dúvidas frequentes
 
 | Dúvida | Orientação |
 | --- | --- |

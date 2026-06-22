@@ -4,6 +4,10 @@
 
 Emitir nota fiscal de saída no WCorp, de forma manual ou vinculada a pedidos.
 
+## Print da tela com caminho
+
+`Faturamento > Nota Fiscal`
+
 ![Tela principal de Nota Fiscal](../assets/faturamento-nf.png)
 
 ## Quando usar
@@ -15,10 +19,6 @@ Use esta rotina quando for necessário:
 - Cadastrar nota manualmente.
 - Conferir impostos antes da transmissão.
 - Transmitir a nota para a SEFAZ.
-
-## Caminho no WCorp
-
-`Faturamento > Nota Fiscal`
 
 ## Passo a passo
 
@@ -44,7 +44,7 @@ Use esta rotina quando for necessário:
 !!! info "Dica"
     Quando a nota é gerada por pedido, o sistema já busca os impostos automaticamente com base na regra fiscal configurada.
 
-## Campos principais
+### Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |
@@ -54,7 +54,7 @@ Use esta rotina quando for necessário:
 | Impostos | Aba com os dados fiscais da emissão | Revisar antes de transmitir |
 | Transmitir | Envia a nota para autorização | Usar após conferir os dados obrigatórios |
 
-## Dúvidas Frequentes
+## Dúvidas frequentes
 
 | Dúvida | Orientação |
 | --- | --- |
@@ -62,3 +62,9 @@ Use esta rotina quando for necessário:
 | Quando devo usar emissão por pedido? | Use quando a nota deve ser gerada a partir de um pedido já cadastrado. |
 | O sistema informa se faltar algum campo? | Sim. Ao salvar ou transmitir, o Sistema indica campos obrigatórios pendentes. |
 | Preciso conferir impostos se vier do pedido? | Sim. Mesmo com cálculo automático, confira material e aba de impostos antes de transmitir. |
+
+## Veja também
+
+- [Como emitir uma NF-e](../como-fazer/faturar-nota.md){: target="_blank" rel="noopener" }
+- [Como cancelar uma NF-e](../como-fazer/cancelar-nfe.md){: target="_blank" rel="noopener" }
+- [Como emitir uma carta de correção](../como-fazer/emitir-carta-correcao.md){: target="_blank" rel="noopener" }

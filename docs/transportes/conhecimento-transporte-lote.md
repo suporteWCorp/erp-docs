@@ -4,13 +4,13 @@
 
 Emitir ou processar conhecimentos de transporte em lote.
 
+## Print da tela com caminho
+
+$Tab > Conhecimento de Transp.(Lote)
+
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Conhecimento de Transp.(Lote)**.
-
-## Caminho no WCorp
-
-$Tab > Conhecimento de Transp.(Lote)
 
 ## Passo a passo
 
@@ -20,13 +20,13 @@ $Tab > Conhecimento de Transp.(Lote)
 4. Confira as informações antes de salvar, confirmar ou finalizar.
 5. Finalize conforme a ação disponível na tela.
 
-## Campos principais
+### Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |
 | A definir | A definir | A definir |
 
-## Dúvidas Frequentes
+## Dúvidas frequentes
 
 | Dúvida | Orientação |
 | --- | --- |

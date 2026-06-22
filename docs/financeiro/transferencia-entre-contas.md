@@ -4,13 +4,13 @@
 
 Registrar transferências de valores entre contas financeiras ou bancárias.
 
+## Print da tela com caminho
+
+Financeiro > Transferência entre Contas
+
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Transferência entre Contas**.
-
-## Caminho no WCorp
-
-Financeiro > Transferência entre Contas
 
 ## Passo a passo
 
@@ -20,13 +20,13 @@ Financeiro > Transferência entre Contas
 4. Confira empresa, conta, valor, vencimento e status, quando aplicável.
 5. Salve, confirme ou finalize conforme a ação desejada na tela.
 
-## Campos principais
+### Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |
 | A definir | A definir | A definir |
 
-## Dúvidas Frequentes
+## Dúvidas frequentes
 
 | Dúvida | Orientação |
 | --- | --- |

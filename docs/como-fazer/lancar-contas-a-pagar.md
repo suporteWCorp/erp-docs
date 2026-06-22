@@ -1,3 +1,12 @@
+---
+error_area: "Financeiro"
+error_category: "Contas a pagar"
+error_tags:
+  - "contas a pagar"
+  - "titulo"
+  - "fornecedor"
+---
+
 # Como lançar contas a pagar
 
 ## Pré-requisitos
@@ -7,11 +16,12 @@
 - Conta, centro de custo e vencimento definidos, quando aplicável.
 - Acesso à tela [Manual > Financeiro > Contas a Pagar](../financeiro/contas-a-pagar.md){: target="_blank" rel="noopener" }.
 
+## Permissões
+
 --8<-- "shared/avisos/permissoes.md"
 
-## Onde encontrar
-
-Caminho: `Financeiro > Contas a Pagar`.
+## Caminho
+`Financeiro > Contas a Pagar`.
 
 ## Como fazer
 
@@ -22,14 +32,6 @@ Caminho: `Financeiro > Contas a Pagar`.
 5. Vincule documento de origem, quando houver.
 6. Revise os dados.
 7. Salve o título.
-
-## Erros comuns
-
-Caso encontre algum dos erros abaixo, clique para visualizar a causa e como resolver.
-
-- Fornecedor não encontrado — **Pendente**
-- Centro de custo ausente — **Pendente**
-- Vencimento ou valor incorreto — **Pendente**
 
 ## Quando utilizar
 

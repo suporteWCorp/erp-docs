@@ -1,3 +1,12 @@
+---
+error_area: "Comercial"
+error_category: "Pedidos"
+error_tags:
+  - "pedido"
+  - "cancelamento"
+  - "venda"
+---
+
 # Como cancelar um pedido
 
 ## Pré-requisitos
@@ -7,11 +16,12 @@
 - Verificação de vínculo com separação, faturamento ou financeiro.
 - Acesso à tela [Manual > Comercial > Pedido](../comercial/pedidos.md){: target="_blank" rel="noopener" }.
 
+## Permissões
+
 --8<-- "shared/avisos/permissoes.md"
 
-## Onde encontrar
-
-Caminho: `Comercial > Pedido`.
+## Caminho
+`Comercial > Pedido`.
 
 ## Como fazer
 
@@ -22,13 +32,6 @@ Caminho: `Comercial > Pedido`.
 5. Acione a opção de cancelamento disponível na tela.
 6. Informe motivo ou observação, quando solicitado.
 7. Confirme o cancelamento.
-
-## Erros comuns
-
-Caso encontre algum dos erros abaixo, clique para visualizar a causa e como resolver.
-
-- Pedido já faturado — **Pendente**
-- Pedido não localizado — **Pendente**
 
 ## Quando utilizar
 

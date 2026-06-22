@@ -4,13 +4,13 @@
 
 Cadastrar ou consultar atividades vinculadas a serviços.
 
+## Print da tela com caminho
+
+$Tab > Cadastro de Atividade
+
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Cadastro de Atividade**.
-
-## Caminho no WCorp
-
-$Tab > Cadastro de Atividade
 
 ## Passo a passo
 
@@ -20,13 +20,13 @@ $Tab > Cadastro de Atividade
 4. Confira as informações antes de salvar, confirmar ou finalizar.
 5. Finalize conforme a ação disponível na tela.
 
-## Campos principais
+### Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |
 | A definir | A definir | A definir |
 
-## Dúvidas Frequentes
+## Dúvidas frequentes
 
 | Dúvida | Orientação |
 | --- | --- |

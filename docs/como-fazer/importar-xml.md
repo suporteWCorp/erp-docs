@@ -1,3 +1,13 @@
+---
+error_area: "Documentos Fiscais"
+error_category: "NF-e"
+error_tags:
+  - "xml"
+  - "nfe"
+  - "entrada"
+  - "fornecedor"
+---
+
 # Como importar XML
 
 ## Pré-requisitos
@@ -7,13 +17,16 @@
 - [Como cadastrar um material](cadastrar-material.md){: target="_blank" rel="noopener" }, quando algum item ainda não existir.
 - Acesso à tela [Manual > Faturamento > Entrada de Nota Fiscal](../faturamento/entrada-nota-fiscal.md){: target="_blank" rel="noopener" } ou [Manual > Faturamento > Radar de Nota Fiscal](../faturamento/radar-nota-fiscal.md){: target="_blank" rel="noopener" }.
 
+## Avisos
+
 --8<-- "shared/avisos/validacao-fiscal.md"
+
+## Permissões
 
 --8<-- "shared/avisos/permissoes.md"
 
-## Onde encontrar
-
-Caminho: `Faturamento > Entrada de Nota Fiscal ou Radar de Nota Fiscal`.
+## Caminho
+`Faturamento > Entrada de Nota Fiscal ou Radar de Nota Fiscal`.
 
 ## Como fazer
 
@@ -23,14 +36,6 @@ Caminho: `Faturamento > Entrada de Nota Fiscal ou Radar de Nota Fiscal`.
 4. Confira fornecedor, itens, valores e impostos.
 5. Vincule itens ao cadastro de materiais quando necessário.
 6. Salve ou gere a entrada conforme a rotina.
-
-## Erros comuns
-
-Caso encontre algum dos erros abaixo, clique para visualizar a causa e como resolver.
-
-- Fornecedor não encontrado — **Pendente**
-- Item não vinculado — **Pendente**
-- XML inválido — **Pendente**
 
 ## Quando utilizar
 

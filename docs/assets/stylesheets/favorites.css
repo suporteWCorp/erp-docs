@@ -1,0 +1,261 @@
+/* Favoritos compartilhados entre cards, páginas, header e menu lateral. */
+.wc-favorite-toggle {
+    align-items: center;
+    background: transparent;
+    border: 0;
+    border-radius: 50%;
+    color: #718096;
+    cursor: pointer;
+    display: inline-flex;
+    height: 1.8rem;
+    justify-content: center;
+    padding: 0;
+    transition: background-color 120ms ease, color 120ms ease;
+    width: 1.8rem;
+}
+
+.wc-favorite-toggle:hover,
+.wc-favorite-toggle:focus-visible {
+    background: rgba(2, 128, 144, 0.09);
+    color: #007c75;
+    outline: none;
+}
+
+.wc-favorite-toggle.is-favorite {
+    color: #c58a00;
+}
+
+.wc-favorite-toggle svg {
+    fill: none;
+    height: 1rem;
+    stroke: currentColor;
+    stroke-linejoin: round;
+    stroke-width: 1.8;
+    width: 1rem;
+}
+
+.wc-favorite-toggle.is-favorite svg {
+    fill: currentColor;
+}
+
+.wc-card,
+.wc-link-item {
+    position: relative;
+}
+
+.wc-card > .wc-favorite-toggle,
+.wc-link-item > .wc-favorite-toggle {
+    background: rgba(255, 255, 255, 0.72);
+    position: absolute;
+    right: 0.55rem;
+    top: 0.55rem;
+    z-index: 2;
+}
+
+.wc-card > h3 {
+    padding-right: 1.7rem;
+}
+
+.wc-link-item > h3 {
+    padding-right: 1.7rem;
+}
+
+.wc-category-count {
+    background: rgba(2, 128, 144, 0.1);
+    border-radius: 999px;
+    color: #557579;
+    display: inline-block;
+    font-size: 0.58rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-left: 0.42rem;
+    min-width: 1.25rem;
+    padding: 0.12rem 0.32rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.wc-page-favorite {
+    float: right;
+    margin-top: -2.75rem;
+}
+
+.wc-header-actions {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 0.35rem;
+    margin-left: 0;
+    order: 5;
+    position: relative;
+    z-index: 5;
+}
+
+.wc-header-action {
+    align-items: center;
+    background: rgba(0, 82, 78, 0.28);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 0.66rem;
+    font-weight: 700;
+    gap: 0.3rem;
+    height: 2rem;
+    padding: 0 0.58rem;
+    white-space: nowrap;
+}
+
+.wc-header-action:hover,
+.wc-header-action:focus-visible {
+    background: rgba(0, 82, 78, 0.42);
+    outline: 2px solid rgba(255, 255, 255, 0.45);
+    outline-offset: 1px;
+}
+
+.wc-header-action svg {
+    fill: none;
+    height: 0.82rem;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    width: 0.82rem;
+}
+
+.wc-header-version {
+    cursor: help;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.wc-favorites-panel {
+    background: var(--md-default-bg-color);
+    border: 1px solid rgba(2, 128, 144, 0.25);
+    border-radius: 7px;
+    box-shadow: 0 12px 28px rgba(0, 48, 52, 0.2);
+    color: var(--md-default-fg-color);
+    max-height: min(70vh, 31rem);
+    overflow: auto;
+    padding: 0.7rem;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 0.45rem);
+    width: min(21rem, calc(100vw - 1rem));
+}
+
+.wc-favorites-panel[hidden] {
+    display: none;
+}
+
+.wc-favorites-panel__heading {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.wc-favorites-panel__heading strong {
+    color: #005f66;
+    font-size: 0.78rem;
+}
+
+.wc-favorites-panel__all {
+    font-size: 0.64rem;
+    font-weight: 700;
+}
+
+.wc-favorites-group + .wc-favorites-group {
+    border-top: 1px solid rgba(2, 128, 144, 0.14);
+    margin-top: 0.55rem;
+    padding-top: 0.55rem;
+}
+
+.wc-favorites-group h2,
+.wc-favorites-group h3 {
+    color: #69757a !important;
+    font-size: 0.6rem;
+    letter-spacing: 0.04em;
+    margin: 0 0 0.3rem;
+    text-transform: uppercase;
+}
+
+.wc-favorites-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.wc-favorites-list li {
+    align-items: center;
+    display: flex;
+    gap: 0.35rem;
+    margin: 0;
+}
+
+.wc-favorites-list a {
+    flex: 1;
+    font-size: 0.68rem;
+    line-height: 1.35;
+    padding: 0.28rem 0;
+}
+
+.wc-favorites-list .wc-favorite-toggle {
+    flex: 0 0 1.65rem;
+    height: 1.65rem;
+    width: 1.65rem;
+}
+
+.wc-favorites-empty {
+    color: var(--md-default-fg-color--light);
+    font-size: 0.7rem;
+    margin: 0.35rem 0;
+}
+
+.wc-favorites-page {
+    margin-top: 1.1rem;
+}
+
+.wc-favorites-page .wc-favorites-group {
+    border-top: 1px solid rgba(2, 128, 144, 0.16);
+    margin-top: 0.9rem;
+    padding-top: 0.8rem;
+}
+
+.wc-favorites-page .wc-favorites-group h2 {
+    font-size: 0.72rem;
+}
+
+.wc-error-card {
+    position: relative;
+}
+
+.wc-error-card > .wc-favorite-toggle {
+    position: absolute;
+    right: 2.35rem;
+    top: 0.65rem;
+    z-index: 2;
+}
+
+@media screen and (max-width: 76.2344em) {
+    .wc-header-actions {
+        margin-left: 0;
+    }
+
+    .wc-header-version {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 44em) {
+    .md-header .md-header__option {
+        display: none;
+    }
+
+    .wc-header-action__label {
+        display: none;
+    }
+
+    .wc-header-action {
+        padding: 0 0.48rem;
+    }
+}

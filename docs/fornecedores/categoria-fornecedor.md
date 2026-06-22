@@ -4,13 +4,13 @@
 
 Cadastrar ou consultar categorias usadas para classificar fornecedores.
 
+## Print da tela com caminho
+
+Fornecedores > Categoria de Fornecedor
+
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Categoria de Fornecedor**.
-
-## Caminho no WCorp
-
-Fornecedores > Categoria de Fornecedor
 
 ## Passo a passo
 
@@ -20,13 +20,13 @@ Fornecedores > Categoria de Fornecedor
 4. Confira as informações antes de salvar ou confirmar.
 5. Finalize conforme a ação disponível na tela.
 
-## Campos principais
+### Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |
 | A definir | A definir | A definir |
 
-## Dúvidas Frequentes
+## Dúvidas frequentes
 
 | Dúvida | Orientação |
 | --- | --- |

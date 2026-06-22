@@ -4,13 +4,13 @@
 
 Controlar materiais e serviços previstos em contratos.
 
+## Print da tela com caminho
+
+$Tab > Materiais e Serviços Previstos
+
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Materiais e Serviços Previstos**.
-
-## Caminho no WCorp
-
-$Tab > Materiais e Serviços Previstos
 
 ## Passo a passo
 
@@ -20,13 +20,13 @@ $Tab > Materiais e Serviços Previstos
 4. Confira as informações antes de salvar, confirmar ou finalizar.
 5. Finalize conforme a ação disponível na tela.
 
-## Campos principais
+### Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |
 | A definir | A definir | A definir |
 
-## Dúvidas Frequentes
+## Dúvidas frequentes
 
 | Dúvida | Orientação |
 | --- | --- |

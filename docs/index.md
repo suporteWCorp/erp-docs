@@ -40,7 +40,7 @@ Use o manual por abas do WCorp, seguindo a mesma organização visual do sistema
 
 Consulte erros conhecidos, termos do WCorp, links úteis e atualizações fiscais.
 
-[Abrir Referências](referencia/index.md){ .md-button .md-button--primary }
+[Consultar Referências](referencia/index.md){ .md-button .md-button--primary }
 
 </div>
 
@@ -50,7 +50,7 @@ Consulte erros conhecidos, termos do WCorp, links úteis e atualizações fiscai
 
 Encontre orientações para resolver dúvidas e preparar as informações necessárias para o atendimento.
 
-[Abrir Suporte](suporte/index.md){ .md-button .md-button--primary }
+[Solicitar Suporte](suporte/index.md){ .md-button .md-button--primary }
 
 </div>
 

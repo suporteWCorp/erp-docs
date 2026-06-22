@@ -1,3 +1,12 @@
+---
+error_area: "Compras"
+error_category: "Pedidos de compra"
+error_tags:
+  - "pedido de compra"
+  - "compra"
+  - "fornecedor"
+---
+
 # Como criar um pedido de compra
 
 ## Pré-requisitos
@@ -7,11 +16,12 @@
 - Condição comercial negociada.
 - Acesso à tela [Manual > Compras > Pedido de Compra](../compras/pedido-compra.md){: target="_blank" rel="noopener" }.
 
+## Permissões
+
 --8<-- "shared/avisos/permissoes.md"
 
-## Onde encontrar
-
-Caminho: `Compras > Pedido de Compra`.
+## Caminho
+`Compras > Pedido de Compra`.
 
 ## Como fazer
 
@@ -22,14 +32,6 @@ Caminho: `Compras > Pedido de Compra`.
 5. Informe prazos, frete e observações, quando aplicável.
 6. Revise o pedido.
 7. Salve ou envie para aprovação, conforme o fluxo.
-
-## Erros comuns
-
-Caso encontre algum dos erros abaixo, clique para visualizar a causa e como resolver.
-
-- Fornecedor não encontrado — **Pendente**
-- Material não encontrado — **Pendente**
-- Pedido bloqueado para aprovação — **Pendente**
 
 ## Quando utilizar
 

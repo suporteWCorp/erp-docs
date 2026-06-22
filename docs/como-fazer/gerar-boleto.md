@@ -1,3 +1,12 @@
+---
+error_area: "Financeiro"
+error_category: "Boletos"
+error_tags:
+  - "boleto"
+  - "cobranca"
+  - "titulo"
+---
+
 # Como gerar boleto
 
 ## Pré-requisitos
@@ -7,13 +16,16 @@
 - Conta bancária e carteira configuradas.
 - Acesso à tela [Manual > Financeiro > Boleto](../financeiro/boleto.md){: target="_blank" rel="noopener" }.
 
+## Avisos
+
 --8<-- "shared/avisos/configuracao-bancaria.md"
+
+## Permissões
 
 --8<-- "shared/avisos/permissoes.md"
 
-## Onde encontrar
-
-Caminho: `Financeiro > Boleto`.
+## Caminho
+`Financeiro > Boleto`.
 
 ## Como fazer
 
@@ -23,14 +35,6 @@ Caminho: `Financeiro > Boleto`.
 4. Gere o boleto.
 5. Valide a impressão ou arquivo gerado.
 6. Envie ao cliente conforme o processo da empresa.
-
-## Erros comuns
-
-Caso encontre algum dos erros abaixo, clique para visualizar a causa e como resolver.
-
-- Título não encontrado — **Pendente**
-- Conta bancária sem configuração — **Pendente**
-- Valor ou vencimento incorreto — **Pendente**
 
 ## Quando utilizar
 

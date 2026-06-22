@@ -4,13 +4,13 @@
 
 Ajustar quantidades de inventário conforme conferência física ou necessidade operacional.
 
+## Print da tela com caminho
+
+Materiais > Ajustar Inventário
+
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Ajustar Inventário**.
-
-## Caminho no WCorp
-
-Materiais > Ajustar Inventário
 
 ## Passo a passo
 
@@ -20,13 +20,13 @@ Materiais > Ajustar Inventário
 4. Confira material, quantidade, unidade, lote ou local de armazenagem, quando aplicável.
 5. Salve, confirme ou finalize conforme a ação disponível na tela.
 
-## Campos principais
+### Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |
 | A definir | A definir | A definir |
 
-## Dúvidas Frequentes
+## Dúvidas frequentes
 
 | Dúvida | Orientação |
 | --- | --- |

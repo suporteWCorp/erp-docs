@@ -11,9 +11,13 @@ Use este modelo para manter as páginas consistentes e fáceis de revisar.
 - Cadastros que precisam existir.
 - Configurações envolvidas.
 
-## Onde encontrar
+## Caminho
 
-Caminho: `Módulo > Rotina`.
+`Módulo > Funcionalidade`.
+
+## Print do caminho
+
+Inclua somente quando houver um print real.
 
 ## Como fazer
 
@@ -24,13 +28,6 @@ Caminho: `Módulo > Rotina`.
 ## Demonstração em vídeo
 
 Inclua somente quando houver um vídeo correspondente.
-
-## Erros comuns
-
-Caso encontre algum dos erros abaixo, clique para visualizar a causa e como resolver.
-
-- [Mensagem do erro](../caminho/para-pagina-do-erro.md)
-- Mensagem sem página específica — **Pendente**
 
 ## Quando utilizar
 

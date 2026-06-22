@@ -47,3 +47,37 @@ Motivo: manter a documentação limpa e profissional.
 Decisão: antes de publicar, executar `mkdocs build --strict` em ambiente com MkDocs ou Docker funcional.
 
 Motivo: validações estáticas ajudam, mas não substituem o build real do MkDocs.
+
+## Base de erros orientada a dados
+
+Decisão: a fonte oficial de Erros comuns fica em `docs/assets/data/erros-comuns.json` e é renderizada na rota existente `referencia/erros-comuns/`.
+
+Motivo: separar conteúdo da apresentação permite incluir erros, categorias, links e tags sem editar HTML ou JavaScript.
+
+Decisão complementar: cada artigo possui `area` e `category`. A navegação, os agrupamentos e os contadores são derivados desses campos; `taxonomy` define apenas a ordem editorial e categorias planejadas.
+
+Motivo: permitir que a base cresça sem manter menus ou contadores manualmente.
+
+## Caixas semânticas
+
+Decisão: avisos usam os tipos `prerequisite`, `requirement`, `fiscal`, `caution`, `information` e `success`.
+
+Motivo: o significado define a cor. Guias diferentes não devem escolher cores distintas para o mesmo tipo de orientação.
+
+## Estrutura dos Guias
+
+Decisão: o template oficial fica em `docs/shared/modelos/guia-processo.md`. Caminho e print são seções próprias; avisos, vídeos e alternativas são opcionais. Todo vídeo usa o título `Demonstração em vídeo`.
+
+Motivo: uma estrutura rígida com seções vazias prejudica Guias simples. O padrão deve ser consistente sem obrigar conteúdo que não existe.
+
+## Favoritos
+
+Decisão: favoritos são armazenados em `localStorage`, classificados automaticamente pela rota e apresentados no header, na lateral e em `favoritos/`.
+
+Motivo: a Central é estática e não possui autenticação ou serviço de dados. A persistência local mantém a funcionalidade simples e não altera as rotas existentes.
+
+## Estrutura dos Manuais
+
+Decisão: páginas de tela seguem o modelo `docs/shared/modelos/manual-tela.md`. Visões gerais de módulo são exceções. O script `tools/normalize-manuals.ps1` apenas reorganiza conteúdo existente e não preenche páginas vazias.
+
+Motivo: Manual descreve tela e funcionalidade; informações ausentes precisam ser validadas no WCorp, não inferidas.

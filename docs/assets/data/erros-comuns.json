@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 2,
+  "taxonomy": {
+    "areaOrder": [
+      "Documentos Fiscais",
+      "Cadastros",
+      "Comercial",
+      "Compras",
+      "Estoque",
+      "Produção",
+      "Financeiro",
+      "Administração",
+      "Infraestrutura",
+      "Integrações"
+    ],
+    "categoryOrder": {
+      "Documentos Fiscais": ["NF-e", "NFC-e", "NFS-e", "CT-e", "MDF-e"]
+    }
+  },
+  "errors": [
+    {
+      "id": "rejeicao-656-consumo-indevido",
+      "title": "Rejeição 656 - Consumo indevido",
+      "area": "Documentos Fiscais",
+      "category": "NF-e",
+      "description": "A SEFAZ identificou muitas tentativas de envio em um curto período.",
+      "cause": "Envios ou consultas repetidos podem provocar um bloqueio temporário do serviço para o emitente.",
+      "resolution": "Interrompa as tentativas, aguarde aproximadamente uma hora e tente novamente após esse período.",
+      "observations": "Evite repetir o envio enquanto o bloqueio estiver ativo.",
+      "links": [
+        {
+          "label": "Como emitir uma NF-e",
+          "url": "como-fazer/faturar-nota/"
+        }
+      ],
+      "tags": ["sefaz", "rejeição", "656", "consumo indevido", "transmissão"]
+    },
+    {
+      "id": "cliente-bloqueado",
+      "title": "Cliente bloqueado",
+      "area": "Comercial",
+      "category": "Clientes",
+      "description": "O cliente não pode ser utilizado no pedido ou faturamento.",
+      "cause": "O cadastro possui uma restrição comercial ou financeira ativa.",
+      "resolution": "Consulte o cadastro do cliente, identifique o motivo do bloqueio e solicite a liberação ao responsável autorizado.",
+      "observations": "Não remova restrições sem confirmar a política comercial da empresa.",
+      "links": [
+        {
+          "label": "Como cadastrar um cliente",
+          "url": "como-fazer/cadastrar-cliente/"
+        },
+        {
+          "label": "Manual de Clientes",
+          "url": "comercial/comercial-clientes/"
+        }
+      ],
+      "tags": ["cliente", "bloqueio", "pedido", "faturamento", "cadastro"]
+    },
+    {
+      "id": "produto-sem-saldo",
+      "title": "Produto sem saldo",
+      "area": "Estoque",
+      "category": "Saldo de estoque",
+      "description": "O material não possui quantidade disponível para concluir a movimentação.",
+      "cause": "A quantidade, o lote ou o almoxarifado selecionado não possui saldo suficiente.",
+      "resolution": "Confira o estoque do material, o almoxarifado e o lote antes de repetir a operação.",
+      "observations": "Um ajuste de estoque deve ser realizado somente após confirmar a divergência.",
+      "links": [
+        {
+          "label": "Como consultar estoque",
+          "url": "como-fazer/consultar-estoque/"
+        },
+        {
+          "label": "Como ajustar estoque",
+          "url": "como-fazer/ajustar-estoque/"
+        }
+      ],
+      "tags": ["produto", "material", "saldo", "lote", "almoxarifado", "estoque"]
+    },
+    {
+      "id": "usuario-sem-acesso",
+      "title": "Usuário sem acesso à funcionalidade",
+      "area": "Administração",
+      "category": "Usuários e permissões",
+      "description": "A tela, o botão ou a ação esperada não aparece para o usuário.",
+      "cause": "O grupo do usuário não possui a permissão necessária ou o registro está em um estado que impede a ação.",
+      "resolution": "Compare o perfil com um usuário autorizado e revise as permissões do grupo de usuários.",
+      "observations": "A liberação deve ser solicitada ao responsável autorizado pelo sistema.",
+      "links": [
+        {
+          "label": "Como configurar um Grupo de Usuário",
+          "url": "como-fazer/configurar-grupo-usuario/"
+        },
+        {
+          "label": "Manual de Grupos de Usuários",
+          "url": "administracao/grupo-usuarios/"
+        }
+      ],
+      "tags": ["usuário", "permissão", "acesso", "grupo", "botão"]
+    },
+    {
+      "id": "campo-obrigatorio",
+      "title": "Campo obrigatório não preenchido",
+      "area": "Cadastros",
+      "category": "Cadastros gerais",
+      "description": "O WCorp impede a gravação porque uma informação obrigatória está ausente.",
+      "cause": "Um campo necessário para validar o cadastro ou a operação não foi informado.",
+      "resolution": "Revise os campos destacados, preencha as informações obrigatórias e tente salvar novamente.",
+      "observations": "Se nenhum campo estiver destacado, registre a tela e a mensagem completa para o Suporte.",
+      "links": [],
+      "tags": ["campo", "obrigatório", "cadastro", "salvar", "validação"]
+    },
+    {
+      "id": "condicao-pagamento-nao-permitida",
+      "title": "Condição de pagamento não permitida",
+      "area": "Financeiro",
+      "category": "Condições de pagamento",
+      "description": "A condição selecionada não pode ser utilizada na operação atual.",
+      "cause": "A condição pode estar bloqueada, inativa ou incompatível com a regra comercial aplicada.",
+      "resolution": "Revise o cadastro da condição de pagamento e confirme qual condição deve ser utilizada.",
+      "observations": "Valide alterações com o responsável financeiro ou comercial da empresa.",
+      "links": [
+        {
+          "label": "Como cadastrar uma Condição de Pagamento",
+          "url": "como-fazer/cadastrar-condicao-pagamento/"
+        }
+      ],
+      "tags": ["condição de pagamento", "financeiro", "pedido", "bloqueio"]
+    },
+    {
+      "id": "certificado-invalido",
+      "title": "Certificado digital inválido",
+      "area": "Infraestrutura",
+      "category": "Certificado digital",
+      "description": "A transmissão fiscal não pode continuar por causa do certificado digital.",
+      "cause": "O certificado pode estar vencido, indisponível ou configurado incorretamente.",
+      "resolution": "Confirme a validade, a instalação e a configuração do certificado utilizado pela empresa.",
+      "observations": "Não envie arquivos ou senhas do certificado em canais não autorizados.",
+      "links": [
+        {
+          "label": "Como emitir uma NF-e",
+          "url": "como-fazer/faturar-nota/"
+        }
+      ],
+      "tags": ["certificado", "digital", "fiscal", "transmissão", "validade"]
+    },
+    {
+      "id": "rejeicao-sefaz",
+      "title": "Rejeição da SEFAZ",
+      "area": "Documentos Fiscais",
+      "category": "NF-e",
+      "description": "A SEFAZ recusou a autorização da nota e retornou uma mensagem de rejeição.",
+      "cause": "Dados fiscais, cadastrais ou tributários da nota não passaram pela validação da SEFAZ.",
+      "resolution": "Leia o retorno completo, identifique a origem da informação e corrija o cadastro ou documento antes de transmitir novamente.",
+      "observations": "Registre o código e a mensagem completos. A correção depende da rejeição recebida.",
+      "links": [
+        {
+          "label": "Como emitir uma NF-e",
+          "url": "como-fazer/faturar-nota/"
+        },
+        {
+          "label": "Manual de Nota Fiscal",
+          "url": "faturamento/faturamento-nf/"
+        }
+      ],
+      "tags": ["sefaz", "rejeição", "nota fiscal", "nfe", "fiscal"]
+    }
+  ]
+}

@@ -1,3 +1,12 @@
+---
+error_area: "Administração"
+error_category: "Natureza de operação"
+error_tags:
+  - "natureza de operacao"
+  - "regra fiscal"
+  - "fiscal"
+---
+
 # Como cadastrar uma Natureza de Operação
 
 ## Pré-requisitos
@@ -6,15 +15,16 @@
 - Critérios fiscais da operação validados com o responsável fiscal da empresa.
 - Categorias de Material, NCMs, Materiais e demais cadastros que serão utilizados como critérios já disponíveis no sistema.
 
+## Avisos
+
 --8<-- "shared/avisos/validacao-fiscal.md"
 
-### Permissões
+## Permissões
 
 --8<-- "shared/avisos/permissoes.md"
 
-## Onde encontrar
-
-Caminho: `Administração > Natureza de Operação`.
+## Caminho
+`Administração > Natureza de Operação`.
 
 ## Como fazer
 
@@ -43,17 +53,10 @@ Caminho: `Administração > Natureza de Operação`.
 Durante o faturamento, o WCorp compara os dados da operação com os critérios das Regras vinculadas à Natureza selecionada e utiliza a Regra Fiscal compatível para realizar o cálculo da nota.
 
 ## Demonstração em vídeo
-
 <video class="wc-video" controls preload="auto" playsinline>
   <source src="../../assets/videos/adm_natureza_operacao.mp4" type="video/mp4">
   Seu navegador não conseguiu reproduzir este vídeo.
 </video>
-
-## Erros comuns
-
-Caso encontre algum dos erros abaixo, clique para visualizar a causa e como resolver.
-
-- Não é possível finalizar o cálculo automático — **Pendente**
 
 ## Quando utilizar
 

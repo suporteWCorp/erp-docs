@@ -4,13 +4,13 @@
 
 Registrar, consultar ou controlar operações financeiras relacionadas a cheques.
 
+## Print da tela com caminho
+
+Financeiro > Cheque
+
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Cheque**.
-
-## Caminho no WCorp
-
-Financeiro > Cheque
 
 ## Passo a passo
 
@@ -20,13 +20,13 @@ Financeiro > Cheque
 4. Confira empresa, conta, valor, vencimento e status, quando aplicável.
 5. Salve, confirme ou finalize conforme a ação desejada na tela.
 
-## Campos principais
+### Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |
 | A definir | A definir | A definir |
 
-## Dúvidas Frequentes
+## Dúvidas frequentes
 
 | Dúvida | Orientação |
 | --- | --- |

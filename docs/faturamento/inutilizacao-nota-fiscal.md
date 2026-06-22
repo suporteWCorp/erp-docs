@@ -4,13 +4,13 @@
 
 Inutilizar numeração de nota fiscal quando houver quebra de sequência ou numeração que não será utilizada.
 
+## Print da tela com caminho
+
+Faturamento > Inutilização Nota Fiscal
+
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Inutilização Nota Fiscal**.
-
-## Caminho no WCorp
-
-Faturamento > Inutilização Nota Fiscal
 
 ## Passo a passo
 
@@ -20,13 +20,13 @@ Faturamento > Inutilização Nota Fiscal
 4. Confira as informações antes de salvar, transmitir ou confirmar.
 5. Finalize a rotina conforme a ação disponível na tela.
 
-## Campos principais
+### Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |
 | A definir | A definir | A definir |
 
-## Dúvidas Frequentes
+## Dúvidas frequentes
 
 | Dúvida | Orientação |
 | --- | --- |

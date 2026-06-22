@@ -1,14 +1,10 @@
 # Natureza de Operação
 
+## Objetivo
+
 A tela **Natureza de Operação** é utilizada para cadastrar as operações disponíveis no WCorp e vincular a elas as Regras Fiscais usadas durante o faturamento.
 
 A Natureza de Operação não funciona apenas como uma descrição da movimentação. Ao selecioná-la em uma nota fiscal, o sistema consulta suas Regras Fiscais para identificar qual configuração é compatível com os dados da operação e deve ser utilizada no cálculo.
-
-## Caminho no WCorp
-
-`Administração > Natureza de Operação`
-
-## Finalidade da tela
 
 Nesta tela é possível:
 
@@ -18,13 +14,19 @@ Nesta tela é possível:
 - organizar as Regras conforme o tipo de operação;
 - revisar os critérios utilizados pelo WCorp durante o cálculo da nota fiscal.
 
-## Adicionar Regra
+## Print da tela com caminho
+
+`Administração > Natureza de Operação`
+
+## Passo a passo
+
+### Adicionar Regra
 
 Após criar e salvar uma Natureza de Operação, o botão **Adicionar Regra** permite cadastrar uma Regra Fiscal vinculada a ela.
 
 Uma mesma Natureza pode possuir várias Regras. Isso permite que o WCorp escolha configurações diferentes conforme os dados do cliente, do item e da operação realizada.
 
-## Abas de Regras
+### Abas de Regras
 
 As Regras Fiscais são organizadas nas seguintes abas:
 
@@ -35,7 +37,7 @@ As Regras Fiscais são organizadas nas seguintes abas:
 
 As abas separam os contextos de utilização das Regras. A definição da aba e o preenchimento dos campos devem seguir a orientação do responsável fiscal da empresa.
 
-## Critérios de aplicação
+### Critérios de aplicação
 
 Uma Regra Fiscal pode ser configurada para ser aplicada por:
 
@@ -47,7 +49,7 @@ Os campos **Grupo de Cliente** e **Indicador de Inscrição Estadual** são opci
 
 Quando um campo numérico não possuir valor, ele deve permanecer preenchido com `0`, quando aplicável.
 
-## Relação com o faturamento
+### Relação com o faturamento
 
 Durante o cálculo da nota fiscal, o WCorp utiliza a Natureza de Operação selecionada para localizar suas Regras Fiscais. Em seguida, compara os critérios de cada Regra com os dados da operação, como cliente, Estado e item faturado.
 

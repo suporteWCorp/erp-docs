@@ -4,13 +4,13 @@
 
 Gerar, consultar ou acompanhar boletos vinculados a contas a receber.
 
+## Print da tela com caminho
+
+Financeiro > Boleto
+
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Boleto**.
-
-## Caminho no WCorp
-
-Financeiro > Boleto
 
 ## Passo a passo
 
@@ -20,13 +20,13 @@ Financeiro > Boleto
 4. Confira empresa, conta, valor, vencimento e status, quando aplicável.
 5. Salve, confirme ou finalize conforme a ação desejada na tela.
 
-## Campos principais
+### Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |
 | A definir | A definir | A definir |
 
-## Dúvidas Frequentes
+## Dúvidas frequentes
 
 | Dúvida | Orientação |
 | --- | --- |

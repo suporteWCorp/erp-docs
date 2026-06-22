@@ -4,13 +4,13 @@
 
 Consultar ou manter informações de veículos quando vinculadas a processos financeiros.
 
+## Print da tela com caminho
+
+Financeiro > Veículos
+
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Veículos**.
-
-## Caminho no WCorp
-
-Financeiro > Veículos
 
 ## Passo a passo
 
@@ -20,13 +20,13 @@ Financeiro > Veículos
 4. Confira empresa, conta, valor, vencimento e status, quando aplicável.
 5. Salve, confirme ou finalize conforme a ação desejada na tela.
 
-## Campos principais
+### Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |
 | A definir | A definir | A definir |
 
-## Dúvidas Frequentes
+## Dúvidas frequentes
 
 | Dúvida | Orientação |
 | --- | --- |

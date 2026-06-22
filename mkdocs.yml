@@ -5,6 +5,7 @@ site_url: https://suportewcorp.github.io/erp-docs/
 
 theme:
   name: material
+  custom_dir: overrides
   language: pt-BR
   logo: assets/wcorp-logo.png
   favicon: assets/wcorp-logo.png
@@ -58,11 +59,11 @@ nav:
           - Como lançar contas a pagar: como-fazer/lancar-contas-a-pagar.md
   - Referências:
       - Visão geral: referencia/index.md
-      - FAQ: referencia/faq.md
-      - Glossário: referencia/glossario.md
       - Erros comuns: referencia/erros-comuns.md
+      - FAQ: referencia/faq.md
       - Links úteis: referencia/links-uteis.md
-      - Atualizações fiscais: referencia/atualizacoes-fiscais.md
+      - Glossário: referencia/glossario.md
+  - Favoritos: favoritos.md
   - Manual:
       - Visão geral: manual/index.md
       - Comercial:
@@ -231,9 +232,20 @@ markdown_extensions:
 
 extra_css:
   - extra.css
+  - assets/stylesheets/cards.css
+  - assets/stylesheets/header.css
+  - assets/stylesheets/knowledge-base.css
+  - assets/stylesheets/alerts.css
+  - assets/stylesheets/context-help.css
+  - assets/stylesheets/favorites.css
 
 extra_javascript:
+  - assets/javascripts/wcorp-header.js
   - assets/javascripts/wcorp-nav.js
+  - assets/javascripts/wcorp-video.js
+  - assets/javascripts/wcorp-errors.js
+  - assets/javascripts/wcorp-context-help.js
+  - assets/javascripts/wcorp-favorites.js
 
 plugins:
   - search:

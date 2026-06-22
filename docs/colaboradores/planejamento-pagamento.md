@@ -4,13 +4,13 @@
 
 Planejar pagamentos de colaboradores antes da efetivação.
 
+## Print da tela com caminho
+
+Colaboradores > Planejamento de Pagamento
+
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Planejamento de Pagamento**.
-
-## Caminho no WCorp
-
-Colaboradores > Planejamento de Pagamento
 
 ## Passo a passo
 
@@ -20,13 +20,13 @@ Colaboradores > Planejamento de Pagamento
 4. Confira as informações antes de salvar ou confirmar.
 5. Finalize conforme a ação disponível na tela.
 
-## Campos principais
+### Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |
 | A definir | A definir | A definir |
 
-## Dúvidas Frequentes
+## Dúvidas frequentes
 
 | Dúvida | Orientação |
 | --- | --- |

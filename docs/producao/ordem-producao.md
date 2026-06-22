@@ -4,13 +4,13 @@
 
 Criar, consultar ou acompanhar ordens de produção.
 
+## Print da tela com caminho
+
+$Tab > Ordem de Produção
+
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Ordem de Produção**.
-
-## Caminho no WCorp
-
-$Tab > Ordem de Produção
 
 ## Passo a passo
 
@@ -20,13 +20,13 @@ $Tab > Ordem de Produção
 4. Confira as informações antes de salvar, confirmar ou finalizar.
 5. Finalize conforme a ação disponível na tela.
 
-## Campos principais
+### Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |
 | A definir | A definir | A definir |
 
-## Dúvidas Frequentes
+## Dúvidas frequentes
 
 | Dúvida | Orientação |
 | --- | --- |

@@ -4,13 +4,13 @@
 
 Registrar ou acompanhar pagamentos de funcionários.
 
+## Print da tela com caminho
+
+Colaboradores > Pagamento de Funcionário
+
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Pagamento de Funcionário**.
-
-## Caminho no WCorp
-
-Colaboradores > Pagamento de Funcionário
 
 ## Passo a passo
 
@@ -20,13 +20,13 @@ Colaboradores > Pagamento de Funcionário
 4. Confira as informações antes de salvar ou confirmar.
 5. Finalize conforme a ação disponível na tela.
 
-## Campos principais
+### Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |
 | A definir | A definir | A definir |
 
-## Dúvidas Frequentes
+## Dúvidas frequentes
 
 | Dúvida | Orientação |
 | --- | --- |

@@ -4,13 +4,13 @@
 
 Executar rotinas auxiliares relacionadas a materiais e estoque.
 
+## Print da tela com caminho
+
+Materiais > Ferramentas
+
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Ferramentas**.
-
-## Caminho no WCorp
-
-Materiais > Ferramentas
 
 ## Passo a passo
 
@@ -20,13 +20,13 @@ Materiais > Ferramentas
 4. Confira material, quantidade, unidade, lote ou local de armazenagem, quando aplicável.
 5. Salve, confirme ou finalize conforme a ação disponível na tela.
 
-## Campos principais
+### Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |
 | A definir | A definir | A definir |
 
-## Dúvidas Frequentes
+## Dúvidas frequentes
 
 | Dúvida | Orientação |
 | --- | --- |

@@ -1,3 +1,13 @@
+---
+error_area: "Financeiro"
+error_category: "Baixa de títulos"
+error_tags:
+  - "titulo"
+  - "baixa"
+  - "pagamento"
+  - "recebimento"
+---
+
 # Como baixar um título
 
 ## Pré-requisitos
@@ -7,11 +17,12 @@
 - Valor pago ou recebido conferido.
 - Acesso à tela [Manual > Financeiro > Contas a Receber](../financeiro/contas-a-receber.md){: target="_blank" rel="noopener" } ou [Manual > Financeiro > Contas a Pagar](../financeiro/contas-a-pagar.md){: target="_blank" rel="noopener" }.
 
+## Permissões
+
 --8<-- "shared/avisos/permissoes.md"
 
-## Onde encontrar
-
-Caminho: `Financeiro > Contas a Receber / Contas a Pagar`.
+## Caminho
+`Financeiro > Contas a Receber / Contas a Pagar`.
 
 ## Como fazer
 
@@ -22,14 +33,6 @@ Caminho: `Financeiro > Contas a Receber / Contas a Pagar`.
 5. Informe conta, data, valor e forma de pagamento.
 6. Revise juros, descontos ou acréscimos.
 7. Confirme a baixa.
-
-## Erros comuns
-
-Caso encontre algum dos erros abaixo, clique para visualizar a causa e como resolver.
-
-- Título já baixado — **Pendente**
-- Valor divergente — **Pendente**
-- Conta incorreta — **Pendente**
 
 ## Quando utilizar
 

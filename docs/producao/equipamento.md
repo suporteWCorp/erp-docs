@@ -4,13 +4,13 @@
 
 Cadastrar ou consultar equipamentos usados na produção.
 
+## Print da tela com caminho
+
+$Tab > Equipamento
+
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Equipamento**.
-
-## Caminho no WCorp
-
-$Tab > Equipamento
 
 ## Passo a passo
 
@@ -20,13 +20,13 @@ $Tab > Equipamento
 4. Confira as informações antes de salvar, confirmar ou finalizar.
 5. Finalize conforme a ação disponível na tela.
 
-## Campos principais
+### Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |
 | A definir | A definir | A definir |
 
-## Dúvidas Frequentes
+## Dúvidas frequentes
 
 | Dúvida | Orientação |
 | --- | --- |

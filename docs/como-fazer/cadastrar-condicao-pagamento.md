@@ -1,12 +1,19 @@
+---
+error_area: "Financeiro"
+error_category: "Condições de pagamento"
+error_tags:
+  - "condicao de pagamento"
+  - "cadastro"
+---
+
 # Como cadastrar uma Condição de Pagamento
 
-## Pré-requisitos
+## Permissões
 
 --8<-- "shared/avisos/permissoes.md"
 
-## Onde encontrar
-
-Caminho: `Administração > Condições de Pagamento`.
+## Caminho
+`Administração > Condições de Pagamento`.
 
 ## Como fazer
 
@@ -18,7 +25,6 @@ Caminho: `Administração > Condições de Pagamento`.
 6. Faça uma validação controlada antes de disponibilizá-la para uso.
 
 ## Demonstração em vídeo
-
 <video class="wc-video" controls preload="auto" playsinline>
   <source src="../../assets/videos/adm_condicao_pagamento.mp4" type="video/mp4">
   Seu navegador não conseguiu reproduzir este vídeo.

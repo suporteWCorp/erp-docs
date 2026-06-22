@@ -4,13 +4,13 @@
 
 Executar manutenções ou ajustes em contratos existentes.
 
+## Print da tela com caminho
+
+$Tab > Manutenção de Contratos
+
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Manutenção de Contratos**.
-
-## Caminho no WCorp
-
-$Tab > Manutenção de Contratos
 
 ## Passo a passo
 
@@ -20,13 +20,13 @@ $Tab > Manutenção de Contratos
 4. Confira as informações antes de salvar, confirmar ou finalizar.
 5. Finalize conforme a ação disponível na tela.
 
-## Campos principais
+### Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |
 | A definir | A definir | A definir |
 
-## Dúvidas Frequentes
+## Dúvidas frequentes
 
 | Dúvida | Orientação |
 | --- | --- |

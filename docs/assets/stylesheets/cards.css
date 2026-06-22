@@ -1,0 +1,151 @@
+/* Grades e cards reutilizados nos hubs da Central de Ajuda. */
+.wc-home-grid {
+    align-items: stretch;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    margin: 1.2rem 0 1.6rem;
+}
+
+.wc-card {
+    background: rgba(2, 128, 144, 0.04);
+    border: 1.5px solid rgba(2, 128, 144, 0.32);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 18px;
+}
+
+.wc-card[data-wc-card-type="Guias"] {
+    background: rgba(0, 150, 136, 0.055);
+    border-color: rgba(0, 137, 123, 0.36);
+}
+
+.wc-card[data-wc-card-type="Manuais"] {
+    background: rgba(2, 128, 144, 0.045);
+    border-color: rgba(2, 112, 128, 0.32);
+}
+
+.wc-card[data-wc-card-type="Referências"],
+.wc-card[data-wc-card-type="FAQ"],
+.wc-card[data-wc-card-type="Glossário"],
+.wc-card[data-wc-card-type="Links úteis"],
+.wc-card[data-wc-card-type="Apoio"] {
+    background: rgba(82, 99, 105, 0.035);
+    border-color: rgba(82, 99, 105, 0.24);
+}
+
+.wc-card h3 {
+    margin-top: 0;
+}
+
+.wc-card > .md-button {
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+.wc-card > p:has(> .md-button) {
+    margin-bottom: 0;
+    margin-top: auto;
+    padding-top: 1rem;
+}
+
+.wc-card > p:has(> .md-button) .md-button {
+    margin-top: 0;
+}
+
+.md-typeset .md-button {
+    border-radius: 5px;
+    font-size: 0.7rem;
+    line-height: 1.2;
+    min-height: 2.05rem;
+    padding: 0.52rem 0.86rem;
+}
+
+.wc-reference-grid .wc-card .md-button,
+.wc-home-grid--actions .wc-card .md-button {
+    align-self: flex-start;
+}
+
+.wc-home-grid--actions {
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
+}
+
+/* Hub de links oficiais. */
+.wc-link-hub {
+    align-items: stretch;
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    margin: 1rem 0 1.6rem;
+}
+
+.wc-link-item {
+    background: rgba(2, 128, 144, 0.035);
+    border: 1.5px solid rgba(2, 128, 144, 0.32);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 14px 16px;
+}
+
+.wc-link-item h3 {
+    align-items: center;
+    display: flex;
+    font-size: 0.86rem;
+    gap: 6px;
+    margin: 0 0 0.45rem;
+}
+
+.wc-link-item p {
+    color: #4f5f63;
+    font-size: 0.74rem;
+    line-height: 1.45;
+    margin: 0;
+}
+
+.wc-link-item a {
+    color: #006b73;
+    text-decoration: none;
+}
+
+.wc-link-item a:hover,
+.wc-link-item a:focus {
+    color: #009688;
+    text-decoration: underline;
+}
+
+.wc-link-item .headerlink,
+.wc-portal-block .headerlink,
+.wc-card .headerlink {
+    display: none;
+}
+
+.wc-home-secondary-action {
+    align-items: center;
+    border-top: 1px solid rgba(2, 128, 144, 0.16);
+    color: var(--md-default-fg-color--light);
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.72rem;
+    gap: 0.25rem 0.45rem;
+    margin: -0.35rem 0 1.6rem;
+    padding-top: 0.7rem;
+}
+
+.wc-home-secondary-action p {
+    margin: 0;
+}
+
+.wc-home-secondary-action a {
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 44em) {
+    .wc-home-grid--actions {
+        grid-template-columns: 1fr;
+    }
+}

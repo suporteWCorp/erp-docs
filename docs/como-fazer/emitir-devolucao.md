@@ -1,3 +1,12 @@
+---
+error_area: "Documentos Fiscais"
+error_category: "NF-e"
+error_tags:
+  - "devolucao"
+  - "nfe"
+  - "fiscal"
+---
+
 # Como emitir uma devolução
 
 ## Pré-requisitos
@@ -8,13 +17,16 @@
 - [Como cadastrar uma natureza de operação](cadastrar-natureza-operacao.md){: target="_blank" rel="noopener" } para devolução.
 - Acesso à tela [Manual > Comercial > Devolução](../comercial/devolucao.md){: target="_blank" rel="noopener" } ou [Manual > Faturamento > Nota Fiscal](../faturamento/faturamento-nf.md){: target="_blank" rel="noopener" }.
 
+## Avisos
+
 --8<-- "shared/avisos/validacao-fiscal.md"
+
+## Permissões
 
 --8<-- "shared/avisos/permissoes.md"
 
-## Onde encontrar
-
-Caminho: `Comercial > Devolução ou Faturamento > Nota Fiscal`.
+## Caminho
+`Comercial > Devolução ou Faturamento > Nota Fiscal`.
 
 ## Como fazer
 
@@ -25,17 +37,6 @@ Caminho: `Comercial > Devolução ou Faturamento > Nota Fiscal`.
 5. Confira impostos e referência ao documento original.
 6. Salve a nota.
 7. Transmita e confira o retorno da SEFAZ.
-
-## Erros comuns
-
-Caso encontre algum dos erros abaixo, clique para visualizar a causa e como resolver.
-
-- Natureza de devolução ausente — **Pendente**
-- Documento original não localizado — **Pendente**
-- Quantidade divergente — **Pendente**
-- Não é possível finalizar o cálculo automático — **Pendente**
-- Falha de Schema — **Pendente**
-- Rejeição 651 - Consumo Indevido — **Pendente**
 
 ## Quando utilizar
 

@@ -4,13 +4,13 @@
 
 Cadastrar ou consultar grupos de processos produtivos.
 
+## Print da tela com caminho
+
+$Tab > Grupo de Processo
+
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Grupo de Processo**.
-
-## Caminho no WCorp
-
-$Tab > Grupo de Processo
 
 ## Passo a passo
 
@@ -20,13 +20,13 @@ $Tab > Grupo de Processo
 4. Confira as informações antes de salvar, confirmar ou finalizar.
 5. Finalize conforme a ação disponível na tela.
 
-## Campos principais
+### Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |
 | A definir | A definir | A definir |
 
-## Dúvidas Frequentes
+## Dúvidas frequentes
 
 | Dúvida | Orientação |
 | --- | --- |

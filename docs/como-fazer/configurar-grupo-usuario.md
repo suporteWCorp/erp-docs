@@ -1,12 +1,24 @@
+---
+error_area: "Administração"
+error_category: "Usuários e permissões"
+error_tags:
+  - "grupo de usuario"
+  - "usuario"
+  - "permissao"
+---
+
 # Como configurar um Grupo de Usuário
 
 ## Pré-requisitos
 
 Esta configuração deve ser realizada por um usuário autorizado a administrar acessos.
 
-## Onde encontrar
+## Permissões
 
-Caminho: `Administração > Grupo Usuários`.
+--8<-- "shared/avisos/permissoes.md"
+
+## Caminho
+`Administração > Grupo Usuários`.
 
 ## Como fazer
 
@@ -18,7 +30,6 @@ Caminho: `Administração > Grupo Usuários`.
 6. Valide o acesso com um usuário vinculado ao grupo.
 
 ## Demonstração em vídeo
-
 <video class="wc-video" controls preload="auto" playsinline>
   <source src="../../assets/videos/adm__grupo_usuario.mp4" type="video/mp4">
   Seu navegador não conseguiu reproduzir este vídeo.
@@ -33,5 +44,5 @@ Use este processo antes de vincular usuários que precisam compartilhar o mesmo 
 
 ## Veja também
 
-- [Como cadastrar um usuário](cadastrar-usuario.md)
+- [Como cadastrar um usuário](cadastrar-usuario.md){: target="_blank" rel="noopener" }
 - [Manual > Administração > Grupo Usuários](../administracao/grupo-usuarios.md){: target="_blank" rel="noopener" }

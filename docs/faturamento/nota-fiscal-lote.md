@@ -4,13 +4,13 @@
 
 Emitir ou processar notas fiscais em lote quando houver mais de um documento a ser tratado.
 
+## Print da tela com caminho
+
+Faturamento > Nota Fiscal (Lote)
+
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Nota Fiscal (Lote)**.
-
-## Caminho no WCorp
-
-Faturamento > Nota Fiscal (Lote)
 
 ## Passo a passo
 
@@ -20,13 +20,13 @@ Faturamento > Nota Fiscal (Lote)
 4. Confira as informações antes de salvar, transmitir ou confirmar.
 5. Finalize a rotina conforme a ação disponível na tela.
 
-## Campos principais
+### Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |
 | A definir | A definir | A definir |
 
-## Dúvidas Frequentes
+## Dúvidas frequentes
 
 | Dúvida | Orientação |
 | --- | --- |

@@ -4,13 +4,13 @@
 
 Emitir ou consultar nota fiscal de serviço conforme a operação da empresa.
 
+## Print da tela com caminho
+
+Faturamento > Nota Fiscal de Serviço
+
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Nota Fiscal de Serviço**.
-
-## Caminho no WCorp
-
-Faturamento > Nota Fiscal de Serviço
 
 ## Passo a passo
 
@@ -20,13 +20,13 @@ Faturamento > Nota Fiscal de Serviço
 4. Confira as informações antes de salvar, transmitir ou confirmar.
 5. Finalize a rotina conforme a ação disponível na tela.
 
-## Campos principais
+### Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |
 | A definir | A definir | A definir |
 
-## Dúvidas Frequentes
+## Dúvidas frequentes
 
 | Dúvida | Orientação |
 | --- | --- |

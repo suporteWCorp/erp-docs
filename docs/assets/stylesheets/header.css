@@ -1,0 +1,150 @@
+/* Identidade e pesquisa do cabeçalho WCorp. */
+.md-header {
+    background-color: #009688;
+}
+
+.md-header__button.md-logo {
+    align-items: center;
+    background: url("../wcorp-logo.png") center / 260px auto no-repeat;
+    display: flex;
+    flex: 0 0 130px;
+    height: 4.4rem;
+    margin: 0 2px 0 0;
+    overflow: hidden;
+    padding: 0;
+    width: 130px;
+}
+
+.md-header__button.md-logo img {
+    height: 4.4rem !important;
+    margin: 0;
+    max-height: 4.4rem;
+    min-height: 0;
+    opacity: 0;
+    width: 130px !important;
+}
+
+.md-header__inner {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    height: auto;
+    min-height: 4.8rem;
+    padding-right: 1.1rem;
+    position: relative;
+}
+
+.md-header__title {
+    flex: 0 0 190px;
+    font-weight: 700;
+    margin-left: -18px;
+    min-width: 190px;
+    position: relative;
+}
+
+.md-header__topic {
+    margin-left: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.md-header__title .md-header__topic:first-child {
+    left: 0;
+    opacity: 1 !important;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) !important;
+    width: 100%;
+}
+
+.md-header__title .md-header__topic:not(:first-child) {
+    display: none !important;
+}
+
+.md-header__title .md-ellipsis {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.wc-brand-title {
+    font-size: 1.26rem;
+    font-weight: 750;
+    line-height: 1.05;
+}
+
+.wc-brand-subtitle {
+    color: rgba(255, 255, 255, 0.84);
+    font-size: 0.84rem;
+    font-weight: 500;
+    line-height: 1.15;
+    margin-top: 0.08rem;
+}
+
+.md-header .md-search {
+    flex: 1 1 620px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+    min-width: 280px;
+    order: 3;
+    width: auto;
+}
+
+.md-header .md-header__option {
+    order: 4;
+}
+
+.md-header .md-search__form {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 2px 8px rgba(0, 69, 72, 0.12);
+}
+
+.md-header .md-search__inner {
+    width: 100% !important;
+}
+
+@media screen and (min-width: 60em) {
+    .md-header .md-search {
+        --wc-search-width: min(36vw, 520px);
+        flex: none;
+        left: calc(50% - var(--wc-search-width) / 2);
+        margin: 0;
+        min-width: 0;
+        position: absolute;
+        top: 1.2rem;
+        width: var(--wc-search-width) !important;
+    }
+
+    .md-header .md-header__option {
+        margin-left: auto;
+    }
+}
+
+@media screen and (min-width: 76.25em) and (max-width: 88em) {
+    .md-header__button.md-logo {
+        background-size: 220px auto;
+        flex-basis: 112px;
+        width: 112px;
+    }
+
+    .md-header__button.md-logo img {
+        width: 112px !important;
+    }
+
+    .md-header__title {
+        flex-basis: 180px;
+        min-width: 180px;
+    }
+}
+
+@media screen and (max-width: 59.9844em) {
+    .md-header .md-search {
+        flex-basis: auto;
+        margin-left: 0;
+        margin-right: 0;
+        max-width: none;
+        min-width: 0;
+    }
+}

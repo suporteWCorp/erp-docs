@@ -1,12 +1,19 @@
+---
+error_area: "Administração"
+error_category: "Centro de custo"
+error_tags:
+  - "centro de custo"
+  - "cadastro"
+---
+
 # Como cadastrar um Centro de Custo
 
-## Pré-requisitos
+## Permissões
 
 --8<-- "shared/avisos/permissoes.md"
 
-## Onde encontrar
-
-Caminho: `Administração > Centro de Custo`.
+## Caminho
+`Administração > Centro de Custo`.
 
 ## Como fazer
 
@@ -18,7 +25,6 @@ Caminho: `Administração > Centro de Custo`.
 6. Valide se o cadastro está disponível na rotina em que será utilizado.
 
 ## Demonstração em vídeo
-
 <video class="wc-video" controls preload="auto" playsinline>
   <source src="../../assets/videos/adm_centro_custo.mp4" type="video/mp4">
   Seu navegador não conseguiu reproduzir este vídeo.

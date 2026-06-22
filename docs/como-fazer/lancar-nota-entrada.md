@@ -1,3 +1,13 @@
+---
+error_area: "Documentos Fiscais"
+error_category: "NF-e"
+error_tags:
+  - "nota de entrada"
+  - "xml"
+  - "nfe"
+  - "fornecedor"
+---
+
 # Como lançar uma nota de entrada
 
 ## Pré-requisitos
@@ -8,13 +18,16 @@
 - [Como cadastrar uma natureza de operação](cadastrar-natureza-operacao.md){: target="_blank" rel="noopener" }.
 - Acesso à tela [Manual > Faturamento > Entrada de Nota Fiscal](../faturamento/entrada-nota-fiscal.md){: target="_blank" rel="noopener" }.
 
+## Avisos
+
 --8<-- "shared/avisos/validacao-fiscal.md"
+
+## Permissões
 
 --8<-- "shared/avisos/permissoes.md"
 
-## Onde encontrar
-
-Caminho: `Faturamento > Entrada de Nota Fiscal`.
+## Caminho
+`Faturamento > Entrada de Nota Fiscal`.
 
 ## Como fazer
 
@@ -25,15 +38,6 @@ Caminho: `Faturamento > Entrada de Nota Fiscal`.
 5. Vincule materiais quando necessário.
 6. Revise estoque e financeiro.
 7. Salve a nota de entrada.
-
-## Erros comuns
-
-Caso encontre algum dos erros abaixo, clique para visualizar a causa e como resolver.
-
-- Fornecedor não encontrado — **Pendente**
-- Material não encontrado — **Pendente**
-- Natureza de Operação incompatível — **Pendente**
-- Não é possível finalizar o cálculo automático — **Pendente**
 
 ## Quando utilizar
 

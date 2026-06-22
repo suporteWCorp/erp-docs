@@ -13,6 +13,8 @@
 - Substituir `(PRINT DO CAMINHO AQUI)` por prints reais, quando disponíveis.
 - Validar pré-requisitos, links para Manual e erros comuns.
 - Não criar novos guias até concluir a revisão dos existentes.
+- Replicar o template validado em Cliente, Material e NF-e nos demais Guias, preservando conteúdo operacional.
+- Substituir itens `Pendente de documentação` por registros na base de Erros comuns quando causa e solução forem confirmadas.
 
 ## Fase 3 - Tornar Manual publicável
 

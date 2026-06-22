@@ -4,13 +4,13 @@
 
 Criar, consultar ou acompanhar requisições de compra.
 
+## Print da tela com caminho
+
+$Tab > Requisição de Compras
+
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Requisição de Compras**.
-
-## Caminho no WCorp
-
-$Tab > Requisição de Compras
 
 ## Passo a passo
 
@@ -20,13 +20,13 @@ $Tab > Requisição de Compras
 4. Confira as informações antes de salvar, confirmar ou finalizar.
 5. Finalize conforme a ação disponível na tela.
 
-## Campos principais
+### Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |
 | A definir | A definir | A definir |
 
-## Dúvidas Frequentes
+## Dúvidas frequentes
 
 | Dúvida | Orientação |
 | --- | --- |

@@ -4,13 +4,13 @@
 
 Gerar ou consultar relatórios relacionados ao WhatsApp.
 
+## Print da tela com caminho
+
+$Tab > Relatório WhatsApp
+
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Relatório WhatsApp**.
-
-## Caminho no WCorp
-
-$Tab > Relatório WhatsApp
 
 ## Passo a passo
 
@@ -20,13 +20,13 @@ $Tab > Relatório WhatsApp
 4. Confira as informações antes de salvar, confirmar ou finalizar.
 5. Finalize conforme a ação disponível na tela.
 
-## Campos principais
+### Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |
 | A definir | A definir | A definir |
 
-## Dúvidas Frequentes
+## Dúvidas frequentes
 
 | Dúvida | Orientação |
 | --- | --- |

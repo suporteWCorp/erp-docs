@@ -4,13 +4,13 @@
 
 Criar ou consultar orçamentos relacionados a CT-e.
 
+## Print da tela com caminho
+
+$Tab > Orçamento CTe
+
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Orçamento CTe**.
-
-## Caminho no WCorp
-
-$Tab > Orçamento CTe
 
 ## Passo a passo
 
@@ -20,13 +20,13 @@ $Tab > Orçamento CTe
 4. Confira as informações antes de salvar, confirmar ou finalizar.
 5. Finalize conforme a ação disponível na tela.
 
-## Campos principais
+### Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |
 | A definir | A definir | A definir |
 
-## Dúvidas Frequentes
+## Dúvidas frequentes
 
 | Dúvida | Orientação |
 | --- | --- |

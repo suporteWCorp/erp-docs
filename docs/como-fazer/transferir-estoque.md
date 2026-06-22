@@ -1,3 +1,13 @@
+---
+error_area: "Estoque"
+error_category: "Transferências"
+error_tags:
+  - "transferencia"
+  - "estoque"
+  - "almoxarifado"
+  - "material"
+---
+
 # Como transferir estoque
 
 ## Pré-requisitos
@@ -7,11 +17,12 @@
 - Local de origem e destino definidos.
 - Acesso à tela [Manual > Materiais > Lote/Estoque](../materiais/lote-estoque.md){: target="_blank" rel="noopener" }.
 
+## Permissões
+
 --8<-- "shared/avisos/permissoes.md"
 
-## Onde encontrar
-
-Caminho: `Materiais > Lote/Estoque`.
+## Caminho
+`Materiais > Lote/Estoque`.
 
 ## Como fazer
 
@@ -21,14 +32,6 @@ Caminho: `Materiais > Lote/Estoque`.
 4. Informe quantidade.
 5. Revise local, lote e unidade.
 6. Confirme a transferência.
-
-## Erros comuns
-
-Caso encontre algum dos erros abaixo, clique para visualizar a causa e como resolver.
-
-- Saldo insuficiente — **Pendente**
-- Destino incorreto — **Pendente**
-- Material não localizado — **Pendente**
 
 ## Quando utilizar
 

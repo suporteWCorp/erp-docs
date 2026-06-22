@@ -4,13 +4,13 @@
 
 Criar ou acompanhar solicitações de pagamento antes da efetivação financeira.
 
+## Print da tela com caminho
+
+Financeiro > Solicitação de Pagamento
+
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Solicitação de Pagamento**.
-
-## Caminho no WCorp
-
-Financeiro > Solicitação de Pagamento
 
 ## Passo a passo
 
@@ -20,13 +20,13 @@ Financeiro > Solicitação de Pagamento
 4. Confira empresa, conta, valor, vencimento e status, quando aplicável.
 5. Salve, confirme ou finalize conforme a ação desejada na tela.
 
-## Campos principais
+### Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |
 | A definir | A definir | A definir |
 
-## Dúvidas Frequentes
+## Dúvidas frequentes
 
 | Dúvida | Orientação |
 | --- | --- |

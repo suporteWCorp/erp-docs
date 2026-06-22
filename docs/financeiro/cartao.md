@@ -4,13 +4,13 @@
 
 Consultar ou controlar operações financeiras relacionadas a cartão.
 
+## Print da tela com caminho
+
+Financeiro > Cartão
+
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Cartão**.
-
-## Caminho no WCorp
-
-Financeiro > Cartão
 
 ## Passo a passo
 
@@ -20,13 +20,13 @@ Financeiro > Cartão
 4. Confira empresa, conta, valor, vencimento e status, quando aplicável.
 5. Salve, confirme ou finalize conforme a ação desejada na tela.
 
-## Campos principais
+### Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |
 | A definir | A definir | A definir |
 
-## Dúvidas Frequentes
+## Dúvidas frequentes
 
 | Dúvida | Orientação |
 | --- | --- |

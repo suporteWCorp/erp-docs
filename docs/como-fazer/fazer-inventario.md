@@ -1,3 +1,13 @@
+---
+error_area: "Estoque"
+error_category: "Inventário"
+error_tags:
+  - "inventario"
+  - "estoque"
+  - "saldo"
+  - "material"
+---
+
 # Como fazer inventário
 
 ## Pré-requisitos
@@ -7,11 +17,12 @@
 - Equipe orientada sobre o critério de contagem.
 - Acesso à tela [Manual > Materiais > Ajustar Inventário](../materiais/ajustar-inventario.md){: target="_blank" rel="noopener" }.
 
+## Permissões
+
 --8<-- "shared/avisos/permissoes.md"
 
-## Onde encontrar
-
-Caminho: `Materiais > Ajustar Inventário`.
+## Caminho
+`Materiais > Ajustar Inventário`.
 
 ## Como fazer
 
@@ -22,14 +33,6 @@ Caminho: `Materiais > Ajustar Inventário`.
 5. Registre diferenças em **Materiais > Ajustar Inventário**.
 6. Informe motivo e observação.
 7. Salve os ajustes.
-
-## Erros comuns
-
-Caso encontre algum dos erros abaixo, clique para visualizar a causa e como resolver.
-
-- Contagem feita com movimentações abertas — **Pendente**
-- Local ou lote trocado — **Pendente**
-- Diferença sem justificativa — **Pendente**
 
 ## Quando utilizar
 

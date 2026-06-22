@@ -1,2 +1,2 @@
-!!! note "Permissões necessárias"
+!!! requirement "Permissão de acesso"
     Seu usuário deve possuir permissão para executar esta operação. Caso não possua acesso, solicite a liberação ao responsável pelo sistema.

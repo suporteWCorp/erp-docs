@@ -4,13 +4,13 @@
 
 Cadastrar ou consultar motivos de parada de produção.
 
+## Print da tela com caminho
+
+$Tab > Motivo de Parada
+
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Motivo de Parada**.
-
-## Caminho no WCorp
-
-$Tab > Motivo de Parada
 
 ## Passo a passo
 
@@ -20,13 +20,13 @@ $Tab > Motivo de Parada
 4. Confira as informações antes de salvar, confirmar ou finalizar.
 5. Finalize conforme a ação disponível na tela.
 
-## Campos principais
+### Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |
 | A definir | A definir | A definir |
 
-## Dúvidas Frequentes
+## Dúvidas frequentes
 
 | Dúvida | Orientação |
 | --- | --- |

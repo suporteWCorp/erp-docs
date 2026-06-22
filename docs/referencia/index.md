@@ -16,21 +16,21 @@ Mensagens de erro, causas prováveis e orientações de correção.
 
 <div class="wc-card" markdown>
 
-### Links úteis
+### FAQ
 
-Portais oficiais, consultas fiscais e materiais externos importantes.
+Respostas rápidas para as dúvidas mais frequentes sobre o WCorp.
 
-[Acessar links úteis](links-uteis.md){ .md-button .md-button--primary }
+[Consultar FAQ](faq.md){ .md-button .md-button--primary }
 
 </div>
 
 <div class="wc-card" markdown>
 
-### Atualizações fiscais
+### Links úteis
 
-Reforma Tributária, CBS, IBS, Notas Técnicas e mudanças relevantes.
+Portais oficiais, consultas fiscais e materiais externos importantes.
 
-[Consultar atualizações](atualizacoes-fiscais.md){ .md-button .md-button--primary }
+[Acessar links úteis](links-uteis.md){ .md-button .md-button--primary }
 
 </div>
 

@@ -1,3 +1,13 @@
+---
+error_area: "Comercial"
+error_category: "Orçamentos"
+error_tags:
+  - "orcamento"
+  - "cliente"
+  - "material"
+  - "venda"
+---
+
 # Como criar um orçamento
 
 ## Pré-requisitos
@@ -7,11 +17,12 @@
 - Condição comercial definida.
 - Acesso à tela [Manual > Comercial > Orçamento](../comercial/comercial-orcamento.md){: target="_blank" rel="noopener" }.
 
+## Permissões
+
 --8<-- "shared/avisos/permissoes.md"
 
-## Onde encontrar
-
-Caminho: `Comercial > Orçamento`.
+## Caminho
+`Comercial > Orçamento`.
 
 ## Como fazer
 
@@ -23,19 +34,10 @@ Caminho: `Comercial > Orçamento`.
 6. Salve o orçamento.
 
 ## Demonstração em vídeo
-
 <video class="wc-video" controls preload="auto" playsinline>
   <source src="../../assets/videos/comercial_orcamento.mp4" type="video/mp4">
   Seu navegador não conseguiu reproduzir este vídeo.
 </video>
-
-## Erros comuns
-
-Caso encontre algum dos erros abaixo, clique para visualizar a causa e como resolver.
-
-- Cliente não encontrado — **Pendente**
-- Material não encontrado — **Pendente**
-- Valores divergentes — **Pendente**
 
 ## Quando utilizar
 

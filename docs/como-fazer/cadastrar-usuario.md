@@ -1,12 +1,24 @@
+---
+error_area: "Administração"
+error_category: "Usuários e permissões"
+error_tags:
+  - "usuario"
+  - "cadastro"
+  - "permissao"
+---
+
 # Como cadastrar um usuário
 
 ## Pré-requisitos
 
 O cadastro deve ser realizado por um usuário administrador ou mediante autorização do responsável da empresa.
 
-## Onde encontrar
+## Permissões
 
-Caminho: `Administração > Usuários`.
+--8<-- "shared/avisos/permissoes.md"
+
+## Caminho
+`Administração > Usuários`.
 
 ## Como fazer
 
@@ -18,7 +30,6 @@ Caminho: `Administração > Usuários`.
 6. Valide o acesso com o grupo e as permissões definidas.
 
 ## Demonstração em vídeo
-
 <video class="wc-video" controls preload="auto" playsinline>
   <source src="../../assets/videos/adm_cadastro_usuario.mp4" type="video/mp4">
   Seu navegador não conseguiu reproduzir este vídeo.
@@ -33,5 +44,5 @@ Use este processo quando uma pessoa precisar receber acesso ao sistema.
 
 ## Veja também
 
-- [Como configurar um Grupo de Usuário](configurar-grupo-usuario.md)
+- [Como configurar um Grupo de Usuário](configurar-grupo-usuario.md){: target="_blank" rel="noopener" }
 - [Manual > Administração > Usuários](../administracao/usuarios.md){: target="_blank" rel="noopener" }

@@ -4,13 +4,13 @@
 
 Cadastrar, consultar ou controlar paletes no processo de armazenagem.
 
+## Print da tela com caminho
+
+Materiais > Palete
+
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Palete**.
-
-## Caminho no WCorp
-
-Materiais > Palete
 
 ## Passo a passo
 
@@ -20,13 +20,13 @@ Materiais > Palete
 4. Confira material, quantidade, unidade, lote ou local de armazenagem, quando aplicável.
 5. Salve, confirme ou finalize conforme a ação disponível na tela.
 
-## Campos principais
+### Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |
 | A definir | A definir | A definir |
 
-## Dúvidas Frequentes
+## Dúvidas frequentes
 
 | Dúvida | Orientação |
 | --- | --- |

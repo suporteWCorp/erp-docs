@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% if page.meta.error_area %}
+    <span
+      id="wc-page-error-context"
+      data-area="{{ page.meta.error_area | e }}"
+      data-category="{{ page.meta.error_category | default('', true) | e }}"
+      data-tags="{{ page.meta.error_tags | default([], true) | join(',') | e }}"
+      hidden
+    ></span>
+  {% endif %}
+  {{ super() }}
+{% endblock %}

@@ -4,13 +4,13 @@
 
 Consultar, acompanhar ou localizar notas fiscais e seus respectivos status.
 
+## Print da tela com caminho
+
+Faturamento > Radar de Nota Fiscal
+
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Radar de Nota Fiscal**.
-
-## Caminho no WCorp
-
-Faturamento > Radar de Nota Fiscal
 
 ## Passo a passo
 
@@ -20,13 +20,13 @@ Faturamento > Radar de Nota Fiscal
 4. Confira as informações antes de salvar, transmitir ou confirmar.
 5. Finalize a rotina conforme a ação disponível na tela.
 
-## Campos principais
+### Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |
 | A definir | A definir | A definir |
 
-## Dúvidas Frequentes
+## Dúvidas frequentes
 
 | Dúvida | Orientação |
 | --- | --- |

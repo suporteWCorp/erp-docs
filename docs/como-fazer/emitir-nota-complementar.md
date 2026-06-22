@@ -1,3 +1,12 @@
+---
+error_area: "Documentos Fiscais"
+error_category: "NF-e"
+error_tags:
+  - "nota complementar"
+  - "nfe"
+  - "fiscal"
+---
+
 # Como emitir uma nota complementar
 
 ## Pré-requisitos
@@ -7,13 +16,16 @@
 - [Como cadastrar uma natureza de operação](cadastrar-natureza-operacao.md){: target="_blank" rel="noopener" } adequada para complemento.
 - Acesso à tela [Manual > Faturamento > Nota Fiscal](../faturamento/faturamento-nf.md){: target="_blank" rel="noopener" }.
 
+## Avisos
+
 --8<-- "shared/avisos/validacao-fiscal.md"
+
+## Permissões
 
 --8<-- "shared/avisos/permissoes.md"
 
-## Onde encontrar
-
-Caminho: `Faturamento > Nota Fiscal`.
+## Caminho
+`Faturamento > Nota Fiscal`.
 
 ## Como fazer
 
@@ -25,17 +37,6 @@ Caminho: `Faturamento > Nota Fiscal`.
 6. Confira a natureza de operação.
 7. Salve e transmita a nota.
 8. Confira o retorno da SEFAZ.
-
-## Erros comuns
-
-Caso encontre algum dos erros abaixo, clique para visualizar a causa e como resolver.
-
-- Nota original não informada — **Pendente**
-- Natureza incompatível — **Pendente**
-- Complemento fiscal incorreto — **Pendente**
-- Não é possível finalizar o cálculo automático — **Pendente**
-- Falha de Schema — **Pendente**
-- Rejeição 651 - Consumo Indevido — **Pendente**
 
 ## Quando utilizar
 

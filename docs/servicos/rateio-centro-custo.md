@@ -4,13 +4,13 @@
 
 Configurar ou consultar rateios de centro de custo para serviços.
 
+## Print da tela com caminho
+
+$Tab > Rateio de Centro de Custo
+
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Rateio de Centro de Custo**.
-
-## Caminho no WCorp
-
-$Tab > Rateio de Centro de Custo
 
 ## Passo a passo
 
@@ -20,13 +20,13 @@ $Tab > Rateio de Centro de Custo
 4. Confira as informações antes de salvar, confirmar ou finalizar.
 5. Finalize conforme a ação disponível na tela.
 
-## Campos principais
+### Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |
 | A definir | A definir | A definir |
 
-## Dúvidas Frequentes
+## Dúvidas frequentes
 
 | Dúvida | Orientação |
 | --- | --- |

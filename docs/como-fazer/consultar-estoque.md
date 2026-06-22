@@ -1,3 +1,13 @@
+---
+error_area: "Estoque"
+error_category: "Consulta de estoque"
+error_tags:
+  - "estoque"
+  - "consulta"
+  - "saldo"
+  - "material"
+---
+
 # Como consultar estoque
 
 ## Pré-requisitos
@@ -6,11 +16,12 @@
 - Critério de busca definido: código, descrição, local, lote ou período.
 - Acesso à tela [Manual > Materiais > Lote/Estoque](../materiais/lote-estoque.md){: target="_blank" rel="noopener" }.
 
+## Permissões
+
 --8<-- "shared/avisos/permissoes.md"
 
-## Onde encontrar
-
-Caminho: `Materiais > Lote/Estoque`.
+## Caminho
+`Materiais > Lote/Estoque`.
 
 ## Como fazer
 
@@ -19,14 +30,6 @@ Caminho: `Materiais > Lote/Estoque`.
 3. Consulte saldo, local, lote e movimentações.
 4. Ajuste filtros se necessário.
 5. Abra o registro para detalhes, quando aplicável.
-
-## Erros comuns
-
-Caso encontre algum dos erros abaixo, clique para visualizar a causa e como resolver.
-
-- Saldo não localizado — **Pendente**
-- Material não encontrado — **Pendente**
-- Divergência de saldo — **Pendente**
 
 ## Quando utilizar
 

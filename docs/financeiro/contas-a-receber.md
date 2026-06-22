@@ -4,13 +4,13 @@
 
 Cadastrar, consultar e acompanhar títulos que a empresa tem a receber.
 
+## Print da tela com caminho
+
+Financeiro > Contas a Receber
+
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Contas a Receber**.
-
-## Caminho no WCorp
-
-Financeiro > Contas a Receber
 
 ## Passo a passo
 
@@ -20,13 +20,13 @@ Financeiro > Contas a Receber
 4. Confira empresa, conta, valor, vencimento e status, quando aplicável.
 5. Salve, confirme ou finalize conforme a ação desejada na tela.
 
-## Campos principais
+### Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |
 | A definir | A definir | A definir |
 
-## Dúvidas Frequentes
+## Dúvidas frequentes
 
 | Dúvida | Orientação |
 | --- | --- |

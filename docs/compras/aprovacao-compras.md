@@ -4,13 +4,13 @@
 
 Aprovar ou acompanhar requisições e processos de compra.
 
+## Print da tela com caminho
+
+$Tab > Aprovação de Compras
+
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Aprovação de Compras**.
-
-## Caminho no WCorp
-
-$Tab > Aprovação de Compras
 
 ## Passo a passo
 
@@ -20,13 +20,13 @@ $Tab > Aprovação de Compras
 4. Confira as informações antes de salvar, confirmar ou finalizar.
 5. Finalize conforme a ação disponível na tela.
 
-## Campos principais
+### Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |
 | A definir | A definir | A definir |
 
-## Dúvidas Frequentes
+## Dúvidas frequentes
 
 | Dúvida | Orientação |
 | --- | --- |

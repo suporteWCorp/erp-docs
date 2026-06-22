@@ -4,13 +4,13 @@
 
 Executar rotinas auxiliares relacionadas a arquivos bancários no padrão CNAB.
 
+## Print da tela com caminho
+
+Financeiro > Ferramentas CNAB
+
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Ferramentas CNAB**.
-
-## Caminho no WCorp
-
-Financeiro > Ferramentas CNAB
 
 ## Passo a passo
 
@@ -20,13 +20,13 @@ Financeiro > Ferramentas CNAB
 4. Confira empresa, conta, valor, vencimento e status, quando aplicável.
 5. Salve, confirme ou finalize conforme a ação desejada na tela.
 
-## Campos principais
+### Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |
 | A definir | A definir | A definir |
 
-## Dúvidas Frequentes
+## Dúvidas frequentes
 
 | Dúvida | Orientação |
 | --- | --- |

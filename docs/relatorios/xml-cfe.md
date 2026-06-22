@@ -4,13 +4,13 @@
 
 Consultar ou exportar XMLs de CF-e.
 
+## Print da tela com caminho
+
+$Tab > XML(s) CFe
+
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **XML(s) CFe**.
-
-## Caminho no WCorp
-
-$Tab > XML(s) CFe
 
 ## Passo a passo
 
@@ -20,13 +20,13 @@ $Tab > XML(s) CFe
 4. Confira as informações antes de salvar, confirmar ou finalizar.
 5. Finalize conforme a ação disponível na tela.
 
-## Campos principais
+### Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |
 | A definir | A definir | A definir |
 
-## Dúvidas Frequentes
+## Dúvidas frequentes
 
 | Dúvida | Orientação |
 | --- | --- |

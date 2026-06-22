@@ -4,13 +4,13 @@
 
 Cadastrar ou consultar fases utilizadas no acompanhamento de contratos.
 
+## Print da tela com caminho
+
+$Tab > Fases do Contrato
+
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Fases do Contrato**.
-
-## Caminho no WCorp
-
-$Tab > Fases do Contrato
 
 ## Passo a passo
 
@@ -20,13 +20,13 @@ $Tab > Fases do Contrato
 4. Confira as informações antes de salvar, confirmar ou finalizar.
 5. Finalize conforme a ação disponível na tela.
 
-## Campos principais
+### Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |
 | A definir | A definir | A definir |
 
-## Dúvidas Frequentes
+## Dúvidas frequentes
 
 | Dúvida | Orientação |
 | --- | --- |

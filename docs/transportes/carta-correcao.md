@@ -4,13 +4,13 @@
 
 Emitir carta de correção para documentos de transporte.
 
+## Print da tela com caminho
+
+$Tab > Carta de Correção
+
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Carta de Correção**.
-
-## Caminho no WCorp
-
-$Tab > Carta de Correção
 
 ## Passo a passo
 
@@ -20,13 +20,13 @@ $Tab > Carta de Correção
 4. Confira as informações antes de salvar, confirmar ou finalizar.
 5. Finalize conforme a ação disponível na tela.
 
-## Campos principais
+### Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |
 | A definir | A definir | A definir |
 
-## Dúvidas Frequentes
+## Dúvidas frequentes
 
 | Dúvida | Orientação |
 | --- | --- |

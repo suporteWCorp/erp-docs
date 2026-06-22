@@ -1,0 +1,78 @@
+/* Caixas semânticas compartilhadas entre Guias e páginas de referência. */
+.md-typeset .admonition.prerequisite,
+.md-typeset details.prerequisite {
+    border-color: #b42318;
+}
+
+.md-typeset .prerequisite > .admonition-title,
+.md-typeset .prerequisite > summary {
+    background: rgba(180, 35, 24, 0.1);
+}
+
+.md-typeset .admonition.requirement,
+.md-typeset details.requirement {
+    border-color: #c2410c;
+}
+
+.md-typeset .requirement > .admonition-title,
+.md-typeset .requirement > summary {
+    background: rgba(194, 65, 12, 0.1);
+}
+
+.md-typeset .admonition.fiscal,
+.md-typeset details.fiscal {
+    border-color: #8a6d1d;
+}
+
+.md-typeset .fiscal > .admonition-title,
+.md-typeset .fiscal > summary {
+    background: rgba(138, 109, 29, 0.1);
+}
+
+.md-typeset .admonition.caution,
+.md-typeset details.caution {
+    border-color: #d97706;
+}
+
+.md-typeset .caution > .admonition-title,
+.md-typeset .caution > summary {
+    background: rgba(217, 119, 6, 0.1);
+}
+
+.md-typeset .admonition.information,
+.md-typeset details.information {
+    border-color: #64748b;
+}
+
+.md-typeset .information > .admonition-title,
+.md-typeset .information > summary {
+    background: rgba(100, 116, 139, 0.1);
+}
+
+.md-typeset .admonition.success,
+.md-typeset details.success {
+    border-color: #2563eb;
+}
+
+.md-typeset .success > .admonition-title,
+.md-typeset .success > summary {
+    background: rgba(37, 99, 235, 0.1);
+}
+
+.md-typeset .admonition.prerequisite,
+.md-typeset .admonition.requirement,
+.md-typeset .admonition.fiscal,
+.md-typeset .admonition.caution,
+.md-typeset .admonition.information,
+.md-typeset .admonition.success {
+    border-left-width: 4px;
+}
+
+.md-typeset .admonition.prerequisite > .admonition-title::before,
+.md-typeset .admonition.requirement > .admonition-title::before,
+.md-typeset .admonition.fiscal > .admonition-title::before,
+.md-typeset .admonition.caution > .admonition-title::before,
+.md-typeset .admonition.information > .admonition-title::before,
+.md-typeset .admonition.success > .admonition-title::before {
+    display: none;
+}

@@ -4,13 +4,13 @@
 
 Cadastrar ou consultar locais utilizados para controle físico e lógico do estoque.
 
+## Print da tela com caminho
+
+Materiais > Locais de Armazenagem
+
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Locais de Armazenagem**.
-
-## Caminho no WCorp
-
-Materiais > Locais de Armazenagem
 
 ## Passo a passo
 
@@ -20,13 +20,13 @@ Materiais > Locais de Armazenagem
 4. Confira material, quantidade, unidade, lote ou local de armazenagem, quando aplicável.
 5. Salve, confirme ou finalize conforme a ação disponível na tela.
 
-## Campos principais
+### Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |
 | A definir | A definir | A definir |
 
-## Dúvidas Frequentes
+## Dúvidas frequentes
 
 | Dúvida | Orientação |
 | --- | --- |

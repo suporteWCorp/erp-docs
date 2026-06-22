@@ -4,13 +4,13 @@
 
 Consultar ou manter tabelas de preços vinculadas a materiais.
 
+## Print da tela com caminho
+
+Materiais > Tabela de Preços
+
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Tabela de Preços**.
-
-## Caminho no WCorp
-
-Materiais > Tabela de Preços
 
 ## Passo a passo
 
@@ -20,13 +20,13 @@ Materiais > Tabela de Preços
 4. Confira material, quantidade, unidade, lote ou local de armazenagem, quando aplicável.
 5. Salve, confirme ou finalize conforme a ação disponível na tela.
 
-## Campos principais
+### Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |
 | A definir | A definir | A definir |
 
-## Dúvidas Frequentes
+## Dúvidas frequentes
 
 | Dúvida | Orientação |
 | --- | --- |

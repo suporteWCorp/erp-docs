@@ -1,3 +1,12 @@
+---
+error_area: "Estoque"
+error_category: "Ajustes de estoque"
+error_tags:
+  - "estoque"
+  - "ajuste"
+  - "material"
+---
+
 # Como ajustar estoque
 
 ## Pré-requisitos
@@ -7,11 +16,12 @@
 - [Como cadastrar um material](cadastrar-material.md){: target="_blank" rel="noopener" }.
 - Acesso à tela [Manual > Materiais > Ajustar Inventário](../materiais/ajustar-inventario.md){: target="_blank" rel="noopener" }.
 
+## Permissões
+
 --8<-- "shared/avisos/permissoes.md"
 
-## Onde encontrar
-
-Caminho: `Materiais > Ajustar Inventário`.
+## Caminho
+`Materiais > Ajustar Inventário`.
 
 ## Como fazer
 
@@ -21,14 +31,6 @@ Caminho: `Materiais > Ajustar Inventário`.
 4. Informe o motivo do ajuste.
 5. Revise o impacto no saldo.
 6. Salve o ajuste.
-
-## Erros comuns
-
-Caso encontre algum dos erros abaixo, clique para visualizar a causa e como resolver.
-
-- Local ou lote incorreto — **Pendente**
-- Ajuste sem justificativa — **Pendente**
-- Material não encontrado — **Pendente**
 
 ## Quando utilizar
 

@@ -1,15 +1,28 @@
+---
+error_area: "Estoque"
+error_category: "Materiais"
+error_tags:
+  - "material"
+  - "produto"
+  - "cadastro"
+  - "estoque"
+---
+
 # Como cadastrar um material
 
 ## Pré-requisitos
 
-- Descrição, unidade, categoria e dados fiscais ou comerciais do material.
+!!! prerequisite "Antes de começar"
+    - Tenha a descrição, a unidade, a categoria e os dados fiscais ou comerciais do material.
+
+## Permissões
 
 --8<-- "shared/avisos/permissoes.md"
 
-## Onde encontrar
+## Caminho
+`Materiais > Materiais`.
 
-Caminho: `Materiais > Materiais`.
-
+## Print do caminho
 ![Onde encontrar](../assets/images/guias/materiais_materiais.png)
 
 ## Como fazer
@@ -21,19 +34,15 @@ Caminho: `Materiais > Materiais`.
 5. Revise os campos obrigatórios.
 6. Salve o cadastro.
 
-## Demonstração em vídeo
+**Resultado esperado**
 
+O material fica salvo e disponível para uso nas movimentações compatíveis com seu cadastro.
+
+## Demonstração em vídeo
 <video class="wc-video" controls preload="auto" playsinline poster="../../assets/images/guias/materiais_materiais.png">
   <source src="../../assets/videos/materiais_materiais.mp4" type="video/mp4">
   Seu navegador não conseguiu reproduzir este vídeo.
 </video>
-
-## Erros comuns
-
-Caso encontre algum dos erros abaixo, clique para visualizar a causa e como resolver.
-
-- Material duplicado — **Pendente**
-- Unidade ou categoria não encontrada — **Pendente**
 
 ## Quando utilizar
 

@@ -4,13 +4,13 @@
 
 Relacionar requisições de compra com projeções de vendas.
 
+## Print da tela com caminho
+
+$Tab > Requisições x Projeção de Vendas
+
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Requisições x Projeção de Vendas**.
-
-## Caminho no WCorp
-
-$Tab > Requisições x Projeção de Vendas
 
 ## Passo a passo
 
@@ -20,13 +20,13 @@ $Tab > Requisições x Projeção de Vendas
 4. Confira as informações antes de salvar, confirmar ou finalizar.
 5. Finalize conforme a ação disponível na tela.
 
-## Campos principais
+### Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |
 | A definir | A definir | A definir |
 
-## Dúvidas Frequentes
+## Dúvidas frequentes
 
 | Dúvida | Orientação |
 | --- | --- |

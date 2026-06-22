@@ -1,38 +1,69 @@
+---
+error_area: "Área correspondente"
+error_category: "Categoria correspondente"
+error_tags:
+  - "termo principal"
+  - "termo relacionado"
+---
+
 # Como realizar o processo
 
+<!-- Liste somente dependências reais. Remova a seção quando não houver nenhuma. -->
 ## Pré-requisitos
 
 - Liste cadastros e configurações necessários.
-- Informe permissões necessárias, quando aplicável.
-- Use links para outros artigos sempre que possível.
+- Vincule o Guia correspondente quando ele existir.
 
-## Onde encontrar
+<!-- Use somente para exigências específicas do procedimento. -->
+## Avisos
 
-Caminho: `Módulo > Rotina`.
+Use uma caixa `requirement`, `fiscal`, `caution` ou `information` conforme `docs/como-documentar/caixas-de-aviso.md`.
 
-Inclua um print da tela quando ele ajudar o usuário a reconhecer o caminho ou a ação principal.
+## Permissões
+
+--8<-- "shared/avisos/permissoes.md"
+
+## Caminho
+
+`Módulo > Funcionalidade`.
+
+<!-- Remova este subtópico enquanto o print real não existir. -->
+## Print do caminho
+
+Adicione a imagem real usando o padrão `assets/images/guias/modulo_funcionalidade.png`.
 
 ## Como fazer
 
 1. Escreva passos curtos.
 2. Mantenha uma ação principal por passo.
-3. Inclua imagens apenas quando agregarem valor.
+3. Inclua somente informações necessárias para concluir a tarefa.
+
+<!-- Remova quando não houver vídeo. -->
+## Demonstração em vídeo
+
+```html
+<video class="wc-video" controls preload="auto" playsinline>
+  <source src="../../assets/videos/modulo_funcionalidade.mp4" type="video/mp4">
+  Seu navegador não conseguiu reproduzir este vídeo.
+</video>
+```
+
+<!-- Use somente quando existir um segundo fluxo real. -->
+## Outra opção
+
+Descreva a alternativa sem repetir o procedimento principal.
 
 ## Demonstração em vídeo
 
-Inclua esta seção somente quando houver um vídeo correspondente.
-
-## Erros comuns
-
-Caso encontre algum dos erros abaixo, clique para visualizar a causa e como resolver.
-
-- Use o formato `[Mensagem do erro](caminho-da-pagina-do-erro.md)` quando a página específica existir.
-- Mensagem sem página específica — **Pendente**
+Inclua o vídeo correspondente, quando existir.
 
 ## Quando utilizar
 
-- Liste brevemente as situações em que o procedimento deve ser usado.
+Explique brevemente em quais situações o procedimento deve ser utilizado.
 
 ## Veja também
 
-- Adicione procedimentos relacionados.
+- Adicione Guias relacionados.
+- Adicione páginas do Manual apenas como referência complementar.
+
+<!-- O bloco de problemas relacionados é incluído automaticamente pelos metadados. -->

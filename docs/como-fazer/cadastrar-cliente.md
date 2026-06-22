@@ -1,15 +1,28 @@
+---
+error_area: "Comercial"
+error_category: "Clientes"
+error_tags:
+  - "cliente"
+  - "cadastro"
+  - "pedido"
+  - "faturamento"
+---
+
 # Como cadastrar um cliente
 
 ## Pré-requisitos
 
-- CNPJ, CPF ou dados cadastrais do cliente.
+!!! prerequisite "Antes de começar"
+    - Tenha em mãos o CNPJ, CPF ou os dados cadastrais do cliente.
+
+## Permissões
 
 --8<-- "shared/avisos/permissoes.md"
 
-## Onde encontrar
+## Caminho
+`Comercial > Clientes`.
 
-Caminho: `Comercial > Clientes`.
-
+## Print do caminho
 ![Onde encontrar](../assets/images/guias/comercial_clientes.png)
 
 ## Como fazer
@@ -21,18 +34,15 @@ Caminho: `Comercial > Clientes`.
 5. Complete os campos obrigatórios que faltarem.
 6. Salve o cadastro.
 
-## Demonstração em vídeo
+**Resultado esperado**
 
+O cliente fica salvo e disponível para seleção em pedidos, faturamento, financeiro e consultas.
+
+## Demonstração em vídeo
 <video class="wc-video" controls preload="auto" playsinline poster="../../assets/images/guias/comercial_clientes.png">
   <source src="../../assets/videos/comercial_clientes.mp4" type="video/mp4">
   Seu navegador não conseguiu reproduzir este vídeo.
 </video>
-
-## Erros comuns
-
-Caso encontre algum dos erros abaixo, clique para visualizar a causa e como resolver.
-
-- CNPJ recém-cadastrado não localizado — **Pendente**
 
 ## Quando utilizar
 
@@ -40,6 +50,7 @@ Use quando um cliente ainda não existir no WCorp ou quando for necessário comp
 
 ## Veja também
 
+- [Consultar CNPJ](../referencia/links-uteis.md){: target="_blank" rel="noopener" }
 - [Como gerar um pedido](fazer-pedido-venda.md){: target="_blank" rel="noopener" }
 - [Como emitir uma NF-e](faturar-nota.md){: target="_blank" rel="noopener" }
 - [Manual > Comercial > Clientes](../comercial/comercial-clientes.md){: target="_blank" rel="noopener" }

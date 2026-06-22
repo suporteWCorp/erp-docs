@@ -1,13 +1,4 @@
 (function () {
-  const videoObjectUrls = new Map();
-
-  const shortcuts = [
-    { label: "Início", href: "" },
-    { label: "Guia", href: "como-fazer/" },
-    { label: "Referências", href: "referencia/" },
-    { label: "Manual", href: "manual/" }
-  ];
-
   const erpTabs = [
     { label: "Comercial", href: "comercial/comercial-geral/", section: "/comercial/" },
     { label: "Faturamento", href: "faturamento/faturamento-geral/", section: "/faturamento/" },
@@ -26,35 +17,15 @@
 
   function rootUrl() {
     const logo = document.querySelector(".md-header__button.md-logo[href]");
-    return logo ? logo.href : new URL("/", window.location.href).href;
-  }
-
-  function addShortcuts() {
-    const headerInner = document.querySelector(".md-header__inner");
-    if (!headerInner || document.querySelector(".wc-shortcuts")) return;
-
-    const nav = document.createElement("nav");
-    nav.className = "wc-shortcuts";
-    nav.setAttribute("aria-label", "Atalhos principais");
-
-    const root = rootUrl();
-    shortcuts.forEach((item) => {
-      const link = document.createElement("a");
-      link.className = "wc-shortcuts__link";
-      link.href = new URL(item.href, root).href;
-      link.textContent = item.label;
-      nav.appendChild(link);
-    });
-
-    const palette = headerInner.querySelector(".md-header__option");
-    const search = headerInner.querySelector(".md-search");
-    headerInner.insertBefore(nav, palette || search || null);
+    if (!logo) return new URL("/", window.location.href).href;
+    return /\/index\.html$/.test(new URL(logo.href).pathname) ? new URL(".", logo.href).href : logo.href;
   }
 
   function relativePortalPath() {
     const root = new URL(rootUrl()).pathname.replace(/\/+$/, "");
     const path = window.location.pathname.replace(/\/+$/, "");
-    return path.startsWith(root) ? path.slice(root.length) || "/" : path;
+    const relativePath = path.startsWith(root) ? path.slice(root.length) || "/" : path;
+    return relativePath.replace(/\/index\.html$/, "") || "/";
   }
 
   function currentPageTitle() {
@@ -65,7 +36,8 @@
       "/como-fazer": "Guia",
       "/manual": "Manual",
       "/referencia": "Referências",
-      "/referencia/faq": "FAQ"
+      "/referencia/faq": "FAQ",
+      "/favoritos": "Favoritos"
     };
 
     if (routeTitles[relativePath]) return routeTitles[relativePath];
@@ -132,38 +104,6 @@
     content.insertBefore(breadcrumb, heading);
   }
 
-  function updateHeaderIdentity() {
-    const headerInner = document.querySelector(".md-header__inner");
-    const titleTopics = document.querySelectorAll(".md-header__title .md-header__topic .md-ellipsis");
-    if (!headerInner || !titleTopics.length) return;
-
-    titleTopics.forEach((topic) => {
-      const title = document.createElement("span");
-      title.className = "wc-brand-title";
-      title.textContent = "WCorp";
-
-      const subtitle = document.createElement("span");
-      subtitle.className = "wc-brand-subtitle";
-      subtitle.textContent = "Central de Ajuda";
-
-      topic.replaceChildren(title, subtitle);
-      topic.setAttribute("aria-label", "WCorp — Central de Ajuda");
-    });
-
-    let context = headerInner.querySelector(".wc-page-context");
-    if (!context) {
-      context = document.createElement("span");
-      context.className = "wc-page-context";
-      context.setAttribute("aria-label", "Página atual");
-
-      const palette = headerInner.querySelector(".md-header__option");
-      const search = headerInner.querySelector(".md-search");
-      headerInner.insertBefore(context, palette || search || null);
-    }
-
-    context.textContent = currentPageTitle();
-  }
-
   function isManualPage() {
     const path = window.location.pathname;
     return path.includes("/manual/") || erpTabs.some((tab) => path.includes(tab.section));
@@ -219,7 +159,10 @@
   }
 
   function normalizedPagePath(url) {
-    return `${new URL(url, window.location.href).pathname.replace(/\/+$/, "")}/`;
+    const path = new URL(url, window.location.href).pathname
+      .replace(/\/index\.html$/, "")
+      .replace(/\/+$/, "");
+    return `${path}/`;
   }
 
   function updateManualSubnav() {
@@ -236,25 +179,11 @@
     if (!primaryNav || !tabs) return;
 
     const currentPath = normalizedPagePath(window.location.href);
-    const activeSourceLink = Array.from(primaryNav.querySelectorAll("a.md-nav__link[href]"))
-      .find((link) => normalizedPagePath(link.href) === currentPath);
-    const moduleItem = activeSourceLink
-      ? activeSourceLink.closest("li.md-nav__item--nested")
-      : null;
-    const moduleNav = moduleItem
-      ? moduleItem.querySelector(":scope > nav.md-nav")
-      : null;
+    const activeModuleItems = manualSidebarItems()
+      .find((module) => module.label === activeModule.label)
+      ?.children.filter((item) => item.label.toLocaleLowerCase("pt-BR") !== "visão geral") || [];
 
-    if (!moduleNav) {
-      if (existing) existing.remove();
-      return;
-    }
-
-    const sourceLinks = Array.from(
-      moduleNav.querySelectorAll(":scope > ul.md-nav__list > li.md-nav__item > a.md-nav__link[href]")
-    ).filter((link) => link.textContent.trim().toLocaleLowerCase("pt-BR") !== "visão geral");
-
-    if (!sourceLinks.length) {
+    if (!activeModuleItems.length) {
       if (existing) existing.remove();
       return;
     }
@@ -273,11 +202,11 @@
     if (subnav.dataset.wcModule !== activeModule.section) {
       const fragment = document.createDocumentFragment();
 
-      sourceLinks.forEach((sourceLink) => {
+      activeModuleItems.forEach((sourceItem) => {
         const link = document.createElement("a");
         link.className = "wc-manual-subnav__link";
-        link.href = sourceLink.href;
-        link.textContent = sourceLink.textContent.trim();
+        link.href = sourceItem.href;
+        link.textContent = sourceItem.label;
         fragment.appendChild(link);
       });
 
@@ -320,16 +249,6 @@
     content.appendChild(footer);
   }
 
-  function linksFromPortalBlock(block) {
-    if (!block) return [];
-
-    return Array.from(block.querySelectorAll("li > a[href]")).map((link) => ({
-      label: link.textContent.trim(),
-      href: link.href,
-      external: link.target === "_blank"
-    }));
-  }
-
   function directNavItems(list) {
     if (!list) return [];
 
@@ -345,8 +264,20 @@
     });
   }
 
+  function linksFromPortalBlock(block) {
+    if (!block) return [];
+
+    return Array.from(block.querySelectorAll("li > a[href]")).map((link) => ({
+      label: link.textContent.trim(),
+      href: link.href,
+      external: link.target === "_blank"
+    }));
+  }
+
   function sectionListFor(path) {
-    const primaryNav = document.querySelector(".md-sidebar--primary .md-nav--primary");
+    const primaryNav = document.querySelector(
+      ".md-sidebar--primary .md-sidebar__inner > .md-nav--primary"
+    );
     if (!primaryNav) return null;
 
     const targetPath = normalizedPagePath(new URL(path, rootUrl()));
@@ -367,6 +298,22 @@
       const moduleList = item.querySelector(":scope > nav.md-nav > ul.md-nav__list");
       if (!label || !moduleList) return [];
 
+      const children = directNavItems(moduleList);
+      return [{ label, count: children.length, children }];
+    });
+  }
+
+  function manualSidebarItems() {
+    const manualList = sectionListFor("manual/");
+    if (!manualList) return [];
+
+    return Array.from(manualList.children).flatMap((item) => {
+      if (!item.matches("li.md-nav__item--section.md-nav__item--nested")) return [];
+
+      const label = item.querySelector(":scope > .md-nav__link .md-ellipsis")?.textContent.trim();
+      const moduleList = item.querySelector(":scope > nav.md-nav > ul.md-nav__list");
+      if (!label || !moduleList) return [];
+
       return [{ label, children: directNavItems(moduleList) }];
     });
   }
@@ -379,20 +326,15 @@
       const blocks = Array.from(document.querySelectorAll(".md-content .wc-portal-sidebar .wc-portal-block"));
       return {
         className: "wc-context-home",
-        title: "Início",
+        title: "Nesta página",
         items: [
-          { label: "Início", href: rootUrl(), active: true },
-          { label: "Guia", href: new URL("como-fazer/", rootUrl()).href },
-          { label: "Referências", href: new URL("referencia/", rootUrl()).href },
-          { label: "Manual", href: new URL("manual/", rootUrl()).href },
-          { label: "Suporte", href: new URL("suporte/", rootUrl()).href },
           { label: "Mais acessados", children: linksFromPortalBlock(blocks[0]) },
           { label: "Links úteis", children: linksFromPortalBlock(blocks[1]) }
         ]
       };
     }
 
-    if (relativePath === "/como-fazer") {
+    if (relativePath.startsWith("/como-fazer")) {
       return {
         className: "wc-context-guide",
         title: "Guia",
@@ -401,17 +343,100 @@
     }
 
     if (relativePath.startsWith("/referencia")) {
+      const referenceOverview = normalizedPagePath(new URL("referencia/", rootUrl()));
+      const fiscalUpdates = normalizedPagePath(new URL("referencia/atualizacoes-fiscais/", rootUrl()));
       return {
         className: "wc-context-reference",
         title: "Referências",
-        items: directNavItems(sectionListFor("referencia/")).map((item) => ({
-          ...item,
-          active: normalizedPagePath(item.href) === currentPath
-        }))
+        items: directNavItems(sectionListFor("referencia/"))
+          .filter((item) => ![referenceOverview, fiscalUpdates].includes(normalizedPagePath(item.href)))
+          .map((item) => ({
+            ...item,
+            active: normalizedPagePath(item.href) === currentPath
+          }))
+      };
+    }
+
+    if (relativePath.startsWith("/suporte")) {
+      return {
+        className: "wc-context-support",
+        title: "Suporte",
+        items: [
+          { label: "Erros Comuns", href: new URL("referencia/erros-comuns/", rootUrl()).href },
+          { label: "Links úteis", href: new URL("referencia/links-uteis/", rootUrl()).href },
+          { label: "FAQ", href: new URL("referencia/faq/", rootUrl()).href },
+          { label: "Glossário", href: new URL("referencia/glossario/", rootUrl()).href }
+        ]
+      };
+    }
+
+    if (isManualPage()) {
+      return {
+        className: "wc-context-manual",
+        title: "Manual",
+        items: manualSidebarItems()
       };
     }
 
     return null;
+  }
+
+  function globalSidebarItems() {
+    const relativePath = relativePortalPath();
+    const root = rootUrl();
+    const navigationPaths = [...new Set(Array.from(document.querySelectorAll("a[href]"), (link) => (
+      new URL(link.href, window.location.href).pathname.replace(/\/index\.html$/, "").replace(/\/+$/, "")
+    )))];
+    const guideCount = navigationPaths.filter((path) => path.includes("/como-fazer/")).length;
+    const manualCount = navigationPaths.filter((path) => (
+      erpTabs.some((tab) => path.includes(tab.section)) && !/-geral$/.test(path)
+    )).length;
+
+    return [
+      { label: "Início", icon: "home", href: root, active: relativePath === "/" },
+      { label: "Guia", count: guideCount, icon: "guide", href: new URL("como-fazer/", root).href, active: relativePath.startsWith("/como-fazer") },
+      { label: "Manual", count: manualCount, icon: "manual", href: new URL("manual/", root).href, active: isManualPage() },
+      { label: "Referências", icon: "reference", href: new URL("referencia/", root).href, active: relativePath.startsWith("/referencia") },
+      { label: "Suporte", icon: "support", href: new URL("suporte/", root).href, active: relativePath.startsWith("/suporte") },
+      { label: "Favoritos", icon: "favorite", href: new URL("favoritos/", root).href, active: relativePath.startsWith("/favoritos") }
+    ];
+  }
+
+  function createNavigationIcon(name) {
+    const paths = {
+      home: '<path d="M12 3 2 12h3v8h5v-6h4v6h5v-8h3L12 3z"/>',
+      guide: '<path d="M4 3h6a3 3 0 0 1 2 1 3 3 0 0 1 2-1h6v16h-6a3 3 0 0 0-2 1 3 3 0 0 0-2-1H4V3zm2 2v12h4c.35 0 .69.04 1 .12V6.88A2.98 2.98 0 0 0 10 5H6zm12 0h-4c-.35 0-.69.06-1 .18v11.94c.31-.08.65-.12 1-.12h4V5z"/>',
+      manual: '<path d="M6 2h9l5 5v15H6a2 2 0 0 1-2-2V4c0-1.1.9-2 2-2zm8 2H6v16h12V8h-4V4zm-5 8h6v2H9v-2zm0 4h6v2H9v-2z"/>',
+      reference: '<path d="M3 4h7a2 2 0 0 1 2 2 2 2 0 0 1 2-2h7v15h-7a2 2 0 0 0-2 2 2 2 0 0 0-2-2H3V4zm2 2v11h5c.35 0 .69.06 1 .17V7a1 1 0 0 0-1-1H5zm14 0h-5a1 1 0 0 0-1 1v10.17c.31-.11.65-.17 1-.17h5V6z"/>',
+      support: '<path d="M12 2a8 8 0 0 0-8 8v1a3 3 0 0 0 3 3h1V9H6.08A6 6 0 0 1 18 9h-2v7h2a2 2 0 0 1-2 2h-3v-1h-3v3h6a4 4 0 0 0 4-4v-2.18A3 3 0 0 0 21 11v-1a8 8 0 0 0-8-8h-1z"/>',
+      favorite: '<path d="m12 3 2.78 5.63 6.22.9-4.5 4.39 1.06 6.2L12 17.2l-5.56 2.92 1.06-6.2L3 9.53l6.22-.9L12 3z"/>'
+    };
+    if (!paths[name]) return null;
+
+    const icon = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    icon.classList.add("wc-context-nav__icon");
+    icon.setAttribute("viewBox", "0 0 24 24");
+    icon.setAttribute("aria-hidden", "true");
+    icon.innerHTML = paths[name];
+    return icon;
+  }
+
+  function createSidebarNav(titleText, items, className) {
+    const nav = document.createElement("nav");
+    nav.className = `md-nav md-nav--primary wc-context-nav ${className}`;
+    nav.setAttribute("aria-label", titleText);
+
+    const title = document.createElement("div");
+    title.className = "wc-context-nav__title";
+    title.textContent = titleText;
+
+    const list = document.createElement("ul");
+    list.className = "md-nav__list";
+    const groups = [];
+    items.forEach((item) => list.appendChild(createContextSidebarItem(item, groups)));
+
+    nav.append(title, list);
+    return nav;
   }
 
   function createContextSidebarItem(item, groups) {
@@ -419,11 +444,31 @@
     listItem.className = "md-nav__item wc-context-nav__item";
 
     if (!item.children) {
+      if (!item.href) {
+        const label = document.createElement("span");
+        label.className = "md-nav__link wc-context-nav__label";
+        label.textContent = item.label;
+        listItem.appendChild(label);
+        return listItem;
+      }
+
       const link = document.createElement("a");
       link.className = "md-nav__link";
       if (item.active) link.classList.add("md-nav__link--active");
       link.href = item.href;
-      link.textContent = item.label;
+      const icon = item.icon ? createNavigationIcon(item.icon) : null;
+      if (icon) link.appendChild(icon);
+
+      const text = document.createElement("span");
+      text.textContent = item.label;
+      link.appendChild(text);
+      if (Number.isFinite(item.count)) {
+        const count = document.createElement("span");
+        count.className = "wc-context-nav__count";
+        count.textContent = String(item.count);
+        count.setAttribute("aria-label", `${item.count} conteúdos`);
+        link.appendChild(count);
+      }
       if (item.external) {
         link.target = "_blank";
         link.rel = "noopener";
@@ -436,7 +481,16 @@
     const trigger = document.createElement("button");
     trigger.type = "button";
     trigger.className = "wc-context-nav__trigger";
-    trigger.textContent = item.label;
+    const triggerText = document.createElement("span");
+    triggerText.textContent = item.label;
+    trigger.appendChild(triggerText);
+    if (Number.isFinite(item.count)) {
+      const count = document.createElement("span");
+      count.className = "wc-context-nav__count";
+      count.textContent = String(item.count);
+      count.setAttribute("aria-label", `${item.count} conteúdos`);
+      trigger.appendChild(count);
+    }
     trigger.setAttribute("aria-expanded", "false");
 
     const childNav = document.createElement("nav");
@@ -449,6 +503,11 @@
     childNav.appendChild(childList);
     listItem.append(trigger, childNav);
     groups.push(listItem);
+
+    if (item.children.some((child) => child.active)) {
+      listItem.classList.add("wc-context-nav__group--open");
+      trigger.setAttribute("aria-expanded", "true");
+    }
 
     trigger.addEventListener("click", () => {
       const shouldOpen = !listItem.classList.contains("wc-context-nav__group--open");
@@ -472,83 +531,38 @@
     primarySidebar.querySelector(".wc-context-sidebar-host")?.remove();
     document.body.classList.remove(
       "wc-context-sidebar-active",
+      "wc-context-sidebar-custom",
       "wc-context-home",
       "wc-context-guide",
-      "wc-context-reference"
+      "wc-context-reference",
+      "wc-context-support",
+      "wc-context-manual",
+      "wc-context-favorites"
     );
 
     const config = contextSidebarConfig();
-    if (!config) return;
-
     const host = document.createElement("div");
     host.className = "wc-context-sidebar-host";
 
-    const nav = document.createElement("nav");
-    nav.className = "md-nav md-nav--primary wc-context-nav";
-    nav.setAttribute("aria-label", config.title);
-
-    const title = document.createElement("div");
-    title.className = "wc-context-nav__title";
-    title.textContent = config.title;
-
-    const list = document.createElement("ul");
-    list.className = "md-nav__list";
-    const groups = [];
-    config.items.forEach((item) => list.appendChild(createContextSidebarItem(item, groups)));
-
-    nav.append(title, list);
-    host.appendChild(nav);
-    primarySidebar.appendChild(host);
-    document.body.classList.add("wc-context-sidebar-active", config.className);
-  }
-
-  function cleanupDetachedVideoUrls() {
-    videoObjectUrls.forEach((url, video) => {
-      if (!video.isConnected) {
-        URL.revokeObjectURL(url);
-        videoObjectUrls.delete(video);
+    host.appendChild(createSidebarNav("Navegar", globalSidebarItems(), "wc-global-nav"));
+    if (config) {
+      if (config.items.length) {
+        host.appendChild(createSidebarNav(config.title, config.items, "wc-page-nav"));
       }
-    });
-  }
-
-  async function prepareSeekableVideo(video) {
-    if (video.dataset.wcSeekable) return;
-
-    const source = video.querySelector("source[src]");
-    if (!source) return;
-
-    video.dataset.wcSeekable = "loading";
-
-    try {
-      const response = await fetch(source.src, {
-        cache: "no-store",
-        headers: { Range: "bytes=0-0" }
-      });
-
-      if (response.status === 206) {
-        if (response.body) await response.body.cancel();
-        video.dataset.wcSeekable = "native";
-        return;
-      }
-
-      if (!response.ok) throw new Error(`Falha ao carregar vídeo: ${response.status}`);
-
-      const blob = await response.blob();
-      if (!video.isConnected) return;
-
-      const objectUrl = URL.createObjectURL(blob);
-      videoObjectUrls.set(video, objectUrl);
-      video.src = objectUrl;
-      video.load();
-      video.dataset.wcSeekable = "blob";
-    } catch (_error) {
-      video.dataset.wcSeekable = "native";
+      document.body.classList.add("wc-context-sidebar-custom", config.className);
     }
-  }
 
-  function prepareSeekableVideos() {
-    cleanupDetachedVideoUrls();
-    document.querySelectorAll("video.wc-video").forEach(prepareSeekableVideo);
+    primarySidebar.prepend(host);
+    document.body.classList.add("wc-context-sidebar-active");
+
+    const scrollContainer = primarySidebar.closest(".md-sidebar__scrollwrap") || primarySidebar;
+    const resetScroll = () => {
+      primarySidebar.scrollTop = 0;
+      scrollContainer.scrollTop = 0;
+    };
+    resetScroll();
+    requestAnimationFrame(resetScroll);
+    window.setTimeout(resetScroll, 120);
   }
 
   function isGuideOverview() {
@@ -674,16 +688,13 @@
   }
 
   function initWcorpUi() {
-    addShortcuts();
-    updateHeaderIdentity();
     addBreadcrumb();
     replaceTabsWithErpMenu();
-    updateManualSubnav();
     configureContextSidebar();
+    updateManualSubnav();
     focusGuideSidebar();
     replaceGuideOverviewToc();
     addSupportFooter();
-    prepareSeekableVideos();
   }
 
   document.addEventListener("DOMContentLoaded", initWcorpUi);
