@@ -138,7 +138,16 @@
     if (!headerInner || !titleTopics.length) return;
 
     titleTopics.forEach((topic) => {
-      topic.textContent = "Central de Ajuda WCorp";
+      const title = document.createElement("span");
+      title.className = "wc-brand-title";
+      title.textContent = "WCorp";
+
+      const subtitle = document.createElement("span");
+      subtitle.className = "wc-brand-subtitle";
+      subtitle.textContent = "Central de Ajuda";
+
+      topic.replaceChildren(title, subtitle);
+      topic.setAttribute("aria-label", "WCorp — Central de Ajuda");
     });
 
     let context = headerInner.querySelector(".wc-page-context");
@@ -311,44 +320,186 @@
     content.appendChild(footer);
   }
 
-  function movePortalSidebar() {
-    const primarySidebar = document.querySelector(".md-sidebar--primary .md-sidebar__inner");
-    const portalSidebar = document.querySelector(".md-content .wc-portal-sidebar");
-    const portalMarker = document.querySelector(".md-content .wc-portal-sidebar-marker");
-    const existingHost = primarySidebar ? primarySidebar.querySelector(".wc-portal-sidebar-host") : null;
+  function linksFromPortalBlock(block) {
+    if (!block) return [];
 
-    if (!portalSidebar && !portalMarker) {
-      if (existingHost) existingHost.remove();
-      document.body.classList.remove("wc-has-portal-sidebar");
-      return;
+    return Array.from(block.querySelectorAll("li > a[href]")).map((link) => ({
+      label: link.textContent.trim(),
+      href: link.href,
+      external: link.target === "_blank"
+    }));
+  }
+
+  function directNavItems(list) {
+    if (!list) return [];
+
+    return Array.from(list.children).flatMap((item) => {
+      const link = item.querySelector(":scope > a.md-nav__link[href]");
+      if (!link) return [];
+
+      return [{
+        label: link.textContent.trim(),
+        href: link.href,
+        active: normalizedPagePath(link.href) === normalizedPagePath(window.location.href)
+      }];
+    });
+  }
+
+  function sectionListFor(path) {
+    const primaryNav = document.querySelector(".md-sidebar--primary .md-nav--primary");
+    if (!primaryNav) return null;
+
+    const targetPath = normalizedPagePath(new URL(path, rootUrl()));
+    const overviewLink = Array.from(primaryNav.querySelectorAll("a.md-nav__link[href]"))
+      .find((link) => normalizedPagePath(link.href) === targetPath);
+
+    return overviewLink ? overviewLink.closest("li.md-nav__item")?.parentElement : null;
+  }
+
+  function guideSidebarItems() {
+    const guideList = sectionListFor("como-fazer/");
+    if (!guideList) return [];
+
+    return Array.from(guideList.children).flatMap((item) => {
+      if (!item.matches("li.md-nav__item--section.md-nav__item--nested")) return [];
+
+      const label = item.querySelector(":scope > .md-nav__link .md-ellipsis")?.textContent.trim();
+      const moduleList = item.querySelector(":scope > nav.md-nav > ul.md-nav__list");
+      if (!label || !moduleList) return [];
+
+      return [{ label, children: directNavItems(moduleList) }];
+    });
+  }
+
+  function contextSidebarConfig() {
+    const relativePath = relativePortalPath();
+    const currentPath = normalizedPagePath(window.location.href);
+
+    if (relativePath === "/") {
+      const blocks = Array.from(document.querySelectorAll(".md-content .wc-portal-sidebar .wc-portal-block"));
+      return {
+        className: "wc-context-home",
+        title: "Início",
+        items: [
+          { label: "Início", href: rootUrl(), active: true },
+          { label: "Guia", href: new URL("como-fazer/", rootUrl()).href },
+          { label: "Referências", href: new URL("referencia/", rootUrl()).href },
+          { label: "Manual", href: new URL("manual/", rootUrl()).href },
+          { label: "Suporte", href: new URL("suporte/", rootUrl()).href },
+          { label: "Mais acessados", children: linksFromPortalBlock(blocks[0]) },
+          { label: "Links úteis", children: linksFromPortalBlock(blocks[1]) }
+        ]
+      };
     }
 
+    if (relativePath === "/como-fazer") {
+      return {
+        className: "wc-context-guide",
+        title: "Guia",
+        items: guideSidebarItems()
+      };
+    }
+
+    if (relativePath.startsWith("/referencia")) {
+      return {
+        className: "wc-context-reference",
+        title: "Referências",
+        items: directNavItems(sectionListFor("referencia/")).map((item) => ({
+          ...item,
+          active: normalizedPagePath(item.href) === currentPath
+        }))
+      };
+    }
+
+    return null;
+  }
+
+  function createContextSidebarItem(item, groups) {
+    const listItem = document.createElement("li");
+    listItem.className = "md-nav__item wc-context-nav__item";
+
+    if (!item.children) {
+      const link = document.createElement("a");
+      link.className = "md-nav__link";
+      if (item.active) link.classList.add("md-nav__link--active");
+      link.href = item.href;
+      link.textContent = item.label;
+      if (item.external) {
+        link.target = "_blank";
+        link.rel = "noopener";
+      }
+      listItem.appendChild(link);
+      return listItem;
+    }
+
+    listItem.classList.add("wc-context-nav__group");
+    const trigger = document.createElement("button");
+    trigger.type = "button";
+    trigger.className = "wc-context-nav__trigger";
+    trigger.textContent = item.label;
+    trigger.setAttribute("aria-expanded", "false");
+
+    const childNav = document.createElement("nav");
+    childNav.className = "md-nav wc-context-nav__children";
+    childNav.setAttribute("aria-label", item.label);
+
+    const childList = document.createElement("ul");
+    childList.className = "md-nav__list";
+    item.children.forEach((child) => childList.appendChild(createContextSidebarItem(child, groups)));
+    childNav.appendChild(childList);
+    listItem.append(trigger, childNav);
+    groups.push(listItem);
+
+    trigger.addEventListener("click", () => {
+      const shouldOpen = !listItem.classList.contains("wc-context-nav__group--open");
+      groups.forEach((group) => {
+        group.classList.remove("wc-context-nav__group--open");
+        group.querySelector(":scope > .wc-context-nav__trigger")?.setAttribute("aria-expanded", "false");
+      });
+      if (shouldOpen) {
+        listItem.classList.add("wc-context-nav__group--open");
+        trigger.setAttribute("aria-expanded", "true");
+      }
+    });
+
+    return listItem;
+  }
+
+  function configureContextSidebar() {
+    const primarySidebar = document.querySelector(".md-sidebar--primary .md-sidebar__inner");
     if (!primarySidebar) return;
 
-    if (!portalSidebar && existingHost && existingHost.querySelector(".wc-portal-sidebar")) {
-      document.body.classList.add("wc-has-portal-sidebar");
-      return;
-    }
+    primarySidebar.querySelector(".wc-context-sidebar-host")?.remove();
+    document.body.classList.remove(
+      "wc-context-sidebar-active",
+      "wc-context-home",
+      "wc-context-guide",
+      "wc-context-reference"
+    );
 
-    const host = existingHost || document.createElement("div");
-    host.className = "wc-portal-sidebar-host";
+    const config = contextSidebarConfig();
+    if (!config) return;
 
-    if (!existingHost) {
-      primarySidebar.appendChild(host);
-    }
+    const host = document.createElement("div");
+    host.className = "wc-context-sidebar-host";
 
-    if (portalSidebar && !portalMarker) {
-      const marker = document.createElement("span");
-      marker.className = "wc-portal-sidebar-marker";
-      marker.hidden = true;
-      portalSidebar.parentNode.insertBefore(marker, portalSidebar);
-    }
+    const nav = document.createElement("nav");
+    nav.className = "md-nav md-nav--primary wc-context-nav";
+    nav.setAttribute("aria-label", config.title);
 
-    if (portalSidebar && !host.contains(portalSidebar)) {
-      host.appendChild(portalSidebar);
-    }
+    const title = document.createElement("div");
+    title.className = "wc-context-nav__title";
+    title.textContent = config.title;
 
-    document.body.classList.add("wc-has-portal-sidebar");
+    const list = document.createElement("ul");
+    list.className = "md-nav__list";
+    const groups = [];
+    config.items.forEach((item) => list.appendChild(createContextSidebarItem(item, groups)));
+
+    nav.append(title, list);
+    host.appendChild(nav);
+    primarySidebar.appendChild(host);
+    document.body.classList.add("wc-context-sidebar-active", config.className);
   }
 
   function cleanupDetachedVideoUrls() {
@@ -453,86 +604,6 @@
     document.body.classList.add("wc-guide-nav-focused");
   }
 
-  function configureGuideOverviewSidebar() {
-    const primaryNav = document.querySelector(".md-sidebar--primary .md-nav--primary");
-    if (!primaryNav) return;
-
-    primaryNav.querySelectorAll(".wc-guide-overview-module").forEach((item) => {
-      item.classList.remove("wc-guide-overview-module", "wc-guide-overview-module--open");
-      const originalTrigger = item.querySelector(":scope > .wc-guide-overview-original-trigger");
-      if (originalTrigger) originalTrigger.classList.remove("wc-guide-overview-original-trigger");
-      const trigger = item.querySelector(":scope > button.wc-guide-overview-trigger");
-      if (trigger) trigger.hidden = true;
-    });
-    primaryNav.querySelectorAll(".wc-guide-overview-home-link").forEach((item) => {
-      item.classList.remove("wc-guide-overview-home-link");
-    });
-    document.body.classList.remove("wc-guide-overview");
-
-    if (!isGuideOverview()) return;
-
-    const currentPath = normalizedPagePath(window.location.href);
-    const overviewLink = Array.from(primaryNav.querySelectorAll("a.md-nav__link[href]"))
-      .find((link) => normalizedPagePath(link.href) === currentPath);
-    const guideList = overviewLink
-      ? overviewLink.closest("li.md-nav__item")?.parentElement
-      : null;
-    if (!guideList) return;
-
-    const overviewItem = overviewLink.closest("li.md-nav__item");
-    if (overviewItem) overviewItem.classList.add("wc-guide-overview-home-link");
-
-    const modules = Array.from(guideList.children)
-      .filter((item) => item.matches("li.md-nav__item--section.md-nav__item--nested"));
-
-    modules.forEach((item) => {
-      item.classList.add("wc-guide-overview-module");
-      const toggle = item.querySelector(":scope > input.md-nav__toggle");
-      const originalTrigger = item.querySelector(":scope > .md-nav__link");
-      const moduleNav = item.querySelector(":scope > nav.md-nav");
-      if (!toggle || !originalTrigger || !moduleNav) return;
-
-      let trigger = item.querySelector(":scope > button.wc-guide-overview-trigger");
-      if (!trigger) {
-        trigger = document.createElement("button");
-        trigger.type = "button";
-        trigger.className = "wc-guide-overview-trigger";
-        trigger.textContent = originalTrigger.textContent.trim();
-        item.insertBefore(trigger, moduleNav);
-      }
-
-      toggle.checked = false;
-      item.classList.remove("wc-guide-overview-module--open");
-      originalTrigger.classList.add("wc-guide-overview-original-trigger");
-      trigger.hidden = false;
-      trigger.setAttribute("aria-expanded", "false");
-
-      if (trigger.dataset.wcGuideAccordion) return;
-
-      trigger.dataset.wcGuideAccordion = "true";
-      trigger.addEventListener("click", () => {
-        if (!document.body.classList.contains("wc-guide-overview")) return;
-        const shouldOpen = !item.classList.contains("wc-guide-overview-module--open");
-
-        modules.forEach((otherItem) => {
-          const otherToggle = otherItem.querySelector(":scope > input.md-nav__toggle");
-          if (otherToggle) otherToggle.checked = false;
-          otherItem.classList.remove("wc-guide-overview-module--open");
-          const otherTrigger = otherItem.querySelector(":scope > button.wc-guide-overview-trigger");
-          if (otherTrigger) otherTrigger.setAttribute("aria-expanded", "false");
-        });
-
-        if (shouldOpen) {
-          toggle.checked = true;
-          item.classList.add("wc-guide-overview-module--open");
-          trigger.setAttribute("aria-expanded", "true");
-        }
-      });
-    });
-
-    document.body.classList.add("wc-guide-overview");
-  }
-
   function createQuickLinksSection(title, items, root) {
     const section = document.createElement("section");
     section.className = "wc-guide-quicklinks__section";
@@ -608,9 +679,8 @@
     addBreadcrumb();
     replaceTabsWithErpMenu();
     updateManualSubnav();
-    movePortalSidebar();
+    configureContextSidebar();
     focusGuideSidebar();
-    configureGuideOverviewSidebar();
     replaceGuideOverviewToc();
     addSupportFooter();
     prepareSeekableVideos();
