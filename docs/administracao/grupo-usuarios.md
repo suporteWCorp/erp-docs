@@ -6,9 +6,13 @@ Esta página documenta a tela de grupos de usuários do WCorp.
 
 Use esta rotina para organizar permissões de acesso por perfil, função ou área de trabalho.
 
-## Print da tela com caminho
+## Tela
 
-`Administração > Grupo Usuários`
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Administração > Grupo Usuários</code></p>
+
+</div>
 
 ## Avisos
 

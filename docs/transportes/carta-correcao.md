@@ -4,9 +4,13 @@
 
 Emitir carta de correção para documentos de transporte.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Carta de Correção
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Transportes > Carta de Correção</code></p>
+
+</div>
 
 ## Quando usar
 

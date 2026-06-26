@@ -4,9 +4,13 @@
 
 Cadastrar ou consultar categorias usadas para organizar materiais.
 
-## Print da tela com caminho
+## Tela
 
-Materiais > Categoria de Materiais
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Materiais > Categoria de Materiais</code></p>
+
+</div>
 
 ## Quando usar
 

@@ -4,9 +4,13 @@
 
 Cadastrar, consultar ou vincular transportadoras ao processo de venda.
 
-## Print da tela com caminho
+## Tela
 
-Comercial > Transportadora
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Comercial > Transportadora</code></p>
+
+</div>
 
 ## Quando usar
 

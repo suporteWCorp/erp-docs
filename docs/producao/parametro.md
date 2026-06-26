@@ -4,9 +4,13 @@
 
 Configurar ou consultar parâmetros de produção.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Parâmetro
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Produção > Parâmetro</code></p>
+
+</div>
 
 ## Quando usar
 

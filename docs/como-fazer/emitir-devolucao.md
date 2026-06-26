@@ -11,11 +11,17 @@ error_tags:
 
 ## Pré-requisitos
 
-- Documento fiscal original localizado.
-- [Como cadastrar um cliente](cadastrar-cliente.md){: target="_blank" rel="noopener" } ou [Como cadastrar um fornecedor](cadastrar-fornecedor.md){: target="_blank" rel="noopener" }, conforme o caso.
-- [Como cadastrar um material](cadastrar-material.md){: target="_blank" rel="noopener" }.
-- [Como cadastrar uma natureza de operação](cadastrar-natureza-operacao.md){: target="_blank" rel="noopener" } para devolução.
-- Acesso à tela [Manual > Comercial > Devolução](../comercial/devolucao.md){: target="_blank" rel="noopener" } ou [Manual > Faturamento > Nota Fiscal](../faturamento/faturamento-nf.md){: target="_blank" rel="noopener" }.
+<div class="wc-prereq-list" markdown>
+
+- Documento fiscal original localizado
+- Cliente ou fornecedor cadastrado<br>
+  [Como cadastrar um cliente.](cadastrar-cliente.md){: target="_blank" rel="noopener" } ou [Como cadastrar um fornecedor.](cadastrar-fornecedor.md){: target="_blank" rel="noopener" }
+- Material cadastrado<br>
+  [Como cadastrar um material.](cadastrar-material.md){: target="_blank" rel="noopener" }
+- Natureza de operação para devolução cadastrada<br>
+  [Como cadastrar uma natureza de operação.](cadastrar-natureza-operacao.md){: target="_blank" rel="noopener" }
+
+</div>
 
 ## Avisos
 
@@ -46,4 +52,4 @@ Use quando uma venda ou compra precisa ser devolvida por erro, desistência, tro
 
 - [Como emitir uma NF-e](faturar-nota.md){: target="_blank" rel="noopener" }
 - [Como cancelar uma NF-e](cancelar-nfe.md){: target="_blank" rel="noopener" }
-- [Manual > Comercial > Devolução](../comercial/devolucao.md){: target="_blank" rel="noopener" }
+- [Consultar manual de devolução](../comercial/devolucao.md){: target="_blank" rel="noopener" }

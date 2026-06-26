@@ -4,9 +4,13 @@
 
 Gerar ou consultar etiquetas de materiais, lotes ou movimentações.
 
-## Print da tela com caminho
+## Tela
 
-Materiais > Etiqueta
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Materiais > Etiqueta</code></p>
+
+</div>
 
 ## Quando usar
 

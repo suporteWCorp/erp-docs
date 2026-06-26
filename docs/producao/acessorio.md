@@ -4,9 +4,13 @@
 
 Cadastrar ou consultar acessórios vinculados à produção.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Acessório
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Produção > Acessório</code></p>
+
+</div>
 
 ## Quando usar
 

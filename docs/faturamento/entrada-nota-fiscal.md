@@ -4,9 +4,13 @@
 
 Registrar entrada de nota fiscal no WCorp, geralmente vinculada a compras, remessas ou movimentações de entrada.
 
-## Print da tela com caminho
+## Tela
 
-Faturamento > Entrada de Nota Fiscal
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Faturamento > Entrada de Nota Fiscal</code></p>
+
+</div>
 
 ## Quando usar
 

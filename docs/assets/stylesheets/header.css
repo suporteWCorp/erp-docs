@@ -5,40 +5,40 @@
 
 .md-header__button.md-logo {
     align-items: center;
-    background: url("../wcorp-logo.png") center / 260px auto no-repeat;
+    background: url("../wcorp-logo.png") center / 200px auto no-repeat;
     display: flex;
-    flex: 0 0 130px;
-    height: 4.4rem;
+    flex: 0 0 104px;
+    height: 3.35rem;
     margin: 0 2px 0 0;
     overflow: hidden;
     padding: 0;
-    width: 130px;
+    width: 104px;
 }
 
 .md-header__button.md-logo img {
-    height: 4.4rem !important;
+    height: 3.35rem !important;
     margin: 0;
-    max-height: 4.4rem;
+    max-height: 3.35rem;
     min-height: 0;
     opacity: 0;
-    width: 130px !important;
+    width: 104px !important;
 }
 
 .md-header__inner {
     align-items: center;
     display: flex;
-    gap: 10px;
+    gap: 8px;
     height: auto;
-    min-height: 4.8rem;
-    padding-right: 1.1rem;
+    min-height: 3.6rem;
+    padding-right: 0.95rem;
     position: relative;
 }
 
 .md-header__title {
-    flex: 0 0 190px;
+    flex: 0 0 166px;
     font-weight: 700;
-    margin-left: -18px;
-    min-width: 190px;
+    margin-left: -12px;
+    min-width: 166px;
     position: relative;
 }
 
@@ -69,14 +69,14 @@
 }
 
 .wc-brand-title {
-    font-size: 1.26rem;
+    font-size: 1.08rem;
     font-weight: 750;
     line-height: 1.05;
 }
 
 .wc-brand-subtitle {
     color: rgba(255, 255, 255, 0.84);
-    font-size: 0.84rem;
+    font-size: 0.72rem;
     font-weight: 500;
     line-height: 1.15;
     margin-top: 0.08rem;
@@ -113,7 +113,7 @@
         margin: 0;
         min-width: 0;
         position: absolute;
-        top: 1.2rem;
+        top: 0.7rem;
         width: var(--wc-search-width) !important;
     }
 
@@ -124,18 +124,18 @@
 
 @media screen and (min-width: 76.25em) and (max-width: 88em) {
     .md-header__button.md-logo {
-        background-size: 220px auto;
-        flex-basis: 112px;
-        width: 112px;
+        background-size: 180px auto;
+        flex-basis: 96px;
+        width: 96px;
     }
 
     .md-header__button.md-logo img {
-        width: 112px !important;
+        width: 96px !important;
     }
 
     .md-header__title {
-        flex-basis: 180px;
-        min-width: 180px;
+        flex-basis: 158px;
+        min-width: 158px;
     }
 }
 

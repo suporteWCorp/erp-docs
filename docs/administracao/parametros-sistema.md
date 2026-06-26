@@ -4,9 +4,13 @@
 
 Configurar ou consultar parâmetros gerais do sistema.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Parâmetros Sistema
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Administração > Parâmetros Sistema</code></p>
+
+</div>
 
 ## Quando usar
 

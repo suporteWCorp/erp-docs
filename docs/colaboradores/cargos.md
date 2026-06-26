@@ -4,9 +4,13 @@
 
 Cadastrar ou consultar cargos usados no cadastro de colaboradores.
 
-## Print da tela com caminho
+## Tela
 
-Colaboradores > Cargos
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Colaboradores > Cargos</code></p>
+
+</div>
 
 ## Quando usar
 

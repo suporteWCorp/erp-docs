@@ -14,9 +14,13 @@ Nesta tela é possível:
 - organizar as Regras conforme o tipo de operação;
 - revisar os critérios utilizados pelo WCorp durante o cálculo da nota fiscal.
 
-## Print da tela com caminho
+## Tela
 
-`Administração > Natureza de Operação`
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Administração > Natureza de Operação</code></p>
+
+</div>
 
 ## Passo a passo
 

@@ -11,8 +11,13 @@ error_tags:
 <!-- Liste somente dependências reais. Remova a seção quando não houver nenhuma. -->
 ## Pré-requisitos
 
-- Liste cadastros e configurações necessários.
-- Vincule o Guia correspondente quando ele existir.
+<div class="wc-prereq-list" markdown>
+
+- Nome do pré-requisito<br>
+  [Como cadastrar ou configurar o pré-requisito](caminho-do-guia.md){: target="_blank" rel="noopener" }
+- Configuração obrigatória sem Guia correspondente
+
+</div>
 
 <!-- Use somente para exigências específicas do procedimento. -->
 ## Avisos

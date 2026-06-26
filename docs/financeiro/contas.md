@@ -4,9 +4,13 @@
 
 Cadastrar ou consultar contas financeiras usadas nas movimentações do WCorp.
 
-## Print da tela com caminho
+## Tela
 
-Financeiro > Contas
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Financeiro > Contas</code></p>
+
+</div>
 
 ## Quando usar
 

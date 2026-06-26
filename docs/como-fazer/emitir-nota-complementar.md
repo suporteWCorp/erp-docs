@@ -11,10 +11,14 @@ error_tags:
 
 ## Pré-requisitos
 
-- NF-e original localizada.
-- Dados do complemento definidos.
-- [Como cadastrar uma natureza de operação](cadastrar-natureza-operacao.md){: target="_blank" rel="noopener" } adequada para complemento.
-- Acesso à tela [Manual > Faturamento > Nota Fiscal](../faturamento/faturamento-nf.md){: target="_blank" rel="noopener" }.
+<div class="wc-prereq-list" markdown>
+
+- NF-e original localizada
+- Dados do complemento definidos
+- Natureza de operação adequada para complemento cadastrada<br>
+  [Como cadastrar uma natureza de operação.](cadastrar-natureza-operacao.md){: target="_blank" rel="noopener" }
+
+</div>
 
 ## Avisos
 
@@ -46,4 +50,4 @@ Use quando a operação original precisa de complemento fiscal autorizado pela r
 
 - [Como emitir uma NF-e](faturar-nota.md){: target="_blank" rel="noopener" }
 - [Como emitir uma carta de correção](emitir-carta-correcao.md){: target="_blank" rel="noopener" }
-- [Manual > Faturamento > Nota Fiscal](../faturamento/faturamento-nf.md){: target="_blank" rel="noopener" }
+- [Consultar manual de nota fiscal](../faturamento/faturamento-nf.md){: target="_blank" rel="noopener" }

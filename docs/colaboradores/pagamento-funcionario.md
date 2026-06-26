@@ -4,9 +4,13 @@
 
 Registrar ou acompanhar pagamentos de funcionários.
 
-## Print da tela com caminho
+## Tela
 
-Colaboradores > Pagamento de Funcionário
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Colaboradores > Pagamento de Funcionário</code></p>
+
+</div>
 
 ## Quando usar
 

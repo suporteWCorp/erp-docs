@@ -4,9 +4,13 @@
 
 Controlar faturamento de rotinas de transporte.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Faturamento
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Transportes > Faturamento</code></p>
+
+</div>
 
 ## Quando usar
 

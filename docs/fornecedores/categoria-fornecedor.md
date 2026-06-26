@@ -4,9 +4,13 @@
 
 Cadastrar ou consultar categorias usadas para classificar fornecedores.
 
-## Print da tela com caminho
+## Tela
 
-Fornecedores > Categoria de Fornecedor
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Fornecedores > Categoria de Fornecedor</code></p>
+
+</div>
 
 ## Quando usar
 

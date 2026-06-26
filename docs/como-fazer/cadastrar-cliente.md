@@ -12,8 +12,11 @@ error_tags:
 
 ## Pré-requisitos
 
-!!! prerequisite "Antes de começar"
-    - Tenha em mãos o CNPJ, CPF ou os dados cadastrais do cliente.
+<div class="wc-prereq-list" markdown>
+
+- CNPJ, CPF ou dados cadastrais do cliente em mãos
+
+</div>
 
 ## Permissões
 
@@ -24,6 +27,13 @@ error_tags:
 
 ## Print do caminho
 ![Onde encontrar](../assets/images/guias/comercial_clientes.png)
+
+## Demonstração em vídeo
+<video class="wc-video" controls preload="auto" playsinline poster="../../assets/images/guias/comercial_clientes.png">
+  <source src="../../assets/videos/comercial_clientes.mp4" type="video/mp4">
+  Seu navegador não conseguiu reproduzir este vídeo.
+</video>
+
 
 ## Como fazer
 
@@ -38,12 +48,6 @@ error_tags:
 
 O cliente fica salvo e disponível para seleção em pedidos, faturamento, financeiro e consultas.
 
-## Demonstração em vídeo
-<video class="wc-video" controls preload="auto" playsinline poster="../../assets/images/guias/comercial_clientes.png">
-  <source src="../../assets/videos/comercial_clientes.mp4" type="video/mp4">
-  Seu navegador não conseguiu reproduzir este vídeo.
-</video>
-
 ## Quando utilizar
 
 Use quando um cliente ainda não existir no WCorp ou quando for necessário completar os dados cadastrais antes de vender ou faturar.
@@ -53,4 +57,4 @@ Use quando um cliente ainda não existir no WCorp ou quando for necessário comp
 - [Consultar CNPJ](../referencia/links-uteis.md){: target="_blank" rel="noopener" }
 - [Como gerar um pedido](fazer-pedido-venda.md){: target="_blank" rel="noopener" }
 - [Como emitir uma NF-e](faturar-nota.md){: target="_blank" rel="noopener" }
-- [Manual > Comercial > Clientes](../comercial/comercial-clientes.md){: target="_blank" rel="noopener" }
+- [Consultar manual de clientes](../comercial/comercial-clientes.md){: target="_blank" rel="noopener" }

@@ -4,9 +4,13 @@
 
 Cadastrar ou consultar equipamentos usados na produção.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Equipamento
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Produção > Equipamento</code></p>
+
+</div>
 
 ## Quando usar
 

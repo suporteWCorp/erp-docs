@@ -4,9 +4,13 @@
 
 Cadastrar ou consultar atividades vinculadas a serviços.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Cadastro de Atividade
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Serviços > Cadastro de Atividade</code></p>
+
+</div>
 
 ## Quando usar
 

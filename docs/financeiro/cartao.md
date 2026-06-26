@@ -4,9 +4,13 @@
 
 Consultar ou controlar operações financeiras relacionadas a cartão.
 
-## Print da tela com caminho
+## Tela
 
-Financeiro > Cartão
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Financeiro > Cartão</code></p>
+
+</div>
 
 ## Quando usar
 

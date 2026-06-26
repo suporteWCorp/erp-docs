@@ -6,9 +6,13 @@ Esta página documenta a tela de NCMs do WCorp.
 
 Use esta rotina para consultar ou manter classificações fiscais de mercadorias utilizadas em cadastros e documentos fiscais.
 
-## Print da tela com caminho
+## Tela
 
-`Administração > NCMS`
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Administração > NCMS</code></p>
+
+</div>
 
 ## Avisos
 

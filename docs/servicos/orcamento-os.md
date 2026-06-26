@@ -4,9 +4,13 @@
 
 Criar, consultar ou acompanhar orçamentos de ordem de serviço.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Orçamento OS
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Serviços > Orçamento OS</code></p>
+
+</div>
 
 ## Quando usar
 

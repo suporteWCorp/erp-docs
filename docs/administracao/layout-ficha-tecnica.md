@@ -4,9 +4,13 @@
 
 Configurar ou consultar layouts de ficha técnica.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Layout de Ficha Técnica
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Administração > Layout de Ficha Técnica</code></p>
+
+</div>
 
 ## Quando usar
 

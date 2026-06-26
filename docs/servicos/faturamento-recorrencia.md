@@ -4,9 +4,13 @@
 
 Controlar faturamentos recorrentes vinculados a serviços.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Faturamento de Recorrência
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Serviços > Faturamento de Recorrência</code></p>
+
+</div>
 
 ## Quando usar
 

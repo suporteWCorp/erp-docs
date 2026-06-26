@@ -4,9 +4,13 @@
 
 Registrar ou consultar inspeções relacionadas à produção.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Inspeção
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Produção > Inspeção</code></p>
+
+</div>
 
 ## Quando usar
 

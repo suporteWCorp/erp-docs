@@ -4,9 +4,13 @@
 
 Emitir ou consultar manifesto de transporte.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Manifesto de Transporte
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Transportes > Manifesto de Transporte</code></p>
+
+</div>
 
 ## Quando usar
 

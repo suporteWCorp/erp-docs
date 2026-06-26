@@ -4,9 +4,13 @@
 
 Criar, consultar ou acompanhar ordens de serviço.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Ordem de Serviço
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Serviços > Ordem de Serviço</code></p>
+
+</div>
 
 ## Quando usar
 

@@ -4,9 +4,13 @@
 
 Inutilizar numeração de CT-e quando necessário.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Inutilização CTe
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Transportes > Inutilização CTe</code></p>
+
+</div>
 
 ## Quando usar
 

@@ -4,9 +4,13 @@
 
 Cadastrar ou consultar processos produtivos.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Processo
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Produção > Processo</code></p>
+
+</div>
 
 ## Quando usar
 

@@ -4,9 +4,13 @@
 
 Gerar ou consultar arquivos de remessa para envio ao banco.
 
-## Print da tela com caminho
+## Tela
 
-Financeiro > Arquivo de Remessa
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Financeiro > Arquivo de Remessa</code></p>
+
+</div>
 
 ## Quando usar
 

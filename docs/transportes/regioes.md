@@ -4,9 +4,13 @@
 
 Cadastrar ou consultar regiões usadas em transporte.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Regiões
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Transportes > Regiões</code></p>
+
+</div>
 
 ## Quando usar
 

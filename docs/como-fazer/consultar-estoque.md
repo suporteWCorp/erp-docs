@@ -12,9 +12,13 @@ error_tags:
 
 ## Pré-requisitos
 
-- [Como cadastrar um material](cadastrar-material.md){: target="_blank" rel="noopener" }.
-- Critério de busca definido: código, descrição, local, lote ou período.
-- Acesso à tela [Manual > Materiais > Lote/Estoque](../materiais/lote-estoque.md){: target="_blank" rel="noopener" }.
+<div class="wc-prereq-list" markdown>
+
+- Material cadastrado<br>
+  [Como cadastrar um material.](cadastrar-material.md){: target="_blank" rel="noopener" }
+- Critério de busca definido
+
+</div>
 
 ## Permissões
 
@@ -39,4 +43,4 @@ Use antes de vender, comprar, produzir, transferir ou ajustar materiais.
 
 - [Como ajustar estoque](ajustar-estoque.md){: target="_blank" rel="noopener" }
 - [Como transferir estoque](transferir-estoque.md){: target="_blank" rel="noopener" }
-- [Manual > Materiais > Lote/Estoque](../materiais/lote-estoque.md){: target="_blank" rel="noopener" }
+- [Consultar manual de lote/estoque](../materiais/lote-estoque.md){: target="_blank" rel="noopener" }

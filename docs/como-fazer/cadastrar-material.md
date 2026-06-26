@@ -12,8 +12,11 @@ error_tags:
 
 ## Pré-requisitos
 
-!!! prerequisite "Antes de começar"
-    - Tenha a descrição, a unidade, a categoria e os dados fiscais ou comerciais do material.
+<div class="wc-prereq-list" markdown>
+
+- Descrição, unidade, categoria e dados fiscais ou comerciais do material definidos
+
+</div>
 
 ## Permissões
 
@@ -24,6 +27,13 @@ error_tags:
 
 ## Print do caminho
 ![Onde encontrar](../assets/images/guias/materiais_materiais.png)
+
+## Demonstração em vídeo
+<video class="wc-video" controls preload="auto" playsinline poster="../../assets/images/guias/materiais_materiais.png">
+  <source src="../../assets/videos/materiais_materiais.mp4" type="video/mp4">
+  Seu navegador não conseguiu reproduzir este vídeo.
+</video>
+
 
 ## Como fazer
 
@@ -38,12 +48,6 @@ error_tags:
 
 O material fica salvo e disponível para uso nas movimentações compatíveis com seu cadastro.
 
-## Demonstração em vídeo
-<video class="wc-video" controls preload="auto" playsinline poster="../../assets/images/guias/materiais_materiais.png">
-  <source src="../../assets/videos/materiais_materiais.mp4" type="video/mp4">
-  Seu navegador não conseguiu reproduzir este vídeo.
-</video>
-
 ## Quando utilizar
 
 Use quando um produto, insumo, peça ou serviço controlado como material ainda não existir no WCorp.
@@ -52,4 +56,4 @@ Use quando um produto, insumo, peça ou serviço controlado como material ainda 
 
 - [Como ajustar estoque](ajustar-estoque.md){: target="_blank" rel="noopener" }
 - [Como emitir uma NF-e](faturar-nota.md){: target="_blank" rel="noopener" }
-- [Manual > Materiais > Materiais](../materiais/materiais.md){: target="_blank" rel="noopener" }
+- [Consultar manual de materiais](../materiais/materiais.md){: target="_blank" rel="noopener" }

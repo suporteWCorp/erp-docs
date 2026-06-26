@@ -4,9 +4,13 @@
 
 Consultar ou registrar controles de qualidade.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Qualidade
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Produção > Qualidade</code></p>
+
+</div>
 
 ## Quando usar
 

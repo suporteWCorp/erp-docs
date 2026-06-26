@@ -12,10 +12,13 @@ error_tags:
 
 ## Pré-requisitos
 
-- Título financeiro localizado.
-- Conta, forma de pagamento e data de baixa definidos.
-- Valor pago ou recebido conferido.
-- Acesso à tela [Manual > Financeiro > Contas a Receber](../financeiro/contas-a-receber.md){: target="_blank" rel="noopener" } ou [Manual > Financeiro > Contas a Pagar](../financeiro/contas-a-pagar.md){: target="_blank" rel="noopener" }.
+<div class="wc-prereq-list" markdown>
+
+- Título financeiro localizado
+- Conta, forma de pagamento e data de baixa definidos
+- Valor pago ou recebido conferido
+
+</div>
 
 ## Permissões
 
@@ -42,4 +45,4 @@ Use quando um cliente pagou, um fornecedor foi pago ou quando a baixa precisa se
 
 - [Como gerar boleto](gerar-boleto.md){: target="_blank" rel="noopener" }
 - [Como lançar contas a pagar](lancar-contas-a-pagar.md){: target="_blank" rel="noopener" }
-- [Manual > Financeiro > Contas a Receber](../financeiro/contas-a-receber.md){: target="_blank" rel="noopener" }
+- [Consultar manual de contas a receber](../financeiro/contas-a-receber.md){: target="_blank" rel="noopener" }

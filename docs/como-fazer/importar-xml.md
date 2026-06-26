@@ -12,10 +12,15 @@ error_tags:
 
 ## Pré-requisitos
 
-- Arquivo XML válido ou documento disponível para consulta.
-- [Como cadastrar um fornecedor](cadastrar-fornecedor.md){: target="_blank" rel="noopener" }, quando o fornecedor ainda não existir.
-- [Como cadastrar um material](cadastrar-material.md){: target="_blank" rel="noopener" }, quando algum item ainda não existir.
-- Acesso à tela [Manual > Faturamento > Entrada de Nota Fiscal](../faturamento/entrada-nota-fiscal.md){: target="_blank" rel="noopener" } ou [Manual > Faturamento > Radar de Nota Fiscal](../faturamento/radar-nota-fiscal.md){: target="_blank" rel="noopener" }.
+<div class="wc-prereq-list" markdown>
+
+- Arquivo XML válido ou documento disponível para consulta
+- Fornecedor cadastrado, quando ainda não existir<br>
+  [Como cadastrar um fornecedor.](cadastrar-fornecedor.md){: target="_blank" rel="noopener" }
+- Material cadastrado, quando algum item ainda não existir<br>
+  [Como cadastrar um material.](cadastrar-material.md){: target="_blank" rel="noopener" }
+
+</div>
 
 ## Avisos
 
@@ -45,4 +50,4 @@ Use quando a empresa recebeu um XML de fornecedor ou precisa consultar documento
 
 - [Como lançar uma nota de entrada](lancar-nota-entrada.md){: target="_blank" rel="noopener" }
 - [Como criar um pedido de compra](criar-pedido-compra.md){: target="_blank" rel="noopener" }
-- [Manual > Faturamento > Entrada de Nota Fiscal](../faturamento/entrada-nota-fiscal.md){: target="_blank" rel="noopener" }
+- [Consultar manual de entrada de nota fiscal](../faturamento/entrada-nota-fiscal.md){: target="_blank" rel="noopener" }

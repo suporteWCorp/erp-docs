@@ -4,9 +4,13 @@
 
 Aprovar ou acompanhar requisições e processos de compra.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Aprovação de Compras
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Compras > Aprovação de Compras</code></p>
+
+</div>
 
 ## Quando usar
 

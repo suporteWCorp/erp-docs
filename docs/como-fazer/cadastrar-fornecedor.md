@@ -10,9 +10,12 @@ error_tags:
 
 ## Pré-requisitos
 
-- CNPJ, CPF ou dados cadastrais do fornecedor.
-- Confirmação de que o fornecedor ainda não está cadastrado.
-- Acesso à tela [Manual > Fornecedores > Fornecedores](../fornecedores/fornecedores.md){: target="_blank" rel="noopener" }.
+<div class="wc-prereq-list" markdown>
+
+- CNPJ, CPF ou dados cadastrais do fornecedor em mãos
+- Confirmação de que o fornecedor ainda não está cadastrado
+
+</div>
 
 ## Permissões
 
@@ -40,4 +43,4 @@ Use quando uma empresa ou pessoa ainda não existir como fornecedor no WCorp.
 - [Como criar um pedido de compra](criar-pedido-compra.md){: target="_blank" rel="noopener" }
 - [Como lançar uma nota de entrada](lancar-nota-entrada.md){: target="_blank" rel="noopener" }
 - [Como lançar contas a pagar](lancar-contas-a-pagar.md){: target="_blank" rel="noopener" }
-- [Manual > Fornecedores > Fornecedores](../fornecedores/fornecedores.md){: target="_blank" rel="noopener" }
+- [Consultar manual de fornecedores](../fornecedores/fornecedores.md){: target="_blank" rel="noopener" }

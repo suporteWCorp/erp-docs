@@ -40,7 +40,7 @@ Portais oficiais, consultas fiscais e materiais externos importantes.
 
 Termos e conceitos utilizados no WCorp.
 
-[Abrir glossário](glossario.md){ .md-button .md-button--primary }
+[Consultar glossário](glossario.md){ .md-button .md-button--primary }
 
 </div>
 

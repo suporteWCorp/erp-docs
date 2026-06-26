@@ -4,9 +4,13 @@
 
 Cadastrar, consultar ou controlar paletes no processo de armazenagem.
 
-## Print da tela com caminho
+## Tela
 
-Materiais > Palete
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Materiais > Palete</code></p>
+
+</div>
 
 ## Quando usar
 

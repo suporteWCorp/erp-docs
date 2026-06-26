@@ -12,7 +12,7 @@ Use esta seção quando você sabe o que precisa realizar, mas não quer procura
 
 Cadastrar uma Natureza de Operação e configurar as Regras Fiscais utilizadas durante o faturamento.
 
-[Abrir guia](cadastrar-natureza-operacao.md){ .md-button .md-button--primary }
+[Consultar guia](cadastrar-natureza-operacao.md){ .md-button .md-button--primary }
 
 </div>
 
@@ -22,7 +22,7 @@ Cadastrar uma Natureza de Operação e configurar as Regras Fiscais utilizadas d
 
 Cadastrar formas e prazos de pagamento utilizados nas operações do WCorp.
 
-[Abrir guia](cadastrar-condicao-pagamento.md){ .md-button .md-button--primary }
+[Consultar guia](cadastrar-condicao-pagamento.md){ .md-button .md-button--primary }
 
 </div>
 
@@ -32,7 +32,7 @@ Cadastrar formas e prazos de pagamento utilizados nas operações do WCorp.
 
 Cadastrar um Centro de Custo para organizar lançamentos e controles internos.
 
-[Abrir guia](cadastrar-centro-custo.md){ .md-button .md-button--primary }
+[Consultar guia](cadastrar-centro-custo.md){ .md-button .md-button--primary }
 
 </div>
 
@@ -42,7 +42,7 @@ Cadastrar um Centro de Custo para organizar lançamentos e controles internos.
 
 Aprenda como criar um novo usuário no WCorp.
 
-[Abrir guia](cadastrar-usuario.md){ .md-button .md-button--primary }
+[Consultar guia](cadastrar-usuario.md){ .md-button .md-button--primary }
 
 </div>
 
@@ -52,7 +52,7 @@ Aprenda como criar um novo usuário no WCorp.
 
 Configure grupos e permissões para organizar o acesso dos usuários ao WCorp.
 
-[Abrir guia](configurar-grupo-usuario.md){ .md-button .md-button--primary }
+[Consultar guia](configurar-grupo-usuario.md){ .md-button .md-button--primary }
 
 </div>
 
@@ -68,7 +68,7 @@ Configure grupos e permissões para organizar o acesso dos usuários ao WCorp.
 
 Cadastrar um cliente pesquisando pelo CNPJ e deixar o registro pronto para pedidos, faturamento e consultas.
 
-[Abrir guia](cadastrar-cliente.md){ .md-button .md-button--primary }
+[Consultar guia](cadastrar-cliente.md){ .md-button .md-button--primary }
 
 </div>
 
@@ -78,7 +78,7 @@ Cadastrar um cliente pesquisando pelo CNPJ e deixar o registro pronto para pedid
 
 Registrar uma proposta comercial antes de confirmar o pedido.
 
-[Abrir guia](criar-orcamento.md){ .md-button .md-button--primary }
+[Consultar guia](criar-orcamento.md){ .md-button .md-button--primary }
 
 </div>
 
@@ -88,7 +88,7 @@ Registrar uma proposta comercial antes de confirmar o pedido.
 
 Criar um pedido de venda a partir de cliente, itens e condição de pagamento.
 
-[Abrir guia](fazer-pedido-venda.md){ .md-button .md-button--primary }
+[Consultar guia](fazer-pedido-venda.md){ .md-button .md-button--primary }
 
 </div>
 
@@ -104,7 +104,7 @@ Criar um pedido de venda a partir de cliente, itens e condição de pagamento.
 
 Cadastrar materiais e suas informações operacionais e fiscais.
 
-[Abrir guia](cadastrar-material.md){ .md-button .md-button--primary }
+[Consultar guia](cadastrar-material.md){ .md-button .md-button--primary }
 
 </div>
 
@@ -114,7 +114,7 @@ Cadastrar materiais e suas informações operacionais e fiscais.
 
 Conferir estoque físico e registrar ajustes no WCorp.
 
-[Abrir guia](fazer-inventario.md){ .md-button .md-button--primary }
+[Consultar guia](fazer-inventario.md){ .md-button .md-button--primary }
 
 </div>
 
@@ -130,7 +130,7 @@ Conferir estoque físico e registrar ajustes no WCorp.
 
 Emitir uma nota fiscal de saída manualmente ou a partir de um pedido.
 
-[Abrir guia](faturar-nota.md){ .md-button .md-button--primary }
+[Consultar guia](faturar-nota.md){ .md-button .md-button--primary }
 
 </div>
 
@@ -140,7 +140,7 @@ Emitir uma nota fiscal de saída manualmente ou a partir de um pedido.
 
 Solicitar o cancelamento de uma nota já autorizada, quando permitido.
 
-[Abrir guia](cancelar-nfe.md){ .md-button .md-button--primary }
+[Consultar guia](cancelar-nfe.md){ .md-button .md-button--primary }
 
 </div>
 
@@ -150,7 +150,7 @@ Solicitar o cancelamento de uma nota já autorizada, quando permitido.
 
 Corrigir informações permitidas em uma NF-e autorizada.
 
-[Abrir guia](emitir-carta-correcao.md){ .md-button .md-button--primary }
+[Consultar guia](emitir-carta-correcao.md){ .md-button .md-button--primary }
 
 </div>
 
@@ -166,7 +166,7 @@ Corrigir informações permitidas em uma NF-e autorizada.
 
 Importar um XML de nota fiscal para apoiar a conferência e entrada.
 
-[Abrir guia](importar-xml.md){ .md-button .md-button--primary }
+[Consultar guia](importar-xml.md){ .md-button .md-button--primary }
 
 </div>
 
@@ -182,7 +182,7 @@ Importar um XML de nota fiscal para apoiar a conferência e entrada.
 
 Gerar boleto a partir de um título financeiro.
 
-[Abrir guia](gerar-boleto.md){ .md-button .md-button--primary }
+[Consultar guia](gerar-boleto.md){ .md-button .md-button--primary }
 
 </div>
 

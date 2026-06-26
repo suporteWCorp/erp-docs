@@ -4,9 +4,13 @@
 
 Consultar, acompanhar ou localizar notas fiscais e seus respectivos status.
 
-## Print da tela com caminho
+## Tela
 
-Faturamento > Radar de Nota Fiscal
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Faturamento > Radar de Nota Fiscal</code></p>
+
+</div>
 
 ## Quando usar
 

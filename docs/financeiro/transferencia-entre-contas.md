@@ -4,9 +4,13 @@
 
 Registrar transferências de valores entre contas financeiras ou bancárias.
 
-## Print da tela com caminho
+## Tela
 
-Financeiro > Transferência entre Contas
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Financeiro > Transferência entre Contas</code></p>
+
+</div>
 
 ## Quando usar
 

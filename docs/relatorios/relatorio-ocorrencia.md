@@ -4,9 +4,13 @@
 
 Gerar ou consultar relatórios de ocorrência.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Relatório de Ocorrência
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Relatórios > Relatório de Ocorrência</code></p>
+
+</div>
 
 ## Quando usar
 

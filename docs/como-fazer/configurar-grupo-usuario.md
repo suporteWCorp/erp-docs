@@ -11,7 +11,11 @@ error_tags:
 
 ## Pré-requisitos
 
-Esta configuração deve ser realizada por um usuário autorizado a administrar acessos.
+<div class="wc-prereq-list" markdown>
+
+- Usuário autorizado a administrar acessos
+
+</div>
 
 ## Permissões
 
@@ -19,15 +23,6 @@ Esta configuração deve ser realizada por um usuário autorizado a administrar 
 
 ## Caminho
 `Administração > Grupo Usuários`.
-
-## Como fazer
-
-1. Acesse **Administração > Grupo Usuários**.
-2. Inicie um novo cadastro ou abra o grupo que será revisado.
-3. Identifique o grupo de forma clara.
-4. Configure as permissões necessárias conforme a orientação do responsável da empresa.
-5. Revise e salve as alterações.
-6. Valide o acesso com um usuário vinculado ao grupo.
 
 ## Demonstração em vídeo
 <video class="wc-video" controls preload="auto" playsinline>
@@ -38,6 +33,16 @@ Esta configuração deve ser realizada por um usuário autorizado a administrar 
 !!! warning "Importante"
     Conceda somente as permissões necessárias para as atividades dos usuários vinculados ao grupo.
 
+
+## Como fazer
+
+1. Acesse **Administração > Grupo Usuários**.
+2. Inicie um novo cadastro ou abra o grupo que será revisado.
+3. Identifique o grupo de forma clara.
+4. Configure as permissões necessárias conforme a orientação do responsável da empresa.
+5. Revise e salve as alterações.
+6. Valide o acesso com um usuário vinculado ao grupo.
+
 ## Quando utilizar
 
 Use este processo antes de vincular usuários que precisam compartilhar o mesmo perfil de acesso.
@@ -45,4 +50,4 @@ Use este processo antes de vincular usuários que precisam compartilhar o mesmo 
 ## Veja também
 
 - [Como cadastrar um usuário](cadastrar-usuario.md){: target="_blank" rel="noopener" }
-- [Manual > Administração > Grupo Usuários](../administracao/grupo-usuarios.md){: target="_blank" rel="noopener" }
+- [Consultar manual de grupo usuários](../administracao/grupo-usuarios.md){: target="_blank" rel="noopener" }

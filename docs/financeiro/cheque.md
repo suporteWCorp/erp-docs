@@ -4,9 +4,13 @@
 
 Registrar, consultar ou controlar operações financeiras relacionadas a cheques.
 
-## Print da tela com caminho
+## Tela
 
-Financeiro > Cheque
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Financeiro > Cheque</code></p>
+
+</div>
 
 ## Quando usar
 

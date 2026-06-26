@@ -4,9 +4,13 @@
 
 Consultar ou controlar romaneios vinculados à movimentação de materiais.
 
-## Print da tela com caminho
+## Tela
 
-Materiais > Romaneio
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Materiais > Romaneio</code></p>
+
+</div>
 
 ## Quando usar
 

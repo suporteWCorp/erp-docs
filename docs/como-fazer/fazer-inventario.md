@@ -12,10 +12,14 @@ error_tags:
 
 ## Pré-requisitos
 
-- [Como consultar estoque](consultar-estoque.md){: target="_blank" rel="noopener" }.
-- Lista de materiais, locais ou lotes que serão contados.
-- Equipe orientada sobre o critério de contagem.
-- Acesso à tela [Manual > Materiais > Ajustar Inventário](../materiais/ajustar-inventario.md){: target="_blank" rel="noopener" }.
+<div class="wc-prereq-list" markdown>
+
+- Estoque consultado<br>
+  [Como consultar estoque](consultar-estoque.md){: target="_blank" rel="noopener" }
+- Lista de materiais, locais ou lotes que serão contados definida
+- Equipe orientada sobre o critério de contagem
+
+</div>
 
 ## Permissões
 
@@ -42,4 +46,4 @@ Use em contagens periódicas, auditorias, encerramentos, reorganização de esto
 
 - [Como consultar estoque](consultar-estoque.md){: target="_blank" rel="noopener" }
 - [Como ajustar estoque](ajustar-estoque.md){: target="_blank" rel="noopener" }
-- [Manual > Materiais > Ajustar Inventário](../materiais/ajustar-inventario.md){: target="_blank" rel="noopener" }
+- [Consultar manual de ajustar inventário](../materiais/ajustar-inventario.md){: target="_blank" rel="noopener" }

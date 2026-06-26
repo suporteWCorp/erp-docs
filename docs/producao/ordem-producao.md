@@ -4,9 +4,13 @@
 
 Criar, consultar ou acompanhar ordens de produção.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Ordem de Produção
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Produção > Ordem de Produção</code></p>
+
+</div>
 
 ## Quando usar
 

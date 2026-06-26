@@ -4,11 +4,17 @@
 
 Explique para que a tela ou funcionalidade serve.
 
-## Print da tela com caminho
+## Tela
 
-`Módulo > Tela`
+<div class="wc-screen-block" markdown>
 
-Inclua somente um print real e correspondente à tela.
+![Tela](../assets/modulo-tela.png)
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Módulo > Tela</code></p>
+
+</div>
+
+Remova a imagem enquanto o print real não existir.
 
 ## Quando usar
 

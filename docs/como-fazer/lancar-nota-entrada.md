@@ -12,11 +12,18 @@ error_tags:
 
 ## Pré-requisitos
 
-- [Como importar XML](importar-xml.md){: target="_blank" rel="noopener" }, quando houver XML disponível.
-- [Como cadastrar um fornecedor](cadastrar-fornecedor.md){: target="_blank" rel="noopener" }.
-- [Como cadastrar um material](cadastrar-material.md){: target="_blank" rel="noopener" }.
-- [Como cadastrar uma natureza de operação](cadastrar-natureza-operacao.md){: target="_blank" rel="noopener" }.
-- Acesso à tela [Manual > Faturamento > Entrada de Nota Fiscal](../faturamento/entrada-nota-fiscal.md){: target="_blank" rel="noopener" }.
+<div class="wc-prereq-list" markdown>
+
+- XML importado, quando houver arquivo disponível<br>
+  [Como importar XML](importar-xml.md){: target="_blank" rel="noopener" }
+- Fornecedor cadastrado<br>
+  [Como cadastrar um fornecedor.](cadastrar-fornecedor.md){: target="_blank" rel="noopener" }
+- Material cadastrado<br>
+  [Como cadastrar um material.](cadastrar-material.md){: target="_blank" rel="noopener" }
+- Natureza de operação cadastrada<br>
+  [Como cadastrar uma natureza de operação.](cadastrar-natureza-operacao.md){: target="_blank" rel="noopener" }
+
+</div>
 
 ## Avisos
 
@@ -47,4 +54,4 @@ Use quando a empresa recebeu mercadorias ou serviços e precisa registrar a entr
 
 - [Como importar XML](importar-xml.md){: target="_blank" rel="noopener" }
 - [Como criar um pedido de compra](criar-pedido-compra.md){: target="_blank" rel="noopener" }
-- [Manual > Faturamento > Entrada de Nota Fiscal](../faturamento/entrada-nota-fiscal.md){: target="_blank" rel="noopener" }
+- [Consultar manual de entrada de nota fiscal](../faturamento/entrada-nota-fiscal.md){: target="_blank" rel="noopener" }

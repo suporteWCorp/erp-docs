@@ -4,9 +4,13 @@
 
 Cadastrar, consultar e acompanhar títulos que a empresa precisa pagar.
 
-## Print da tela com caminho
+## Tela
 
-Financeiro > Contas a Pagar
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Financeiro > Contas a Pagar</code></p>
+
+</div>
 
 ## Quando usar
 

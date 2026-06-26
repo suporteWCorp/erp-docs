@@ -4,9 +4,13 @@
 
 Emitir ou processar conhecimentos de transporte em lote.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Conhecimento de Transp.(Lote)
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Transportes > Conhecimento de Transp.(Lote)</code></p>
+
+</div>
 
 ## Quando usar
 

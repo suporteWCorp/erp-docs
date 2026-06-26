@@ -6,9 +6,13 @@ Esta página documenta a tela de empresas do WCorp.
 
 Use esta rotina para consultar ou manter os dados das empresas utilizadas nas operações do sistema.
 
-## Print da tela com caminho
+## Tela
 
-`Administração > Empresas`
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Administração > Empresas</code></p>
+
+</div>
 
 ## Avisos
 

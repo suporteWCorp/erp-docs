@@ -4,9 +4,13 @@
 
 Emitir carta de correção para ajustar informações permitidas em uma nota fiscal já autorizada.
 
-## Print da tela com caminho
+## Tela
 
-Faturamento > Carta de Correção
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Faturamento > Carta de Correção</code></p>
+
+</div>
 
 ## Quando usar
 

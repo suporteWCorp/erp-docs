@@ -4,9 +4,13 @@
 
 Registrar e acompanhar devoluções vinculadas ao fluxo comercial.
 
-## Print da tela com caminho
+## Tela
 
-Comercial > Devolução
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Comercial > Devolução</code></p>
+
+</div>
 
 ## Quando usar
 

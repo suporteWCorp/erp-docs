@@ -4,9 +4,13 @@
 
 Consultar projeções, previsões e acompanhamento comercial de vendas.
 
-## Print da tela com caminho
+## Tela
 
-Comercial > Projeção de Vendas
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Comercial > Projeção de Vendas</code></p>
+
+</div>
 
 ## Quando usar
 

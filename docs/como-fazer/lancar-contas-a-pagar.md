@@ -11,10 +11,16 @@ error_tags:
 
 ## Pré-requisitos
 
-- [Como cadastrar um fornecedor](cadastrar-fornecedor.md){: target="_blank" rel="noopener" }, quando o fornecedor ainda não existir.
-- Documento de origem ou dados da despesa.
-- Conta, centro de custo e vencimento definidos, quando aplicável.
-- Acesso à tela [Manual > Financeiro > Contas a Pagar](../financeiro/contas-a-pagar.md){: target="_blank" rel="noopener" }.
+<div class="wc-prereq-list" markdown>
+
+- Fornecedor cadastrado, quando ainda não existir<br>
+  [Como cadastrar um fornecedor.](cadastrar-fornecedor.md){: target="_blank" rel="noopener" }
+- Documento de origem ou dados da despesa definidos
+- Centro de custo definido, quando aplicável<br>
+  [Como cadastrar um Centro de Custo.](cadastrar-centro-custo.md){: target="_blank" rel="noopener" }
+- Conta e vencimento definidos, quando aplicável
+
+</div>
 
 ## Permissões
 
@@ -41,4 +47,4 @@ Use quando a empresa precisa controlar vencimento, valor e pagamento de uma desp
 
 - [Como baixar um título](baixar-titulo.md){: target="_blank" rel="noopener" }
 - [Como lançar uma nota de entrada](lancar-nota-entrada.md){: target="_blank" rel="noopener" }
-- [Manual > Financeiro > Contas a Pagar](../financeiro/contas-a-pagar.md){: target="_blank" rel="noopener" }
+- [Consultar manual de contas a pagar](../financeiro/contas-a-pagar.md){: target="_blank" rel="noopener" }

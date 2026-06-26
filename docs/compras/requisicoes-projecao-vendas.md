@@ -4,9 +4,13 @@
 
 Relacionar requisições de compra com projeções de vendas.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Requisições x Projeção de Vendas
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Compras > Requisições x Projeção de Vendas</code></p>
+
+</div>
 
 ## Quando usar
 

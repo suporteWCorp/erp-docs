@@ -6,9 +6,13 @@ Esta página documenta a tela de condições de pagamento do WCorp.
 
 Use esta rotina para cadastrar, consultar ou revisar formas e prazos de pagamento utilizados em compras, vendas e financeiro.
 
-## Print da tela com caminho
+## Tela
 
-`Administração > Condições de Pagamento`
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Administração > Condições de Pagamento</code></p>
+
+</div>
 
 ## Avisos
 

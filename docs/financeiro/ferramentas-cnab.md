@@ -4,9 +4,13 @@
 
 Executar rotinas auxiliares relacionadas a arquivos bancários no padrão CNAB.
 
-## Print da tela com caminho
+## Tela
 
-Financeiro > Ferramentas CNAB
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Financeiro > Ferramentas CNAB</code></p>
+
+</div>
 
 ## Quando usar
 

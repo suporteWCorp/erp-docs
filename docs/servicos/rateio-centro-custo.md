@@ -4,9 +4,13 @@
 
 Configurar ou consultar rateios de centro de custo para serviços.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Rateio de Centro de Custo
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Serviços > Rateio de Centro de Custo</code></p>
+
+</div>
 
 ## Quando usar
 

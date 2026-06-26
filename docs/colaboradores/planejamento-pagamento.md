@@ -4,9 +4,13 @@
 
 Planejar pagamentos de colaboradores antes da efetivação.
 
-## Print da tela com caminho
+## Tela
 
-Colaboradores > Planejamento de Pagamento
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Colaboradores > Planejamento de Pagamento</code></p>
+
+</div>
 
 ## Quando usar
 

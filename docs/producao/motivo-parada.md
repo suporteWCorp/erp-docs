@@ -4,9 +4,13 @@
 
 Cadastrar ou consultar motivos de parada de produção.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Motivo de Parada
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Produção > Motivo de Parada</code></p>
+
+</div>
 
 ## Quando usar
 

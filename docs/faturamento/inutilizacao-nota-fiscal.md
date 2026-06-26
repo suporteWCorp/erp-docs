@@ -4,9 +4,13 @@
 
 Inutilizar numeração de nota fiscal quando houver quebra de sequência ou numeração que não será utilizada.
 
-## Print da tela com caminho
+## Tela
 
-Faturamento > Inutilização Nota Fiscal
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Faturamento > Inutilização Nota Fiscal</code></p>
+
+</div>
 
 ## Quando usar
 

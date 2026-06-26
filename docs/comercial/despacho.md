@@ -4,9 +4,13 @@
 
 Acompanhar informações de despacho e envio relacionadas aos pedidos.
 
-## Print da tela com caminho
+## Tela
 
-Comercial > Despacho
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Comercial > Despacho</code></p>
+
+</div>
 
 ## Quando usar
 

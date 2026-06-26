@@ -28,6 +28,17 @@
     return relativePath.replace(/\/index\.html$/, "") || "/";
   }
 
+  function manualModuleForCurrentPage() {
+    return erpTabs.find((tab) => window.location.pathname.includes(tab.section)) || null;
+  }
+
+  function isManualModuleOverview() {
+    const activeModule = manualModuleForCurrentPage();
+    if (!activeModule) return false;
+
+    return normalizedPagePath(window.location.href) === normalizedPagePath(new URL(activeModule.href, rootUrl()));
+  }
+
   function currentPageTitle() {
     const relativePath = relativePortalPath();
 
@@ -51,15 +62,16 @@
   }
 
   function addBreadcrumb() {
-    const existing = document.querySelector(".wc-breadcrumb");
+    const existing = document.querySelector(".wc-breadcrumb-bar");
     if (existing) existing.remove();
+    document.querySelectorAll(".md-content .wc-breadcrumb").forEach((item) => item.remove());
 
     const relativePath = relativePortalPath();
-    if (relativePath === "/") return;
 
     const content = document.querySelector(".md-content__inner");
     const heading = content ? content.querySelector(":scope > h1") : null;
-    if (!content || !heading) return;
+    const header = document.querySelector(".md-header");
+    if (!header || !content || !heading) return;
 
     let section = null;
     if (relativePath.startsWith("/como-fazer")) {
@@ -95,13 +107,38 @@
       list.appendChild(item);
     };
 
-    addItem("Início", "");
+    addItem("Início", rootUrl(), relativePath === "/");
     const title = currentPageTitle();
-    if (section && relativePath !== section.path) addItem(section.label, section.href);
-    addItem(section && relativePath === section.path ? section.label : title, null, true);
+    if (section) {
+      const manualModule = isManualPage() ? manualModuleForCurrentPage() : null;
 
+      if (relativePath === section.path) {
+        addItem(section.label, null, true);
+      } else {
+        addItem(section.label, section.href);
+        if (manualModule) {
+          const moduleHref = new URL(manualModule.href, rootUrl()).href;
+          const isModuleOverview = normalizedPagePath(window.location.href) === normalizedPagePath(moduleHref);
+
+          if (isModuleOverview) {
+            addItem(manualModule.label, null, true);
+          } else {
+            addItem(manualModule.label, manualModule.href);
+            addItem(title, null, true);
+          }
+        } else {
+          addItem(title, null, true);
+        }
+      }
+    } else if (relativePath !== "/") {
+      addItem(title, null, true);
+    }
+
+    const bar = document.createElement("div");
+    bar.className = "wc-breadcrumb-bar";
     breadcrumb.appendChild(list);
-    content.insertBefore(breadcrumb, heading);
+    bar.appendChild(breadcrumb);
+    header.insertAdjacentElement("afterend", bar);
   }
 
   function isManualPage() {
@@ -167,7 +204,7 @@
 
   function updateManualSubnav() {
     const existing = document.querySelector(".wc-manual-subnav");
-    const activeModule = erpTabs.find((tab) => window.location.pathname.includes(tab.section));
+    const activeModule = manualModuleForCurrentPage();
 
     if (!isManualPage() || !activeModule) {
       if (existing) existing.remove();
@@ -316,6 +353,69 @@
 
       return [{ label, children: directNavItems(moduleList) }];
     });
+  }
+
+  function manualOverviewCards() {
+    const activeModule = manualModuleForCurrentPage();
+    if (!activeModule || !isManualModuleOverview()) return;
+
+    const content = document.querySelector(".md-content__inner");
+    if (!content || content.querySelector(".wc-manual-category-grid")) return;
+
+    const activeModuleItems = manualSidebarItems()
+      .find((module) => module.label === activeModule.label)
+      ?.children.filter((item) => item.label.toLocaleLowerCase("pt-BR") !== "visão geral") || [];
+    if (!activeModuleItems.length) return;
+
+    const sectionTitle = document.createElement("h2");
+    sectionTitle.textContent = "Telas do módulo";
+
+    const grid = document.createElement("div");
+    grid.className = "wc-home-grid wc-manual-category-grid";
+
+    activeModuleItems.forEach((item) => {
+      const card = document.createElement("div");
+      card.className = "wc-card";
+      card.dataset.wcCardType = "Manuais";
+
+      const title = document.createElement("h3");
+      title.textContent = item.label;
+
+      const description = document.createElement("p");
+      description.textContent = "Consulte campos, caminho e funcionamento desta tela.";
+
+      const linkWrapper = document.createElement("p");
+      const link = document.createElement("a");
+      link.className = "md-button md-button--primary";
+      link.href = item.href;
+      link.textContent = "Ver manual";
+      linkWrapper.appendChild(link);
+
+      card.append(title, description, linkWrapper);
+      grid.appendChild(card);
+    });
+
+    const orderHeading = Array.from(content.querySelectorAll(":scope > h2"))
+      .find((heading) => heading.textContent.trim().toLocaleLowerCase("pt-BR").startsWith("ordem da aba"));
+    const firstImageBlock = content.querySelector(":scope > p > img, :scope > img")?.closest("p");
+
+    if (orderHeading) {
+      const insertBefore = firstImageBlock || orderHeading;
+      insertBefore.insertAdjacentElement("beforebegin", sectionTitle);
+      sectionTitle.insertAdjacentElement("afterend", grid);
+
+      let cursor = orderHeading;
+      while (cursor) {
+        const next = cursor.nextElementSibling;
+        cursor.remove();
+        if (!next || next.tagName === "H2") break;
+        cursor = next;
+      }
+    } else {
+      const anchor = firstImageBlock || content.querySelector(":scope > h1");
+      anchor?.insertAdjacentElement("afterend", grid);
+      grid.insertAdjacentElement("beforebegin", sectionTitle);
+    }
   }
 
   function contextSidebarConfig() {
@@ -692,6 +792,7 @@
     replaceTabsWithErpMenu();
     configureContextSidebar();
     updateManualSubnav();
+    manualOverviewCards();
     focusGuideSidebar();
     replaceGuideOverviewToc();
     addSupportFooter();

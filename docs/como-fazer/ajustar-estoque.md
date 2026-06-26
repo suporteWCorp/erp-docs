@@ -11,10 +11,15 @@ error_tags:
 
 ## Pré-requisitos
 
-- [Como consultar estoque](consultar-estoque.md){: target="_blank" rel="noopener" }.
-- Motivo do ajuste definido.
-- [Como cadastrar um material](cadastrar-material.md){: target="_blank" rel="noopener" }.
-- Acesso à tela [Manual > Materiais > Ajustar Inventário](../materiais/ajustar-inventario.md){: target="_blank" rel="noopener" }.
+<div class="wc-prereq-list" markdown>
+
+- Estoque consultado<br>
+  [Como consultar estoque](consultar-estoque.md){: target="_blank" rel="noopener" }
+- Material cadastrado<br>
+  [Como cadastrar um material.](cadastrar-material.md){: target="_blank" rel="noopener" }
+- Motivo do ajuste definido
+
+</div>
 
 ## Permissões
 
@@ -40,4 +45,4 @@ Use quando houver diferença identificada por conferência, inventário, perda, 
 
 - [Como consultar estoque](consultar-estoque.md){: target="_blank" rel="noopener" }
 - [Como fazer inventário](fazer-inventario.md){: target="_blank" rel="noopener" }
-- [Manual > Materiais > Ajustar Inventário](../materiais/ajustar-inventario.md){: target="_blank" rel="noopener" }
+- [Consultar manual de ajustar inventário](../materiais/ajustar-inventario.md){: target="_blank" rel="noopener" }

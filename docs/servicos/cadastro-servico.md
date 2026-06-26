@@ -4,9 +4,13 @@
 
 Cadastrar, consultar ou alterar serviços oferecidos pela empresa.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Cadastro de Serviço
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Serviços > Cadastro de Serviço</code></p>
+
+</div>
 
 ## Quando usar
 

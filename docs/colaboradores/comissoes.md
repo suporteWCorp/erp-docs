@@ -4,9 +4,13 @@
 
 Consultar ou controlar comissões vinculadas a colaboradores.
 
-## Print da tela com caminho
+## Tela
 
-Colaboradores > Comissões
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Colaboradores > Comissões</code></p>
+
+</div>
 
 ## Quando usar
 

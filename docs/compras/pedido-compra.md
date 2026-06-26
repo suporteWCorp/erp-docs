@@ -4,9 +4,13 @@
 
 Criar, consultar ou acompanhar pedidos de compra.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Pedido de Compra
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Compras > Pedido de Compra</code></p>
+
+</div>
 
 ## Quando usar
 

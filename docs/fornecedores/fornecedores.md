@@ -4,9 +4,13 @@
 
 Cadastrar, consultar ou alterar fornecedores usados em compras, entradas e rotinas fiscais.
 
-## Print da tela com caminho
+## Tela
 
-Fornecedores > Fornecedores
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Fornecedores > Fornecedores</code></p>
+
+</div>
 
 ## Quando usar
 

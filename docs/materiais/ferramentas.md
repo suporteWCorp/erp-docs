@@ -4,9 +4,13 @@
 
 Executar rotinas auxiliares relacionadas a materiais e estoque.
 
-## Print da tela com caminho
+## Tela
 
-Materiais > Ferramentas
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Materiais > Ferramentas</code></p>
+
+</div>
 
 ## Quando usar
 

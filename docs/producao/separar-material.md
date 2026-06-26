@@ -4,9 +4,13 @@
 
 Separar materiais necessários para produção.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Separar Material
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Produção > Separar Material</code></p>
+
+</div>
 
 ## Quando usar
 

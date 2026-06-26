@@ -4,9 +4,13 @@
 
 Cadastrar, consultar ou alterar contratos.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Contratos
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Contratos > Contratos</code></p>
+
+</div>
 
 ## Quando usar
 

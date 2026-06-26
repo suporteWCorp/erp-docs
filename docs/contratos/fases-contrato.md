@@ -4,9 +4,13 @@
 
 Cadastrar ou consultar fases utilizadas no acompanhamento de contratos.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Fases do Contrato
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Contratos > Fases do Contrato</code></p>
+
+</div>
 
 ## Quando usar
 

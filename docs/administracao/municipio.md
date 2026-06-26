@@ -4,9 +4,13 @@
 
 Cadastrar ou consultar municípios utilizados nos cadastros e rotinas fiscais.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Município
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Administração > Município</code></p>
+
+</div>
 
 ## Quando usar
 

@@ -12,10 +12,14 @@ error_tags:
 
 ## Pré-requisitos
 
-- [Como consultar estoque](consultar-estoque.md){: target="_blank" rel="noopener" }.
-- Material com saldo disponível.
-- Local de origem e destino definidos.
-- Acesso à tela [Manual > Materiais > Lote/Estoque](../materiais/lote-estoque.md){: target="_blank" rel="noopener" }.
+<div class="wc-prereq-list" markdown>
+
+- Estoque consultado<br>
+  [Como consultar estoque](consultar-estoque.md){: target="_blank" rel="noopener" }
+- Material com saldo disponível
+- Local de origem e destino definidos
+
+</div>
 
 ## Permissões
 
@@ -41,4 +45,4 @@ Use quando um material muda de local físico ou precisa ser reorganizado para ve
 
 - [Como consultar estoque](consultar-estoque.md){: target="_blank" rel="noopener" }
 - [Como ajustar estoque](ajustar-estoque.md){: target="_blank" rel="noopener" }
-- [Manual > Materiais > Lote/Estoque](../materiais/lote-estoque.md){: target="_blank" rel="noopener" }
+- [Consultar manual de lote/estoque](../materiais/lote-estoque.md){: target="_blank" rel="noopener" }

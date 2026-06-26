@@ -4,9 +4,13 @@
 
 Consultar ou exportar XMLs de NF-e.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > XML(s) NFe
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Relatórios > XML(s) NFe</code></p>
+
+</div>
 
 ## Quando usar
 

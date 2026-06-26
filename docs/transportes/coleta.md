@@ -4,9 +4,13 @@
 
 Cadastrar ou acompanhar coletas de transporte.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Coleta
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Transportes > Coleta</code></p>
+
+</div>
 
 ## Quando usar
 

@@ -4,9 +4,13 @@
 
 Cadastrar, consultar ou controlar certificados vinculados a fornecedores ou rotinas fiscais.
 
-## Print da tela com caminho
+## Tela
 
-Fornecedores > Certificado
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Fornecedores > Certificado</code></p>
+
+</div>
 
 ## Quando usar
 

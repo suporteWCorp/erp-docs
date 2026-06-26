@@ -4,9 +4,13 @@
 
 Acessar e gerar relatórios gerais do WCorp.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Relatórios
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Relatórios > Relatórios</code></p>
+
+</div>
 
 ## Quando usar
 

@@ -4,9 +4,13 @@
 
 Consultar ou configurar CFOPs utilizados em operações de entrada.
 
-## Print da tela com caminho
+## Tela
 
-Faturamento > CFOP Entrada
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Faturamento > CFOP Entrada</code></p>
+
+</div>
 
 ## Quando usar
 

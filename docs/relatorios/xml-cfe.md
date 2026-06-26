@@ -4,9 +4,13 @@
 
 Consultar ou exportar XMLs de CF-e.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > XML(s) CFe
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Relatórios > XML(s) CFe</code></p>
+
+</div>
 
 ## Quando usar
 

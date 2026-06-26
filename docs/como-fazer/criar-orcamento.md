@@ -12,10 +12,15 @@ error_tags:
 
 ## Pré-requisitos
 
-- [Como cadastrar um cliente](cadastrar-cliente.md){: target="_blank" rel="noopener" }.
-- [Como cadastrar um material](cadastrar-material.md){: target="_blank" rel="noopener" }.
-- Condição comercial definida.
-- Acesso à tela [Manual > Comercial > Orçamento](../comercial/comercial-orcamento.md){: target="_blank" rel="noopener" }.
+<div class="wc-prereq-list" markdown>
+
+- Cliente cadastrado<br>
+  [Como cadastrar um cliente.](cadastrar-cliente.md){: target="_blank" rel="noopener" }
+- Material cadastrado<br>
+  [Como cadastrar um material.](cadastrar-material.md){: target="_blank" rel="noopener" }
+- Condição comercial definida
+
+</div>
 
 ## Permissões
 
@@ -23,6 +28,13 @@ error_tags:
 
 ## Caminho
 `Comercial > Orçamento`.
+
+## Demonstração em vídeo
+<video class="wc-video" controls preload="auto" playsinline>
+  <source src="../../assets/videos/comercial_orcamento.mp4" type="video/mp4">
+  Seu navegador não conseguiu reproduzir este vídeo.
+</video>
+
 
 ## Como fazer
 
@@ -33,12 +45,6 @@ error_tags:
 5. Informe condição de pagamento, prazo e observações.
 6. Salve o orçamento.
 
-## Demonstração em vídeo
-<video class="wc-video" controls preload="auto" playsinline>
-  <source src="../../assets/videos/comercial_orcamento.mp4" type="video/mp4">
-  Seu navegador não conseguiu reproduzir este vídeo.
-</video>
-
 ## Quando utilizar
 
 Use quando o cliente ainda está avaliando preços, quantidades, prazos ou condições comerciais.
@@ -47,4 +53,4 @@ Use quando o cliente ainda está avaliando preços, quantidades, prazos ou condi
 
 - [Como gerar um pedido](fazer-pedido-venda.md){: target="_blank" rel="noopener" }
 - [Como cancelar um pedido](cancelar-pedido.md){: target="_blank" rel="noopener" }
-- [Manual > Comercial > Orçamento](../comercial/comercial-orcamento.md){: target="_blank" rel="noopener" }
+- [Consultar manual de orçamento](../comercial/comercial-orcamento.md){: target="_blank" rel="noopener" }

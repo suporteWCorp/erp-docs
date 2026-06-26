@@ -4,9 +4,13 @@
 
 Consultar ou exportar XMLs de CT-e.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > XML(s) CTe
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Relatórios > XML(s) CTe</code></p>
+
+</div>
 
 ## Quando usar
 

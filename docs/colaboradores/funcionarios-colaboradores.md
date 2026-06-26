@@ -4,9 +4,13 @@
 
 Cadastrar, consultar ou alterar dados de funcionários e colaboradores.
 
-## Print da tela com caminho
+## Tela
 
-Colaboradores > Funcionários / Colaboradores
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Colaboradores > Funcionários / Colaboradores</code></p>
+
+</div>
 
 ## Quando usar
 

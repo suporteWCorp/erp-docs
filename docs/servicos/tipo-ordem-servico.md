@@ -4,9 +4,13 @@
 
 Cadastrar ou consultar tipos usados nas ordens de serviço.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Tipo de Ordem de Serviço
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Serviços > Tipo de Ordem de Serviço</code></p>
+
+</div>
 
 ## Quando usar
 

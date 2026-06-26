@@ -4,9 +4,13 @@
 
 Cadastrar ou consultar unidades de medida.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Unidades
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Administração > Unidades</code></p>
+
+</div>
 
 ## Quando usar
 

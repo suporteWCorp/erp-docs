@@ -4,9 +4,13 @@
 
 Cadastrar ou consultar centros de custo.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Centro de Custo
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Administração > Centro de Custo</code></p>
+
+</div>
 
 ## Quando usar
 

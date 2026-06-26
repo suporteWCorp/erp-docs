@@ -11,9 +11,13 @@ error_tags:
 
 ## Pré-requisitos
 
-- Operação que será realizada definida, como venda, devolução, remessa, retorno, transporte ou serviço.
-- Critérios fiscais da operação validados com o responsável fiscal da empresa.
-- Categorias de Material, NCMs, Materiais e demais cadastros que serão utilizados como critérios já disponíveis no sistema.
+<div class="wc-prereq-list" markdown>
+
+- Operação que será realizada definida
+- Critérios fiscais da operação validados com o responsável fiscal da empresa
+- Categorias de material, NCMs, materiais e demais cadastros de critério disponíveis no sistema
+
+</div>
 
 ## Avisos
 
@@ -25,6 +29,13 @@ error_tags:
 
 ## Caminho
 `Administração > Natureza de Operação`.
+
+## Demonstração em vídeo
+<video class="wc-video" controls preload="auto" playsinline>
+  <source src="../../assets/videos/adm_natureza_operacao.mp4" type="video/mp4">
+  Seu navegador não conseguiu reproduzir este vídeo.
+</video>
+
 
 ## Como fazer
 
@@ -52,12 +63,6 @@ error_tags:
 
 Durante o faturamento, o WCorp compara os dados da operação com os critérios das Regras vinculadas à Natureza selecionada e utiliza a Regra Fiscal compatível para realizar o cálculo da nota.
 
-## Demonstração em vídeo
-<video class="wc-video" controls preload="auto" playsinline>
-  <source src="../../assets/videos/adm_natureza_operacao.mp4" type="video/mp4">
-  Seu navegador não conseguiu reproduzir este vídeo.
-</video>
-
 ## Quando utilizar
 
 Use este processo quando for necessário:
@@ -71,4 +76,4 @@ Use este processo quando for necessário:
 
 - [Como emitir uma NF-e](faturar-nota.md){: target="_blank" rel="noopener" }
 - [Como lançar uma nota de entrada](lancar-nota-entrada.md){: target="_blank" rel="noopener" }
-- [Manual > Administração > Natureza de Operação](../administracao/natureza-op.md){: target="_blank" rel="noopener" }
+- [Consultar manual de natureza de operação](../administracao/natureza-op.md){: target="_blank" rel="noopener" }

@@ -11,10 +11,13 @@ error_tags:
 
 ## Pré-requisitos
 
-- Pedido localizado no WCorp.
-- Confirmação de que o pedido ainda pode ser cancelado.
-- Verificação de vínculo com separação, faturamento ou financeiro.
-- Acesso à tela [Manual > Comercial > Pedido](../comercial/pedidos.md){: target="_blank" rel="noopener" }.
+<div class="wc-prereq-list" markdown>
+
+- Pedido localizado no WCorp
+- Confirmação de que o pedido ainda pode ser cancelado
+- Vínculos com separação, faturamento ou financeiro verificados
+
+</div>
 
 ## Permissões
 
@@ -41,4 +44,4 @@ Use quando a venda foi desistida, lançada incorretamente ou substituída por ou
 
 - [Como gerar um pedido](fazer-pedido-venda.md){: target="_blank" rel="noopener" }
 - [Como emitir uma NF-e](faturar-nota.md){: target="_blank" rel="noopener" }
-- [Manual > Comercial > Pedido](../comercial/pedidos.md){: target="_blank" rel="noopener" }
+- [Consultar manual de pedido](../comercial/pedidos.md){: target="_blank" rel="noopener" }

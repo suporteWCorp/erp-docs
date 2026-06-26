@@ -4,9 +4,13 @@
 
 Cadastrar, consultar e acompanhar títulos que a empresa tem a receber.
 
-## Print da tela com caminho
+## Tela
 
-Financeiro > Contas a Receber
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Financeiro > Contas a Receber</code></p>
+
+</div>
 
 ## Quando usar
 

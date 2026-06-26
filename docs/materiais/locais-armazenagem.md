@@ -4,9 +4,13 @@
 
 Cadastrar ou consultar locais utilizados para controle físico e lógico do estoque.
 
-## Print da tela com caminho
+## Tela
 
-Materiais > Locais de Armazenagem
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Materiais > Locais de Armazenagem</code></p>
+
+</div>
 
 ## Quando usar
 

@@ -4,9 +4,13 @@
 
 Executar manutenções ou ajustes em contratos existentes.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Manutenção de Contratos
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Contratos > Manutenção de Contratos</code></p>
+
+</div>
 
 ## Quando usar
 

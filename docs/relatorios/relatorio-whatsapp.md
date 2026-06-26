@@ -4,9 +4,13 @@
 
 Gerar ou consultar relatórios relacionados ao WhatsApp.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Relatório WhatsApp
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Relatórios > Relatório WhatsApp</code></p>
+
+</div>
 
 ## Quando usar
 

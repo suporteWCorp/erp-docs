@@ -4,9 +4,13 @@
 
 Consultar ou configurar alíquotas utilizadas em transporte.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Alíquotas de Transporte
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Transportes > Alíquotas de Transporte</code></p>
+
+</div>
 
 ## Quando usar
 

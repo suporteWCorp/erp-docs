@@ -2,9 +2,9 @@
 .wc-home-grid {
     align-items: stretch;
     display: grid;
-    gap: 16px;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    margin: 1.2rem 0 1.6rem;
+    gap: 14px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    margin: 1rem 0 1.35rem;
 }
 
 .wc-card {
@@ -14,7 +14,8 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding: 18px;
+    min-height: 190px;
+    padding: 14px;
 }
 
 .wc-card[data-wc-card-type="Guias"] {
@@ -48,7 +49,7 @@
 .wc-card > p:has(> .md-button) {
     margin-bottom: 0;
     margin-top: auto;
-    padding-top: 1rem;
+    padding-top: 0.75rem;
 }
 
 .wc-card > p:has(> .md-button) .md-button {
@@ -69,7 +70,16 @@
 }
 
 .wc-home-grid--actions {
-    grid-template-columns: repeat(2, minmax(240px, 1fr));
+    grid-template-columns: repeat(2, minmax(260px, 320px));
+    justify-content: start;
+}
+
+.wc-home-grid--actions .wc-card {
+    min-height: 205px;
+}
+
+.wc-manual-category-grid .wc-card {
+    min-height: 180px;
 }
 
 /* Hub de links oficiais. */
@@ -144,7 +154,54 @@
     white-space: nowrap;
 }
 
+.wc-screen-block {
+    background: rgba(2, 128, 144, 0.035);
+    border: 1.5px solid rgba(2, 128, 144, 0.28);
+    border-radius: 8px;
+    margin: 0.9rem 0 1.4rem;
+    padding: 14px 16px;
+}
+
+.wc-screen-block img {
+    display: block;
+    margin: 0 0 0.85rem;
+}
+
+.wc-screen-block__path {
+    border-top: 1px solid rgba(2, 128, 144, 0.14);
+    color: var(--md-default-fg-color);
+    font-size: 0.72rem;
+    margin: 0;
+    padding-top: 0.75rem;
+}
+
+.wc-prereq-list {
+    margin: 0.8rem 0 1.1rem;
+}
+
+.wc-prereq-list ul {
+    list-style: disc;
+    margin-left: 1.05rem;
+    padding-left: 0.5rem;
+}
+
+.wc-prereq-list li {
+    margin: 0 0 0.62rem;
+    padding-left: 0.2rem;
+}
+
+.wc-prereq-list a {
+    display: inline-block;
+    font-size: 0.74rem;
+    font-weight: 700;
+    margin-top: 0.08rem;
+}
+
 @media screen and (max-width: 44em) {
+    .wc-home-grid {
+        grid-template-columns: 1fr;
+    }
+
     .wc-home-grid--actions {
         grid-template-columns: 1fr;
     }

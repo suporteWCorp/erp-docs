@@ -4,9 +4,13 @@
 
 Controlar averbação junto à seguradora.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Averbação Seguradora
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Transportes > Averbação Seguradora</code></p>
+
+</div>
 
 ## Quando usar
 

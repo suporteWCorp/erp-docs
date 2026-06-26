@@ -4,9 +4,13 @@
 
 Gerar ou consultar relatórios de não conformidade.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Relatório de Não Conformidade
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Relatórios > Relatório de Não Conformidade</code></p>
+
+</div>
 
 ## Quando usar
 

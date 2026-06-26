@@ -4,9 +4,13 @@
 
 Gerar ou consultar informações relacionadas ao SPED Fiscal.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Sped Fiscal
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Relatórios > Sped Fiscal</code></p>
+
+</div>
 
 ## Quando usar
 

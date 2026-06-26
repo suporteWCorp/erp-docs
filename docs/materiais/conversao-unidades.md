@@ -4,9 +4,13 @@
 
 Cadastrar ou consultar regras de conversão entre unidades de medida.
 
-## Print da tela com caminho
+## Tela
 
-Materiais > Conversão de Unidades
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Materiais > Conversão de Unidades</code></p>
+
+</div>
 
 ## Quando usar
 

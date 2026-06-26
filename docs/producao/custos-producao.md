@@ -4,9 +4,13 @@
 
 Consultar ou controlar custos associados à produção.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Custos de Produção
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Produção > Custos de Produção</code></p>
+
+</div>
 
 ## Quando usar
 

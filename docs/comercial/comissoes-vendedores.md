@@ -4,9 +4,13 @@
 
 Consultar, calcular ou acompanhar comissões relacionadas às vendas.
 
-## Print da tela com caminho
+## Tela
 
-Comercial > Comissões de Vendedores
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Comercial > Comissões de Vendedores</code></p>
+
+</div>
 
 ## Quando usar
 

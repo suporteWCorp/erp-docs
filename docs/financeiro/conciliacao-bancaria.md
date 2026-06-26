@@ -4,9 +4,13 @@
 
 Conferir movimentações do WCorp com extratos ou retornos bancários.
 
-## Print da tela com caminho
+## Tela
 
-Financeiro > Conciliação Bancária
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Financeiro > Conciliação Bancária</code></p>
+
+</div>
 
 ## Quando usar
 

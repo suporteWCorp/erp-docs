@@ -4,9 +4,13 @@
 
 Criar ou consultar orçamentos relacionados a CT-e.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Orçamento CTe
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Transportes > Orçamento CTe</code></p>
+
+</div>
 
 ## Quando usar
 

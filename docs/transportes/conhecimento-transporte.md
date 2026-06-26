@@ -4,9 +4,13 @@
 
 Emitir ou consultar conhecimento de transporte.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Conhecimento de Transporte
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Transportes > Conhecimento de Transporte</code></p>
+
+</div>
 
 ## Quando usar
 

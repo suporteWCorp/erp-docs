@@ -4,9 +4,13 @@
 
 Controlar materiais e serviços previstos em contratos.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Materiais e Serviços Previstos
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Contratos > Materiais e Serviços Previstos</code></p>
+
+</div>
 
 ## Quando usar
 

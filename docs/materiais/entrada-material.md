@@ -4,9 +4,13 @@
 
 Registrar entrada de materiais no estoque.
 
-## Print da tela com caminho
+## Tela
 
-Materiais > Entrada de Material
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Materiais > Entrada de Material</code></p>
+
+</div>
 
 ## Quando usar
 

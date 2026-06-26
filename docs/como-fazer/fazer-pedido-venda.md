@@ -12,11 +12,16 @@ error_tags:
 
 ## Pré-requisitos
 
-- Cliente cadastrado.<br>
-  [Como cadastrar um cliente](cadastrar-cliente.md){: target="_blank" rel="noopener" }.
-- Material cadastrado.<br>
-  [Como cadastrar um material](cadastrar-material.md){: target="_blank" rel="noopener" }.
-- Condição de pagamento cadastrada no WCorp.
+<div class="wc-prereq-list" markdown>
+
+- Cliente cadastrado<br>
+  [Como cadastrar um cliente.](cadastrar-cliente.md){: target="_blank" rel="noopener" }
+- Material cadastrado<br>
+  [Como cadastrar um material.](cadastrar-material.md){: target="_blank" rel="noopener" }
+- Condição de pagamento cadastrada no WCorp<br>
+  [Como cadastrar uma condição de pagamento.](cadastrar-condicao-pagamento.md){: target="_blank" rel="noopener" }
+
+</div>
 
 ## Permissões
 
@@ -28,6 +33,13 @@ error_tags:
 ## Print do caminho
 ![Onde encontrar](../assets/images/guias/comercial_pedido.png)
 
+## Demonstração em vídeo
+<video class="wc-video" controls preload="auto" playsinline poster="../../assets/images/guias/comercial_pedido.png">
+  <source src="../../assets/videos/comercial_pedido.mp4" type="video/mp4">
+  Seu navegador não conseguiu reproduzir este vídeo.
+</video>
+
+
 ## Como fazer
 
 1. Acesse **Comercial > Pedido**.
@@ -36,12 +48,6 @@ error_tags:
 4. Adicione os materiais e quantidades.
 5. Confira valores, condição de pagamento e observações.
 6. Salve o pedido.
-
-## Demonstração em vídeo
-<video class="wc-video" controls preload="auto" playsinline poster="../../assets/images/guias/comercial_pedido.png">
-  <source src="../../assets/videos/comercial_pedido.mp4" type="video/mp4">
-  Seu navegador não conseguiu reproduzir este vídeo.
-</video>
 
 ## Outra opção
 

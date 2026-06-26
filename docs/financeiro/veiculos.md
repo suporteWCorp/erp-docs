@@ -4,9 +4,13 @@
 
 Consultar ou manter informações de veículos quando vinculadas a processos financeiros.
 
-## Print da tela com caminho
+## Tela
 
-Financeiro > Veículos
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Financeiro > Veículos</code></p>
+
+</div>
 
 ## Quando usar
 

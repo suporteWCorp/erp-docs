@@ -4,9 +4,13 @@
 
 Emitir ou processar notas fiscais em lote quando houver mais de um documento a ser tratado.
 
-## Print da tela com caminho
+## Tela
 
-Faturamento > Nota Fiscal (Lote)
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Faturamento > Nota Fiscal (Lote)</code></p>
+
+</div>
 
 ## Quando usar
 

@@ -4,9 +4,13 @@
 
 Criar ou acompanhar solicitações de pagamento antes da efetivação financeira.
 
-## Print da tela com caminho
+## Tela
 
-Financeiro > Solicitação de Pagamento
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Financeiro > Solicitação de Pagamento</code></p>
+
+</div>
 
 ## Quando usar
 

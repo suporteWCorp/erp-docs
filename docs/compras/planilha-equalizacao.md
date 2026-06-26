@@ -4,9 +4,13 @@
 
 Comparar propostas ou condições de fornecedores para apoio à decisão de compra.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Planilha de Equalização
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Compras > Planilha de Equalização</code></p>
+
+</div>
 
 ## Quando usar
 

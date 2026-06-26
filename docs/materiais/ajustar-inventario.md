@@ -4,9 +4,13 @@
 
 Ajustar quantidades de inventário conforme conferência física ou necessidade operacional.
 
-## Print da tela com caminho
+## Tela
 
-Materiais > Ajustar Inventário
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Materiais > Ajustar Inventário</code></p>
+
+</div>
 
 ## Quando usar
 

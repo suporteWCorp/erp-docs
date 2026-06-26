@@ -4,9 +4,13 @@
 
 Emitir ou consultar nota fiscal de serviço conforme a operação da empresa.
 
-## Print da tela com caminho
+## Tela
 
-Faturamento > Nota Fiscal de Serviço
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Faturamento > Nota Fiscal de Serviço</code></p>
+
+</div>
 
 ## Quando usar
 

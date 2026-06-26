@@ -4,9 +4,13 @@
 
 Cadastrar ou consultar grupos usados para classificar serviços.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Grupo de Serviço
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Serviços > Grupo de Serviço</code></p>
+
+</div>
 
 ## Quando usar
 

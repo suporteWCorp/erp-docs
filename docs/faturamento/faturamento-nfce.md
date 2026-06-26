@@ -4,9 +4,13 @@
 
 Emitir ou consultar cupom fiscal no WCorp, conforme a operação de venda e o ambiente fiscal utilizado pela empresa.
 
-## Print da tela com caminho
+## Tela
 
-`Faturamento > Cupom Fiscal`
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Faturamento > Cupom Fiscal</code></p>
+
+</div>
 
 ## Quando usar
 

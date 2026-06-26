@@ -6,7 +6,7 @@ Antes de abrir um chamado, verifique se alguma das opções abaixo pode ajudar a
 
 Consulte os Guias para aprender como executar as principais rotinas do WCorp.
 
-[Abrir Guias](../como-fazer/index.md){ .md-button .md-button--primary }
+[Consultar Guias](../como-fazer/index.md){ .md-button .md-button--primary }
 
 ## Encontrou uma mensagem de erro?
 
@@ -18,13 +18,13 @@ Consulte a Base de Erros para verificar possíveis causas e soluções.
 
 Consulte as Perguntas Frequentes.
 
-[Abrir FAQ](../referencia/faq.md){ .md-button .md-button--primary }
+[Consultar FAQ](../referencia/faq.md){ .md-button .md-button--primary }
 
 ## Deseja entender como funciona uma tela?
 
 Consulte o Manual do WCorp.
 
-[Abrir Manual](../manual/index.md){ .md-button .md-button--primary }
+[Ver Manuais](../manual/index.md){ .md-button .md-button--primary }
 
 ## Ainda precisa de ajuda?
 

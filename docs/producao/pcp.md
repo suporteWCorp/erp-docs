@@ -4,9 +4,13 @@
 
 Planejar e acompanhar rotinas de planejamento e controle da produção.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > PCP
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Produção > PCP</code></p>
+
+</div>
 
 ## Quando usar
 

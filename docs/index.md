@@ -20,7 +20,7 @@ Bem-vindo à central de ajuda do **WCorp**. Escolha a forma de consulta mais ade
 
 Aprenda a realizar os principais processos e rotinas do WCorp.
 
-[Abrir Guia](como-fazer/index.md){ .md-button .md-button--primary }
+[Consultar Guias](como-fazer/index.md){ .md-button .md-button--primary }
 
 </div>
 
@@ -30,7 +30,7 @@ Aprenda a realizar os principais processos e rotinas do WCorp.
 
 Use o manual por abas do WCorp, seguindo a mesma organização visual do sistema.
 
-[Abrir Manual](manual/index.md){ .md-button .md-button--primary }
+[Ver Manuais](manual/index.md){ .md-button .md-button--primary }
 
 </div>
 
@@ -66,4 +66,3 @@ Encontre orientações para resolver dúvidas e preparar as informações necess
 </main>
 
 </div>
-

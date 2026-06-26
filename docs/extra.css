@@ -263,6 +263,10 @@ body.wc-context-sidebar-active:not(.wc-context-sidebar-custom) .wc-context-sideb
     .md-sidebar--primary {
         width: 11.3rem;
     }
+
+    body.wc-context-sidebar-active .md-sidebar--primary {
+        margin-top: -1.6rem;
+    }
 }
 
 /* Atalhos discretos na coluna direita da Visão Geral do Guia */
@@ -365,11 +369,19 @@ body.wc-context-sidebar-active:not(.wc-context-sidebar-custom) .wc-context-sideb
     }
 }
 
-/* Breadcrumb discreto de contexto */
+/* Caminho de navegação abaixo do cabeçalho */
+.wc-breadcrumb-bar {
+    background: var(--md-default-bg-color);
+    border-bottom: 1px solid rgba(2, 128, 144, 0.12);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.035);
+}
+
 .wc-breadcrumb {
     color: var(--md-default-fg-color--light);
-    font-size: 0.62rem;
-    margin: -0.2rem 0 0.8rem;
+    font-size: 0.66rem;
+    margin: 0 auto;
+    max-width: 1220px;
+    padding: 0.62rem 1.2rem;
 }
 
 .wc-breadcrumb__list {
@@ -387,9 +399,14 @@ body.wc-context-sidebar-active:not(.wc-context-sidebar-custom) .wc-context-sideb
 }
 
 .wc-breadcrumb__item + .wc-breadcrumb__item::before {
-    color: rgba(2, 128, 144, 0.55);
-    content: "/";
+    color: rgba(2, 128, 144, 0.62);
+    content: "›";
     margin-right: 0.28rem;
+}
+
+.wc-breadcrumb__item[aria-current="page"] {
+    color: var(--md-default-fg-color);
+    font-weight: 700;
 }
 
 .wc-breadcrumb a {

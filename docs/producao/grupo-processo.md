@@ -4,9 +4,13 @@
 
 Cadastrar ou consultar grupos de processos produtivos.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Grupo de Processo
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Produção > Grupo de Processo</code></p>
+
+</div>
 
 ## Quando usar
 

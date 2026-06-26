@@ -4,11 +4,15 @@
 
 Emitir nota fiscal de saída no WCorp, de forma manual ou vinculada a pedidos.
 
-## Print da tela com caminho
+## Tela
 
-`Faturamento > Nota Fiscal`
+<div class="wc-screen-block" markdown>
 
 ![Tela principal de Nota Fiscal](../assets/faturamento-nf.png)
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Faturamento > Nota Fiscal</code></p>
+
+</div>
 
 ## Quando usar
 

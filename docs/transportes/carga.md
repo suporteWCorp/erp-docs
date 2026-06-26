@@ -4,9 +4,13 @@
 
 Cadastrar, consultar ou acompanhar cargas.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Carga
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Transportes > Carga</code></p>
+
+</div>
 
 ## Quando usar
 

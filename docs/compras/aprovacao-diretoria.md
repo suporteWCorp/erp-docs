@@ -4,9 +4,13 @@
 
 Acompanhar aprovações de compra que dependem da diretoria.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Aprovação Diretoria
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Compras > Aprovação Diretoria</code></p>
+
+</div>
 
 ## Quando usar
 

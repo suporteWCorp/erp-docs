@@ -12,12 +12,19 @@ error_tags:
 
 ## Pré-requisitos
 
-!!! prerequisite "Antes de começar"
-    - Cliente cadastrado: [Como cadastrar um cliente](cadastrar-cliente.md){: target="_blank" rel="noopener" }.
-    - Material cadastrado: [Como cadastrar um material](cadastrar-material.md){: target="_blank" rel="noopener" }.
-    - Natureza de operação cadastrada: [Como cadastrar uma natureza de operação](cadastrar-natureza-operacao.md){: target="_blank" rel="noopener" }.
-    - Pedido criado, quando a emissão for por pedido: [Como gerar um pedido](fazer-pedido-venda.md){: target="_blank" rel="noopener" }.
-    - Certificado e parâmetros fiscais configurados.
+<div class="wc-prereq-list" markdown>
+
+- Cliente cadastrado<br>
+  [Como cadastrar um cliente.](cadastrar-cliente.md){: target="_blank" rel="noopener" }
+- Material cadastrado<br>
+  [Como cadastrar um material.](cadastrar-material.md){: target="_blank" rel="noopener" }
+- Natureza de operação cadastrada<br>
+  [Como cadastrar uma natureza de operação.](cadastrar-natureza-operacao.md){: target="_blank" rel="noopener" }
+- Pedido criado, quando a emissão for por pedido<br>
+  [Como gerar um pedido](fazer-pedido-venda.md){: target="_blank" rel="noopener" }
+- Certificado e parâmetros fiscais configurados
+
+</div>
 
 ## Avisos
 
@@ -32,6 +39,13 @@ error_tags:
 
 ## Print do caminho
 ![Onde encontrar](../assets/images/guias/faturamento_emitir_nfe.png)
+
+## Demonstração em vídeo
+<video class="wc-video" controls preload="auto" playsinline>
+  <source src="../../assets/videos/faturamento_nfe.mp4" type="video/mp4">
+  Seu navegador não conseguiu reproduzir este vídeo.
+</video>
+
 
 ## Como fazer
 
@@ -53,12 +67,6 @@ error_tags:
 
 A NF-e é transmitida e, quando os dados são aceitos pela SEFAZ, fica autorizada para consulta.
 
-## Demonstração em vídeo
-<video class="wc-video" controls preload="auto" playsinline>
-  <source src="../../assets/videos/faturamento_nfe.mp4" type="video/mp4">
-  Seu navegador não conseguiu reproduzir este vídeo.
-</video>
-
 ## Quando utilizar
 
 Use quando for necessário documentar fiscalmente uma venda, remessa ou outra operação de saída.
@@ -68,4 +76,4 @@ Use quando for necessário documentar fiscalmente uma venda, remessa ou outra op
 - [Como cancelar uma NF-e](cancelar-nfe.md){: target="_blank" rel="noopener" }
 - [Como emitir uma devolução](emitir-devolucao.md){: target="_blank" rel="noopener" }
 - [Como emitir uma carta de correção](emitir-carta-correcao.md){: target="_blank" rel="noopener" }
-- [Manual > Faturamento > Nota Fiscal](../faturamento/faturamento-nf.md){: target="_blank" rel="noopener" }
+- [Consultar manual de nota fiscal](../faturamento/faturamento-nf.md){: target="_blank" rel="noopener" }

@@ -4,9 +4,13 @@
 
 Criar, consultar ou acompanhar requisições de compra.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Requisição de Compras
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Compras > Requisição de Compras</code></p>
+
+</div>
 
 ## Quando usar
 

@@ -4,9 +4,13 @@
 
 Consultar ou informar dados técnicos do material usados no processo comercial.
 
-## Print da tela com caminho
+## Tela
 
-Comercial > Ficha Técnica de Material
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Comercial > Ficha Técnica de Material</code></p>
+
+</div>
 
 ## Quando usar
 

@@ -4,9 +4,13 @@
 
 Importar nota fiscal eletrônica para gerar ou apoiar processos de remessa.
 
-## Print da tela com caminho
+## Tela
 
-Comercial > Importar NFe para Remessa
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Comercial > Importar NFe para Remessa</code></p>
+
+</div>
 
 ## Quando usar
 

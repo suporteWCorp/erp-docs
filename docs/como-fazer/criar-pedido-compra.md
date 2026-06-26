@@ -11,10 +11,15 @@ error_tags:
 
 ## Pré-requisitos
 
-- [Como cadastrar um fornecedor](cadastrar-fornecedor.md){: target="_blank" rel="noopener" }.
-- [Como cadastrar um material](cadastrar-material.md){: target="_blank" rel="noopener" }.
-- Condição comercial negociada.
-- Acesso à tela [Manual > Compras > Pedido de Compra](../compras/pedido-compra.md){: target="_blank" rel="noopener" }.
+<div class="wc-prereq-list" markdown>
+
+- Fornecedor cadastrado<br>
+  [Como cadastrar um fornecedor.](cadastrar-fornecedor.md){: target="_blank" rel="noopener" }
+- Material cadastrado<br>
+  [Como cadastrar um material.](cadastrar-material.md){: target="_blank" rel="noopener" }
+- Condição comercial negociada
+
+</div>
 
 ## Permissões
 
@@ -41,4 +46,4 @@ Use quando a empresa precisa formalizar uma compra antes da entrada da nota fisc
 
 - [Como lançar uma nota de entrada](lancar-nota-entrada.md){: target="_blank" rel="noopener" }
 - [Como importar XML](importar-xml.md){: target="_blank" rel="noopener" }
-- [Manual > Compras > Pedido de Compra](../compras/pedido-compra.md){: target="_blank" rel="noopener" }
+- [Consultar manual de pedido de compra](../compras/pedido-compra.md){: target="_blank" rel="noopener" }

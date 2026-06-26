@@ -4,9 +4,13 @@
 
 Cadastrar ou consultar tabelas de preços de transporte.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Tabela de Preços
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Transportes > Tabela de Preços</code></p>
+
+</div>
 
 ## Quando usar
 

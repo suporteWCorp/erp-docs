@@ -4,9 +4,13 @@
 
 Cadastrar ou consultar embalagens.
 
-## Print da tela com caminho
+## Tela
 
-$Tab > Embalagem
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Administração > Embalagem</code></p>
+
+</div>
 
 ## Quando usar
 

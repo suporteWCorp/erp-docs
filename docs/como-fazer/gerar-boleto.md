@@ -11,10 +11,14 @@ error_tags:
 
 ## Pré-requisitos
 
-- [Como cadastrar um cliente](cadastrar-cliente.md){: target="_blank" rel="noopener" }.
-- Título a receber cadastrado.
-- Conta bancária e carteira configuradas.
-- Acesso à tela [Manual > Financeiro > Boleto](../financeiro/boleto.md){: target="_blank" rel="noopener" }.
+<div class="wc-prereq-list" markdown>
+
+- Cliente cadastrado<br>
+  [Como cadastrar um cliente.](cadastrar-cliente.md){: target="_blank" rel="noopener" }
+- Título a receber cadastrado
+- Conta bancária e carteira configuradas
+
+</div>
 
 ## Avisos
 
@@ -44,4 +48,4 @@ Use quando a empresa precisa cobrar um cliente por boleto bancário a partir de 
 
 - [Como baixar um título](baixar-titulo.md){: target="_blank" rel="noopener" }
 - [Como emitir uma NF-e](faturar-nota.md){: target="_blank" rel="noopener" }
-- [Manual > Financeiro > Boleto](../financeiro/boleto.md){: target="_blank" rel="noopener" }
+- [Consultar manual de boleto](../financeiro/boleto.md){: target="_blank" rel="noopener" }

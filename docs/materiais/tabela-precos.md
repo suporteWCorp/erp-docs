@@ -4,9 +4,13 @@
 
 Consultar ou manter tabelas de preços vinculadas a materiais.
 
-## Print da tela com caminho
+## Tela
 
-Materiais > Tabela de Preços
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Materiais > Tabela de Preços</code></p>
+
+</div>
 
 ## Quando usar
 

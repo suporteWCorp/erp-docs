@@ -4,11 +4,15 @@
 
 Cadastrar e consultar clientes no WCorp para uso em pedidos, orçamentos, faturamento e demais funcionalidades.
 
-## Print da tela com caminho
+## Tela
 
-`Comercial > Clientes`
+<div class="wc-screen-block" markdown>
 
 ![Tela de clientes](../assets/comercial-clientes.png)
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Comercial > Clientes</code></p>
+
+</div>
 
 ## Quando usar
 

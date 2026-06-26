@@ -4,9 +4,13 @@
 
 Gerar, consultar ou acompanhar boletos vinculados a contas a receber.
 
-## Print da tela com caminho
+## Tela
 
-Financeiro > Boleto
+<div class="wc-screen-block" markdown>
+
+<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Financeiro > Boleto</code></p>
+
+</div>
 
 ## Quando usar
 
