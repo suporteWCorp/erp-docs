@@ -26,6 +26,7 @@ error_tags:
 --8<-- "shared/avisos/permissoes.md"
 
 ## Caminho
+
 `Compras > Pedido de Compra`.
 
 ## Como fazer

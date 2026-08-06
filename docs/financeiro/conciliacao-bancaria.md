@@ -4,17 +4,13 @@
 
 Conferir movimentações do WCorp com extratos ou retornos bancários.
 
-## Tela
-
-<div class="wc-screen-block" markdown>
-
-<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Financeiro > Conciliação Bancária</code></p>
-
-</div>
-
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Conciliação Bancária**.
+
+## Caminho
+
+`Financeiro > Conciliação Bancária`.
 
 ## Passo a passo
 
@@ -24,7 +20,7 @@ Use esta rotina quando houver necessidade de executar ou consultar processos rel
 4. Confira empresa, conta, valor, vencimento e status, quando aplicável.
 5. Salve, confirme ou finalize conforme a ação desejada na tela.
 
-### Campos principais
+## Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |

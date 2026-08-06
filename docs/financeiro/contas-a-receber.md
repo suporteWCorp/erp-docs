@@ -1,20 +1,19 @@
 # Contas a Receber
 
+!!! information "Conteúdo em atualização"
+    Este manual está sendo revisado e receberá informações adicionais em breve. Enquanto isso, consulte o [Guia relacionado](../como-fazer/baixar-titulo.md){: target="_blank" rel="noopener" } para acompanhar o passo a passo da operação.
+
 ## Objetivo
 
 Cadastrar, consultar e acompanhar títulos que a empresa tem a receber.
 
-## Tela
-
-<div class="wc-screen-block" markdown>
-
-<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Financeiro > Contas a Receber</code></p>
-
-</div>
-
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Contas a Receber**.
+
+## Caminho
+
+`Financeiro > Contas a Receber`.
 
 ## Passo a passo
 
@@ -24,7 +23,7 @@ Use esta rotina quando houver necessidade de executar ou consultar processos rel
 4. Confira empresa, conta, valor, vencimento e status, quando aplicável.
 5. Salve, confirme ou finalize conforme a ação desejada na tela.
 
-### Campos principais
+## Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |

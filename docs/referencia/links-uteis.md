@@ -13,3 +13,6 @@ Atalhos para consultas oficiais usadas no dia a dia do suporte.
 - **Consultar cadastro no SINTEGRA** — [https://www.sintegra.gov.br/](https://www.sintegra.gov.br/){ target="_blank" rel="noopener" }
 
 - **Consultar CEP** — [https://buscacepinter.correios.com.br/app/endereco/index.php](https://buscacepinter.correios.com.br/app/endereco/index.php){ target="_blank" rel="noopener" }
+
+- **Acesso Remoto WCorp** — [Baixar ferramenta de acesso remoto](https://remotesupport.dl-files.com/client/windows/custom?apihostname=remotesupport.dl-files.com&productname=Suporte+Remoto+Wcorp&customizationid=48de24cb-ce96-4e5a-8601-02b8f96ea66c&apihostnameforoauth=portal.tsplus-remotesupport.com){ target="_blank" rel="noopener" }
+  Baixe a ferramenta de acesso remoto para atendimento do suporte WCorp.

@@ -23,17 +23,19 @@ error_tags:
 --8<-- "shared/avisos/permissoes.md"
 
 ## Caminho
+
 `Materiais > Materiais`.
 
 ## Print do caminho
+
 ![Onde encontrar](../assets/images/guias/materiais_materiais.png)
 
 ## Demonstração em vídeo
+
 <video class="wc-video" controls preload="auto" playsinline poster="../../assets/images/guias/materiais_materiais.png">
   <source src="../../assets/videos/materiais_materiais.mp4" type="video/mp4">
   Seu navegador não conseguiu reproduzir este vídeo.
 </video>
-
 
 ## Como fazer
 

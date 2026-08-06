@@ -15,6 +15,152 @@
     { label: "Administração", href: "administracao/administracao-geral/", section: "/administracao/" }
   ];
 
+  const manualModuleScreens = {
+    Comercial: [
+      { label: "Clientes", href: "comercial/comercial-clientes/" },
+      { label: "Grupo de clientes", href: "comercial/comercial-grupo-clientes/" },
+      { label: "Separação de pedido", href: "comercial/comercial-separacao-pedido/" },
+      { label: "Orçamento", href: "comercial/comercial-orcamento/" },
+      { label: "Pedido", href: "comercial/pedidos/" },
+      { label: "Devolução", href: "comercial/devolucao/" },
+      { label: "Ficha técnica de material", href: "comercial/ficha-tecnica-material/" },
+      { label: "Comissões de vendedores", href: "comercial/comissoes-vendedores/" },
+      { label: "Transportadora", href: "comercial/transportadora/" },
+      { label: "Despacho", href: "comercial/despacho/" },
+      { label: "Projeção de vendas", href: "comercial/projecao-vendas/" },
+      { label: "Importar NFe para Remessa", href: "comercial/importar-nfe-remessa/" }
+    ],
+    Faturamento: [
+      { label: "Nota Fiscal", href: "faturamento/faturamento-nf/" },
+      { label: "Nota Fiscal (Lote)", href: "faturamento/nota-fiscal-lote/" },
+      { label: "Cupom Fiscal", href: "faturamento/faturamento-nfce/" },
+      { label: "Entrada de Nota Fiscal", href: "faturamento/entrada-nota-fiscal/" },
+      { label: "Radar de Nota Fiscal", href: "faturamento/radar-nota-fiscal/" },
+      { label: "Carta de Correção", href: "faturamento/carta-correcao/" },
+      { label: "Inutilização Nota Fiscal", href: "faturamento/inutilizacao-nota-fiscal/" },
+      { label: "Nota Fiscal de Serviço", href: "faturamento/nota-fiscal-servico/" },
+      { label: "CFOP Entrada", href: "faturamento/cfop-entrada/" }
+    ],
+    Financeiro: [
+      { label: "Transferência entre Contas", href: "financeiro/transferencia-entre-contas/" },
+      { label: "Contas a Pagar", href: "financeiro/contas-a-pagar/" },
+      { label: "Contas a Receber", href: "financeiro/contas-a-receber/" },
+      { label: "Cheque", href: "financeiro/cheque/" },
+      { label: "Boleto", href: "financeiro/boleto/" },
+      { label: "Ferramentas CNAB", href: "financeiro/ferramentas-cnab/" },
+      { label: "Arquivo de Remessa", href: "financeiro/arquivo-remessa/" },
+      { label: "Contas", href: "financeiro/contas/" },
+      { label: "Veículos", href: "financeiro/veiculos/" },
+      { label: "Solicitação de Pagamento", href: "financeiro/solicitacao-pagamento/" },
+      { label: "Cartão", href: "financeiro/cartao/" },
+      { label: "Conciliação Bancária", href: "financeiro/conciliacao-bancaria/" }
+    ],
+    Colaboradores: [
+      { label: "Funcionários / Colaboradores", href: "colaboradores/funcionarios-colaboradores/" },
+      { label: "Cargos", href: "colaboradores/cargos/" },
+      { label: "Comissões", href: "colaboradores/comissoes/" },
+      { label: "Planejamento de Pagamento", href: "colaboradores/planejamento-pagamento/" },
+      { label: "Pagamento de Funcionário", href: "colaboradores/pagamento-funcionario/" }
+    ],
+    Fornecedores: [
+      { label: "Fornecedores", href: "fornecedores/fornecedores/" },
+      { label: "Categoria de Fornecedor", href: "fornecedores/categoria-fornecedor/" },
+      { label: "Certificado", href: "fornecedores/certificado/" }
+    ],
+    Materiais: [
+      { label: "Materiais", href: "materiais/materiais/" },
+      { label: "Categoria de Materiais", href: "materiais/categoria-materiais/" },
+      { label: "Locais de Armazenagem", href: "materiais/locais-armazenagem/" },
+      { label: "Entrada de Material", href: "materiais/entrada-material/" },
+      { label: "Romaneio", href: "materiais/romaneio/" },
+      { label: "Ferramentas", href: "materiais/ferramentas/" },
+      { label: "Ajustar Inventário", href: "materiais/ajustar-inventario/" },
+      { label: "Lote/Estoque", href: "materiais/lote-estoque/" },
+      { label: "Tabela de Preços", href: "materiais/tabela-precos/" },
+      { label: "Palete", href: "materiais/palete/" },
+      { label: "Conversão de Unidades", href: "materiais/conversao-unidades/" },
+      { label: "Etiqueta", href: "materiais/etiqueta/" }
+    ],
+    Serviços: [
+      { label: "Cadastro de Serviço", href: "servicos/cadastro-servico/" },
+      { label: "Cadastro de Atividade", href: "servicos/cadastro-atividade/" },
+      { label: "Grupo de Serviço", href: "servicos/grupo-servico/" },
+      { label: "Orçamento OS", href: "servicos/orcamento-os/" },
+      { label: "Ordem de Serviço", href: "servicos/ordem-servico/" },
+      { label: "Tipo de Ordem de Serviço", href: "servicos/tipo-ordem-servico/" },
+      { label: "Faturamento de Recorrência", href: "servicos/faturamento-recorrencia/" },
+      { label: "Rateio de Centro de Custo", href: "servicos/rateio-centro-custo/" }
+    ],
+    Contratos: [
+      { label: "Contratos", href: "contratos/contratos/" },
+      { label: "Fases do Contrato", href: "contratos/fases-contrato/" },
+      { label: "Materiais e Serviços Previstos", href: "contratos/materiais-servicos-previstos/" },
+      { label: "Manutenção de Contratos", href: "contratos/manutencao-contratos/" }
+    ],
+    Compras: [
+      { label: "Requisição de Compras", href: "compras/requisicao-compras/" },
+      { label: "Planilha de Equalização", href: "compras/planilha-equalizacao/" },
+      { label: "Aprovação de Compras", href: "compras/aprovacao-compras/" },
+      { label: "Aprovação Diretoria", href: "compras/aprovacao-diretoria/" },
+      { label: "Pedido de Compra", href: "compras/pedido-compra/" },
+      { label: "Requisições x Projeção de Vendas", href: "compras/requisicoes-projecao-vendas/" }
+    ],
+    Produção: [
+      { label: "Ordem de Produção", href: "producao/ordem-producao/" },
+      { label: "PCP", href: "producao/pcp/" },
+      { label: "Processo", href: "producao/processo/" },
+      { label: "Grupo de Processo", href: "producao/grupo-processo/" },
+      { label: "Inspeção", href: "producao/inspecao/" },
+      { label: "Separar Material", href: "producao/separar-material/" },
+      { label: "Equipamento", href: "producao/equipamento/" },
+      { label: "Acessório", href: "producao/acessorio/" },
+      { label: "Custos de Produção", href: "producao/custos-producao/" },
+      { label: "Parâmetro", href: "producao/parametro/" },
+      { label: "Motivo de Parada", href: "producao/motivo-parada/" },
+      { label: "Qualidade", href: "producao/qualidade/" }
+    ],
+    Transportes: [
+      { label: "Regiões", href: "transportes/regioes/" },
+      { label: "Tabela de Preços", href: "transportes/tabela-precos/" },
+      { label: "Orçamento CTe", href: "transportes/orcamento-cte/" },
+      { label: "Conhecimento de Transporte", href: "transportes/conhecimento-transporte/" },
+      { label: "Conhecimento de Transp.(Lote)", href: "transportes/conhecimento-transporte-lote/" },
+      { label: "Manifesto de Transporte", href: "transportes/manifesto-transporte/" },
+      { label: "Carta de Correção", href: "transportes/carta-correcao/" },
+      { label: "Inutilização CTe", href: "transportes/inutilizacao-cte/" },
+      { label: "Alíquotas de Transporte", href: "transportes/aliquotas-transporte/" },
+      { label: "Faturamento", href: "transportes/faturamento/" },
+      { label: "Coleta", href: "transportes/coleta/" },
+      { label: "Averbação Seguradora", href: "transportes/averbacao-seguradora/" },
+      { label: "Carga", href: "transportes/carga/" }
+    ],
+    Relatórios: [
+      { label: "Relatórios", href: "relatorios/relatorios/" },
+      { label: "XML(s) NFe", href: "relatorios/xml-nfe/" },
+      { label: "XML(s) CFe", href: "relatorios/xml-cfe/" },
+      { label: "XML(s) CTe", href: "relatorios/xml-cte/" },
+      { label: "Sped Fiscal", href: "relatorios/sped-fiscal/" },
+      { label: "Relatório de Não Conformidade", href: "relatorios/relatorio-nao-conformidade/" },
+      { label: "Relatório de Ocorrência", href: "relatorios/relatorio-ocorrencia/" },
+      { label: "Relatório WhatsApp", href: "relatorios/relatorio-whatsapp/" }
+    ],
+    Administração: [
+      { label: "Usuários", href: "administracao/usuarios/" },
+      { label: "Grupo Usuários", href: "administracao/grupo-usuarios/" },
+      { label: "Empresas", href: "administracao/empresas/" },
+      { label: "Natureza de Operação", href: "administracao/natureza-op/" },
+      { label: "Unidades", href: "administracao/unidades/" },
+      { label: "Embalagem", href: "administracao/embalagem/" },
+      { label: "NCMS", href: "administracao/ncms/" },
+      { label: "Centro de Custo", href: "administracao/centro-custo/" },
+      { label: "Rateio de Centro de Custo", href: "administracao/rateio-centro-custo/" },
+      { label: "Condições de Pagamento", href: "administracao/condicoes-pagamento/" },
+      { label: "Layout de Ficha Técnica", href: "administracao/layout-ficha-tecnica/" },
+      { label: "Parâmetros Sistema", href: "administracao/parametros-sistema/" },
+      { label: "Município", href: "administracao/municipio/" }
+    ]
+  };
+
   function rootUrl() {
     const logo = document.querySelector(".md-header__button.md-logo[href]");
     if (!logo) return new URL("/", window.location.href).href;
@@ -26,6 +172,55 @@
     const path = window.location.pathname.replace(/\/+$/, "");
     const relativePath = path.startsWith(root) ? path.slice(root.length) || "/" : path;
     return relativePath.replace(/\/index\.html$/, "") || "/";
+  }
+
+  function isManualPath(pathname) {
+    return pathname.includes("/manual/") || erpTabs.some((tab) => pathname.includes(tab.section));
+  }
+
+  function updateRouteClasses(url = window.location.href) {
+    const pathname = new URL(url, window.location.href).pathname;
+    document.documentElement.classList.toggle("wc-route-manual", isManualPath(pathname));
+  }
+
+  function markUiLoading(url = window.location.href) {
+    updateRouteClasses(url);
+    document.documentElement.classList.add("wc-ui-loading");
+  }
+
+  function markUiReady() {
+    requestAnimationFrame(() => {
+      document.documentElement.classList.remove("wc-ui-loading");
+    });
+  }
+
+  function isSamePageHash(target) {
+    const current = new URL(window.location.href);
+    return target.origin === current.origin &&
+      target.pathname.replace(/\/index\.html$/, "") === current.pathname.replace(/\/index\.html$/, "") &&
+      target.search === current.search &&
+      target.hash;
+  }
+
+  function watchInternalNavigation() {
+    if (window.wcorpNavigationLoadingWatcher) return;
+    window.wcorpNavigationLoadingWatcher = true;
+
+    document.addEventListener("click", (event) => {
+      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+
+      const link = event.target.closest("a[href]");
+      if (!link || link.target || link.hasAttribute("download")) return;
+
+      const target = new URL(link.href, window.location.href);
+      const root = new URL(rootUrl());
+      const rootPath = root.pathname.replace(/\/index\.html$/, "");
+
+      if (target.origin !== root.origin || !target.pathname.startsWith(rootPath) || isSamePageHash(target)) return;
+      markUiLoading(target.href);
+    }, true);
+
+    window.addEventListener("popstate", () => markUiLoading(window.location.href));
   }
 
   function manualModuleForCurrentPage() {
@@ -143,7 +338,7 @@
 
   function isManualPage() {
     const path = window.location.pathname;
-    return path.includes("/manual/") || erpTabs.some((tab) => path.includes(tab.section));
+    return isManualPath(path);
   }
 
   function replaceTabsWithErpMenu() {
@@ -216,9 +411,19 @@
     if (!primaryNav || !tabs) return;
 
     const currentPath = normalizedPagePath(window.location.href);
-    const activeModuleItems = manualSidebarItems()
+    const publishedItems = manualSidebarItems()
       .find((module) => module.label === activeModule.label)
       ?.children.filter((item) => item.label.toLocaleLowerCase("pt-BR") !== "visão geral") || [];
+    const publishedPaths = new Map(publishedItems.map((item) => [normalizedPagePath(item.href), item.href]));
+    const activeModuleItems = (manualModuleScreens[activeModule.label] || []).map((item) => {
+      const href = new URL(item.href, rootUrl()).href;
+      const publishedHref = publishedPaths.get(normalizedPagePath(href));
+      return {
+        ...item,
+        href: publishedHref || href,
+        disabled: !publishedHref
+      };
+    }).filter((item) => !item.disabled);
 
     if (!activeModuleItems.length) {
       if (existing) existing.remove();
@@ -240,18 +445,31 @@
       const fragment = document.createDocumentFragment();
 
       activeModuleItems.forEach((sourceItem) => {
-        const link = document.createElement("a");
-        link.className = "wc-manual-subnav__link";
-        link.href = sourceItem.href;
-        link.textContent = sourceItem.label;
-        fragment.appendChild(link);
+        const item = sourceItem.disabled ? document.createElement("span") : document.createElement("a");
+        item.className = "wc-manual-subnav__link";
+        item.textContent = sourceItem.label;
+
+        if (sourceItem.disabled) {
+          item.classList.add("wc-manual-subnav__link--disabled");
+          item.setAttribute("aria-disabled", "true");
+          item.title = "Manual em breve";
+
+          const badge = document.createElement("small");
+          badge.className = "wc-manual-subnav__badge";
+          badge.textContent = "Em breve";
+          item.appendChild(badge);
+        } else {
+          item.href = sourceItem.href;
+        }
+
+        fragment.appendChild(item);
       });
 
       inner.replaceChildren(fragment);
       subnav.dataset.wcModule = activeModule.section;
     }
 
-    inner.querySelectorAll(".wc-manual-subnav__link").forEach((link) => {
+    inner.querySelectorAll("a.wc-manual-subnav__link").forEach((link) => {
       const isActive = normalizedPagePath(link.href) === currentPath;
       link.classList.toggle("wc-manual-subnav__link--active", isActive);
 
@@ -274,13 +492,17 @@
     const footer = document.createElement("aside");
     footer.className = "wc-support-footer";
     footer.innerHTML = [
+      '<div class="wc-support-footer__contact">',
       '<span class="wc-support-footer__text">Contato</span>',
       '<span class="wc-support-footer__separator" aria-hidden="true">•</span>',
       '<a class="wc-support-footer__link" href="mailto:suporte@waveconcept.com.br" aria-label="Enviar e-mail para suporte@waveconcept.com.br">suporte@waveconcept.com.br</a>',
       '<span class="wc-support-footer__separator" aria-hidden="true">•</span>',
       '<a class="wc-support-footer__link" href="https://wa.me/5512991583055" target="_blank" rel="noopener" aria-label="Falar com suporte pelo WhatsApp">WhatsApp</a>',
-      '<span class="wc-support-footer__separator" aria-hidden="true">•</span>',
-      '<span class="wc-support-footer__note">Desenvolvido pela equipe de Suporte - versão teste 2026</span>'
+      '</div>',
+      '<div class="wc-support-footer__institutional">',
+      '<span class="wc-support-footer__copyright"><span class="wc-support-footer__copyright-icon" aria-hidden="true">©</span><span>2026 WCorp. Todos os direitos reservados.</span></span>',
+      '<span class="wc-support-footer__note">A Central de Ajuda está em constante evolução e recebe atualizações frequentes com novos guias, manuais e melhorias.</span>',
+      '</div>'
     ].join("");
 
     content.appendChild(footer);
@@ -362,9 +584,19 @@
     const content = document.querySelector(".md-content__inner");
     if (!content || content.querySelector(".wc-manual-category-grid")) return;
 
-    const activeModuleItems = manualSidebarItems()
+    const publishedItems = manualSidebarItems()
       .find((module) => module.label === activeModule.label)
       ?.children.filter((item) => item.label.toLocaleLowerCase("pt-BR") !== "visão geral") || [];
+    const publishedPaths = new Map(publishedItems.map((item) => [normalizedPagePath(item.href), item.href]));
+    const activeModuleItems = (manualModuleScreens[activeModule.label] || []).map((item) => {
+      const href = new URL(item.href, rootUrl()).href;
+      const publishedHref = publishedPaths.get(normalizedPagePath(href));
+      return {
+        ...item,
+        href: publishedHref || href,
+        disabled: !publishedHref
+      };
+    });
     if (!activeModuleItems.length) return;
 
     const sectionTitle = document.createElement("h2");
@@ -377,19 +609,32 @@
       const card = document.createElement("div");
       card.className = "wc-card";
       card.dataset.wcCardType = "Manuais";
+      if (item.disabled) {
+        card.classList.add("wc-card--disabled");
+        card.setAttribute("aria-disabled", "true");
+      }
 
       const title = document.createElement("h3");
       title.textContent = item.label;
 
       const description = document.createElement("p");
-      description.textContent = "Consulte campos, caminho e funcionamento desta tela.";
+      description.textContent = item.disabled
+        ? "Manual em preparação para publicação."
+        : "Consulte campos, caminho e funcionamento desta tela.";
 
       const linkWrapper = document.createElement("p");
-      const link = document.createElement("a");
-      link.className = "md-button md-button--primary";
-      link.href = item.href;
-      link.textContent = "Ver manual";
-      linkWrapper.appendChild(link);
+      if (item.disabled) {
+        const badge = document.createElement("span");
+        badge.className = "wc-card__badge";
+        badge.textContent = "Em breve";
+        linkWrapper.appendChild(badge);
+      } else {
+        const link = document.createElement("a");
+        link.className = "md-button md-button--primary";
+        link.href = item.href;
+        link.textContent = "Ver manual";
+        linkWrapper.appendChild(link);
+      }
 
       card.append(title, description, linkWrapper);
       grid.appendChild(card);
@@ -497,8 +742,7 @@
       { label: "Guia", count: guideCount, icon: "guide", href: new URL("como-fazer/", root).href, active: relativePath.startsWith("/como-fazer") },
       { label: "Manual", count: manualCount, icon: "manual", href: new URL("manual/", root).href, active: isManualPage() },
       { label: "Referências", icon: "reference", href: new URL("referencia/", root).href, active: relativePath.startsWith("/referencia") },
-      { label: "Suporte", icon: "support", href: new URL("suporte/", root).href, active: relativePath.startsWith("/suporte") },
-      { label: "Favoritos", icon: "favorite", href: new URL("favoritos/", root).href, active: relativePath.startsWith("/favoritos") }
+      { label: "Suporte", icon: "support", href: new URL("suporte/", root).href, active: relativePath.startsWith("/suporte") }
     ];
   }
 
@@ -788,6 +1032,7 @@
   }
 
   function initWcorpUi() {
+    updateRouteClasses();
     addBreadcrumb();
     replaceTabsWithErpMenu();
     configureContextSidebar();
@@ -796,8 +1041,10 @@
     focusGuideSidebar();
     replaceGuideOverviewToc();
     addSupportFooter();
+    markUiReady();
   }
 
+  watchInternalNavigation();
   document.addEventListener("DOMContentLoaded", initWcorpUi);
 
   if (window.document$ && typeof window.document$.subscribe === "function") {

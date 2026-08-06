@@ -1,6 +1,7 @@
 # Guia
 
-Use esta seção quando você sabe o que precisa realizar, mas não quer procurar pela tela do WCorp. O Guia é organizado por processos do dia a dia; o Manual continua sendo a referência detalhada de cada tela.
+Guias práticos para executar os principais processos do WCorp. Selecione uma categoria abaixo para começar.
+{ .wc-listing-intro }
 
 ## Administração
 
@@ -188,6 +189,8 @@ Gerar boleto a partir de um título financeiro.
 
 </div>
 
-## Quando usar o manual do WCorp
+<div class="wc-home-secondary-action" markdown>
 
-Se você já sabe qual tela deseja consultar, use **Manual**. O Guia explica como realizar uma tarefa; o Manual explica como funciona a tela.
+**Quando usar o manual do WCorp** — Se você já sabe qual tela deseja consultar, use **Manual**. O Guia explica como realizar uma tarefa; o Manual explica como funciona a tela.
+
+</div>

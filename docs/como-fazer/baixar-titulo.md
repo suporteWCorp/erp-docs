@@ -25,6 +25,7 @@ error_tags:
 --8<-- "shared/avisos/permissoes.md"
 
 ## Caminho
+
 `Financeiro > Contas a Receber / Contas a Pagar`.
 
 ## Como fazer

@@ -4,17 +4,13 @@
 
 Criar ou consultar orçamentos relacionados a CT-e.
 
-## Tela
-
-<div class="wc-screen-block" markdown>
-
-<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Transportes > Orçamento CTe</code></p>
-
-</div>
-
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Orçamento CTe**.
+
+## Caminho
+
+`Transportes > Orçamento CTe`.
 
 ## Passo a passo
 
@@ -24,7 +20,7 @@ Use esta rotina quando houver necessidade de executar ou consultar processos rel
 4. Confira as informações antes de salvar, confirmar ou finalizar.
 5. Finalize conforme a ação disponível na tela.
 
-### Campos principais
+## Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |

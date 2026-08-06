@@ -1,18 +1,17 @@
 # Condições de Pagamento
 
+!!! information "Conteúdo em atualização"
+    Este manual está sendo revisado e receberá informações adicionais em breve. Enquanto isso, consulte o [Guia relacionado](../como-fazer/cadastrar-condicao-pagamento.md){: target="_blank" rel="noopener" } para acompanhar o passo a passo da operação.
+
 ## Objetivo
 
 Esta página documenta a tela de condições de pagamento do WCorp.
 
 Use esta rotina para cadastrar, consultar ou revisar formas e prazos de pagamento utilizados em compras, vendas e financeiro.
 
-## Tela
+## Caminho
 
-<div class="wc-screen-block" markdown>
-
-<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Administração > Condições de Pagamento</code></p>
-
-</div>
+`Administração > Condições de Pagamento`.
 
 ## Avisos
 

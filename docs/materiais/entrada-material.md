@@ -4,17 +4,13 @@
 
 Registrar entrada de materiais no estoque.
 
-## Tela
-
-<div class="wc-screen-block" markdown>
-
-<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Materiais > Entrada de Material</code></p>
-
-</div>
-
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Entrada de Material**.
+
+## Caminho
+
+`Materiais > Entrada de Material`.
 
 ## Passo a passo
 
@@ -24,7 +20,7 @@ Use esta rotina quando houver necessidade de executar ou consultar processos rel
 4. Confira material, quantidade, unidade, lote ou local de armazenagem, quando aplicável.
 5. Salve, confirme ou finalize conforme a ação disponível na tela.
 
-### Campos principais
+## Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |

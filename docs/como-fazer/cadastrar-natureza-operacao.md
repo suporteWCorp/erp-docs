@@ -19,23 +19,20 @@ error_tags:
 
 </div>
 
-## Avisos
-
---8<-- "shared/avisos/validacao-fiscal.md"
-
 ## Permissões
 
 --8<-- "shared/avisos/permissoes.md"
 
 ## Caminho
+
 `Administração > Natureza de Operação`.
 
 ## Demonstração em vídeo
+
 <video class="wc-video" controls preload="auto" playsinline>
   <source src="../../assets/videos/adm_natureza_operacao.mp4" type="video/mp4">
   Seu navegador não conseguiu reproduzir este vídeo.
 </video>
-
 
 ## Como fazer
 
@@ -71,6 +68,10 @@ Use este processo quando for necessário:
 - incluir uma Regra Fiscal em uma Natureza existente;
 - ajustar os critérios de uma Regra Fiscal;
 - corrigir uma operação para a qual o sistema não encontrou uma Regra Fiscal compatível.
+
+## Avisos
+
+--8<-- "shared/avisos/validacao-fiscal.md"
 
 ## Veja também
 

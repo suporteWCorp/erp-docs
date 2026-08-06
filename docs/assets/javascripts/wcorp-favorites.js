@@ -75,7 +75,12 @@
     return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.78 5.63 6.22.9-4.5 4.39 1.06 6.2L12 17.2l-5.56 2.92 1.06-6.2L3 9.53l6.22-.9L12 3z"/></svg>';
   }
 
+  function cleanTitle(title) {
+    return String(title || "").replace(/\s*¶\s*$/g, "").trim();
+  }
+
   function createToggle(item, extraClass = "") {
+    item.title = cleanTitle(item.title);
     const button = document.createElement("button");
     button.type = "button";
     button.className = `wc-favorite-toggle ${extraClass}`.trim();
@@ -102,7 +107,7 @@
 
   function refreshToggle(button) {
     const active = isFavorite(button.dataset.favoriteUrl);
-    const title = button.dataset.favoriteTitle || "conteúdo";
+    const title = cleanTitle(button.dataset.favoriteTitle || "conteúdo");
     button.classList.toggle("is-favorite", active);
     button.setAttribute("aria-pressed", String(active));
     button.setAttribute("aria-label", `${active ? "Remover" : "Adicionar"} ${title} ${active ? "dos" : "aos"} favoritos`);
@@ -112,7 +117,7 @@
   function itemFromLink(link, title) {
     const type = contentType(link.href);
     if (!type) return null;
-    return { title: title.trim(), type, url: normalizeUrl(link.href) };
+    return { title: cleanTitle(title), type, url: normalizeUrl(link.href) };
   }
 
   function decorateCards() {
@@ -124,9 +129,10 @@
       const fallbackType = window.location.pathname.includes("/como-fazer/")
         ? "Guias"
         : manualPrefixes.some((prefix) => window.location.pathname.includes(`/${prefix}/`)) ? "Manuais" : "";
-      const item = itemFromLink(link, heading.textContent) || (card.classList.contains("wc-link-item")
-        ? { title: heading.textContent.trim(), type: "Links úteis", url: normalizeUrl(link.href) }
-        : fallbackType ? { title: heading.textContent.trim(), type: fallbackType, url: normalizeUrl(link.href) } : null);
+      const title = cleanTitle(heading.textContent);
+      const item = itemFromLink(link, title) || (card.classList.contains("wc-link-item")
+        ? { title, type: "Links úteis", url: normalizeUrl(link.href) }
+        : fallbackType ? { title, type: fallbackType, url: normalizeUrl(link.href) } : null);
       const path = relativePath(link.href);
       card.dataset.wcCardType = item?.type || (path.startsWith("suporte") ? "Apoio" : "Referências");
       if (!item) return;
@@ -179,7 +185,7 @@
       const summary = card.querySelector(".wc-error-card__summary");
       if (!heading || !summary || !card.id) return;
       const url = new URL(`referencia/erros-comuns/#${card.id}`, rootUrl()).href;
-      const item = { title: heading.textContent.trim(), type: "Erros Comuns", url: normalizeUrl(url) };
+      const item = { title: cleanTitle(heading.textContent), type: "Erros Comuns", url: normalizeUrl(url) };
       card.appendChild(createToggle(item));
       card.dataset.wcFavoriteReady = "true";
     });
@@ -216,7 +222,7 @@
         const row = document.createElement("li");
         const link = document.createElement("a");
         link.href = item.url;
-        link.textContent = item.title;
+        link.textContent = cleanTitle(item.title);
         row.append(link, createToggle(item));
         list.appendChild(row);
       });
@@ -239,10 +245,10 @@
     button.innerHTML = `${starIcon()}<span class="wc-header-action__label">Favoritos</span><span class="wc-header-favorites__count"></span>`;
 
     const version = document.createElement("span");
-    version.className = "wc-header-action wc-header-version";
-    version.textContent = "v06.2026";
-    version.title = "Versão da documentação: junho de 2026";
-    version.setAttribute("aria-label", "Versão da documentação, junho de 2026");
+    version.className = "wc-header-version";
+    version.textContent = "Build 07.2026";
+    version.title = "Build da documentação: julho de 2026";
+    version.setAttribute("aria-label", "Build da documentação, julho de 2026");
 
     const panel = document.createElement("div");
     panel.className = "wc-favorites-panel";

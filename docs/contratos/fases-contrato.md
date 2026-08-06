@@ -4,17 +4,13 @@
 
 Cadastrar ou consultar fases utilizadas no acompanhamento de contratos.
 
-## Tela
-
-<div class="wc-screen-block" markdown>
-
-<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Contratos > Fases do Contrato</code></p>
-
-</div>
-
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Fases do Contrato**.
+
+## Caminho
+
+`Contratos > Fases do Contrato`.
 
 ## Passo a passo
 
@@ -24,7 +20,7 @@ Use esta rotina quando houver necessidade de executar ou consultar processos rel
 4. Confira as informações antes de salvar, confirmar ou finalizar.
 5. Finalize conforme a ação disponível na tela.
 
-### Campos principais
+## Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |

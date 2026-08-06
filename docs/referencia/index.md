@@ -1,6 +1,7 @@
 # Referências
 
-Consulte materiais de apoio, erros conhecidos, termos utilizados no WCorp, links úteis e conteúdos de referência para auxiliar na utilização do sistema.
+Materiais de apoio para consultar erros, termos, links úteis e referências do WCorp.
+{ .wc-listing-intro }
 
 <div class="wc-home-grid wc-reference-grid" markdown>
 

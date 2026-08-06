@@ -1,18 +1,17 @@
 # NCMS
 
+!!! information "Conteúdo em atualização"
+    Este manual está sendo revisado e receberá informações adicionais em breve. Enquanto isso, consulte o [Guia relacionado](../como-fazer/cadastrar-material.md){: target="_blank" rel="noopener" } para acompanhar o passo a passo da operação.
+
 ## Objetivo
 
 Esta página documenta a tela de NCMs do WCorp.
 
 Use esta rotina para consultar ou manter classificações fiscais de mercadorias utilizadas em cadastros e documentos fiscais.
 
-## Tela
+## Caminho
 
-<div class="wc-screen-block" markdown>
-
-<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Administração > NCMS</code></p>
-
-</div>
+`Administração > NCMS`.
 
 ## Avisos
 

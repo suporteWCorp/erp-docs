@@ -1,20 +1,19 @@
 # Devolução
 
+!!! information "Conteúdo em atualização"
+    Este manual está sendo revisado e receberá informações adicionais em breve. Enquanto isso, consulte o [Guia relacionado](../como-fazer/emitir-devolucao.md){: target="_blank" rel="noopener" } para acompanhar o passo a passo da operação.
+
 ## Objetivo
 
 Registrar e acompanhar devoluções vinculadas ao fluxo comercial.
 
-## Tela
-
-<div class="wc-screen-block" markdown>
-
-<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Comercial > Devolução</code></p>
-
-</div>
-
 ## Quando usar
 
 Preencha aqui em quais situações o usuário deve acessar esta rotina.
+
+## Caminho
+
+`Comercial > Devolução`.
 
 ## Passo a passo
 
@@ -23,7 +22,7 @@ Preencha aqui em quais situações o usuário deve acessar esta rotina.
 3. Preencha ou consulte as informações necessárias.
 4. Salve, confirme ou finalize a operação conforme o fluxo da tela.
 
-### Campos principais
+## Campos principais
 
 | Campo | Descrição | Obrigatório | Observações |
 | --- | --- | --- | --- |

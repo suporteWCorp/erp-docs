@@ -4,17 +4,13 @@
 
 Cadastrar, consultar ou vincular transportadoras ao processo de venda.
 
-## Tela
-
-<div class="wc-screen-block" markdown>
-
-<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Comercial > Transportadora</code></p>
-
-</div>
-
 ## Quando usar
 
 Preencha aqui em quais situações o usuário deve acessar esta rotina.
+
+## Caminho
+
+`Comercial > Transportadora`.
 
 ## Passo a passo
 
@@ -23,7 +19,7 @@ Preencha aqui em quais situações o usuário deve acessar esta rotina.
 3. Preencha ou consulte as informações necessárias.
 4. Salve, confirme ou finalize a operação conforme o fluxo da tela.
 
-### Campos principais
+## Campos principais
 
 | Campo | Descrição | Obrigatório | Observações |
 | --- | --- | --- | --- |

@@ -1,20 +1,19 @@
 # Locais de Armazenagem
 
+!!! information "Conteúdo em atualização"
+    Este manual está sendo revisado e receberá informações adicionais em breve. Enquanto isso, consulte o [Guia relacionado](../como-fazer/consultar-estoque.md){: target="_blank" rel="noopener" } para acompanhar o passo a passo da operação.
+
 ## Objetivo
 
 Cadastrar ou consultar locais utilizados para controle físico e lógico do estoque.
 
-## Tela
-
-<div class="wc-screen-block" markdown>
-
-<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Materiais > Locais de Armazenagem</code></p>
-
-</div>
-
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Locais de Armazenagem**.
+
+## Caminho
+
+`Materiais > Locais de Armazenagem`.
 
 ## Passo a passo
 
@@ -24,7 +23,7 @@ Use esta rotina quando houver necessidade de executar ou consultar processos rel
 4. Confira material, quantidade, unidade, lote ou local de armazenagem, quando aplicável.
 5. Salve, confirme ou finalize conforme a ação disponível na tela.
 
-### Campos principais
+## Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |

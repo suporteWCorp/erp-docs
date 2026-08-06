@@ -18,12 +18,15 @@ Este repositório mantém a documentação do WCorp em MkDocs Material. O objeti
 - `docs/assets/javascripts/`: controladores independentes de cabeçalho, navegação e vídeos.
 - `docs/assets/images/` e `docs/assets/videos/`: mídia utilizada pelos Guias.
 - `docs/assets/data/erros-comuns.json`: fonte oficial da base de erros.
+- `docs/assets/data/content-info.json`: fonte das informações rápidas de Guias e Manuais, como dificuldade, popularidade, vídeo e tempo manual opcional.
 - `docs/como-documentar/base-de-erros.md`: contrato de cadastro, taxonomia e links diretos da base de erros.
 - `docs/assets/javascripts/wcorp-errors.js`: busca, filtros e expansão dos erros.
+- `docs/assets/javascripts/wcorp-content-info.js`: componente `ContentInfo` e indicadores reutilizáveis `ReadingTime`, `DifficultyIndicator`, `PopularIndicator` e `VideoIndicator`.
 - `docs/assets/javascripts/wcorp-favorites.js`: favoritos persistidos no navegador, cards, header e página agregadora.
 - `docs/favoritos.md`: página que organiza os favoritos por tipo.
 - `tools/normalize-manuals.ps1`: normalizador conservador da estrutura editorial dos Manuais de tela.
 - `docs/assets/stylesheets/alerts.css`: cores semânticas das caixas de aviso.
+- `docs/assets/stylesheets/content-info.css`: estilo do `ContentInfo` e do ícone discreto de popularidade nos cards.
 - `docs/como-documentar/caixas-de-aviso.md`: referência de uso dos avisos.
 
 ## Governança e continuidade
@@ -42,9 +45,13 @@ Evitar repetir nesses arquivos informações que já possuem uma fonte oficial. 
 
 ## Padrão atual dos Guias
 
-O modelo oficial está em `docs/shared/modelos/guia-processo.md`. A ordem é: Pré-requisitos, Avisos, Permissões, Caminho, Print do caminho, Como fazer, Demonstração em vídeo, Outra opção, Demonstração em vídeo, Quando utilizar e Veja também. Seções sem conteúdo real são omitidas.
+O modelo oficial está em `docs/shared/modelos/guia-processo.md`. A ordem editorial principal é: Pré-requisitos, Permissões, Caminho, Demonstração em vídeo quando existir, Como fazer, Quando utilizar, Avisos quando existirem e Veja também. `Print do caminho` permanece logo após `Caminho` quando existir. `Outra opção` só aparece em Guias que realmente possuem alternativa e fica após `Como fazer`, antes de `Quando utilizar`. A seção `Permissões` usa o snippet `docs/shared/avisos/permissoes.md`; avisos específicos ficam depois de `Quando utilizar` com caixas semânticas.
 
 Não inventar prints. Use apenas arquivos reais em `docs/assets/images/guias/`.
+
+## Padrão atual dos Manuais
+
+O modelo oficial está em `docs/shared/modelos/manual-tela.md`. A ordem editorial é: Objetivo, Quando usar, Caminho, Print da tela quando existir, Passo a passo, Campos principais, Avisos, Dúvidas frequentes e Veja também. O caminho deve ficar separado do print para facilitar leitura e reaproveitamento.
 
 ## Componentes compartilhados
 
@@ -53,6 +60,13 @@ Não inventar prints. Use apenas arquivos reais em `docs/assets/images/guias/`.
 - Configuração bancária: `docs/shared/avisos/configuracao-bancaria.md`
 - Sidebar do portal: `docs/shared/portal/*.md`
 - Modelo de guia: `docs/shared/modelos/guia-processo.md`
+- Informações rápidas de conteúdo: `docs/assets/data/content-info.json` + `docs/assets/javascripts/wcorp-content-info.js`
+
+## ContentInfo de Guias e Manuais
+
+Guias e Manuais recebem informações rápidas abaixo do título pelo componente `ContentInfo`. O tempo de leitura é calculado automaticamente no navegador usando 200 palavras por minuto e arredondamento para cima. O campo `readingTime` em `content-info.json` fica reservado para ajuste manual futuro.
+
+Campos aceitos em `content-info.json`: `readingTime`, `difficulty`, `popular`, `videoAvailable` e `videoDuration`. Valores de dificuldade aceitos: `basic`, `intermediate` e `advanced`. O campo `popular` aparece como texto apenas no `ContentInfo` da página interna; em cards deve aparecer somente como ícone discreto com tooltip `Popular`. O índice lateral não deve receber destaque visual por causa de vídeo; quando houver vídeo, a informação deve aparecer apenas no `ContentInfo`.
 
 ## Estado atual conhecido
 

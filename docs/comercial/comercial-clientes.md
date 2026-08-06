@@ -4,16 +4,6 @@
 
 Cadastrar e consultar clientes no WCorp para uso em pedidos, orçamentos, faturamento e demais funcionalidades.
 
-## Tela
-
-<div class="wc-screen-block" markdown>
-
-![Tela de clientes](../assets/comercial-clientes.png)
-
-<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Comercial > Clientes</code></p>
-
-</div>
-
 ## Quando usar
 
 Use esta rotina quando for necessário:
@@ -22,6 +12,18 @@ Use esta rotina quando for necessário:
 - Consultar ou revisar dados de um cliente existente.
 - Completar informações antes de lançar orçamento, pedido ou nota fiscal.
 - Corrigir dados cadastrais que estejam impedindo uma operação comercial ou fiscal.
+
+## Caminho
+
+`Comercial > Clientes`.
+
+## Print da tela
+
+<div class="wc-screen-block" markdown>
+
+![Tela de clientes](../assets/comercial-clientes.png)
+
+</div>
 
 ## Passo a passo
 
@@ -33,16 +35,18 @@ Use esta rotina quando for necessário:
 6. Preencha manualmente os campos que faltarem.
 7. Clique em **Salvar**.
 
-!!! info "Importante"
-    Caso seja um CNPJ recém-cadastrado, a atualização na base da SEFAZ pode levar mais de 30 dias. Nesses casos, pode ser necessário preencher as informações manualmente.
-
 ### Vídeo de referência
 
 O trecho de **1:20 até 2:00** mostra o acesso e o cadastro de cliente pela aba Comercial.
 
 [Assistir no YouTube a partir de 1:20](https://www.youtube.com/watch?v=osiFPSfEOrc&list=PLouJpYsMKL1fizkcacjs-UdhTCnxnrMOO&t=80s)
 
-### Campos principais
+## Avisos
+
+!!! info "Consulta de CNPJ"
+    Caso seja um CNPJ recém-cadastrado, a atualização na base da SEFAZ pode levar mais de 30 dias. Nesses casos, pode ser necessário preencher as informações manualmente.
+
+## Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |

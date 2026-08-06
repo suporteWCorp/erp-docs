@@ -1,78 +1,459 @@
-/* Caixas semânticas compartilhadas entre Guias e páginas de referência. */
+/* Caixas semânticas compartilhadas entre Guias, Manuais e páginas de referência. */
 .md-typeset .admonition.prerequisite,
-.md-typeset details.prerequisite {
-    border-color: #b42318;
+.md-typeset details.prerequisite,
+.md-typeset .admonition.requirement,
+.md-typeset details.requirement,
+.md-typeset .admonition.fiscal,
+.md-typeset details.fiscal,
+.md-typeset .admonition.caution,
+.md-typeset details.caution,
+.md-typeset .admonition.information,
+.md-typeset details.information,
+.md-typeset .admonition.success,
+.md-typeset details.success,
+.md-typeset .admonition.info,
+.md-typeset details.info,
+.md-typeset .admonition.tip,
+.md-typeset details.tip {
+    --wc-alert-accent: var(--md-primary-fg-color);
+    --wc-alert-title: color-mix(in srgb, var(--wc-alert-accent) 74%, #172a2a);
+    --wc-alert-border: color-mix(in srgb, var(--wc-alert-accent) 28%, transparent);
+    --wc-alert-surface: color-mix(in srgb, var(--wc-alert-accent) 7%, #ffffff);
+    --wc-alert-title-surface: color-mix(in srgb, var(--wc-alert-accent) 10%, #ffffff);
+
+    position: relative;
+    overflow: hidden;
+    margin: 0.88rem 0 1.05rem;
+    border: 1px solid var(--wc-alert-border);
+    border-left-width: 0;
+    border-radius: 9px;
+    background:
+        linear-gradient(
+            180deg,
+            color-mix(in srgb, var(--wc-alert-accent) 5%, transparent),
+            transparent 72%
+        ),
+        var(--wc-alert-surface);
+    box-shadow:
+        0 1px 2px rgba(15, 23, 42, 0.035),
+        0 8px 22px -20px color-mix(in srgb, var(--wc-alert-accent) 58%, transparent);
 }
 
-.md-typeset .prerequisite > .admonition-title,
-.md-typeset .prerequisite > summary {
-    background: rgba(180, 35, 24, 0.1);
+.md-typeset .admonition.prerequisite::before,
+.md-typeset details.prerequisite::before,
+.md-typeset .admonition.requirement::before,
+.md-typeset details.requirement::before,
+.md-typeset .admonition.fiscal::before,
+.md-typeset details.fiscal::before,
+.md-typeset .admonition.caution::before,
+.md-typeset details.caution::before,
+.md-typeset .admonition.information::before,
+.md-typeset details.information::before,
+.md-typeset .admonition.success::before,
+.md-typeset details.success::before,
+.md-typeset .admonition.info::before,
+.md-typeset details.info::before,
+.md-typeset .admonition.tip::before,
+.md-typeset details.tip::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 4px;
+    background: linear-gradient(
+        180deg,
+        var(--wc-alert-accent),
+        color-mix(in srgb, var(--wc-alert-accent) 45%, transparent)
+    );
+}
+
+.md-typeset .admonition.prerequisite:hover,
+.md-typeset details.prerequisite:hover,
+.md-typeset .admonition.requirement:hover,
+.md-typeset details.requirement:hover,
+.md-typeset .admonition.fiscal:hover,
+.md-typeset details.fiscal:hover,
+.md-typeset .admonition.caution:hover,
+.md-typeset details.caution:hover,
+.md-typeset .admonition.information:hover,
+.md-typeset details.information:hover,
+.md-typeset .admonition.success:hover,
+.md-typeset details.success:hover,
+.md-typeset .admonition.info:hover,
+.md-typeset details.info:hover,
+.md-typeset .admonition.tip:hover,
+.md-typeset details.tip:hover {
+    border-color: color-mix(in srgb, var(--wc-alert-accent) 38%, transparent);
+    box-shadow:
+        0 2px 4px rgba(15, 23, 42, 0.045),
+        0 12px 28px -24px color-mix(in srgb, var(--wc-alert-accent) 66%, transparent);
+}
+
+.md-typeset .admonition.prerequisite > .admonition-title,
+.md-typeset details.prerequisite > summary,
+.md-typeset .admonition.requirement > .admonition-title,
+.md-typeset details.requirement > summary,
+.md-typeset .admonition.fiscal > .admonition-title,
+.md-typeset details.fiscal > summary,
+.md-typeset .admonition.caution > .admonition-title,
+.md-typeset details.caution > summary,
+.md-typeset .admonition.information > .admonition-title,
+.md-typeset details.information > summary,
+.md-typeset .admonition.success > .admonition-title,
+.md-typeset details.success > summary,
+.md-typeset .admonition.info > .admonition-title,
+.md-typeset details.info > summary,
+.md-typeset .admonition.tip > .admonition-title,
+.md-typeset details.tip > summary {
+    min-height: 2.28rem;
+    margin: 0;
+    padding: 0.58rem 0.88rem 0.56rem 2.56rem;
+    border-bottom: 1px solid color-mix(in srgb, var(--wc-alert-accent) 12%, transparent);
+    background: var(--wc-alert-title-surface);
+    color: var(--wc-alert-title);
+    font-size: 0.76rem;
+    font-weight: 620;
+    letter-spacing: 0;
+    line-height: 1.28;
+}
+
+.md-typeset .admonition.prerequisite > .admonition-title::before,
+.md-typeset details.prerequisite > summary::before,
+.md-typeset .admonition.requirement > .admonition-title::before,
+.md-typeset details.requirement > summary::before,
+.md-typeset .admonition.fiscal > .admonition-title::before,
+.md-typeset details.fiscal > summary::before,
+.md-typeset .admonition.caution > .admonition-title::before,
+.md-typeset details.caution > summary::before,
+.md-typeset .admonition.information > .admonition-title::before,
+.md-typeset details.information > summary::before,
+.md-typeset .admonition.success > .admonition-title::before,
+.md-typeset details.success > summary::before,
+.md-typeset .admonition.info > .admonition-title::before,
+.md-typeset details.info > summary::before,
+.md-typeset .admonition.tip > .admonition-title::before,
+.md-typeset details.tip > summary::before {
+    top: 0.48rem;
+    left: 0.78rem;
+    display: inline-block;
+    width: 1.28rem;
+    height: 1.28rem;
+    border-radius: 7px;
+    background-color: var(--wc-alert-accent);
+    box-shadow:
+        inset 0 0 0 1px color-mix(in srgb, var(--wc-alert-accent) 18%, #ffffff),
+        0 1px 2px color-mix(in srgb, var(--wc-alert-accent) 22%, transparent);
+    opacity: 0.95;
+}
+
+.md-typeset .admonition.prerequisite > :not(.admonition-title),
+.md-typeset details.prerequisite > :not(summary),
+.md-typeset .admonition.requirement > :not(.admonition-title),
+.md-typeset details.requirement > :not(summary),
+.md-typeset .admonition.fiscal > :not(.admonition-title),
+.md-typeset details.fiscal > :not(summary),
+.md-typeset .admonition.caution > :not(.admonition-title),
+.md-typeset details.caution > :not(summary),
+.md-typeset .admonition.information > :not(.admonition-title),
+.md-typeset details.information > :not(summary),
+.md-typeset .admonition.success > :not(.admonition-title),
+.md-typeset details.success > :not(summary),
+.md-typeset .admonition.info > :not(.admonition-title),
+.md-typeset details.info > :not(summary),
+.md-typeset .admonition.tip > :not(.admonition-title),
+.md-typeset details.tip > :not(summary) {
+    color: #526174;
+    font-size: 0.78rem;
+    font-weight: 400;
+    line-height: 1.56;
+}
+
+.md-typeset .admonition.prerequisite > p,
+.md-typeset .admonition.requirement > p,
+.md-typeset .admonition.fiscal > p,
+.md-typeset .admonition.caution > p,
+.md-typeset .admonition.information > p,
+.md-typeset .admonition.success > p,
+.md-typeset .admonition.info > p,
+.md-typeset .admonition.tip > p {
+    margin: 0.62rem 0.88rem 0.76rem;
+}
+
+.md-typeset .admonition.prerequisite a,
+.md-typeset .admonition.requirement a,
+.md-typeset .admonition.fiscal a,
+.md-typeset .admonition.caution a,
+.md-typeset .admonition.information a,
+.md-typeset .admonition.success a,
+.md-typeset .admonition.info a,
+.md-typeset .admonition.tip a {
+    color: color-mix(in srgb, var(--wc-alert-accent) 76%, #005c63);
+    font-weight: 650;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.16em;
+}
+
+.md-typeset .admonition.prerequisite code,
+.md-typeset .admonition.requirement code,
+.md-typeset .admonition.fiscal code,
+.md-typeset .admonition.caution code,
+.md-typeset .admonition.information code,
+.md-typeset .admonition.success code,
+.md-typeset .admonition.info code,
+.md-typeset .admonition.tip code {
+    border-radius: 5px;
+    background: color-mix(in srgb, var(--wc-alert-accent) 10%, #ffffff);
+    color: var(--wc-alert-title);
+}
+
+.md-typeset .admonition.prerequisite ul,
+.md-typeset .admonition.requirement ul,
+.md-typeset .admonition.fiscal ul,
+.md-typeset .admonition.caution ul,
+.md-typeset .admonition.information ul,
+.md-typeset .admonition.success ul,
+.md-typeset .admonition.info ul,
+.md-typeset .admonition.tip ul {
+    margin-top: 0.5rem;
+    margin-bottom: 0.68rem;
+}
+
+.md-typeset .admonition.prerequisite li + li,
+.md-typeset .admonition.requirement li + li,
+.md-typeset .admonition.fiscal li + li,
+.md-typeset .admonition.caution li + li,
+.md-typeset .admonition.information li + li,
+.md-typeset .admonition.success li + li,
+.md-typeset .admonition.info li + li,
+.md-typeset .admonition.tip li + li {
+    margin-top: 0.14rem;
+}
+
+.md-typeset .admonition.prerequisite,
+.md-typeset details.prerequisite {
+    --wc-alert-accent: #b42318;
 }
 
 .md-typeset .admonition.requirement,
 .md-typeset details.requirement {
-    border-color: #c2410c;
-}
-
-.md-typeset .requirement > .admonition-title,
-.md-typeset .requirement > summary {
-    background: rgba(194, 65, 12, 0.1);
+    --wc-alert-accent: #c2410c;
 }
 
 .md-typeset .admonition.fiscal,
 .md-typeset details.fiscal {
-    border-color: #8a6d1d;
-}
-
-.md-typeset .fiscal > .admonition-title,
-.md-typeset .fiscal > summary {
-    background: rgba(138, 109, 29, 0.1);
+    --wc-alert-accent: #8a6d1d;
 }
 
 .md-typeset .admonition.caution,
 .md-typeset details.caution {
-    border-color: #d97706;
-}
-
-.md-typeset .caution > .admonition-title,
-.md-typeset .caution > summary {
-    background: rgba(217, 119, 6, 0.1);
+    --wc-alert-accent: #d97706;
 }
 
 .md-typeset .admonition.information,
 .md-typeset details.information {
-    border-color: #64748b;
-}
-
-.md-typeset .information > .admonition-title,
-.md-typeset .information > summary {
-    background: rgba(100, 116, 139, 0.1);
+    --wc-alert-accent: #64748b;
 }
 
 .md-typeset .admonition.success,
 .md-typeset details.success {
-    border-color: #2563eb;
+    --wc-alert-accent: #2563eb;
 }
 
-.md-typeset .success > .admonition-title,
-.md-typeset .success > summary {
-    background: rgba(37, 99, 235, 0.1);
+.md-typeset .admonition.info,
+.md-typeset details.info {
+    --wc-alert-accent: #007c89;
 }
 
-.md-typeset .admonition.prerequisite,
-.md-typeset .admonition.requirement,
-.md-typeset .admonition.fiscal,
-.md-typeset .admonition.caution,
-.md-typeset .admonition.information,
-.md-typeset .admonition.success {
-    border-left-width: 4px;
+.md-typeset .admonition.tip,
+.md-typeset details.tip {
+    --wc-alert-accent: #00856f;
 }
 
-.md-typeset .admonition.prerequisite > .admonition-title::before,
-.md-typeset .admonition.requirement > .admonition-title::before,
-.md-typeset .admonition.fiscal > .admonition-title::before,
-.md-typeset .admonition.caution > .admonition-title::before,
-.md-typeset .admonition.information > .admonition-title::before,
-.md-typeset .admonition.success > .admonition-title::before {
-    display: none;
+.md-typeset .admonition.important,
+.md-typeset details.important,
+.md-typeset .admonition.warning,
+.md-typeset details.warning {
+    --wc-alert-accent: #c2410c;
+}
+
+.md-typeset .admonition.danger,
+.md-typeset details.danger,
+.md-typeset .admonition.error,
+.md-typeset details.error,
+.md-typeset .admonition.failure,
+.md-typeset details.failure,
+.md-typeset .admonition.bug,
+.md-typeset details.bug {
+    --wc-alert-accent: #b42318;
+}
+
+.md-typeset .admonition.note,
+.md-typeset details.note,
+.md-typeset .admonition.abstract,
+.md-typeset details.abstract,
+.md-typeset .admonition.question,
+.md-typeset details.question {
+    --wc-alert-accent: #64748b;
+}
+
+.md-typeset :is(.admonition, details):is(
+    .important,
+    .warning,
+    .danger,
+    .error,
+    .failure,
+    .bug,
+    .note,
+    .abstract,
+    .question
+) {
+    --wc-alert-title: color-mix(in srgb, var(--wc-alert-accent) 74%, #172a2a);
+    --wc-alert-border: color-mix(in srgb, var(--wc-alert-accent) 28%, transparent);
+    --wc-alert-surface: color-mix(in srgb, var(--wc-alert-accent) 7%, #ffffff);
+    --wc-alert-title-surface: color-mix(in srgb, var(--wc-alert-accent) 10%, #ffffff);
+
+    position: relative;
+    overflow: hidden;
+    margin: 0.88rem 0 1.05rem;
+    border: 1px solid var(--wc-alert-border);
+    border-left-width: 0;
+    border-radius: 9px;
+    background:
+        linear-gradient(
+            180deg,
+            color-mix(in srgb, var(--wc-alert-accent) 5%, transparent),
+            transparent 72%
+        ),
+        var(--wc-alert-surface);
+    box-shadow:
+        0 1px 2px rgba(15, 23, 42, 0.035),
+        0 8px 22px -20px color-mix(in srgb, var(--wc-alert-accent) 58%, transparent);
+}
+
+.md-typeset :is(.admonition, details):is(
+    .important,
+    .warning,
+    .danger,
+    .error,
+    .failure,
+    .bug,
+    .note,
+    .abstract,
+    .question
+)::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 4px;
+    background: linear-gradient(
+        180deg,
+        var(--wc-alert-accent),
+        color-mix(in srgb, var(--wc-alert-accent) 45%, transparent)
+    );
+}
+
+.md-typeset :is(.admonition, details):is(
+    .important,
+    .warning,
+    .danger,
+    .error,
+    .failure,
+    .bug,
+    .note,
+    .abstract,
+    .question
+) > :is(.admonition-title, summary) {
+    min-height: 2.28rem;
+    margin: 0;
+    padding: 0.58rem 0.88rem 0.56rem 2.56rem;
+    border-bottom: 1px solid color-mix(in srgb, var(--wc-alert-accent) 12%, transparent);
+    background: var(--wc-alert-title-surface);
+    color: var(--wc-alert-title);
+    font-size: 0.76rem;
+    font-weight: 620;
+    letter-spacing: 0;
+    line-height: 1.28;
+}
+
+.md-typeset :is(.admonition, details):is(
+    .important,
+    .warning,
+    .danger,
+    .error,
+    .failure,
+    .bug,
+    .note,
+    .abstract,
+    .question
+) > :is(.admonition-title, summary)::before {
+    top: 0.48rem;
+    left: 0.78rem;
+    display: inline-block;
+    width: 1.28rem;
+    height: 1.28rem;
+    border-radius: 7px;
+    background-color: var(--wc-alert-accent);
+    box-shadow:
+        inset 0 0 0 1px color-mix(in srgb, var(--wc-alert-accent) 18%, #ffffff),
+        0 1px 2px color-mix(in srgb, var(--wc-alert-accent) 22%, transparent);
+    opacity: 0.95;
+}
+
+.md-typeset :is(.admonition, details):is(
+    .important,
+    .warning,
+    .danger,
+    .error,
+    .failure,
+    .bug,
+    .note,
+    .abstract,
+    .question
+) > :not(.admonition-title, summary) {
+    color: #526174;
+    font-size: 0.78rem;
+    font-weight: 400;
+    line-height: 1.56;
+}
+
+.md-typeset :is(.admonition, details):is(
+    .prerequisite,
+    .requirement,
+    .fiscal,
+    .caution,
+    .information,
+    .success,
+    .info,
+    .tip,
+    .important,
+    .warning,
+    .danger,
+    .error,
+    .failure,
+    .bug,
+    .note,
+    .abstract,
+    .question
+) > p {
+    margin: 0.62rem 0.88rem 0.76rem;
+}
+
+@media (max-width: 480px) {
+    .md-typeset .admonition.prerequisite > .admonition-title,
+    .md-typeset details.prerequisite > summary,
+    .md-typeset .admonition.requirement > .admonition-title,
+    .md-typeset details.requirement > summary,
+    .md-typeset .admonition.fiscal > .admonition-title,
+    .md-typeset details.fiscal > summary,
+    .md-typeset .admonition.caution > .admonition-title,
+    .md-typeset details.caution > summary,
+    .md-typeset .admonition.information > .admonition-title,
+    .md-typeset details.information > summary,
+    .md-typeset .admonition.success > .admonition-title,
+    .md-typeset details.success > summary,
+    .md-typeset .admonition.info > .admonition-title,
+    .md-typeset details.info > summary,
+    .md-typeset .admonition.tip > .admonition-title,
+    .md-typeset details.tip > summary {
+        padding-right: 0.72rem;
+    }
 }

@@ -26,26 +26,24 @@ error_tags:
 
 </div>
 
-## Avisos
-
---8<-- "shared/avisos/validacao-fiscal.md"
-
 ## Permissões
 
 --8<-- "shared/avisos/permissoes.md"
 
 ## Caminho
+
 `Faturamento > Nota Fiscal`.
 
 ## Print do caminho
+
 ![Onde encontrar](../assets/images/guias/faturamento_emitir_nfe.png)
 
 ## Demonstração em vídeo
+
 <video class="wc-video" controls preload="auto" playsinline>
   <source src="../../assets/videos/faturamento_nfe.mp4" type="video/mp4">
   Seu navegador não conseguiu reproduzir este vídeo.
 </video>
-
 
 ## Como fazer
 
@@ -70,6 +68,10 @@ A NF-e é transmitida e, quando os dados são aceitos pela SEFAZ, fica autorizad
 ## Quando utilizar
 
 Use quando for necessário documentar fiscalmente uma venda, remessa ou outra operação de saída.
+
+## Avisos
+
+--8<-- "shared/avisos/validacao-fiscal.md"
 
 ## Veja também
 

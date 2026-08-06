@@ -1,20 +1,19 @@
 # Contas
 
+!!! information "Conteúdo em atualização"
+    Este manual está sendo revisado e receberá informações adicionais em breve. Enquanto isso, consulte o [Guia relacionado](../como-fazer/gerar-boleto.md){: target="_blank" rel="noopener" } para acompanhar o passo a passo da operação.
+
 ## Objetivo
 
 Cadastrar ou consultar contas financeiras usadas nas movimentações do WCorp.
 
-## Tela
-
-<div class="wc-screen-block" markdown>
-
-<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Financeiro > Contas</code></p>
-
-</div>
-
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Contas**.
+
+## Caminho
+
+`Financeiro > Contas`.
 
 ## Passo a passo
 
@@ -24,7 +23,7 @@ Use esta rotina quando houver necessidade de executar ou consultar processos rel
 4. Confira empresa, conta, valor, vencimento e status, quando aplicável.
 5. Salve, confirme ou finalize conforme a ação desejada na tela.
 
-### Campos principais
+## Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |

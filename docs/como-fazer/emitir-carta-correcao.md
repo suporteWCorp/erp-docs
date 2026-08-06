@@ -18,23 +18,20 @@ error_tags:
 
 </div>
 
-## Avisos
-
---8<-- "shared/avisos/validacao-fiscal.md"
-
 ## Permissões
 
 --8<-- "shared/avisos/permissoes.md"
 
 ## Caminho
+
 `Faturamento > Carta de Correção`.
 
 ## Demonstração em vídeo
+
 <video class="wc-video" controls preload="auto" playsinline>
   <source src="../../assets/videos/faturamento_carta_correcao.mp4" type="video/mp4">
   Seu navegador não conseguiu reproduzir este vídeo.
 </video>
-
 
 ## Como fazer
 
@@ -49,6 +46,10 @@ error_tags:
 ## Quando utilizar
 
 Use quando a NF-e autorizada possui erro que pode ser corrigido por CC-e, sem alterar valores, impostos, destinatário ou informações vedadas pela legislação.
+
+## Avisos
+
+--8<-- "shared/avisos/validacao-fiscal.md"
 
 ## Veja também
 

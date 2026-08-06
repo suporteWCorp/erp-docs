@@ -21,4 +21,6 @@ A documentação desta seção segue a mesma ordem dos botões exibidos no WCorp
 
 ## Antes de operar rotinas de Serviços
 
-- Confira cliente, serviço, atividade e responsável antes de salvar.`r`n- Em ordens de serviço, valide status, prazo e informações de faturamento.`r`n- Em recorrência, confira período, centro de custo e regra de geração.
+- Confira cliente, serviço, atividade e responsável antes de salvar.
+- Em ordens de serviço, valide status, prazo e informações de faturamento.
+- Em recorrência, confira período, centro de custo e regra de geração.

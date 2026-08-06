@@ -4,16 +4,6 @@
 
 Emitir nota fiscal de saída no WCorp, de forma manual ou vinculada a pedidos.
 
-## Tela
-
-<div class="wc-screen-block" markdown>
-
-![Tela principal de Nota Fiscal](../assets/faturamento-nf.png)
-
-<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Faturamento > Nota Fiscal</code></p>
-
-</div>
-
 ## Quando usar
 
 Use esta rotina quando for necessário:
@@ -23,6 +13,18 @@ Use esta rotina quando for necessário:
 - Cadastrar nota manualmente.
 - Conferir impostos antes da transmissão.
 - Transmitir a nota para a SEFAZ.
+
+## Caminho
+
+`Faturamento > Nota Fiscal`.
+
+## Print da tela
+
+<div class="wc-screen-block" markdown>
+
+![Tela principal de Nota Fiscal](../assets/faturamento-nf.png)
+
+</div>
 
 ## Passo a passo
 
@@ -48,7 +50,7 @@ Use esta rotina quando for necessário:
 !!! info "Dica"
     Quando a nota é gerada por pedido, o sistema já busca os impostos automaticamente com base na regra fiscal configurada.
 
-### Campos principais
+## Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |

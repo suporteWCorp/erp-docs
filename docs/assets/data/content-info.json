@@ -1,0 +1,1289 @@
+{
+  "como-fazer/ajustar-estoque": {
+    "title": "Como ajustar estoque",
+    "type": "guide",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "como-fazer/baixar-titulo": {
+    "title": "Como baixar um título",
+    "type": "guide",
+    "readingTime": null,
+    "difficulty": "basic",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "como-fazer/cadastrar-centro-custo": {
+    "title": "Como cadastrar um Centro de Custo",
+    "type": "guide",
+    "readingTime": null,
+    "difficulty": "basic",
+    "popular": false,
+    "videoAvailable": true,
+    "videoDuration": null
+  },
+  "como-fazer/cadastrar-cliente": {
+    "title": "Como cadastrar um cliente",
+    "type": "guide",
+    "readingTime": null,
+    "difficulty": "basic",
+    "popular": true,
+    "videoAvailable": true,
+    "videoDuration": null
+  },
+  "como-fazer/cadastrar-condicao-pagamento": {
+    "title": "Como cadastrar uma Condição de Pagamento",
+    "type": "guide",
+    "readingTime": null,
+    "difficulty": "basic",
+    "popular": false,
+    "videoAvailable": true,
+    "videoDuration": null
+  },
+  "como-fazer/cadastrar-fornecedor": {
+    "title": "Como cadastrar um fornecedor",
+    "type": "guide",
+    "readingTime": null,
+    "difficulty": "basic",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "como-fazer/cadastrar-material": {
+    "title": "Como cadastrar um material",
+    "type": "guide",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": true,
+    "videoAvailable": true,
+    "videoDuration": null
+  },
+  "como-fazer/cadastrar-natureza-operacao": {
+    "title": "Como cadastrar uma Natureza de Operação",
+    "type": "guide",
+    "readingTime": null,
+    "difficulty": "advanced",
+    "popular": true,
+    "videoAvailable": true,
+    "videoDuration": null
+  },
+  "como-fazer/cadastrar-usuario": {
+    "title": "Como cadastrar um usuário",
+    "type": "guide",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": true,
+    "videoDuration": null
+  },
+  "como-fazer/cancelar-nfe": {
+    "title": "Como cancelar uma NF-e",
+    "type": "guide",
+    "readingTime": null,
+    "difficulty": "advanced",
+    "popular": true,
+    "videoAvailable": true,
+    "videoDuration": null
+  },
+  "como-fazer/cancelar-pedido": {
+    "title": "Como cancelar um pedido",
+    "type": "guide",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "como-fazer/configurar-grupo-usuario": {
+    "title": "Como configurar um Grupo de Usuário",
+    "type": "guide",
+    "readingTime": null,
+    "difficulty": "advanced",
+    "popular": false,
+    "videoAvailable": true,
+    "videoDuration": null
+  },
+  "como-fazer/consultar-estoque": {
+    "title": "Como consultar estoque",
+    "type": "guide",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "como-fazer/criar-orcamento": {
+    "title": "Como criar um orçamento",
+    "type": "guide",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": true,
+    "videoDuration": null
+  },
+  "como-fazer/criar-pedido-compra": {
+    "title": "Como criar um pedido de compra",
+    "type": "guide",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "como-fazer/emitir-carta-correcao": {
+    "title": "Como emitir uma carta de correção",
+    "type": "guide",
+    "readingTime": null,
+    "difficulty": "advanced",
+    "popular": false,
+    "videoAvailable": true,
+    "videoDuration": null
+  },
+  "como-fazer/emitir-devolucao": {
+    "title": "Como emitir uma devolução",
+    "type": "guide",
+    "readingTime": null,
+    "difficulty": "advanced",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "como-fazer/emitir-nota-complementar": {
+    "title": "Como emitir uma nota complementar",
+    "type": "guide",
+    "readingTime": null,
+    "difficulty": "advanced",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "como-fazer/faturar-nota": {
+    "title": "Como emitir uma NF-e",
+    "type": "guide",
+    "readingTime": null,
+    "difficulty": "advanced",
+    "popular": true,
+    "videoAvailable": true,
+    "videoDuration": null
+  },
+  "como-fazer/fazer-inventario": {
+    "title": "Como fazer inventário",
+    "type": "guide",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "como-fazer/fazer-pedido-venda": {
+    "title": "Como gerar um pedido",
+    "type": "guide",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": true,
+    "videoAvailable": true,
+    "videoDuration": null
+  },
+  "como-fazer/gerar-boleto": {
+    "title": "Como gerar boleto",
+    "type": "guide",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": true,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "como-fazer/importar-xml": {
+    "title": "Como importar XML",
+    "type": "guide",
+    "readingTime": null,
+    "difficulty": "advanced",
+    "popular": true,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "como-fazer/lancar-contas-a-pagar": {
+    "title": "Como lançar contas a pagar",
+    "type": "guide",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "como-fazer/lancar-nota-entrada": {
+    "title": "Como lançar uma nota de entrada",
+    "type": "guide",
+    "readingTime": null,
+    "difficulty": "advanced",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "como-fazer/transferir-estoque": {
+    "title": "Como transferir estoque",
+    "type": "guide",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "administracao/centro-custo": {
+    "title": "Centro de Custo",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "basic",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "administracao/condicoes-pagamento": {
+    "title": "Condições de Pagamento",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "basic",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "administracao/embalagem": {
+    "title": "Embalagem",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "basic",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "administracao/empresas": {
+    "title": "Empresas",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "basic",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "administracao/grupo-usuarios": {
+    "title": "Grupo Usuários",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": true,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "administracao/layout-ficha-tecnica": {
+    "title": "Layout de Ficha Técnica",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "basic",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "administracao/municipio": {
+    "title": "Município",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "basic",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "administracao/natureza-op": {
+    "title": "Natureza de Operação",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "advanced",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "administracao/ncms": {
+    "title": "NCMS",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "basic",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "administracao/parametros-sistema": {
+    "title": "Parâmetros Sistema",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "advanced",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "administracao/rateio-centro-custo": {
+    "title": "Rateio de Centro de Custo",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "basic",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "administracao/unidades": {
+    "title": "Unidades",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "basic",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "administracao/usuarios": {
+    "title": "Usuários",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "colaboradores/cargos": {
+    "title": "Cargos",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "colaboradores/comissoes": {
+    "title": "Comissões",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "colaboradores/funcionarios-colaboradores": {
+    "title": "Funcionários / Colaboradores",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "colaboradores/pagamento-funcionario": {
+    "title": "Pagamento de Funcionário",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "colaboradores/planejamento-pagamento": {
+    "title": "Planejamento de Pagamento",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "comercial/comercial-clientes": {
+    "title": "Clientes",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "basic",
+    "popular": true,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "comercial/comercial-grupo-clientes": {
+    "title": "Grupo de Clientes",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "basic",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "comercial/comercial-orcamento": {
+    "title": "Módulo Comercial - Orçamentos",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "comercial/comercial-separacao-pedido": {
+    "title": "Módulo Comercial - Separação de Pedido",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "comercial/comissoes-vendedores": {
+    "title": "Comissões de Vendedores",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "basic",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "comercial/despacho": {
+    "title": "Despacho",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "basic",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "comercial/devolucao": {
+    "title": "Devolução",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "advanced",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "comercial/ficha-tecnica-material": {
+    "title": "Ficha Técnica de Material",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "comercial/importar-nfe-remessa": {
+    "title": "Importar NFe para Remessa",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "advanced",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "comercial/pedidos": {
+    "title": "Módulo Comercial - Pedido de Venda",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": true,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "comercial/projecao-vendas": {
+    "title": "Projeção de Vendas",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "basic",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "comercial/transportadora": {
+    "title": "Transportadora",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "basic",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "compras/aprovacao-compras": {
+    "title": "Aprovação de Compras",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "compras/aprovacao-diretoria": {
+    "title": "Aprovação Diretoria",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "compras/pedido-compra": {
+    "title": "Pedido de Compra",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "compras/planilha-equalizacao": {
+    "title": "Planilha de Equalização",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "compras/requisicao-compras": {
+    "title": "Requisição de Compras",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "compras/requisicoes-projecao-vendas": {
+    "title": "Requisições x Projeção de Vendas",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "contratos/contratos": {
+    "title": "Contratos",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "contratos/fases-contrato": {
+    "title": "Fases do Contrato",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "contratos/manutencao-contratos": {
+    "title": "Manutenção de Contratos",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "contratos/materiais-servicos-previstos": {
+    "title": "Materiais e Serviços Previstos",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "faturamento/carta-correcao": {
+    "title": "Carta de Correção",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "advanced",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "faturamento/cfop-entrada": {
+    "title": "CFOP Entrada",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "basic",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "faturamento/entrada-nota-fiscal": {
+    "title": "Entrada de Nota Fiscal",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "advanced",
+    "popular": true,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "faturamento/faturamento-nf": {
+    "title": "Nota Fiscal",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "advanced",
+    "popular": true,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "faturamento/faturamento-nfce": {
+    "title": "Cupom Fiscal",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "advanced",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "faturamento/inutilizacao-nota-fiscal": {
+    "title": "Inutilização Nota Fiscal",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "advanced",
+    "popular": false,
+    "videoAvailable": true,
+    "videoDuration": null
+  },
+  "faturamento/nota-fiscal-lote": {
+    "title": "Nota Fiscal (Lote)",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "advanced",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "faturamento/nota-fiscal-servico": {
+    "title": "Nota Fiscal de Serviço",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "advanced",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "faturamento/radar-nota-fiscal": {
+    "title": "Radar de Nota Fiscal",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "advanced",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "financeiro/arquivo-remessa": {
+    "title": "Arquivo de Remessa",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "financeiro/boleto": {
+    "title": "Boleto",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": true,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "financeiro/cartao": {
+    "title": "Cartão",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "financeiro/cheque": {
+    "title": "Cheque",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "financeiro/conciliacao-bancaria": {
+    "title": "Conciliação Bancária",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "financeiro/contas-a-pagar": {
+    "title": "Contas a Pagar",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "financeiro/contas-a-receber": {
+    "title": "Contas a Receber",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "financeiro/contas": {
+    "title": "Contas",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "financeiro/ferramentas-cnab": {
+    "title": "Ferramentas CNAB",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "financeiro/solicitacao-pagamento": {
+    "title": "Solicitação de Pagamento",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "financeiro/transferencia-entre-contas": {
+    "title": "Transferência entre Contas",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "financeiro/veiculos": {
+    "title": "Veículos",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "fornecedores/categoria-fornecedor": {
+    "title": "Categoria de Fornecedor",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "fornecedores/certificado": {
+    "title": "Certificado",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "fornecedores/fornecedores": {
+    "title": "Fornecedores",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "materiais/ajustar-inventario": {
+    "title": "Ajustar Inventário",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "materiais/categoria-materiais": {
+    "title": "Categoria de Materiais",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "materiais/conversao-unidades": {
+    "title": "Conversão de Unidades",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "materiais/entrada-material": {
+    "title": "Entrada de Material",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "materiais/etiqueta": {
+    "title": "Etiqueta",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "materiais/ferramentas": {
+    "title": "Ferramentas",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "materiais/locais-armazenagem": {
+    "title": "Locais de Armazenagem",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "materiais/lote-estoque": {
+    "title": "Lote/Estoque",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "materiais/materiais": {
+    "title": "Cadastro de Materiais",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": true,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "materiais/palete": {
+    "title": "Palete",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "materiais/romaneio": {
+    "title": "Romaneio",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "materiais/tabela-precos": {
+    "title": "Tabela de Preços",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "producao/acessorio": {
+    "title": "Acessório",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "producao/custos-producao": {
+    "title": "Custos de Produção",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "producao/equipamento": {
+    "title": "Equipamento",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "producao/grupo-processo": {
+    "title": "Grupo de Processo",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "producao/inspecao": {
+    "title": "Inspeção",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "producao/motivo-parada": {
+    "title": "Motivo de Parada",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "producao/ordem-producao": {
+    "title": "Ordem de Produção",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "producao/parametro": {
+    "title": "Parâmetro",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "producao/pcp": {
+    "title": "PCP",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "producao/processo": {
+    "title": "Processo",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "producao/qualidade": {
+    "title": "Qualidade",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "producao/separar-material": {
+    "title": "Separar Material",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "relatorios/relatorio-nao-conformidade": {
+    "title": "Relatório de Não Conformidade",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "advanced",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "relatorios/relatorio-ocorrencia": {
+    "title": "Relatório de Ocorrência",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "relatorios/relatorio-whatsapp": {
+    "title": "Relatório WhatsApp",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "relatorios/relatorios": {
+    "title": "Relatórios",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "relatorios/sped-fiscal": {
+    "title": "Sped Fiscal",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "advanced",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "relatorios/xml-cfe": {
+    "title": "XML(s) CFe",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "advanced",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "relatorios/xml-cte": {
+    "title": "XML(s) CTe",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "advanced",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "relatorios/xml-nfe": {
+    "title": "XML(s) NFe",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "advanced",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "servicos/cadastro-atividade": {
+    "title": "Cadastro de Atividade",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "servicos/cadastro-servico": {
+    "title": "Cadastro de Serviço",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "servicos/faturamento-recorrencia": {
+    "title": "Faturamento de Recorrência",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "servicos/grupo-servico": {
+    "title": "Grupo de Serviço",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "servicos/orcamento-os": {
+    "title": "Orçamento OS",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "servicos/ordem-servico": {
+    "title": "Ordem de Serviço",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "servicos/rateio-centro-custo": {
+    "title": "Rateio de Centro de Custo",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "servicos/tipo-ordem-servico": {
+    "title": "Tipo de Ordem de Serviço",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "transportes/aliquotas-transporte": {
+    "title": "Alíquotas de Transporte",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "transportes/averbacao-seguradora": {
+    "title": "Averbação Seguradora",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "transportes/carga": {
+    "title": "Carga",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "transportes/carta-correcao": {
+    "title": "Carta de Correção",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "advanced",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "transportes/coleta": {
+    "title": "Coleta",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "transportes/conhecimento-transporte-lote": {
+    "title": "Conhecimento de Transp.(Lote)",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "advanced",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "transportes/conhecimento-transporte": {
+    "title": "Conhecimento de Transporte",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "advanced",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "transportes/faturamento": {
+    "title": "Faturamento",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "transportes/inutilizacao-cte": {
+    "title": "Inutilização CTe",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "advanced",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "transportes/manifesto-transporte": {
+    "title": "Manifesto de Transporte",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "advanced",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "transportes/orcamento-cte": {
+    "title": "Orçamento CTe",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "advanced",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "transportes/regioes": {
+    "title": "Regiões",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  },
+  "transportes/tabela-precos": {
+    "title": "Tabela de Preços",
+    "type": "manual",
+    "readingTime": null,
+    "difficulty": "intermediate",
+    "popular": false,
+    "videoAvailable": false,
+    "videoDuration": null
+  }
+}

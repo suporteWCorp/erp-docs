@@ -22,6 +22,7 @@ error_tags:
 --8<-- "shared/avisos/permissoes.md"
 
 ## Caminho
+
 `Fornecedores > Fornecedores`.
 
 ## Como fazer

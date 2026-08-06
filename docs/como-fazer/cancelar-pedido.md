@@ -24,6 +24,7 @@ error_tags:
 --8<-- "shared/avisos/permissoes.md"
 
 ## Caminho
+
 `Comercial > Pedido`.
 
 ## Como fazer

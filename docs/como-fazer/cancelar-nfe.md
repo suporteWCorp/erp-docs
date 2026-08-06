@@ -19,23 +19,20 @@ error_tags:
 
 </div>
 
-## Avisos
-
---8<-- "shared/avisos/validacao-fiscal.md"
-
 ## Permissões
 
 --8<-- "shared/avisos/permissoes.md"
 
 ## Caminho
+
 `Faturamento > Nota Fiscal`.
 
 ## Demonstração em vídeo
+
 <video class="wc-video" controls preload="auto" playsinline>
   <source src="../../assets/videos/faturamento_cancelar_nfe.mp4" type="video/mp4">
   Seu navegador não conseguiu reproduzir este vídeo.
 </video>
-
 
 ## Como fazer
 
@@ -50,6 +47,10 @@ error_tags:
 ## Quando utilizar
 
 Use quando a nota foi emitida com erro ou quando a operação foi desfeita dentro das regras e prazos permitidos.
+
+## Avisos
+
+--8<-- "shared/avisos/validacao-fiscal.md"
 
 ## Veja também
 

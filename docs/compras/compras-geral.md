@@ -19,4 +19,6 @@ A documentação desta seção segue a mesma ordem dos botões exibidos no WCorp
 
 ## Antes de operar rotinas de Compras
 
-- Confira solicitante, itens, quantidades e fornecedor.`r`n- Em aprovações, valide status, alçada e observações.`r`n- Em pedido de compra, confira condições comerciais antes de finalizar.
+- Confira solicitante, itens, quantidades e fornecedor.
+- Em aprovações, valide status, alçada e observações.
+- Em pedido de compra, confira condições comerciais antes de finalizar.

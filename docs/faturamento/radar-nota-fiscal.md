@@ -4,17 +4,13 @@
 
 Consultar, acompanhar ou localizar notas fiscais e seus respectivos status.
 
-## Tela
-
-<div class="wc-screen-block" markdown>
-
-<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Faturamento > Radar de Nota Fiscal</code></p>
-
-</div>
-
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Radar de Nota Fiscal**.
+
+## Caminho
+
+`Faturamento > Radar de Nota Fiscal`.
 
 ## Passo a passo
 
@@ -24,7 +20,7 @@ Use esta rotina quando houver necessidade de executar ou consultar processos rel
 4. Confira as informações antes de salvar, transmitir ou confirmar.
 5. Finalize a rotina conforme a ação disponível na tela.
 
-### Campos principais
+## Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |

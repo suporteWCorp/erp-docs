@@ -20,15 +20,12 @@ error_tags:
 
 </div>
 
-## Avisos
-
---8<-- "shared/avisos/configuracao-bancaria.md"
-
 ## Permissões
 
 --8<-- "shared/avisos/permissoes.md"
 
 ## Caminho
+
 `Financeiro > Boleto`.
 
 ## Como fazer
@@ -43,6 +40,10 @@ error_tags:
 ## Quando utilizar
 
 Use quando a empresa precisa cobrar um cliente por boleto bancário a partir de uma conta a receber.
+
+## Avisos
+
+--8<-- "shared/avisos/configuracao-bancaria.md"
 
 ## Veja também
 

@@ -23,17 +23,19 @@ error_tags:
 --8<-- "shared/avisos/permissoes.md"
 
 ## Caminho
+
 `Comercial > Clientes`.
 
 ## Print do caminho
+
 ![Onde encontrar](../assets/images/guias/comercial_clientes.png)
 
 ## Demonstração em vídeo
+
 <video class="wc-video" controls preload="auto" playsinline poster="../../assets/images/guias/comercial_clientes.png">
   <source src="../../assets/videos/comercial_clientes.mp4" type="video/mp4">
   Seu navegador não conseguiu reproduzir este vídeo.
 </video>
-
 
 ## Como fazer
 

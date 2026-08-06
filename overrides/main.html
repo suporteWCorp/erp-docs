@@ -1,5 +1,25 @@
 {% extends "base.html" %}
 
+{% block extrahead %}
+  {{ super() }}
+  <script>
+    (function () {
+      var html = document.documentElement;
+      var path = window.location.pathname;
+      var manualSections = [
+        "/administracao/", "/colaboradores/", "/comercial/", "/compras/", "/contratos/",
+        "/faturamento/", "/financeiro/", "/fornecedores/", "/materiais/", "/producao/",
+        "/relatorios/", "/servicos/", "/transportes/", "/manual/"
+      ];
+
+      html.classList.add("wc-ui-loading");
+      html.classList.toggle("wc-route-manual", manualSections.some(function (section) {
+        return path.indexOf(section) !== -1;
+      }));
+    })();
+  </script>
+{% endblock %}
+
 {% block content %}
   {% if page.meta.error_area %}
     <span

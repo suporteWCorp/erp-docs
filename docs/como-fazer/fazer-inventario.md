@@ -26,6 +26,7 @@ error_tags:
 --8<-- "shared/avisos/permissoes.md"
 
 ## Caminho
+
 `Materiais > Ajustar Inventário`.
 
 ## Como fazer

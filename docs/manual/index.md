@@ -1,6 +1,7 @@
 # Manuais do WCorp
 
-Consulte as telas do WCorp organizadas pelas mesmas áreas do sistema. Use os Manuais quando precisar entender campos, botões, caminhos e funcionamento de uma tela específica.
+Manuais das telas do WCorp organizados por área. Selecione uma categoria para consultar campos, caminhos e funcionamento.
+{ .wc-listing-intro }
 
 ## Categorias
 

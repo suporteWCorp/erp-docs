@@ -38,3 +38,5 @@ Antes de entrar em contato, procure informar:
 - sempre que possível, como reproduzir o problema.
 
 Essas informações ajudam nossa equipe a identificar o problema mais rapidamente e reduzem o tempo de atendimento.
+
+[Preciso de ajuda](https://wa.me/5512991583055){ .md-button .md-button--primary target="_blank" rel="noopener" }

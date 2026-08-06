@@ -1,20 +1,19 @@
 # Ajustar Inventário
 
+!!! information "Conteúdo em atualização"
+    Este manual está sendo revisado e receberá informações adicionais em breve. Enquanto isso, consulte o [Guia relacionado](../como-fazer/ajustar-estoque.md){: target="_blank" rel="noopener" } para acompanhar o passo a passo da operação.
+
 ## Objetivo
 
 Ajustar quantidades de inventário conforme conferência física ou necessidade operacional.
 
-## Tela
-
-<div class="wc-screen-block" markdown>
-
-<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Materiais > Ajustar Inventário</code></p>
-
-</div>
-
 ## Quando usar
 
 Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Ajustar Inventário**.
+
+## Caminho
+
+`Materiais > Ajustar Inventário`.
 
 ## Passo a passo
 
@@ -24,7 +23,7 @@ Use esta rotina quando houver necessidade de executar ou consultar processos rel
 4. Confira material, quantidade, unidade, lote ou local de armazenagem, quando aplicável.
 5. Salve, confirme ou finalize conforme a ação disponível na tela.
 
-### Campos principais
+## Campos principais
 
 | Campo | Descrição | Observações |
 | --- | --- | --- |

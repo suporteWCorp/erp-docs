@@ -25,15 +25,12 @@ error_tags:
 
 </div>
 
-## Avisos
-
---8<-- "shared/avisos/validacao-fiscal.md"
-
 ## Permissões
 
 --8<-- "shared/avisos/permissoes.md"
 
 ## Caminho
+
 `Faturamento > Entrada de Nota Fiscal`.
 
 ## Como fazer
@@ -49,6 +46,10 @@ error_tags:
 ## Quando utilizar
 
 Use quando a empresa recebeu mercadorias ou serviços e precisa registrar a entrada no WCorp.
+
+## Avisos
+
+--8<-- "shared/avisos/validacao-fiscal.md"
 
 ## Veja também
 

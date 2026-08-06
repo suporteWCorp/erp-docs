@@ -22,17 +22,15 @@ error_tags:
 --8<-- "shared/avisos/permissoes.md"
 
 ## Caminho
+
 `Administração > Usuários`.
 
 ## Demonstração em vídeo
+
 <video class="wc-video" controls preload="auto" playsinline>
   <source src="../../assets/videos/adm_cadastro_usuario.mp4" type="video/mp4">
   Seu navegador não conseguiu reproduzir este vídeo.
 </video>
-
-!!! info "Acesso do usuário"
-    O Grupo de Usuário e suas permissões influenciam quais telas e operações estarão disponíveis para o novo usuário.
-
 
 ## Como fazer
 
@@ -46,6 +44,11 @@ error_tags:
 ## Quando utilizar
 
 Use este processo quando uma pessoa precisar receber acesso ao sistema.
+
+## Avisos
+
+!!! info "Acesso do usuário"
+    O Grupo de Usuário e suas permissões influenciam quais telas e operações estarão disponíveis para o novo usuário.
 
 ## Veja também
 

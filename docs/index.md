@@ -10,7 +10,11 @@
 
 <main class="wc-portal-main" markdown>
 
+<div class="wc-home-secondary-action wc-home-secondary-action--intro" markdown>
+
 Bem-vindo à central de ajuda do **WCorp**. Escolha a forma de consulta mais adequada para o que você precisa.
+
+</div>
 
 <div class="wc-home-grid wc-home-grid--actions" markdown>
 

@@ -20,15 +20,12 @@ error_tags:
 
 </div>
 
-## Avisos
-
---8<-- "shared/avisos/validacao-fiscal.md"
-
 ## Permissões
 
 --8<-- "shared/avisos/permissoes.md"
 
 ## Caminho
+
 `Faturamento > Nota Fiscal`.
 
 ## Como fazer
@@ -45,6 +42,10 @@ error_tags:
 ## Quando utilizar
 
 Use quando a operação original precisa de complemento fiscal autorizado pela regra tributária aplicável.
+
+## Avisos
+
+--8<-- "shared/avisos/validacao-fiscal.md"
 
 ## Veja também
 

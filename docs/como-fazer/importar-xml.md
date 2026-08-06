@@ -22,15 +22,12 @@ error_tags:
 
 </div>
 
-## Avisos
-
---8<-- "shared/avisos/validacao-fiscal.md"
-
 ## Permissões
 
 --8<-- "shared/avisos/permissoes.md"
 
 ## Caminho
+
 `Faturamento > Entrada de Nota Fiscal ou Radar de Nota Fiscal`.
 
 ## Como fazer
@@ -45,6 +42,10 @@ error_tags:
 ## Quando utilizar
 
 Use quando a empresa recebeu um XML de fornecedor ou precisa consultar documentos fiscais eletrônicos no WCorp.
+
+## Avisos
+
+--8<-- "shared/avisos/validacao-fiscal.md"
 
 ## Veja também
 

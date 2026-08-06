@@ -22,17 +22,15 @@ error_tags:
 --8<-- "shared/avisos/permissoes.md"
 
 ## Caminho
+
 `Administração > Grupo Usuários`.
 
 ## Demonstração em vídeo
+
 <video class="wc-video" controls preload="auto" playsinline>
   <source src="../../assets/videos/adm__grupo_usuario.mp4" type="video/mp4">
   Seu navegador não conseguiu reproduzir este vídeo.
 </video>
-
-!!! warning "Importante"
-    Conceda somente as permissões necessárias para as atividades dos usuários vinculados ao grupo.
-
 
 ## Como fazer
 
@@ -46,6 +44,11 @@ error_tags:
 ## Quando utilizar
 
 Use este processo antes de vincular usuários que precisam compartilhar o mesmo perfil de acesso.
+
+## Avisos
+
+!!! caution "Configuração de permissões"
+    Conceda somente as permissões necessárias para as atividades dos usuários vinculados ao grupo.
 
 ## Veja também
 

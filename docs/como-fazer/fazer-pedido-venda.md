@@ -28,17 +28,26 @@ error_tags:
 --8<-- "shared/avisos/permissoes.md"
 
 ## Caminho
+
 `Comercial > Pedido`.
 
 ## Print do caminho
+
 ![Onde encontrar](../assets/images/guias/comercial_pedido.png)
 
 ## Demonstração em vídeo
+
 <video class="wc-video" controls preload="auto" playsinline poster="../../assets/images/guias/comercial_pedido.png">
   <source src="../../assets/videos/comercial_pedido.mp4" type="video/mp4">
   Seu navegador não conseguiu reproduzir este vídeo.
 </video>
 
+## Demonstração em vídeo
+
+<video class="wc-video" controls preload="auto" playsinline>
+  <source src="../../assets/videos/comercial_pedido_orcamento.mp4" type="video/mp4">
+  Seu navegador não conseguiu reproduzir este vídeo.
+</video>
 
 ## Como fazer
 
@@ -54,12 +63,6 @@ error_tags:
 **Criar pedido a partir de um orçamento**
 
 Caso já exista um orçamento aprovado, é possível gerar um pedido diretamente a partir dele, sem a necessidade de realizar um novo cadastro.
-
-## Demonstração em vídeo
-<video class="wc-video" controls preload="auto" playsinline>
-  <source src="../../assets/videos/comercial_pedido_orcamento.mp4" type="video/mp4">
-  Seu navegador não conseguiu reproduzir este vídeo.
-</video>
 
 ## Quando utilizar
 

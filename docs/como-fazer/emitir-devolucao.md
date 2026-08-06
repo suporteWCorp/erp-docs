@@ -23,15 +23,12 @@ error_tags:
 
 </div>
 
-## Avisos
-
---8<-- "shared/avisos/validacao-fiscal.md"
-
 ## Permissões
 
 --8<-- "shared/avisos/permissoes.md"
 
 ## Caminho
+
 `Comercial > Devolução ou Faturamento > Nota Fiscal`.
 
 ## Como fazer
@@ -47,6 +44,10 @@ error_tags:
 ## Quando utilizar
 
 Use quando uma venda ou compra precisa ser devolvida por erro, desistência, troca, recusa ou ajuste fiscal.
+
+## Avisos
+
+--8<-- "shared/avisos/validacao-fiscal.md"
 
 ## Veja também
 

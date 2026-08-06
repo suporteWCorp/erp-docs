@@ -1,5 +1,8 @@
 # Natureza de Operação
 
+!!! information "Conteúdo em atualização"
+    Este manual está sendo revisado e receberá informações adicionais em breve. Enquanto isso, consulte o [Guia relacionado](../como-fazer/cadastrar-natureza-operacao.md){: target="_blank" rel="noopener" } para acompanhar o passo a passo da operação.
+
 ## Objetivo
 
 A tela **Natureza de Operação** é utilizada para cadastrar as operações disponíveis no WCorp e vincular a elas as Regras Fiscais usadas durante o faturamento.
@@ -14,13 +17,9 @@ Nesta tela é possível:
 - organizar as Regras conforme o tipo de operação;
 - revisar os critérios utilizados pelo WCorp durante o cálculo da nota fiscal.
 
-## Tela
+## Caminho
 
-<div class="wc-screen-block" markdown>
-
-<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Administração > Natureza de Operação</code></p>
-
-</div>
+`Administração > Natureza de Operação`.
 
 ## Passo a passo
 

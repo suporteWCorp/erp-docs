@@ -4,25 +4,31 @@
 
 Explique para que a tela ou funcionalidade serve.
 
-## Tela
+## Quando usar
+
+Liste as situações em que a consulta a esta tela é indicada.
+
+## Caminho
+
+`Módulo > Tela`.
+
+## Print da tela
 
 <div class="wc-screen-block" markdown>
 
 ![Tela](../assets/modulo-tela.png)
 
-<p class="wc-screen-block__path"><strong>Caminho:</strong> <code>Módulo > Tela</code></p>
-
 </div>
 
 Remova a imagem enquanto o print real não existir.
 
-## Quando usar
-
-Liste as situações em que a consulta a esta tela é indicada.
-
 ## Passo a passo
 
 Descreva como navegar e consultar a tela, sem transformar o Manual em um Guia de processo.
+
+## Campos principais
+
+Liste os campos principais em tabela quando houver informação confirmada.
 
 ## Avisos
 
