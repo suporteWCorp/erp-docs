@@ -40,11 +40,11 @@ Use o manual por abas do WCorp, seguindo a mesma organização visual do sistema
 
 <div class="wc-card" markdown>
 
-### Referências
+### Erros e Soluções
 
-Consulte erros conhecidos, termos do WCorp, links úteis e atualizações fiscais.
+Encontre orientações para rejeições fiscais, erros operacionais e problemas técnicos.
 
-[Consultar Referências](referencia/index.md){ .md-button .md-button--primary }
+[Consultar Erros e Soluções](erros-solucoes/index.md){ .md-button .md-button--primary }
 
 </div>
 

@@ -416,7 +416,7 @@ body.wc-context-sidebar-active:not(.wc-context-sidebar-custom) .wc-context-sideb
 
 /* Caminho de navegação abaixo do cabeçalho */
 :root {
-    --wc-header-height: 3.6rem;
+    --wc-header-height: 4.05rem;
     --wc-breadcrumb-height: 2.15rem;
     --wc-breadcrumb-offset: calc(var(--wc-header-height) + var(--wc-breadcrumb-height) + 0.9rem);
 }
@@ -433,18 +433,22 @@ html {
     min-height: var(--wc-breadcrumb-height);
     position: sticky;
     top: var(--wc-header-height);
-    z-index: 6;
+    z-index: 40;
 }
 
 .wc-breadcrumb {
     color: var(--md-default-fg-color--light);
     font-size: 0.66rem;
     margin: 0 auto;
-    max-width: 1220px;
+    max-width: 61rem;
     min-height: var(--wc-breadcrumb-height);
     overflow-x: auto;
-    padding: 0.58rem 1.2rem;
+    padding: 0.52rem 1rem;
     scrollbar-width: none;
+}
+
+body.wc-search-open .wc-breadcrumb-bar {
+    z-index: 1;
 }
 
 .wc-breadcrumb::-webkit-scrollbar {
@@ -495,6 +499,118 @@ html {
 
 .md-content__inner :is(h1, h2, h3, h4, h5, h6)[id] {
     scroll-margin-top: var(--wc-breadcrumb-offset);
+}
+
+/* Refinamentos locais das páginas individuais de Guia. */
+body.wc-guide-page:not(.wc-guide-index) .md-typeset > h1:first-child {
+    color: #005f66 !important;
+    font-size: 1.62rem;
+    font-weight: 760;
+    letter-spacing: 0;
+    line-height: 1.22;
+    margin-bottom: 0.72rem;
+    padding-bottom: 0.52rem;
+    position: relative;
+}
+
+body.wc-guide-page:not(.wc-guide-index) .md-typeset > h1:first-child::after {
+    background: rgba(2, 128, 144, 0.34);
+    border-radius: 999px;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 2.4rem;
+}
+
+body.wc-guide-page .md-typeset h2#permissoes {
+    height: 0;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+body.wc-guide-page .md-typeset h2#como-fazer + ol {
+    counter-reset: wc-guide-step;
+    list-style: none;
+    margin: 0.95rem 0 1.8rem;
+    padding-left: 0;
+}
+
+body.wc-guide-page .md-typeset h2#como-fazer + ol > li {
+    color: #52636b;
+    counter-increment: wc-guide-step;
+    font-size: 0.76rem;
+    line-height: 1.62;
+    margin: 0;
+    min-height: 2.25rem;
+    padding: 0.04rem 0 1.05rem 2.55rem;
+    position: relative;
+}
+
+body.wc-guide-page .md-typeset h2#como-fazer + ol > li:last-child {
+    padding-bottom: 0.15rem;
+}
+
+body.wc-guide-page .md-typeset h2#como-fazer + ol > li::before {
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid rgba(2, 128, 144, 0.24);
+    border-radius: 50%;
+    box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+    color: #007b83;
+    content: counter(wc-guide-step);
+    display: inline-flex;
+    font-size: 0.62rem;
+    font-weight: 760;
+    height: 1.36rem;
+    justify-content: center;
+    left: 0;
+    line-height: 1;
+    position: absolute;
+    top: 0.12rem;
+    width: 1.36rem;
+    z-index: 1;
+}
+
+body.wc-guide-page .md-typeset h2#como-fazer + ol > li::after {
+    background: rgba(2, 128, 144, 0.18);
+    bottom: 0.18rem;
+    content: "";
+    left: 0.67rem;
+    position: absolute;
+    top: 1.62rem;
+    width: 1px;
+}
+
+body.wc-guide-page .md-typeset h2#como-fazer + ol > li:last-child::after {
+    display: none;
+}
+
+body.wc-guide-page .md-typeset h2#como-fazer + ol > li > :first-child {
+    margin-top: 0;
+}
+
+body.wc-guide-page .md-typeset h2#como-fazer + ol > li > ul,
+body.wc-guide-page .md-typeset h2#como-fazer + ol > li > ol {
+    color: #64747c;
+    list-style: disc;
+    margin-top: 0.42rem;
+    padding-left: 1rem;
+}
+
+body.wc-guide-page .md-typeset h2#como-fazer + ol > li > ul li,
+body.wc-guide-page .md-typeset h2#como-fazer + ol > li > ol li {
+    margin: 0.18rem 0;
+}
+
+body.wc-guide-page .md-typeset h2#como-fazer + ol > li > strong:first-child,
+body.wc-guide-page .md-typeset h2#como-fazer + ol > li > b:first-child {
+    color: #253841;
 }
 
 .md-top {
@@ -698,8 +814,14 @@ html {
 }
 
 /* Esconde a faixa secundária fora do Manual */
+html:not(.wc-route-manual) .md-tabs,
 body:not(.wc-manual-tabs) .md-tabs {
     display: none;
+}
+
+html:not(.wc-route-manual) .wc-manual-subnav,
+body:not(.wc-manual-tabs) .wc-manual-subnav {
+    display: none !important;
 }
 
 /* Funcionalidades do módulo selecionado no Manual */

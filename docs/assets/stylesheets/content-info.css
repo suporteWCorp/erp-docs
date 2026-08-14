@@ -7,14 +7,14 @@
     font-size: 0.64rem;
     gap: 0.22rem 0.5rem;
     line-height: 1.35;
-    margin: -0.25rem 0 1.05rem;
+    margin: -0.18rem 0 1.2rem;
 }
 
 .wc-content-info__item {
     align-items: center;
     display: inline-flex;
     font-weight: 600;
-    gap: 0.18rem;
+    gap: 0.22rem;
     min-height: 1rem;
     white-space: nowrap;
 }
@@ -45,14 +45,22 @@ a.wc-content-info__item:focus-visible {
 
 .wc-content-info__icon {
     fill: currentColor;
-    height: 0.72rem;
-    opacity: 0.72;
-    width: 0.72rem;
+    height: 0.76rem;
+    opacity: 0.78;
+    width: 0.76rem;
 }
 
-.wc-content-info__item--popular,
+.wc-content-info__item--popular {
+    color: #087b5c;
+    font-weight: 750;
+}
+
 .wc-content-info__item--video {
     color: #006b73;
+}
+
+.wc-content-info__item--time {
+    color: #52636b;
 }
 
 .wc-card-popular {

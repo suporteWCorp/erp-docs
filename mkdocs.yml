@@ -9,8 +9,8 @@ theme:
   name: material
   custom_dir: overrides
   language: pt-BR
-  logo: assets/wcorp-logo.png
-  favicon: assets/wcorp-logo.png
+  logo: assets/wcorp-logo-header-display.png
+  favicon: assets/wcorp-logo-header.png
   palette:
     - scheme: default
       primary: teal
@@ -63,10 +63,14 @@ nav:
           - Como lançar contas a pagar: como-fazer/lancar-contas-a-pagar.md
   - Referências:
       - Visão geral: referencia/index.md
-      - Erros comuns: referencia/erros-comuns.md
       - FAQ: referencia/faq.md
       - Links úteis: referencia/links-uteis.md
       - Glossário: referencia/glossario.md
+  - Erros e Soluções:
+      - Visão geral: erros-solucoes/index.md
+      - Rejeições Fiscais: erros-solucoes/rejeicoes-fiscais.md
+      - Erros Operacionais: erros-solucoes/erros-operacionais.md
+      - Problemas Técnicos: erros-solucoes/problemas-tecnicos.md
   - Favoritos: favoritos.md
   - Manual:
       - Visão geral: manual/index.md
@@ -153,6 +157,7 @@ extra_css:
   - assets/stylesheets/cards.css
   - assets/stylesheets/header.css
   - assets/stylesheets/knowledge-base.css
+  - assets/stylesheets/error-solutions.css
   - assets/stylesheets/alerts.css
   - assets/stylesheets/context-help.css
   - assets/stylesheets/favorites.css
@@ -164,6 +169,7 @@ extra_javascript:
   - assets/javascripts/wcorp-nav.js
   - assets/javascripts/wcorp-video.js
   - assets/javascripts/wcorp-errors.js
+  - assets/javascripts/wcorp-error-solutions.js
   - assets/javascripts/wcorp-context-help.js
   - assets/javascripts/wcorp-favorites.js
   - assets/javascripts/wcorp-content-info.js

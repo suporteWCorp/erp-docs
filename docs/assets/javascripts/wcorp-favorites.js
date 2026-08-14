@@ -1,6 +1,6 @@
 (function () {
   const storageKey = "wcorp:favorites:v1";
-  const typeOrder = ["Guias", "Manuais", "Erros Comuns", "FAQ", "Glossário", "Links úteis"];
+  const typeOrder = ["Guias", "Manuais", "Erros e Soluções", "FAQ", "Glossário", "Links úteis"];
   const manualPrefixes = [
     "administracao", "colaboradores", "comercial", "compras", "contratos", "faturamento",
     "financeiro", "fornecedores", "materiais", "producao", "relatorios", "servicos", "transportes"
@@ -24,8 +24,8 @@
   function contentType(url) {
     const path = relativePath(url).replace(/\/+$/, "");
     if (path.startsWith("como-fazer/") && path !== "como-fazer") return "Guias";
-    if (path === "referencia/erros-comuns") return "Erros Comuns";
-    if (path === "referencia/faq") return "FAQ";
+    if (path === "referencia/erros-comuns" || path.startsWith("erros-solucoes/")) return "Erros e Soluções";
+    if (path === "referencia/faq" || path.startsWith("referencia/faq/")) return "FAQ";
     if (path === "referencia/glossario") return "Glossário";
     if (path === "referencia/links-uteis") return "Links úteis";
     if (manualPrefixes.some((prefix) => path.startsWith(`${prefix}/`))) return "Manuais";
@@ -184,8 +184,8 @@
       const heading = card.querySelector("h2");
       const summary = card.querySelector(".wc-error-card__summary");
       if (!heading || !summary || !card.id) return;
-      const url = new URL(`referencia/erros-comuns/#${card.id}`, rootUrl()).href;
-      const item = { title: cleanTitle(heading.textContent), type: "Erros Comuns", url: normalizeUrl(url) };
+      const url = new URL("erros-solucoes/", rootUrl()).href;
+      const item = { title: cleanTitle(heading.textContent), type: "Erros e Soluções", url: normalizeUrl(url) };
       card.appendChild(createToggle(item));
       card.dataset.wcFavoriteReady = "true";
     });

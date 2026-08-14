@@ -10,7 +10,8 @@ Este repositório mantém a documentação do WCorp em MkDocs Material. O objeti
 - `docs/como-fazer/`: Guia orientado a tarefas.
 - `docs/manual/index.md`: visão geral do Manual.
 - Pastas de módulo, como `comercial`, `faturamento`, `financeiro`, `materiais`, `compras`, `administracao`: páginas do Manual por tela.
-- `docs/referencia/`: FAQ, glossário, erros comuns e links úteis.
+- `docs/referencia/`: FAQ, glossário e links úteis.
+- `docs/erros-solucoes/`: seção principal para Rejeições Fiscais, Erros Operacionais e Problemas Técnicos.
 - `docs/suporte/`: materiais de suporte acessados pela navegação global customizada.
 - `docs/como-documentar/`: padrões e checklist de documentação, hoje fora da navegação principal.
 - `docs/shared/`: snippets e componentes reutilizáveis.
@@ -43,6 +44,14 @@ Evitar repetir nesses arquivos informações que já possuem uma fonte oficial. 
 - Guia: explica como realizar uma tarefa ou processo, como emitir NF-e, importar XML ou cadastrar cliente.
 - Manual: explica como funciona uma tela do WCorp, seus campos, dúvidas frequentes e orientações de suporte.
 
+## Classificação de dúvidas, erros e rejeições
+
+- Pergunta de utilização sem ocorrência de erro: classificar como FAQ.
+- Mensagem causada por cadastro, parâmetro, permissão ou configuração: classificar como Erro Operacional.
+- Mensagem com origem em SEFAZ, prefeitura ou autorizador fiscal: classificar como Rejeição Fiscal, mesmo quando a correção exige alterar Natureza de Operação, material, cliente ou outro cadastro do WCorp.
+- Exceção interna ou falha inesperada: classificar como Problema Técnico.
+- Uma mensagem de erro não significa automaticamente que existe bug.
+
 ## Padrão atual dos Guias
 
 O modelo oficial está em `docs/shared/modelos/guia-processo.md`. A ordem editorial principal é: Pré-requisitos, Permissões, Caminho, Demonstração em vídeo quando existir, Como fazer, Quando utilizar, Avisos quando existirem e Veja também. `Print do caminho` permanece logo após `Caminho` quando existir. `Outra opção` só aparece em Guias que realmente possuem alternativa e fica após `Como fazer`, antes de `Quando utilizar`. A seção `Permissões` usa o snippet `docs/shared/avisos/permissoes.md`; avisos específicos ficam depois de `Quando utilizar` com caixas semânticas.
@@ -73,6 +82,9 @@ Campos aceitos em `content-info.json`: `readingTime`, `difficulty`, `popular`, `
 - Os 26 Guias existem e seguem a estrutura atual.
 - Os Manuais com conteúdo foram reorganizados sem inventar informações operacionais.
 - Sete páginas do Manual possuem somente título e precisam de documentação manual.
+- "Erros comuns" não deve mais ser promovido dentro de Referências; o caminho oficial para problemas é "Erros e Soluções".
+- Na Home, o card recomendado deve ser "Erros e Soluções", não "Referências".
+- Na navegação principal esquerda, "Referências" continua existindo para FAQ, Glossário e Links úteis. "Erros e Soluções" é uma seção separada.
 - Favoritos usam `localStorage`; portanto, são específicos de cada navegador e perfil.
 - O build real com `mkdocs build --strict` não pôde ser executado no ambiente atual porque `mkdocs`, `python`, `docker` e WSL funcional não estão disponíveis.
 

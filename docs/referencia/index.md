@@ -1,19 +1,9 @@
 # Referências
 
-Materiais de apoio para consultar erros, termos, links úteis e referências do WCorp.
+Materiais de apoio para consultar FAQ, glossário, links úteis e referências do WCorp.
 { .wc-listing-intro }
 
 <div class="wc-home-grid wc-reference-grid" markdown>
-
-<div class="wc-card" markdown>
-
-### Erros comuns
-
-Mensagens de erro, causas prováveis e orientações de correção.
-
-[Consultar erros](erros-comuns.md){ .md-button .md-button--primary }
-
-</div>
 
 <div class="wc-card" markdown>
 

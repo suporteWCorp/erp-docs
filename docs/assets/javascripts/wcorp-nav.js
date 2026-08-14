@@ -180,7 +180,10 @@
 
   function updateRouteClasses(url = window.location.href) {
     const pathname = new URL(url, window.location.href).pathname;
-    document.documentElement.classList.toggle("wc-route-manual", isManualPath(pathname));
+    const manual = isManualPath(pathname);
+    document.documentElement.classList.toggle("wc-route-manual", manual);
+    document.body?.classList.toggle("wc-manual-tabs", manual);
+    if (!manual) document.querySelector(".wc-manual-subnav")?.remove();
   }
 
   function markUiLoading(url = window.location.href) {
@@ -202,6 +205,14 @@
       target.hash;
   }
 
+  function isSamePage(target) {
+    const current = new URL(window.location.href);
+    return target.origin === current.origin &&
+      target.pathname.replace(/\/index\.html$/, "").replace(/\/+$/, "") === current.pathname.replace(/\/index\.html$/, "").replace(/\/+$/, "") &&
+      target.search === current.search &&
+      !target.hash;
+  }
+
   function watchInternalNavigation() {
     if (window.wcorpNavigationLoadingWatcher) return;
     window.wcorpNavigationLoadingWatcher = true;
@@ -216,7 +227,24 @@
       const root = new URL(rootUrl());
       const rootPath = root.pathname.replace(/\/index\.html$/, "");
 
+      if (link.matches(".md-header__button.md-logo")) {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        document.documentElement.classList.remove("wc-ui-loading", "wc-route-manual");
+        document.body?.classList.remove("wc-manual-tabs");
+        document.querySelector(".wc-manual-subnav")?.remove();
+        if (isSamePage(root)) return;
+        window.location.assign(root.href);
+        return;
+      }
+
       if (target.origin !== root.origin || !target.pathname.startsWith(rootPath) || isSamePageHash(target)) return;
+      if (isSamePage(target)) {
+        event.preventDefault();
+        document.documentElement.classList.remove("wc-ui-loading");
+        updateRouteClasses(window.location.href);
+        return;
+      }
       markUiLoading(target.href);
     }, true);
 
@@ -243,6 +271,7 @@
       "/manual": "Manual",
       "/referencia": "Referências",
       "/referencia/faq": "FAQ",
+      "/erros-solucoes": "Erros e Soluções",
       "/favoritos": "Favoritos"
     };
 
@@ -273,6 +302,8 @@
       section = { label: "Guia", href: "como-fazer/", path: "/como-fazer" };
     } else if (relativePath.startsWith("/referencia")) {
       section = { label: "Referências", href: "referencia/", path: "/referencia" };
+    } else if (relativePath.startsWith("/erros-solucoes")) {
+      section = { label: "Erros e Soluções", href: "erros-solucoes/", path: "/erros-solucoes" };
     } else if (relativePath.startsWith("/suporte")) {
       section = { label: "Suporte", href: "suporte/", path: "/suporte" };
     } else if (isManualPage()) {
@@ -348,6 +379,7 @@
     if (!isManualPage()) {
       document.body.classList.remove("wc-manual-tabs");
       tabsList.classList.remove("wc-erp-tabs");
+      document.querySelector(".wc-manual-subnav")?.remove();
       return;
     }
 
@@ -488,6 +520,7 @@
   function addSupportFooter() {
     const content = document.querySelector(".md-content__inner");
     if (!content || content.querySelector(".wc-support-footer")) return;
+    if (isManualModuleOverview()) return;
 
     const footer = document.createElement("aside");
     footer.className = "wc-support-footer";
@@ -599,9 +632,6 @@
     });
     if (!activeModuleItems.length) return;
 
-    const sectionTitle = document.createElement("h2");
-    sectionTitle.textContent = "Telas do módulo";
-
     const grid = document.createElement("div");
     grid.className = "wc-home-grid wc-manual-category-grid";
 
@@ -640,27 +670,9 @@
       grid.appendChild(card);
     });
 
-    const orderHeading = Array.from(content.querySelectorAll(":scope > h2"))
-      .find((heading) => heading.textContent.trim().toLocaleLowerCase("pt-BR").startsWith("ordem da aba"));
-    const firstImageBlock = content.querySelector(":scope > p > img, :scope > img")?.closest("p");
-
-    if (orderHeading) {
-      const insertBefore = firstImageBlock || orderHeading;
-      insertBefore.insertAdjacentElement("beforebegin", sectionTitle);
-      sectionTitle.insertAdjacentElement("afterend", grid);
-
-      let cursor = orderHeading;
-      while (cursor) {
-        const next = cursor.nextElementSibling;
-        cursor.remove();
-        if (!next || next.tagName === "H2") break;
-        cursor = next;
-      }
-    } else {
-      const anchor = firstImageBlock || content.querySelector(":scope > h1");
-      anchor?.insertAdjacentElement("afterend", grid);
-      grid.insertAdjacentElement("beforebegin", sectionTitle);
-    }
+    const intro = content.querySelector(":scope > .wc-listing-intro");
+    const anchor = intro || content.querySelector(":scope > h1");
+    anchor?.insertAdjacentElement("afterend", grid);
   }
 
   function contextSidebarConfig() {
@@ -702,12 +714,26 @@
       };
     }
 
+    if (relativePath.startsWith("/erros-solucoes")) {
+      const root = rootUrl();
+      return {
+        className: "wc-context-errors",
+        title: "Erros e Soluções",
+        items: [
+          { label: "Visão geral", href: new URL("erros-solucoes/", root).href, active: currentPath === normalizedPagePath(new URL("erros-solucoes/", root).href) },
+          { label: "Rejeições Fiscais", href: new URL("erros-solucoes/rejeicoes-fiscais/", root).href, active: currentPath === normalizedPagePath(new URL("erros-solucoes/rejeicoes-fiscais/", root).href) },
+          { label: "Erros Operacionais", href: new URL("erros-solucoes/erros-operacionais/", root).href, active: currentPath === normalizedPagePath(new URL("erros-solucoes/erros-operacionais/", root).href) },
+          { label: "Problemas Técnicos", href: new URL("erros-solucoes/problemas-tecnicos/", root).href, active: currentPath === normalizedPagePath(new URL("erros-solucoes/problemas-tecnicos/", root).href) }
+        ]
+      };
+    }
+
     if (relativePath.startsWith("/suporte")) {
       return {
         className: "wc-context-support",
         title: "Suporte",
         items: [
-          { label: "Erros Comuns", href: new URL("referencia/erros-comuns/", rootUrl()).href },
+          { label: "Erros e Soluções", href: new URL("erros-solucoes/", rootUrl()).href },
           { label: "Links úteis", href: new URL("referencia/links-uteis/", rootUrl()).href },
           { label: "FAQ", href: new URL("referencia/faq/", rootUrl()).href },
           { label: "Glossário", href: new URL("referencia/glossario/", rootUrl()).href }
@@ -742,6 +768,7 @@
       { label: "Guia", count: guideCount, icon: "guide", href: new URL("como-fazer/", root).href, active: relativePath.startsWith("/como-fazer") },
       { label: "Manual", count: manualCount, icon: "manual", href: new URL("manual/", root).href, active: isManualPage() },
       { label: "Referências", icon: "reference", href: new URL("referencia/", root).href, active: relativePath.startsWith("/referencia") },
+      { label: "Erros e Soluções", icon: "errors", href: new URL("erros-solucoes/", root).href, active: relativePath.startsWith("/erros-solucoes") },
       { label: "Suporte", icon: "support", href: new URL("suporte/", root).href, active: relativePath.startsWith("/suporte") }
     ];
   }
@@ -752,6 +779,7 @@
       guide: '<path d="M4 3h6a3 3 0 0 1 2 1 3 3 0 0 1 2-1h6v16h-6a3 3 0 0 0-2 1 3 3 0 0 0-2-1H4V3zm2 2v12h4c.35 0 .69.04 1 .12V6.88A2.98 2.98 0 0 0 10 5H6zm12 0h-4c-.35 0-.69.06-1 .18v11.94c.31-.08.65-.12 1-.12h4V5z"/>',
       manual: '<path d="M6 2h9l5 5v15H6a2 2 0 0 1-2-2V4c0-1.1.9-2 2-2zm8 2H6v16h12V8h-4V4zm-5 8h6v2H9v-2zm0 4h6v2H9v-2z"/>',
       reference: '<path d="M3 4h7a2 2 0 0 1 2 2 2 2 0 0 1 2-2h7v15h-7a2 2 0 0 0-2 2 2 2 0 0 0-2-2H3V4zm2 2v11h5c.35 0 .69.06 1 .17V7a1 1 0 0 0-1-1H5zm14 0h-5a1 1 0 0 0-1 1v10.17c.31-.11.65-.17 1-.17h5V6z"/>',
+      errors: '<path d="M12 2 2 20h20L12 2zm0 4.3L18.6 18H5.4L12 6.3zM11 9h2v5h-2V9zm0 6h2v2h-2v-2z"/>',
       support: '<path d="M12 2a8 8 0 0 0-8 8v1a3 3 0 0 0 3 3h1V9H6.08A6 6 0 0 1 18 9h-2v7h2a2 2 0 0 1-2 2h-3v-1h-3v3h6a4 4 0 0 0 4-4v-2.18A3 3 0 0 0 21 11v-1a8 8 0 0 0-8-8h-1z"/>',
       favorite: '<path d="m12 3 2.78 5.63 6.22.9-4.5 4.39 1.06 6.2L12 17.2l-5.56 2.92 1.06-6.2L3 9.53l6.22-.9L12 3z"/>'
     };

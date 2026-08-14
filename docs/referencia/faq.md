@@ -1,5 +1,21 @@
 # FAQ
 
+Perguntas recorrentes de uso do WCorp, organizadas para consulta rapida.
+{ .wc-listing-intro }
+
+## Perguntas recorrentes
+
+- [Tem como cancelar CT-e depois de 7 dias?](faq/cancelar-cte-apos-prazo.md)
+- [Tem como cancelar NF-e depois de 30 dias?](faq/cancelar-nfe-apos-prazo.md)
+- [Tem como deixar um percentual de comissão definido para o cliente?](faq/comissao-cliente.md)
+- [Consigo bloquear a venda se o cliente tiver pagamentos em atraso?](faq/bloquear-venda-cliente-inadimplente.md)
+- [Não estou conseguindo editar um pedido mesmo estando pendente. O que faço?](faq/editar-pedido-bloqueado-workflow.md)
+- [Como altero o NCM de um produto?](faq/alterar-ncm-produto.md)
+- [Precisava mudar CFOP e CSOSN de um produto. Como faço?](faq/alterar-cfop-csosn.md)
+- [Precisava mudar CFOP e CST de um produto. Como faço?](faq/alterar-cfop-cst.md)
+
+## Outras perguntas
+
 ## Como redefinir minha senha?
 
 Solicite a redefinição ao usuário administrador ou ao responsável autorizado pela empresa. O cadastro de usuários fica em `Administração > Usuários`.

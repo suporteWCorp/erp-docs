@@ -87,11 +87,12 @@
     const explicit = explicitContext();
     if (explicit) return explicit;
     if (path.startsWith("/como-fazer/")) return null;
+    if (/^\/[^/]+\/[^/]+-geral$/.test(path)) return null;
     return inferredManualContext();
   }
 
   function buildErrorsUrl(context) {
-    const url = new URL("referencia/erros-comuns/", rootUrl());
+    const url = new URL("erros-solucoes/", rootUrl());
     url.searchParams.set("area", context.area);
     if (context.category) url.searchParams.set("category", context.category);
     if (context.tags.length) url.searchParams.set("tags", context.tags.join(","));

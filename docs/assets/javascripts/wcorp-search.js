@@ -1,76 +1,214 @@
 (function () {
+  const manualSections = [
+    "/administracao/",
+    "/colaboradores/",
+    "/comercial/",
+    "/compras/",
+    "/contratos/",
+    "/faturamento/",
+    "/financeiro/",
+    "/fornecedores/",
+    "/materiais/",
+    "/producao/",
+    "/relatorios/",
+    "/servicos/",
+    "/transportes/"
+  ];
+
   const groups = [
     {
       label: "Guias",
-      icon: "📘",
-      test: (path) => path.includes("/como-fazer/")
+      icon: "guide",
+      test: (path) => path.startsWith("/como-fazer/") && path !== "/como-fazer"
+    },
+    {
+      label: "FAQ",
+      icon: "reference",
+      test: (path) => path.startsWith("/referencia/faq/") && path !== "/referencia/faq"
     },
     {
       label: "Manuais",
-      icon: "📄",
-      test: (path) => [
-        "/administracao/",
-        "/colaboradores/",
-        "/comercial/",
-        "/compras/",
-        "/contratos/",
-        "/faturamento/",
-        "/financeiro/",
-        "/fornecedores/",
-        "/materiais/",
-        "/producao/",
-        "/relatorios/",
-        "/servicos/",
-        "/transportes/"
-      ].some((section) => path.includes(section))
+      icon: "manual",
+      test: (path) => manualSections.some((section) => path.startsWith(section)) &&
+        !/-geral$/.test(path)
     },
     {
-      label: "Referências",
-      icon: "📚",
-      test: (path) => path.includes("/referencia/")
-    },
-    {
-      label: "Suporte",
-      icon: "💬",
-      test: (path) => path.includes("/suporte/")
-    },
-    {
-      label: "Outras páginas",
-      icon: "↗",
-      test: () => true
+      label: "Rejeições / Erros e Soluções",
+      icon: "errors",
+      test: (path) => path.startsWith("/erros-solucoes/") && path !== "/erros-solucoes"
     }
   ];
 
-  function resultPath(item) {
+  let searchMeta = null;
+  let searchMetaPromise = null;
+  let searchStateReady = false;
+
+  function rootUrl() {
+    const logo = document.querySelector(".md-header__button.md-logo[href]");
+    if (!logo) return new URL("/", window.location.href).href;
+    return /\/index\.html$/.test(new URL(logo.href).pathname) ? new URL(".", logo.href).href : logo.href;
+  }
+
+  function cleanPathname(pathname) {
+    return pathname.replace(/\/index\.html$/, "").replace(/\/+$/, "") || "/";
+  }
+
+  function portalPath(url) {
+    const root = cleanPathname(new URL(rootUrl(), window.location.href).pathname);
+    const path = cleanPathname(url.pathname);
+    const relative = root !== "/" && path.startsWith(root) ? path.slice(root.length) || "/" : path;
+    return cleanPathname(relative.startsWith("/") ? relative : `/${relative}`);
+  }
+
+  function resultUrl(item) {
     const link = item.querySelector(".md-search-result__link[href], a[href]");
-    if (!link) return "";
+    if (!link) return null;
 
     try {
-      return new URL(link.getAttribute("href"), window.location.href).pathname;
+      return new URL(link.getAttribute("href"), window.location.href);
     } catch (_error) {
-      return link.getAttribute("href") || "";
+      return null;
     }
   }
 
-  function groupFor(item) {
-    const path = resultPath(item);
-    return groups.find((group) => group.test(path)) || groups[groups.length - 1];
+  function resultPath(item) {
+    const url = resultUrl(item);
+    return url ? portalPath(url) : "";
   }
 
-  function resultTitle(item) {
-    return (
-      item.querySelector(".md-search-result__title")?.textContent ||
-      item.querySelector(".md-search-result__link")?.textContent ||
-      ""
-    ).trim();
+  function groupForPath(path) {
+    return groups.find((group) => group.test(path)) || null;
   }
 
-  function decorateResult(item, group) {
+  function stripSearchNoise(value) {
+    return String(value || "")
+      .replace(/Ausente:\s*[\wÀ-ÿ-]+/gi, "")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function titleFromSlug(path) {
+    const slug = path.split("/").filter(Boolean).pop() || "";
+    return slug
+      .split("-")
+      .filter(Boolean)
+      .map((part) => /^\d+$/.test(part) ? part : part.charAt(0).toLocaleUpperCase("pt-BR") + part.slice(1))
+      .join(" ");
+  }
+
+  function displayTitle(path) {
+    const rawTitle = searchMeta?.titles.get(path) || titleFromSlug(path);
+    const cleaned = stripSearchNoise(rawTitle);
+    if (path.startsWith("/erros-solucoes/rejeicoes-fiscais/")) {
+      return cleaned.replace(/^Rejei[cç][aã]o\s+(\d+)\s*[-–—]\s*/i, "$1 — ");
+    }
+    return cleaned;
+  }
+
+  function indexLocationPath(location) {
+    const url = new URL(location || ".", rootUrl());
+    url.hash = "";
+    return portalPath(url);
+  }
+
+  function isPageLevelLocation(location) {
+    return !String(location || "").includes("#");
+  }
+
+  function buildSearchMeta(index) {
+    const titles = new Map();
+    const pageLevel = new Set();
+
+    (index.docs || []).forEach((doc) => {
+      const path = indexLocationPath(doc.location);
+      if (!groupForPath(path)) return;
+
+      const title = stripSearchNoise(doc.title);
+      if (!title) return;
+
+      if (isPageLevelLocation(doc.location)) {
+        titles.set(path, title);
+        pageLevel.add(path);
+      } else if (!pageLevel.has(path) && !titles.has(path)) {
+        titles.set(path, title);
+      }
+    });
+
+    return { titles };
+  }
+
+  function loadSearchMeta() {
+    if (searchMeta) return Promise.resolve(searchMeta);
+    if (searchMetaPromise) return searchMetaPromise;
+
+    searchMetaPromise = fetch(new URL("search/search_index.json", rootUrl()))
+      .then((response) => response.json())
+      .then((index) => {
+        searchMeta = buildSearchMeta(index);
+        return searchMeta;
+      })
+      .catch(() => {
+        searchMeta = { titles: new Map() };
+        return searchMeta;
+      });
+
+    return searchMetaPromise;
+  }
+
+  function decorateResult(item, path, group) {
     item.dataset.wcSearchGroup = group.label;
-    item.style.setProperty("--wc-search-icon", `"${group.icon}"`);
+    item.dataset.wcSearchIcon = group.icon;
 
     const link = item.querySelector(".md-search-result__link[href], a[href]");
-    if (link) link.setAttribute("aria-label", resultTitle(item));
+    const article = item.querySelector(".md-search-result__article") || link;
+    const url = resultUrl(item);
+    const title = displayTitle(path);
+
+    if (link && url) {
+      url.hash = "";
+      link.href = url.href;
+      link.setAttribute("aria-label", title);
+      link.title = title;
+    }
+
+    item.querySelectorAll(":scope > .md-search-result__link, :scope > a[href]").forEach((candidate) => {
+      if (candidate !== link) candidate.remove();
+    });
+
+    item.querySelectorAll([
+      ".md-search-result__teaser",
+      ".md-search-result__more",
+      ".md-search-result__terms",
+      ".md-search-result__icon"
+    ].join(",")).forEach((element) => element.remove());
+
+    const icon = document.createElement("span");
+    icon.className = "wc-search-result-icon";
+    icon.setAttribute("aria-hidden", "true");
+
+    const text = document.createElement("span");
+    text.className = "wc-search-result-text";
+
+    const titleElement = document.createElement("span");
+    titleElement.className = "md-search-result__title";
+    titleElement.textContent = title;
+
+    const typeElement = document.createElement("span");
+    typeElement.className = "wc-search-result-type";
+    typeElement.textContent = group.label;
+
+    text.append(titleElement, typeElement);
+    article?.replaceChildren(icon, text);
+  }
+
+  function isDecorated(item) {
+    return Boolean(item.querySelector(".wc-search-result-text")) &&
+      !item.querySelector([
+        ".md-search-result__teaser",
+        ".md-search-result__more",
+        ".md-search-result__terms",
+        ".md-search-result__icon"
+      ].join(","));
   }
 
   function createHeading(label) {
@@ -89,23 +227,46 @@
     const items = Array.from(list.children).filter((child) =>
       child.classList.contains("md-search-result__item")
     );
+    const query = (input?.value || "").trim();
+
+    document.body.classList.toggle("wc-search-open", Boolean(query) || isSearchOpen());
 
     if (!items.length) {
       result?.classList.remove("wc-search-has-results");
       list.dataset.wcSearchSignature = "";
 
       const meta = result?.querySelector(".md-search-result__meta");
-      if (meta && !(input?.value || "").trim()) meta.textContent = "Digite para iniciar a busca.";
+      if (meta && !query) meta.textContent = "Digite para iniciar a busca.";
       return;
     }
 
-    const signature = items
-      .map((item) => `${groupFor(item).label}:${resultTitle(item)}:${resultPath(item)}`)
+    const allowedItems = [];
+    const seenPaths = new Set();
+
+    items.forEach((item) => {
+      const path = resultPath(item);
+      const group = groupForPath(path);
+      if (!group || seenPaths.has(path)) return;
+
+      seenPaths.add(path);
+      allowedItems.push({ item, path, group });
+    });
+
+    if (!allowedItems.length) {
+      result?.classList.remove("wc-search-has-results");
+      list.dataset.wcSearchSignature = "";
+      list.replaceChildren();
+      return;
+    }
+
+    const signature = allowedItems
+      .map(({ path, group }) => `${group.label}:${displayTitle(path)}:${path}`)
       .join("|");
 
     if (
       list.dataset.wcSearchSignature === signature &&
-      list.querySelector(".wc-search-group")
+      list.querySelector(".wc-search-group") &&
+      allowedItems.every(({ item }) => isDecorated(item))
     ) {
       return;
     }
@@ -115,15 +276,15 @@
 
     const fragment = document.createDocumentFragment();
     groups.forEach((group) => {
-      const groupItems = items
-        .filter((item) => groupFor(item).label === group.label)
-        .sort((first, second) => resultTitle(first).localeCompare(resultTitle(second), "pt-BR"));
+      const groupItems = allowedItems
+        .filter((entry) => entry.group.label === group.label)
+        .sort((first, second) => displayTitle(first.path).localeCompare(displayTitle(second.path), "pt-BR"));
 
       if (!groupItems.length) return;
 
       fragment.appendChild(createHeading(group.label));
-      groupItems.forEach((item) => {
-        decorateResult(item, group);
+      groupItems.forEach(({ item, path }) => {
+        decorateResult(item, path, group);
         fragment.appendChild(item);
       });
     });
@@ -133,14 +294,55 @@
     list.dataset.wcSearchOrganizing = "false";
   }
 
+  function isSearchOpen() {
+    const search = document.querySelector(".md-search");
+    const input = document.querySelector(".md-search__input");
+    const toggle = document.querySelector("[data-md-toggle='search']");
+    return Boolean(
+      search?.classList.contains("md-search--active") ||
+      toggle?.checked ||
+      (input && document.activeElement === input)
+    );
+  }
+
+  function syncSearchState() {
+    document.body.classList.toggle("wc-search-open", isSearchOpen());
+  }
+
+  function initializeSearchState() {
+    if (searchStateReady) {
+      syncSearchState();
+      return;
+    }
+
+    searchStateReady = true;
+    const search = document.querySelector(".md-search");
+    const observer = new MutationObserver(syncSearchState);
+    if (search) observer.observe(search, { attributes: true, attributeFilter: ["class"] });
+
+    ["focusin", "focusout", "click", "keydown", "input"].forEach((eventName) => {
+      document.addEventListener(eventName, () => window.setTimeout(syncSearchState, 0), true);
+    });
+    syncSearchState();
+  }
+
   function initializeSearchGroups() {
     const resultList = document.querySelector(".md-search-result__list");
+    initializeSearchState();
     if (!resultList || resultList.dataset.wcSearchObserver === "true") return;
 
     resultList.dataset.wcSearchObserver = "true";
-    const observer = new MutationObserver(() => organizeResults(resultList));
-    observer.observe(resultList, { childList: true });
-    organizeResults(resultList);
+    let pending = false;
+    const observer = new MutationObserver(() => {
+      if (pending) return;
+      pending = true;
+      window.requestAnimationFrame(() => {
+        pending = false;
+        loadSearchMeta().then(() => organizeResults(resultList));
+      });
+    });
+    observer.observe(resultList, { childList: true, subtree: true, characterData: true });
+    loadSearchMeta().then(() => organizeResults(resultList));
   }
 
   document.addEventListener("DOMContentLoaded", initializeSearchGroups);

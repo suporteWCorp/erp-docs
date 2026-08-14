@@ -1,21 +1,13 @@
 (function () {
   function updateHeader() {
     const headerInner = document.querySelector(".md-header__inner");
-    const titleTopics = document.querySelectorAll(".md-header__title .md-header__topic .md-ellipsis");
-    if (!headerInner || !titleTopics.length) return;
+    if (!headerInner) return;
 
-    titleTopics.forEach((topic) => {
-      const title = document.createElement("span");
-      title.className = "wc-brand-title";
-      title.textContent = "WCorp";
-
-      const subtitle = document.createElement("span");
-      subtitle.className = "wc-brand-subtitle";
-      subtitle.textContent = "Central de Ajuda";
-
-      topic.replaceChildren(title, subtitle);
-      topic.setAttribute("aria-label", "WCorp - Central de Ajuda");
-    });
+    const logo = headerInner.querySelector(".md-header__button.md-logo[href]");
+    if (logo) {
+      logo.setAttribute("aria-label", "Ir para o início");
+      logo.setAttribute("title", "Ir para o início");
+    }
 
     headerInner.querySelector(".wc-shortcuts")?.remove();
     headerInner.querySelector(".wc-page-context")?.remove();

@@ -52,7 +52,7 @@ body:has([data-md-toggle="search"]:checked) .wc-assistant {
 .wc-assistant__avatar,
 .wc-assistant__button {
     align-items: center;
-    background: transparent;
+    background: #ffffff;
     border-radius: 50%;
     display: inline-flex;
     justify-content: center;
@@ -69,14 +69,16 @@ body:has([data-md-toggle="search"]:checked) .wc-assistant {
 .wc-assistant__agent-icon {
     display: block;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
+    object-position: center;
     width: 100%;
 }
 
 .wc-assistant__avatar .wc-assistant__agent-icon,
 .wc-assistant__button .wc-assistant__agent-icon {
-    height: 94%;
-    width: 94%;
+    border-radius: 50%;
+    height: 90%;
+    width: 90%;
 }
 
 .wc-assistant__title {
@@ -301,7 +303,7 @@ body:has([data-md-toggle="search"]:checked) .wc-assistant {
 }
 
 .wc-assistant--closing .wc-assistant__panel:not([hidden]) {
-    animation: wc-assistant-close 220ms ease-in both;
+    animation: wc-assistant-close 160ms ease-in both;
     pointer-events: none;
 }
 
@@ -325,7 +327,7 @@ body:has([data-md-toggle="search"]:checked) .wc-assistant {
 
     to {
         opacity: 0;
-        transform: translateY(10px) scale(0.985);
+        transform: translateY(8px) scale(0.985);
     }
 }
 
@@ -337,7 +339,8 @@ body:has([data-md-toggle="search"]:checked) .wc-assistant {
 }
 
 @media screen and (min-width: 76.25em) {
-    .wc-assistant--open .wc-assistant__panel {
+    .wc-assistant--open .wc-assistant__panel,
+    .wc-assistant--closing .wc-assistant__panel {
         bottom: auto;
         height: min(480px, calc(100vh - var(--wc-header-height, 3.6rem) - var(--wc-breadcrumb-height, 2.15rem) - 1.25rem));
         max-height: min(480px, calc(100vh - var(--wc-header-height, 3.6rem) - var(--wc-breadcrumb-height, 2.15rem) - 1.25rem));

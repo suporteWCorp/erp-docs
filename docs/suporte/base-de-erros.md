@@ -1,5 +1,5 @@
 # Base de erros
 
-A fonte oficial de mensagens recorrentes, causas e orientações foi centralizada em **Erros comuns**.
+A fonte oficial de mensagens recorrentes, causas e orientações foi centralizada em **Erros e Soluções**.
 
-[Consultar a base de Erros comuns](../referencia/erros-comuns.md){ .md-button .md-button--primary }
+[Consultar Erros e Soluções](../erros-solucoes/index.md){ .md-button .md-button--primary }

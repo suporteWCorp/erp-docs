@@ -1,24 +1,4 @@
 # Compras
 
-A aba **Compras** reúne requisições, equalização, aprovações, pedidos de compra e vínculos com projeção de vendas.
-
-A documentação desta seção segue a mesma ordem dos botões exibidos no WCorp.
-
-![Aba Compras](../assets/aba-compras-geral.png)
-
-## Ordem da aba Compras
-
-| Ordem | Rotina | Página |
-| --- | --- | --- |
-| 1 | Requisição de Compras | [Acessar](requisicao-compras.md) |
-| 2 | Planilha de Equalização | [Acessar](planilha-equalizacao.md) |
-| 3 | Aprovação de Compras | [Acessar](aprovacao-compras.md) |
-| 4 | Aprovação Diretoria | [Acessar](aprovacao-diretoria.md) |
-| 5 | Pedido de Compra | [Acessar](pedido-compra.md) |
-| 6 | Requisições x Projeção de Vendas | [Acessar](requisicoes-projecao-vendas.md) |
-
-## Antes de operar rotinas de Compras
-
-- Confira solicitante, itens, quantidades e fornecedor.
-- Em aprovações, valide status, alçada e observações.
-- Em pedido de compra, confira condições comerciais antes de finalizar.
+Consulte as telas e rotinas disponíveis neste módulo.
+{ .wc-listing-intro }

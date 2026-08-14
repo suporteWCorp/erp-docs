@@ -239,6 +239,56 @@ body.wc-context-support .md-typeset .md-button:active {
     text-decoration: underline;
 }
 
+.wc-useful-links {
+    border: 1px solid rgba(125, 145, 166, 0.24);
+    border-radius: 8px;
+    margin: 0.75rem 0 1.65rem;
+    overflow: hidden;
+}
+
+.wc-useful-links a {
+    align-items: center;
+    background: #ffffff;
+    color: #26383f !important;
+    display: flex;
+    font-size: 0.76rem;
+    font-weight: 650;
+    gap: 0.7rem;
+    justify-content: space-between;
+    min-height: 2.9rem;
+    padding: 0.72rem 0.95rem;
+    text-decoration: none !important;
+    transition: background-color 140ms ease, color 140ms ease, padding-left 140ms ease;
+}
+
+.wc-useful-links a + a {
+    border-top: 1px solid rgba(125, 145, 166, 0.18);
+}
+
+.wc-useful-links a::after {
+    color: #008f83;
+    content: "›";
+    flex: 0 0 auto;
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.wc-useful-links a[target="_blank"] span::after {
+    color: #7a8a92;
+    content: "↗";
+    font-size: 0.62rem;
+    font-weight: 700;
+    margin-left: 0.38rem;
+}
+
+.wc-useful-links a:hover,
+.wc-useful-links a:focus-visible {
+    background: rgba(2, 128, 144, 0.055);
+    color: #005f66 !important;
+    outline: 0;
+    padding-left: 1.08rem;
+}
+
 .wc-link-item .headerlink,
 .wc-portal-block .headerlink,
 .wc-card .headerlink {

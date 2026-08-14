@@ -76,7 +76,7 @@
 
   function iconSvg(name) {
     const paths = {
-      time: '<path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 5h-2v6l5 3 .9-1.45-3.9-2.3V7z"/>',
+      time: '<path d="M12 2.75a9.25 9.25 0 1 0 0 18.5 9.25 9.25 0 0 0 0-18.5zm0 2a7.25 7.25 0 1 1 0 14.5 7.25 7.25 0 0 1 0-14.5zm1 2.7h-2v5.05l4.12 2.47 1-1.65L13 11.45v-4z"/>',
       difficulty: '<path d="M4 19h16v2H4v-2zm2-3h3V8H6v8zm5 0h3V4h-3v12zm5 0h3v-6h-3v6z"/>',
       popular: '<path d="M4 17.5 9.5 12l3.2 3.2L20 7.9V12h2V4h-8v2h4.6l-5.9 5.9L9.5 8.7 2.6 15.6 4 17.5z"/>',
       video: '<path d="M8 5v14l11-7L8 5z"/>'
@@ -168,6 +168,37 @@
     return wrapper;
   }
 
+  function enhanceVideoScroll(content) {
+    content.querySelectorAll(".wc-content-info__item--video[href^='#']").forEach((link) => {
+      if (link.dataset.wcVideoScrollReady === "true") return;
+      link.dataset.wcVideoScrollReady = "true";
+
+      link.addEventListener("click", (event) => {
+        const id = decodeURIComponent(link.hash.slice(1));
+        const target = id ? document.getElementById(id) : null;
+        if (!target) return;
+
+        event.preventDefault();
+        history.replaceState(null, "", `${window.location.pathname}${window.location.search}${link.hash}`);
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+  }
+
+  function clearUnexpectedGuideVideoHash(path, content) {
+    if (path === "como-fazer" || !path.startsWith("como-fazer/")) return;
+    if (!/^#(?:demonstracao-em-video|video)$/i.test(window.location.hash)) return;
+    if (!content.querySelector("h2#demonstracao-em-video, video#wc-video, video#demonstracao-em-video")) return;
+
+    history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
+    requestAnimationFrame(() => window.scrollTo({ top: 0, left: 0, behavior: "auto" }));
+  }
+
+  function markGuidePage(path, type) {
+    document.body?.classList.toggle("wc-guide-page", type === "guide");
+    document.body?.classList.toggle("wc-guide-index", path === "como-fazer");
+  }
+
   function decorateCurrentPage(infoByPath) {
     const content = document.querySelector(".md-content__inner");
     const heading = content?.querySelector(":scope > h1");
@@ -177,6 +208,7 @@
 
     const path = contentKey();
     const type = pageType(path);
+    markGuidePage(path, type);
     if (!type) return;
 
     const data = {
@@ -191,6 +223,8 @@
       ? heading.nextElementSibling
       : null;
     (favorite || heading).insertAdjacentElement("afterend", ContentInfo(content, data));
+    enhanceVideoScroll(content);
+    clearUnexpectedGuideVideoHash(path, content);
   }
 
   function decorateCards(infoByPath) {
