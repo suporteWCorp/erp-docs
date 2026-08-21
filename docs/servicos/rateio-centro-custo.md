@@ -4,10 +4,6 @@
 
 Configurar ou consultar rateios de centro de custo para serviços.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Rateio de Centro de Custo**.
-
 ## Caminho
 
 `Serviços > Rateio de Centro de Custo`.

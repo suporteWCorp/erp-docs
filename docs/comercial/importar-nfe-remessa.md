@@ -4,10 +4,6 @@
 
 Importar nota fiscal eletrônica para gerar ou apoiar processos de remessa.
 
-## Quando usar
-
-Preencha aqui em quais situações o usuário deve acessar esta rotina.
-
 ## Caminho
 
 `Comercial > Importar NFe para Remessa`.

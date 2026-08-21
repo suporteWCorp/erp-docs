@@ -4,10 +4,6 @@
 
 Configurar ou consultar parâmetros de produção.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Parâmetro**.
-
 ## Caminho
 
 `Produção > Parâmetro`.

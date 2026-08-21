@@ -4,10 +4,6 @@
 
 Consultar ou registrar controles de qualidade.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Qualidade**.
-
 ## Caminho
 
 `Produção > Qualidade`.

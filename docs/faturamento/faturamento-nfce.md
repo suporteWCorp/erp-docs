@@ -4,15 +4,6 @@
 
 Emitir ou consultar cupom fiscal no WCorp, conforme a operação de venda e o ambiente fiscal utilizado pela empresa.
 
-## Quando usar
-
-Use esta rotina quando for necessário:
-
-- Emitir cupom fiscal.
-- Consultar cupom emitido.
-- Verificar status de emissão.
-- Apoiar atendimento relacionado a venda fiscal no ponto de venda.
-
 ## Caminho
 
 `Faturamento > Cupom Fiscal`.

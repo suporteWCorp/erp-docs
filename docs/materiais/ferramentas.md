@@ -4,10 +4,6 @@
 
 Executar rotinas auxiliares relacionadas a materiais e estoque.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Ferramentas**.
-
 ## Caminho
 
 `Materiais > Ferramentas`.

@@ -7,10 +7,6 @@
 
 Cadastrar, consultar ou alterar fornecedores usados em compras, entradas e rotinas fiscais.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Fornecedores**.
-
 ## Caminho
 
 `Fornecedores > Fornecedores`.

@@ -4,10 +4,6 @@
 
 Cadastrar e consultar materiais utilizados nas rotinas comerciais, fiscais e de estoque do WCorp.
 
-## Quando usar
-
-Use esta tela quando for necessário cadastrar, revisar ou completar informações de um material.
-
 ## Caminho
 
 `Materiais > Materiais`.

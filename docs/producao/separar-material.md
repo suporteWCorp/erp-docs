@@ -4,10 +4,6 @@
 
 Separar materiais necessários para produção.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Separar Material**.
-
 ## Caminho
 
 `Produção > Separar Material`.

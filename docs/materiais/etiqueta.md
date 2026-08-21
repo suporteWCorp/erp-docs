@@ -4,10 +4,6 @@
 
 Gerar ou consultar etiquetas de materiais, lotes ou movimentações.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Etiqueta**.
-
 ## Caminho
 
 `Materiais > Etiqueta`.

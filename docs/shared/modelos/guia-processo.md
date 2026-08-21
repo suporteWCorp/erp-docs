@@ -63,11 +63,6 @@ Adicione a imagem real usando o padrão `assets/images/guias/modulo_funcionalida
 
 Descreva a alternativa sem repetir o procedimento principal.
 
-## Quando utilizar
-
-Explique brevemente em quais situações o procedimento deve ser utilizado.
-
-<!-- Use para exigências específicas do procedimento. Remova quando não houver avisos. -->
 ## Avisos
 
 Use caixas adicionais `requirement`, `fiscal`, `caution` ou `information` conforme `docs/como-documentar/caixas-de-aviso.md`.

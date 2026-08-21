@@ -189,8 +189,5 @@ Gerar boleto a partir de um título financeiro.
 
 </div>
 
-<div class="wc-home-secondary-action" markdown>
-
-**Quando usar o manual do WCorp** — Se você já sabe qual tela deseja consultar, use **Manual**. O Guia explica como realizar uma tarefa; o Manual explica como funciona a tela.
-
-</div>
+!!! info "Diferença entre Guia e Manual"
+    O **Guia** explica como realizar uma tarefa. Se você já sabe qual tela deseja consultar, use o **Manual**, que explica como a tela funciona.

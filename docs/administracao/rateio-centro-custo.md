@@ -4,10 +4,6 @@
 
 Cadastrar ou consultar rateios de centro de custo.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Rateio de Centro de Custo**.
-
 ## Caminho
 
 `Administração > Rateio de Centro de Custo`.

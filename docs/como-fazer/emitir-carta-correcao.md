@@ -43,10 +43,6 @@ error_tags:
 6. Envie o evento.
 7. Confira o retorno da SEFAZ.
 
-## Quando utilizar
-
-Use quando a NF-e autorizada possui erro que pode ser corrigido por CC-e, sem alterar valores, impostos, destinatário ou informações vedadas pela legislação.
-
 ## Avisos
 
 --8<-- "shared/avisos/validacao-fiscal.md"

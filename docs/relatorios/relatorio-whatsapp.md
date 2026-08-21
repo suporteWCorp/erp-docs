@@ -4,10 +4,6 @@
 
 Gerar ou consultar relatórios relacionados ao WhatsApp.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Relatório WhatsApp**.
-
 ## Caminho
 
 `Relatórios > Relatório WhatsApp`.

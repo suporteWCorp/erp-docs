@@ -4,10 +4,6 @@
 
 Consultar ou controlar operações financeiras relacionadas a cartão.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Cartão**.
-
 ## Caminho
 
 `Financeiro > Cartão`.

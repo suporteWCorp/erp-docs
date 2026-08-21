@@ -4,10 +4,6 @@
 
 Cadastrar ou consultar categorias usadas para classificar fornecedores.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Categoria de Fornecedor**.
-
 ## Caminho
 
 `Fornecedores > Categoria de Fornecedor`.

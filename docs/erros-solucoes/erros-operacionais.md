@@ -1,3 +1,5 @@
+<div class="wcorp-inner-page wcorp-error-topic-page" markdown>
+
 # Erros Operacionais
 
 Mensagens em que o sistema está funcionando, mas algum cadastro, parâmetro, permissão ou configuração impede a operação.
@@ -49,9 +51,14 @@ Se a correção depende de cadastro, parâmetro, permissão ou configuração, c
 | Material sem NCM | Erro Operacional |
 | Condição de pagamento não cadastrada | Erro Operacional |
 
-!!! info "Exemplo de classificação"
-    A mensagem **Consumo de estoque deve estar ativo** deve ser tratada como Erro Operacional, pois a correção é realizada na configuração da Natureza de Operação. Ela não deve ser classificada automaticamente como bug.
+<div class="wc-inner-callout" markdown>
+**Exemplo de classificação**
+
+A mensagem **Consumo de estoque deve estar ativo** deve ser tratada como Erro Operacional, pois a correção é realizada na configuração da Natureza de Operação. Ela não deve ser classificada automaticamente como bug.
+</div>
 
 ## Base atual
 
 Os artigos existentes passam a ser organizados pela seção [Erros e Soluções](index.md).
+
+</div>

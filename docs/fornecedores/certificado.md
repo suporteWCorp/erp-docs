@@ -4,10 +4,6 @@
 
 Cadastrar, consultar ou controlar certificados vinculados a fornecedores ou rotinas fiscais.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Certificado**.
-
 ## Caminho
 
 `Fornecedores > Certificado`.

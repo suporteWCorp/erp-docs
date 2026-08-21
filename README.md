@@ -21,7 +21,7 @@ http://localhost:8000
 - `docs/faturamento`: nota fiscal e cupom fiscal.
 - `docs/materiais`: cadastro de materiais e lote/estoque.
 - `docs/administracao`: usuários, empresas, NCMs, natureza de operação e condições de pagamento.
-- `docs/referencia`: glossário, erros comuns e perguntas frequentes.
+- `docs/referencia`: perguntas frequentes e links úteis.
 
 ## Como adicionar uma página
 

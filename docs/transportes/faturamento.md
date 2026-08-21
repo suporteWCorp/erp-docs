@@ -4,10 +4,6 @@
 
 Controlar faturamento de rotinas de transporte.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Faturamento**.
-
 ## Caminho
 
 `Transportes > Faturamento`.

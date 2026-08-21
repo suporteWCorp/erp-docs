@@ -4,10 +4,6 @@
 
 Planejar pagamentos de colaboradores antes da efetivação.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Planejamento de Pagamento**.
-
 ## Caminho
 
 `Colaboradores > Planejamento de Pagamento`.

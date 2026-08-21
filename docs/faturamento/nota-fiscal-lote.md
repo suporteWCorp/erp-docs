@@ -4,10 +4,6 @@
 
 Emitir ou processar notas fiscais em lote quando houver mais de um documento a ser tratado.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Nota Fiscal (Lote)**.
-
 ## Caminho
 
 `Faturamento > Nota Fiscal (Lote)`.

@@ -44,10 +44,6 @@ error_tags:
 6. Confirme o envio do evento.
 7. Confira o retorno da SEFAZ.
 
-## Quando utilizar
-
-Use quando a nota foi emitida com erro ou quando a operação foi desfeita dentro das regras e prazos permitidos.
-
 ## Avisos
 
 --8<-- "shared/avisos/validacao-fiscal.md"

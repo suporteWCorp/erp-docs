@@ -4,10 +4,10 @@
     "administracao", "colaboradores", "comercial", "compras", "contratos", "faturamento",
     "financeiro", "fornecedores", "materiais", "producao", "relatorios", "servicos", "transportes"
   ];
-  const difficultyLabels = {
-    basic: "Básico",
-    intermediate: "Intermediário",
-    advanced: "Avançado"
+  const difficultyLevels = {
+    basic: { label: "Básico", dots: 1 },
+    intermediate: { label: "Intermediário", dots: 2 },
+    advanced: { label: "Avançado", dots: 3 }
   };
 
   let contentInfoCache = null;
@@ -108,8 +108,32 @@
   }
 
   function DifficultyIndicator(level) {
-    const label = difficultyLabels[level];
-    return label ? createInfoItem("difficulty", label, "Nível de dificuldade") : null;
+    const difficulty = difficultyLevels[level];
+    if (!difficulty) return null;
+
+    const item = createInfoItem(
+      "difficulty",
+      difficulty.label,
+      `Dificuldade: ${difficulty.label}`
+    );
+
+    item.setAttribute("aria-label", `Dificuldade: ${difficulty.label}`);
+
+    const dots = document.createElement("span");
+    dots.className = `wc-difficulty wc-difficulty--${level}`;
+    dots.setAttribute("aria-hidden", "true");
+
+    for (let index = 0; index < 3; index += 1) {
+      const dot = document.createElement("span");
+      dot.className = "wc-difficulty__dot";
+      if (index < difficulty.dots) {
+        dot.classList.add("wc-difficulty__dot--active");
+      }
+      dots.appendChild(dot);
+    }
+
+    item.prepend(dots);
+    return item;
   }
 
   function PopularIndicator(compact = false) {
@@ -199,6 +223,95 @@
     document.body?.classList.toggle("wc-guide-index", path === "como-fazer");
   }
 
+  function normalizeHeadingText(element) {
+    const clone = element.cloneNode(true);
+    clone.querySelectorAll(".headerlink").forEach((link) => link.remove());
+    return clone.textContent
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .trim()
+      .toLowerCase();
+  }
+
+  function revealPrerequisiteCard(card) {
+    card.classList.add("wc-prereq-card--visible");
+  }
+
+  function preparePrerequisiteAnimation(card) {
+    if (card.dataset.wcPrereqReady === "true") return;
+    card.dataset.wcPrereqReady = "true";
+
+    card.querySelectorAll(".wc-prereq-card__item").forEach((item, index) => {
+      item.style.setProperty("--wc-prereq-delay", `${index * 120}ms`);
+    });
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      revealPrerequisiteCard(card);
+      return;
+    }
+
+    if (!("IntersectionObserver" in window)) {
+      revealPrerequisiteCard(card);
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        revealPrerequisiteCard(card);
+        observer.disconnect();
+      });
+    }, { threshold: 0.2, rootMargin: "0px 0px -8% 0px" });
+
+    observer.observe(card);
+  }
+
+  function decoratePrerequisites(content) {
+    content.querySelectorAll(":scope > h2").forEach((heading) => {
+      if (normalizeHeadingText(heading) !== "pre-requisitos") return;
+      if (heading.closest(".wc-prereq-card")) return;
+
+      const card = document.createElement("section");
+      card.className = "wc-prereq-card";
+      if (heading.id) {
+        card.setAttribute("aria-labelledby", heading.id);
+      }
+
+      const header = document.createElement("div");
+      header.className = "wc-prereq-card__header";
+
+      const icon = document.createElement("span");
+      icon.className = "wc-prereq-card__icon";
+      icon.setAttribute("aria-hidden", "true");
+      icon.innerHTML = '<svg viewBox="0 0 24 24"><path d="M9 3h6l1 2h3v16H5V5h3l1-2zm1.25 2-.5 1h-2.5v13h9.5V6h-2.5l-.5-1h-3.5zM8 10.6l1.4-1.4 1.6 1.6 4-4 1.4 1.4-5.4 5.4L8 10.6zm0 5 1.4-1.4 1.6 1.6 4-4 1.4 1.4-5.4 5.4L8 15.6z"/></svg>';
+
+      heading.classList.add("wc-prereq-card__title");
+      heading.parentNode.insertBefore(card, heading);
+      header.append(icon, heading);
+      card.appendChild(header);
+
+      const body = document.createElement("div");
+      body.className = "wc-prereq-card__body";
+
+      let sibling = card.nextSibling;
+      while (sibling && !(sibling.nodeType === 1 && /^H[12]$/.test(sibling.tagName))) {
+        const next = sibling.nextSibling;
+        body.appendChild(sibling);
+        sibling = next;
+      }
+
+      body.querySelectorAll("ul, ol").forEach((list) => {
+        list.classList.add("wc-prereq-card__list");
+      });
+      body.querySelectorAll("li").forEach((item) => {
+        item.classList.add("wc-prereq-card__item");
+      });
+
+      card.appendChild(body);
+      preparePrerequisiteAnimation(card);
+    });
+  }
+
   function decorateCurrentPage(infoByPath) {
     const content = document.querySelector(".md-content__inner");
     const heading = content?.querySelector(":scope > h1");
@@ -210,6 +323,7 @@
     const type = pageType(path);
     markGuidePage(path, type);
     if (!type) return;
+    if (type === "guide") decoratePrerequisites(content);
 
     const data = {
       type,
@@ -225,6 +339,19 @@
     (favorite || heading).insertAdjacentElement("afterend", ContentInfo(content, data));
     enhanceVideoScroll(content);
     clearUnexpectedGuideVideoHash(path, content);
+  }
+
+  function prepareCurrentPageStructure() {
+    const content = document.querySelector(".md-content__inner");
+    if (!content) return;
+
+    const path = contentKey();
+    const type = pageType(path);
+    markGuidePage(path, type);
+
+    if (type === "guide") {
+      decoratePrerequisites(content);
+    }
   }
 
   function decorateCards(infoByPath) {
@@ -245,6 +372,8 @@
   }
 
   function initContentInfo() {
+    prepareCurrentPageStructure();
+
     loadContentInfo().then((infoByPath) => {
       decorateCurrentPage(infoByPath);
       decorateCards(infoByPath);

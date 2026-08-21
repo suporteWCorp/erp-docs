@@ -1,3 +1,5 @@
+<div class="wcorp-inner-page wcorp-error-topic-page" markdown>
+
 # Problemas Técnicos
 
 Falhas internas ou comportamentos inesperados que precisam de análise do Suporte.
@@ -44,9 +46,14 @@ Se existe falha interna ou comportamento inesperado sem correção por cadastro,
 | Botão sem resposta | Problema Técnico |
 | Erro de API | Problema Técnico |
 
-!!! warning "Cuidados"
-    Esta categoria não deve orientar alterações aleatórias no WCorp. Quando houver falha técnica, registre evidências e encaminhe para análise do Suporte.
+<div class="wc-inner-callout wc-inner-callout--warning" markdown>
+**Cuidados**
+
+Esta categoria não deve orientar alterações aleatórias no WCorp. Quando houver falha técnica, registre evidências e encaminhe para análise do Suporte.
+</div>
 
 ## Base atual
 
 Os artigos existentes passam a ser organizados pela seção [Erros e Soluções](index.md).
+
+</div>

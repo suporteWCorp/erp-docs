@@ -4,10 +4,6 @@
 
 Cadastrar ou consultar atividades vinculadas a serviços.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Cadastro de Atividade**.
-
 ## Caminho
 
 `Serviços > Cadastro de Atividade`.

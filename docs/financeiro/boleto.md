@@ -7,10 +7,6 @@
 
 Gerar, consultar ou acompanhar boletos vinculados a contas a receber.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Boleto**.
-
 ## Caminho
 
 `Financeiro > Boleto`.

@@ -4,10 +4,6 @@
 
 Criar, consultar ou acompanhar requisições de compra.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Requisição de Compras**.
-
 ## Caminho
 
 `Compras > Requisição de Compras`.

@@ -4,10 +4,6 @@
 
 Consultar ou manter tabelas de preços vinculadas a materiais.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Tabela de Preços**.
-
 ## Caminho
 
 `Materiais > Tabela de Preços`.

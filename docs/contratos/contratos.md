@@ -4,10 +4,6 @@
 
 Cadastrar, consultar ou alterar contratos.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Contratos**.
-
 ## Caminho
 
 `Contratos > Contratos`.

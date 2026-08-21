@@ -7,7 +7,7 @@ Use este plano para priorizar o que documentar primeiro.
 1. Documente os processos mais usados no dia a dia.
 2. Registre os erros que mais geram suporte.
 3. Complete os módulos com telas, campos e regras.
-4. Revise o glossário para padronizar os termos.
+4. Padronize os termos usados nas páginas antes de publicar.
 5. Inclua prints e exemplos reais quando a explicação textual não for suficiente.
 
 ## Critérios de prioridade

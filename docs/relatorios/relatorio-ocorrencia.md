@@ -4,10 +4,6 @@
 
 Gerar ou consultar relatórios de ocorrência.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Relatório de Ocorrência**.
-
 ## Caminho
 
 `Relatórios > Relatório de Ocorrência`.

@@ -40,10 +40,6 @@ error_tags:
 5. Salve a condição de pagamento.
 6. Faça uma validação controlada antes de disponibilizá-la para uso.
 
-## Quando utilizar
-
-Use este processo quando for necessário disponibilizar uma nova forma ou prazo de pagamento para compras, vendas ou rotinas financeiras.
-
 ## Veja também
 
 - [Consultar manual de condições de pagamento](../administracao/condicoes-pagamento.md){: target="_blank" rel="noopener" }

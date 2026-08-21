@@ -40,10 +40,6 @@ error_tags:
 6. Revise os dados.
 7. Salve o título.
 
-## Quando utilizar
-
-Use quando a empresa precisa controlar vencimento, valor e pagamento de uma despesa ou compra.
-
 ## Veja também
 
 - [Como baixar um título](baixar-titulo.md){: target="_blank" rel="noopener" }

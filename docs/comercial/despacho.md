@@ -4,10 +4,6 @@
 
 Acompanhar informações de despacho e envio relacionadas aos pedidos.
 
-## Quando usar
-
-Preencha aqui em quais situações o usuário deve acessar esta rotina.
-
 ## Caminho
 
 `Comercial > Despacho`.

@@ -4,10 +4,6 @@
 
 Cadastrar ou consultar motivos de parada de produção.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Motivo de Parada**.
-
 ## Caminho
 
 `Produção > Motivo de Parada`.

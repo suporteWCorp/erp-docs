@@ -4,10 +4,6 @@
 
 Cadastrar, consultar ou alterar serviços oferecidos pela empresa.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Cadastro de Serviço**.
-
 ## Caminho
 
 `Serviços > Cadastro de Serviço`.

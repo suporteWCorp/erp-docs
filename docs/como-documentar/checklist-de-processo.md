@@ -9,5 +9,5 @@ Antes de considerar uma página pronta, confira se ela responde aos pontos abaix
 - Campos obrigatórios e regras importantes foram explicados?
 - O resultado esperado foi descrito?
 - Erros comuns e formas de correção foram incluídos?
-- A página usa termos consistentes com o glossário?
+- A página usa termos consistentes com o restante da Central?
 - Existem prints ou exemplos quando isso ajuda o usuário?

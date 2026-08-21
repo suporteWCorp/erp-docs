@@ -4,10 +4,6 @@
 
 Gerar ou consultar arquivos de remessa para envio ao banco.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Arquivo de Remessa**.
-
 ## Caminho
 
 `Financeiro > Arquivo de Remessa`.

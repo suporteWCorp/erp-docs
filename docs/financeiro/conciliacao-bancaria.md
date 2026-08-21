@@ -4,10 +4,6 @@
 
 Conferir movimentações do WCorp com extratos ou retornos bancários.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Conciliação Bancária**.
-
 ## Caminho
 
 `Financeiro > Conciliação Bancária`.

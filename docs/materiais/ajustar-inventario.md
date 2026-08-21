@@ -7,10 +7,6 @@
 
 Ajustar quantidades de inventário conforme conferência física ou necessidade operacional.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Ajustar Inventário**.
-
 ## Caminho
 
 `Materiais > Ajustar Inventário`.

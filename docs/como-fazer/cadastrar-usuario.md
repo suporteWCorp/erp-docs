@@ -41,10 +41,6 @@ error_tags:
 5. Revise as informações e salve o usuário.
 6. Valide o acesso com o grupo e as permissões definidas.
 
-## Quando utilizar
-
-Use este processo quando uma pessoa precisar receber acesso ao sistema.
-
 ## Avisos
 
 !!! info "Acesso do usuário"

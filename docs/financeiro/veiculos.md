@@ -4,10 +4,6 @@
 
 Consultar ou manter informações de veículos quando vinculadas a processos financeiros.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Veículos**.
-
 ## Caminho
 
 `Financeiro > Veículos`.

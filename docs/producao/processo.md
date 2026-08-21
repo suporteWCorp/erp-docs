@@ -4,10 +4,6 @@
 
 Cadastrar ou consultar processos produtivos.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Processo**.
-
 ## Caminho
 
 `Produção > Processo`.

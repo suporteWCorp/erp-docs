@@ -4,10 +4,6 @@
 
 Cadastrar ou consultar grupos de processos produtivos.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Grupo de Processo**.
-
 ## Caminho
 
 `Produção > Grupo de Processo`.

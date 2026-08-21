@@ -39,10 +39,6 @@ error_tags:
 6. Revise o pedido.
 7. Salve ou envie para aprovação, conforme o fluxo.
 
-## Quando utilizar
-
-Use quando a empresa precisa formalizar uma compra antes da entrada da nota fiscal.
-
 ## Veja também
 
 - [Como lançar uma nota de entrada](lancar-nota-entrada.md){: target="_blank" rel="noopener" }

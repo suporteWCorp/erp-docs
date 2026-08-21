@@ -37,10 +37,6 @@ error_tags:
 6. Informe motivo ou observação, quando solicitado.
 7. Confirme o cancelamento.
 
-## Quando utilizar
-
-Use quando a venda foi desistida, lançada incorretamente ou substituída por outro pedido.
-
 ## Veja também
 
 - [Como gerar um pedido](fazer-pedido-venda.md){: target="_blank" rel="noopener" }

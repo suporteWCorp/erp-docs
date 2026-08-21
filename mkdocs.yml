@@ -61,17 +61,6 @@ nav:
           - Como gerar boleto: como-fazer/gerar-boleto.md
           - Como baixar um título: como-fazer/baixar-titulo.md
           - Como lançar contas a pagar: como-fazer/lancar-contas-a-pagar.md
-  - Referências:
-      - Visão geral: referencia/index.md
-      - FAQ: referencia/faq.md
-      - Links úteis: referencia/links-uteis.md
-      - Glossário: referencia/glossario.md
-  - Erros e Soluções:
-      - Visão geral: erros-solucoes/index.md
-      - Rejeições Fiscais: erros-solucoes/rejeicoes-fiscais.md
-      - Erros Operacionais: erros-solucoes/erros-operacionais.md
-      - Problemas Técnicos: erros-solucoes/problemas-tecnicos.md
-  - Favoritos: favoritos.md
   - Manual:
       - Visão geral: manual/index.md
       - Comercial:
@@ -131,6 +120,20 @@ nav:
           - NCMS: administracao/ncms.md
           - Centro de Custo: administracao/centro-custo.md
           - Condições de Pagamento: administracao/condicoes-pagamento.md
+  - Referências:
+      - Visão geral: referencia/index.md
+      - FAQ: referencia/faq.md
+      - Links úteis: referencia/links-uteis.md
+      - Erros e Soluções:
+          - Visão geral: erros-solucoes/index.md
+          - Rejeições Fiscais: erros-solucoes/rejeicoes-fiscais.md
+          - Erros Operacionais: erros-solucoes/erros-operacionais.md
+          - Problemas Técnicos: erros-solucoes/problemas-tecnicos.md
+  - Ferramentas:
+      - Visão geral: ferramentas/index.md
+      - Indicador de Relatório: ferramentas/indicador-relatorio.md
+      - Validador de XML: ferramentas/validador-xml.md
+  - Suporte: suporte/index.md
 markdown_extensions:
   - admonition
   - attr_list
@@ -163,6 +166,7 @@ extra_css:
   - assets/stylesheets/favorites.css
   - assets/stylesheets/content-info.css
   - assets/stylesheets/assistant.css
+  - assets/stylesheets/tour.css
 
 extra_javascript:
   - assets/javascripts/wcorp-header.js
@@ -175,6 +179,9 @@ extra_javascript:
   - assets/javascripts/wcorp-content-info.js
   - assets/javascripts/wcorp-assistant.js
   - assets/javascripts/wcorp-search.js
+  - assets/javascripts/wcorp-filters.js
+  - assets/javascripts/wcorp-tools.js
+  - assets/javascripts/wcorp-tour.js
 
 plugins:
   - search:

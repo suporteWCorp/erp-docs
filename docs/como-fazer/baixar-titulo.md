@@ -38,10 +38,6 @@ error_tags:
 6. Revise juros, descontos ou acréscimos.
 7. Confirme a baixa.
 
-## Quando utilizar
-
-Use quando um cliente pagou, um fornecedor foi pago ou quando a baixa precisa ser registrada manualmente.
-
 ## Veja também
 
 - [Como gerar boleto](gerar-boleto.md){: target="_blank" rel="noopener" }

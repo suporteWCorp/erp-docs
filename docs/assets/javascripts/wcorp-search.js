@@ -42,6 +42,8 @@
   let searchMeta = null;
   let searchMetaPromise = null;
   let searchStateReady = false;
+  let publishedManualPaths = null;
+  let blockedSearchClickReady = false;
 
   function rootUrl() {
     const logo = document.querySelector(".md-header__button.md-logo[href]");
@@ -78,6 +80,58 @@
 
   function groupForPath(path) {
     return groups.find((group) => group.test(path)) || null;
+  }
+
+  function isManualPath(path) {
+    return manualSections.some((section) => path.startsWith(section)) && !/-geral$/.test(path);
+  }
+
+  function publishedManualPagePaths() {
+    if (publishedManualPaths) return publishedManualPaths;
+
+    publishedManualPaths = new Set();
+    document.querySelectorAll(".md-sidebar--primary .md-nav--primary a.md-nav__link[href]").forEach((link) => {
+      try {
+        const path = portalPath(new URL(link.href, window.location.href));
+        if (isManualPath(path)) {
+          publishedManualPaths.add(path);
+        }
+      } catch (_error) {
+        // Ignora links inválidos gerados por extensões ou navegação temporária.
+      }
+    });
+
+    return publishedManualPaths;
+  }
+
+  function isBlockedManualPath(path) {
+    if (!isManualPath(path)) return false;
+
+    const publishedPaths = publishedManualPagePaths();
+    return publishedPaths.size > 0 && !publishedPaths.has(path);
+  }
+
+  function preventBlockedManualResultClick() {
+    if (blockedSearchClickReady) return;
+    blockedSearchClickReady = true;
+
+    document.addEventListener("click", (event) => {
+      const link = event.target.closest(".md-search-result a[href]");
+      if (!link) return;
+
+      let path = "";
+      try {
+        path = portalPath(new URL(link.href, window.location.href));
+      } catch (_error) {
+        return;
+      }
+
+      if (!isBlockedManualPath(path)) return;
+
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      link.closest(".md-search-result__item")?.remove();
+    }, true);
   }
 
   function stripSearchNoise(value) {
@@ -247,6 +301,7 @@
       const path = resultPath(item);
       const group = groupForPath(path);
       if (!group || seenPaths.has(path)) return;
+      if (isBlockedManualPath(path)) return;
 
       seenPaths.add(path);
       allowedItems.push({ item, path, group });
@@ -306,7 +361,12 @@
   }
 
   function syncSearchState() {
-    document.body.classList.toggle("wc-search-open", isSearchOpen());
+    const open = isSearchOpen();
+    const input = document.querySelector(".md-search__input");
+    const empty = open && !(input?.value || "").trim();
+
+    document.body.classList.toggle("wc-search-open", open);
+    document.body.classList.toggle("wc-search-empty", empty);
   }
 
   function initializeSearchState() {
@@ -329,6 +389,8 @@
   function initializeSearchGroups() {
     const resultList = document.querySelector(".md-search-result__list");
     initializeSearchState();
+    preventBlockedManualResultClick();
+    publishedManualPaths = null;
     if (!resultList || resultList.dataset.wcSearchObserver === "true") return;
 
     resultList.dataset.wcSearchObserver = "true";

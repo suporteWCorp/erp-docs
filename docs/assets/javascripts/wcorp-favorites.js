@@ -1,10 +1,33 @@
 (function () {
   const storageKey = "wcorp:favorites:v1";
-  const typeOrder = ["Guias", "Manuais", "Erros e Soluções", "FAQ", "Glossário", "Links úteis"];
+  const typeOrder = ["Guias", "Manuais", "Erros e Soluções", "FAQ", "Links úteis"];
+  let documentClickReady = false;
   const manualPrefixes = [
     "administracao", "colaboradores", "comercial", "compras", "contratos", "faturamento",
     "financeiro", "fornecedores", "materiais", "producao", "relatorios", "servicos", "transportes"
   ];
+
+  function closeFavoritesPanel() {
+    const actions = document.querySelector(".wc-header-actions");
+    const panel = actions?.querySelector(".wc-favorites-panel");
+    const button = actions?.querySelector(".wc-header-favorites");
+
+    if (panel) panel.hidden = true;
+    button?.setAttribute("aria-expanded", "false");
+  }
+
+  function handleDocumentClick(event) {
+    const actions = document.querySelector(".wc-header-actions");
+
+    if (!actions || actions.contains(event.target)) return;
+    closeFavoritesPanel();
+  }
+
+  function ensureDocumentClickListener() {
+    if (documentClickReady) return;
+    documentClickReady = true;
+    document.addEventListener("click", handleDocumentClick);
+  }
 
   function rootUrl() {
     const logo = document.querySelector(".md-header__button.md-logo[href]");
@@ -26,7 +49,6 @@
     if (path.startsWith("como-fazer/") && path !== "como-fazer") return "Guias";
     if (path === "referencia/erros-comuns" || path.startsWith("erros-solucoes/")) return "Erros e Soluções";
     if (path === "referencia/faq" || path.startsWith("referencia/faq/")) return "FAQ";
-    if (path === "referencia/glossario") return "Glossário";
     if (path === "referencia/links-uteis") return "Links úteis";
     if (manualPrefixes.some((prefix) => path.startsWith(`${prefix}/`))) return "Manuais";
     return "";
@@ -270,12 +292,7 @@
       button.setAttribute("aria-expanded", String(!panel.hidden));
       if (!panel.hidden) refresh();
     });
-    document.addEventListener("click", (event) => {
-      if (!actions.contains(event.target)) {
-        panel.hidden = true;
-        button.setAttribute("aria-expanded", "false");
-      }
-    });
+    ensureDocumentClickListener();
     refresh();
     actions.append(button, version, panel);
     header.appendChild(actions);
@@ -309,7 +326,9 @@
 
     const errors = document.getElementById("wc-error-kb");
     if (errors) {
-      new MutationObserver(decorateErrorCards).observe(errors, { childList: true, subtree: true });
+      errors.wcorpFavoriteObserver?.disconnect();
+      errors.wcorpFavoriteObserver = new MutationObserver(decorateErrorCards);
+      errors.wcorpFavoriteObserver.observe(errors, { childList: true, subtree: true });
     }
 
     const content = document.querySelector(".md-content__inner");

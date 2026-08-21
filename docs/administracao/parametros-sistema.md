@@ -4,10 +4,6 @@
 
 Configurar ou consultar parâmetros gerais do sistema.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Parâmetros Sistema**.
-
 ## Caminho
 
 `Administração > Parâmetros Sistema`.

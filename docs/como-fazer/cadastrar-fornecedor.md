@@ -34,10 +34,6 @@ error_tags:
 5. Revise os campos obrigatórios.
 6. Salve o cadastro.
 
-## Quando utilizar
-
-Use quando uma empresa ou pessoa ainda não existir como fornecedor no WCorp.
-
 ## Veja também
 
 - [Consultar CNPJ](../referencia/links-uteis.md){: target="_blank" rel="noopener" }

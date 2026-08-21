@@ -40,11 +40,11 @@ Use o manual por abas do WCorp, seguindo a mesma organização visual do sistema
 
 <div class="wc-card" markdown>
 
-### Erros e Soluções
+### Ferramentas
 
-Encontre orientações para rejeições fiscais, erros operacionais e problemas técnicos.
+Utilitários para consultar relatórios, analisar arquivos e auxiliar nos processos do WCorp.
 
-[Consultar Erros e Soluções](erros-solucoes/index.md){ .md-button .md-button--primary }
+[Acessar ferramentas](ferramentas/index.md){ .md-button .md-button--primary }
 
 </div>
 

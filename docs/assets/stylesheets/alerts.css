@@ -457,3 +457,38 @@
         padding-right: 0.72rem;
     }
 }
+
+/* FAQ usa details/summary como accordion, sem o ícone de admonition do Material. */
+.md-typeset details.wc-faq-item {
+    --wc-alert-accent: #028090;
+    background: #ffffff;
+    border-color: rgba(16, 24, 40, 0.1);
+}
+
+.md-typeset details.wc-faq-item > summary {
+    background: rgba(2, 128, 144, 0.075) !important;
+    color: #005f66 !important;
+    padding: 0.78rem 1rem !important;
+}
+
+.md-typeset details.wc-faq-item > summary:hover {
+    background: rgba(66, 93, 111, 0.11) !important;
+    color: #12343d !important;
+}
+
+.md-typeset details.wc-faq-item > summary::before {
+    background: transparent !important;
+    box-shadow: none !important;
+    content: none !important;
+    display: none !important;
+    height: 0 !important;
+    left: auto !important;
+    margin: 0 !important;
+    mask-image: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    top: auto !important;
+    transform: none !important;
+    -webkit-mask-image: none !important;
+    width: 0 !important;
+}

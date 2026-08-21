@@ -4,10 +4,6 @@
 
 Inutilizar numeração de nota fiscal quando houver quebra de sequência ou numeração que não será utilizada.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Inutilização Nota Fiscal**.
-
 ## Caminho
 
 `Faturamento > Inutilização Nota Fiscal`.

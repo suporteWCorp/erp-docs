@@ -4,10 +4,6 @@
 
 Cadastrar, consultar ou acompanhar cargas.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Carga**.
-
 ## Caminho
 
 `Transportes > Carga`.

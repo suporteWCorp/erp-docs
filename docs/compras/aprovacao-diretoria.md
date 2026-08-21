@@ -4,10 +4,6 @@
 
 Acompanhar aprovações de compra que dependem da diretoria.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Aprovação Diretoria**.
-
 ## Caminho
 
 `Compras > Aprovação Diretoria`.

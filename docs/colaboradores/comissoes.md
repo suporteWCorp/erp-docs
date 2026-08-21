@@ -4,10 +4,6 @@
 
 Consultar ou controlar comissões vinculadas a colaboradores.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Comissões**.
-
 ## Caminho
 
 `Colaboradores > Comissões`.

@@ -37,10 +37,6 @@ error_tags:
 5. Valide a impressão ou arquivo gerado.
 6. Envie ao cliente conforme o processo da empresa.
 
-## Quando utilizar
-
-Use quando a empresa precisa cobrar um cliente por boleto bancário a partir de uma conta a receber.
-
 ## Avisos
 
 --8<-- "shared/avisos/configuracao-bancaria.md"

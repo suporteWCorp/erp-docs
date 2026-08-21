@@ -4,10 +4,6 @@
 
 Consultar ou controlar custos associados à produção.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Custos de Produção**.
-
 ## Caminho
 
 `Produção > Custos de Produção`.

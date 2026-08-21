@@ -10,7 +10,7 @@ Este repositório mantém a documentação do WCorp em MkDocs Material. O objeti
 - `docs/como-fazer/`: Guia orientado a tarefas.
 - `docs/manual/index.md`: visão geral do Manual.
 - Pastas de módulo, como `comercial`, `faturamento`, `financeiro`, `materiais`, `compras`, `administracao`: páginas do Manual por tela.
-- `docs/referencia/`: FAQ, glossário e links úteis.
+- `docs/referencia/`: FAQ e links úteis.
 - `docs/erros-solucoes/`: seção principal para Rejeições Fiscais, Erros Operacionais e Problemas Técnicos.
 - `docs/suporte/`: materiais de suporte acessados pela navegação global customizada.
 - `docs/como-documentar/`: padrões e checklist de documentação, hoje fora da navegação principal.
@@ -84,7 +84,7 @@ Campos aceitos em `content-info.json`: `readingTime`, `difficulty`, `popular`, `
 - Sete páginas do Manual possuem somente título e precisam de documentação manual.
 - "Erros comuns" não deve mais ser promovido dentro de Referências; o caminho oficial para problemas é "Erros e Soluções".
 - Na Home, o card recomendado deve ser "Erros e Soluções", não "Referências".
-- Na navegação principal esquerda, "Referências" continua existindo para FAQ, Glossário e Links úteis. "Erros e Soluções" é uma seção separada.
+- Na navegação principal esquerda, "Referências" continua existindo para FAQ e Links úteis. "Erros e Soluções" é uma seção separada.
 - Favoritos usam `localStorage`; portanto, são específicos de cada navegador e perfil.
 - O build real com `mkdocs build --strict` não pôde ser executado no ambiente atual porque `mkdocs`, `python`, `docker` e WSL funcional não estão disponíveis.
 

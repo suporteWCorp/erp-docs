@@ -4,10 +4,6 @@
 
 Consultar ou informar dados técnicos do material usados no processo comercial.
 
-## Quando usar
-
-Preencha aqui em quais situações o usuário deve acessar esta rotina.
-
 ## Caminho
 
 `Comercial > Ficha Técnica de Material`.

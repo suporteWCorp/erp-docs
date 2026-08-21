@@ -4,10 +4,6 @@
 
 Emitir ou consultar nota fiscal de serviço conforme a operação da empresa.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Nota Fiscal de Serviço**.
-
 ## Caminho
 
 `Faturamento > Nota Fiscal de Serviço`.

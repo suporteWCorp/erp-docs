@@ -4,10 +4,6 @@
 
 Cadastrar, consultar ou controlar paletes no processo de armazenagem.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Palete**.
-
 ## Caminho
 
 `Materiais > Palete`.

@@ -4,10 +4,6 @@
 
 Criar, consultar ou acompanhar ordens de produção.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Ordem de Produção**.
-
 ## Caminho
 
 `Produção > Ordem de Produção`.

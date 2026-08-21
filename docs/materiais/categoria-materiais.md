@@ -7,10 +7,6 @@
 
 Cadastrar ou consultar categorias usadas para organizar materiais.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Categoria de Materiais**.
-
 ## Caminho
 
 `Materiais > Categoria de Materiais`.

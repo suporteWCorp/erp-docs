@@ -4,15 +4,6 @@
 
 Cadastrar e consultar clientes no WCorp para uso em pedidos, orçamentos, faturamento e demais funcionalidades.
 
-## Quando usar
-
-Use esta rotina quando for necessário:
-
-- Cadastrar um novo cliente.
-- Consultar ou revisar dados de um cliente existente.
-- Completar informações antes de lançar orçamento, pedido ou nota fiscal.
-- Corrigir dados cadastrais que estejam impedindo uma operação comercial ou fiscal.
-
 ## Caminho
 
 `Comercial > Clientes`.

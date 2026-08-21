@@ -4,10 +4,6 @@
 
 Criar ou acompanhar solicitações de pagamento antes da efetivação financeira.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Solicitação de Pagamento**.
-
 ## Caminho
 
 `Financeiro > Solicitação de Pagamento`.

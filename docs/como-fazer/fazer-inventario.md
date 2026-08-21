@@ -39,10 +39,6 @@ error_tags:
 6. Informe motivo e observação.
 7. Salve os ajustes.
 
-## Quando utilizar
-
-Use em contagens periódicas, auditorias, encerramentos, reorganização de estoque ou correção de divergências.
-
 ## Veja também
 
 - [Como consultar estoque](consultar-estoque.md){: target="_blank" rel="noopener" }

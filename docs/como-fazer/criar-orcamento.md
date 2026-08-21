@@ -46,10 +46,6 @@ error_tags:
 5. Informe condição de pagamento, prazo e observações.
 6. Salve o orçamento.
 
-## Quando utilizar
-
-Use quando o cliente ainda está avaliando preços, quantidades, prazos ou condições comerciais.
-
 ## Veja também
 
 - [Como gerar um pedido](fazer-pedido-venda.md){: target="_blank" rel="noopener" }

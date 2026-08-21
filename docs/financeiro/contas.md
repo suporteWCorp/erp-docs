@@ -7,10 +7,6 @@
 
 Cadastrar ou consultar contas financeiras usadas nas movimentações do WCorp.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Contas**.
-
 ## Caminho
 
 `Financeiro > Contas`.

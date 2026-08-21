@@ -7,10 +7,6 @@
 
 Cadastrar ou consultar centros de custo.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Centro de Custo**.
-
 ## Caminho
 
 `Administração > Centro de Custo`.

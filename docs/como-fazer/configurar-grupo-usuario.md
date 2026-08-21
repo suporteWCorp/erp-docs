@@ -41,10 +41,6 @@ error_tags:
 5. Revise e salve as alterações.
 6. Valide o acesso com um usuário vinculado ao grupo.
 
-## Quando utilizar
-
-Use este processo antes de vincular usuários que precisam compartilhar o mesmo perfil de acesso.
-
 ## Avisos
 
 !!! caution "Configuração de permissões"

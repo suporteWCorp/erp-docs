@@ -24,10 +24,6 @@ error_tags:
 
 ## Caminho
 
-`Materiais > Materiais`.
-
-## Print do caminho
-
 ![Onde encontrar](../assets/images/guias/materiais_materiais.png)
 
 ## Demonstração em vídeo
@@ -49,10 +45,6 @@ error_tags:
 **Resultado esperado**
 
 O material fica salvo e disponível para uso nas movimentações compatíveis com seu cadastro.
-
-## Quando utilizar
-
-Use quando um produto, insumo, peça ou serviço controlado como material ainda não existir no WCorp.
 
 ## Veja também
 

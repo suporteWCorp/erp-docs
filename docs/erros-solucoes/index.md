@@ -1,3 +1,5 @@
+<div class="wcorp-inner-page wcorp-errors-page" markdown>
+
 # Erros e Soluções
 
 Identifique a origem da mensagem e encontre a orientação correta para resolver o problema ou preparar o atendimento.
@@ -32,6 +34,8 @@ Mensagens causadas por cadastros, parâmetros, permissões ou configurações do
 Falhas internas ou comportamentos inesperados que precisam de análise do Suporte.
 
 [Preparar atendimento](problemas-tecnicos.md){ .md-button .md-button--primary }
+
+</div>
 
 </div>
 

@@ -4,10 +4,6 @@
 
 Controlar averbação junto à seguradora.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Averbação Seguradora**.
-
 ## Caminho
 
 `Transportes > Averbação Seguradora`.

@@ -29,10 +29,6 @@ error_tags:
 
 ## Caminho
 
-`Comercial > Pedido`.
-
-## Print do caminho
-
 ![Onde encontrar](../assets/images/guias/comercial_pedido.png)
 
 ## Demonstração em vídeo
@@ -63,10 +59,6 @@ error_tags:
 **Criar pedido a partir de um orçamento**
 
 Caso já exista um orçamento aprovado, é possível gerar um pedido diretamente a partir dele, sem a necessidade de realizar um novo cadastro.
-
-## Quando utilizar
-
-Use quando uma venda foi confirmada ou quando a empresa precisa registrar itens, quantidades, preços e condição de pagamento antes do faturamento.
 
 ## Veja também
 

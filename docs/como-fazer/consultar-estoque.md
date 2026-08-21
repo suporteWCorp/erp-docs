@@ -36,10 +36,6 @@ error_tags:
 4. Ajuste filtros se necessário.
 5. Abra o registro para detalhes, quando aplicável.
 
-## Quando utilizar
-
-Use antes de vender, comprar, produzir, transferir ou ajustar materiais.
-
 ## Veja também
 
 - [Como ajustar estoque](ajustar-estoque.md){: target="_blank" rel="noopener" }

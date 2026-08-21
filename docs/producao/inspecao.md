@@ -4,10 +4,6 @@
 
 Registrar ou consultar inspeções relacionadas à produção.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Inspeção**.
-
 ## Caminho
 
 `Produção > Inspeção`.

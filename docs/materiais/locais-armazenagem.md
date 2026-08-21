@@ -7,10 +7,6 @@
 
 Cadastrar ou consultar locais utilizados para controle físico e lógico do estoque.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Locais de Armazenagem**.
-
 ## Caminho
 
 `Materiais > Locais de Armazenagem`.

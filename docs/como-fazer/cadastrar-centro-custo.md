@@ -40,10 +40,6 @@ error_tags:
 5. Salve o centro de custo.
 6. Valide se o cadastro está disponível na rotina em que será utilizado.
 
-## Quando utilizar
-
-Use este processo quando a empresa precisar identificar uma nova área, operação ou finalidade para distribuição de custos.
-
 ## Veja também
 
 - [Consultar manual de centro de custo](../administracao/centro-custo.md){: target="_blank" rel="noopener" }

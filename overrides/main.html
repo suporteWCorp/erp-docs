@@ -6,21 +6,58 @@
     (function () {
       var html = document.documentElement;
       var path = window.location.pathname;
+      var cleanPath = path.replace(/\/index\.html$/, "").replace(/\/+$/, "") || "/";
       var manualSections = [
         "/administracao/", "/colaboradores/", "/comercial/", "/compras/", "/contratos/",
         "/faturamento/", "/financeiro/", "/fornecedores/", "/materiais/", "/producao/",
         "/relatorios/", "/servicos/", "/transportes/", "/manual/"
       ];
-
-      html.classList.add("wc-ui-loading");
-      html.classList.toggle("wc-route-manual", manualSections.some(function (section) {
+      var guideIndex = /\/como-fazer$/.test(cleanPath);
+      var guide = cleanPath.indexOf("/como-fazer/") !== -1 || guideIndex;
+      var manualIndex = /\/manual$/.test(cleanPath);
+      var manual = manualIndex || manualSections.some(function (section) {
         return path.indexOf(section) !== -1;
-      }));
+      });
+      var reference = cleanPath.indexOf("/referencia") !== -1;
+      var errors = cleanPath.indexOf("/erros-solucoes") !== -1;
+      var support = cleanPath.indexOf("/suporte") !== -1;
+      var favorites = cleanPath.indexOf("/favoritos") !== -1;
+      var faq = /\/referencia\/faq$/.test(cleanPath);
+      var tools = /\/ferramentas$/.test(cleanPath) || cleanPath.indexOf("/ferramentas/") !== -1;
+      var home = !guide && !manual && !reference && !errors && !support && !favorites && !tools;
+
+      html.classList.add("wc-ui-loading", "wcorp-preparing");
+      html.classList.toggle("wc-route-home", home);
+      html.classList.toggle("wc-route-guide", guide);
+      html.classList.toggle("wc-route-guide-index", guideIndex);
+      html.classList.toggle("wc-route-manual", manual);
+      html.classList.toggle("wc-route-manual-index", manualIndex);
+      html.classList.toggle("wc-route-faq", faq);
+      html.classList.toggle("wc-route-tools", tools);
+      window.wcorpUiLoadingTimer = window.setTimeout(function () {
+        html.classList.remove("wc-ui-loading", "wcorp-preparing", "wc-route-transition");
+        html.classList.add("wcorp-ready");
+      }, 1800);
     })();
   </script>
 {% endblock %}
 
 {% block content %}
+  <script>
+    (function () {
+      var html = document.documentElement;
+      var body = document.body;
+      if (!body) return;
+
+      body.classList.toggle("wc-home-index", html.classList.contains("wc-route-home"));
+      body.classList.toggle("wc-guide-index", html.classList.contains("wc-route-guide-index"));
+      body.classList.toggle("wc-manual-tabs", html.classList.contains("wc-route-manual"));
+      body.classList.toggle("wc-manual-index", html.classList.contains("wc-route-manual-index"));
+      body.classList.toggle("wc-faq-page", html.classList.contains("wc-route-faq"));
+      body.classList.toggle("wc-context-home", html.classList.contains("wc-route-home"));
+      body.classList.toggle("wc-context-manual", html.classList.contains("wc-route-manual"));
+    })();
+  </script>
   {% if page.meta.error_area %}
     <span
       id="wc-page-error-context"

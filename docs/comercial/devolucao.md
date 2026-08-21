@@ -7,10 +7,6 @@
 
 Registrar e acompanhar devoluções vinculadas ao fluxo comercial.
 
-## Quando usar
-
-Preencha aqui em quais situações o usuário deve acessar esta rotina.
-
 ## Caminho
 
 `Comercial > Devolução`.

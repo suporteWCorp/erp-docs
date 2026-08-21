@@ -4,10 +4,6 @@
 
 Gerar ou consultar relatórios de não conformidade.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Relatório de Não Conformidade**.
-
 ## Caminho
 
 `Relatórios > Relatório de Não Conformidade`.

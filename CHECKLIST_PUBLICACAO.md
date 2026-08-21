@@ -15,7 +15,7 @@
 - [ ] Confirmar que páginas fora da navegação são intencionais.
 - [ ] Testar adicionar e remover Favoritos e confirmar a persistência após recarregar.
 - [ ] Conferir contadores automáticos de Guias e Manuais.
-- [ ] Conferir a ordem de Referências: Consultar Erros, FAQ, Links úteis e Glossário.
+- [ ] Conferir a ordem de Referências: FAQ e Links úteis.
 
 ## Guias
 

@@ -7,10 +7,6 @@
 
 Emitir carta de correção para ajustar informações permitidas em uma nota fiscal já autorizada.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Carta de Correção**.
-
 ## Caminho
 
 `Faturamento > Carta de Correção`.

@@ -4,10 +4,6 @@
 
 Consultar, acompanhar ou localizar notas fiscais e seus respectivos status.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Radar de Nota Fiscal**.
-
 ## Caminho
 
 `Faturamento > Radar de Nota Fiscal`.

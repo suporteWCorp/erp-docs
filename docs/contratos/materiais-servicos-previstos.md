@@ -4,10 +4,6 @@
 
 Controlar materiais e serviços previstos em contratos.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Materiais e Serviços Previstos**.
-
 ## Caminho
 
 `Contratos > Materiais e Serviços Previstos`.

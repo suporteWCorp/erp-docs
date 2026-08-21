@@ -4,10 +4,6 @@
 
 Criar, consultar ou acompanhar orçamentos de ordem de serviço.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Orçamento OS**.
-
 ## Caminho
 
 `Serviços > Orçamento OS`.

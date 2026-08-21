@@ -4,10 +4,6 @@
 
 Consultar ou controlar romaneios vinculados à movimentação de materiais.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Romaneio**.
-
 ## Caminho
 
 `Materiais > Romaneio`.

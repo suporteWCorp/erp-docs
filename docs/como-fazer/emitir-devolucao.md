@@ -41,10 +41,6 @@ error_tags:
 6. Salve a nota.
 7. Transmita e confira o retorno da SEFAZ.
 
-## Quando utilizar
-
-Use quando uma venda ou compra precisa ser devolvida por erro, desistência, troca, recusa ou ajuste fiscal.
-
 ## Avisos
 
 --8<-- "shared/avisos/validacao-fiscal.md"

@@ -7,10 +7,6 @@
 
 Consultar ou configurar CFOPs utilizados em operações de entrada.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **CFOP Entrada**.
-
 ## Caminho
 
 `Faturamento > CFOP Entrada`.

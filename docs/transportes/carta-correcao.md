@@ -4,10 +4,6 @@
 
 Emitir carta de correção para documentos de transporte.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Carta de Correção**.
-
 ## Caminho
 
 `Transportes > Carta de Correção`.

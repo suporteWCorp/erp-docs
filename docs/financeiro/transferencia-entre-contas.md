@@ -4,10 +4,6 @@
 
 Registrar transferências de valores entre contas financeiras ou bancárias.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Transferência entre Contas**.
-
 ## Caminho
 
 `Financeiro > Transferência entre Contas`.

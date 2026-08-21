@@ -4,10 +4,6 @@
 
 Controlar faturamentos recorrentes vinculados a serviços.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Faturamento de Recorrência**.
-
 ## Caminho
 
 `Serviços > Faturamento de Recorrência`.

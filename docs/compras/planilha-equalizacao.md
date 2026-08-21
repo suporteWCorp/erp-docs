@@ -4,10 +4,6 @@
 
 Comparar propostas ou condições de fornecedores para apoio à decisão de compra.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Planilha de Equalização**.
-
 ## Caminho
 
 `Compras > Planilha de Equalização`.

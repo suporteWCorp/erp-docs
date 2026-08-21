@@ -39,10 +39,6 @@ error_tags:
 5. Vincule itens ao cadastro de materiais quando necessário.
 6. Salve ou gere a entrada conforme a rotina.
 
-## Quando utilizar
-
-Use quando a empresa recebeu um XML de fornecedor ou precisa consultar documentos fiscais eletrônicos no WCorp.
-
 ## Avisos
 
 --8<-- "shared/avisos/validacao-fiscal.md"

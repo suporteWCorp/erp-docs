@@ -7,10 +7,6 @@
 
 Registrar entrada de nota fiscal no WCorp, geralmente vinculada a compras, remessas ou movimentações de entrada.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Entrada de Nota Fiscal**.
-
 ## Caminho
 
 `Faturamento > Entrada de Nota Fiscal`.

@@ -4,10 +4,6 @@
 
 Cadastrar, consultar ou alterar dados de funcionários e colaboradores.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Funcionários / Colaboradores**.
-
 ## Caminho
 
 `Colaboradores > Funcionários / Colaboradores`.

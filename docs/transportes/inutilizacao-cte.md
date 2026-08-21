@@ -4,10 +4,6 @@
 
 Inutilizar numeração de CT-e quando necessário.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Inutilização CTe**.
-
 ## Caminho
 
 `Transportes > Inutilização CTe`.

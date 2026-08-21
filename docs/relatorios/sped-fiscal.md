@@ -4,10 +4,6 @@
 
 Gerar ou consultar informações relacionadas ao SPED Fiscal.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Sped Fiscal**.
-
 ## Caminho
 
 `Relatórios > Sped Fiscal`.

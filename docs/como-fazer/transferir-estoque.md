@@ -38,10 +38,6 @@ error_tags:
 5. Revise local, lote e unidade.
 6. Confirme a transferência.
 
-## Quando utilizar
-
-Use quando um material muda de local físico ou precisa ser reorganizado para venda, produção, separação ou armazenagem.
-
 ## Veja também
 
 - [Como consultar estoque](consultar-estoque.md){: target="_blank" rel="noopener" }

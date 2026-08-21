@@ -4,10 +4,6 @@
 
 Registrar, consultar ou controlar operações financeiras relacionadas a cheques.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Cheque**.
-
 ## Caminho
 
 `Financeiro > Cheque`.

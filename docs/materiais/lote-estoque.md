@@ -4,10 +4,6 @@
 
 Cadastrar e consultar lotes de estoque vinculados aos materiais.
 
-## Quando usar
-
-Use esta tela quando for necessário controlar ou identificar o lote utilizado em movimentações de estoque.
-
 ## Caminho
 
 `Materiais > Lote/Estoque`.

@@ -4,10 +4,6 @@
 
 Cadastrar e consultar usuários que acessam o WCorp.
 
-## Quando usar
-
-Use esta tela quando for necessário cadastrar, revisar ou ajustar o acesso de um usuário.
-
 ## Caminho
 
 `Administração > Usuários`.

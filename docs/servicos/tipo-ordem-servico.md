@@ -4,10 +4,6 @@
 
 Cadastrar ou consultar tipos usados nas ordens de serviço.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Tipo de Ordem de Serviço**.
-
 ## Caminho
 
 `Serviços > Tipo de Ordem de Serviço`.

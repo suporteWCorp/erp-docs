@@ -4,10 +4,6 @@
 
 Cadastrar ou consultar regras de conversão entre unidades de medida.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Conversão de Unidades**.
-
 ## Caminho
 
 `Materiais > Conversão de Unidades`.

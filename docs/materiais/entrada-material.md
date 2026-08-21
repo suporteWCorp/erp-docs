@@ -4,10 +4,6 @@
 
 Registrar entrada de materiais no estoque.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Entrada de Material**.
-
 ## Caminho
 
 `Materiais > Entrada de Material`.

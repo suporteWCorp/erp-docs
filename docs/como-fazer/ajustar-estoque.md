@@ -38,10 +38,6 @@ error_tags:
 5. Revise o impacto no saldo.
 6. Salve o ajuste.
 
-## Quando utilizar
-
-Use quando houver diferença identificada por conferência, inventário, perda, sobra ou correção operacional.
-
 ## Veja também
 
 - [Como consultar estoque](consultar-estoque.md){: target="_blank" rel="noopener" }

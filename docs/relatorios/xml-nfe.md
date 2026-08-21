@@ -4,10 +4,6 @@
 
 Consultar ou exportar XMLs de NF-e.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **XML(s) NFe**.
-
 ## Caminho
 
 `Relatórios > XML(s) NFe`.

@@ -4,10 +4,6 @@
 
 Cadastrar ou consultar tabelas de preços de transporte.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Tabela de Preços**.
-
 ## Caminho
 
 `Transportes > Tabela de Preços`.

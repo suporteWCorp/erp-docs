@@ -39,4 +39,6 @@ Antes de entrar em contato, procure informar:
 
 Essas informações ajudam nossa equipe a identificar o problema mais rapidamente e reduzem o tempo de atendimento.
 
+[Ver quais evidências enviar](coleta-de-evidencias.md){ .md-button }
+
 [Preciso de ajuda](https://wa.me/5512991583055){ .md-button .md-button--primary target="_blank" rel="noopener" }

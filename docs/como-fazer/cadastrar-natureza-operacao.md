@@ -60,15 +60,6 @@ error_tags:
 
 Durante o faturamento, o WCorp compara os dados da operação com os critérios das Regras vinculadas à Natureza selecionada e utiliza a Regra Fiscal compatível para realizar o cálculo da nota.
 
-## Quando utilizar
-
-Use este processo quando for necessário:
-
-- cadastrar uma nova Natureza de Operação;
-- incluir uma Regra Fiscal em uma Natureza existente;
-- ajustar os critérios de uma Regra Fiscal;
-- corrigir uma operação para a qual o sistema não encontrou uma Regra Fiscal compatível.
-
 ## Avisos
 
 --8<-- "shared/avisos/validacao-fiscal.md"

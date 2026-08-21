@@ -25,7 +25,7 @@
 
 ## Fase 4 - Melhorar suporte e referência
 
-- Revisar FAQ, Glossário, Erros comuns e Links úteis.
+- Revisar FAQ, Erros comuns e Links úteis.
 - Decidir se `docs/suporte` e `docs/como-documentar` entram na navegação principal.
 - Padronizar base de erros com causa, evidências e ação inicial.
 

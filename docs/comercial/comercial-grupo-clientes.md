@@ -4,10 +4,6 @@
 
 Cadastrar grupos de clientes para organização e classificação comercial.
 
-## Quando usar
-
-Use esta tela quando for necessário agrupar clientes conforme a organização comercial da empresa.
-
 ## Caminho
 
 `Comercial > Grupo de clientes`.

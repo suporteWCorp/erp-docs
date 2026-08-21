@@ -4,10 +4,6 @@
 
 Executar manutenções ou ajustes em contratos existentes.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Manutenção de Contratos**.
-
 ## Caminho
 
 `Contratos > Manutenção de Contratos`.

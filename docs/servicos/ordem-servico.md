@@ -4,10 +4,6 @@
 
 Criar, consultar ou acompanhar ordens de serviço.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Ordem de Serviço**.
-
 ## Caminho
 
 `Serviços > Ordem de Serviço`.

@@ -4,10 +4,6 @@
 
 Cadastrar ou consultar fases utilizadas no acompanhamento de contratos.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Fases do Contrato**.
-
 ## Caminho
 
 `Contratos > Fases do Contrato`.

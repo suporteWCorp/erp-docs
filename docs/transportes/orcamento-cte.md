@@ -4,10 +4,6 @@
 
 Criar ou consultar orçamentos relacionados a CT-e.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Orçamento CTe**.
-
 ## Caminho
 
 `Transportes > Orçamento CTe`.

@@ -4,16 +4,6 @@
 
 Emitir nota fiscal de saída no WCorp, de forma manual ou vinculada a pedidos.
 
-## Quando usar
-
-Use esta rotina quando for necessário:
-
-- Emitir uma nota fiscal de saída.
-- Gerar nota a partir de um pedido.
-- Cadastrar nota manualmente.
-- Conferir impostos antes da transmissão.
-- Transmitir a nota para a SEFAZ.
-
 ## Caminho
 
 `Faturamento > Nota Fiscal`.

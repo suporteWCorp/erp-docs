@@ -4,10 +4,6 @@
 
 Acessar e gerar relatórios gerais do WCorp.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Relatórios**.
-
 ## Caminho
 
 `Relatórios > Relatórios`.

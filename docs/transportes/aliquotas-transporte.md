@@ -4,10 +4,6 @@
 
 Consultar ou configurar alíquotas utilizadas em transporte.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Alíquotas de Transporte**.
-
 ## Caminho
 
 `Transportes > Alíquotas de Transporte`.

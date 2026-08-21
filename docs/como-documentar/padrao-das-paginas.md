@@ -29,10 +29,6 @@ Inclua somente quando houver um print real.
 
 Inclua somente quando houver um vídeo correspondente.
 
-## Quando utilizar
-
-- Liste brevemente as situações em que este processo deve ser usado.
-
 ## Veja também
 
 - Adicione processos relacionados e, quando necessário, a página correspondente do Manual.

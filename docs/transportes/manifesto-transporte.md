@@ -4,10 +4,6 @@
 
 Emitir ou consultar manifesto de transporte.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Manifesto de Transporte**.
-
 ## Caminho
 
 `Transportes > Manifesto de Transporte`.

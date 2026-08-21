@@ -1,6 +1,6 @@
 # Referências
 
-Materiais de apoio para consultar FAQ, glossário, links úteis e referências do WCorp.
+Materiais de apoio para consultar FAQ, links úteis, erros e referências do WCorp.
 { .wc-listing-intro }
 
 <div class="wc-home-grid wc-reference-grid" markdown>
@@ -27,11 +27,11 @@ Portais oficiais, consultas fiscais e materiais externos importantes.
 
 <div class="wc-card" markdown>
 
-### Glossário
+### Erros e Soluções
 
-Termos e conceitos utilizados no WCorp.
+Consulte mensagens de erro, rejeições e orientações para solucionar problemas comuns do WCorp.
 
-[Consultar glossário](glossario.md){ .md-button .md-button--primary }
+[Consultar erros e soluções](../erros-solucoes/index.md){ .md-button .md-button--primary }
 
 </div>
 

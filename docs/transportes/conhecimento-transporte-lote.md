@@ -4,10 +4,6 @@
 
 Emitir ou processar conhecimentos de transporte em lote.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Conhecimento de Transp.(Lote)**.
-
 ## Caminho
 
 `Transportes > Conhecimento de Transp.(Lote)`.

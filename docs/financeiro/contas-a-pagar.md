@@ -7,10 +7,6 @@
 
 Cadastrar, consultar e acompanhar títulos que a empresa precisa pagar.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Contas a Pagar**.
-
 ## Caminho
 
 `Financeiro > Contas a Pagar`.

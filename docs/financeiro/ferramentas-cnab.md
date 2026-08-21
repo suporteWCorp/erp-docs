@@ -4,10 +4,6 @@
 
 Executar rotinas auxiliares relacionadas a arquivos bancários no padrão CNAB.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Ferramentas CNAB**.
-
 ## Caminho
 
 `Financeiro > Ferramentas CNAB`.

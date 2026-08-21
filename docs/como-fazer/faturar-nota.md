@@ -32,10 +32,6 @@ error_tags:
 
 ## Caminho
 
-`Faturamento > Nota Fiscal`.
-
-## Print do caminho
-
 ![Onde encontrar](../assets/images/guias/faturamento_emitir_nfe.png)
 
 ## Demonstração em vídeo
@@ -64,10 +60,6 @@ error_tags:
 **Resultado esperado**
 
 A NF-e é transmitida e, quando os dados são aceitos pela SEFAZ, fica autorizada para consulta.
-
-## Quando utilizar
-
-Use quando for necessário documentar fiscalmente uma venda, remessa ou outra operação de saída.
 
 ## Avisos
 

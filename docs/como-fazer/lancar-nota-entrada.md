@@ -43,10 +43,6 @@ error_tags:
 6. Revise estoque e financeiro.
 7. Salve a nota de entrada.
 
-## Quando utilizar
-
-Use quando a empresa recebeu mercadorias ou serviços e precisa registrar a entrada no WCorp.
-
 ## Avisos
 
 --8<-- "shared/avisos/validacao-fiscal.md"

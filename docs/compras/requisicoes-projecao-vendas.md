@@ -4,10 +4,6 @@
 
 Relacionar requisições de compra com projeções de vendas.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Requisições x Projeção de Vendas**.
-
 ## Caminho
 
 `Compras > Requisições x Projeção de Vendas`.

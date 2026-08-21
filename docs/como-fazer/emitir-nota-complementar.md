@@ -39,10 +39,6 @@ error_tags:
 7. Salve e transmita a nota.
 8. Confira o retorno da SEFAZ.
 
-## Quando utilizar
-
-Use quando a operação original precisa de complemento fiscal autorizado pela regra tributária aplicável.
-
 ## Avisos
 
 --8<-- "shared/avisos/validacao-fiscal.md"

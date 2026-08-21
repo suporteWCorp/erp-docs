@@ -7,10 +7,6 @@
 
 Criar, consultar ou acompanhar pedidos de compra.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Pedido de Compra**.
-
 ## Caminho
 
 `Compras > Pedido de Compra`.

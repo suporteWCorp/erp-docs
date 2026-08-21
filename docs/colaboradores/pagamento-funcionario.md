@@ -4,10 +4,6 @@
 
 Registrar ou acompanhar pagamentos de funcionários.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Pagamento de Funcionário**.
-
 ## Caminho
 
 `Colaboradores > Pagamento de Funcionário`.

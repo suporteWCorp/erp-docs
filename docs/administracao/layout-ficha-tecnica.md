@@ -4,10 +4,6 @@
 
 Configurar ou consultar layouts de ficha técnica.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Layout de Ficha Técnica**.
-
 ## Caminho
 
 `Administração > Layout de Ficha Técnica`.

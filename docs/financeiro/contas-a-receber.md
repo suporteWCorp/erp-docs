@@ -7,10 +7,6 @@
 
 Cadastrar, consultar e acompanhar títulos que a empresa tem a receber.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Contas a Receber**.
-
 ## Caminho
 
 `Financeiro > Contas a Receber`.

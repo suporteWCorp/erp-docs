@@ -4,10 +4,6 @@
 
 Consultar, calcular ou acompanhar comissões relacionadas às vendas.
 
-## Quando usar
-
-Preencha aqui em quais situações o usuário deve acessar esta rotina.
-
 ## Caminho
 
 `Comercial > Comissões de Vendedores`.

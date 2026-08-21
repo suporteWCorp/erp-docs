@@ -4,10 +4,6 @@
 
 Cadastrar ou consultar grupos usados para classificar serviços.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Grupo de Serviço**.
-
 ## Caminho
 
 `Serviços > Grupo de Serviço`.

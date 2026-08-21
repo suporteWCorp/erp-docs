@@ -4,10 +4,6 @@
 
 Aprovar ou acompanhar requisições e processos de compra.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Aprovação de Compras**.
-
 ## Caminho
 
 `Compras > Aprovação de Compras`.

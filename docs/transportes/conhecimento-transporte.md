@@ -4,10 +4,6 @@
 
 Emitir ou consultar conhecimento de transporte.
 
-## Quando usar
-
-Use esta rotina quando houver necessidade de executar ou consultar processos relacionados a **Conhecimento de Transporte**.
-
 ## Caminho
 
 `Transportes > Conhecimento de Transporte`.

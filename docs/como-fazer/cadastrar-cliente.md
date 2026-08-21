@@ -24,10 +24,6 @@ error_tags:
 
 ## Caminho
 
-`Comercial > Clientes`.
-
-## Print do caminho
-
 ![Onde encontrar](../assets/images/guias/comercial_clientes.png)
 
 ## Demonstração em vídeo
@@ -49,10 +45,6 @@ error_tags:
 **Resultado esperado**
 
 O cliente fica salvo e disponível para seleção em pedidos, faturamento, financeiro e consultas.
-
-## Quando utilizar
-
-Use quando um cliente ainda não existir no WCorp ou quando for necessário completar os dados cadastrais antes de vender ou faturar.
 
 ## Veja também
 

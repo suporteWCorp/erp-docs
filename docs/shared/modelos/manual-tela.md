@@ -4,10 +4,6 @@
 
 Explique para que a tela ou funcionalidade serve.
 
-## Quando usar
-
-Liste as situações em que a consulta a esta tela é indicada.
-
 ## Caminho
 
 `Módulo > Tela`.
