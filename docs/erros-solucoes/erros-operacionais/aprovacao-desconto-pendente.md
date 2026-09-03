@@ -17,7 +17,7 @@ Ao selecionar o pedido na aba de NF-e, o sistema apresenta:
 > Existe(m) pedido(s) pendente(s) de aprovação de desconto
 
 <figure class="wc-operational-error-print">
-  <img src="../../assets/images/erros-operacionais/aprovacao-desconto-pendente.png" alt="Mensagem apresentada no WCorp: pedido pendente de aprovação de desconto">
+  <img src="../../../assets/images/erros-operacionais/aprovacao-desconto-pendente.png" alt="Mensagem apresentada no WCorp: pedido pendente de aprovação de desconto">
   <figcaption>Mensagem apresentada no WCorp</figcaption>
 </figure>
 

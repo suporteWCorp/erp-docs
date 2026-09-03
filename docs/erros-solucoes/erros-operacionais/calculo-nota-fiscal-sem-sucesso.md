@@ -18,7 +18,7 @@ Ao tentar salvar a NF-e, o sistema apresenta:
 > Não é possível Salvar até que o cálculo da Nota Fiscal seja realizado com sucesso
 
 <figure class="wc-operational-error-print">
-  <img src="../../assets/images/erros-operacionais/calculo-nota-fiscal-sem-sucesso.png" alt="Mensagem apresentada no WCorp: cálculo da Nota Fiscal não realizado com sucesso">
+  <img src="../../../assets/images/erros-operacionais/calculo-nota-fiscal-sem-sucesso.png" alt="Mensagem apresentada no WCorp: cálculo da Nota Fiscal não realizado com sucesso">
   <figcaption>Mensagem apresentada no WCorp</figcaption>
 </figure>
 
