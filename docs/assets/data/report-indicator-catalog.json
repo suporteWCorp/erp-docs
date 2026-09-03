@@ -1,0 +1,3587 @@
+{
+  "schema_version": 1,
+  "tipo": "report-indicator-catalog",
+  "origem_inicial": "docs/assets/javascripts/wcorp-tools.js",
+  "status_validacao_operacional": "pendente",
+  "observacao": "Catalogo estruturado criado a partir do mapeamento atual do Indicador de Relatorios. A equivalencia estrutural nao confirma operacionalmente as associacoes no WCorp.",
+  "informacoes_disponiveis": [
+    "client",
+    "material",
+    "supplier",
+    "invoice",
+    "order",
+    "productionOrder",
+    "contract",
+    "quantity",
+    "value",
+    "date",
+    "status",
+    "seller",
+    "employee",
+    "serviceOrder",
+    "service",
+    "stock",
+    "batch",
+    "storageLocation",
+    "cost",
+    "profitability",
+    "paymentCondition",
+    "payment",
+    "dueDate",
+    "costCenter",
+    "tax",
+    "cfop",
+    "commission",
+    "equipment",
+    "process",
+    "scrap",
+    "freight",
+    "weight",
+    "document",
+    "maintenance"
+  ],
+  "relatorios": [
+    {
+      "id": "movimentacao-de-material",
+      "nome": "Movimentação de Material",
+      "area": "Materiais",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "material",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "quantity",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "stock",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "batch",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "storageLocation",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "estoque-sintetico",
+      "nome": "Estoque Sintético",
+      "area": "Materiais",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "material",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "quantity",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "stock",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "batch",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "cost",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "estoque-sintetico-com-material-relacionado",
+      "nome": "Estoque Sintético com Material Relacionado",
+      "area": "Materiais",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "material",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "quantity",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "stock",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "batch",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "cost",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "estoque-analitico",
+      "nome": "Estoque Analítico",
+      "area": "Materiais",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "material",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "stock",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "cost",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "historico-de-compras",
+      "nome": "Histórico de Compras",
+      "area": "Materiais",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "material",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "supplier",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "order",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "cost",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "tabela-de-preco",
+      "nome": "Tabela de Preço",
+      "area": "Materiais",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "material",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "profitability",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "consumo-de-lote",
+      "nome": "Consumo de Lote",
+      "area": "Materiais",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "material",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "supplier",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "invoice",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "productionOrder",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "quantity",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "batch",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "stock",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "ordem-de-producao-sintetico",
+      "nome": "Ordem de Produção Sintético",
+      "area": "Ordem de Produção",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "material",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "productionOrder",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "contract",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "quantity",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "status",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "weight",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "scrap",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "process",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "ordem-de-producao-analitico",
+      "nome": "Ordem de Produção Analítico",
+      "area": "Ordem de Produção",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "material",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "invoice",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "order",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "productionOrder",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "contract",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "quantity",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "status",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "batch",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "ordem-de-producao-diaria",
+      "nome": "Ordem de Produção Diária",
+      "area": "Ordem de Produção",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "material",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "productionOrder",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "quantity",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "weight",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "scrap",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "process",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "ordem-de-producao-por-processo-realizado",
+      "nome": "Ordem de Produção por Processo Realizado",
+      "area": "Ordem de Produção",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "material",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "productionOrder",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "quantity",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "equipment",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "process",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "scrap",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "weight",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "apontamento-de-sucatas-analitico",
+      "nome": "Apontamento de Sucatas Analítico",
+      "area": "Ordem de Produção",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "material",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "productionOrder",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "quantity",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "equipment",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "scrap",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "ordem-de-producao-equipamento",
+      "nome": "Ordem de Produção Equipamento",
+      "area": "Ordem de Produção",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "material",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "productionOrder",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "quantity",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "equipment",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "process",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "equipamento-manutencao",
+      "nome": "Equipamento Manutenção",
+      "area": "Ordem de Produção",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "supplier",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "equipment",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "maintenance",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "ordem-de-servico-sintetico",
+      "nome": "Ordem de Serviço Sintético",
+      "area": "Ordem de Serviço",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "contract",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "serviceOrder",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "status",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "ordem-de-servico-analitico",
+      "nome": "Ordem de Serviço Analítico",
+      "area": "Ordem de Serviço",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "contract",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "serviceOrder",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "order",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "status",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "ordem-de-servico-x-recebimento-sintetico",
+      "nome": "Ordem de Serviço X Recebimento Sintético",
+      "area": "Ordem de Serviço",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "contract",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "serviceOrder",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "status",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "payment",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "ordem-de-servico-x-recebimento-analitico",
+      "nome": "Ordem de Serviço X Recebimento Analítico",
+      "area": "Ordem de Serviço",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "contract",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "serviceOrder",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "status",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "payment",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "fatura-por-servico",
+      "nome": "Fatura por Serviço",
+      "area": "Ordem de Serviço",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "service",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "payment",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "dueDate",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "orcamentos-analitico",
+      "nome": "Orçamentos Analítico",
+      "area": "Vendas",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "contract",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "status",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "seller",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "paymentCondition",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "freight",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "pedidos-sintetico",
+      "nome": "Pedidos Sintético",
+      "area": "Vendas",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "invoice",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "order",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "quantity",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "status",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "seller",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "paymentCondition",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "payment",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "pedidos-analitico",
+      "nome": "Pedidos Analítico",
+      "area": "Vendas",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "material",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "invoice",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "order",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "productionOrder",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "contract",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "quantity",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "status",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "seller",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "paymentCondition",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "freight",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "vendas-x-lucratividade",
+      "nome": "Vendas X Lucratividade",
+      "area": "Vendas",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "material",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "order",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "contract",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "quantity",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "status",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "employee",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "serviceOrder",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "cost",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "profitability",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "pedidos-movimentacao-do-caixa",
+      "nome": "Pedidos - Movimentação do Caixa",
+      "area": "Vendas",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "order",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "contract",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "status",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "seller",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "paymentCondition",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "freight",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "pedidos-disponiveis-para-faturamento",
+      "nome": "Pedidos Disponíveis para Faturamento",
+      "area": "Vendas",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "order",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "contract",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "seller",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "materiais-mais-vendidos",
+      "nome": "Materiais Mais Vendidos",
+      "area": "Vendas",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "material",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "quantity",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "stock",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "batch",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "vendas-de-material-por-cliente",
+      "nome": "Vendas de Material por Cliente",
+      "area": "Vendas",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "material",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "invoice",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "order",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "quantity",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "status",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "vendas-por-dia-hora",
+      "nome": "Vendas por Dia/Hora",
+      "area": "Vendas",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "order",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "demonstrativo-de-vendas-por-material",
+      "nome": "Demonstrativo de Vendas por Material",
+      "area": "Vendas",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "material",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "quantity",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "comissoes",
+      "nome": "Comissões",
+      "area": "Vendas",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "material",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "invoice",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "order",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "contract",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "quantity",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "seller",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "employee",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "serviceOrder",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "service",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "commission",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "freight",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "comissoes-por-recebimento",
+      "nome": "Comissões por Recebimento",
+      "area": "Vendas",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "invoice",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "order",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "contract",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "commission",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "payment",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "pedidos-x-recebimento-sintetico",
+      "nome": "Pedidos X Recebimento Sintético",
+      "area": "Vendas",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "order",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "contract",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "status",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "paymentCondition",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "payment",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "pedidos-x-recebimento-analitico",
+      "nome": "Pedidos X Recebimento Analítico",
+      "area": "Vendas",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "order",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "contract",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "status",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "paymentCondition",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "payment",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "pedidos-analitico-por-data-de-entrega",
+      "nome": "Pedidos Analítico por Data de Entrega",
+      "area": "Vendas",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "material",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "order",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "contract",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "quantity",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "status",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "seller",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "paymentCondition",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "pedidos-x-ficha-tecnica",
+      "nome": "Pedidos X Ficha Técnica",
+      "area": "Vendas",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "material",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "order",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "productionOrder",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "quantity",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "status",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "seller",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "pedido-x-ordem-producao",
+      "nome": "Pedido X Ordem Produção",
+      "area": "Vendas",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "material",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "order",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "productionOrder",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "quantity",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "status",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "process",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "despacho",
+      "nome": "Despacho",
+      "area": "Vendas",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "supplier",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "invoice",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "order",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "freight",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "weight",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "tax",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "despacho-por-pedido",
+      "nome": "Despacho por Pedido",
+      "area": "Vendas",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "invoice",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "order",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "freight",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "tax",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "ranking-de-vendas-por-cliente",
+      "nome": "Ranking de Vendas por Cliente",
+      "area": "Vendas",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "order",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "quantity",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "seller",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "profitability",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "clientes-que-nao-compraram",
+      "nome": "Clientes que não compraram",
+      "area": "Vendas",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "order",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "quantity",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "seller",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "devolucoes",
+      "nome": "Devoluções",
+      "area": "Vendas",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "material",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "invoice",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "order",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "quantity",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "nota-fiscal-sintetico",
+      "nome": "Nota Fiscal Sintético",
+      "area": "Faturamento",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "invoice",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "status",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "tax",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "freight",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "weight",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "nota-fiscal-analitico",
+      "nome": "Nota Fiscal Analítico",
+      "area": "Faturamento",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "material",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "invoice",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "quantity",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "status",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "tax",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "cfop",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "freight",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "weight",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "entrada-nota-fiscal-sintetico",
+      "nome": "Entrada Nota Fiscal Sintético",
+      "area": "Faturamento",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "supplier",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "invoice",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "entrada-nota-fiscal-analitico",
+      "nome": "Entrada Nota Fiscal Analítico",
+      "area": "Faturamento",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "material",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "supplier",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "invoice",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "order",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "quantity",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "tax",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "cfop",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "cupom-fiscal-sintetico",
+      "nome": "Cupom Fiscal Sintético",
+      "area": "Faturamento",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "invoice",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "order",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "status",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "tax",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "freight",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "cupom-fiscal-analitico",
+      "nome": "Cupom Fiscal Analítico",
+      "area": "Faturamento",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "invoice",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "order",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "status",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "tax",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "freight",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "nota-fiscal-servico-sintetico",
+      "nome": "Nota Fiscal Serviço Sintético",
+      "area": "Faturamento",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "invoice",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "service",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "status",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "tax",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "nota-fiscal-apuracao-de-impostos",
+      "nome": "Nota Fiscal Apuração de Impostos",
+      "area": "Faturamento",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "supplier",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "invoice",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "tax",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "cfop",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "apuracao-de-impostos-por-cfop",
+      "nome": "Apuração de Impostos por CFOP",
+      "area": "Faturamento",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "tax",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "cfop",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "contas-a-pagar",
+      "nome": "Contas a Pagar",
+      "area": "Contas a Pagar",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "supplier",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "invoice",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "contract",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "status",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "employee",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "payment",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "dueDate",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "costCenter",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "contas-a-pagar-por-centro-de-custo",
+      "nome": "Contas a Pagar por Centro de Custo",
+      "area": "Contas a Pagar",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "supplier",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "invoice",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "contract",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "status",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "employee",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "payment",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "dueDate",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "costCenter",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "contas-a-receber",
+      "nome": "Contas a Receber",
+      "area": "Contas a Receber",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "supplier",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "invoice",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "order",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "contract",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "status",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "employee",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "payment",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "dueDate",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "contas-a-receber-por-centro-de-custo",
+      "nome": "Contas a Receber por Centro de Custo",
+      "area": "Contas a Receber",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "supplier",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "invoice",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "contract",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "status",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "employee",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "payment",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "dueDate",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "costCenter",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "movimentacao-de-contas",
+      "nome": "Movimentação de Contas",
+      "area": "Financeiro",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "supplier",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "invoice",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "employee",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "costCenter",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "cheques",
+      "nome": "Cheques",
+      "area": "Financeiro",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "supplier",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "status",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "employee",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "payment",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "dueDate",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "costCenter",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "solicitacao-de-pagamento",
+      "nome": "Solicitação de Pagamento",
+      "area": "Financeiro",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "supplier",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "contract",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "employee",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "payment",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "pedidos-de-compra-sintetico",
+      "nome": "Pedidos de Compra Sintético",
+      "area": "Compras",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "supplier",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "invoice",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "order",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "contract",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "status",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "freight",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "pedidos-de-compra-analitico",
+      "nome": "Pedidos de Compra Analítico",
+      "area": "Compras",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "material",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "supplier",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "order",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "contract",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "quantity",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "status",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "freight",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "tax",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "service",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "conhecimento-de-transporte-sintetico",
+      "nome": "Conhecimento de Transporte Sintético",
+      "area": "Transporte",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "supplier",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "invoice",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "quantity",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "status",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "freight",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "faturamento-sintetico",
+      "nome": "Faturamento Sintético",
+      "area": "Transporte",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "dueDate",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "payment",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "faturamento-analitico",
+      "nome": "Faturamento Analítico",
+      "area": "Transporte",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "client",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "dueDate",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "payment",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "estatistico-de-conhecimento-de-transporte",
+      "nome": "Estatístico de Conhecimento de Transporte",
+      "area": "Transporte",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "quantity",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "value",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "tax",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "freight",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "weight",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "documentos-do-funcionario",
+      "nome": "Documentos do Funcionário",
+      "area": "Funcionário",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "employee",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "document",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "dueDate",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    },
+    {
+      "id": "rendimento-do-funcionario",
+      "nome": "Rendimento do Funcionário",
+      "area": "Funcionário",
+      "status": "nao_confirmado",
+      "fonte": null,
+      "observacao": null,
+      "informacoes": [
+        {
+          "id": "quantity",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "date",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        },
+        {
+          "id": "employee",
+          "status": "nao_confirmado",
+          "fonte": null,
+          "observacao": null
+        }
+      ]
+    }
+  ]
+}

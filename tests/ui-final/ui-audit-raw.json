@@ -1,0 +1,5 @@
+{
+  "generatedAt": "2026-08-28T19:49:28.031Z",
+  "status": "browser-runtime-blocked",
+  "note": "A coleta visual automatizada em navegador não foi concluída: in-app browser indisponível, Playwright sem browser baixado, Chrome/Edge headless falhando por GPU. Use AUDITORIA_UI_FINAL.md como relatório principal e static-link-check.json como evidência estática."
+}

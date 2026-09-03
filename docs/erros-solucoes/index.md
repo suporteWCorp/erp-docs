@@ -33,7 +33,7 @@ Mensagens causadas por cadastros, parâmetros, permissões ou configurações do
 
 Falhas internas ou comportamentos inesperados que precisam de análise do Suporte.
 
-[Preparar atendimento](problemas-tecnicos.md){ .md-button .md-button--primary }
+[Identificar Problema](problemas-tecnicos.md){ .md-button .md-button--primary }
 
 </div>
 
@@ -54,7 +54,6 @@ Uma mensagem de erro não significa automaticamente que existe um bug. Primeiro 
 
 Classificação inicial dos conteúdos atuais:
 - Rejeição 656 - Consumo indevido: Rejeição Fiscal.
-- Rejeição da SEFAZ: Rejeição Fiscal.
 - Certificado digital inválido: Erro Operacional.
 - Usuário sem acesso à funcionalidade: Erro Operacional.
 - Campo obrigatório não preenchido: Erro Operacional.
@@ -73,6 +72,4 @@ Classificação inicial dos conteúdos atuais:
 Conteúdos existentes localizados:
 - docs/assets/data/erros-comuns.json.
 - docs/suporte/triagem.md.
-- docs/suporte/coleta-de-evidencias.md.
-- docs/suporte/base-de-erros.md.
 -->

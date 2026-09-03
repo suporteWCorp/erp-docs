@@ -6,6 +6,8 @@ error_tags:
   - "xml"
   - "nfe"
   - "fornecedor"
+search:
+  exclude: true
 ---
 
 # Como lançar uma nota de entrada

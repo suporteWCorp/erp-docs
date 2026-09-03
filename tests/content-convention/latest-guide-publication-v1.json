@@ -1,0 +1,1019 @@
+{
+  "summary": {
+    "pass": true,
+    "totalGuideFiles": 38,
+    "publishedGuides": 15,
+    "invalidGuides": 23,
+    "cardCount": 15,
+    "navCount": 15,
+    "catalogGuideCount": 15,
+    "errorCount": 0,
+    "warningCount": 0
+  },
+  "categoryCounts": {
+    "cards": {
+      "Administração": 1,
+      "Comercial": 1,
+      "Estoque": 7,
+      "Faturamento": 4,
+      "Funcionalidades": 1,
+      "Relatórios": 1
+    },
+    "nav": {
+      "Administração": 1,
+      "Comercial": 1,
+      "Estoque": 7,
+      "Faturamento": 4,
+      "Funcionalidades": 1,
+      "Relatórios": 1
+    },
+    "publishedV1": {
+      "Estoque": 7,
+      "Comercial": 1,
+      "Faturamento": 4,
+      "Relatórios": 1,
+      "Funcionalidades": 1,
+      "Administração": 1
+    }
+  },
+  "guides": [
+    {
+      "path": "como-fazer/ajustar-estoque",
+      "file": "docs/como-fazer/ajustar-estoque.md",
+      "id": "ajustar-estoque",
+      "title": "Como ajustar inventário",
+      "category": "Estoque",
+      "status": "published",
+      "markdownVideos": [
+        "../assets/videos/guias/ajustar-estoque/ajuste-inventario.mp4"
+      ],
+      "legacyHtmlVideos": [],
+      "publishedV1": true,
+      "classification": "GUIA_VALIDO"
+    },
+    {
+      "path": "como-fazer/alterar-ncm-material",
+      "file": "docs/como-fazer/alterar-ncm-material.md",
+      "id": "alterar-ncm-material",
+      "title": "Como alterar o NCM de um material",
+      "category": "Estoque",
+      "status": "published",
+      "markdownVideos": [
+        "../assets/videos/guias/alterar-ncm-material/alterar-ncm-material.mp4"
+      ],
+      "legacyHtmlVideos": [],
+      "publishedV1": true,
+      "classification": "GUIA_VALIDO"
+    },
+    {
+      "path": "como-fazer/baixar-titulo",
+      "file": "docs/como-fazer/baixar-titulo.md",
+      "id": "",
+      "title": "Como baixar um título",
+      "category": "",
+      "status": "",
+      "markdownVideos": [],
+      "legacyHtmlVideos": [],
+      "publishedV1": false,
+      "classification": "SEM_VIDEO"
+    },
+    {
+      "path": "como-fazer/cadastrar-centro-custo",
+      "file": "docs/como-fazer/cadastrar-centro-custo.md",
+      "id": "",
+      "title": "Como cadastrar um Centro de Custo",
+      "category": "",
+      "status": "",
+      "markdownVideos": [],
+      "legacyHtmlVideos": [
+        "../../assets/videos/adm_centro_custo.mp4"
+      ],
+      "publishedV1": false,
+      "classification": "ASSET_AUSENTE"
+    },
+    {
+      "path": "como-fazer/cadastrar-cliente",
+      "file": "docs/como-fazer/cadastrar-cliente.md",
+      "id": "cadastrar-cliente",
+      "title": "Como cadastrar um cliente",
+      "category": "Comercial",
+      "status": "published",
+      "markdownVideos": [
+        "../assets/videos/guias/cadastrar-cliente/comercial_clientes.mp4"
+      ],
+      "legacyHtmlVideos": [],
+      "publishedV1": true,
+      "classification": "GUIA_VALIDO"
+    },
+    {
+      "path": "como-fazer/cadastrar-condicao-pagamento",
+      "file": "docs/como-fazer/cadastrar-condicao-pagamento.md",
+      "id": "",
+      "title": "Como cadastrar uma Condição de Pagamento",
+      "category": "",
+      "status": "",
+      "markdownVideos": [],
+      "legacyHtmlVideos": [
+        "../../assets/videos/adm_condicao_pagamento.mp4"
+      ],
+      "publishedV1": false,
+      "classification": "ASSET_AUSENTE"
+    },
+    {
+      "path": "como-fazer/cadastrar-fornecedor",
+      "file": "docs/como-fazer/cadastrar-fornecedor.md",
+      "id": "",
+      "title": "Como cadastrar um fornecedor",
+      "category": "",
+      "status": "",
+      "markdownVideos": [],
+      "legacyHtmlVideos": [],
+      "publishedV1": false,
+      "classification": "SEM_VIDEO"
+    },
+    {
+      "path": "como-fazer/cadastrar-material",
+      "file": "docs/como-fazer/cadastrar-material.md",
+      "id": "",
+      "title": "Como cadastrar um material",
+      "category": "",
+      "status": "",
+      "markdownVideos": [],
+      "legacyHtmlVideos": [
+        "../../assets/videos/materiais_materiais.mp4"
+      ],
+      "publishedV1": false,
+      "classification": "ASSET_AUSENTE"
+    },
+    {
+      "path": "como-fazer/cadastrar-natureza-operacao",
+      "file": "docs/como-fazer/cadastrar-natureza-operacao.md",
+      "id": "",
+      "title": "Como cadastrar uma Natureza de Operação",
+      "category": "",
+      "status": "",
+      "markdownVideos": [],
+      "legacyHtmlVideos": [
+        "../../assets/videos/adm_natureza_operacao.mp4"
+      ],
+      "publishedV1": false,
+      "classification": "ASSET_AUSENTE"
+    },
+    {
+      "path": "como-fazer/cadastrar-usuario",
+      "file": "docs/como-fazer/cadastrar-usuario.md",
+      "id": "",
+      "title": "Como cadastrar um usuário",
+      "category": "",
+      "status": "",
+      "markdownVideos": [],
+      "legacyHtmlVideos": [
+        "../../assets/videos/adm_cadastro_usuario.mp4"
+      ],
+      "publishedV1": false,
+      "classification": "ASSET_AUSENTE"
+    },
+    {
+      "path": "como-fazer/cancelar-nfe",
+      "file": "docs/como-fazer/cancelar-nfe.md",
+      "id": "",
+      "title": "Como cancelar uma NF-e",
+      "category": "",
+      "status": "",
+      "markdownVideos": [],
+      "legacyHtmlVideos": [
+        "../../assets/videos/faturamento_cancelar_nfe.mp4"
+      ],
+      "publishedV1": false,
+      "classification": "ASSET_AUSENTE"
+    },
+    {
+      "path": "como-fazer/cancelar-pedido",
+      "file": "docs/como-fazer/cancelar-pedido.md",
+      "id": "",
+      "title": "Como cancelar um pedido",
+      "category": "",
+      "status": "",
+      "markdownVideos": [],
+      "legacyHtmlVideos": [],
+      "publishedV1": false,
+      "classification": "SEM_VIDEO"
+    },
+    {
+      "path": "como-fazer/configurar-grupo-usuario",
+      "file": "docs/como-fazer/configurar-grupo-usuario.md",
+      "id": "",
+      "title": "Como configurar um Grupo de Usuário",
+      "category": "",
+      "status": "",
+      "markdownVideos": [],
+      "legacyHtmlVideos": [
+        "../../assets/videos/adm__grupo_usuario.mp4"
+      ],
+      "publishedV1": false,
+      "classification": "ASSET_AUSENTE"
+    },
+    {
+      "path": "como-fazer/configurar-lote-padrao",
+      "file": "docs/como-fazer/configurar-lote-padrao.md",
+      "id": "configurar-lote-padrao",
+      "title": "Como configurar lote padrão",
+      "category": "Estoque",
+      "status": "published",
+      "markdownVideos": [
+        "../assets/videos/guias/configurar-lote-padrao/lote-padrao.mp4"
+      ],
+      "legacyHtmlVideos": [],
+      "publishedV1": true,
+      "classification": "GUIA_VALIDO"
+    },
+    {
+      "path": "como-fazer/consultar-estoque",
+      "file": "docs/como-fazer/consultar-estoque.md",
+      "id": "consultar-estoque",
+      "title": "Como consultar estoque",
+      "category": "Estoque",
+      "status": "published",
+      "markdownVideos": [
+        "../assets/videos/guias/consultar-estoque/ver-estoque.mp4"
+      ],
+      "legacyHtmlVideos": [],
+      "publishedV1": true,
+      "classification": "GUIA_VALIDO"
+    },
+    {
+      "path": "como-fazer/consultar-nfe-rejeitada",
+      "file": "docs/como-fazer/consultar-nfe-rejeitada.md",
+      "id": "consultar-nfe-rejeitada",
+      "title": "Como consultar notas fiscais rejeitadas",
+      "category": "Faturamento",
+      "status": "published",
+      "markdownVideos": [
+        "../assets/videos/guias/consultar-nfe-rejeitada/consultar-nfe-rejeitada.mp4"
+      ],
+      "legacyHtmlVideos": [],
+      "publishedV1": true,
+      "classification": "GUIA_VALIDO"
+    },
+    {
+      "path": "como-fazer/consultar-sped-fiscal",
+      "file": "docs/como-fazer/consultar-sped-fiscal.md",
+      "id": "consultar-sped-fiscal",
+      "title": "Como consultar SPED Fiscal",
+      "category": "Relatórios",
+      "status": "published",
+      "markdownVideos": [
+        "../assets/videos/guias/consultar-sped-fiscal/sped-fiscal.mp4"
+      ],
+      "legacyHtmlVideos": [],
+      "publishedV1": true,
+      "classification": "GUIA_VALIDO"
+    },
+    {
+      "path": "como-fazer/criar-orcamento",
+      "file": "docs/como-fazer/criar-orcamento.md",
+      "id": "",
+      "title": "Como criar um orçamento",
+      "category": "",
+      "status": "",
+      "markdownVideos": [],
+      "legacyHtmlVideos": [
+        "../../assets/videos/comercial_orcamento.mp4"
+      ],
+      "publishedV1": false,
+      "classification": "ASSET_AUSENTE"
+    },
+    {
+      "path": "como-fazer/criar-pedido-compra",
+      "file": "docs/como-fazer/criar-pedido-compra.md",
+      "id": "",
+      "title": "Como criar um pedido de compra",
+      "category": "",
+      "status": "",
+      "markdownVideos": [],
+      "legacyHtmlVideos": [],
+      "publishedV1": false,
+      "classification": "SEM_VIDEO"
+    },
+    {
+      "path": "como-fazer/criar-romaneio",
+      "file": "docs/como-fazer/criar-romaneio.md",
+      "id": "criar-romaneio",
+      "title": "Como criar romaneio",
+      "category": "Estoque",
+      "status": "published",
+      "markdownVideos": [
+        "../assets/videos/guias/criar-romaneio/romaneio.mp4"
+      ],
+      "legacyHtmlVideos": [],
+      "publishedV1": true,
+      "classification": "GUIA_VALIDO"
+    },
+    {
+      "path": "como-fazer/emitir-carta-correcao",
+      "file": "docs/como-fazer/emitir-carta-correcao.md",
+      "id": "",
+      "title": "Como emitir uma carta de correção",
+      "category": "",
+      "status": "",
+      "markdownVideos": [],
+      "legacyHtmlVideos": [
+        "../../assets/videos/faturamento_carta_correcao.mp4"
+      ],
+      "publishedV1": false,
+      "classification": "ASSET_AUSENTE"
+    },
+    {
+      "path": "como-fazer/emitir-devolucao",
+      "file": "docs/como-fazer/emitir-devolucao.md",
+      "id": "",
+      "title": "Como emitir uma devolução",
+      "category": "",
+      "status": "",
+      "markdownVideos": [],
+      "legacyHtmlVideos": [],
+      "publishedV1": false,
+      "classification": "SEM_VIDEO"
+    },
+    {
+      "path": "como-fazer/emitir-nota-complementar",
+      "file": "docs/como-fazer/emitir-nota-complementar.md",
+      "id": "",
+      "title": "Como emitir uma nota complementar",
+      "category": "",
+      "status": "",
+      "markdownVideos": [],
+      "legacyHtmlVideos": [],
+      "publishedV1": false,
+      "classification": "SEM_VIDEO"
+    },
+    {
+      "path": "como-fazer/empenhar-material",
+      "file": "docs/como-fazer/empenhar-material.md",
+      "id": "empenhar-material",
+      "title": "Como verificar o empenho de material",
+      "category": "Estoque",
+      "status": "published",
+      "markdownVideos": [
+        "../assets/videos/guias/empenhar-material/empenho-material.mp4"
+      ],
+      "legacyHtmlVideos": [],
+      "publishedV1": true,
+      "classification": "GUIA_VALIDO"
+    },
+    {
+      "path": "como-fazer/exportar-editar-tabela",
+      "file": "docs/como-fazer/exportar-editar-tabela.md",
+      "id": "exportar-editar-tabela",
+      "title": "Como exportar e editar tabela",
+      "category": "Funcionalidades",
+      "status": "published",
+      "markdownVideos": [
+        "../assets/videos/guias/exportar-editar-tabela/exportar-editar-tabela.mp4"
+      ],
+      "legacyHtmlVideos": [],
+      "publishedV1": true,
+      "classification": "GUIA_VALIDO"
+    },
+    {
+      "path": "como-fazer/faturar-nota",
+      "file": "docs/como-fazer/faturar-nota.md",
+      "id": "",
+      "title": "Como emitir uma NF-e",
+      "category": "",
+      "status": "",
+      "markdownVideos": [],
+      "legacyHtmlVideos": [
+        "../../assets/videos/faturamento_nfe.mp4"
+      ],
+      "publishedV1": false,
+      "classification": "ASSET_AUSENTE"
+    },
+    {
+      "path": "como-fazer/fazer-inventario",
+      "file": "docs/como-fazer/fazer-inventario.md",
+      "id": "",
+      "title": "Como fazer inventário",
+      "category": "",
+      "status": "",
+      "markdownVideos": [],
+      "legacyHtmlVideos": [],
+      "publishedV1": false,
+      "classification": "SEM_VIDEO"
+    },
+    {
+      "path": "como-fazer/fazer-pedido-venda",
+      "file": "docs/como-fazer/fazer-pedido-venda.md",
+      "id": "",
+      "title": "Como gerar um pedido",
+      "category": "",
+      "status": "",
+      "markdownVideos": [],
+      "legacyHtmlVideos": [
+        "../../assets/videos/comercial_pedido.mp4",
+        "../../assets/videos/comercial_pedido_orcamento.mp4"
+      ],
+      "publishedV1": false,
+      "classification": "ASSET_AUSENTE"
+    },
+    {
+      "path": "como-fazer/gerar-boleto",
+      "file": "docs/como-fazer/gerar-boleto.md",
+      "id": "",
+      "title": "Como gerar boleto",
+      "category": "",
+      "status": "",
+      "markdownVideos": [],
+      "legacyHtmlVideos": [],
+      "publishedV1": false,
+      "classification": "SEM_VIDEO"
+    },
+    {
+      "path": "como-fazer/importar-xml",
+      "file": "docs/como-fazer/importar-xml.md",
+      "id": "",
+      "title": "Como importar XML",
+      "category": "",
+      "status": "",
+      "markdownVideos": [],
+      "legacyHtmlVideos": [],
+      "publishedV1": false,
+      "classification": "SEM_VIDEO"
+    },
+    {
+      "path": "como-fazer/lancar-contas-a-pagar",
+      "file": "docs/como-fazer/lancar-contas-a-pagar.md",
+      "id": "",
+      "title": "Como lançar contas a pagar",
+      "category": "",
+      "status": "",
+      "markdownVideos": [],
+      "legacyHtmlVideos": [],
+      "publishedV1": false,
+      "classification": "SEM_VIDEO"
+    },
+    {
+      "path": "como-fazer/lancar-nota-entrada",
+      "file": "docs/como-fazer/lancar-nota-entrada.md",
+      "id": "",
+      "title": "Como lançar uma nota de entrada",
+      "category": "",
+      "status": "",
+      "markdownVideos": [],
+      "legacyHtmlVideos": [],
+      "publishedV1": false,
+      "classification": "SEM_VIDEO"
+    },
+    {
+      "path": "como-fazer/registrar-entrada-material",
+      "file": "docs/como-fazer/registrar-entrada-material.md",
+      "id": "registrar-entrada-material",
+      "title": "Como realizar entrada de material",
+      "category": "Estoque",
+      "status": "published",
+      "markdownVideos": [
+        "../assets/videos/guias/registrar-entrada-material/entrada-material.mp4"
+      ],
+      "legacyHtmlVideos": [],
+      "publishedV1": true,
+      "classification": "GUIA_VALIDO"
+    },
+    {
+      "path": "como-fazer/transferir-estoque",
+      "file": "docs/como-fazer/transferir-estoque.md",
+      "id": "",
+      "title": "Como transferir estoque",
+      "category": "",
+      "status": "",
+      "markdownVideos": [],
+      "legacyHtmlVideos": [],
+      "publishedV1": false,
+      "classification": "SEM_VIDEO"
+    },
+    {
+      "path": "como-fazer/usar-emissor",
+      "file": "docs/como-fazer/usar-emissor.md",
+      "id": "usar-emissor",
+      "title": "Como utilizar emissor de NF-e",
+      "category": "Faturamento",
+      "status": "published",
+      "markdownVideos": [
+        "../assets/videos/guias/usar-emissor/abrir-emissor.mp4",
+        "../assets/videos/guias/usar-emissor/verificar-erro-emissor.mp4"
+      ],
+      "legacyHtmlVideos": [],
+      "publishedV1": true,
+      "classification": "GUIA_VALIDO"
+    },
+    {
+      "path": "como-fazer/verificar-cbenef",
+      "file": "docs/como-fazer/verificar-cbenef.md",
+      "id": "verificar-cbenef",
+      "title": "Como verificar CBenef",
+      "category": "Faturamento",
+      "status": "published",
+      "markdownVideos": [
+        "../assets/videos/guias/verificar-cbenef/verificar-cbenef.mp4"
+      ],
+      "legacyHtmlVideos": [],
+      "publishedV1": true,
+      "classification": "GUIA_VALIDO"
+    },
+    {
+      "path": "como-fazer/verificar-regra-fiscal",
+      "file": "docs/como-fazer/verificar-regra-fiscal.md",
+      "id": "verificar-regra-fiscal",
+      "title": "Como verificar regra fiscal",
+      "category": "Faturamento",
+      "status": "published",
+      "markdownVideos": [
+        "../assets/videos/guias/verificar-regra-fiscal/ver-regra-fiscal.mp4",
+        "../assets/videos/guias/verificar-regra-fiscal/ver-regra-fiscal-administracao.mp4"
+      ],
+      "legacyHtmlVideos": [],
+      "publishedV1": true,
+      "classification": "GUIA_VALIDO"
+    },
+    {
+      "path": "como-fazer/verificar-usuarios-log",
+      "file": "docs/como-fazer/verificar-usuarios-log.md",
+      "id": "verificar-usuarios-log",
+      "title": "Como verificar usuários logados",
+      "category": "Administração",
+      "status": "published",
+      "markdownVideos": [
+        "../assets/videos/guias/verificar-usuarios-log/verificar-usuarios-log.mp4"
+      ],
+      "legacyHtmlVideos": [],
+      "publishedV1": true,
+      "classification": "GUIA_VALIDO"
+    }
+  ],
+  "cards": [
+    {
+      "path": "como-fazer/verificar-usuarios-log",
+      "category": "Administração"
+    },
+    {
+      "path": "como-fazer/cadastrar-cliente",
+      "category": "Comercial"
+    },
+    {
+      "path": "como-fazer/alterar-ncm-material",
+      "category": "Estoque"
+    },
+    {
+      "path": "como-fazer/consultar-estoque",
+      "category": "Estoque"
+    },
+    {
+      "path": "como-fazer/ajustar-estoque",
+      "category": "Estoque"
+    },
+    {
+      "path": "como-fazer/empenhar-material",
+      "category": "Estoque"
+    },
+    {
+      "path": "como-fazer/registrar-entrada-material",
+      "category": "Estoque"
+    },
+    {
+      "path": "como-fazer/configurar-lote-padrao",
+      "category": "Estoque"
+    },
+    {
+      "path": "como-fazer/criar-romaneio",
+      "category": "Estoque"
+    },
+    {
+      "path": "como-fazer/consultar-nfe-rejeitada",
+      "category": "Faturamento"
+    },
+    {
+      "path": "como-fazer/usar-emissor",
+      "category": "Faturamento"
+    },
+    {
+      "path": "como-fazer/verificar-cbenef",
+      "category": "Faturamento"
+    },
+    {
+      "path": "como-fazer/verificar-regra-fiscal",
+      "category": "Faturamento"
+    },
+    {
+      "path": "como-fazer/exportar-editar-tabela",
+      "category": "Funcionalidades"
+    },
+    {
+      "path": "como-fazer/consultar-sped-fiscal",
+      "category": "Relatórios"
+    }
+  ],
+  "nav": [
+    {
+      "path": "como-fazer/verificar-usuarios-log",
+      "category": "Administração"
+    },
+    {
+      "path": "como-fazer/cadastrar-cliente",
+      "category": "Comercial"
+    },
+    {
+      "path": "como-fazer/alterar-ncm-material",
+      "category": "Estoque"
+    },
+    {
+      "path": "como-fazer/consultar-estoque",
+      "category": "Estoque"
+    },
+    {
+      "path": "como-fazer/ajustar-estoque",
+      "category": "Estoque"
+    },
+    {
+      "path": "como-fazer/empenhar-material",
+      "category": "Estoque"
+    },
+    {
+      "path": "como-fazer/registrar-entrada-material",
+      "category": "Estoque"
+    },
+    {
+      "path": "como-fazer/configurar-lote-padrao",
+      "category": "Estoque"
+    },
+    {
+      "path": "como-fazer/criar-romaneio",
+      "category": "Estoque"
+    },
+    {
+      "path": "como-fazer/consultar-nfe-rejeitada",
+      "category": "Faturamento"
+    },
+    {
+      "path": "como-fazer/usar-emissor",
+      "category": "Faturamento"
+    },
+    {
+      "path": "como-fazer/verificar-cbenef",
+      "category": "Faturamento"
+    },
+    {
+      "path": "como-fazer/verificar-regra-fiscal",
+      "category": "Faturamento"
+    },
+    {
+      "path": "como-fazer/exportar-editar-tabela",
+      "category": "Funcionalidades"
+    },
+    {
+      "path": "como-fazer/consultar-sped-fiscal",
+      "category": "Relatórios"
+    }
+  ],
+  "catalogGuides": [
+    {
+      "id": "ajustar-estoque",
+      "title": "Como ajustar inventário",
+      "type": "guia",
+      "category": "Estoque",
+      "description": "Aprenda como registrar ajustes de inventário no WCorp.",
+      "difficulty": "",
+      "status": "published",
+      "url": "como-fazer/ajustar-estoque/",
+      "screen_path": [],
+      "related_manual": [],
+      "related_guides": [],
+      "videos": [
+        "../assets/videos/guias/ajustar-estoque/ajuste-inventario.mp4"
+      ],
+      "tags": [
+        "estoque",
+        "inventario",
+        "ajuste",
+        "material"
+      ]
+    },
+    {
+      "id": "alterar-ncm-material",
+      "title": "Como alterar o NCM de um material",
+      "type": "guia",
+      "category": "Estoque",
+      "description": "Aprenda onde alterar o NCM no cadastro do material.",
+      "difficulty": "",
+      "status": "published",
+      "url": "como-fazer/alterar-ncm-material/",
+      "screen_path": [],
+      "related_manual": [],
+      "related_guides": [],
+      "videos": [
+        "../assets/videos/guias/alterar-ncm-material/alterar-ncm-material.mp4"
+      ],
+      "tags": [
+        "ncm",
+        "material",
+        "produto",
+        "fiscal"
+      ]
+    },
+    {
+      "id": "cadastrar-cliente",
+      "title": "Como cadastrar um cliente",
+      "type": "guia",
+      "category": "Comercial",
+      "description": "Aprenda como realizar o cadastro de um cliente no WCorp.",
+      "difficulty": "facil",
+      "status": "published",
+      "url": "como-fazer/cadastrar-cliente/",
+      "screen_path": [],
+      "related_manual": [
+        "comercial-clientes"
+      ],
+      "related_guides": [],
+      "videos": [
+        "../assets/videos/guias/cadastrar-cliente/comercial_clientes.mp4"
+      ],
+      "tags": [
+        "cliente",
+        "cadastro",
+        "pedido",
+        "faturamento"
+      ]
+    },
+    {
+      "id": "configurar-lote-padrao",
+      "title": "Como configurar lote padrão",
+      "type": "guia",
+      "category": "Estoque",
+      "description": "Aprenda como acompanhar a configuração de lote padrão no WCorp.",
+      "difficulty": "",
+      "status": "published",
+      "url": "como-fazer/configurar-lote-padrao/",
+      "screen_path": [],
+      "related_manual": [],
+      "related_guides": [],
+      "videos": [
+        "../assets/videos/guias/configurar-lote-padrao/lote-padrao.mp4"
+      ],
+      "tags": [
+        "lote",
+        "material",
+        "estoque"
+      ]
+    },
+    {
+      "id": "consultar-estoque",
+      "title": "Como consultar estoque",
+      "type": "guia",
+      "category": "Estoque",
+      "description": "Aprenda como consultar saldo, local e lote de materiais no WCorp.",
+      "difficulty": "",
+      "status": "published",
+      "url": "como-fazer/consultar-estoque/",
+      "screen_path": [],
+      "related_manual": [],
+      "related_guides": [],
+      "videos": [
+        "../assets/videos/guias/consultar-estoque/ver-estoque.mp4"
+      ],
+      "tags": [
+        "estoque",
+        "saldo",
+        "lote",
+        "material"
+      ]
+    },
+    {
+      "id": "consultar-nfe-rejeitada",
+      "title": "Como consultar notas fiscais rejeitadas",
+      "type": "guia",
+      "category": "Faturamento",
+      "description": "Aprenda como localizar notas fiscais rejeitadas para verificar o retorno da SEFAZ.",
+      "difficulty": "",
+      "status": "published",
+      "url": "como-fazer/consultar-nfe-rejeitada/",
+      "screen_path": [],
+      "related_manual": [],
+      "related_guides": [],
+      "videos": [
+        "../assets/videos/guias/consultar-nfe-rejeitada/consultar-nfe-rejeitada.mp4"
+      ],
+      "tags": [
+        "nfe",
+        "rejeicao",
+        "sefaz",
+        "nota fiscal"
+      ]
+    },
+    {
+      "id": "consultar-sped-fiscal",
+      "title": "Como consultar SPED Fiscal",
+      "type": "guia",
+      "category": "Relatórios",
+      "description": "Aprenda como acessar informações relacionadas ao SPED Fiscal no WCorp.",
+      "difficulty": "",
+      "status": "published",
+      "url": "como-fazer/consultar-sped-fiscal/",
+      "screen_path": [],
+      "related_manual": [],
+      "related_guides": [],
+      "videos": [
+        "../assets/videos/guias/consultar-sped-fiscal/sped-fiscal.mp4"
+      ],
+      "tags": [
+        "sped",
+        "fiscal",
+        "relatorio"
+      ]
+    },
+    {
+      "id": "criar-romaneio",
+      "title": "Como criar romaneio",
+      "type": "guia",
+      "category": "Estoque",
+      "description": "Aprenda como acessar e registrar romaneio no WCorp.",
+      "difficulty": "",
+      "status": "published",
+      "url": "como-fazer/criar-romaneio/",
+      "screen_path": [],
+      "related_manual": [],
+      "related_guides": [],
+      "videos": [
+        "../assets/videos/guias/criar-romaneio/romaneio.mp4"
+      ],
+      "tags": [
+        "romaneio",
+        "material",
+        "estoque"
+      ]
+    },
+    {
+      "id": "empenhar-material",
+      "title": "Como verificar o empenho de material",
+      "type": "guia",
+      "category": "Estoque",
+      "description": "Aprenda como acompanhar o processo de empenho de material no WCorp.",
+      "difficulty": "",
+      "status": "published",
+      "url": "como-fazer/empenhar-material/",
+      "screen_path": [],
+      "related_manual": [],
+      "related_guides": [],
+      "videos": [
+        "../assets/videos/guias/empenhar-material/empenho-material.mp4"
+      ],
+      "tags": [
+        "empenho",
+        "material",
+        "estoque"
+      ]
+    },
+    {
+      "id": "exportar-editar-tabela",
+      "title": "Como exportar e editar tabela",
+      "type": "guia",
+      "category": "Funcionalidades",
+      "description": "Aprenda como acompanhar a exportação e edição de tabela no WCorp.",
+      "difficulty": "",
+      "status": "published",
+      "url": "como-fazer/exportar-editar-tabela/",
+      "screen_path": [],
+      "related_manual": [],
+      "related_guides": [],
+      "videos": [
+        "../assets/videos/guias/exportar-editar-tabela/exportar-editar-tabela.mp4"
+      ],
+      "tags": [
+        "tabela",
+        "exportar",
+        "editar",
+        "ferramenta"
+      ]
+    },
+    {
+      "id": "registrar-entrada-material",
+      "title": "Como realizar entrada de material",
+      "type": "guia",
+      "category": "Estoque",
+      "description": "Aprenda como acessar e realizar uma entrada de material no WCorp.",
+      "difficulty": "",
+      "status": "published",
+      "url": "como-fazer/registrar-entrada-material/",
+      "screen_path": [],
+      "related_manual": [],
+      "related_guides": [],
+      "videos": [
+        "../assets/videos/guias/registrar-entrada-material/entrada-material.mp4"
+      ],
+      "tags": [
+        "entrada",
+        "material",
+        "estoque"
+      ]
+    },
+    {
+      "id": "usar-emissor",
+      "title": "Como utilizar emissor de NF-e",
+      "type": "guia",
+      "category": "Faturamento",
+      "description": "Aprenda como abrir o emissor de NF-e e verificar mensagens relacionadas ao envio de documentos fiscais.",
+      "difficulty": "",
+      "status": "published",
+      "url": "como-fazer/usar-emissor/",
+      "screen_path": [],
+      "related_manual": [],
+      "related_guides": [],
+      "videos": [
+        "../assets/videos/guias/usar-emissor/abrir-emissor.mp4",
+        "../assets/videos/guias/usar-emissor/verificar-erro-emissor.mp4"
+      ],
+      "tags": [
+        "emissor",
+        "nfe",
+        "erro",
+        "sefaz"
+      ]
+    },
+    {
+      "id": "verificar-cbenef",
+      "title": "Como verificar CBenef",
+      "type": "guia",
+      "category": "Faturamento",
+      "description": "Aprenda como verificar o código de benefício fiscal usado na emissão fiscal.",
+      "difficulty": "",
+      "status": "published",
+      "url": "como-fazer/verificar-cbenef/",
+      "screen_path": [],
+      "related_manual": [],
+      "related_guides": [],
+      "videos": [
+        "../assets/videos/guias/verificar-cbenef/verificar-cbenef.mp4"
+      ],
+      "tags": [
+        "cbenef",
+        "beneficio fiscal",
+        "nfe",
+        "regra fiscal"
+      ]
+    },
+    {
+      "id": "verificar-regra-fiscal",
+      "title": "Como verificar regra fiscal",
+      "type": "guia",
+      "category": "Faturamento",
+      "description": "Aprenda como verificar a regra fiscal utilizada no processo de faturamento.",
+      "difficulty": "",
+      "status": "published",
+      "url": "como-fazer/verificar-regra-fiscal/",
+      "screen_path": [],
+      "related_manual": [],
+      "related_guides": [],
+      "videos": [
+        "../assets/videos/guias/verificar-regra-fiscal/ver-regra-fiscal.mp4",
+        "../assets/videos/guias/verificar-regra-fiscal/ver-regra-fiscal-administracao.mp4"
+      ],
+      "tags": [
+        "regra fiscal",
+        "natureza de operacao",
+        "nfe",
+        "faturamento"
+      ]
+    },
+    {
+      "id": "verificar-usuarios-log",
+      "title": "Como verificar usuários logados",
+      "type": "guia",
+      "category": "Administração",
+      "description": "Aprenda como consultar usuários e informações de log no WCorp.",
+      "difficulty": "",
+      "status": "published",
+      "url": "como-fazer/verificar-usuarios-log/",
+      "screen_path": [],
+      "related_manual": [],
+      "related_guides": [],
+      "videos": [
+        "../assets/videos/guias/verificar-usuarios-log/verificar-usuarios-log.mp4"
+      ],
+      "tags": [
+        "usuario",
+        "log",
+        "administracao",
+        "acesso"
+      ]
+    }
+  ],
+  "popularGuideLinks": [
+    "como-fazer/cadastrar-cliente",
+    "como-fazer/ajustar-estoque",
+    "como-fazer/consultar-estoque",
+    "como-fazer/consultar-nfe-rejeitada",
+    "como-fazer/verificar-cbenef",
+    "como-fazer/usar-emissor",
+    "como-fazer/consultar-sped-fiscal"
+  ],
+  "indexedInvalidGuides": [],
+  "warnings": [],
+  "errors": []
+}

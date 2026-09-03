@@ -6,6 +6,8 @@ error_tags:
   - "estoque"
   - "almoxarifado"
   - "material"
+search:
+  exclude: true
 ---
 
 # Como transferir estoque

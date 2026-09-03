@@ -50,6 +50,11 @@
     document.querySelectorAll("video.wc-video").forEach(prepareSeekableVideo);
   }
 
+  window.WCorpVideo = {
+    prepareSeekableVideo,
+    prepareSeekableVideos
+  };
+
   document.addEventListener("DOMContentLoaded", prepareSeekableVideos);
 
   if (window.document$ && typeof window.document$.subscribe === "function") {

@@ -2,62 +2,80 @@
 
 ## Objetivo
 
-Emitir nota fiscal de saída no WCorp, de forma manual ou vinculada a pedidos.
+A tela **Nota Fiscal** é utilizada para emitir Notas Fiscais de saída no WCorp, de forma manual ou a partir de um **Pedido, Ordem de Serviço ou Pedido de Compra**.
 
 ## Caminho
 
-`Faturamento > Nota Fiscal`.
+`Faturamento > Nota Fiscal`
 
-## Print da tela
+Ao iniciar uma nova Nota Fiscal, o sistema permite escolher entre:
 
-<div class="wc-screen-block" markdown>
+- **Pedido / Ordem de Serviço / Pedido de Compra**
+- **Manualmente**
 
-![Tela principal de Nota Fiscal](../assets/faturamento-nf.png)
+## Formas de emissão
 
-</div>
+### Pedido / Ordem de Serviço / Pedido de Compra
 
-## Passo a passo
+Nesta opção, o WCorp utiliza os dados do documento de origem para montar a Nota Fiscal, trazendo as informações vinculadas ao pedido, ordem de serviço ou pedido de compra.
 
-1. Acesse a aba **Faturamento**.
-2. Clique em **Nota Fiscal**.
-3. No cadastro de nota fiscal de saída, escolha se a emissão será **manual** ou **por pedido**.
+### Manualmente
 
-![Opções de emissão](../assets/faturamento-nf-manual-pedidos.png)
+Na emissão manual, os dados da Nota Fiscal são informados diretamente no cadastro.
 
-4. Se a emissão for por pedido, clique em `Pedidos/OS/Pedidos de Compra da NFe`.
-5. Clique em **Adicionar Pedido**.
-6. Selecione o pedido referente à NFe.
-7. Salve a seleção.
+Para uma emissão manual básica, são obrigatórios:
 
-![Adicionar pedido](../assets/faturamento-nf-add-pedido.png)
+- **Natureza de Operação**
+- **Cliente**
+- **Material**
 
-8. Confira os campos de imposto no material e na aba de impostos.
-9. Caso falte algum campo obrigatório, o sistema informará ao tentar salvar.
-10. Clique em **Transmitir** para enviar a nota à SEFAZ.
+Quando necessário, também podem ser informadas parcelas e outras informações disponíveis na Nota Fiscal.
 
-![Transmitir nota](../assets/faturamento-nf-transmitir.png)
+## Campos e áreas principais
 
-!!! info "Dica"
-    Quando a nota é gerada por pedido, o sistema já busca os impostos automaticamente com base na regra fiscal configurada.
+A tela apresenta informações como:
 
-## Campos principais
+- Status
+- Natureza de Operação
+- Tipo de Operação Presencial
+- Meio de Pagamento
+- Operação Destinatário
+- Número
+- Série
+- Data/Hora de Emissão
+- Data/Hora de Saída
+- Dados do Destinatário
+- Endereço do Destinatário
 
-| Campo | Descrição | Observações |
-| --- | --- | --- |
-| Pedido | Documento de origem usado para gerar a nota | Usado quando a emissão é por pedido |
-| Cliente | Destinatário da nota | Deve estar com cadastro completo |
-| Materiais | Itens vinculados à nota | Conferir quantidade, valor e impostos |
-| Impostos | Aba com os dados fiscais da emissão | Revisar antes de transmitir |
-| Transmitir | Envia a nota para autorização | Usar após conferir os dados obrigatórios |
+O cadastro também possui as abas:
 
-## Dúvidas frequentes
+- **Materiais**
+- **Endereço de Envio**
+- **Transportador**
+- **Impostos**
+- **Parcelas**
+- **NFe Referenciada**
 
-| Dúvida | Orientação |
-| --- | --- |
-| Posso emitir nota manualmente? | Sim. A tela permite emissão manual ou por pedido. |
-| Quando devo usar emissão por pedido? | Use quando a nota deve ser gerada a partir de um pedido já cadastrado. |
-| O sistema informa se faltar algum campo? | Sim. Ao salvar ou transmitir, o Sistema indica campos obrigatórios pendentes. |
-| Preciso conferir impostos se vier do pedido? | Sim. Mesmo com cálculo automático, confira material e aba de impostos antes de transmitir. |
+## Cálculo automático da Nota Fiscal
+
+A opção **Ativar Cálculo da Nota Fiscal Automaticamente** controla o cálculo automático da Nota Fiscal.
+
+Quando a opção está marcada, o cálculo de impostos é realizado automaticamente pelo sistema tanto nas Notas Fiscais criadas manualmente quanto nas geradas a partir de Pedido, Ordem de Serviço ou Pedido de Compra.
+
+Quando a opção está desmarcada, o cálculo automático não é realizado.
+
+## Ações da Nota Fiscal
+
+Conforme a situação da Nota Fiscal, a tela disponibiliza ações como:
+
+- **Transmitir para o Sefaz**
+- **Cancelar NFe**
+- **Pedidos / OS / Pedidos de Compra da NFe**
+- **Criar DANFE da NFe**
+- **Salvar XML da NFe**
+- **Pré-Visualizar DANFE**
+
+Na parte superior da tela também é possível consultar as Notas Fiscais cadastradas e acompanhar informações como número, data de emissão, destinatário, CNPJ, total e status.
 
 ## Veja também
 

@@ -43,7 +43,12 @@
   let searchMetaPromise = null;
   let searchStateReady = false;
   let publishedManualPaths = null;
+  let publishedGuidePaths = null;
+  let publishedGuidePathsPromise = null;
   let blockedSearchClickReady = false;
+  let lastSearchAnalyticsSignature = "";
+  let searchAnalyticsTimer = 0;
+  const searchAnalyticsDebounceMs = 850;
 
   function rootUrl() {
     const logo = document.querySelector(".md-header__button.md-logo[href]");
@@ -111,6 +116,50 @@
     return publishedPaths.size > 0 && !publishedPaths.has(path);
   }
 
+  function normalizeCatalogPortalPath(value) {
+    return cleanPathname(`/${String(value || "")
+      .replace(/^\/+/, "")
+      .replace(/\/index\.html$/, "")
+      .replace(/\/+$/, "")}`);
+  }
+
+  function loadPublishedGuidePaths() {
+    if (publishedGuidePaths) return Promise.resolve(publishedGuidePaths);
+    if (publishedGuidePathsPromise) return publishedGuidePathsPromise;
+
+    publishedGuidePathsPromise = fetch(new URL("assets/data/content-catalog.json", rootUrl()))
+      .then((response) => response.ok ? response.json() : null)
+      .then((catalog) => {
+        const paths = new Set();
+
+        (catalog?.items || []).forEach((item) => {
+          if (
+            item.type === "guia" &&
+            item.status === "published" &&
+            Array.isArray(item.videos) &&
+            item.videos.length &&
+            item.url
+          ) {
+            paths.add(normalizeCatalogPortalPath(item.url));
+          }
+        });
+
+        publishedGuidePaths = paths;
+        return publishedGuidePaths;
+      })
+      .catch(() => {
+        publishedGuidePaths = new Set();
+        return publishedGuidePaths;
+      });
+
+    return publishedGuidePathsPromise;
+  }
+
+  function isBlockedGuidePath(path) {
+    if (!path.startsWith("/como-fazer/") || path === "/como-fazer") return false;
+    return publishedGuidePaths?.size > 0 && !publishedGuidePaths.has(path);
+  }
+
   function preventBlockedManualResultClick() {
     if (blockedSearchClickReady) return;
     blockedSearchClickReady = true;
@@ -137,6 +186,19 @@
   function stripSearchNoise(value) {
     return String(value || "")
       .replace(/Ausente:\s*[\wÀ-ÿ-]+/gi, "")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function normalizeSearchText(value) {
+    if (window.WCorpSearchUtils?.normalizeText) {
+      return window.WCorpSearchUtils.normalizeText(value);
+    }
+
+    return String(value || "")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
       .replace(/\s+/g, " ")
       .trim();
   }
@@ -171,6 +233,7 @@
 
   function buildSearchMeta(index) {
     const titles = new Map();
+    const docs = new Map();
     const pageLevel = new Set();
 
     (index.docs || []).forEach((doc) => {
@@ -180,15 +243,23 @@
       const title = stripSearchNoise(doc.title);
       if (!title) return;
 
+      const current = docs.get(path) || { title: "", text: "", location: path };
+      current.text = `${current.text} ${doc.text || ""} ${doc.title || ""}`.trim();
+      current.location = doc.location || path;
+
       if (isPageLevelLocation(doc.location)) {
         titles.set(path, title);
         pageLevel.add(path);
+        current.title = title;
       } else if (!pageLevel.has(path) && !titles.has(path)) {
         titles.set(path, title);
+        current.title = title;
       }
+
+      docs.set(path, current);
     });
 
-    return { titles };
+    return { titles, docs };
   }
 
   function loadSearchMeta() {
@@ -202,7 +273,7 @@
         return searchMeta;
       })
       .catch(() => {
-        searchMeta = { titles: new Map() };
+        searchMeta = { titles: new Map(), docs: new Map() };
         return searchMeta;
       });
 
@@ -273,6 +344,43 @@
     return heading;
   }
 
+  function queryIntent(query) {
+    const normalized = normalizeSearchText(query);
+    const codes = window.WCorpSearchUtils?.extractCodes?.(query) || normalized.match(/\b\d{3,4}\b/g) || [];
+
+    if (codes.length || /\b(rejeicao|erro|schema|sefaz|xml)\b/.test(normalized)) {
+      return "error";
+    }
+
+    if (/\b(onde fica|qual campo|quais campos|para que serve|tela de|manual)\b/.test(normalized)) {
+      return "manual";
+    }
+
+    if (/\b(como|guia|cadastrar|cadastro|cancelar|configurar|emitir|faturar|gerar|importar|lancar)\b/.test(normalized)) {
+      return "guide";
+    }
+
+    return "general";
+  }
+
+  function searchScore(path, query) {
+    if (!query) return 0;
+
+    const doc = searchMeta?.docs?.get(path) || {};
+    const title = displayTitle(path);
+
+    if (window.WCorpSearchUtils?.scoreDocument) {
+      return window.WCorpSearchUtils.scoreDocument({
+        title,
+        location: doc.location || path,
+        text: doc.text || ""
+      }, query, { intent: queryIntent(query) });
+    }
+
+    const normalizedQuery = normalizeSearchText(query);
+    return normalizeSearchText(`${title} ${path} ${doc.text || ""}`).includes(normalizedQuery) ? 1 : 0;
+  }
+
   function organizeResults(list) {
     if (list.dataset.wcSearchOrganizing === "true") return;
 
@@ -283,11 +391,30 @@
     );
     const query = (input?.value || "").trim();
 
+    const trackSearchAnalytics = (resultCount) => {
+      window.clearTimeout(searchAnalyticsTimer);
+
+      if (!query || !window.WCorpAnalytics?.trackSearch) return;
+
+      const signature = `${normalizeSearchText(query)}|${resultCount}`;
+
+      searchAnalyticsTimer = window.setTimeout(() => {
+        if (signature === lastSearchAnalyticsSignature) return;
+
+        lastSearchAnalyticsSignature = signature;
+        window.WCorpAnalytics.trackSearch({
+          result_count: resultCount,
+          has_results: resultCount > 0
+        });
+      }, searchAnalyticsDebounceMs);
+    };
+
     document.body.classList.toggle("wc-search-open", Boolean(query) || isSearchOpen());
 
     if (!items.length) {
       result?.classList.remove("wc-search-has-results");
       list.dataset.wcSearchSignature = "";
+      trackSearchAnalytics(0);
 
       const meta = result?.querySelector(".md-search-result__meta");
       if (meta && !query) meta.textContent = "Digite para iniciar a busca.";
@@ -302,24 +429,27 @@
       const group = groupForPath(path);
       if (!group || seenPaths.has(path)) return;
       if (isBlockedManualPath(path)) return;
+      if (isBlockedGuidePath(path)) return;
 
       seenPaths.add(path);
-      allowedItems.push({ item, path, group });
+      allowedItems.push({ item, path, group, score: searchScore(path, query) });
     });
 
     if (!allowedItems.length) {
       result?.classList.remove("wc-search-has-results");
       list.dataset.wcSearchSignature = "";
       list.replaceChildren();
+      trackSearchAnalytics(0);
       return;
     }
 
     const signature = allowedItems
-      .map(({ path, group }) => `${group.label}:${displayTitle(path)}:${path}`)
+      .map(({ path, group, score }) => `${group.label}:${displayTitle(path)}:${path}:${score}`)
       .join("|");
+    const fullSignature = `${normalizeSearchText(query)}|${signature}`;
 
     if (
-      list.dataset.wcSearchSignature === signature &&
+      list.dataset.wcSearchSignature === fullSignature &&
       list.querySelector(".wc-search-group") &&
       allowedItems.every(({ item }) => isDecorated(item))
     ) {
@@ -330,10 +460,30 @@
     result?.classList.add("wc-search-has-results");
 
     const fragment = document.createDocumentFragment();
-    groups.forEach((group) => {
+    const orderedGroups = [...groups].sort((first, second) => {
+      if (!query) return groups.indexOf(first) - groups.indexOf(second);
+
+      const firstBest = Math.max(...allowedItems
+        .filter((entry) => entry.group.label === first.label)
+        .map((entry) => entry.score), -Infinity);
+      const secondBest = Math.max(...allowedItems
+        .filter((entry) => entry.group.label === second.label)
+        .map((entry) => entry.score), -Infinity);
+
+      if (!Number.isFinite(firstBest) && !Number.isFinite(secondBest)) {
+        return groups.indexOf(first) - groups.indexOf(second);
+      }
+
+      return secondBest - firstBest || groups.indexOf(first) - groups.indexOf(second);
+    });
+
+    orderedGroups.forEach((group) => {
       const groupItems = allowedItems
         .filter((entry) => entry.group.label === group.label)
-        .sort((first, second) => displayTitle(first.path).localeCompare(displayTitle(second.path), "pt-BR"));
+        .sort((first, second) => {
+          if (query && second.score !== first.score) return second.score - first.score;
+          return displayTitle(first.path).localeCompare(displayTitle(second.path), "pt-BR");
+        });
 
       if (!groupItems.length) return;
 
@@ -345,8 +495,9 @@
     });
 
     list.replaceChildren(fragment);
-    list.dataset.wcSearchSignature = signature;
+    list.dataset.wcSearchSignature = fullSignature;
     list.dataset.wcSearchOrganizing = "false";
+    trackSearchAnalytics(allowedItems.length);
   }
 
   function isSearchOpen() {
@@ -400,11 +551,13 @@
       pending = true;
       window.requestAnimationFrame(() => {
         pending = false;
-        loadSearchMeta().then(() => organizeResults(resultList));
+        Promise.all([loadSearchMeta(), loadPublishedGuidePaths()])
+          .then(() => organizeResults(resultList));
       });
     });
     observer.observe(resultList, { childList: true, subtree: true, characterData: true });
-    loadSearchMeta().then(() => organizeResults(resultList));
+    Promise.all([loadSearchMeta(), loadPublishedGuidePaths()])
+      .then(() => organizeResults(resultList));
   }
 
   document.addEventListener("DOMContentLoaded", initializeSearchGroups);

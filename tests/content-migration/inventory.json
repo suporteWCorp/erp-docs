@@ -1,0 +1,4133 @@
+{
+  "generated_at": "2026-08-28T19:36:37.455Z",
+  "scope": "Inventário diagnóstico dos conteúdos de Guia e Manual publicados no mkdocs.yml. Não migra conteúdo.",
+  "counting_rule": "Totais principais excluem páginas Visão geral/index. Elas aparecem em items com included_in_totals=false.",
+  "counts": {
+    "total_guides": 25,
+    "total_manuals": 31,
+    "by_class": {
+      "A": 2,
+      "B": 32,
+      "C": 1,
+      "D": 21
+    },
+    "overview_pages": 15
+  },
+  "items": [
+    {
+      "path": "docs/como-fazer/index.md",
+      "title": "Guia",
+      "nav_title": "Visão geral",
+      "type": "Guia",
+      "category": "Visão geral",
+      "included_in_totals": false,
+      "class": "C",
+      "migration_difficulty": "alta",
+      "reasons": [
+        "página de índice/visão geral com layout especial",
+        "sem front matter V1 completo",
+        "tipo editorial precisa revisão pela definição Guia/Manual"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [
+        "div"
+      ],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": false,
+        "markdown_links": []
+      },
+      "structure_special": [
+        "página de índice/visão geral com layout especial",
+        "tipo editorial precisa revisão pela definição Guia/Manual"
+      ]
+    },
+    {
+      "path": "docs/como-fazer/cadastrar-natureza-operacao.md",
+      "title": "Como cadastrar uma Natureza de Operação",
+      "nav_title": "Como cadastrar uma Natureza de Operação",
+      "type": "Guia",
+      "category": "Administração",
+      "included_in_totals": true,
+      "class": "B",
+      "migration_difficulty": "média",
+      "reasons": [
+        "sem front matter V1 completo",
+        "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+        "vídeo em HTML deve virar link Markdown .wc-video-link",
+        "Veja também manual deve virar IDs no front matter"
+      ],
+      "front_matter": {
+        "present": true,
+        "keys": [
+          "error_area",
+          "error_category",
+          "error_tags"
+        ],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [
+          {
+            "href": "../../assets/videos/adm_natureza_operacao.mp4",
+            "local_asset": "docs/assets/videos/adm_natureza_operacao.mp4"
+          }
+        ],
+        "youtube": []
+      },
+      "html_manual": [
+        "div",
+        "source",
+        "video"
+      ],
+      "has_manual_prerequisites_html": true,
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- Operação que será realizada definida",
+        "- Critérios fiscais da operação validados com o responsável fiscal da empresa",
+        "- Categorias de material, NCMs, materiais e demais cadastros de critério disponíveis no sistema",
+        "</div>"
+      ],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": true,
+        "markdown_links": [
+          "faturar-nota.md",
+          "lancar-nota-entrada.md",
+          "../administracao/natureza-op.md"
+        ]
+      },
+      "structure_special": [
+        "vídeo em HTML deve virar link Markdown .wc-video-link"
+      ]
+    },
+    {
+      "path": "docs/como-fazer/cadastrar-condicao-pagamento.md",
+      "title": "Como cadastrar uma Condição de Pagamento",
+      "nav_title": "Como cadastrar uma Condição de Pagamento",
+      "type": "Guia",
+      "category": "Administração",
+      "included_in_totals": true,
+      "class": "B",
+      "migration_difficulty": "média",
+      "reasons": [
+        "sem front matter V1 completo",
+        "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+        "vídeo em HTML deve virar link Markdown .wc-video-link",
+        "Veja também manual deve virar IDs no front matter"
+      ],
+      "front_matter": {
+        "present": true,
+        "keys": [
+          "error_area",
+          "error_category",
+          "error_tags"
+        ],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [
+          {
+            "href": "../../assets/videos/adm_condicao_pagamento.mp4",
+            "local_asset": "docs/assets/videos/adm_condicao_pagamento.mp4"
+          }
+        ],
+        "youtube": []
+      },
+      "html_manual": [
+        "div",
+        "source",
+        "video"
+      ],
+      "has_manual_prerequisites_html": true,
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- Forma e prazo de pagamento definidos",
+        "</div>"
+      ],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": true,
+        "markdown_links": [
+          "../administracao/condicoes-pagamento.md"
+        ]
+      },
+      "structure_special": [
+        "vídeo em HTML deve virar link Markdown .wc-video-link"
+      ]
+    },
+    {
+      "path": "docs/como-fazer/cadastrar-centro-custo.md",
+      "title": "Como cadastrar um Centro de Custo",
+      "nav_title": "Como cadastrar um Centro de Custo",
+      "type": "Guia",
+      "category": "Administração",
+      "included_in_totals": true,
+      "class": "B",
+      "migration_difficulty": "média",
+      "reasons": [
+        "sem front matter V1 completo",
+        "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+        "vídeo em HTML deve virar link Markdown .wc-video-link",
+        "Veja também manual deve virar IDs no front matter"
+      ],
+      "front_matter": {
+        "present": true,
+        "keys": [
+          "error_area",
+          "error_category",
+          "error_tags"
+        ],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [
+          {
+            "href": "../../assets/videos/adm_centro_custo.mp4",
+            "local_asset": "docs/assets/videos/adm_centro_custo.mp4"
+          }
+        ],
+        "youtube": []
+      },
+      "html_manual": [
+        "div",
+        "source",
+        "video"
+      ],
+      "has_manual_prerequisites_html": true,
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- Nome e finalidade do centro de custo definidos",
+        "</div>"
+      ],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": true,
+        "markdown_links": [
+          "../administracao/centro-custo.md"
+        ]
+      },
+      "structure_special": [
+        "vídeo em HTML deve virar link Markdown .wc-video-link"
+      ]
+    },
+    {
+      "path": "docs/como-fazer/cadastrar-usuario.md",
+      "title": "Como cadastrar um usuário",
+      "nav_title": "Como cadastrar um usuário",
+      "type": "Guia",
+      "category": "Administração",
+      "included_in_totals": true,
+      "class": "B",
+      "migration_difficulty": "média",
+      "reasons": [
+        "sem front matter V1 completo",
+        "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+        "vídeo em HTML deve virar link Markdown .wc-video-link",
+        "Veja também manual deve virar IDs no front matter"
+      ],
+      "front_matter": {
+        "present": true,
+        "keys": [
+          "error_area",
+          "error_category",
+          "error_tags"
+        ],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [
+          {
+            "href": "../../assets/videos/adm_cadastro_usuario.mp4",
+            "local_asset": "docs/assets/videos/adm_cadastro_usuario.mp4"
+          }
+        ],
+        "youtube": []
+      },
+      "html_manual": [
+        "div",
+        "source",
+        "video"
+      ],
+      "has_manual_prerequisites_html": true,
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- Usuário administrador ou autorização do responsável da empresa",
+        "</div>"
+      ],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": true,
+        "markdown_links": [
+          "configurar-grupo-usuario.md",
+          "../administracao/usuarios.md"
+        ]
+      },
+      "structure_special": [
+        "vídeo em HTML deve virar link Markdown .wc-video-link"
+      ]
+    },
+    {
+      "path": "docs/como-fazer/configurar-grupo-usuario.md",
+      "title": "Como configurar um Grupo de Usuário",
+      "nav_title": "Como configurar um Grupo de Usuário",
+      "type": "Guia",
+      "category": "Administração",
+      "included_in_totals": true,
+      "class": "B",
+      "migration_difficulty": "média",
+      "reasons": [
+        "sem front matter V1 completo",
+        "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+        "vídeo em HTML deve virar link Markdown .wc-video-link",
+        "Veja também manual deve virar IDs no front matter"
+      ],
+      "front_matter": {
+        "present": true,
+        "keys": [
+          "error_area",
+          "error_category",
+          "error_tags"
+        ],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [
+          {
+            "href": "../../assets/videos/adm__grupo_usuario.mp4",
+            "local_asset": "docs/assets/videos/adm__grupo_usuario.mp4"
+          }
+        ],
+        "youtube": []
+      },
+      "html_manual": [
+        "div",
+        "source",
+        "video"
+      ],
+      "has_manual_prerequisites_html": true,
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- Usuário autorizado a administrar acessos",
+        "</div>"
+      ],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": true,
+        "markdown_links": [
+          "cadastrar-usuario.md",
+          "../administracao/grupo-usuarios.md"
+        ]
+      },
+      "structure_special": [
+        "vídeo em HTML deve virar link Markdown .wc-video-link"
+      ]
+    },
+    {
+      "path": "docs/como-fazer/cadastrar-cliente.md",
+      "title": "Como cadastrar um cliente",
+      "nav_title": "Como cadastrar um cliente",
+      "type": "Guia",
+      "category": "Comercial",
+      "included_in_totals": true,
+      "class": "A",
+      "migration_difficulty": "já compatível",
+      "reasons": [
+        "front matter V1 completo e migração trivial"
+      ],
+      "front_matter": {
+        "present": true,
+        "keys": [
+          "id",
+          "title",
+          "type",
+          "category",
+          "description",
+          "difficulty",
+          "status",
+          "related_manual",
+          "tags",
+          "error_area",
+          "error_category",
+          "error_tags"
+        ],
+        "id": "cadastrar-cliente",
+        "type": "guia",
+        "category": "Comercial"
+      },
+      "images": [
+        {
+          "alt": "Onde encontrar",
+          "href": "../assets/images/guias/cadastrar-cliente/comercial_clientes.png",
+          "local_asset": "docs/assets/images/guias/cadastrar-cliente/comercial_clientes.png"
+        }
+      ],
+      "videos": {
+        "markdown": [
+          {
+            "text": "Demonstração do cadastro de cliente",
+            "href": "../assets/videos/guias/cadastrar-cliente/comercial_clientes.mp4",
+            "local_asset": "docs/assets/videos/guias/cadastrar-cliente/comercial_clientes.mp4"
+          }
+        ],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [
+        "- CNPJ, CPF ou dados cadastrais do cliente em mãos"
+      ],
+      "related": {
+        "front_matter_manual": [
+          "comercial-clientes"
+        ],
+        "front_matter_guides": [],
+        "markdown_section_present": false,
+        "markdown_links": []
+      },
+      "structure_special": []
+    },
+    {
+      "path": "docs/como-fazer/cadastrar-fornecedor.md",
+      "title": "Como cadastrar um fornecedor",
+      "nav_title": "Como cadastrar um fornecedor",
+      "type": "Guia",
+      "category": "Comercial",
+      "included_in_totals": true,
+      "class": "B",
+      "migration_difficulty": "média",
+      "reasons": [
+        "sem front matter V1 completo",
+        "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+        "Veja também manual deve virar IDs no front matter"
+      ],
+      "front_matter": {
+        "present": true,
+        "keys": [
+          "error_area",
+          "error_category",
+          "error_tags"
+        ],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [
+        "div"
+      ],
+      "has_manual_prerequisites_html": true,
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- CNPJ, CPF ou dados cadastrais do fornecedor em mãos",
+        "- Confirmação de que o fornecedor ainda não está cadastrado",
+        "</div>"
+      ],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": true,
+        "markdown_links": [
+          "../referencia/links-uteis.md",
+          "criar-pedido-compra.md",
+          "lancar-nota-entrada.md",
+          "lancar-contas-a-pagar.md",
+          "../fornecedores/fornecedores.md"
+        ]
+      },
+      "structure_special": []
+    },
+    {
+      "path": "docs/como-fazer/criar-orcamento.md",
+      "title": "Como criar um orçamento",
+      "nav_title": "Como criar um orçamento",
+      "type": "Guia",
+      "category": "Comercial",
+      "included_in_totals": true,
+      "class": "B",
+      "migration_difficulty": "média",
+      "reasons": [
+        "sem front matter V1 completo",
+        "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+        "vídeo em HTML deve virar link Markdown .wc-video-link",
+        "Veja também manual deve virar IDs no front matter"
+      ],
+      "front_matter": {
+        "present": true,
+        "keys": [
+          "error_area",
+          "error_category",
+          "error_tags"
+        ],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [
+          {
+            "href": "../../assets/videos/comercial_orcamento.mp4",
+            "local_asset": "docs/assets/videos/comercial_orcamento.mp4"
+          }
+        ],
+        "youtube": []
+      },
+      "html_manual": [
+        "br",
+        "div",
+        "source",
+        "video"
+      ],
+      "has_manual_prerequisites_html": true,
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- Cliente cadastrado<br>",
+        "[Como cadastrar um cliente.](cadastrar-cliente.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Material cadastrado<br>",
+        "[Como cadastrar um material.](cadastrar-material.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Condição comercial definida",
+        "</div>"
+      ],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": true,
+        "markdown_links": [
+          "fazer-pedido-venda.md",
+          "cancelar-pedido.md",
+          "../comercial/comercial-orcamento.md"
+        ]
+      },
+      "structure_special": [
+        "vídeo em HTML deve virar link Markdown .wc-video-link"
+      ]
+    },
+    {
+      "path": "docs/como-fazer/fazer-pedido-venda.md",
+      "title": "Como gerar um pedido",
+      "nav_title": "Como gerar um pedido",
+      "type": "Guia",
+      "category": "Comercial",
+      "included_in_totals": true,
+      "class": "C",
+      "migration_difficulty": "alta",
+      "reasons": [
+        "sem front matter V1 completo",
+        "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+        "vídeo em HTML deve virar link Markdown .wc-video-link",
+        "Veja também manual deve virar IDs no front matter",
+        "múltiplos vídeos exigem conferência de ordem/contexto"
+      ],
+      "front_matter": {
+        "present": true,
+        "keys": [
+          "error_area",
+          "error_category",
+          "error_tags"
+        ],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [
+        {
+          "alt": "Onde encontrar",
+          "href": "../assets/images/guias/comercial_pedido.png",
+          "local_asset": "docs/assets/images/guias/comercial_pedido.png"
+        }
+      ],
+      "videos": {
+        "markdown": [],
+        "html_sources": [
+          {
+            "href": "../../assets/videos/comercial_pedido.mp4",
+            "local_asset": "docs/assets/videos/comercial_pedido.mp4"
+          },
+          {
+            "href": "../../assets/videos/comercial_pedido_orcamento.mp4",
+            "local_asset": "docs/assets/videos/comercial_pedido_orcamento.mp4"
+          }
+        ],
+        "youtube": []
+      },
+      "html_manual": [
+        "br",
+        "div",
+        "source",
+        "video"
+      ],
+      "has_manual_prerequisites_html": true,
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- Cliente cadastrado<br>",
+        "[Como cadastrar um cliente.](cadastrar-cliente.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Material cadastrado<br>",
+        "[Como cadastrar um material.](cadastrar-material.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Condição de pagamento cadastrada no WCorp<br>",
+        "[Como cadastrar uma condição de pagamento.](cadastrar-condicao-pagamento.md){: target=\"_blank\" rel=\"noopener\" }",
+        "</div>"
+      ],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": true,
+        "markdown_links": [
+          "criar-orcamento.md",
+          "cancelar-pedido.md",
+          "faturar-nota.md"
+        ]
+      },
+      "structure_special": [
+        "vídeo em HTML deve virar link Markdown .wc-video-link",
+        "múltiplos vídeos exigem conferência de ordem/contexto"
+      ]
+    },
+    {
+      "path": "docs/como-fazer/cadastrar-material.md",
+      "title": "Como cadastrar um material",
+      "nav_title": "Cadastro de Material",
+      "type": "Guia",
+      "category": "Estoque",
+      "included_in_totals": true,
+      "class": "B",
+      "migration_difficulty": "média",
+      "reasons": [
+        "sem front matter V1 completo",
+        "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+        "vídeo em HTML deve virar link Markdown .wc-video-link",
+        "Veja também manual deve virar IDs no front matter"
+      ],
+      "front_matter": {
+        "present": true,
+        "keys": [
+          "error_area",
+          "error_category",
+          "error_tags"
+        ],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [
+        {
+          "alt": "Onde encontrar",
+          "href": "../assets/images/guias/materiais_materiais.png",
+          "local_asset": "docs/assets/images/guias/materiais_materiais.png"
+        }
+      ],
+      "videos": {
+        "markdown": [],
+        "html_sources": [
+          {
+            "href": "../../assets/videos/materiais_materiais.mp4",
+            "local_asset": "docs/assets/videos/materiais_materiais.mp4"
+          }
+        ],
+        "youtube": []
+      },
+      "html_manual": [
+        "div",
+        "source",
+        "video"
+      ],
+      "has_manual_prerequisites_html": true,
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- Descrição, unidade, categoria e dados fiscais ou comerciais do material definidos",
+        "</div>"
+      ],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": true,
+        "markdown_links": [
+          "ajustar-estoque.md",
+          "faturar-nota.md",
+          "../materiais/materiais.md"
+        ]
+      },
+      "structure_special": [
+        "vídeo em HTML deve virar link Markdown .wc-video-link"
+      ]
+    },
+    {
+      "path": "docs/como-fazer/consultar-estoque.md",
+      "title": "Como consultar estoque",
+      "nav_title": "Como consultar estoque",
+      "type": "Guia",
+      "category": "Estoque",
+      "included_in_totals": true,
+      "class": "B",
+      "migration_difficulty": "média",
+      "reasons": [
+        "sem front matter V1 completo",
+        "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+        "Veja também manual deve virar IDs no front matter"
+      ],
+      "front_matter": {
+        "present": true,
+        "keys": [
+          "error_area",
+          "error_category",
+          "error_tags"
+        ],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [
+        "br",
+        "div"
+      ],
+      "has_manual_prerequisites_html": true,
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- Material cadastrado<br>",
+        "[Como cadastrar um material.](cadastrar-material.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Critério de busca definido",
+        "</div>"
+      ],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": true,
+        "markdown_links": [
+          "ajustar-estoque.md",
+          "transferir-estoque.md",
+          "../materiais/lote-estoque.md"
+        ]
+      },
+      "structure_special": []
+    },
+    {
+      "path": "docs/como-fazer/ajustar-estoque.md",
+      "title": "Como ajustar estoque",
+      "nav_title": "Como ajustar estoque",
+      "type": "Guia",
+      "category": "Estoque",
+      "included_in_totals": true,
+      "class": "B",
+      "migration_difficulty": "média",
+      "reasons": [
+        "sem front matter V1 completo",
+        "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+        "Veja também manual deve virar IDs no front matter"
+      ],
+      "front_matter": {
+        "present": true,
+        "keys": [
+          "error_area",
+          "error_category",
+          "error_tags"
+        ],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [
+        "br",
+        "div"
+      ],
+      "has_manual_prerequisites_html": true,
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- Estoque consultado<br>",
+        "[Como consultar estoque](consultar-estoque.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Material cadastrado<br>",
+        "[Como cadastrar um material.](cadastrar-material.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Motivo do ajuste definido",
+        "</div>"
+      ],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": true,
+        "markdown_links": [
+          "consultar-estoque.md",
+          "fazer-inventario.md",
+          "../materiais/ajustar-inventario.md"
+        ]
+      },
+      "structure_special": []
+    },
+    {
+      "path": "docs/como-fazer/fazer-inventario.md",
+      "title": "Como fazer inventário",
+      "nav_title": "Como fazer inventário",
+      "type": "Guia",
+      "category": "Estoque",
+      "included_in_totals": true,
+      "class": "B",
+      "migration_difficulty": "média",
+      "reasons": [
+        "sem front matter V1 completo",
+        "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+        "Veja também manual deve virar IDs no front matter"
+      ],
+      "front_matter": {
+        "present": true,
+        "keys": [
+          "error_area",
+          "error_category",
+          "error_tags"
+        ],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [
+        "br",
+        "div"
+      ],
+      "has_manual_prerequisites_html": true,
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- Estoque consultado<br>",
+        "[Como consultar estoque](consultar-estoque.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Lista de materiais, locais ou lotes que serão contados definida",
+        "- Equipe orientada sobre o critério de contagem",
+        "</div>"
+      ],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": true,
+        "markdown_links": [
+          "consultar-estoque.md",
+          "ajustar-estoque.md",
+          "../materiais/ajustar-inventario.md"
+        ]
+      },
+      "structure_special": []
+    },
+    {
+      "path": "docs/como-fazer/transferir-estoque.md",
+      "title": "Como transferir estoque",
+      "nav_title": "Como transferir estoque",
+      "type": "Guia",
+      "category": "Estoque",
+      "included_in_totals": true,
+      "class": "B",
+      "migration_difficulty": "média",
+      "reasons": [
+        "sem front matter V1 completo",
+        "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+        "Veja também manual deve virar IDs no front matter"
+      ],
+      "front_matter": {
+        "present": true,
+        "keys": [
+          "error_area",
+          "error_category",
+          "error_tags"
+        ],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [
+        "br",
+        "div"
+      ],
+      "has_manual_prerequisites_html": true,
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- Estoque consultado<br>",
+        "[Como consultar estoque](consultar-estoque.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Material com saldo disponível",
+        "- Local de origem e destino definidos",
+        "</div>"
+      ],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": true,
+        "markdown_links": [
+          "consultar-estoque.md",
+          "ajustar-estoque.md",
+          "../materiais/lote-estoque.md"
+        ]
+      },
+      "structure_special": []
+    },
+    {
+      "path": "docs/como-fazer/faturar-nota.md",
+      "title": "Como emitir uma NF-e",
+      "nav_title": "Como emitir uma NF-e",
+      "type": "Guia",
+      "category": "Faturamento",
+      "included_in_totals": true,
+      "class": "B",
+      "migration_difficulty": "média",
+      "reasons": [
+        "sem front matter V1 completo",
+        "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+        "vídeo em HTML deve virar link Markdown .wc-video-link",
+        "Veja também manual deve virar IDs no front matter"
+      ],
+      "front_matter": {
+        "present": true,
+        "keys": [
+          "error_area",
+          "error_category",
+          "error_tags"
+        ],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [
+        {
+          "alt": "Onde encontrar",
+          "href": "../assets/images/guias/faturamento_emitir_nfe.png",
+          "local_asset": "docs/assets/images/guias/faturamento_emitir_nfe.png"
+        }
+      ],
+      "videos": {
+        "markdown": [],
+        "html_sources": [
+          {
+            "href": "../../assets/videos/faturamento_nfe.mp4",
+            "local_asset": "docs/assets/videos/faturamento_nfe.mp4"
+          }
+        ],
+        "youtube": []
+      },
+      "html_manual": [
+        "br",
+        "div",
+        "source",
+        "video"
+      ],
+      "has_manual_prerequisites_html": true,
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- Cliente cadastrado<br>",
+        "[Como cadastrar um cliente.](cadastrar-cliente.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Material cadastrado<br>",
+        "[Como cadastrar um material.](cadastrar-material.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Natureza de operação cadastrada<br>",
+        "[Como cadastrar uma natureza de operação.](cadastrar-natureza-operacao.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Pedido criado, quando a emissão for por pedido<br>",
+        "[Como gerar um pedido](fazer-pedido-venda.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Certificado e parâmetros fiscais configurados",
+        "</div>"
+      ],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": true,
+        "markdown_links": [
+          "cancelar-nfe.md",
+          "emitir-devolucao.md",
+          "emitir-carta-correcao.md",
+          "../faturamento/faturamento-nf.md"
+        ]
+      },
+      "structure_special": [
+        "vídeo em HTML deve virar link Markdown .wc-video-link"
+      ]
+    },
+    {
+      "path": "docs/como-fazer/cancelar-nfe.md",
+      "title": "Como cancelar uma NF-e",
+      "nav_title": "Como cancelar uma NF-e",
+      "type": "Guia",
+      "category": "Faturamento",
+      "included_in_totals": true,
+      "class": "B",
+      "migration_difficulty": "média",
+      "reasons": [
+        "sem front matter V1 completo",
+        "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+        "vídeo em HTML deve virar link Markdown .wc-video-link",
+        "Veja também manual deve virar IDs no front matter"
+      ],
+      "front_matter": {
+        "present": true,
+        "keys": [
+          "error_area",
+          "error_category",
+          "error_tags"
+        ],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [
+          {
+            "href": "../../assets/videos/faturamento_cancelar_nfe.mp4",
+            "local_asset": "docs/assets/videos/faturamento_cancelar_nfe.mp4"
+          }
+        ],
+        "youtube": []
+      },
+      "html_manual": [
+        "div",
+        "source",
+        "video"
+      ],
+      "has_manual_prerequisites_html": true,
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- NF-e autorizada e localizada",
+        "- Prazo e regra fiscal de cancelamento confirmados",
+        "- Motivo do cancelamento definido",
+        "</div>"
+      ],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": true,
+        "markdown_links": [
+          "faturar-nota.md",
+          "emitir-devolucao.md",
+          "../faturamento/faturamento-nf.md"
+        ]
+      },
+      "structure_special": [
+        "vídeo em HTML deve virar link Markdown .wc-video-link"
+      ]
+    },
+    {
+      "path": "docs/como-fazer/emitir-devolucao.md",
+      "title": "Como emitir uma devolução",
+      "nav_title": "Como emitir uma devolução",
+      "type": "Guia",
+      "category": "Faturamento",
+      "included_in_totals": true,
+      "class": "B",
+      "migration_difficulty": "média",
+      "reasons": [
+        "sem front matter V1 completo",
+        "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+        "Veja também manual deve virar IDs no front matter"
+      ],
+      "front_matter": {
+        "present": true,
+        "keys": [
+          "error_area",
+          "error_category",
+          "error_tags"
+        ],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [
+        "br",
+        "div"
+      ],
+      "has_manual_prerequisites_html": true,
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- Documento fiscal original localizado",
+        "- Cliente ou fornecedor cadastrado<br>",
+        "[Como cadastrar um cliente.](cadastrar-cliente.md){: target=\"_blank\" rel=\"noopener\" } ou [Como cadastrar um fornecedor.](cadastrar-fornecedor.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Material cadastrado<br>",
+        "[Como cadastrar um material.](cadastrar-material.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Natureza de operação para devolução cadastrada<br>",
+        "[Como cadastrar uma natureza de operação.](cadastrar-natureza-operacao.md){: target=\"_blank\" rel=\"noopener\" }",
+        "</div>"
+      ],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": true,
+        "markdown_links": [
+          "faturar-nota.md",
+          "cancelar-nfe.md",
+          "../comercial/devolucao.md"
+        ]
+      },
+      "structure_special": []
+    },
+    {
+      "path": "docs/como-fazer/emitir-carta-correcao.md",
+      "title": "Como emitir uma carta de correção",
+      "nav_title": "Como emitir uma carta de correção",
+      "type": "Guia",
+      "category": "Faturamento",
+      "included_in_totals": true,
+      "class": "B",
+      "migration_difficulty": "média",
+      "reasons": [
+        "sem front matter V1 completo",
+        "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+        "vídeo em HTML deve virar link Markdown .wc-video-link",
+        "Veja também manual deve virar IDs no front matter"
+      ],
+      "front_matter": {
+        "present": true,
+        "keys": [
+          "error_area",
+          "error_category",
+          "error_tags"
+        ],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [
+          {
+            "href": "../../assets/videos/faturamento_carta_correcao.mp4",
+            "local_asset": "docs/assets/videos/faturamento_carta_correcao.mp4"
+          }
+        ],
+        "youtube": []
+      },
+      "html_manual": [
+        "div",
+        "source",
+        "video"
+      ],
+      "has_manual_prerequisites_html": true,
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- NF-e autorizada e localizada",
+        "- Texto de correção validado",
+        "</div>"
+      ],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": true,
+        "markdown_links": [
+          "faturar-nota.md",
+          "cancelar-nfe.md",
+          "../faturamento/carta-correcao.md"
+        ]
+      },
+      "structure_special": [
+        "vídeo em HTML deve virar link Markdown .wc-video-link"
+      ]
+    },
+    {
+      "path": "docs/como-fazer/emitir-nota-complementar.md",
+      "title": "Como emitir uma nota complementar",
+      "nav_title": "Como emitir uma nota complementar",
+      "type": "Guia",
+      "category": "Faturamento",
+      "included_in_totals": true,
+      "class": "B",
+      "migration_difficulty": "média",
+      "reasons": [
+        "sem front matter V1 completo",
+        "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+        "Veja também manual deve virar IDs no front matter"
+      ],
+      "front_matter": {
+        "present": true,
+        "keys": [
+          "error_area",
+          "error_category",
+          "error_tags"
+        ],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [
+        "br",
+        "div"
+      ],
+      "has_manual_prerequisites_html": true,
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- NF-e original localizada",
+        "- Dados do complemento definidos",
+        "- Natureza de operação adequada para complemento cadastrada<br>",
+        "[Como cadastrar uma natureza de operação.](cadastrar-natureza-operacao.md){: target=\"_blank\" rel=\"noopener\" }",
+        "</div>"
+      ],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": true,
+        "markdown_links": [
+          "faturar-nota.md",
+          "emitir-carta-correcao.md",
+          "../faturamento/faturamento-nf.md"
+        ]
+      },
+      "structure_special": []
+    },
+    {
+      "path": "docs/como-fazer/importar-xml.md",
+      "title": "Como importar XML",
+      "nav_title": "Como importar XML",
+      "type": "Guia",
+      "category": "Compras",
+      "included_in_totals": true,
+      "class": "B",
+      "migration_difficulty": "média",
+      "reasons": [
+        "sem front matter V1 completo",
+        "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+        "Veja também manual deve virar IDs no front matter"
+      ],
+      "front_matter": {
+        "present": true,
+        "keys": [
+          "error_area",
+          "error_category",
+          "error_tags"
+        ],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [
+        "br",
+        "div"
+      ],
+      "has_manual_prerequisites_html": true,
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- Arquivo XML válido ou documento disponível para consulta",
+        "- Fornecedor cadastrado, quando ainda não existir<br>",
+        "[Como cadastrar um fornecedor.](cadastrar-fornecedor.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Material cadastrado, quando algum item ainda não existir<br>",
+        "[Como cadastrar um material.](cadastrar-material.md){: target=\"_blank\" rel=\"noopener\" }",
+        "</div>"
+      ],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": true,
+        "markdown_links": [
+          "lancar-nota-entrada.md",
+          "criar-pedido-compra.md",
+          "../faturamento/entrada-nota-fiscal.md"
+        ]
+      },
+      "structure_special": []
+    },
+    {
+      "path": "docs/como-fazer/lancar-nota-entrada.md",
+      "title": "Como lançar uma nota de entrada",
+      "nav_title": "Como lançar uma nota de entrada",
+      "type": "Guia",
+      "category": "Compras",
+      "included_in_totals": true,
+      "class": "B",
+      "migration_difficulty": "média",
+      "reasons": [
+        "sem front matter V1 completo",
+        "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+        "Veja também manual deve virar IDs no front matter"
+      ],
+      "front_matter": {
+        "present": true,
+        "keys": [
+          "error_area",
+          "error_category",
+          "error_tags"
+        ],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [
+        "br",
+        "div"
+      ],
+      "has_manual_prerequisites_html": true,
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- XML importado, quando houver arquivo disponível<br>",
+        "[Como importar XML](importar-xml.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Fornecedor cadastrado<br>",
+        "[Como cadastrar um fornecedor.](cadastrar-fornecedor.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Material cadastrado<br>",
+        "[Como cadastrar um material.](cadastrar-material.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Natureza de operação cadastrada<br>",
+        "[Como cadastrar uma natureza de operação.](cadastrar-natureza-operacao.md){: target=\"_blank\" rel=\"noopener\" }",
+        "</div>"
+      ],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": true,
+        "markdown_links": [
+          "importar-xml.md",
+          "criar-pedido-compra.md",
+          "../faturamento/entrada-nota-fiscal.md"
+        ]
+      },
+      "structure_special": []
+    },
+    {
+      "path": "docs/como-fazer/criar-pedido-compra.md",
+      "title": "Como criar um pedido de compra",
+      "nav_title": "Como criar um pedido de compra",
+      "type": "Guia",
+      "category": "Compras",
+      "included_in_totals": true,
+      "class": "B",
+      "migration_difficulty": "média",
+      "reasons": [
+        "sem front matter V1 completo",
+        "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+        "Veja também manual deve virar IDs no front matter"
+      ],
+      "front_matter": {
+        "present": true,
+        "keys": [
+          "error_area",
+          "error_category",
+          "error_tags"
+        ],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [
+        "br",
+        "div"
+      ],
+      "has_manual_prerequisites_html": true,
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- Fornecedor cadastrado<br>",
+        "[Como cadastrar um fornecedor.](cadastrar-fornecedor.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Material cadastrado<br>",
+        "[Como cadastrar um material.](cadastrar-material.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Condição comercial negociada",
+        "</div>"
+      ],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": true,
+        "markdown_links": [
+          "lancar-nota-entrada.md",
+          "importar-xml.md",
+          "../compras/pedido-compra.md"
+        ]
+      },
+      "structure_special": []
+    },
+    {
+      "path": "docs/como-fazer/gerar-boleto.md",
+      "title": "Como gerar boleto",
+      "nav_title": "Como gerar boleto",
+      "type": "Guia",
+      "category": "Financeiro",
+      "included_in_totals": true,
+      "class": "B",
+      "migration_difficulty": "média",
+      "reasons": [
+        "sem front matter V1 completo",
+        "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+        "Veja também manual deve virar IDs no front matter"
+      ],
+      "front_matter": {
+        "present": true,
+        "keys": [
+          "error_area",
+          "error_category",
+          "error_tags"
+        ],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [
+        "br",
+        "div"
+      ],
+      "has_manual_prerequisites_html": true,
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- Cliente cadastrado<br>",
+        "[Como cadastrar um cliente.](cadastrar-cliente.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Título a receber cadastrado",
+        "- Conta bancária e carteira configuradas",
+        "</div>"
+      ],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": true,
+        "markdown_links": [
+          "baixar-titulo.md",
+          "faturar-nota.md",
+          "../financeiro/boleto.md"
+        ]
+      },
+      "structure_special": []
+    },
+    {
+      "path": "docs/como-fazer/baixar-titulo.md",
+      "title": "Como baixar um título",
+      "nav_title": "Como baixar um título",
+      "type": "Guia",
+      "category": "Financeiro",
+      "included_in_totals": true,
+      "class": "B",
+      "migration_difficulty": "média",
+      "reasons": [
+        "sem front matter V1 completo",
+        "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+        "Veja também manual deve virar IDs no front matter"
+      ],
+      "front_matter": {
+        "present": true,
+        "keys": [
+          "error_area",
+          "error_category",
+          "error_tags"
+        ],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [
+        "div"
+      ],
+      "has_manual_prerequisites_html": true,
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- Título financeiro localizado",
+        "- Conta, forma de pagamento e data de baixa definidos",
+        "- Valor pago ou recebido conferido",
+        "</div>"
+      ],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": true,
+        "markdown_links": [
+          "gerar-boleto.md",
+          "lancar-contas-a-pagar.md",
+          "../financeiro/contas-a-receber.md"
+        ]
+      },
+      "structure_special": []
+    },
+    {
+      "path": "docs/como-fazer/lancar-contas-a-pagar.md",
+      "title": "Como lançar contas a pagar",
+      "nav_title": "Como lançar contas a pagar",
+      "type": "Guia",
+      "category": "Financeiro",
+      "included_in_totals": true,
+      "class": "B",
+      "migration_difficulty": "média",
+      "reasons": [
+        "sem front matter V1 completo",
+        "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+        "Veja também manual deve virar IDs no front matter"
+      ],
+      "front_matter": {
+        "present": true,
+        "keys": [
+          "error_area",
+          "error_category",
+          "error_tags"
+        ],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [
+        "br",
+        "div"
+      ],
+      "has_manual_prerequisites_html": true,
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- Fornecedor cadastrado, quando ainda não existir<br>",
+        "[Como cadastrar um fornecedor.](cadastrar-fornecedor.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Documento de origem ou dados da despesa definidos",
+        "- Centro de custo definido, quando aplicável<br>",
+        "[Como cadastrar um Centro de Custo.](cadastrar-centro-custo.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Conta e vencimento definidos, quando aplicável",
+        "</div>"
+      ],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": true,
+        "markdown_links": [
+          "baixar-titulo.md",
+          "lancar-nota-entrada.md",
+          "../financeiro/contas-a-pagar.md"
+        ]
+      },
+      "structure_special": []
+    },
+    {
+      "path": "docs/manual/index.md",
+      "title": "Manuais do WCorp",
+      "nav_title": "Visão geral",
+      "type": "Manual",
+      "category": "Visão geral",
+      "included_in_totals": false,
+      "class": "C",
+      "migration_difficulty": "alta",
+      "reasons": [
+        "página de índice/visão geral com layout especial",
+        "sem front matter V1 completo"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [
+        "div"
+      ],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": false,
+        "markdown_links": []
+      },
+      "structure_special": [
+        "página de índice/visão geral com layout especial"
+      ]
+    },
+    {
+      "path": "docs/comercial/comercial-geral.md",
+      "title": "Comercial",
+      "nav_title": "Visão geral",
+      "type": "Manual",
+      "category": "Visão geral",
+      "included_in_totals": false,
+      "class": "C",
+      "migration_difficulty": "alta",
+      "reasons": [
+        "página de índice/visão geral com layout especial",
+        "sem front matter V1 completo"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": false,
+        "markdown_links": []
+      },
+      "structure_special": [
+        "página de índice/visão geral com layout especial"
+      ]
+    },
+    {
+      "path": "docs/comercial/comercial-clientes.md",
+      "title": "Clientes",
+      "nav_title": "Clientes",
+      "type": "Manual",
+      "category": "Comercial",
+      "included_in_totals": true,
+      "class": "A",
+      "migration_difficulty": "já compatível",
+      "reasons": [
+        "front matter V1 completo e migração trivial",
+        "imagem em wc-screen-block, avaliar se mantém ou simplifica Markdown",
+        "assets fora da pasta previsível por conteúdo",
+        "link de YouTube exige decisão de padrão para vídeo externo",
+        "manual com tabelas extensas, migração precisa preservar estrutura"
+      ],
+      "front_matter": {
+        "present": true,
+        "keys": [
+          "id",
+          "title",
+          "type",
+          "category",
+          "description",
+          "screen_path",
+          "status",
+          "related_guides",
+          "tags"
+        ],
+        "id": "comercial-clientes",
+        "type": "manual",
+        "category": "Comercial"
+      },
+      "images": [
+        {
+          "alt": "Tela de clientes",
+          "href": "../assets/comercial-clientes.png",
+          "local_asset": "docs/assets/comercial-clientes.png"
+        }
+      ],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": [
+          "https://www.youtube.com/watch?v=osiFPSfEOrc&list=PLouJpYsMKL1fizkcacjs-UdhTCnxnrMOO&t=80s"
+        ]
+      },
+      "html_manual": [
+        "div"
+      ],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [
+          "cadastrar-cliente"
+        ],
+        "markdown_section_present": false,
+        "markdown_links": []
+      },
+      "structure_special": [
+        "imagem em wc-screen-block, avaliar se mantém ou simplifica Markdown",
+        "link de YouTube exige decisão de padrão para vídeo externo",
+        "manual com tabelas extensas, migração precisa preservar estrutura"
+      ]
+    },
+    {
+      "path": "docs/comercial/comercial-grupo-clientes.md",
+      "title": "Grupo de Clientes",
+      "nav_title": "Grupo de clientes",
+      "type": "Manual",
+      "category": "Comercial",
+      "included_in_totals": true,
+      "class": "B",
+      "migration_difficulty": "média",
+      "reasons": [
+        "sem front matter V1 completo",
+        "imagem em wc-screen-block, avaliar se mantém ou simplifica Markdown",
+        "assets fora da pasta previsível por conteúdo"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [
+        {
+          "alt": "Menu Principal do Comercial",
+          "href": "../assets/comercial-grupo-clientes.png",
+          "local_asset": "docs/assets/comercial-grupo-clientes.png"
+        }
+      ],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [
+        "div"
+      ],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": false,
+        "markdown_links": []
+      },
+      "structure_special": [
+        "imagem em wc-screen-block, avaliar se mantém ou simplifica Markdown"
+      ]
+    },
+    {
+      "path": "docs/comercial/comercial-orcamento.md",
+      "title": "Módulo Comercial - Orçamentos",
+      "nav_title": "Orçamento",
+      "type": "Manual",
+      "category": "Comercial",
+      "included_in_totals": true,
+      "class": "D",
+      "migration_difficulty": "revisão humana",
+      "reasons": [
+        "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+        "sem front matter V1 completo"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": false,
+        "markdown_links": []
+      },
+      "structure_special": [
+        "conteúdo em breve/em preparação, possível obsoleto ou incompleto"
+      ]
+    },
+    {
+      "path": "docs/comercial/pedidos.md",
+      "title": "Módulo Comercial - Pedido de Venda",
+      "nav_title": "Pedido",
+      "type": "Manual",
+      "category": "Comercial",
+      "included_in_totals": true,
+      "class": "D",
+      "migration_difficulty": "média",
+      "reasons": [
+        "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+        "sem front matter V1 completo",
+        "assets fora da pasta previsível por conteúdo"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [
+        {
+          "alt": "Menu Principal do Comercial",
+          "href": "../assets/comercial-pedidos.png",
+          "local_asset": "docs/assets/comercial-pedidos.png"
+        }
+      ],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": false,
+        "markdown_links": []
+      },
+      "structure_special": [
+        "conteúdo em breve/em preparação, possível obsoleto ou incompleto"
+      ]
+    },
+    {
+      "path": "docs/comercial/devolucao.md",
+      "title": "Devolução",
+      "nav_title": "Devolução",
+      "type": "Manual",
+      "category": "Comercial",
+      "included_in_totals": true,
+      "class": "D",
+      "migration_difficulty": "revisão humana",
+      "reasons": [
+        "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+        "sem front matter V1 completo",
+        "manual com tabelas extensas, migração precisa preservar estrutura"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": false,
+        "markdown_links": []
+      },
+      "structure_special": [
+        "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+        "manual com tabelas extensas, migração precisa preservar estrutura"
+      ]
+    },
+    {
+      "path": "docs/faturamento/faturamento-geral.md",
+      "title": "Faturamento",
+      "nav_title": "Visão geral",
+      "type": "Manual",
+      "category": "Visão geral",
+      "included_in_totals": false,
+      "class": "C",
+      "migration_difficulty": "alta",
+      "reasons": [
+        "página de índice/visão geral com layout especial",
+        "sem front matter V1 completo"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": false,
+        "markdown_links": []
+      },
+      "structure_special": [
+        "página de índice/visão geral com layout especial"
+      ]
+    },
+    {
+      "path": "docs/faturamento/faturamento-nf.md",
+      "title": "Nota Fiscal",
+      "nav_title": "Nota Fiscal",
+      "type": "Manual",
+      "category": "Faturamento",
+      "included_in_totals": true,
+      "class": "B",
+      "migration_difficulty": "média",
+      "reasons": [
+        "sem front matter V1 completo",
+        "imagem em wc-screen-block, avaliar se mantém ou simplifica Markdown",
+        "assets fora da pasta previsível por conteúdo",
+        "Veja também manual deve virar IDs no front matter",
+        "manual com tabelas extensas, migração precisa preservar estrutura"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [
+        {
+          "alt": "Tela principal de Nota Fiscal",
+          "href": "../assets/faturamento-nf.png",
+          "local_asset": "docs/assets/faturamento-nf.png"
+        },
+        {
+          "alt": "Opções de emissão",
+          "href": "../assets/faturamento-nf-manual-pedidos.png",
+          "local_asset": "docs/assets/faturamento-nf-manual-pedidos.png"
+        },
+        {
+          "alt": "Adicionar pedido",
+          "href": "../assets/faturamento-nf-add-pedido.png",
+          "local_asset": "docs/assets/faturamento-nf-add-pedido.png"
+        },
+        {
+          "alt": "Transmitir nota",
+          "href": "../assets/faturamento-nf-transmitir.png",
+          "local_asset": "docs/assets/faturamento-nf-transmitir.png"
+        }
+      ],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [
+        "div"
+      ],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": true,
+        "markdown_links": [
+          "../como-fazer/faturar-nota.md",
+          "../como-fazer/cancelar-nfe.md",
+          "../como-fazer/emitir-carta-correcao.md"
+        ]
+      },
+      "structure_special": [
+        "imagem em wc-screen-block, avaliar se mantém ou simplifica Markdown",
+        "manual com tabelas extensas, migração precisa preservar estrutura"
+      ]
+    },
+    {
+      "path": "docs/faturamento/faturamento-nfce.md",
+      "title": "Cupom Fiscal",
+      "nav_title": "Cupom Fiscal",
+      "type": "Manual",
+      "category": "Faturamento",
+      "included_in_totals": true,
+      "class": "B",
+      "migration_difficulty": "baixa",
+      "reasons": [
+        "sem front matter V1 completo",
+        "manual com tabelas extensas, migração precisa preservar estrutura"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": false,
+        "markdown_links": []
+      },
+      "structure_special": [
+        "manual com tabelas extensas, migração precisa preservar estrutura"
+      ]
+    },
+    {
+      "path": "docs/faturamento/entrada-nota-fiscal.md",
+      "title": "Entrada de Nota Fiscal",
+      "nav_title": "Entrada de Nota Fiscal",
+      "type": "Manual",
+      "category": "Faturamento",
+      "included_in_totals": true,
+      "class": "D",
+      "migration_difficulty": "revisão humana",
+      "reasons": [
+        "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+        "sem front matter V1 completo",
+        "manual com tabelas extensas, migração precisa preservar estrutura"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": false,
+        "markdown_links": []
+      },
+      "structure_special": [
+        "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+        "manual com tabelas extensas, migração precisa preservar estrutura"
+      ]
+    },
+    {
+      "path": "docs/faturamento/carta-correcao.md",
+      "title": "Carta de Correção",
+      "nav_title": "Carta de Correção",
+      "type": "Manual",
+      "category": "Faturamento",
+      "included_in_totals": true,
+      "class": "D",
+      "migration_difficulty": "revisão humana",
+      "reasons": [
+        "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+        "sem front matter V1 completo",
+        "manual com tabelas extensas, migração precisa preservar estrutura"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": false,
+        "markdown_links": []
+      },
+      "structure_special": [
+        "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+        "manual com tabelas extensas, migração precisa preservar estrutura"
+      ]
+    },
+    {
+      "path": "docs/faturamento/inutilizacao-nota-fiscal.md",
+      "title": "Inutilização Nota Fiscal",
+      "nav_title": "Inutilização Nota Fiscal",
+      "type": "Manual",
+      "category": "Faturamento",
+      "included_in_totals": true,
+      "class": "B",
+      "migration_difficulty": "média",
+      "reasons": [
+        "sem front matter V1 completo",
+        "vídeo em HTML deve virar link Markdown .wc-video-link",
+        "manual com tabelas extensas, migração precisa preservar estrutura"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [
+          {
+            "href": "../assets/videos/faturamento_inutilizacao_nota_fiscal.mp4",
+            "local_asset": "docs/assets/videos/faturamento_inutilizacao_nota_fiscal.mp4"
+          }
+        ],
+        "youtube": []
+      },
+      "html_manual": [
+        "source",
+        "video"
+      ],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": false,
+        "markdown_links": []
+      },
+      "structure_special": [
+        "vídeo em HTML deve virar link Markdown .wc-video-link",
+        "manual com tabelas extensas, migração precisa preservar estrutura"
+      ]
+    },
+    {
+      "path": "docs/faturamento/cfop-entrada.md",
+      "title": "CFOP Entrada",
+      "nav_title": "CFOP Entrada",
+      "type": "Manual",
+      "category": "Faturamento",
+      "included_in_totals": true,
+      "class": "D",
+      "migration_difficulty": "revisão humana",
+      "reasons": [
+        "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+        "sem front matter V1 completo",
+        "manual com tabelas extensas, migração precisa preservar estrutura"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": false,
+        "markdown_links": []
+      },
+      "structure_special": [
+        "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+        "manual com tabelas extensas, migração precisa preservar estrutura"
+      ]
+    },
+    {
+      "path": "docs/financeiro/financeiro-geral.md",
+      "title": "Financeiro",
+      "nav_title": "Visão geral",
+      "type": "Manual",
+      "category": "Visão geral",
+      "included_in_totals": false,
+      "class": "C",
+      "migration_difficulty": "alta",
+      "reasons": [
+        "página de índice/visão geral com layout especial",
+        "sem front matter V1 completo"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": false,
+        "markdown_links": []
+      },
+      "structure_special": [
+        "página de índice/visão geral com layout especial"
+      ]
+    },
+    {
+      "path": "docs/financeiro/contas-a-pagar.md",
+      "title": "Contas a Pagar",
+      "nav_title": "Contas a Pagar",
+      "type": "Manual",
+      "category": "Financeiro",
+      "included_in_totals": true,
+      "class": "D",
+      "migration_difficulty": "revisão humana",
+      "reasons": [
+        "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+        "sem front matter V1 completo",
+        "manual com tabelas extensas, migração precisa preservar estrutura"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": false,
+        "markdown_links": []
+      },
+      "structure_special": [
+        "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+        "manual com tabelas extensas, migração precisa preservar estrutura"
+      ]
+    },
+    {
+      "path": "docs/financeiro/contas-a-receber.md",
+      "title": "Contas a Receber",
+      "nav_title": "Contas a Receber",
+      "type": "Manual",
+      "category": "Financeiro",
+      "included_in_totals": true,
+      "class": "D",
+      "migration_difficulty": "revisão humana",
+      "reasons": [
+        "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+        "sem front matter V1 completo",
+        "manual com tabelas extensas, migração precisa preservar estrutura"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": false,
+        "markdown_links": []
+      },
+      "structure_special": [
+        "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+        "manual com tabelas extensas, migração precisa preservar estrutura"
+      ]
+    },
+    {
+      "path": "docs/financeiro/boleto.md",
+      "title": "Boleto",
+      "nav_title": "Boleto",
+      "type": "Manual",
+      "category": "Financeiro",
+      "included_in_totals": true,
+      "class": "D",
+      "migration_difficulty": "revisão humana",
+      "reasons": [
+        "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+        "sem front matter V1 completo",
+        "manual com tabelas extensas, migração precisa preservar estrutura"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": false,
+        "markdown_links": []
+      },
+      "structure_special": [
+        "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+        "manual com tabelas extensas, migração precisa preservar estrutura"
+      ]
+    },
+    {
+      "path": "docs/financeiro/contas.md",
+      "title": "Contas",
+      "nav_title": "Contas",
+      "type": "Manual",
+      "category": "Financeiro",
+      "included_in_totals": true,
+      "class": "D",
+      "migration_difficulty": "revisão humana",
+      "reasons": [
+        "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+        "sem front matter V1 completo",
+        "manual com tabelas extensas, migração precisa preservar estrutura"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": false,
+        "markdown_links": []
+      },
+      "structure_special": [
+        "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+        "manual com tabelas extensas, migração precisa preservar estrutura"
+      ]
+    },
+    {
+      "path": "docs/colaboradores/colaboradores-geral.md",
+      "title": "Colaboradores",
+      "nav_title": "Visão geral",
+      "type": "Manual",
+      "category": "Visão geral",
+      "included_in_totals": false,
+      "class": "C",
+      "migration_difficulty": "alta",
+      "reasons": [
+        "página de índice/visão geral com layout especial",
+        "sem front matter V1 completo"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": false,
+        "markdown_links": []
+      },
+      "structure_special": [
+        "página de índice/visão geral com layout especial"
+      ]
+    },
+    {
+      "path": "docs/fornecedores/fornecedores-geral.md",
+      "title": "Fornecedores",
+      "nav_title": "Visão geral",
+      "type": "Manual",
+      "category": "Visão geral",
+      "included_in_totals": false,
+      "class": "C",
+      "migration_difficulty": "alta",
+      "reasons": [
+        "página de índice/visão geral com layout especial",
+        "sem front matter V1 completo"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": false,
+        "markdown_links": []
+      },
+      "structure_special": [
+        "página de índice/visão geral com layout especial"
+      ]
+    },
+    {
+      "path": "docs/fornecedores/fornecedores.md",
+      "title": "Fornecedores",
+      "nav_title": "Fornecedores",
+      "type": "Manual",
+      "category": "Fornecedores",
+      "included_in_totals": true,
+      "class": "D",
+      "migration_difficulty": "revisão humana",
+      "reasons": [
+        "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+        "sem front matter V1 completo",
+        "manual com tabelas extensas, migração precisa preservar estrutura"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": false,
+        "markdown_links": []
+      },
+      "structure_special": [
+        "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+        "manual com tabelas extensas, migração precisa preservar estrutura"
+      ]
+    },
+    {
+      "path": "docs/materiais/materiais-geral.md",
+      "title": "Materiais",
+      "nav_title": "Visão geral",
+      "type": "Manual",
+      "category": "Visão geral",
+      "included_in_totals": false,
+      "class": "C",
+      "migration_difficulty": "alta",
+      "reasons": [
+        "página de índice/visão geral com layout especial",
+        "sem front matter V1 completo"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": false,
+        "markdown_links": []
+      },
+      "structure_special": [
+        "página de índice/visão geral com layout especial"
+      ]
+    },
+    {
+      "path": "docs/materiais/materiais.md",
+      "title": "Cadastro de Materiais",
+      "nav_title": "Materiais",
+      "type": "Manual",
+      "category": "Materiais",
+      "included_in_totals": true,
+      "class": "B",
+      "migration_difficulty": "média",
+      "reasons": [
+        "sem front matter V1 completo",
+        "imagem em wc-screen-block, avaliar se mantém ou simplifica Markdown",
+        "assets fora da pasta previsível por conteúdo"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [
+        {
+          "alt": "Tela Principal do cadastro de materiais",
+          "href": "../assets/materiais-materiais.png",
+          "local_asset": "docs/assets/materiais-materiais.png"
+        }
+      ],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [
+        "div"
+      ],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": false,
+        "markdown_links": []
+      },
+      "structure_special": [
+        "imagem em wc-screen-block, avaliar se mantém ou simplifica Markdown"
+      ]
+    },
+    {
+      "path": "docs/materiais/categoria-materiais.md",
+      "title": "Categoria de Materiais",
+      "nav_title": "Categoria de Materiais",
+      "type": "Manual",
+      "category": "Materiais",
+      "included_in_totals": true,
+      "class": "D",
+      "migration_difficulty": "revisão humana",
+      "reasons": [
+        "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+        "sem front matter V1 completo",
+        "manual com tabelas extensas, migração precisa preservar estrutura"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": false,
+        "markdown_links": []
+      },
+      "structure_special": [
+        "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+        "manual com tabelas extensas, migração precisa preservar estrutura"
+      ]
+    },
+    {
+      "path": "docs/materiais/locais-armazenagem.md",
+      "title": "Locais de Armazenagem",
+      "nav_title": "Locais de Armazenagem",
+      "type": "Manual",
+      "category": "Materiais",
+      "included_in_totals": true,
+      "class": "D",
+      "migration_difficulty": "revisão humana",
+      "reasons": [
+        "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+        "sem front matter V1 completo",
+        "manual com tabelas extensas, migração precisa preservar estrutura"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": false,
+        "markdown_links": []
+      },
+      "structure_special": [
+        "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+        "manual com tabelas extensas, migração precisa preservar estrutura"
+      ]
+    },
+    {
+      "path": "docs/materiais/ajustar-inventario.md",
+      "title": "Ajustar Inventário",
+      "nav_title": "Ajustar Inventário",
+      "type": "Manual",
+      "category": "Materiais",
+      "included_in_totals": true,
+      "class": "D",
+      "migration_difficulty": "revisão humana",
+      "reasons": [
+        "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+        "sem front matter V1 completo",
+        "manual com tabelas extensas, migração precisa preservar estrutura"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": false,
+        "markdown_links": []
+      },
+      "structure_special": [
+        "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+        "manual com tabelas extensas, migração precisa preservar estrutura"
+      ]
+    },
+    {
+      "path": "docs/materiais/lote-estoque.md",
+      "title": "Lote/Estoque",
+      "nav_title": "Lote/Estoque",
+      "type": "Manual",
+      "category": "Materiais",
+      "included_in_totals": true,
+      "class": "B",
+      "migration_difficulty": "média",
+      "reasons": [
+        "sem front matter V1 completo",
+        "imagem em wc-screen-block, avaliar se mantém ou simplifica Markdown",
+        "assets fora da pasta previsível por conteúdo"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [
+        {
+          "alt": "Tela Principal do cadastro de materiais",
+          "href": "../assets/materiais-lote-estoque.png",
+          "local_asset": "docs/assets/materiais-lote-estoque.png"
+        }
+      ],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [
+        "div"
+      ],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": false,
+        "markdown_links": []
+      },
+      "structure_special": [
+        "imagem em wc-screen-block, avaliar se mantém ou simplifica Markdown"
+      ]
+    },
+    {
+      "path": "docs/servicos/servicos-geral.md",
+      "title": "Serviços",
+      "nav_title": "Visão geral",
+      "type": "Manual",
+      "category": "Visão geral",
+      "included_in_totals": false,
+      "class": "C",
+      "migration_difficulty": "alta",
+      "reasons": [
+        "página de índice/visão geral com layout especial",
+        "sem front matter V1 completo"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": false,
+        "markdown_links": []
+      },
+      "structure_special": [
+        "página de índice/visão geral com layout especial"
+      ]
+    },
+    {
+      "path": "docs/contratos/contratos-geral.md",
+      "title": "Contratos",
+      "nav_title": "Visão geral",
+      "type": "Manual",
+      "category": "Visão geral",
+      "included_in_totals": false,
+      "class": "C",
+      "migration_difficulty": "alta",
+      "reasons": [
+        "página de índice/visão geral com layout especial",
+        "sem front matter V1 completo"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": false,
+        "markdown_links": []
+      },
+      "structure_special": [
+        "página de índice/visão geral com layout especial"
+      ]
+    },
+    {
+      "path": "docs/compras/compras-geral.md",
+      "title": "Compras",
+      "nav_title": "Visão geral",
+      "type": "Manual",
+      "category": "Visão geral",
+      "included_in_totals": false,
+      "class": "C",
+      "migration_difficulty": "alta",
+      "reasons": [
+        "página de índice/visão geral com layout especial",
+        "sem front matter V1 completo"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": false,
+        "markdown_links": []
+      },
+      "structure_special": [
+        "página de índice/visão geral com layout especial"
+      ]
+    },
+    {
+      "path": "docs/compras/pedido-compra.md",
+      "title": "Pedido de Compra",
+      "nav_title": "Pedido de Compra",
+      "type": "Manual",
+      "category": "Compras",
+      "included_in_totals": true,
+      "class": "D",
+      "migration_difficulty": "revisão humana",
+      "reasons": [
+        "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+        "sem front matter V1 completo",
+        "manual com tabelas extensas, migração precisa preservar estrutura"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": false,
+        "markdown_links": []
+      },
+      "structure_special": [
+        "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+        "manual com tabelas extensas, migração precisa preservar estrutura"
+      ]
+    },
+    {
+      "path": "docs/producao/producao-geral.md",
+      "title": "Produção",
+      "nav_title": "Visão geral",
+      "type": "Manual",
+      "category": "Visão geral",
+      "included_in_totals": false,
+      "class": "C",
+      "migration_difficulty": "alta",
+      "reasons": [
+        "página de índice/visão geral com layout especial",
+        "sem front matter V1 completo"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": false,
+        "markdown_links": []
+      },
+      "structure_special": [
+        "página de índice/visão geral com layout especial"
+      ]
+    },
+    {
+      "path": "docs/transportes/transportes-geral.md",
+      "title": "Transportes",
+      "nav_title": "Visão geral",
+      "type": "Manual",
+      "category": "Visão geral",
+      "included_in_totals": false,
+      "class": "C",
+      "migration_difficulty": "alta",
+      "reasons": [
+        "página de índice/visão geral com layout especial",
+        "sem front matter V1 completo"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": false,
+        "markdown_links": []
+      },
+      "structure_special": [
+        "página de índice/visão geral com layout especial"
+      ]
+    },
+    {
+      "path": "docs/relatorios/relatorios-geral.md",
+      "title": "Relatórios",
+      "nav_title": "Visão geral",
+      "type": "Manual",
+      "category": "Visão geral",
+      "included_in_totals": false,
+      "class": "C",
+      "migration_difficulty": "alta",
+      "reasons": [
+        "página de índice/visão geral com layout especial",
+        "sem front matter V1 completo"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": false,
+        "markdown_links": []
+      },
+      "structure_special": [
+        "página de índice/visão geral com layout especial"
+      ]
+    },
+    {
+      "path": "docs/relatorios/xml-nfe.md",
+      "title": "XML(s) NFe",
+      "nav_title": "XML(s) NFe",
+      "type": "Manual",
+      "category": "Relatórios",
+      "included_in_totals": true,
+      "class": "B",
+      "migration_difficulty": "baixa",
+      "reasons": [
+        "sem front matter V1 completo",
+        "manual com tabelas extensas, migração precisa preservar estrutura"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": false,
+        "markdown_links": []
+      },
+      "structure_special": [
+        "manual com tabelas extensas, migração precisa preservar estrutura"
+      ]
+    },
+    {
+      "path": "docs/administracao/administracao-geral.md",
+      "title": "Administração",
+      "nav_title": "Visão geral",
+      "type": "Manual",
+      "category": "Visão geral",
+      "included_in_totals": false,
+      "class": "C",
+      "migration_difficulty": "alta",
+      "reasons": [
+        "página de índice/visão geral com layout especial",
+        "sem front matter V1 completo"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": false,
+        "markdown_links": []
+      },
+      "structure_special": [
+        "página de índice/visão geral com layout especial"
+      ]
+    },
+    {
+      "path": "docs/administracao/usuarios.md",
+      "title": "Usuários",
+      "nav_title": "Usuários",
+      "type": "Manual",
+      "category": "Administração",
+      "included_in_totals": true,
+      "class": "B",
+      "migration_difficulty": "média",
+      "reasons": [
+        "sem front matter V1 completo",
+        "imagem em wc-screen-block, avaliar se mantém ou simplifica Markdown",
+        "assets fora da pasta previsível por conteúdo"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [
+        {
+          "alt": "Menu Principal do cadastro de usuários",
+          "href": "../assets/adm-usuarios.png",
+          "local_asset": "docs/assets/adm-usuarios.png"
+        }
+      ],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [
+        "div"
+      ],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": false,
+        "markdown_links": []
+      },
+      "structure_special": [
+        "imagem em wc-screen-block, avaliar se mantém ou simplifica Markdown"
+      ]
+    },
+    {
+      "path": "docs/administracao/grupo-usuarios.md",
+      "title": "Grupo Usuários",
+      "nav_title": "Grupo Usuários",
+      "type": "Manual",
+      "category": "Administração",
+      "included_in_totals": true,
+      "class": "D",
+      "migration_difficulty": "revisão humana",
+      "reasons": [
+        "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+        "sem front matter V1 completo",
+        "Veja também manual deve virar IDs no front matter"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": true,
+        "markdown_links": [
+          "../como-fazer/configurar-grupo-usuario.md",
+          "usuarios.md"
+        ]
+      },
+      "structure_special": [
+        "conteúdo em breve/em preparação, possível obsoleto ou incompleto"
+      ]
+    },
+    {
+      "path": "docs/administracao/empresas.md",
+      "title": "Empresas",
+      "nav_title": "Empresas",
+      "type": "Manual",
+      "category": "Administração",
+      "included_in_totals": true,
+      "class": "B",
+      "migration_difficulty": "baixa",
+      "reasons": [
+        "sem front matter V1 completo",
+        "Veja também manual deve virar IDs no front matter"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": true,
+        "markdown_links": [
+          "parametros-sistema.md",
+          "usuarios.md"
+        ]
+      },
+      "structure_special": []
+    },
+    {
+      "path": "docs/administracao/natureza-op.md",
+      "title": "Natureza de Operação",
+      "nav_title": "Natureza de Operação",
+      "type": "Manual",
+      "category": "Administração",
+      "included_in_totals": true,
+      "class": "D",
+      "migration_difficulty": "revisão humana",
+      "reasons": [
+        "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+        "sem front matter V1 completo",
+        "Veja também manual deve virar IDs no front matter"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": true,
+        "markdown_links": [
+          "../como-fazer/cadastrar-natureza-operacao.md",
+          "../como-fazer/faturar-nota.md",
+          "../faturamento/faturamento-nf.md"
+        ]
+      },
+      "structure_special": [
+        "conteúdo em breve/em preparação, possível obsoleto ou incompleto"
+      ]
+    },
+    {
+      "path": "docs/administracao/unidades.md",
+      "title": "Unidades",
+      "nav_title": "Unidades",
+      "type": "Manual",
+      "category": "Administração",
+      "included_in_totals": true,
+      "class": "D",
+      "migration_difficulty": "revisão humana",
+      "reasons": [
+        "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+        "sem front matter V1 completo",
+        "manual com tabelas extensas, migração precisa preservar estrutura"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": false,
+        "markdown_links": []
+      },
+      "structure_special": [
+        "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+        "manual com tabelas extensas, migração precisa preservar estrutura"
+      ]
+    },
+    {
+      "path": "docs/administracao/ncms.md",
+      "title": "NCMS",
+      "nav_title": "NCMS",
+      "type": "Manual",
+      "category": "Administração",
+      "included_in_totals": true,
+      "class": "D",
+      "migration_difficulty": "revisão humana",
+      "reasons": [
+        "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+        "sem front matter V1 completo",
+        "Veja também manual deve virar IDs no front matter"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": true,
+        "markdown_links": [
+          "../como-fazer/cadastrar-material.md",
+          "natureza-op.md"
+        ]
+      },
+      "structure_special": [
+        "conteúdo em breve/em preparação, possível obsoleto ou incompleto"
+      ]
+    },
+    {
+      "path": "docs/administracao/centro-custo.md",
+      "title": "Centro de Custo",
+      "nav_title": "Centro de Custo",
+      "type": "Manual",
+      "category": "Administração",
+      "included_in_totals": true,
+      "class": "D",
+      "migration_difficulty": "revisão humana",
+      "reasons": [
+        "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+        "sem front matter V1 completo",
+        "manual com tabelas extensas, migração precisa preservar estrutura"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": false,
+        "markdown_links": []
+      },
+      "structure_special": [
+        "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+        "manual com tabelas extensas, migração precisa preservar estrutura"
+      ]
+    },
+    {
+      "path": "docs/administracao/condicoes-pagamento.md",
+      "title": "Condições de Pagamento",
+      "nav_title": "Condições de Pagamento",
+      "type": "Manual",
+      "category": "Administração",
+      "included_in_totals": true,
+      "class": "D",
+      "migration_difficulty": "revisão humana",
+      "reasons": [
+        "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+        "sem front matter V1 completo",
+        "Veja também manual deve virar IDs no front matter"
+      ],
+      "front_matter": {
+        "present": false,
+        "keys": [],
+        "id": "",
+        "type": "",
+        "category": ""
+      },
+      "images": [],
+      "videos": {
+        "markdown": [],
+        "html_sources": [],
+        "youtube": []
+      },
+      "html_manual": [],
+      "has_manual_prerequisites_html": false,
+      "prerequisites": [],
+      "related": {
+        "front_matter_manual": [],
+        "front_matter_guides": [],
+        "markdown_section_present": true,
+        "markdown_links": [
+          "../como-fazer/cadastrar-condicao-pagamento.md",
+          "../financeiro/contas-a-receber.md"
+        ]
+      },
+      "structure_special": [
+        "conteúdo em breve/em preparação, possível obsoleto ou incompleto"
+      ]
+    }
+  ],
+  "assets": {
+    "referenced_by_multiple_contents": [],
+    "orphan_candidates": [
+      {
+        "asset": "docs/assets/aba-adm-geral.png",
+        "note": "Não referenciado diretamente por Guia/Manual inventariado; confirmar uso por CSS/JS antes de remover."
+      },
+      {
+        "asset": "docs/assets/aba-colaboradores-geral.png",
+        "note": "Não referenciado diretamente por Guia/Manual inventariado; confirmar uso por CSS/JS antes de remover."
+      },
+      {
+        "asset": "docs/assets/aba-comercial-geral.png",
+        "note": "Não referenciado diretamente por Guia/Manual inventariado; confirmar uso por CSS/JS antes de remover."
+      },
+      {
+        "asset": "docs/assets/aba-compras-geral.png",
+        "note": "Não referenciado diretamente por Guia/Manual inventariado; confirmar uso por CSS/JS antes de remover."
+      },
+      {
+        "asset": "docs/assets/aba-contratos-geral.png",
+        "note": "Não referenciado diretamente por Guia/Manual inventariado; confirmar uso por CSS/JS antes de remover."
+      },
+      {
+        "asset": "docs/assets/aba-faturamento-geral.png",
+        "note": "Não referenciado diretamente por Guia/Manual inventariado; confirmar uso por CSS/JS antes de remover."
+      },
+      {
+        "asset": "docs/assets/aba-financeiro-geral.png",
+        "note": "Não referenciado diretamente por Guia/Manual inventariado; confirmar uso por CSS/JS antes de remover."
+      },
+      {
+        "asset": "docs/assets/aba-fornecedores-geral.png",
+        "note": "Não referenciado diretamente por Guia/Manual inventariado; confirmar uso por CSS/JS antes de remover."
+      },
+      {
+        "asset": "docs/assets/aba-materiais-geral.png",
+        "note": "Não referenciado diretamente por Guia/Manual inventariado; confirmar uso por CSS/JS antes de remover."
+      },
+      {
+        "asset": "docs/assets/aba-producao-geral.png",
+        "note": "Não referenciado diretamente por Guia/Manual inventariado; confirmar uso por CSS/JS antes de remover."
+      },
+      {
+        "asset": "docs/assets/aba-relatorios-geral.png",
+        "note": "Não referenciado diretamente por Guia/Manual inventariado; confirmar uso por CSS/JS antes de remover."
+      },
+      {
+        "asset": "docs/assets/aba-servicos-geral.png",
+        "note": "Não referenciado diretamente por Guia/Manual inventariado; confirmar uso por CSS/JS antes de remover."
+      },
+      {
+        "asset": "docs/assets/aba-transportes-geral.png",
+        "note": "Não referenciado diretamente por Guia/Manual inventariado; confirmar uso por CSS/JS antes de remover."
+      },
+      {
+        "asset": "docs/assets/images/guias/comercial_clientes.png",
+        "note": "Não referenciado diretamente por Guia/Manual inventariado; confirmar uso por CSS/JS antes de remover."
+      },
+      {
+        "asset": "docs/assets/videos/comercial_clientes.mp4",
+        "note": "Não referenciado diretamente por Guia/Manual inventariado; confirmar uso por CSS/JS antes de remover."
+      }
+    ]
+  },
+  "review_lists": {
+    "human_decision_required": [
+      {
+        "path": "docs/comercial/comercial-orcamento.md",
+        "title": "Módulo Comercial - Orçamentos",
+        "class": "D",
+        "reasons": [
+          "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+          "sem front matter V1 completo"
+        ]
+      },
+      {
+        "path": "docs/comercial/pedidos.md",
+        "title": "Módulo Comercial - Pedido de Venda",
+        "class": "D",
+        "reasons": [
+          "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+          "sem front matter V1 completo",
+          "assets fora da pasta previsível por conteúdo"
+        ]
+      },
+      {
+        "path": "docs/comercial/devolucao.md",
+        "title": "Devolução",
+        "class": "D",
+        "reasons": [
+          "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+          "sem front matter V1 completo",
+          "manual com tabelas extensas, migração precisa preservar estrutura"
+        ]
+      },
+      {
+        "path": "docs/faturamento/entrada-nota-fiscal.md",
+        "title": "Entrada de Nota Fiscal",
+        "class": "D",
+        "reasons": [
+          "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+          "sem front matter V1 completo",
+          "manual com tabelas extensas, migração precisa preservar estrutura"
+        ]
+      },
+      {
+        "path": "docs/faturamento/carta-correcao.md",
+        "title": "Carta de Correção",
+        "class": "D",
+        "reasons": [
+          "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+          "sem front matter V1 completo",
+          "manual com tabelas extensas, migração precisa preservar estrutura"
+        ]
+      },
+      {
+        "path": "docs/faturamento/cfop-entrada.md",
+        "title": "CFOP Entrada",
+        "class": "D",
+        "reasons": [
+          "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+          "sem front matter V1 completo",
+          "manual com tabelas extensas, migração precisa preservar estrutura"
+        ]
+      },
+      {
+        "path": "docs/financeiro/contas-a-pagar.md",
+        "title": "Contas a Pagar",
+        "class": "D",
+        "reasons": [
+          "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+          "sem front matter V1 completo",
+          "manual com tabelas extensas, migração precisa preservar estrutura"
+        ]
+      },
+      {
+        "path": "docs/financeiro/contas-a-receber.md",
+        "title": "Contas a Receber",
+        "class": "D",
+        "reasons": [
+          "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+          "sem front matter V1 completo",
+          "manual com tabelas extensas, migração precisa preservar estrutura"
+        ]
+      },
+      {
+        "path": "docs/financeiro/boleto.md",
+        "title": "Boleto",
+        "class": "D",
+        "reasons": [
+          "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+          "sem front matter V1 completo",
+          "manual com tabelas extensas, migração precisa preservar estrutura"
+        ]
+      },
+      {
+        "path": "docs/financeiro/contas.md",
+        "title": "Contas",
+        "class": "D",
+        "reasons": [
+          "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+          "sem front matter V1 completo",
+          "manual com tabelas extensas, migração precisa preservar estrutura"
+        ]
+      },
+      {
+        "path": "docs/fornecedores/fornecedores.md",
+        "title": "Fornecedores",
+        "class": "D",
+        "reasons": [
+          "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+          "sem front matter V1 completo",
+          "manual com tabelas extensas, migração precisa preservar estrutura"
+        ]
+      },
+      {
+        "path": "docs/materiais/categoria-materiais.md",
+        "title": "Categoria de Materiais",
+        "class": "D",
+        "reasons": [
+          "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+          "sem front matter V1 completo",
+          "manual com tabelas extensas, migração precisa preservar estrutura"
+        ]
+      },
+      {
+        "path": "docs/materiais/locais-armazenagem.md",
+        "title": "Locais de Armazenagem",
+        "class": "D",
+        "reasons": [
+          "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+          "sem front matter V1 completo",
+          "manual com tabelas extensas, migração precisa preservar estrutura"
+        ]
+      },
+      {
+        "path": "docs/materiais/ajustar-inventario.md",
+        "title": "Ajustar Inventário",
+        "class": "D",
+        "reasons": [
+          "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+          "sem front matter V1 completo",
+          "manual com tabelas extensas, migração precisa preservar estrutura"
+        ]
+      },
+      {
+        "path": "docs/compras/pedido-compra.md",
+        "title": "Pedido de Compra",
+        "class": "D",
+        "reasons": [
+          "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+          "sem front matter V1 completo",
+          "manual com tabelas extensas, migração precisa preservar estrutura"
+        ]
+      },
+      {
+        "path": "docs/administracao/grupo-usuarios.md",
+        "title": "Grupo Usuários",
+        "class": "D",
+        "reasons": [
+          "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+          "sem front matter V1 completo",
+          "Veja também manual deve virar IDs no front matter"
+        ]
+      },
+      {
+        "path": "docs/administracao/natureza-op.md",
+        "title": "Natureza de Operação",
+        "class": "D",
+        "reasons": [
+          "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+          "sem front matter V1 completo",
+          "Veja também manual deve virar IDs no front matter"
+        ]
+      },
+      {
+        "path": "docs/administracao/unidades.md",
+        "title": "Unidades",
+        "class": "D",
+        "reasons": [
+          "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+          "sem front matter V1 completo",
+          "manual com tabelas extensas, migração precisa preservar estrutura"
+        ]
+      },
+      {
+        "path": "docs/administracao/ncms.md",
+        "title": "NCMS",
+        "class": "D",
+        "reasons": [
+          "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+          "sem front matter V1 completo",
+          "Veja também manual deve virar IDs no front matter"
+        ]
+      },
+      {
+        "path": "docs/administracao/centro-custo.md",
+        "title": "Centro de Custo",
+        "class": "D",
+        "reasons": [
+          "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+          "sem front matter V1 completo",
+          "manual com tabelas extensas, migração precisa preservar estrutura"
+        ]
+      },
+      {
+        "path": "docs/administracao/condicoes-pagamento.md",
+        "title": "Condições de Pagamento",
+        "class": "D",
+        "reasons": [
+          "conteúdo em breve/em preparação, possível obsoleto ou incompleto",
+          "sem front matter V1 completo",
+          "Veja também manual deve virar IDs no front matter"
+        ]
+      }
+    ],
+    "html_convertible_to_markdown": [
+      {
+        "path": "docs/como-fazer/cadastrar-natureza-operacao.md",
+        "title": "Como cadastrar uma Natureza de Operação",
+        "html": [
+          "div",
+          "source",
+          "video"
+        ],
+        "notes": [
+          "sem front matter V1 completo",
+          "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+          "vídeo em HTML deve virar link Markdown .wc-video-link",
+          "Veja também manual deve virar IDs no front matter"
+        ]
+      },
+      {
+        "path": "docs/como-fazer/cadastrar-condicao-pagamento.md",
+        "title": "Como cadastrar uma Condição de Pagamento",
+        "html": [
+          "div",
+          "source",
+          "video"
+        ],
+        "notes": [
+          "sem front matter V1 completo",
+          "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+          "vídeo em HTML deve virar link Markdown .wc-video-link",
+          "Veja também manual deve virar IDs no front matter"
+        ]
+      },
+      {
+        "path": "docs/como-fazer/cadastrar-centro-custo.md",
+        "title": "Como cadastrar um Centro de Custo",
+        "html": [
+          "div",
+          "source",
+          "video"
+        ],
+        "notes": [
+          "sem front matter V1 completo",
+          "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+          "vídeo em HTML deve virar link Markdown .wc-video-link",
+          "Veja também manual deve virar IDs no front matter"
+        ]
+      },
+      {
+        "path": "docs/como-fazer/cadastrar-usuario.md",
+        "title": "Como cadastrar um usuário",
+        "html": [
+          "div",
+          "source",
+          "video"
+        ],
+        "notes": [
+          "sem front matter V1 completo",
+          "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+          "vídeo em HTML deve virar link Markdown .wc-video-link",
+          "Veja também manual deve virar IDs no front matter"
+        ]
+      },
+      {
+        "path": "docs/como-fazer/configurar-grupo-usuario.md",
+        "title": "Como configurar um Grupo de Usuário",
+        "html": [
+          "div",
+          "source",
+          "video"
+        ],
+        "notes": [
+          "sem front matter V1 completo",
+          "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+          "vídeo em HTML deve virar link Markdown .wc-video-link",
+          "Veja também manual deve virar IDs no front matter"
+        ]
+      },
+      {
+        "path": "docs/como-fazer/cadastrar-fornecedor.md",
+        "title": "Como cadastrar um fornecedor",
+        "html": [
+          "div"
+        ],
+        "notes": [
+          "sem front matter V1 completo",
+          "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+          "Veja também manual deve virar IDs no front matter"
+        ]
+      },
+      {
+        "path": "docs/como-fazer/criar-orcamento.md",
+        "title": "Como criar um orçamento",
+        "html": [
+          "br",
+          "div",
+          "source",
+          "video"
+        ],
+        "notes": [
+          "sem front matter V1 completo",
+          "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+          "vídeo em HTML deve virar link Markdown .wc-video-link",
+          "Veja também manual deve virar IDs no front matter"
+        ]
+      },
+      {
+        "path": "docs/como-fazer/fazer-pedido-venda.md",
+        "title": "Como gerar um pedido",
+        "html": [
+          "br",
+          "div",
+          "source",
+          "video"
+        ],
+        "notes": [
+          "sem front matter V1 completo",
+          "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+          "vídeo em HTML deve virar link Markdown .wc-video-link",
+          "Veja também manual deve virar IDs no front matter",
+          "múltiplos vídeos exigem conferência de ordem/contexto"
+        ]
+      },
+      {
+        "path": "docs/como-fazer/cadastrar-material.md",
+        "title": "Como cadastrar um material",
+        "html": [
+          "div",
+          "source",
+          "video"
+        ],
+        "notes": [
+          "sem front matter V1 completo",
+          "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+          "vídeo em HTML deve virar link Markdown .wc-video-link",
+          "Veja também manual deve virar IDs no front matter"
+        ]
+      },
+      {
+        "path": "docs/como-fazer/consultar-estoque.md",
+        "title": "Como consultar estoque",
+        "html": [
+          "br",
+          "div"
+        ],
+        "notes": [
+          "sem front matter V1 completo",
+          "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+          "Veja também manual deve virar IDs no front matter"
+        ]
+      },
+      {
+        "path": "docs/como-fazer/ajustar-estoque.md",
+        "title": "Como ajustar estoque",
+        "html": [
+          "br",
+          "div"
+        ],
+        "notes": [
+          "sem front matter V1 completo",
+          "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+          "Veja também manual deve virar IDs no front matter"
+        ]
+      },
+      {
+        "path": "docs/como-fazer/fazer-inventario.md",
+        "title": "Como fazer inventário",
+        "html": [
+          "br",
+          "div"
+        ],
+        "notes": [
+          "sem front matter V1 completo",
+          "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+          "Veja também manual deve virar IDs no front matter"
+        ]
+      },
+      {
+        "path": "docs/como-fazer/transferir-estoque.md",
+        "title": "Como transferir estoque",
+        "html": [
+          "br",
+          "div"
+        ],
+        "notes": [
+          "sem front matter V1 completo",
+          "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+          "Veja também manual deve virar IDs no front matter"
+        ]
+      },
+      {
+        "path": "docs/como-fazer/faturar-nota.md",
+        "title": "Como emitir uma NF-e",
+        "html": [
+          "br",
+          "div",
+          "source",
+          "video"
+        ],
+        "notes": [
+          "sem front matter V1 completo",
+          "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+          "vídeo em HTML deve virar link Markdown .wc-video-link",
+          "Veja também manual deve virar IDs no front matter"
+        ]
+      },
+      {
+        "path": "docs/como-fazer/cancelar-nfe.md",
+        "title": "Como cancelar uma NF-e",
+        "html": [
+          "div",
+          "source",
+          "video"
+        ],
+        "notes": [
+          "sem front matter V1 completo",
+          "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+          "vídeo em HTML deve virar link Markdown .wc-video-link",
+          "Veja também manual deve virar IDs no front matter"
+        ]
+      },
+      {
+        "path": "docs/como-fazer/emitir-devolucao.md",
+        "title": "Como emitir uma devolução",
+        "html": [
+          "br",
+          "div"
+        ],
+        "notes": [
+          "sem front matter V1 completo",
+          "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+          "Veja também manual deve virar IDs no front matter"
+        ]
+      },
+      {
+        "path": "docs/como-fazer/emitir-carta-correcao.md",
+        "title": "Como emitir uma carta de correção",
+        "html": [
+          "div",
+          "source",
+          "video"
+        ],
+        "notes": [
+          "sem front matter V1 completo",
+          "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+          "vídeo em HTML deve virar link Markdown .wc-video-link",
+          "Veja também manual deve virar IDs no front matter"
+        ]
+      },
+      {
+        "path": "docs/como-fazer/emitir-nota-complementar.md",
+        "title": "Como emitir uma nota complementar",
+        "html": [
+          "br",
+          "div"
+        ],
+        "notes": [
+          "sem front matter V1 completo",
+          "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+          "Veja também manual deve virar IDs no front matter"
+        ]
+      },
+      {
+        "path": "docs/como-fazer/importar-xml.md",
+        "title": "Como importar XML",
+        "html": [
+          "br",
+          "div"
+        ],
+        "notes": [
+          "sem front matter V1 completo",
+          "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+          "Veja também manual deve virar IDs no front matter"
+        ]
+      },
+      {
+        "path": "docs/como-fazer/lancar-nota-entrada.md",
+        "title": "Como lançar uma nota de entrada",
+        "html": [
+          "br",
+          "div"
+        ],
+        "notes": [
+          "sem front matter V1 completo",
+          "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+          "Veja também manual deve virar IDs no front matter"
+        ]
+      },
+      {
+        "path": "docs/como-fazer/criar-pedido-compra.md",
+        "title": "Como criar um pedido de compra",
+        "html": [
+          "br",
+          "div"
+        ],
+        "notes": [
+          "sem front matter V1 completo",
+          "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+          "Veja também manual deve virar IDs no front matter"
+        ]
+      },
+      {
+        "path": "docs/como-fazer/gerar-boleto.md",
+        "title": "Como gerar boleto",
+        "html": [
+          "br",
+          "div"
+        ],
+        "notes": [
+          "sem front matter V1 completo",
+          "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+          "Veja também manual deve virar IDs no front matter"
+        ]
+      },
+      {
+        "path": "docs/como-fazer/baixar-titulo.md",
+        "title": "Como baixar um título",
+        "html": [
+          "div"
+        ],
+        "notes": [
+          "sem front matter V1 completo",
+          "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+          "Veja também manual deve virar IDs no front matter"
+        ]
+      },
+      {
+        "path": "docs/como-fazer/lancar-contas-a-pagar.md",
+        "title": "Como lançar contas a pagar",
+        "html": [
+          "br",
+          "div"
+        ],
+        "notes": [
+          "sem front matter V1 completo",
+          "pré-requisitos usam HTML wc-prereq-list convertível para Markdown",
+          "Veja também manual deve virar IDs no front matter"
+        ]
+      },
+      {
+        "path": "docs/faturamento/inutilizacao-nota-fiscal.md",
+        "title": "Inutilização Nota Fiscal",
+        "html": [
+          "source",
+          "video"
+        ],
+        "notes": [
+          "sem front matter V1 completo",
+          "vídeo em HTML deve virar link Markdown .wc-video-link",
+          "manual com tabelas extensas, migração precisa preservar estrutura"
+        ]
+      }
+    ]
+  }
+}

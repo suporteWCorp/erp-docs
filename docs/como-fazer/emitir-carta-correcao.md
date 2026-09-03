@@ -1,22 +1,21 @@
 ---
-error_area: "Documentos Fiscais"
-error_category: "NF-e"
-error_tags:
-  - "carta de correcao"
-  - "nfe"
-  - "sefaz"
+id: emitir-carta-correcao
+title: Como emitir uma carta de correção
+type: guia
+category: Faturamento
+status: published
+tags:
+  - carta de correcao
+  - nfe
+  - sefaz
 ---
 
 # Como emitir uma carta de correção
 
 ## Pré-requisitos
 
-<div class="wc-prereq-list" markdown>
-
 - NF-e autorizada e localizada
 - Texto de correção validado
-
-</div>
 
 ## Permissões
 
@@ -26,12 +25,11 @@ error_tags:
 
 `Faturamento > Carta de Correção`.
 
+![Onde encontrar](../assets/images/guias/caminhoemitircartacorrecao.png)
+
 ## Demonstração em vídeo
 
-<video class="wc-video" controls preload="auto" playsinline>
-  <source src="../../assets/videos/faturamento_carta_correcao.mp4" type="video/mp4">
-  Seu navegador não conseguiu reproduzir este vídeo.
-</video>
+[Demonstração da emissão de carta de correção](../assets/videos/faturamento_carta_correcao.mp4){ .wc-video-link }
 
 ## Como fazer
 

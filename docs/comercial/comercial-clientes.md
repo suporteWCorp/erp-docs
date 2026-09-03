@@ -1,12 +1,24 @@
+---
+id: comercial-clientes
+title: Clientes
+type: manual
+category: Comercial
+description: Tela utilizada para cadastro e manutenção de clientes.
+screen_path: Comercial > Clientes
+status: published
+related_guides:
+  - cadastrar-cliente
+tags:
+  - cliente
+  - cadastro
+  - comercial
+---
+
 # Clientes
 
 ## Objetivo
 
 Cadastrar e consultar clientes no WCorp para uso em pedidos, orçamentos, faturamento e demais funcionalidades.
-
-## Caminho
-
-`Comercial > Clientes`.
 
 ## Print da tela
 
@@ -55,8 +67,3 @@ O trecho de **1:20 até 2:00** mostra o acesso e o cadastro de cliente pela aba 
 | O CNPJ não retornou dados pela lupa. O que fazer? | Se for CNPJ recente, pode ainda não estar atualizado na base da SEFAZ. Preencha manualmente. |
 | Preciso preencher todos os campos? | Preencha os campos obrigatórios e os dados necessários para a operação que será feita. |
 | O cliente não aparece no pedido | Verifique se o cadastro foi salvo corretamente e se não há filtros ou bloqueios aplicados. |
-
-## Veja também
-
-- [Como cadastrar um cliente](../como-fazer/cadastrar-cliente.md){: target="_blank" rel="noopener" }
-- [Manual > Comercial > Pedido](pedidos.md){: target="_blank" rel="noopener" }

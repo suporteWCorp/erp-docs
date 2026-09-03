@@ -52,46 +52,90 @@ O bloqueio pode ser configurado no cadastro do cliente, na aba **Comercial**, us
 </details>
 
 <details class="wc-faq-item" markdown>
-<summary>Não estou conseguindo editar um pedido mesmo estando pendente. O que faço?</summary>
+<summary>Um pedido já faturado pode ser alterado?</summary>
 
-<p class="wc-faq-answer"><span class="wc-faq-answer__label">Resposta rápida</span></p>
+<p class="wc-faq-answer"><span class="wc-faq-answer__label">Resposta:</span> <strong class="wc-faq-answer__value wc-faq-answer__value--no">Não</strong></p>
 
-Verifique se o Workflow do pedido está configurado para bloquear a edição. No cadastro do Workflow, confira o checkbox **Bloquear edição do Pedido**.
+Após o faturamento, o pedido não pode ser alterado diretamente. Para ajustar informações, é necessário cancelar a nota fiscal vinculada e depois alterar o pedido.
 
-[Ver resposta completa →](faq/editar-pedido-bloqueado-workflow.md){ .wc-faq-link }
-
-</details>
-
-<details class="wc-faq-item" markdown>
-<summary>Como altero o NCM de um produto?</summary>
-
-<p class="wc-faq-answer"><span class="wc-faq-answer__label">Resposta rápida</span></p>
-
-O NCM é alterado no cadastro do material, em **Materiais > Materiais**, no campo **NCM** localizado abaixo de **Origem**.
-
-[Ver resposta completa →](faq/alterar-ncm-produto.md){ .wc-faq-link }
+[Ver resposta completa →](faq/pedido-faturado-pode-ser-alterado.md){ .wc-faq-link }
 
 </details>
 
 <details class="wc-faq-item" markdown>
-<summary>Precisava mudar CFOP e CSOSN de um produto. Como faço?</summary>
+<summary>É possível emitir uma carta de correção para uma NF-e?</summary>
 
-<p class="wc-faq-answer"><span class="wc-faq-answer__label">Resposta rápida</span></p>
+<p class="wc-faq-answer"><span class="wc-faq-answer__label">Resposta:</span> <strong class="wc-faq-answer__value wc-faq-answer__value--yes">Sim</strong></p>
 
-A alteração deve ser feita na Natureza de Operação utilizada pela nota, ajustando a Regra Fiscal correspondente, o **CFOP** e o **CSOSN**.
+É possível emitir uma carta de correção, desde que a correção não altere valores, tributação, dados cadastrais das partes ou informações de documentos fiscais vinculados.
 
-[Ver resposta completa →](faq/alterar-cfop-csosn.md){ .wc-faq-link }
+[Ver resposta completa →](faq/emitir-carta-correcao-nfe.md){ .wc-faq-link }
 
 </details>
 
 <details class="wc-faq-item" markdown>
-<summary>Precisava mudar CFOP e CST de um produto. Como faço?</summary>
+<summary>É possível alterar alguma informação de uma nota fiscal já emitida?</summary>
+
+<p class="wc-faq-answer"><span class="wc-faq-answer__label">Resposta:</span> <strong class="wc-faq-answer__value wc-faq-answer__value--no">Não</strong></p>
+
+Depois que a NF-e é autorizada pela SEFAZ, suas informações não podem ser alteradas diretamente. Quando necessário, é preciso cancelar a nota ou usar o documento de ajuste aplicável.
+
+[Ver resposta completa →](faq/alterar-nfe-autorizada.md){ .wc-faq-link }
+
+</details>
+
+<details class="wc-faq-item" markdown>
+<summary>Pode ser reaproveitado o mesmo número de uma NF-e cancelada?</summary>
+
+<p class="wc-faq-answer"><span class="wc-faq-answer__label">Resposta:</span> <strong class="wc-faq-answer__value wc-faq-answer__value--no">Não</strong></p>
+
+Depois que uma NF-e é cancelada, sua numeração não pode ser reutilizada em uma nova emissão.
+
+[Ver resposta completa →](faq/reaproveitar-numero-nfe-cancelada.md){ .wc-faq-link }
+
+</details>
+
+<details class="wc-faq-item" markdown>
+<summary>É possível reativar um registro ou documento que foi desativado?</summary>
+
+<p class="wc-faq-answer"><span class="wc-faq-answer__label">Resposta:</span> <strong class="wc-faq-answer__value wc-faq-answer__value--no">Não</strong></p>
+
+Ao desativar um registro, outras informações vinculadas a ele também podem ser desativadas. Por esse motivo, não é possível reativá-lo, sendo necessário realizar um novo cadastro.
+
+[Ver resposta completa →](faq/reativar-registro-desativado.md){ .wc-faq-link }
+
+</details>
+
+<details class="wc-faq-item" markdown>
+<summary>É possível emitir uma nota fiscal complementar?</summary>
+
+<p class="wc-faq-answer"><span class="wc-faq-answer__label">Resposta:</span> <strong class="wc-faq-answer__value wc-faq-answer__value--yes">Sim</strong></p>
+
+A nota fiscal complementar pode ser emitida quando for necessário complementar valores, quantidades ou tributos que não foram lançados corretamente na nota original.
+
+[Ver resposta completa →](faq/emitir-nota-fiscal-complementar.md){ .wc-faq-link }
+
+</details>
+
+<details class="wc-faq-item" markdown>
+<summary>O sistema permite estoque negativo?</summary>
 
 <p class="wc-faq-answer"><span class="wc-faq-answer__label">Resposta rápida</span></p>
 
-A alteração deve ser feita na Natureza de Operação utilizada pela nota, ajustando a Regra Fiscal correspondente, o **CFOP** e o **CST**.
+Depende da configuração do material. Se **"Habilitar Controle de Estoque"** estiver marcada, o sistema bloqueia vendas com saldo negativo; se estiver desmarcada, a venda pode ser realizada.
 
-[Ver resposta completa →](faq/alterar-cfop-cst.md){ .wc-faq-link }
+[Ver resposta completa →](faq/estoque-negativo.md){ .wc-faq-link }
+
+</details>
+
+<details class="wc-faq-item" markdown>
+<summary>É possível realizar a inutilização de uma numeração de CT-e?</summary>
+
+<p class="wc-faq-answer"><span class="wc-faq-answer__label">Resposta:</span> <strong class="wc-faq-answer__value wc-faq-answer__value--no">Não</strong></p>
+
+Conforme a Nota Técnica 2023.001, não é mais possível inutilizar uma numeração de CT-e que não tenha sido utilizada.
+
+[Ver resposta completa →](faq/inutilizar-numeracao-cte.md){ .wc-faq-link }
 
 </details>
 
@@ -122,22 +166,11 @@ Consulte a identificação de versão exibida no WCorp. Caso ela não esteja vis
 </details>
 
 <details class="wc-faq-item" markdown>
-<summary>Onde encontro o XML da NF-e?</summary>
-
-<p class="wc-faq-answer"><span class="wc-faq-answer__label">Resposta rápida</span></p>
-
-Acesse `Relatórios > XML(s) NFe`. Nessa rotina é possível consultar ou exportar os XMLs utilizando os filtros disponíveis.
-
-[Consultar o Manual de XMLs de NF-e](../relatorios/xml-nfe.md){: target="_blank" rel="noopener" .wc-faq-link }
-
-</details>
-
-<details class="wc-faq-item" markdown>
 <summary>Qual a diferença entre Guia e Manual?</summary>
 
 <p class="wc-faq-answer"><span class="wc-faq-answer__label">Resposta rápida</span></p>
 
-O **Guia** explica como realizar um processo. O **Manual** descreve como funciona cada tela e apresenta suas informações de referência.
+**Guias** mostram como realizar uma tarefa passo a passo. **Manuais** apresentam os detalhes das telas, campos e funcionalidades do WCorp.
 
 </details>
 
@@ -149,17 +182,6 @@ O **Guia** explica como realizar um processo. O **Manual** descreve como funcion
 Informe o módulo, a tela, o usuário afetado, o que ocorreu, o resultado esperado, a mensagem completa e as evidências disponíveis.
 
 [Consultar o modelo de abertura de chamado](../suporte/abertura-de-chamado.md){: target="_blank" rel="noopener" .wc-faq-link }
-
-</details>
-
-<details class="wc-faq-item" markdown>
-<summary>Como saber se possuo permissão para acessar uma tela?</summary>
-
-<p class="wc-faq-answer"><span class="wc-faq-answer__label">Resposta rápida</span></p>
-
-Se a tela, o botão ou a ação não estiver disponível, solicite ao usuário administrador que confira seu grupo e perfil de acesso.
-
-[Consultar o Manual de Grupos de Usuários](../administracao/grupo-usuarios.md){: target="_blank" rel="noopener" .wc-faq-link }
 
 </details>
 

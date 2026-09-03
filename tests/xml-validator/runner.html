@@ -1,0 +1,353 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>WCorp XML Validator Regression</title>
+<link rel="stylesheet" href="../../docs/assets/stylesheets/cards.css">
+
+<main class="wcorp-tool-page wcorp-xml-page">
+  <label class="wc-xml-dropzone">
+    <span>Arraste um XML ou selecione o arquivo</span>
+    <input type="file" accept=".xml,text/xml,application/xml" data-wc-xml-file>
+  </label>
+
+  <div class="wc-tool-field wc-xml-editor wc-xml-editor--editing" data-wc-xml-editor>
+    <div class="wc-xml-editor__header">
+      <span data-wc-xml-editor-title>Conteúdo do XML</span>
+      <div class="wc-xml-editor__actions" data-wc-xml-actions hidden>
+        <button type="button" data-wc-xml-expand>Expandir tudo</button>
+        <button type="button" data-wc-xml-collapse>Recolher tudo</button>
+        <button type="button" data-wc-xml-edit>Editar XML</button>
+      </div>
+    </div>
+    <textarea class="wc-tool-textarea" data-wc-xml-content rows="12"></textarea>
+    <div class="wc-xml-loading" data-wc-xml-loading hidden></div>
+    <div class="wc-xml-tree" data-wc-xml-tree hidden tabindex="0" aria-label="XML analisado"></div>
+  </div>
+
+  <button class="md-button md-button--primary wc-tool-action" type="button" data-wc-xml-validate>Validar XML</button>
+  <div class="wc-tool-result" data-wc-xml-result aria-live="polite"></div>
+</main>
+
+<pre id="xml-validator-results"></pre>
+
+<script src="../../docs/assets/javascripts/wcorp-tools.js"></script>
+<script>
+const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+function allByLocalName(root, localName) {
+  return Array.from(root.getElementsByTagName("*")).filter((element) => element.localName === localName);
+}
+
+function firstByLocalName(root, localName) {
+  return allByLocalName(root, localName)[0] || null;
+}
+
+function childrenByLocalName(root, localName) {
+  return Array.from(root.children || []).filter((element) => element.localName === localName);
+}
+
+function parseXml(xml) {
+  return new DOMParser().parseFromString(xml, "application/xml");
+}
+
+function serializeXml(document) {
+  return new XMLSerializer().serializeToString(document);
+}
+
+function setFirstText(root, localName, value) {
+  firstByLocalName(root, localName).textContent = value;
+}
+
+function setTextInside(root, parentName, childName, value) {
+  setFirstText(firstByLocalName(root, parentName), childName, value);
+}
+
+function setTotal(document, tagName, value) {
+  const total = firstByLocalName(document, "ICMSTot");
+  childrenByLocalName(total, tagName)[0].textContent = value;
+}
+
+function setItemProduct(document, tagName, value, itemIndex = 0) {
+  const det = allByLocalName(document, "det")[itemIndex];
+  setTextInside(det, "prod", tagName, value);
+}
+
+function setItemProductByNumber(document, itemNumber, tagName, value) {
+  const det = allByLocalName(document, "det").find((item) => item.getAttribute("nItem") === String(itemNumber));
+  setTextInside(det, "prod", tagName, value);
+}
+
+function setItemTax(document, tagName, value, itemIndex = 0) {
+  const det = allByLocalName(document, "det")[itemIndex];
+  setFirstText(det, tagName, value);
+}
+
+function cloneItem(document, number) {
+  const first = firstByLocalName(document, "det");
+  const clone = first.cloneNode(true);
+  clone.setAttribute("nItem", String(number));
+  setFirstText(clone, "cProd", `P${String(number).padStart(3, "0")}`);
+  setFirstText(clone, "xProd", `Produto de teste ${number}`);
+  first.parentNode.insertBefore(clone, first.nextSibling);
+  return clone;
+}
+
+function setTotalsForItemCount(document, count) {
+  const totals = {
+    vBC: 100 * count,
+    vICMS: 18 * count,
+    vProd: 100 * count,
+  };
+  Object.entries(totals).forEach(([tag, value]) => setTotal(document, tag, value.toFixed(2)));
+}
+
+function withBase(baseXml, mutate) {
+  const document = parseXml(baseXml);
+  mutate(document);
+  return serializeXml(document);
+}
+
+function withItems(baseXml, count, mutate) {
+  return withBase(baseXml, (document) => {
+    for (let index = 2; index <= count; index += 1) cloneItem(document, index);
+    setTotalsForItemCount(document, count);
+    if (mutate) mutate(document);
+  });
+}
+
+function wrapNfeProc(baseXml) {
+  return `<?xml version="1.0" encoding="UTF-8"?><nfeProc xmlns="http://www.portalfiscal.inf.br/nfe">${baseXml.replace(/<\?xml[^>]*>\s*/, "")}<protNFe><infProt><nProt>135260000000000</nProt></infProt></protNFe></nfeProc>`;
+}
+
+function readResultState(id) {
+  const result = document.querySelector("[data-wc-xml-result]");
+  const tree = document.querySelector("[data-wc-xml-tree]");
+  const issueCards = Array.from(result.querySelectorAll(".wc-xml-issue"));
+  const issueTitles = issueCards.map((card) => card.querySelector(".wc-xml-issue__header strong")?.textContent.trim() || "");
+  const issueGroups = Array.from(result.querySelectorAll("[data-wc-xml-category-group]")).map((group) => ({
+    category: group.dataset.wcXmlCategoryGroup,
+    titles: Array.from(group.querySelectorAll(".wc-xml-issue__header strong")).map((node) => node.textContent.trim()),
+  }));
+  const chips = Array.from(result.querySelectorAll(".wc-xml-category-chip")).map((chip) => ({
+    text: chip.textContent.trim().replace(/\s+/g, " "),
+    className: chip.className,
+  }));
+  const docCards = Object.fromEntries(Array.from(result.querySelectorAll(".wc-xml-doc-info__item")).map((card) => [
+    card.querySelector(":scope > span")?.textContent.trim(),
+    card.querySelector(":scope > strong")?.textContent.trim(),
+  ]));
+  const checkLines = Array.from(result.querySelectorAll(".wc-xml-checks__item")).map((item) => (
+    item.textContent.trim().replace(/\s+/g, " ")
+  ));
+  return {
+    id,
+    issueCount: issueCards.length,
+    issueTitles,
+    issueGroups,
+    chips,
+    checksCountText: result.querySelector(".wc-xml-checks__count")?.textContent.trim() || "",
+    checksCollapsed: Boolean(result.querySelector(".wc-xml-checks__list[hidden]")),
+    checkLines,
+    docCards,
+    treePaths: tree.querySelectorAll("[data-wc-xml-path]").length,
+    collapsedNodes: tree.querySelectorAll(".wc-xml-node.is-collapsed").length,
+    text: result.innerText.replace(/\s+/g, " ").trim(),
+  };
+}
+
+async function runValidation(id, xml) {
+  const edit = document.querySelector("[data-wc-xml-edit]");
+  const validate = document.querySelector("[data-wc-xml-validate]");
+  if (validate.hidden && edit) {
+    edit.click();
+    await wait(20);
+  }
+  document.querySelector("[data-wc-xml-content]").value = xml;
+  validate.click();
+  await wait(2600);
+  return readResultState(id);
+}
+
+function hasTitle(state, text) {
+  return state.issueTitles.some((title) => title.includes(text));
+}
+
+function hasCategoryProblem(state, category) {
+  return state.issueGroups.some((group) => group.category === category && group.titles.length);
+}
+
+function problemChip(state, label) {
+  return state.chips.some((chip) => chip.text.includes(label) && chip.className.includes("--problem"));
+}
+
+function notCheckedChip(state, label) {
+  return state.chips.some((chip) => chip.text.includes(label) && chip.className.includes("--not_checked"));
+}
+
+function record(results, id, caseName, expected, obtained, passed, status = "PASS") {
+  results.push({ id, case: caseName, expected, obtained, status: passed ? status : "FAIL" });
+}
+
+async function main() {
+  const baseXml = await fetch("fixtures/base-nfe.xml").then((response) => response.text());
+  const results = [];
+  const savedExecCommand = document.execCommand;
+  const clipboard = [];
+  if (navigator.clipboard) {
+    Object.defineProperty(navigator, "clipboard", {
+      configurable: true,
+      value: {
+        writeText: (text) => {
+          clipboard.push(String(text || ""));
+          return Promise.resolve();
+        },
+      },
+    });
+  }
+  document.execCommand = (command) => {
+    if (command === "copy") {
+      clipboard.push(document.activeElement?.value || "");
+      return true;
+    }
+    return savedExecCommand.call(document, command);
+  };
+
+  const cases = [
+    ["A01", "XML normal sem inconsistências conhecidas", baseXml, (state) => state.issueCount === 0, "0 inconsistências"],
+    ["A02", "XML malformado", "<NFe><infNFe><det></NFe>", (state) => hasTitle(state, "XML malformado") && notCheckedChip(state, "Campos") && notCheckedChip(state, "Itens"), "erro de estrutura e dependentes não verificadas"],
+    ["A03", "raiz/tipo incompatível", "<OutroDocumento><valor>1</valor></OutroDocumento>", (state) => hasTitle(state, "Tipo de documento não suportado") && notCheckedChip(state, "Campos"), "comportamento controlado sem crash"],
+    ["A04", "CNPJ inválido", withBase(baseXml, (doc) => setFirstText(doc, "CNPJ", "00000000000000")), (state) => hasTitle(state, "CNPJ com formato inválido") && hasCategoryProblem(state, "fields"), "problema em campos e formatos"],
+    ["A05", "campo numérico inválido", withBase(baseXml, (doc) => setItemProduct(doc, "vProd", "ABC")), (state) => hasTitle(state, "Campo vProd não numérico"), "problema de campo numérico"],
+    ["A06", "nItem duplicado", withItems(baseXml, 2, (doc) => allByLocalName(doc, "det")[1].setAttribute("nItem", "1")), (state) => hasTitle(state, "nItem duplicado") && hasCategoryProblem(state, "items"), "problema em Itens"],
+    ["A07", "qCom x vUnCom divergente", withBase(baseXml, (doc) => { setItemProduct(doc, "qCom", "10.0000"); setItemProduct(doc, "vUnCom", "15.0000000000"); setItemProduct(doc, "vProd", "140.00"); setTotal(doc, "vProd", "140.00"); }), (state) => hasTitle(state, "vProd divergente") && hasCategoryProblem(state, "items"), "problema em cálculo do item"],
+    ["A08", "vProd total divergente", withBase(baseXml, (doc) => setTotal(doc, "vProd", "99.00")), (state) => hasTitle(state, "Total dos produtos divergente"), "total vProd divergente"],
+    ["A09", "vBC divergente", withBase(baseXml, (doc) => setTotal(doc, "vBC", "99.00")), (state) => hasTitle(state, "Total da BC do ICMS divergente"), "total vBC divergente"],
+    ["A10", "vICMS divergente", withBase(baseXml, (doc) => setTotal(doc, "vICMS", "17.00")), (state) => hasTitle(state, "Total do ICMS divergente"), "total vICMS divergente"],
+    ["A11", "vBCST divergente", withBase(baseXml, (doc) => setItemTax(doc, "vBCST", "10.00")), (state) => hasTitle(state, "Total da BC ICMS-ST divergente"), "total vBCST divergente"],
+    ["A12", "vST divergente", withBase(baseXml, (doc) => setItemTax(doc, "vST", "10.00")), (state) => hasTitle(state, "Total do ICMS-ST divergente"), "total vST divergente"],
+    ["A13", "vIPI divergente", withBase(baseXml, (doc) => setItemTax(doc, "vIPI", "10.00")), (state) => hasTitle(state, "Total do IPI divergente"), "total vIPI divergente"],
+    ["A14", "vPIS divergente", withBase(baseXml, (doc) => setItemTax(doc, "vPIS", "10.00")), (state) => hasTitle(state, "Total do PIS divergente"), "total vPIS divergente"],
+    ["A15", "vCOFINS divergente", withBase(baseXml, (doc) => setItemTax(doc, "vCOFINS", "10.00")), (state) => hasTitle(state, "Total do COFINS divergente"), "total vCOFINS divergente"],
+    ["A16", "vFrete divergente", withBase(baseXml, (doc) => setItemProduct(doc, "vFrete", "10.00")), (state) => hasTitle(state, "Total do frete divergente"), "total vFrete divergente"],
+    ["A17", "vSeg divergente", withBase(baseXml, (doc) => setItemProduct(doc, "vSeg", "10.00")), (state) => hasTitle(state, "Total do seguro divergente"), "total vSeg divergente"],
+    ["A18", "vDesc divergente", withBase(baseXml, (doc) => setItemProduct(doc, "vDesc", "10.00")), (state) => hasTitle(state, "Total do desconto divergente"), "total vDesc divergente"],
+    ["A19", "vOutro divergente", withBase(baseXml, (doc) => setItemProduct(doc, "vOutro", "10.00")), (state) => hasTitle(state, "Total de outras despesas divergente"), "total vOutro divergente"],
+    ["R01", "arredondamento dentro da tolerância", withBase(baseXml, (doc) => { setItemProduct(doc, "qCom", "3.0000"); setItemProduct(doc, "vUnCom", "0.3333333333"); setItemProduct(doc, "vProd", "1.00"); setTotal(doc, "vProd", "1.00"); }), (state) => !hasCategoryProblem(state, "items"), "sem falso positivo por precisão"],
+    ["R02", "diferença exatamente no limite", withBase(baseXml, (doc) => { setItemProduct(doc, "qCom", "1.0000"); setItemProduct(doc, "vUnCom", "1.0000000000"); setItemProduct(doc, "vProd", "1.01"); setTotal(doc, "vProd", "1.01"); }), (state) => !hasCategoryProblem(state, "items"), "sem problema com 1 centavo"],
+    ["R03", "diferença acima do limite", withBase(baseXml, (doc) => { setItemProduct(doc, "qCom", "1.0000"); setItemProduct(doc, "vUnCom", "1.0000000000"); setItemProduct(doc, "vProd", "1.02"); setTotal(doc, "vProd", "1.02"); }), (state) => hasCategoryProblem(state, "items"), "problema acima de 1 centavo"],
+    ["M01", "1 item", baseXml, (state) => state.issueCount === 0, "0 inconsistências"],
+    ["M02", "2 itens", withItems(baseXml, 2), (state) => state.issueCount === 0, "0 inconsistências"],
+    ["M10", "12 itens", withItems(baseXml, 12), (state) => state.issueCount === 0, "0 inconsistências"],
+    ["M11", "somente item 7 inconsistente", withItems(baseXml, 10, (doc) => { setItemProductByNumber(doc, 7, "qCom", "10.0000"); setItemProductByNumber(doc, 7, "vUnCom", "15.0000000000"); setItemProductByNumber(doc, 7, "vProd", "140.00"); setTotal(doc, "vProd", "1140.00"); }), (state) => state.issueTitles.some((title) => title.includes("Item 7")) && !state.issueTitles.some((title) => title.includes("Item 6")), "identificar apenas nItem 7"],
+    ["MP01", "múltiplos problemas independentes", withBase(baseXml, (doc) => { setItemProduct(doc, "qCom", "10.0000"); setItemProduct(doc, "vUnCom", "15.0000000000"); setItemProduct(doc, "vProd", "140.00"); setItemTax(doc, "vIPI", "10.00"); setTotal(doc, "vProd", "130.00"); }), (state) => hasCategoryProblem(state, "items") && hasTitle(state, "Total dos produtos divergente") && hasTitle(state, "Total do IPI divergente"), "todos os problemas independentes aparecem"],
+    ["FP01", "falso positivo base simples", baseXml, (state) => state.issueCount === 0, "0 errors/warnings"],
+    ["FP02", "falso positivo nfeProc com protocolo", wrapNfeProc(baseXml), (state) => state.issueCount === 0, "0 errors/warnings"],
+    ["FP03", "falso positivo arredondamento", withBase(baseXml, (doc) => { setItemProduct(doc, "qCom", "3.0000"); setItemProduct(doc, "vUnCom", "0.3333333333"); setItemProduct(doc, "vProd", "1.00"); setTotal(doc, "vProd", "1.00"); }), (state) => state.issueCount === 0, "0 errors/warnings"],
+    ["CTX01", "ICMS20 sem cálculo tributário direto", withBase(baseXml, (doc) => { const icms00 = firstByLocalName(doc, "ICMS00"); const icms20 = doc.createElementNS("http://www.portalfiscal.inf.br/nfe", "ICMS20"); ["vBC", "pICMS", "vICMS"].forEach((tag) => { const node = doc.createElementNS("http://www.portalfiscal.inf.br/nfe", tag); node.textContent = firstByLocalName(icms00, tag).textContent; icms20.appendChild(node); }); icms00.parentNode.replaceChild(icms20, icms00); }), (state) => !hasCategoryProblem(state, "calculations") && state.issueCount === 0, "sem falso positivo em cálculo contextual"],
+  ];
+
+  for (const [id, name, xml, assertion, expected] of cases) {
+    const started = performance.now();
+    const state = await runValidation(id, xml);
+    const elapsed = Math.round(performance.now() - started);
+    record(results, id, name, expected, `${state.issueCount} inconsistência(s); ${state.issueTitles.join("; ") || "nenhuma"}; ${elapsed}ms`, assertion(state));
+  }
+
+  const docState = await runValidation("DOC01", wrapNfeProc(baseXml));
+  record(results, "DOC01", "Documento identificado nfeProc", "Tipo, número, série, emissão, operação, ambiente, emitente, destinatário, chave, natureza e protocolo", JSON.stringify(docState.docCards), Boolean(docState.docCards["Chave de acesso"] && docState.docCards.Protocolo && docState.docCards["Natureza da operação"]));
+
+  clipboard.length = 0;
+  const copyButtons = Array.from(document.querySelectorAll("[data-wc-xml-copy-value]"));
+  copyButtons.forEach((button) => button.click());
+  await wait(50);
+  record(results, "CPY01", "Botões copiar", "todos os valores copiados; chave sem espaços; feedback no botão", `${clipboard.length} cópias; chave=${clipboard.find((value) => /^\d{44}$/.test(value)) || ""}; copied=${document.querySelectorAll(".wc-xml-copy.is-copied").length}`, clipboard.length === copyButtons.length && clipboard.some((value) => /^\d{44}$/.test(value)) && document.querySelectorAll(".wc-xml-copy.is-copied").length > 0);
+
+  const firstCopy = document.querySelector("[data-wc-xml-copy-value]");
+  clipboard.length = 0;
+  firstCopy.focus();
+  firstCopy.dispatchEvent(new KeyboardEvent("keydown", { key: "Enter", bubbles: true }));
+  firstCopy.click();
+  await wait(20);
+  record(results, "CPY02", "Copiar por teclado", "botão focável e acionável", `active=${document.activeElement === firstCopy}; copied=${clipboard.length}`, document.activeElement === firstCopy && clipboard.length === 1);
+
+  const groupedBaseState = await runValidation("V01", baseXml);
+  const groupedBaseCount = Number(groupedBaseState.checksCountText.match(/\d+/)?.[0] || 0);
+  record(results, "V01", "Agrupamento visual de CNPJ", "contador preserva 2 CNPJs e UI mostra uma linha agrupada", `${groupedBaseState.checksCountText}; ${groupedBaseState.checkLines.find((line) => line.includes("CNPJ analisado")) || ""}`, groupedBaseCount > groupedBaseState.checkLines.length && groupedBaseState.checkLines.filter((line) => line.includes("CNPJ analisado")).length === 1 && groupedBaseState.checkLines.some((line) => line.includes("CNPJ analisado em 2 campos")));
+
+  const groupedItemsState = await runValidation("V02", withItems(baseXml, 12));
+  record(results, "V02", "Agrupamento visual de vProd em múltiplos itens", "UI não mostra dezenas de linhas vProd repetidas", groupedItemsState.checkLines.filter((line) => line.includes("vProd numérico analisado")).join(" | "), groupedItemsState.checkLines.some((line) => line.includes("vProd numérico analisado em 12 itens")) && groupedItemsState.checkLines.filter((line) => line.includes("vProd numérico analisado")).length <= 2);
+
+  record(results, "V03", "Uma ocorrência sem sufixo de agrupamento", "dhEmi analisada sem 'em 1 campo'", groupedBaseState.checkLines.find((line) => line.includes("dhEmi analisada")) || "", groupedBaseState.checkLines.some((line) => line.includes("dhEmi analisada")) && !groupedBaseState.checkLines.some((line) => line.includes("dhEmi analisada em 1")));
+
+  const invalidGroupedState = await runValidation("V04", withBase(baseXml, (doc) => setFirstText(doc, "CNPJ", "00000000000000")));
+  record(results, "V04", "Agrupamento não esconde problema", "linha agrupada aparece e inconsistência individual permanece", `${invalidGroupedState.checkLines.find((line) => line.includes("CNPJ analisado")) || ""}; issues=${invalidGroupedState.issueTitles.join("; ")}`, invalidGroupedState.checkLines.some((line) => line.includes("CNPJ analisado em 2 campos")) && invalidGroupedState.issueTitles.some((title) => title.includes("CNPJ com formato inválido")));
+
+  const checksToggle = document.querySelector("[data-wc-xml-checks-toggle]");
+  const beforeToggle = document.querySelector(".wc-xml-checks__list").hidden;
+  checksToggle.click();
+  const afterToggle = document.querySelector(".wc-xml-checks__list").hidden;
+  record(results, "UI01", "Verificações realizadas recolhível", "recolhida por padrão e expande ao clique", `beforeHidden=${beforeToggle}; afterHidden=${afterToggle}; ${document.querySelector(".wc-xml-checks__count").textContent}`, beforeToggle === true && afterToggle === false);
+
+  const invalidTotalState = await runValidation("LOC01", withBase(baseXml, (doc) => setTotal(doc, "vProd", "99.00")));
+  document.querySelector("[data-wc-xml-locate]").click();
+  await wait(80);
+  record(results, "LOC01", "Localizar problema em totalizador", "highlight em linha do XML", `highlight=${document.querySelectorAll(".wc-xml-tree__line.is-highlighted").length}; paths=${invalidTotalState.treePaths}`, document.querySelectorAll(".wc-xml-tree__line.is-highlighted").length === 1);
+
+  const invalidItemState = await runValidation("LOC02", withBase(baseXml, (doc) => { setItemProduct(doc, "qCom", "10.0000"); setItemProduct(doc, "vUnCom", "15.0000000000"); setItemProduct(doc, "vProd", "140.00"); setTotal(doc, "vProd", "140.00"); }));
+  document.querySelector("[data-wc-xml-locate]").click();
+  await wait(80);
+  record(results, "LOC02", "Localizar problema em item", "highlight em linha do XML", `highlight=${document.querySelectorAll(".wc-xml-tree__line.is-highlighted").length}; titles=${invalidItemState.issueTitles.join("; ")}`, document.querySelectorAll(".wc-xml-tree__line.is-highlighted").length >= 1);
+
+  const invalidFieldState = await runValidation("LOC03", withBase(baseXml, (doc) => setFirstText(doc, "CEP", "ABC")));
+  document.querySelector("[data-wc-xml-locate]").click();
+  await wait(80);
+  record(results, "LOC03", "Localizar problema em campo", "highlight em linha do XML", `highlight=${document.querySelectorAll(".wc-xml-tree__line.is-highlighted").length}; titles=${invalidFieldState.issueTitles.join("; ")}`, document.querySelectorAll(".wc-xml-tree__line.is-highlighted").length >= 1);
+
+  const collapseButton = document.querySelector("[data-wc-xml-collapse]");
+  const expandButton = document.querySelector("[data-wc-xml-expand]");
+  collapseButton.click();
+  const collapsedAfterCollapse = document.querySelectorAll(".wc-xml-node.is-collapsed").length;
+  expandButton.click();
+  const collapsedAfterExpand = document.querySelectorAll(".wc-xml-node.is-collapsed").length;
+  record(results, "UI02", "Expandir/Recolher árvore", "recolhe e expande nós", `collapse=${collapsedAfterCollapse}; expand=${collapsedAfterExpand}`, collapsedAfterCollapse > 0 && collapsedAfterExpand === 0);
+
+  const editButton = document.querySelector("[data-wc-xml-edit]");
+  editButton.click();
+  await wait(20);
+  record(results, "UI03", "Editar XML preserva conteúdo", "textarea preenchido e botão validar visível", `length=${document.querySelector("[data-wc-xml-content]").value.length}; validateHidden=${document.querySelector("[data-wc-xml-validate]").hidden}`, document.querySelector("[data-wc-xml-content]").value.length > 0 && !document.querySelector("[data-wc-xml-validate]").hidden);
+
+  const fileInput = document.querySelector("[data-wc-xml-file]");
+  const fileData = new DataTransfer();
+  fileData.items.add(new File([baseXml], "base-nfe.xml", { type: "application/xml" }));
+  Object.defineProperty(fileInput, "files", { configurable: true, value: fileData.files });
+  fileInput.dispatchEvent(new Event("change", { bubbles: true }));
+  await wait(120);
+  record(results, "UI04", "Selecionar arquivo XML", "textarea recebe conteúdo do arquivo", `length=${document.querySelector("[data-wc-xml-content]").value.length}`, document.querySelector("[data-wc-xml-content]").value.includes("<NFe"));
+
+  const dropData = new DataTransfer();
+  dropData.items.add(new File([baseXml], "base-nfe-drop.xml", { type: "application/xml" }));
+  const dropzone = document.querySelector(".wc-xml-dropzone");
+  dropzone.dispatchEvent(new DragEvent("dragover", { bubbles: true, cancelable: true, dataTransfer: dropData }));
+  dropzone.dispatchEvent(new DragEvent("drop", { bubbles: true, cancelable: true, dataTransfer: dropData }));
+  await wait(120);
+  record(results, "UI05", "Arrastar e soltar arquivo XML", "textarea recebe conteúdo do arquivo solto e dropzone limpa destaque", `length=${document.querySelector("[data-wc-xml-content]").value.length}; active=${dropzone.classList.contains("wc-xml-dropzone--active")}`, document.querySelector("[data-wc-xml-content]").value.includes("<NFe") && !dropzone.classList.contains("wc-xml-dropzone--active"));
+
+  const bigStarted = performance.now();
+  const bigState = await runValidation("PERF01", withItems(baseXml, 120));
+  const bigElapsed = Math.round(performance.now() - bigStarted);
+  record(results, "PERF01", "XML grande 120 itens", "sem travamento perceptível", `${bigElapsed}ms; ${bigState.issueCount} inconsistência(s); ${bigState.treePaths} paths`, bigElapsed < 8000 && bigState.issueCount === 0);
+
+  const pass = results.filter((result) => result.status === "PASS").length;
+  const fail = results.filter((result) => result.status === "FAIL").length;
+  const unsupported = results.filter((result) => result.status === "NÃO SUPORTADO").length;
+  const payload = { summary: { total: results.length, pass, fail, unsupported }, results };
+  document.body.dataset.testsDone = "true";
+  document.getElementById("xml-validator-results").textContent = JSON.stringify(payload, null, 2);
+}
+
+window.addEventListener("load", () => {
+  main().catch((error) => {
+    document.body.dataset.testsDone = "error";
+    document.getElementById("xml-validator-results").textContent = JSON.stringify({ error: error.message, stack: error.stack }, null, 2);
+  });
+});
+</script>

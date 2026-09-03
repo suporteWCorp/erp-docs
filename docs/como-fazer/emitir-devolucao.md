@@ -5,6 +5,8 @@ error_tags:
   - "devolucao"
   - "nfe"
   - "fiscal"
+search:
+  exclude: true
 ---
 
 # Como emitir uma devolução

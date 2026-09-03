@@ -1,0 +1,339 @@
+{
+  "summary": {
+    "total": 47,
+    "pass": 47,
+    "fail": 0,
+    "unsupported": 0
+  },
+  "results": [
+    {
+      "id": "A01",
+      "case": "XML normal sem inconsistências conhecidas",
+      "expected": "0 inconsistências",
+      "obtained": "0 inconsistência(s); nenhuma; 3006ms",
+      "status": "PASS"
+    },
+    {
+      "id": "A02",
+      "case": "XML malformado",
+      "expected": "erro de estrutura e dependentes não verificadas",
+      "obtained": "1 inconsistência(s); XML malformado; 2661ms",
+      "status": "PASS"
+    },
+    {
+      "id": "A03",
+      "case": "raiz/tipo incompatível",
+      "expected": "comportamento controlado sem crash",
+      "obtained": "1 inconsistência(s); Tipo de documento não suportado; 2626ms",
+      "status": "PASS"
+    },
+    {
+      "id": "A04",
+      "case": "CNPJ inválido",
+      "expected": "problema em campos e formatos",
+      "obtained": "1 inconsistência(s); CNPJ com formato inválido; 2632ms",
+      "status": "PASS"
+    },
+    {
+      "id": "A05",
+      "case": "campo numérico inválido",
+      "expected": "problema de campo numérico",
+      "obtained": "2 inconsistência(s); Campo vProd não numérico; Total dos produtos divergente; 3869ms",
+      "status": "PASS"
+    },
+    {
+      "id": "A06",
+      "case": "nItem duplicado",
+      "expected": "problema em Itens",
+      "obtained": "1 inconsistência(s); nItem duplicado: 1; 2633ms",
+      "status": "PASS"
+    },
+    {
+      "id": "A07",
+      "case": "qCom x vUnCom divergente",
+      "expected": "problema em cálculo do item",
+      "obtained": "1 inconsistência(s); Item 1 com vProd divergente; 2633ms",
+      "status": "PASS"
+    },
+    {
+      "id": "A08",
+      "case": "vProd total divergente",
+      "expected": "total vProd divergente",
+      "obtained": "1 inconsistência(s); Total dos produtos divergente; 2633ms",
+      "status": "PASS"
+    },
+    {
+      "id": "A09",
+      "case": "vBC divergente",
+      "expected": "total vBC divergente",
+      "obtained": "1 inconsistência(s); Total da BC do ICMS divergente; 2632ms",
+      "status": "PASS"
+    },
+    {
+      "id": "A10",
+      "case": "vICMS divergente",
+      "expected": "total vICMS divergente",
+      "obtained": "1 inconsistência(s); Total do ICMS divergente; 2635ms",
+      "status": "PASS"
+    },
+    {
+      "id": "A11",
+      "case": "vBCST divergente",
+      "expected": "total vBCST divergente",
+      "obtained": "1 inconsistência(s); Total da BC ICMS-ST divergente; 2632ms",
+      "status": "PASS"
+    },
+    {
+      "id": "A12",
+      "case": "vST divergente",
+      "expected": "total vST divergente",
+      "obtained": "1 inconsistência(s); Total do ICMS-ST divergente; 2628ms",
+      "status": "PASS"
+    },
+    {
+      "id": "A13",
+      "case": "vIPI divergente",
+      "expected": "total vIPI divergente",
+      "obtained": "1 inconsistência(s); Total do IPI divergente; 2635ms",
+      "status": "PASS"
+    },
+    {
+      "id": "A14",
+      "case": "vPIS divergente",
+      "expected": "total vPIS divergente",
+      "obtained": "1 inconsistência(s); Total do PIS divergente; 2631ms",
+      "status": "PASS"
+    },
+    {
+      "id": "A15",
+      "case": "vCOFINS divergente",
+      "expected": "total vCOFINS divergente",
+      "obtained": "1 inconsistência(s); Total do COFINS divergente; 2639ms",
+      "status": "PASS"
+    },
+    {
+      "id": "A16",
+      "case": "vFrete divergente",
+      "expected": "total vFrete divergente",
+      "obtained": "1 inconsistência(s); Total do frete divergente; 2637ms",
+      "status": "PASS"
+    },
+    {
+      "id": "A17",
+      "case": "vSeg divergente",
+      "expected": "total vSeg divergente",
+      "obtained": "1 inconsistência(s); Total do seguro divergente; 2629ms",
+      "status": "PASS"
+    },
+    {
+      "id": "A18",
+      "case": "vDesc divergente",
+      "expected": "total vDesc divergente",
+      "obtained": "1 inconsistência(s); Total do desconto divergente; 2634ms",
+      "status": "PASS"
+    },
+    {
+      "id": "A19",
+      "case": "vOutro divergente",
+      "expected": "total vOutro divergente",
+      "obtained": "1 inconsistência(s); Total de outras despesas divergente; 2633ms",
+      "status": "PASS"
+    },
+    {
+      "id": "R01",
+      "case": "arredondamento dentro da tolerância",
+      "expected": "sem falso positivo por precisão",
+      "obtained": "0 inconsistência(s); nenhuma; 2626ms",
+      "status": "PASS"
+    },
+    {
+      "id": "R02",
+      "case": "diferença exatamente no limite",
+      "expected": "sem problema com 1 centavo",
+      "obtained": "0 inconsistência(s); nenhuma; 2627ms",
+      "status": "PASS"
+    },
+    {
+      "id": "R03",
+      "case": "diferença acima do limite",
+      "expected": "problema acima de 1 centavo",
+      "obtained": "1 inconsistência(s); Item 1 com vProd divergente; 2629ms",
+      "status": "PASS"
+    },
+    {
+      "id": "M01",
+      "case": "1 item",
+      "expected": "0 inconsistências",
+      "obtained": "0 inconsistência(s); nenhuma; 2626ms",
+      "status": "PASS"
+    },
+    {
+      "id": "M02",
+      "case": "2 itens",
+      "expected": "0 inconsistências",
+      "obtained": "0 inconsistência(s); nenhuma; 2631ms",
+      "status": "PASS"
+    },
+    {
+      "id": "M10",
+      "case": "12 itens",
+      "expected": "0 inconsistências",
+      "obtained": "0 inconsistência(s); nenhuma; 2636ms",
+      "status": "PASS"
+    },
+    {
+      "id": "M11",
+      "case": "somente item 7 inconsistente",
+      "expected": "identificar apenas nItem 7",
+      "obtained": "2 inconsistência(s); Item 7 com vProd divergente; Total dos produtos divergente; 2636ms",
+      "status": "PASS"
+    },
+    {
+      "id": "MP01",
+      "case": "múltiplos problemas independentes",
+      "expected": "todos os problemas independentes aparecem",
+      "obtained": "3 inconsistência(s); Item 1 com vProd divergente; Total dos produtos divergente; Total do IPI divergente; 2633ms",
+      "status": "PASS"
+    },
+    {
+      "id": "FP01",
+      "case": "falso positivo base simples",
+      "expected": "0 errors/warnings",
+      "obtained": "0 inconsistência(s); nenhuma; 2634ms",
+      "status": "PASS"
+    },
+    {
+      "id": "FP02",
+      "case": "falso positivo nfeProc com protocolo",
+      "expected": "0 errors/warnings",
+      "obtained": "0 inconsistência(s); nenhuma; 2634ms",
+      "status": "PASS"
+    },
+    {
+      "id": "FP03",
+      "case": "falso positivo arredondamento",
+      "expected": "0 errors/warnings",
+      "obtained": "0 inconsistência(s); nenhuma; 2637ms",
+      "status": "PASS"
+    },
+    {
+      "id": "CTX01",
+      "case": "ICMS20 sem cálculo tributário direto",
+      "expected": "sem falso positivo em cálculo contextual",
+      "obtained": "0 inconsistência(s); nenhuma; 2633ms",
+      "status": "PASS"
+    },
+    {
+      "id": "DOC01",
+      "case": "Documento identificado nfeProc",
+      "expected": "Tipo, número, série, emissão, operação, ambiente, emitente, destinatário, chave, natureza e protocolo",
+      "obtained": "{\"Tipo\":\"NF-e 4.00\",\"Número\":\"NF 1 · Série 1\",\"Emissão\":\"2026-08-25T10:00:00-03:00\",\"Operação\":\"Saída\",\"Ambiente\":\"Homologação\",\"Protocolo\":\"135260000000000\",\"Emitente\":\"WCorp Teste Emitente LTDA\",\"Destinatário\":\"WCorp Teste Destinatario LTDA\",\"Chave de acesso\":\"3526 0811 2223 3300 0181 5500 1000 0000 0110 0000 0010\",\"Natureza da operação\":\"VENDA DE PRODUCAO PROPRIA\"}",
+      "status": "PASS"
+    },
+    {
+      "id": "CPY01",
+      "case": "Botões copiar",
+      "expected": "todos os valores copiados; chave sem espaços; feedback no botão",
+      "obtained": "10 cópias; chave=35260811222333000181550010000000011000000010; copied=10",
+      "status": "PASS"
+    },
+    {
+      "id": "CPY02",
+      "case": "Copiar por teclado",
+      "expected": "botão focável e acionável",
+      "obtained": "active=true; copied=1",
+      "status": "PASS"
+    },
+    {
+      "id": "V01",
+      "case": "Agrupamento visual de CNPJ",
+      "expected": "contador preserva 2 CNPJs e UI mostra uma linha agrupada",
+      "obtained": "74 verificações concluídas; ✓CNPJ analisado em 2 campos",
+      "status": "PASS"
+    },
+    {
+      "id": "V02",
+      "case": "Agrupamento visual de vProd em múltiplos itens",
+      "expected": "UI não mostra dezenas de linhas vProd repetidas",
+      "obtained": "✓vProd numérico analisado em 12 itens | ✓vProd numérico analisado",
+      "status": "PASS"
+    },
+    {
+      "id": "V03",
+      "case": "Uma ocorrência sem sufixo de agrupamento",
+      "expected": "dhEmi analisada sem 'em 1 campo'",
+      "obtained": "✓dhEmi analisada",
+      "status": "PASS"
+    },
+    {
+      "id": "V04",
+      "case": "Agrupamento não esconde problema",
+      "expected": "linha agrupada aparece e inconsistência individual permanece",
+      "obtained": "✓CNPJ analisado em 2 campos; issues=CNPJ com formato inválido",
+      "status": "PASS"
+    },
+    {
+      "id": "UI01",
+      "case": "Verificações realizadas recolhível",
+      "expected": "recolhida por padrão e expande ao clique",
+      "obtained": "beforeHidden=true; afterHidden=false; 74 verificações concluídas",
+      "status": "PASS"
+    },
+    {
+      "id": "LOC01",
+      "case": "Localizar problema em totalizador",
+      "expected": "highlight em linha do XML",
+      "obtained": "highlight=1; paths=132",
+      "status": "PASS"
+    },
+    {
+      "id": "LOC02",
+      "case": "Localizar problema em item",
+      "expected": "highlight em linha do XML",
+      "obtained": "highlight=1; titles=Item 1 com vProd divergente",
+      "status": "PASS"
+    },
+    {
+      "id": "LOC03",
+      "case": "Localizar problema em campo",
+      "expected": "highlight em linha do XML",
+      "obtained": "highlight=1; titles=CEP com formato inesperado",
+      "status": "PASS"
+    },
+    {
+      "id": "UI02",
+      "case": "Expandir/Recolher árvore",
+      "expected": "recolhe e expande nós",
+      "obtained": "collapse=20; expand=0",
+      "status": "PASS"
+    },
+    {
+      "id": "UI03",
+      "case": "Editar XML preserva conteúdo",
+      "expected": "textarea preenchido e botão validar visível",
+      "obtained": "length=2878; validateHidden=false",
+      "status": "PASS"
+    },
+    {
+      "id": "UI04",
+      "case": "Selecionar arquivo XML",
+      "expected": "textarea recebe conteúdo do arquivo",
+      "obtained": "length=2885",
+      "status": "PASS"
+    },
+    {
+      "id": "UI05",
+      "case": "Arrastar e soltar arquivo XML",
+      "expected": "textarea recebe conteúdo do arquivo solto e dropzone limpa destaque",
+      "obtained": "length=2885; active=false",
+      "status": "PASS"
+    },
+    {
+      "id": "PERF01",
+      "case": "XML grande 120 itens",
+      "expected": "sem travamento perceptível",
+      "obtained": "2733ms; 0 inconsistência(s); 6320 paths",
+      "status": "PASS"
+    }
+  ]
+}

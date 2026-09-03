@@ -5,6 +5,8 @@ error_tags:
   - "contas a pagar"
   - "titulo"
   - "fornecedor"
+search:
+  exclude: true
 ---
 
 # Como lançar contas a pagar

@@ -1,0 +1,261 @@
+{
+  "generatedAt": "2026-08-28T19:48:10.198Z",
+  "auditFiles": [
+    "docs/index.md",
+    "docs/como-fazer/index.md",
+    "docs/manual/index.md",
+    "docs/referencia/index.md",
+    "docs/referencia/faq.md",
+    "docs/referencia/links-uteis.md",
+    "docs/erros-solucoes/index.md",
+    "docs/erros-solucoes/rejeicoes-fiscais.md",
+    "docs/erros-solucoes/erros-operacionais.md",
+    "docs/erros-solucoes/problemas-tecnicos.md",
+    "docs/suporte/index.md"
+  ],
+  "allLinks": [
+    {
+      "from": "docs/index.md",
+      "href": "como-fazer/index.md",
+      "target": "docs/como-fazer/index.md"
+    },
+    {
+      "from": "docs/index.md",
+      "href": "manual/index.md",
+      "target": "docs/manual/index.md"
+    },
+    {
+      "from": "docs/index.md",
+      "href": "ferramentas/index.md",
+      "target": "docs/ferramentas/index.md"
+    },
+    {
+      "from": "docs/index.md",
+      "href": "suporte/index.md",
+      "target": "docs/suporte/index.md"
+    },
+    {
+      "from": "docs/como-fazer/index.md",
+      "href": "cadastrar-natureza-operacao.md",
+      "target": "docs/como-fazer/cadastrar-natureza-operacao.md"
+    },
+    {
+      "from": "docs/como-fazer/index.md",
+      "href": "cadastrar-condicao-pagamento.md",
+      "target": "docs/como-fazer/cadastrar-condicao-pagamento.md"
+    },
+    {
+      "from": "docs/como-fazer/index.md",
+      "href": "cadastrar-centro-custo.md",
+      "target": "docs/como-fazer/cadastrar-centro-custo.md"
+    },
+    {
+      "from": "docs/como-fazer/index.md",
+      "href": "cadastrar-usuario.md",
+      "target": "docs/como-fazer/cadastrar-usuario.md"
+    },
+    {
+      "from": "docs/como-fazer/index.md",
+      "href": "configurar-grupo-usuario.md",
+      "target": "docs/como-fazer/configurar-grupo-usuario.md"
+    },
+    {
+      "from": "docs/como-fazer/index.md",
+      "href": "cadastrar-cliente.md",
+      "target": "docs/como-fazer/cadastrar-cliente.md"
+    },
+    {
+      "from": "docs/como-fazer/index.md",
+      "href": "criar-orcamento.md",
+      "target": "docs/como-fazer/criar-orcamento.md"
+    },
+    {
+      "from": "docs/como-fazer/index.md",
+      "href": "fazer-pedido-venda.md",
+      "target": "docs/como-fazer/fazer-pedido-venda.md"
+    },
+    {
+      "from": "docs/como-fazer/index.md",
+      "href": "cadastrar-material.md",
+      "target": "docs/como-fazer/cadastrar-material.md"
+    },
+    {
+      "from": "docs/como-fazer/index.md",
+      "href": "fazer-inventario.md",
+      "target": "docs/como-fazer/fazer-inventario.md"
+    },
+    {
+      "from": "docs/como-fazer/index.md",
+      "href": "faturar-nota.md",
+      "target": "docs/como-fazer/faturar-nota.md"
+    },
+    {
+      "from": "docs/como-fazer/index.md",
+      "href": "cancelar-nfe.md",
+      "target": "docs/como-fazer/cancelar-nfe.md"
+    },
+    {
+      "from": "docs/como-fazer/index.md",
+      "href": "emitir-carta-correcao.md",
+      "target": "docs/como-fazer/emitir-carta-correcao.md"
+    },
+    {
+      "from": "docs/como-fazer/index.md",
+      "href": "importar-xml.md",
+      "target": "docs/como-fazer/importar-xml.md"
+    },
+    {
+      "from": "docs/como-fazer/index.md",
+      "href": "gerar-boleto.md",
+      "target": "docs/como-fazer/gerar-boleto.md"
+    },
+    {
+      "from": "docs/manual/index.md",
+      "href": "../comercial/comercial-geral.md",
+      "target": "docs/comercial/comercial-geral.md"
+    },
+    {
+      "from": "docs/manual/index.md",
+      "href": "../faturamento/faturamento-geral.md",
+      "target": "docs/faturamento/faturamento-geral.md"
+    },
+    {
+      "from": "docs/manual/index.md",
+      "href": "../financeiro/financeiro-geral.md",
+      "target": "docs/financeiro/financeiro-geral.md"
+    },
+    {
+      "from": "docs/manual/index.md",
+      "href": "../colaboradores/colaboradores-geral.md",
+      "target": "docs/colaboradores/colaboradores-geral.md"
+    },
+    {
+      "from": "docs/manual/index.md",
+      "href": "../fornecedores/fornecedores-geral.md",
+      "target": "docs/fornecedores/fornecedores-geral.md"
+    },
+    {
+      "from": "docs/manual/index.md",
+      "href": "../materiais/materiais-geral.md",
+      "target": "docs/materiais/materiais-geral.md"
+    },
+    {
+      "from": "docs/manual/index.md",
+      "href": "../servicos/servicos-geral.md",
+      "target": "docs/servicos/servicos-geral.md"
+    },
+    {
+      "from": "docs/manual/index.md",
+      "href": "../contratos/contratos-geral.md",
+      "target": "docs/contratos/contratos-geral.md"
+    },
+    {
+      "from": "docs/manual/index.md",
+      "href": "../compras/compras-geral.md",
+      "target": "docs/compras/compras-geral.md"
+    },
+    {
+      "from": "docs/manual/index.md",
+      "href": "../producao/producao-geral.md",
+      "target": "docs/producao/producao-geral.md"
+    },
+    {
+      "from": "docs/manual/index.md",
+      "href": "../transportes/transportes-geral.md",
+      "target": "docs/transportes/transportes-geral.md"
+    },
+    {
+      "from": "docs/manual/index.md",
+      "href": "../relatorios/relatorios-geral.md",
+      "target": "docs/relatorios/relatorios-geral.md"
+    },
+    {
+      "from": "docs/manual/index.md",
+      "href": "../administracao/administracao-geral.md",
+      "target": "docs/administracao/administracao-geral.md"
+    },
+    {
+      "from": "docs/referencia/faq.md",
+      "href": "faq/cancelar-cte-apos-prazo.md",
+      "target": "docs/referencia/faq/cancelar-cte-apos-prazo.md"
+    },
+    {
+      "from": "docs/referencia/faq.md",
+      "href": "faq/cancelar-nfe-apos-prazo.md",
+      "target": "docs/referencia/faq/cancelar-nfe-apos-prazo.md"
+    },
+    {
+      "from": "docs/referencia/faq.md",
+      "href": "faq/comissao-cliente.md",
+      "target": "docs/referencia/faq/comissao-cliente.md"
+    },
+    {
+      "from": "docs/referencia/faq.md",
+      "href": "faq/bloquear-venda-cliente-inadimplente.md",
+      "target": "docs/referencia/faq/bloquear-venda-cliente-inadimplente.md"
+    },
+    {
+      "from": "docs/referencia/faq.md",
+      "href": "faq/editar-pedido-bloqueado-workflow.md",
+      "target": "docs/referencia/faq/editar-pedido-bloqueado-workflow.md"
+    },
+    {
+      "from": "docs/referencia/faq.md",
+      "href": "faq/alterar-ncm-produto.md",
+      "target": "docs/referencia/faq/alterar-ncm-produto.md"
+    },
+    {
+      "from": "docs/referencia/faq.md",
+      "href": "faq/alterar-cfop-csosn.md",
+      "target": "docs/referencia/faq/alterar-cfop-csosn.md"
+    },
+    {
+      "from": "docs/referencia/faq.md",
+      "href": "faq/alterar-cfop-cst.md",
+      "target": "docs/referencia/faq/alterar-cfop-cst.md"
+    },
+    {
+      "from": "docs/referencia/faq.md",
+      "href": "../administracao/usuarios.md",
+      "target": "docs/administracao/usuarios.md"
+    },
+    {
+      "from": "docs/referencia/faq.md",
+      "href": "../relatorios/xml-nfe.md",
+      "target": "docs/relatorios/xml-nfe.md"
+    },
+    {
+      "from": "docs/referencia/faq.md",
+      "href": "../suporte/abertura-de-chamado.md",
+      "target": "docs/suporte/abertura-de-chamado.md"
+    },
+    {
+      "from": "docs/referencia/faq.md",
+      "href": "../administracao/grupo-usuarios.md",
+      "target": "docs/administracao/grupo-usuarios.md"
+    },
+    {
+      "from": "docs/erros-solucoes/index.md",
+      "href": "rejeicoes-fiscais.md",
+      "target": "docs/erros-solucoes/rejeicoes-fiscais.md"
+    },
+    {
+      "from": "docs/erros-solucoes/index.md",
+      "href": "erros-operacionais.md",
+      "target": "docs/erros-solucoes/erros-operacionais.md"
+    },
+    {
+      "from": "docs/erros-solucoes/index.md",
+      "href": "problemas-tecnicos.md",
+      "target": "docs/erros-solucoes/problemas-tecnicos.md"
+    },
+    {
+      "from": "docs/erros-solucoes/rejeicoes-fiscais.md",
+      "href": "../suporte/index.md",
+      "target": "docs/suporte/index.md"
+    }
+  ],
+  "brokenLinks": [],
+  "brokenAssets": [],
+  "site404Exists": true
+}

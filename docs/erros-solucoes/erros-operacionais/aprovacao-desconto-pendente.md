@@ -6,6 +6,8 @@ mensagem_original: "Existe(m) pedido(s) pendente(s) de aprovação de desconto"
 modulo_relacionado: "Faturamento"
 ---
 
+<div class="wcorp-inner-page wcorp-error-article-page" markdown>
+
 # Existe(m) pedido(s) pendente(s) de aprovação de desconto
 
 ## Mensagem apresentada
@@ -13,6 +15,11 @@ modulo_relacionado: "Faturamento"
 Ao selecionar o pedido na aba de NF-e, o sistema apresenta:
 
 > Existe(m) pedido(s) pendente(s) de aprovação de desconto
+
+<figure class="wc-operational-error-print">
+  <img src="../../assets/images/erros-operacionais/aprovacao-desconto-pendente.png" alt="Mensagem apresentada no WCorp: pedido pendente de aprovação de desconto">
+  <figcaption>Mensagem apresentada no WCorp</figcaption>
+</figure>
 
 ## Por que ocorre
 
@@ -29,3 +36,5 @@ No cadastro do pedido, clique no botão **Autorizar Desconto**. Ele fica logo ac
 ## Cuidados e permissões
 
 Se o usuário não possuir autorização para aplicar o desconto, verifique com o responsável da empresa pela liberação dessa função ao usuário.
+
+</div>

@@ -28,9 +28,11 @@ body:has([data-md-toggle="search"]:checked) .wc-assistant {
     max-height: min(500px, calc(100vh - 112px));
     overflow: hidden;
     pointer-events: auto;
-    position: absolute;
-    right: 0;
-    bottom: 4.15rem;
+    position: fixed;
+    left: var(--wc-assistant-panel-left, 0);
+    top: auto;
+    right: auto;
+    bottom: var(--wc-assistant-panel-bottom, 0);
     transform-origin: bottom right;
     width: min(340px, calc(100vw - 32px));
 }
@@ -446,12 +448,8 @@ body:has([data-md-toggle="search"]:checked) .wc-assistant {
 @media screen and (min-width: 76.25em) {
     .wc-assistant--open .wc-assistant__panel,
     .wc-assistant--closing .wc-assistant__panel {
-        bottom: auto;
         height: min(480px, calc(100vh - var(--wc-header-height, 3.6rem) - var(--wc-breadcrumb-height, 2.15rem) - 1.25rem));
         max-height: min(480px, calc(100vh - var(--wc-header-height, 3.6rem) - var(--wc-breadcrumb-height, 2.15rem) - 1.25rem));
-        position: fixed;
-        right: clamp(0.9rem, 2vw, 1.6rem);
-        top: calc(var(--wc-header-height, 3.6rem) + var(--wc-breadcrumb-height, 2.15rem) + 0.7rem);
         width: min(300px, calc(100vw - 2rem));
         z-index: 20;
     }
@@ -464,8 +462,6 @@ body:has([data-md-toggle="search"]:checked) .wc-assistant {
     }
 
     .wc-assistant__panel {
-        bottom: 4rem;
-        right: 0;
         height: min(500px, calc(100vh - 96px));
         max-height: min(500px, calc(100vh - 96px));
         width: min(340px, calc(100vw - 1.6rem));

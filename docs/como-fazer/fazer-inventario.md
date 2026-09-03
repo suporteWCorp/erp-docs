@@ -6,6 +6,8 @@ error_tags:
   - "estoque"
   - "saldo"
   - "material"
+search:
+  exclude: true
 ---
 
 # Como fazer inventário

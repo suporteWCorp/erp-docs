@@ -40,9 +40,20 @@
   function loadContentInfo() {
     if (contentInfoCache) return contentInfoCache;
 
-    contentInfoCache = fetch(new URL(dataPath, rootUrl()).href)
-      .then((response) => (response.ok ? response.json() : {}))
-      .catch(() => ({}));
+    contentInfoCache = window.WCorpContentInfo?.loadContentInfoWithPopularity
+      ? window.WCorpContentInfo.loadContentInfoWithPopularity()
+      : fetch(new URL(dataPath, rootUrl()).href)
+        .then((response) => (response.ok ? response.json() : {}))
+        .then((infoByPath) => {
+          Object.entries(infoByPath || {}).forEach(([path, data]) => {
+            if (path.startsWith("como-fazer/")) {
+              data.popular = false;
+              data.popularityTotal = 0;
+            }
+          });
+          return infoByPath;
+        })
+        .catch(() => ({}));
 
     return contentInfoCache;
   }
@@ -84,10 +95,11 @@
     return elementLabel(heading);
   }
 
-  function cardPopularity(card, infoByPath) {
+  function cardPopularity(card, infoByPath, useRealTotal = false) {
     const link = card.querySelector("a[href]");
     if (!link) return 0;
-    return infoByPath[contentKey(link.href)]?.popular ? 1 : 0;
+    const data = infoByPath[contentKey(link.href)];
+    return useRealTotal ? Number(data?.popularityTotal) || 0 : data?.popular ? 1 : 0;
   }
 
   function closeFilter(wrapper) {
@@ -256,7 +268,7 @@
           items: cards.map((card, cardIndex) => ({
             card,
             originalIndex: cardIndex,
-            popularity: cardPopularity(card, infoByPath),
+            popularity: cardPopularity(card, infoByPath, true),
             title: cardTitle(card)
           })),
           sectionIndex

@@ -5,6 +5,8 @@ error_tags:
   - "nota complementar"
   - "nfe"
   - "fiscal"
+search:
+  exclude: true
 ---
 
 # Como emitir uma nota complementar

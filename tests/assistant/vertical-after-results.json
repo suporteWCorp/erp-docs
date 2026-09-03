@@ -1,0 +1,898 @@
+{
+  "generatedAt": "2026-08-29T19:52:58.099Z",
+  "page": "site/index.html",
+  "scenarios": [
+    {
+      "viewport": "1366x768",
+      "history": false,
+      "scrollMode": "top",
+      "metric": {
+        "label": "1366x768-vazio-top",
+        "scrollY": 0,
+        "panelTop": 190,
+        "panelBottom": 670,
+        "avatarTop": 681,
+        "avatarBottom": 746,
+        "verticalGap": 11,
+        "horizontalDelta": 0,
+        "panelHeight": 480,
+        "panelOffsetHeight": 480,
+        "styleHeight": "480px",
+        "styleMaxHeight": "480px",
+        "styleTop": "190px",
+        "styleBottom": "98px",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "hidden": false,
+        "display": "flex",
+        "visibility": "visible"
+      },
+      "shotPath": null,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "requestFailures": [
+        {
+          "url": "file:///C:/Users/wavec/OneDrive/Documentos/GitHub/erp-docs/site/assets/wcorp-logo-header.png",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "file:///C:/Users/wavec/OneDrive/Documentos/GitHub/erp-docs/site/assets/wcorp-logo-header.png",
+          "error": "net::ERR_ABORTED"
+        }
+      ]
+    },
+    {
+      "viewport": "1366x768",
+      "history": false,
+      "scrollMode": "middle",
+      "metric": {
+        "label": "1366x768-vazio-middle",
+        "scrollY": 516,
+        "panelTop": 190,
+        "panelBottom": 670,
+        "avatarTop": 681,
+        "avatarBottom": 746,
+        "verticalGap": 11,
+        "horizontalDelta": 0,
+        "panelHeight": 480,
+        "panelOffsetHeight": 480,
+        "styleHeight": "480px",
+        "styleMaxHeight": "480px",
+        "styleTop": "190px",
+        "styleBottom": "98px",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "hidden": false,
+        "display": "flex",
+        "visibility": "visible"
+      },
+      "shotPath": null,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "requestFailures": [
+        {
+          "url": "file:///C:/Users/wavec/OneDrive/Documentos/GitHub/erp-docs/site/assets/wcorp-logo-header.png",
+          "error": "net::ERR_ABORTED"
+        }
+      ]
+    },
+    {
+      "viewport": "1366x768",
+      "history": false,
+      "scrollMode": "bottom",
+      "metric": {
+        "label": "1366x768-vazio-bottom",
+        "scrollY": 1032,
+        "panelTop": 190,
+        "panelBottom": 670,
+        "avatarTop": 681,
+        "avatarBottom": 746,
+        "verticalGap": 11,
+        "horizontalDelta": 0,
+        "panelHeight": 480,
+        "panelOffsetHeight": 480,
+        "styleHeight": "480px",
+        "styleMaxHeight": "480px",
+        "styleTop": "190px",
+        "styleBottom": "98px",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "hidden": false,
+        "display": "flex",
+        "visibility": "visible"
+      },
+      "shotPath": null,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "requestFailures": [
+        {
+          "url": "file:///C:/Users/wavec/OneDrive/Documentos/GitHub/erp-docs/site/assets/wcorp-logo-header.png",
+          "error": "net::ERR_ABORTED"
+        }
+      ]
+    },
+    {
+      "viewport": "1366x768",
+      "history": true,
+      "scrollMode": "top",
+      "metric": {
+        "label": "1366x768-historico-top",
+        "scrollY": 0,
+        "panelTop": 190,
+        "panelBottom": 670,
+        "avatarTop": 681,
+        "avatarBottom": 746,
+        "verticalGap": 11,
+        "horizontalDelta": 0,
+        "panelHeight": 480,
+        "panelOffsetHeight": 480,
+        "styleHeight": "480px",
+        "styleMaxHeight": "480px",
+        "styleTop": "190px",
+        "styleBottom": "98px",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "hidden": false,
+        "display": "flex",
+        "visibility": "visible"
+      },
+      "shotPath": null,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "requestFailures": [
+        {
+          "url": "file:///C:/Users/wavec/OneDrive/Documentos/GitHub/erp-docs/site/assets/wcorp-logo-header.png",
+          "error": "net::ERR_ABORTED"
+        }
+      ]
+    },
+    {
+      "viewport": "1366x768",
+      "history": true,
+      "scrollMode": "middle",
+      "metric": {
+        "label": "1366x768-historico-middle",
+        "scrollY": 516,
+        "panelTop": 190,
+        "panelBottom": 670,
+        "avatarTop": 681,
+        "avatarBottom": 746,
+        "verticalGap": 11,
+        "horizontalDelta": 0,
+        "panelHeight": 480,
+        "panelOffsetHeight": 480,
+        "styleHeight": "480px",
+        "styleMaxHeight": "480px",
+        "styleTop": "190px",
+        "styleBottom": "98px",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "hidden": false,
+        "display": "flex",
+        "visibility": "visible"
+      },
+      "shotPath": null,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "requestFailures": [
+        {
+          "url": "file:///C:/Users/wavec/OneDrive/Documentos/GitHub/erp-docs/site/assets/wcorp-logo-header.png",
+          "error": "net::ERR_ABORTED"
+        }
+      ]
+    },
+    {
+      "viewport": "1366x768",
+      "history": true,
+      "scrollMode": "bottom",
+      "metric": {
+        "label": "1366x768-historico-bottom",
+        "scrollY": 1032,
+        "panelTop": 190,
+        "panelBottom": 670,
+        "avatarTop": 681,
+        "avatarBottom": 746,
+        "verticalGap": 11,
+        "horizontalDelta": 0,
+        "panelHeight": 480,
+        "panelOffsetHeight": 480,
+        "styleHeight": "480px",
+        "styleMaxHeight": "480px",
+        "styleTop": "190px",
+        "styleBottom": "98px",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "hidden": false,
+        "display": "flex",
+        "visibility": "visible"
+      },
+      "shotPath": "C:\\Users\\wavec\\OneDrive\\Documentos\\GitHub\\erp-docs\\tests\\assistant\\vertical-after-1366x768.png",
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "requestFailures": [
+        {
+          "url": "file:///C:/Users/wavec/OneDrive/Documentos/GitHub/erp-docs/site/assets/wcorp-logo-header.png",
+          "error": "net::ERR_ABORTED"
+        }
+      ]
+    },
+    {
+      "viewport": "1440x1000",
+      "history": false,
+      "scrollMode": "top",
+      "metric": {
+        "label": "1440x1000-vazio-top",
+        "scrollY": 0,
+        "panelTop": 422,
+        "panelBottom": 902,
+        "avatarTop": 913,
+        "avatarBottom": 978,
+        "verticalGap": 11,
+        "horizontalDelta": 0,
+        "panelHeight": 480,
+        "panelOffsetHeight": 480,
+        "styleHeight": "480px",
+        "styleMaxHeight": "480px",
+        "styleTop": "422px",
+        "styleBottom": "98px",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "hidden": false,
+        "display": "flex",
+        "visibility": "visible"
+      },
+      "shotPath": null,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "requestFailures": [
+        {
+          "url": "file:///C:/Users/wavec/OneDrive/Documentos/GitHub/erp-docs/site/assets/wcorp-logo-header.png",
+          "error": "net::ERR_ABORTED"
+        }
+      ]
+    },
+    {
+      "viewport": "1440x1000",
+      "history": false,
+      "scrollMode": "middle",
+      "metric": {
+        "label": "1440x1000-vazio-middle",
+        "scrollY": 400,
+        "panelTop": 422,
+        "panelBottom": 902,
+        "avatarTop": 913,
+        "avatarBottom": 978,
+        "verticalGap": 11,
+        "horizontalDelta": 0,
+        "panelHeight": 480,
+        "panelOffsetHeight": 480,
+        "styleHeight": "480px",
+        "styleMaxHeight": "480px",
+        "styleTop": "422px",
+        "styleBottom": "98px",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "hidden": false,
+        "display": "flex",
+        "visibility": "visible"
+      },
+      "shotPath": null,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "requestFailures": [
+        {
+          "url": "file:///C:/Users/wavec/OneDrive/Documentos/GitHub/erp-docs/site/assets/wcorp-logo-header.png",
+          "error": "net::ERR_ABORTED"
+        }
+      ]
+    },
+    {
+      "viewport": "1440x1000",
+      "history": false,
+      "scrollMode": "bottom",
+      "metric": {
+        "label": "1440x1000-vazio-bottom",
+        "scrollY": 800,
+        "panelTop": 422,
+        "panelBottom": 902,
+        "avatarTop": 913,
+        "avatarBottom": 978,
+        "verticalGap": 11,
+        "horizontalDelta": 0,
+        "panelHeight": 480,
+        "panelOffsetHeight": 480,
+        "styleHeight": "480px",
+        "styleMaxHeight": "480px",
+        "styleTop": "422px",
+        "styleBottom": "98px",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "hidden": false,
+        "display": "flex",
+        "visibility": "visible"
+      },
+      "shotPath": null,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "requestFailures": [
+        {
+          "url": "file:///C:/Users/wavec/OneDrive/Documentos/GitHub/erp-docs/site/assets/wcorp-logo-header.png",
+          "error": "net::ERR_ABORTED"
+        }
+      ]
+    },
+    {
+      "viewport": "1440x1000",
+      "history": true,
+      "scrollMode": "top",
+      "metric": {
+        "label": "1440x1000-historico-top",
+        "scrollY": 0,
+        "panelTop": 422,
+        "panelBottom": 902,
+        "avatarTop": 913,
+        "avatarBottom": 978,
+        "verticalGap": 11,
+        "horizontalDelta": 0,
+        "panelHeight": 480,
+        "panelOffsetHeight": 480,
+        "styleHeight": "480px",
+        "styleMaxHeight": "480px",
+        "styleTop": "422px",
+        "styleBottom": "98px",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "hidden": false,
+        "display": "flex",
+        "visibility": "visible"
+      },
+      "shotPath": null,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "requestFailures": [
+        {
+          "url": "file:///C:/Users/wavec/OneDrive/Documentos/GitHub/erp-docs/site/assets/wcorp-logo-header.png",
+          "error": "net::ERR_ABORTED"
+        }
+      ]
+    },
+    {
+      "viewport": "1440x1000",
+      "history": true,
+      "scrollMode": "middle",
+      "metric": {
+        "label": "1440x1000-historico-middle",
+        "scrollY": 400,
+        "panelTop": 422,
+        "panelBottom": 902,
+        "avatarTop": 913,
+        "avatarBottom": 978,
+        "verticalGap": 11,
+        "horizontalDelta": 0,
+        "panelHeight": 480,
+        "panelOffsetHeight": 480,
+        "styleHeight": "480px",
+        "styleMaxHeight": "480px",
+        "styleTop": "422px",
+        "styleBottom": "98px",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "hidden": false,
+        "display": "flex",
+        "visibility": "visible"
+      },
+      "shotPath": null,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "requestFailures": [
+        {
+          "url": "file:///C:/Users/wavec/OneDrive/Documentos/GitHub/erp-docs/site/assets/wcorp-logo-header.png",
+          "error": "net::ERR_ABORTED"
+        }
+      ]
+    },
+    {
+      "viewport": "1440x1000",
+      "history": true,
+      "scrollMode": "bottom",
+      "metric": {
+        "label": "1440x1000-historico-bottom",
+        "scrollY": 800,
+        "panelTop": 422,
+        "panelBottom": 902,
+        "avatarTop": 913,
+        "avatarBottom": 978,
+        "verticalGap": 11,
+        "horizontalDelta": 0,
+        "panelHeight": 480,
+        "panelOffsetHeight": 480,
+        "styleHeight": "480px",
+        "styleMaxHeight": "480px",
+        "styleTop": "422px",
+        "styleBottom": "98px",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "hidden": false,
+        "display": "flex",
+        "visibility": "visible"
+      },
+      "shotPath": "C:\\Users\\wavec\\OneDrive\\Documentos\\GitHub\\erp-docs\\tests\\assistant\\vertical-after-1440x1000.png",
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "requestFailures": [
+        {
+          "url": "file:///C:/Users/wavec/OneDrive/Documentos/GitHub/erp-docs/site/assets/wcorp-logo-header.png",
+          "error": "net::ERR_ABORTED"
+        }
+      ]
+    },
+    {
+      "viewport": "1920x1080",
+      "history": false,
+      "scrollMode": "top",
+      "metric": {
+        "label": "1920x1080-vazio-top",
+        "scrollY": 0,
+        "panelTop": 493,
+        "panelBottom": 973,
+        "avatarTop": 984.41,
+        "avatarBottom": 1055.91,
+        "verticalGap": 11.41,
+        "horizontalDelta": 0.09,
+        "panelHeight": 480,
+        "panelOffsetHeight": 480,
+        "styleHeight": "480px",
+        "styleMaxHeight": "480px",
+        "styleTop": "493px",
+        "styleBottom": "107px",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "hidden": false,
+        "display": "flex",
+        "visibility": "visible"
+      },
+      "shotPath": null,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "requestFailures": [
+        {
+          "url": "file:///C:/Users/wavec/OneDrive/Documentos/GitHub/erp-docs/site/assets/wcorp-logo-header.png",
+          "error": "net::ERR_ABORTED"
+        }
+      ]
+    },
+    {
+      "viewport": "1920x1080",
+      "history": false,
+      "scrollMode": "middle",
+      "metric": {
+        "label": "1920x1080-vazio-middle",
+        "scrollY": 360,
+        "panelTop": 493,
+        "panelBottom": 973,
+        "avatarTop": 984.41,
+        "avatarBottom": 1055.91,
+        "verticalGap": 11.41,
+        "horizontalDelta": 0.09,
+        "panelHeight": 480,
+        "panelOffsetHeight": 480,
+        "styleHeight": "480px",
+        "styleMaxHeight": "480px",
+        "styleTop": "493px",
+        "styleBottom": "107px",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "hidden": false,
+        "display": "flex",
+        "visibility": "visible"
+      },
+      "shotPath": null,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "requestFailures": [
+        {
+          "url": "file:///C:/Users/wavec/OneDrive/Documentos/GitHub/erp-docs/site/assets/wcorp-logo-header.png",
+          "error": "net::ERR_ABORTED"
+        }
+      ]
+    },
+    {
+      "viewport": "1920x1080",
+      "history": false,
+      "scrollMode": "bottom",
+      "metric": {
+        "label": "1920x1080-vazio-bottom",
+        "scrollY": 720,
+        "panelTop": 493,
+        "panelBottom": 973,
+        "avatarTop": 984.41,
+        "avatarBottom": 1055.91,
+        "verticalGap": 11.41,
+        "horizontalDelta": 0.09,
+        "panelHeight": 480,
+        "panelOffsetHeight": 480,
+        "styleHeight": "480px",
+        "styleMaxHeight": "480px",
+        "styleTop": "493px",
+        "styleBottom": "107px",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "hidden": false,
+        "display": "flex",
+        "visibility": "visible"
+      },
+      "shotPath": null,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "requestFailures": [
+        {
+          "url": "file:///C:/Users/wavec/OneDrive/Documentos/GitHub/erp-docs/site/assets/wcorp-logo-header.png",
+          "error": "net::ERR_ABORTED"
+        }
+      ]
+    },
+    {
+      "viewport": "1920x1080",
+      "history": true,
+      "scrollMode": "top",
+      "metric": {
+        "label": "1920x1080-historico-top",
+        "scrollY": 0,
+        "panelTop": 493,
+        "panelBottom": 973,
+        "avatarTop": 984.41,
+        "avatarBottom": 1055.91,
+        "verticalGap": 11.41,
+        "horizontalDelta": 0.09,
+        "panelHeight": 480,
+        "panelOffsetHeight": 480,
+        "styleHeight": "480px",
+        "styleMaxHeight": "480px",
+        "styleTop": "493px",
+        "styleBottom": "107px",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "hidden": false,
+        "display": "flex",
+        "visibility": "visible"
+      },
+      "shotPath": null,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "requestFailures": [
+        {
+          "url": "file:///C:/Users/wavec/OneDrive/Documentos/GitHub/erp-docs/site/assets/wcorp-logo-header.png",
+          "error": "net::ERR_ABORTED"
+        }
+      ]
+    },
+    {
+      "viewport": "1920x1080",
+      "history": true,
+      "scrollMode": "middle",
+      "metric": {
+        "label": "1920x1080-historico-middle",
+        "scrollY": 360,
+        "panelTop": 493,
+        "panelBottom": 973,
+        "avatarTop": 984.41,
+        "avatarBottom": 1055.91,
+        "verticalGap": 11.41,
+        "horizontalDelta": 0.09,
+        "panelHeight": 480,
+        "panelOffsetHeight": 480,
+        "styleHeight": "480px",
+        "styleMaxHeight": "480px",
+        "styleTop": "493px",
+        "styleBottom": "107px",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "hidden": false,
+        "display": "flex",
+        "visibility": "visible"
+      },
+      "shotPath": null,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "requestFailures": [
+        {
+          "url": "file:///C:/Users/wavec/OneDrive/Documentos/GitHub/erp-docs/site/assets/wcorp-logo-header.png",
+          "error": "net::ERR_ABORTED"
+        }
+      ]
+    },
+    {
+      "viewport": "1920x1080",
+      "history": true,
+      "scrollMode": "bottom",
+      "metric": {
+        "label": "1920x1080-historico-bottom",
+        "scrollY": 720,
+        "panelTop": 493,
+        "panelBottom": 973,
+        "avatarTop": 984.41,
+        "avatarBottom": 1055.91,
+        "verticalGap": 11.41,
+        "horizontalDelta": 0.09,
+        "panelHeight": 480,
+        "panelOffsetHeight": 480,
+        "styleHeight": "480px",
+        "styleMaxHeight": "480px",
+        "styleTop": "493px",
+        "styleBottom": "107px",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "hidden": false,
+        "display": "flex",
+        "visibility": "visible"
+      },
+      "shotPath": "C:\\Users\\wavec\\OneDrive\\Documentos\\GitHub\\erp-docs\\tests\\assistant\\vertical-after-1920x1080.png",
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "requestFailures": [
+        {
+          "url": "file:///C:/Users/wavec/OneDrive/Documentos/GitHub/erp-docs/site/assets/wcorp-logo-header.png",
+          "error": "net::ERR_ABORTED"
+        }
+      ]
+    },
+    {
+      "viewport": "1366x607",
+      "history": false,
+      "scrollMode": "top",
+      "metric": {
+        "label": "1366x607-vazio-top",
+        "scrollY": 0,
+        "panelTop": 29,
+        "panelBottom": 509,
+        "avatarTop": 520,
+        "avatarBottom": 585,
+        "verticalGap": 11,
+        "horizontalDelta": 0,
+        "panelHeight": 480,
+        "panelOffsetHeight": 480,
+        "styleHeight": "480px",
+        "styleMaxHeight": "480px",
+        "styleTop": "29px",
+        "styleBottom": "98px",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "hidden": false,
+        "display": "flex",
+        "visibility": "visible"
+      },
+      "shotPath": null,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "requestFailures": [
+        {
+          "url": "file:///C:/Users/wavec/OneDrive/Documentos/GitHub/erp-docs/site/assets/wcorp-logo-header.png",
+          "error": "net::ERR_ABORTED"
+        }
+      ]
+    },
+    {
+      "viewport": "1366x607",
+      "history": false,
+      "scrollMode": "middle",
+      "metric": {
+        "label": "1366x607-vazio-middle",
+        "scrollY": 597,
+        "panelTop": 29,
+        "panelBottom": 509,
+        "avatarTop": 520,
+        "avatarBottom": 585,
+        "verticalGap": 11,
+        "horizontalDelta": 0,
+        "panelHeight": 480,
+        "panelOffsetHeight": 480,
+        "styleHeight": "480px",
+        "styleMaxHeight": "480px",
+        "styleTop": "29px",
+        "styleBottom": "98px",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "hidden": false,
+        "display": "flex",
+        "visibility": "visible"
+      },
+      "shotPath": null,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "requestFailures": [
+        {
+          "url": "file:///C:/Users/wavec/OneDrive/Documentos/GitHub/erp-docs/site/assets/wcorp-logo-header.png",
+          "error": "net::ERR_ABORTED"
+        }
+      ]
+    },
+    {
+      "viewport": "1366x607",
+      "history": false,
+      "scrollMode": "bottom",
+      "metric": {
+        "label": "1366x607-vazio-bottom",
+        "scrollY": 1193,
+        "panelTop": 29,
+        "panelBottom": 509,
+        "avatarTop": 520,
+        "avatarBottom": 585,
+        "verticalGap": 11,
+        "horizontalDelta": 0,
+        "panelHeight": 480,
+        "panelOffsetHeight": 480,
+        "styleHeight": "480px",
+        "styleMaxHeight": "480px",
+        "styleTop": "29px",
+        "styleBottom": "98px",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "hidden": false,
+        "display": "flex",
+        "visibility": "visible"
+      },
+      "shotPath": null,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "requestFailures": [
+        {
+          "url": "file:///C:/Users/wavec/OneDrive/Documentos/GitHub/erp-docs/site/assets/wcorp-logo-header.png",
+          "error": "net::ERR_ABORTED"
+        }
+      ]
+    },
+    {
+      "viewport": "1366x607",
+      "history": true,
+      "scrollMode": "top",
+      "metric": {
+        "label": "1366x607-historico-top",
+        "scrollY": 0,
+        "panelTop": 29,
+        "panelBottom": 509,
+        "avatarTop": 520,
+        "avatarBottom": 585,
+        "verticalGap": 11,
+        "horizontalDelta": 0,
+        "panelHeight": 480,
+        "panelOffsetHeight": 480,
+        "styleHeight": "480px",
+        "styleMaxHeight": "480px",
+        "styleTop": "29px",
+        "styleBottom": "98px",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "hidden": false,
+        "display": "flex",
+        "visibility": "visible"
+      },
+      "shotPath": null,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "requestFailures": [
+        {
+          "url": "file:///C:/Users/wavec/OneDrive/Documentos/GitHub/erp-docs/site/assets/wcorp-logo-header.png",
+          "error": "net::ERR_ABORTED"
+        }
+      ]
+    },
+    {
+      "viewport": "1366x607",
+      "history": true,
+      "scrollMode": "middle",
+      "metric": {
+        "label": "1366x607-historico-middle",
+        "scrollY": 597,
+        "panelTop": 29,
+        "panelBottom": 509,
+        "avatarTop": 520,
+        "avatarBottom": 585,
+        "verticalGap": 11,
+        "horizontalDelta": 0,
+        "panelHeight": 480,
+        "panelOffsetHeight": 480,
+        "styleHeight": "480px",
+        "styleMaxHeight": "480px",
+        "styleTop": "29px",
+        "styleBottom": "98px",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "hidden": false,
+        "display": "flex",
+        "visibility": "visible"
+      },
+      "shotPath": null,
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "requestFailures": [
+        {
+          "url": "file:///C:/Users/wavec/OneDrive/Documentos/GitHub/erp-docs/site/assets/wcorp-logo-header.png",
+          "error": "net::ERR_ABORTED"
+        }
+      ]
+    },
+    {
+      "viewport": "1366x607",
+      "history": true,
+      "scrollMode": "bottom",
+      "metric": {
+        "label": "1366x607-historico-bottom",
+        "scrollY": 1193,
+        "panelTop": 29,
+        "panelBottom": 509,
+        "avatarTop": 520,
+        "avatarBottom": 585,
+        "verticalGap": 11,
+        "horizontalDelta": 0,
+        "panelHeight": 480,
+        "panelOffsetHeight": 480,
+        "styleHeight": "480px",
+        "styleMaxHeight": "480px",
+        "styleTop": "29px",
+        "styleBottom": "98px",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "hidden": false,
+        "display": "flex",
+        "visibility": "visible"
+      },
+      "shotPath": "C:\\Users\\wavec\\OneDrive\\Documentos\\GitHub\\erp-docs\\tests\\assistant\\vertical-after-1366x607.png",
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "requestFailures": [
+        {
+          "url": "file:///C:/Users/wavec/OneDrive/Documentos/GitHub/erp-docs/site/assets/wcorp-logo-header.png",
+          "error": "net::ERR_ABORTED"
+        }
+      ]
+    }
+  ]
+}

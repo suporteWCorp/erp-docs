@@ -1,0 +1,194 @@
+[
+  {
+    "viewport": "1366x768",
+    "before": {
+      "launcherRightBefore": 1345,
+      "launcherBottomBefore": 747,
+      "launcherWidthBefore": 318.48,
+      "launcherHeightBefore": 65,
+      "buttonRightBefore": 1345,
+      "buttonBottomBefore": 747,
+      "launcherVisible": true,
+      "avatarVisible": true,
+      "panelHidden": true,
+      "panelDisplay": "none"
+    },
+    "after": {
+      "assistantClass": "wc-assistant wc-assistant--open",
+      "panelRight": 1345,
+      "panelBottom": 747,
+      "panelTop": 267,
+      "panelWidth": 300,
+      "panelHeight": 480,
+      "launcherRightAfter": 1345,
+      "launcherBottomAfter": 747,
+      "buttonRightAfter": 1345,
+      "buttonBottomAfter": 747,
+      "deltaRight": 0,
+      "deltaBottom": 0,
+      "launcherHidden": true,
+      "avatarHidden": true,
+      "panelVisible": true,
+      "panelWithinViewport": true,
+      "launcherStyle": {
+        "display": "flex",
+        "visibility": "hidden",
+        "opacity": "0",
+        "pointerEvents": "none"
+      },
+      "buttonStyle": {
+        "display": "flex",
+        "visibility": "hidden",
+        "opacity": "1",
+        "pointerEvents": "none"
+      },
+      "panelStyle": {
+        "display": "flex",
+        "bottom": "21px",
+        "left": "1045px",
+        "width": "300px",
+        "height": "480px"
+      }
+    },
+    "scrolled": {
+      "scrollY": 337,
+      "panelRight": 1345,
+      "panelBottom": 747,
+      "deltaRight": 0,
+      "deltaBottom": 0,
+      "panelWithinViewport": true
+    },
+    "errors": [
+      "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+    ],
+    "status": "PASS"
+  },
+  {
+    "viewport": "1440x1000",
+    "before": {
+      "launcherRightBefore": 1419,
+      "launcherBottomBefore": 979,
+      "launcherWidthBefore": 318.48,
+      "launcherHeightBefore": 65,
+      "buttonRightBefore": 1419,
+      "buttonBottomBefore": 979,
+      "launcherVisible": true,
+      "avatarVisible": true,
+      "panelHidden": true,
+      "panelDisplay": "none"
+    },
+    "after": {
+      "assistantClass": "wc-assistant wc-assistant--open",
+      "panelRight": 1419,
+      "panelBottom": 979,
+      "panelTop": 499,
+      "panelWidth": 300,
+      "panelHeight": 480,
+      "launcherRightAfter": 1419,
+      "launcherBottomAfter": 979,
+      "buttonRightAfter": 1419,
+      "buttonBottomAfter": 979,
+      "deltaRight": 0,
+      "deltaBottom": 0,
+      "launcherHidden": true,
+      "avatarHidden": true,
+      "panelVisible": true,
+      "panelWithinViewport": true,
+      "launcherStyle": {
+        "display": "flex",
+        "visibility": "hidden",
+        "opacity": "0",
+        "pointerEvents": "none"
+      },
+      "buttonStyle": {
+        "display": "flex",
+        "visibility": "hidden",
+        "opacity": "1",
+        "pointerEvents": "none"
+      },
+      "panelStyle": {
+        "display": "flex",
+        "bottom": "21px",
+        "left": "1119px",
+        "width": "300px",
+        "height": "480px"
+      }
+    },
+    "scrolled": {
+      "scrollY": 105,
+      "panelRight": 1419,
+      "panelBottom": 979,
+      "deltaRight": 0,
+      "deltaBottom": 0,
+      "panelWithinViewport": true
+    },
+    "errors": [
+      "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+    ],
+    "status": "PASS"
+  },
+  {
+    "viewport": "1920x1080",
+    "before": {
+      "launcherRightBefore": 1896.91,
+      "launcherBottomBefore": 1056.91,
+      "launcherWidthBefore": 350.14,
+      "launcherHeightBefore": 71.5,
+      "buttonRightBefore": 1896.91,
+      "buttonBottomBefore": 1056.91,
+      "launcherVisible": true,
+      "avatarVisible": true,
+      "panelHidden": true,
+      "panelDisplay": "none"
+    },
+    "after": {
+      "assistantClass": "wc-assistant wc-assistant--open",
+      "panelRight": 1897,
+      "panelBottom": 1057,
+      "panelTop": 577,
+      "panelWidth": 300,
+      "panelHeight": 480,
+      "launcherRightAfter": 1896.91,
+      "launcherBottomAfter": 1056.91,
+      "buttonRightAfter": 1896.91,
+      "buttonBottomAfter": 1056.91,
+      "deltaRight": 0.09,
+      "deltaBottom": 0.09,
+      "launcherHidden": true,
+      "avatarHidden": true,
+      "panelVisible": true,
+      "panelWithinViewport": true,
+      "launcherStyle": {
+        "display": "flex",
+        "visibility": "hidden",
+        "opacity": "0",
+        "pointerEvents": "none"
+      },
+      "buttonStyle": {
+        "display": "flex",
+        "visibility": "hidden",
+        "opacity": "1",
+        "pointerEvents": "none"
+      },
+      "panelStyle": {
+        "display": "flex",
+        "bottom": "23px",
+        "left": "1597px",
+        "width": "300px",
+        "height": "480px"
+      }
+    },
+    "scrolled": {
+      "scrollY": 134,
+      "panelRight": 1897,
+      "panelBottom": 1057,
+      "deltaRight": 0.09,
+      "deltaBottom": 0.09,
+      "panelWithinViewport": true
+    },
+    "errors": [
+      "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+    ],
+    "status": "PASS"
+  }
+]

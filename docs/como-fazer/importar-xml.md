@@ -6,6 +6,8 @@ error_tags:
   - "nfe"
   - "entrada"
   - "fornecedor"
+search:
+  exclude: true
 ---
 
 # Como importar XML

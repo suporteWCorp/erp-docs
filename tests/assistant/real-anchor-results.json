@@ -1,0 +1,442 @@
+{
+  "generatedAt": "2026-08-29T18:40:32.577Z",
+  "page": "site/index.html",
+  "results": [
+    {
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "rects": {
+        "launcher": {
+          "left": 1280,
+          "top": 682,
+          "right": 1345,
+          "bottom": 747,
+          "width": 65,
+          "height": 65
+        },
+        "bubble": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "button": {
+          "left": 1280,
+          "top": 681,
+          "right": 1345,
+          "bottom": 746,
+          "width": 65,
+          "height": 65
+        },
+        "panel": {
+          "left": 1045,
+          "top": 190,
+          "right": 1345,
+          "bottom": 670,
+          "width": 300,
+          "height": 480
+        }
+      },
+      "computed": {
+        "launcher": {
+          "position": "static",
+          "top": "auto",
+          "right": "auto",
+          "bottom": "auto",
+          "left": "auto",
+          "display": "flex",
+          "transform": "none",
+          "opacity": "1",
+          "visibility": "visible"
+        },
+        "bubble": {
+          "position": "relative",
+          "top": "auto",
+          "right": "auto",
+          "bottom": "auto",
+          "left": "auto",
+          "display": "none",
+          "transform": "none",
+          "opacity": "1",
+          "visibility": "visible"
+        },
+        "button": {
+          "position": "static",
+          "top": "auto",
+          "right": "auto",
+          "bottom": "auto",
+          "left": "auto",
+          "display": "flex",
+          "transform": "matrix(1, 0, 0, 1, 0, -1)",
+          "opacity": "1",
+          "visibility": "visible"
+        },
+        "panel": {
+          "position": "fixed",
+          "top": "190px",
+          "right": "21px",
+          "bottom": "98px",
+          "left": "1045px",
+          "display": "flex",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "opacity": "1",
+          "visibility": "visible"
+        }
+      },
+      "offsetParents": {
+        "button": "wc-assistant wc-assistant--open",
+        "launcher": "wc-assistant wc-assistant--open",
+        "panel": null
+      },
+      "anchor": {
+        "panelRight": 1345,
+        "avatarRight": 1345,
+        "horizontalDelta": 0,
+        "panelBottom": 670,
+        "avatarTop": 681,
+        "verticalGap": 11,
+        "panelWithinViewport": true,
+        "avatarWithinViewport": true,
+        "avatarVisible": true
+      },
+      "errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+        }
+      ],
+      "shotPath": "C:/Users/wavec/OneDrive/Documentos/GitHub/erp-docs/tests/assistant/file-site-anchor-1366x768.png"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "rects": {
+        "launcher": {
+          "left": 1354,
+          "top": 914,
+          "right": 1419,
+          "bottom": 979,
+          "width": 65,
+          "height": 65
+        },
+        "bubble": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "button": {
+          "left": 1354,
+          "top": 913,
+          "right": 1419,
+          "bottom": 978,
+          "width": 65,
+          "height": 65
+        },
+        "panel": {
+          "left": 1119,
+          "top": 422,
+          "right": 1419,
+          "bottom": 902,
+          "width": 300,
+          "height": 480
+        }
+      },
+      "computed": {
+        "launcher": {
+          "position": "static",
+          "top": "auto",
+          "right": "auto",
+          "bottom": "auto",
+          "left": "auto",
+          "display": "flex",
+          "transform": "none",
+          "opacity": "1",
+          "visibility": "visible"
+        },
+        "bubble": {
+          "position": "relative",
+          "top": "auto",
+          "right": "auto",
+          "bottom": "auto",
+          "left": "auto",
+          "display": "none",
+          "transform": "none",
+          "opacity": "1",
+          "visibility": "visible"
+        },
+        "button": {
+          "position": "static",
+          "top": "auto",
+          "right": "auto",
+          "bottom": "auto",
+          "left": "auto",
+          "display": "flex",
+          "transform": "matrix(1, 0, 0, 1, 0, -1)",
+          "opacity": "1",
+          "visibility": "visible"
+        },
+        "panel": {
+          "position": "fixed",
+          "top": "422px",
+          "right": "21px",
+          "bottom": "98px",
+          "left": "1119px",
+          "display": "flex",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "opacity": "1",
+          "visibility": "visible"
+        }
+      },
+      "offsetParents": {
+        "button": "wc-assistant wc-assistant--open",
+        "launcher": "wc-assistant wc-assistant--open",
+        "panel": null
+      },
+      "anchor": {
+        "panelRight": 1419,
+        "avatarRight": 1419,
+        "horizontalDelta": 0,
+        "panelBottom": 902,
+        "avatarTop": 913,
+        "verticalGap": 11,
+        "panelWithinViewport": true,
+        "avatarWithinViewport": true,
+        "avatarVisible": true
+      },
+      "errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+        }
+      ],
+      "shotPath": "C:/Users/wavec/OneDrive/Documentos/GitHub/erp-docs/tests/assistant/file-site-anchor-1440x1000.png"
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "rects": {
+        "launcher": {
+          "left": 1825.41,
+          "top": 985.41,
+          "right": 1896.91,
+          "bottom": 1056.91,
+          "width": 71.5,
+          "height": 71.5
+        },
+        "bubble": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "button": {
+          "left": 1825.41,
+          "top": 984.41,
+          "right": 1896.91,
+          "bottom": 1055.91,
+          "width": 71.5,
+          "height": 71.5
+        },
+        "panel": {
+          "left": 1597,
+          "top": 493,
+          "right": 1897,
+          "bottom": 973,
+          "width": 300,
+          "height": 480
+        }
+      },
+      "computed": {
+        "launcher": {
+          "position": "static",
+          "top": "auto",
+          "right": "auto",
+          "bottom": "auto",
+          "left": "auto",
+          "display": "flex",
+          "transform": "none",
+          "opacity": "1",
+          "visibility": "visible"
+        },
+        "bubble": {
+          "position": "relative",
+          "top": "auto",
+          "right": "auto",
+          "bottom": "auto",
+          "left": "auto",
+          "display": "none",
+          "transform": "none",
+          "opacity": "1",
+          "visibility": "visible"
+        },
+        "button": {
+          "position": "static",
+          "top": "auto",
+          "right": "auto",
+          "bottom": "auto",
+          "left": "auto",
+          "display": "flex",
+          "transform": "matrix(1, 0, 0, 1, 0, -1)",
+          "opacity": "1",
+          "visibility": "visible"
+        },
+        "panel": {
+          "position": "fixed",
+          "top": "493px",
+          "right": "23px",
+          "bottom": "107px",
+          "left": "1597px",
+          "display": "flex",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "opacity": "1",
+          "visibility": "visible"
+        }
+      },
+      "offsetParents": {
+        "button": "wc-assistant wc-assistant--open",
+        "launcher": "wc-assistant wc-assistant--open",
+        "panel": null
+      },
+      "anchor": {
+        "panelRight": 1897,
+        "avatarRight": 1896.91,
+        "horizontalDelta": 0.09,
+        "panelBottom": 973,
+        "avatarTop": 984.41,
+        "verticalGap": 11.41,
+        "panelWithinViewport": true,
+        "avatarWithinViewport": true,
+        "avatarVisible": true
+      },
+      "errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+        }
+      ],
+      "shotPath": "C:/Users/wavec/OneDrive/Documentos/GitHub/erp-docs/tests/assistant/file-site-anchor-1920x1080.png"
+    },
+    {
+      "viewport": {
+        "width": 1366,
+        "height": 607
+      },
+      "rects": {
+        "launcher": {
+          "left": 1280,
+          "top": 521,
+          "right": 1345,
+          "bottom": 586,
+          "width": 65,
+          "height": 65
+        },
+        "bubble": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "button": {
+          "left": 1280,
+          "top": 520,
+          "right": 1345,
+          "bottom": 585,
+          "width": 65,
+          "height": 65
+        },
+        "panel": {
+          "left": 1045,
+          "top": 29,
+          "right": 1345,
+          "bottom": 509,
+          "width": 300,
+          "height": 480
+        }
+      },
+      "computed": {
+        "launcher": {
+          "position": "static",
+          "top": "auto",
+          "right": "auto",
+          "bottom": "auto",
+          "left": "auto",
+          "display": "flex",
+          "transform": "none",
+          "opacity": "1",
+          "visibility": "visible"
+        },
+        "bubble": {
+          "position": "relative",
+          "top": "auto",
+          "right": "auto",
+          "bottom": "auto",
+          "left": "auto",
+          "display": "none",
+          "transform": "none",
+          "opacity": "1",
+          "visibility": "visible"
+        },
+        "button": {
+          "position": "static",
+          "top": "auto",
+          "right": "auto",
+          "bottom": "auto",
+          "left": "auto",
+          "display": "flex",
+          "transform": "matrix(1, 0, 0, 1, 0, -1)",
+          "opacity": "1",
+          "visibility": "visible"
+        },
+        "panel": {
+          "position": "fixed",
+          "top": "29px",
+          "right": "21px",
+          "bottom": "98px",
+          "left": "1045px",
+          "display": "flex",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "opacity": "1",
+          "visibility": "visible"
+        }
+      },
+      "offsetParents": {
+        "button": "wc-assistant wc-assistant--open",
+        "launcher": "wc-assistant wc-assistant--open",
+        "panel": null
+      },
+      "anchor": {
+        "panelRight": 1345,
+        "avatarRight": 1345,
+        "horizontalDelta": 0,
+        "panelBottom": 509,
+        "avatarTop": 520,
+        "verticalGap": 11,
+        "panelWithinViewport": true,
+        "avatarWithinViewport": true,
+        "avatarVisible": true
+      },
+      "errors": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: net::ERR_NETWORK_ACCESS_DENIED"
+        }
+      ],
+      "shotPath": "C:/Users/wavec/OneDrive/Documentos/GitHub/erp-docs/tests/assistant/file-site-anchor-1366x607.png"
+    }
+  ]
+}

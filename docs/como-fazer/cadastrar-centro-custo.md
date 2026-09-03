@@ -1,20 +1,19 @@
 ---
-error_area: "Administração"
-error_category: "Centro de custo"
-error_tags:
-  - "centro de custo"
-  - "cadastro"
+id: cadastrar-centro-custo
+title: Como cadastrar um Centro de Custo
+type: guia
+category: Administração
+status: published
+tags:
+  - centro de custo
+  - cadastro
 ---
 
 # Como cadastrar um Centro de Custo
 
 ## Pré-requisitos
 
-<div class="wc-prereq-list" markdown>
-
 - Nome e finalidade do centro de custo definidos
-
-</div>
 
 ## Permissões
 
@@ -24,12 +23,11 @@ error_tags:
 
 `Administração > Centro de Custo`.
 
+![Onde encontrar](../assets/images/guias/caminhocadastrocentrocusto.png)
+
 ## Demonstração em vídeo
 
-<video class="wc-video" controls preload="auto" playsinline>
-  <source src="../../assets/videos/adm_centro_custo.mp4" type="video/mp4">
-  Seu navegador não conseguiu reproduzir este vídeo.
-</video>
+[Demonstração do cadastro de centro de custo](../assets/videos/adm_centro_custo.mp4){ .wc-video-link }
 
 ## Como fazer
 

@@ -5,55 +5,55 @@
 Falhas internas ou comportamentos inesperados que precisam de análise do Suporte.
 { .wc-listing-intro }
 
-Use esta categoria quando o problema continua mesmo com cadastros, parâmetros, permissões e configurações corretos.
+<div class="wc-solution-list wc-solution-list--direct" data-wc-solution-list markdown>
 
-## Artigos cadastrados
+<label class="wc-solution-filter">
+  <span>Buscar solução</span>
+  <input type="search" data-wc-solution-filter placeholder="Digite a mensagem, tela ou parte do erro" autocomplete="off">
+</label>
 
-<div class="wc-rejection-list" markdown>
+<div class="wc-solution-results" data-wc-solution-results>
+  <h2>Problemas encontrados</h2>
+  <div class="wc-rejection-list" data-wc-solution-result-list markdown>
 
 <a class="wc-rejection-item" href="referencia-objeto-nao-definida/" data-search="ocorreu erro não esperado referência objeto não definida instância objeto pedido material lote estoque local armazenagem empresa">
   <span class="wc-rejection-item__code">Técnico</span>
   <span class="wc-rejection-item__title">Referência do objeto não definida para uma instância de um objeto</span>
-  <span class="wc-rejection-item__document">Pedido</span>
+  <span class="wc-rejection-item__document">Comercial · Pedido</span>
   <span class="wc-rejection-item__arrow" aria-hidden="true">›</span>
 </a>
 
+  </div>
 </div>
 
-## O que esta categoria deve orientar
+<div class="wc-solution-empty" data-wc-solution-empty hidden markdown>
+Nenhum problema técnico encontrado para essa busca.
 
-- Verificações simples e seguras.
-- Coleta de print ou vídeo.
-- Mensagem completa.
-- Empresa, usuário e horário.
-- Passos realizados antes da falha.
-- Versão do sistema.
-- Como registrar o chamado para o Suporte.
+Use o Assistente WCorp no canto da tela ou consulte o fluxo de Suporte.
 
-## Critério de classificação
-
-Se existe falha interna ou comportamento inesperado sem correção por cadastro, classifique como **Problema Técnico**.
-
-## Exemplos
-
-| Mensagem ou situação | Classificação |
-| --- | --- |
-| Exception ao salvar | Problema Técnico |
-| Erro de banco | Problema Técnico |
-| Deadlock | Problema Técnico |
-| Timeout | Problema Técnico |
-| Tela travada | Problema Técnico |
-| Botão sem resposta | Problema Técnico |
-| Erro de API | Problema Técnico |
-
-<div class="wc-inner-callout wc-inner-callout--warning" markdown>
-**Cuidados**
-
-Esta categoria não deve orientar alterações aleatórias no WCorp. Quando houver falha técnica, registre evidências e encaminhe para análise do Suporte.
+[Solicitar suporte](../suporte/index.md){ .md-button .md-button--primary }
 </div>
 
-## Base atual
+</div>
 
-Os artigos existentes passam a ser organizados pela seção [Erros e Soluções](index.md).
+<div class="wc-solution-support" markdown>
+
+**Não encontrou uma solução?**
+
+Caso a mensagem não esteja cadastrada ou o problema continue após as verificações, entre em contato com a equipe de Suporte.
+
+[Solicitar suporte](../suporte/index.md){ .md-button .md-button--primary }
+
+</div>
+
+<!--
+Notas internas de manutenção:
+
+- Esta categoria deve orientar verificações simples e seguras, mensagem completa, empresa, usuário, horário, passos realizados, versão do sistema e como registrar o chamado para o Suporte.
+- Critério: se existe falha interna ou comportamento inesperado sem correção por cadastro, classificar como Problema Técnico.
+- Exemplos: exception ao salvar, erro de banco, deadlock, timeout, tela travada, botão sem resposta, erro de API.
+- Não orientar alterações aleatórias no WCorp quando houver falha técnica.
+-->
+
 
 </div>

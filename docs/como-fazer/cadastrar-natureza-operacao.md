@@ -1,23 +1,22 @@
 ---
-error_area: "Administração"
-error_category: "Natureza de operação"
-error_tags:
-  - "natureza de operacao"
-  - "regra fiscal"
-  - "fiscal"
+id: cadastrar-natureza-operacao
+title: Como cadastrar uma Natureza de Operação
+type: guia
+category: Administração
+status: published
+tags:
+  - natureza de operacao
+  - regra fiscal
+  - fiscal
 ---
 
 # Como cadastrar uma Natureza de Operação
 
 ## Pré-requisitos
 
-<div class="wc-prereq-list" markdown>
-
 - Operação que será realizada definida
 - Critérios fiscais da operação validados com o responsável fiscal da empresa
 - Categorias de material, NCMs, materiais e demais cadastros de critério disponíveis no sistema
-
-</div>
 
 ## Permissões
 
@@ -27,12 +26,11 @@ error_tags:
 
 `Administração > Natureza de Operação`.
 
+![Onde encontrar](../assets/images/guias/caminhocadastronaturezaop.png)
+
 ## Demonstração em vídeo
 
-<video class="wc-video" controls preload="auto" playsinline>
-  <source src="../../assets/videos/adm_natureza_operacao.mp4" type="video/mp4">
-  Seu navegador não conseguiu reproduzir este vídeo.
-</video>
+[Demonstração do cadastro de natureza de operação](../assets/videos/adm_natureza_operacao.mp4){ .wc-video-link }
 
 ## Como fazer
 

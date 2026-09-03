@@ -140,4 +140,4 @@ Usuários, empresas, natureza de operação, NCMs e parâmetros.
 </div>
 
 !!! info "Diferença entre Guia e Manual"
-    O **Guia** é organizado por tarefa, como "Como cadastrar cliente". O **Manual** é organizado por tela e aba do WCorp.
+    **Guias** mostram como realizar uma tarefa passo a passo. **Manuais** apresentam os detalhes das telas, campos e funcionalidades do WCorp.

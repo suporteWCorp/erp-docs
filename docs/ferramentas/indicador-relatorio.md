@@ -4,6 +4,11 @@
 
 Selecione as informações que você precisa consultar. O indicador mostrará quais relatórios do WCorp possuem todos os dados selecionados.
 
+<div class="wc-tool-steps" aria-label="Como usar esta ferramenta">
+  <span>1. Selecione as informações</span>
+  <span>2. Veja os relatórios compatíveis</span>
+</div>
+
 <div class="wc-inner-callout" markdown>
 Os relatórios sugeridos podem conter outras informações além das opções marcadas.
 </div>
@@ -15,7 +20,7 @@ Os relatórios sugeridos podem conter outras informações além das opções ma
     <h2 id="wc-report-selector-title">Quais informações devem constar no relatório?</h2>
     <button class="wc-report-clear" type="button" data-wc-report-clear hidden>Limpar seleção</button>
   </div>
-  <div class="wc-report-fields" data-wc-report-fields></div>
+  <div class="wc-report-field-groups" data-wc-report-fields></div>
 </section>
 
 <section class="wc-tool-results wc-report-results" aria-labelledby="wc-report-results-title">

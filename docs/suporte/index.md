@@ -1,44 +1,71 @@
+<div class="wcorp-inner-page wcorp-support-page" markdown>
+
 # Suporte
 
-Antes de abrir um chamado, verifique se alguma das opções abaixo pode ajudar a resolver sua dúvida.
+Como podemos ajudar?
+{ .wc-listing-intro }
 
-## Não sabe como realizar uma operação?
+Escolha o que melhor descreve sua situação.
 
-Consulte os Guias para aprender como executar as principais rotinas do WCorp.
+<div class="wc-triage-list" markdown>
 
-[Consultar Guias](../como-fazer/index.md){ .md-button .md-button--primary }
+<a class="wc-triage-item" href="../como-fazer/">
+  <span class="wc-triage-item__icon" aria-hidden="true">?</span>
+  <span class="wc-triage-item__body">
+    <strong>Não sei como realizar uma operação</strong>
+    <span>Consulte os Guias para executar rotinas e processos do WCorp.</span>
+  </span>
+  <span class="wc-triage-item__action">Consultar Guias</span>
+</a>
 
-## Encontrou uma mensagem de erro?
+<a class="wc-triage-item" href="../erros-solucoes/">
+  <span class="wc-triage-item__icon" aria-hidden="true">!</span>
+  <span class="wc-triage-item__body">
+    <strong>Apareceu uma mensagem de erro</strong>
+    <span>Localize rejeições, erros operacionais e problemas técnicos.</span>
+  </span>
+  <span class="wc-triage-item__action">Consultar Erros</span>
+</a>
 
-Consulte a Base de Erros para verificar possíveis causas e soluções.
+<a class="wc-triage-item" href="../referencia/faq/">
+  <span class="wc-triage-item__icon" aria-hidden="true">i</span>
+  <span class="wc-triage-item__body">
+    <strong>Tenho uma dúvida rápida</strong>
+    <span>Veja respostas diretas para perguntas frequentes.</span>
+  </span>
+  <span class="wc-triage-item__action">Consultar FAQ</span>
+</a>
 
-[Consultar Erros](base-de-erros.md){ .md-button .md-button--primary }
+<a class="wc-triage-item" href="../manual/">
+  <span class="wc-triage-item__icon" aria-hidden="true">#</span>
+  <span class="wc-triage-item__body">
+    <strong>Quero entender uma tela</strong>
+    <span>Consulte os Manuais organizados por módulo e tela do WCorp.</span>
+  </span>
+  <span class="wc-triage-item__action">Ver Manuais</span>
+</a>
 
-## Tem uma dúvida rápida?
+</div>
 
-Consulte as Perguntas Frequentes.
-
-[Consultar FAQ](../referencia/faq.md){ .md-button .md-button--primary }
-
-## Deseja entender como funciona uma tela?
-
-Consulte o Manual do WCorp.
-
-[Ver Manuais](../manual/index.md){ .md-button .md-button--primary }
+<div class="wc-support-cta" markdown>
 
 ## Ainda precisa de ajuda?
 
-Antes de entrar em contato, procure informar:
+Antes de abrir um chamado, tenha em mãos:
 
-- descrição clara do problema;
-- rotina ou tela onde ocorreu;
-- prints da tela ou da mensagem apresentada;
-- caso envolva NF-e, NFC-e, NFS-e, CT-e ou MDF-e, o número ou ID do documento;
-- quais testes ou tentativas já foram realizados;
-- sempre que possível, como reproduzir o problema.
+<ul class="wc-support-checklist">
+  <li>descrição clara do problema;</li>
+  <li>rotina ou tela onde ocorreu;</li>
+  <li>prints da tela ou da mensagem apresentada;</li>
+  <li>caso envolva NF-e, NFC-e, NFS-e, CT-e ou MDF-e, o número ou ID do documento;</li>
+  <li>quais testes ou tentativas já foram realizados;</li>
+  <li>sempre que possível, como reproduzir o problema.</li>
+</ul>
 
-Essas informações ajudam nossa equipe a identificar o problema mais rapidamente e reduzem o tempo de atendimento.
-
-[Ver quais evidências enviar](coleta-de-evidencias.md){ .md-button }
+Isso ajuda o suporte a identificar o problema mais rapidamente.
 
 [Preciso de ajuda](https://wa.me/5512991583055){ .md-button .md-button--primary target="_blank" rel="noopener" }
+
+</div>
+
+</div>

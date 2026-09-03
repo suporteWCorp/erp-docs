@@ -1,0 +1,2168 @@
+{
+  "generated_at": "2026-08-28T20:20:08.708Z",
+  "scope": "Plano de migracao estrutural dos conteudos Classe B para o Padrao de Conteudo V1. Nao altera docs/.",
+  "totals": {
+    "class_b_contents": 32,
+    "guides": 23,
+    "manuals": 9,
+    "assets_to_move": 21,
+    "html_conversions": 52,
+    "unresolved_related_links": 3,
+    "deferred_related_links": 17
+  },
+  "transformations": {
+    "front_matter_v1": 32,
+    "asset_moves": 21,
+    "wc_prereq_list": 23,
+    "html_video": 11,
+    "br": 13,
+    "wc_screen_block": 5,
+    "related_to_ids": 51
+  },
+  "waves": [
+    {
+      "id": "onda-1-guias-administracao",
+      "title": "ONDA 1 - Guias de Administracao",
+      "risk": "medio",
+      "count": 5,
+      "files": [
+        "docs/como-fazer/cadastrar-natureza-operacao.md",
+        "docs/como-fazer/cadastrar-condicao-pagamento.md",
+        "docs/como-fazer/cadastrar-centro-custo.md",
+        "docs/como-fazer/cadastrar-usuario.md",
+        "docs/como-fazer/configurar-grupo-usuario.md"
+      ],
+      "transformations": {
+        "front_matter_v1": 5,
+        "asset_moves": 5,
+        "wc_prereq_list": 5,
+        "html_video": 5,
+        "br": 0,
+        "wc_screen_block": 0,
+        "related_to_ids": 5
+      }
+    },
+    {
+      "id": "onda-2-guias-comercial-estoque",
+      "title": "ONDA 2 - Guias Comercial e Estoque",
+      "risk": "medio",
+      "count": 7,
+      "files": [
+        "docs/como-fazer/cadastrar-fornecedor.md",
+        "docs/como-fazer/criar-orcamento.md",
+        "docs/como-fazer/cadastrar-material.md",
+        "docs/como-fazer/consultar-estoque.md",
+        "docs/como-fazer/ajustar-estoque.md",
+        "docs/como-fazer/fazer-inventario.md",
+        "docs/como-fazer/transferir-estoque.md"
+      ],
+      "transformations": {
+        "front_matter_v1": 7,
+        "asset_moves": 3,
+        "wc_prereq_list": 7,
+        "html_video": 2,
+        "br": 5,
+        "wc_screen_block": 0,
+        "related_to_ids": 16
+      }
+    },
+    {
+      "id": "onda-3-guias-faturamento",
+      "title": "ONDA 3 - Guias de Faturamento",
+      "risk": "medio",
+      "count": 5,
+      "files": [
+        "docs/como-fazer/faturar-nota.md",
+        "docs/como-fazer/cancelar-nfe.md",
+        "docs/como-fazer/emitir-devolucao.md",
+        "docs/como-fazer/emitir-carta-correcao.md",
+        "docs/como-fazer/emitir-nota-complementar.md"
+      ],
+      "transformations": {
+        "front_matter_v1": 5,
+        "asset_moves": 4,
+        "wc_prereq_list": 5,
+        "html_video": 3,
+        "br": 3,
+        "wc_screen_block": 0,
+        "related_to_ids": 14
+      }
+    },
+    {
+      "id": "onda-4-guias-compras-financeiro",
+      "title": "ONDA 4 - Guias Compras e Financeiro",
+      "risk": "medio",
+      "count": 6,
+      "files": [
+        "docs/como-fazer/importar-xml.md",
+        "docs/como-fazer/lancar-nota-entrada.md",
+        "docs/como-fazer/criar-pedido-compra.md",
+        "docs/como-fazer/gerar-boleto.md",
+        "docs/como-fazer/baixar-titulo.md",
+        "docs/como-fazer/lancar-contas-a-pagar.md"
+      ],
+      "transformations": {
+        "front_matter_v1": 6,
+        "asset_moves": 0,
+        "wc_prereq_list": 6,
+        "html_video": 0,
+        "br": 5,
+        "wc_screen_block": 0,
+        "related_to_ids": 12
+      }
+    },
+    {
+      "id": "onda-5-manuais-comercial-faturamento",
+      "title": "ONDA 5 - Manuais Comercial e Faturamento",
+      "risk": "medio",
+      "count": 4,
+      "files": [
+        "docs/comercial/comercial-grupo-clientes.md",
+        "docs/faturamento/faturamento-nf.md",
+        "docs/faturamento/faturamento-nfce.md",
+        "docs/faturamento/inutilizacao-nota-fiscal.md"
+      ],
+      "transformations": {
+        "front_matter_v1": 4,
+        "asset_moves": 6,
+        "wc_prereq_list": 0,
+        "html_video": 1,
+        "br": 0,
+        "wc_screen_block": 2,
+        "related_to_ids": 3
+      }
+    },
+    {
+      "id": "onda-6-manuais-materiais-relatorios-administracao",
+      "title": "ONDA 6 - Manuais Materiais, Relatorios e Administracao",
+      "risk": "medio",
+      "count": 5,
+      "files": [
+        "docs/materiais/materiais.md",
+        "docs/materiais/lote-estoque.md",
+        "docs/relatorios/xml-nfe.md",
+        "docs/administracao/usuarios.md",
+        "docs/administracao/empresas.md"
+      ],
+      "transformations": {
+        "front_matter_v1": 5,
+        "asset_moves": 3,
+        "wc_prereq_list": 0,
+        "html_video": 0,
+        "br": 0,
+        "wc_screen_block": 3,
+        "related_to_ids": 1
+      }
+    }
+  ],
+  "items": [
+    {
+      "path": "docs/como-fazer/cadastrar-natureza-operacao.md",
+      "title": "Como cadastrar uma Natureza de Operação",
+      "nav_title": "Como cadastrar uma Natureza de Operação",
+      "type": "Guia",
+      "category": "Administração",
+      "class": "B",
+      "recommended_metadata": {
+        "id": "cadastrar-natureza-operacao",
+        "title": "Como cadastrar uma Natureza de Operação",
+        "type": "guia",
+        "category": "Administração",
+        "description": null,
+        "difficulty": "média",
+        "screen_path": null,
+        "related_manual": [],
+        "related_guides": [
+          "faturar-nota",
+          "lancar-nota-entrada"
+        ]
+      },
+      "current_assets": [
+        "docs/assets/videos/adm_natureza_operacao.mp4"
+      ],
+      "asset_moves": [
+        {
+          "kind": "video",
+          "from": "docs/assets/videos/adm_natureza_operacao.mp4",
+          "to": "docs/assets/videos/guias/cadastrar-natureza-operacao/adm_natureza_operacao.mp4",
+          "markdown_after_migration": "[Assistir video](../assets/videos/guias/cadastrar-natureza-operacao/adm_natureza_operacao.mp4){ .wc-video-link }",
+          "already_in_v1_location": false
+        }
+      ],
+      "html_to_convert": [
+        {
+          "type": "wc-prereq-list",
+          "action": "converter wrapper HTML para lista Markdown preservando os itens atuais"
+        },
+        {
+          "type": "video",
+          "action": "converter tag <video>/<source> para link Markdown com .wc-video-link",
+          "count": 1
+        }
+      ],
+      "related_resolution": {
+        "related_manual": [],
+        "related_guides": [
+          "faturar-nota",
+          "lancar-nota-entrada"
+        ],
+        "deferred_or_blocked": [
+          {
+            "href": "../administracao/natureza-op.md",
+            "path": "docs/administracao/natureza-op.md",
+            "id": "natureza-op",
+            "class": "D",
+            "title": "Natureza de Operação"
+          }
+        ],
+        "unresolved_or_non_content": []
+      },
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- Operação que será realizada definida",
+        "- Critérios fiscais da operação validados com o responsável fiscal da empresa",
+        "- Categorias de material, NCMs, materiais e demais cadastros de critério disponíveis no sistema",
+        "</div>"
+      ],
+      "risks_or_human_review": [
+        "description deve ficar vazia ou ser revisada; nao ha paragrafo introdutorio claro",
+        "ha relacionados apontando para Classe C/D; nao migrar esses links automaticamente nesta etapa",
+        "assets precisam ser movidos para pasta previsivel por conteudo",
+        "video HTML exige conferencia visual apos build real",
+        "front matter legado de erro deve ser removido se nao tiver uso no padrao V1"
+      ]
+    },
+    {
+      "path": "docs/como-fazer/cadastrar-condicao-pagamento.md",
+      "title": "Como cadastrar uma Condição de Pagamento",
+      "nav_title": "Como cadastrar uma Condição de Pagamento",
+      "type": "Guia",
+      "category": "Administração",
+      "class": "B",
+      "recommended_metadata": {
+        "id": "cadastrar-condicao-pagamento",
+        "title": "Como cadastrar uma Condição de Pagamento",
+        "type": "guia",
+        "category": "Administração",
+        "description": null,
+        "difficulty": "média",
+        "screen_path": null,
+        "related_manual": [],
+        "related_guides": []
+      },
+      "current_assets": [
+        "docs/assets/videos/adm_condicao_pagamento.mp4"
+      ],
+      "asset_moves": [
+        {
+          "kind": "video",
+          "from": "docs/assets/videos/adm_condicao_pagamento.mp4",
+          "to": "docs/assets/videos/guias/cadastrar-condicao-pagamento/adm_condicao_pagamento.mp4",
+          "markdown_after_migration": "[Assistir video](../assets/videos/guias/cadastrar-condicao-pagamento/adm_condicao_pagamento.mp4){ .wc-video-link }",
+          "already_in_v1_location": false
+        }
+      ],
+      "html_to_convert": [
+        {
+          "type": "wc-prereq-list",
+          "action": "converter wrapper HTML para lista Markdown preservando os itens atuais"
+        },
+        {
+          "type": "video",
+          "action": "converter tag <video>/<source> para link Markdown com .wc-video-link",
+          "count": 1
+        }
+      ],
+      "related_resolution": {
+        "related_manual": [],
+        "related_guides": [],
+        "deferred_or_blocked": [
+          {
+            "href": "../administracao/condicoes-pagamento.md",
+            "path": "docs/administracao/condicoes-pagamento.md",
+            "id": "condicoes-pagamento",
+            "class": "D",
+            "title": "Condições de Pagamento"
+          }
+        ],
+        "unresolved_or_non_content": []
+      },
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- Forma e prazo de pagamento definidos",
+        "</div>"
+      ],
+      "risks_or_human_review": [
+        "description deve ficar vazia ou ser revisada; nao ha paragrafo introdutorio claro",
+        "ha relacionados apontando para Classe C/D; nao migrar esses links automaticamente nesta etapa",
+        "assets precisam ser movidos para pasta previsivel por conteudo",
+        "video HTML exige conferencia visual apos build real",
+        "front matter legado de erro deve ser removido se nao tiver uso no padrao V1"
+      ]
+    },
+    {
+      "path": "docs/como-fazer/cadastrar-centro-custo.md",
+      "title": "Como cadastrar um Centro de Custo",
+      "nav_title": "Como cadastrar um Centro de Custo",
+      "type": "Guia",
+      "category": "Administração",
+      "class": "B",
+      "recommended_metadata": {
+        "id": "cadastrar-centro-custo",
+        "title": "Como cadastrar um Centro de Custo",
+        "type": "guia",
+        "category": "Administração",
+        "description": null,
+        "difficulty": "média",
+        "screen_path": null,
+        "related_manual": [],
+        "related_guides": []
+      },
+      "current_assets": [
+        "docs/assets/videos/adm_centro_custo.mp4"
+      ],
+      "asset_moves": [
+        {
+          "kind": "video",
+          "from": "docs/assets/videos/adm_centro_custo.mp4",
+          "to": "docs/assets/videos/guias/cadastrar-centro-custo/adm_centro_custo.mp4",
+          "markdown_after_migration": "[Assistir video](../assets/videos/guias/cadastrar-centro-custo/adm_centro_custo.mp4){ .wc-video-link }",
+          "already_in_v1_location": false
+        }
+      ],
+      "html_to_convert": [
+        {
+          "type": "wc-prereq-list",
+          "action": "converter wrapper HTML para lista Markdown preservando os itens atuais"
+        },
+        {
+          "type": "video",
+          "action": "converter tag <video>/<source> para link Markdown com .wc-video-link",
+          "count": 1
+        }
+      ],
+      "related_resolution": {
+        "related_manual": [],
+        "related_guides": [],
+        "deferred_or_blocked": [
+          {
+            "href": "../administracao/centro-custo.md",
+            "path": "docs/administracao/centro-custo.md",
+            "id": "centro-custo",
+            "class": "D",
+            "title": "Centro de Custo"
+          }
+        ],
+        "unresolved_or_non_content": []
+      },
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- Nome e finalidade do centro de custo definidos",
+        "</div>"
+      ],
+      "risks_or_human_review": [
+        "description deve ficar vazia ou ser revisada; nao ha paragrafo introdutorio claro",
+        "ha relacionados apontando para Classe C/D; nao migrar esses links automaticamente nesta etapa",
+        "assets precisam ser movidos para pasta previsivel por conteudo",
+        "video HTML exige conferencia visual apos build real",
+        "front matter legado de erro deve ser removido se nao tiver uso no padrao V1"
+      ]
+    },
+    {
+      "path": "docs/como-fazer/cadastrar-usuario.md",
+      "title": "Como cadastrar um usuário",
+      "nav_title": "Como cadastrar um usuário",
+      "type": "Guia",
+      "category": "Administração",
+      "class": "B",
+      "recommended_metadata": {
+        "id": "cadastrar-usuario",
+        "title": "Como cadastrar um usuário",
+        "type": "guia",
+        "category": "Administração",
+        "description": null,
+        "difficulty": "média",
+        "screen_path": null,
+        "related_manual": [
+          "usuarios"
+        ],
+        "related_guides": [
+          "configurar-grupo-usuario"
+        ]
+      },
+      "current_assets": [
+        "docs/assets/videos/adm_cadastro_usuario.mp4"
+      ],
+      "asset_moves": [
+        {
+          "kind": "video",
+          "from": "docs/assets/videos/adm_cadastro_usuario.mp4",
+          "to": "docs/assets/videos/guias/cadastrar-usuario/adm_cadastro_usuario.mp4",
+          "markdown_after_migration": "[Assistir video](../assets/videos/guias/cadastrar-usuario/adm_cadastro_usuario.mp4){ .wc-video-link }",
+          "already_in_v1_location": false
+        }
+      ],
+      "html_to_convert": [
+        {
+          "type": "wc-prereq-list",
+          "action": "converter wrapper HTML para lista Markdown preservando os itens atuais"
+        },
+        {
+          "type": "video",
+          "action": "converter tag <video>/<source> para link Markdown com .wc-video-link",
+          "count": 1
+        }
+      ],
+      "related_resolution": {
+        "related_manual": [
+          "usuarios"
+        ],
+        "related_guides": [
+          "configurar-grupo-usuario"
+        ],
+        "deferred_or_blocked": [],
+        "unresolved_or_non_content": []
+      },
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- Usuário administrador ou autorização do responsável da empresa",
+        "</div>"
+      ],
+      "risks_or_human_review": [
+        "description deve ficar vazia ou ser revisada; nao ha paragrafo introdutorio claro",
+        "assets precisam ser movidos para pasta previsivel por conteudo",
+        "video HTML exige conferencia visual apos build real",
+        "front matter legado de erro deve ser removido se nao tiver uso no padrao V1"
+      ]
+    },
+    {
+      "path": "docs/como-fazer/configurar-grupo-usuario.md",
+      "title": "Como configurar um Grupo de Usuário",
+      "nav_title": "Como configurar um Grupo de Usuário",
+      "type": "Guia",
+      "category": "Administração",
+      "class": "B",
+      "recommended_metadata": {
+        "id": "configurar-grupo-usuario",
+        "title": "Como configurar um Grupo de Usuário",
+        "type": "guia",
+        "category": "Administração",
+        "description": null,
+        "difficulty": "média",
+        "screen_path": null,
+        "related_manual": [],
+        "related_guides": [
+          "cadastrar-usuario"
+        ]
+      },
+      "current_assets": [
+        "docs/assets/videos/adm__grupo_usuario.mp4"
+      ],
+      "asset_moves": [
+        {
+          "kind": "video",
+          "from": "docs/assets/videos/adm__grupo_usuario.mp4",
+          "to": "docs/assets/videos/guias/configurar-grupo-usuario/adm__grupo_usuario.mp4",
+          "markdown_after_migration": "[Assistir video](../assets/videos/guias/configurar-grupo-usuario/adm__grupo_usuario.mp4){ .wc-video-link }",
+          "already_in_v1_location": false
+        }
+      ],
+      "html_to_convert": [
+        {
+          "type": "wc-prereq-list",
+          "action": "converter wrapper HTML para lista Markdown preservando os itens atuais"
+        },
+        {
+          "type": "video",
+          "action": "converter tag <video>/<source> para link Markdown com .wc-video-link",
+          "count": 1
+        }
+      ],
+      "related_resolution": {
+        "related_manual": [],
+        "related_guides": [
+          "cadastrar-usuario"
+        ],
+        "deferred_or_blocked": [
+          {
+            "href": "../administracao/grupo-usuarios.md",
+            "path": "docs/administracao/grupo-usuarios.md",
+            "id": "grupo-usuarios",
+            "class": "D",
+            "title": "Grupo Usuários"
+          }
+        ],
+        "unresolved_or_non_content": []
+      },
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- Usuário autorizado a administrar acessos",
+        "</div>"
+      ],
+      "risks_or_human_review": [
+        "description deve ficar vazia ou ser revisada; nao ha paragrafo introdutorio claro",
+        "ha relacionados apontando para Classe C/D; nao migrar esses links automaticamente nesta etapa",
+        "assets precisam ser movidos para pasta previsivel por conteudo",
+        "video HTML exige conferencia visual apos build real",
+        "front matter legado de erro deve ser removido se nao tiver uso no padrao V1"
+      ]
+    },
+    {
+      "path": "docs/como-fazer/cadastrar-fornecedor.md",
+      "title": "Como cadastrar um fornecedor",
+      "nav_title": "Como cadastrar um fornecedor",
+      "type": "Guia",
+      "category": "Comercial",
+      "class": "B",
+      "recommended_metadata": {
+        "id": "cadastrar-fornecedor",
+        "title": "Como cadastrar um fornecedor",
+        "type": "guia",
+        "category": "Comercial",
+        "description": null,
+        "difficulty": "média",
+        "screen_path": null,
+        "related_manual": [],
+        "related_guides": [
+          "criar-pedido-compra",
+          "lancar-nota-entrada",
+          "lancar-contas-a-pagar"
+        ]
+      },
+      "current_assets": [],
+      "asset_moves": [],
+      "html_to_convert": [
+        {
+          "type": "wc-prereq-list",
+          "action": "converter wrapper HTML para lista Markdown preservando os itens atuais"
+        }
+      ],
+      "related_resolution": {
+        "related_manual": [],
+        "related_guides": [
+          "criar-pedido-compra",
+          "lancar-nota-entrada",
+          "lancar-contas-a-pagar"
+        ],
+        "deferred_or_blocked": [
+          {
+            "href": "../fornecedores/fornecedores.md",
+            "path": "docs/fornecedores/fornecedores.md",
+            "id": "fornecedores",
+            "class": "D",
+            "title": "Fornecedores"
+          }
+        ],
+        "unresolved_or_non_content": [
+          {
+            "href": "../referencia/links-uteis.md",
+            "resolved_path": "docs/referencia/links-uteis.md"
+          }
+        ]
+      },
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- CNPJ, CPF ou dados cadastrais do fornecedor em mãos",
+        "- Confirmação de que o fornecedor ainda não está cadastrado",
+        "</div>"
+      ],
+      "risks_or_human_review": [
+        "description deve ficar vazia ou ser revisada; nao ha paragrafo introdutorio claro",
+        "ha relacionados apontando para Classe C/D; nao migrar esses links automaticamente nesta etapa",
+        "ha links de Veja tambem para paginas fora do escopo Guia/Manual ou nao resolvidas",
+        "front matter legado de erro deve ser removido se nao tiver uso no padrao V1"
+      ]
+    },
+    {
+      "path": "docs/como-fazer/criar-orcamento.md",
+      "title": "Como criar um orçamento",
+      "nav_title": "Como criar um orçamento",
+      "type": "Guia",
+      "category": "Comercial",
+      "class": "B",
+      "recommended_metadata": {
+        "id": "criar-orcamento",
+        "title": "Como criar um orçamento",
+        "type": "guia",
+        "category": "Comercial",
+        "description": null,
+        "difficulty": "média",
+        "screen_path": null,
+        "related_manual": [],
+        "related_guides": []
+      },
+      "current_assets": [
+        "docs/assets/videos/comercial_orcamento.mp4"
+      ],
+      "asset_moves": [
+        {
+          "kind": "video",
+          "from": "docs/assets/videos/comercial_orcamento.mp4",
+          "to": "docs/assets/videos/guias/criar-orcamento/comercial_orcamento.mp4",
+          "markdown_after_migration": "[Assistir video](../assets/videos/guias/criar-orcamento/comercial_orcamento.mp4){ .wc-video-link }",
+          "already_in_v1_location": false
+        }
+      ],
+      "html_to_convert": [
+        {
+          "type": "wc-prereq-list",
+          "action": "converter wrapper HTML para lista Markdown preservando os itens atuais"
+        },
+        {
+          "type": "video",
+          "action": "converter tag <video>/<source> para link Markdown com .wc-video-link",
+          "count": 1
+        },
+        {
+          "type": "br",
+          "action": "remover <br> e manter quebras naturais em Markdown"
+        }
+      ],
+      "related_resolution": {
+        "related_manual": [],
+        "related_guides": [],
+        "deferred_or_blocked": [
+          {
+            "href": "fazer-pedido-venda.md",
+            "path": "docs/como-fazer/fazer-pedido-venda.md",
+            "id": "fazer-pedido-venda",
+            "class": "C",
+            "title": "Como gerar um pedido"
+          },
+          {
+            "href": "../comercial/comercial-orcamento.md",
+            "path": "docs/comercial/comercial-orcamento.md",
+            "id": "comercial-orcamento",
+            "class": "D",
+            "title": "Módulo Comercial - Orçamentos"
+          }
+        ],
+        "unresolved_or_non_content": [
+          {
+            "href": "cancelar-pedido.md",
+            "resolved_path": "docs/como-fazer/cancelar-pedido.md"
+          }
+        ]
+      },
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- Cliente cadastrado<br>",
+        "[Como cadastrar um cliente.](cadastrar-cliente.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Material cadastrado<br>",
+        "[Como cadastrar um material.](cadastrar-material.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Condição comercial definida",
+        "</div>"
+      ],
+      "risks_or_human_review": [
+        "description deve ficar vazia ou ser revisada; nao ha paragrafo introdutorio claro",
+        "ha relacionados apontando para Classe C/D; nao migrar esses links automaticamente nesta etapa",
+        "ha links de Veja tambem para paginas fora do escopo Guia/Manual ou nao resolvidas",
+        "assets precisam ser movidos para pasta previsivel por conteudo",
+        "video HTML exige conferencia visual apos build real",
+        "front matter legado de erro deve ser removido se nao tiver uso no padrao V1"
+      ]
+    },
+    {
+      "path": "docs/como-fazer/cadastrar-material.md",
+      "title": "Como cadastrar um material",
+      "nav_title": "Cadastro de Material",
+      "type": "Guia",
+      "category": "Estoque",
+      "class": "B",
+      "recommended_metadata": {
+        "id": "cadastrar-material",
+        "title": "Como cadastrar um material",
+        "type": "guia",
+        "category": "Estoque",
+        "description": null,
+        "difficulty": "média",
+        "screen_path": null,
+        "related_manual": [
+          "materiais"
+        ],
+        "related_guides": [
+          "ajustar-estoque",
+          "faturar-nota"
+        ]
+      },
+      "current_assets": [
+        "docs/assets/images/guias/materiais_materiais.png",
+        "docs/assets/videos/materiais_materiais.mp4"
+      ],
+      "asset_moves": [
+        {
+          "kind": "image",
+          "from": "docs/assets/images/guias/materiais_materiais.png",
+          "to": "docs/assets/images/guias/cadastrar-material/materiais_materiais.png",
+          "already_in_v1_location": false
+        },
+        {
+          "kind": "video",
+          "from": "docs/assets/videos/materiais_materiais.mp4",
+          "to": "docs/assets/videos/guias/cadastrar-material/materiais_materiais.mp4",
+          "markdown_after_migration": "[Assistir video](../assets/videos/guias/cadastrar-material/materiais_materiais.mp4){ .wc-video-link }",
+          "already_in_v1_location": false
+        }
+      ],
+      "html_to_convert": [
+        {
+          "type": "wc-prereq-list",
+          "action": "converter wrapper HTML para lista Markdown preservando os itens atuais"
+        },
+        {
+          "type": "video",
+          "action": "converter tag <video>/<source> para link Markdown com .wc-video-link",
+          "count": 1
+        }
+      ],
+      "related_resolution": {
+        "related_manual": [
+          "materiais"
+        ],
+        "related_guides": [
+          "ajustar-estoque",
+          "faturar-nota"
+        ],
+        "deferred_or_blocked": [],
+        "unresolved_or_non_content": []
+      },
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- Descrição, unidade, categoria e dados fiscais ou comerciais do material definidos",
+        "</div>"
+      ],
+      "risks_or_human_review": [
+        "description deve ficar vazia ou ser revisada; nao ha paragrafo introdutorio claro",
+        "assets precisam ser movidos para pasta previsivel por conteudo",
+        "video HTML exige conferencia visual apos build real",
+        "front matter legado de erro deve ser removido se nao tiver uso no padrao V1"
+      ]
+    },
+    {
+      "path": "docs/como-fazer/consultar-estoque.md",
+      "title": "Como consultar estoque",
+      "nav_title": "Como consultar estoque",
+      "type": "Guia",
+      "category": "Estoque",
+      "class": "B",
+      "recommended_metadata": {
+        "id": "consultar-estoque",
+        "title": "Como consultar estoque",
+        "type": "guia",
+        "category": "Estoque",
+        "description": null,
+        "difficulty": "média",
+        "screen_path": null,
+        "related_manual": [
+          "lote-estoque"
+        ],
+        "related_guides": [
+          "ajustar-estoque",
+          "transferir-estoque"
+        ]
+      },
+      "current_assets": [],
+      "asset_moves": [],
+      "html_to_convert": [
+        {
+          "type": "wc-prereq-list",
+          "action": "converter wrapper HTML para lista Markdown preservando os itens atuais"
+        },
+        {
+          "type": "br",
+          "action": "remover <br> e manter quebras naturais em Markdown"
+        }
+      ],
+      "related_resolution": {
+        "related_manual": [
+          "lote-estoque"
+        ],
+        "related_guides": [
+          "ajustar-estoque",
+          "transferir-estoque"
+        ],
+        "deferred_or_blocked": [],
+        "unresolved_or_non_content": []
+      },
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- Material cadastrado<br>",
+        "[Como cadastrar um material.](cadastrar-material.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Critério de busca definido",
+        "</div>"
+      ],
+      "risks_or_human_review": [
+        "description deve ficar vazia ou ser revisada; nao ha paragrafo introdutorio claro",
+        "front matter legado de erro deve ser removido se nao tiver uso no padrao V1"
+      ]
+    },
+    {
+      "path": "docs/como-fazer/ajustar-estoque.md",
+      "title": "Como ajustar estoque",
+      "nav_title": "Como ajustar estoque",
+      "type": "Guia",
+      "category": "Estoque",
+      "class": "B",
+      "recommended_metadata": {
+        "id": "ajustar-estoque",
+        "title": "Como ajustar estoque",
+        "type": "guia",
+        "category": "Estoque",
+        "description": null,
+        "difficulty": "média",
+        "screen_path": null,
+        "related_manual": [],
+        "related_guides": [
+          "consultar-estoque",
+          "fazer-inventario"
+        ]
+      },
+      "current_assets": [],
+      "asset_moves": [],
+      "html_to_convert": [
+        {
+          "type": "wc-prereq-list",
+          "action": "converter wrapper HTML para lista Markdown preservando os itens atuais"
+        },
+        {
+          "type": "br",
+          "action": "remover <br> e manter quebras naturais em Markdown"
+        }
+      ],
+      "related_resolution": {
+        "related_manual": [],
+        "related_guides": [
+          "consultar-estoque",
+          "fazer-inventario"
+        ],
+        "deferred_or_blocked": [
+          {
+            "href": "../materiais/ajustar-inventario.md",
+            "path": "docs/materiais/ajustar-inventario.md",
+            "id": "ajustar-inventario",
+            "class": "D",
+            "title": "Ajustar Inventário"
+          }
+        ],
+        "unresolved_or_non_content": []
+      },
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- Estoque consultado<br>",
+        "[Como consultar estoque](consultar-estoque.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Material cadastrado<br>",
+        "[Como cadastrar um material.](cadastrar-material.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Motivo do ajuste definido",
+        "</div>"
+      ],
+      "risks_or_human_review": [
+        "description deve ficar vazia ou ser revisada; nao ha paragrafo introdutorio claro",
+        "ha relacionados apontando para Classe C/D; nao migrar esses links automaticamente nesta etapa",
+        "front matter legado de erro deve ser removido se nao tiver uso no padrao V1"
+      ]
+    },
+    {
+      "path": "docs/como-fazer/fazer-inventario.md",
+      "title": "Como fazer inventário",
+      "nav_title": "Como fazer inventário",
+      "type": "Guia",
+      "category": "Estoque",
+      "class": "B",
+      "recommended_metadata": {
+        "id": "fazer-inventario",
+        "title": "Como fazer inventário",
+        "type": "guia",
+        "category": "Estoque",
+        "description": null,
+        "difficulty": "média",
+        "screen_path": null,
+        "related_manual": [],
+        "related_guides": [
+          "consultar-estoque",
+          "ajustar-estoque"
+        ]
+      },
+      "current_assets": [],
+      "asset_moves": [],
+      "html_to_convert": [
+        {
+          "type": "wc-prereq-list",
+          "action": "converter wrapper HTML para lista Markdown preservando os itens atuais"
+        },
+        {
+          "type": "br",
+          "action": "remover <br> e manter quebras naturais em Markdown"
+        }
+      ],
+      "related_resolution": {
+        "related_manual": [],
+        "related_guides": [
+          "consultar-estoque",
+          "ajustar-estoque"
+        ],
+        "deferred_or_blocked": [
+          {
+            "href": "../materiais/ajustar-inventario.md",
+            "path": "docs/materiais/ajustar-inventario.md",
+            "id": "ajustar-inventario",
+            "class": "D",
+            "title": "Ajustar Inventário"
+          }
+        ],
+        "unresolved_or_non_content": []
+      },
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- Estoque consultado<br>",
+        "[Como consultar estoque](consultar-estoque.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Lista de materiais, locais ou lotes que serão contados definida",
+        "- Equipe orientada sobre o critério de contagem",
+        "</div>"
+      ],
+      "risks_or_human_review": [
+        "description deve ficar vazia ou ser revisada; nao ha paragrafo introdutorio claro",
+        "ha relacionados apontando para Classe C/D; nao migrar esses links automaticamente nesta etapa",
+        "front matter legado de erro deve ser removido se nao tiver uso no padrao V1"
+      ]
+    },
+    {
+      "path": "docs/como-fazer/transferir-estoque.md",
+      "title": "Como transferir estoque",
+      "nav_title": "Como transferir estoque",
+      "type": "Guia",
+      "category": "Estoque",
+      "class": "B",
+      "recommended_metadata": {
+        "id": "transferir-estoque",
+        "title": "Como transferir estoque",
+        "type": "guia",
+        "category": "Estoque",
+        "description": null,
+        "difficulty": "média",
+        "screen_path": null,
+        "related_manual": [
+          "lote-estoque"
+        ],
+        "related_guides": [
+          "consultar-estoque",
+          "ajustar-estoque"
+        ]
+      },
+      "current_assets": [],
+      "asset_moves": [],
+      "html_to_convert": [
+        {
+          "type": "wc-prereq-list",
+          "action": "converter wrapper HTML para lista Markdown preservando os itens atuais"
+        },
+        {
+          "type": "br",
+          "action": "remover <br> e manter quebras naturais em Markdown"
+        }
+      ],
+      "related_resolution": {
+        "related_manual": [
+          "lote-estoque"
+        ],
+        "related_guides": [
+          "consultar-estoque",
+          "ajustar-estoque"
+        ],
+        "deferred_or_blocked": [],
+        "unresolved_or_non_content": []
+      },
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- Estoque consultado<br>",
+        "[Como consultar estoque](consultar-estoque.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Material com saldo disponível",
+        "- Local de origem e destino definidos",
+        "</div>"
+      ],
+      "risks_or_human_review": [
+        "description deve ficar vazia ou ser revisada; nao ha paragrafo introdutorio claro",
+        "front matter legado de erro deve ser removido se nao tiver uso no padrao V1"
+      ]
+    },
+    {
+      "path": "docs/como-fazer/faturar-nota.md",
+      "title": "Como emitir uma NF-e",
+      "nav_title": "Como emitir uma NF-e",
+      "type": "Guia",
+      "category": "Faturamento",
+      "class": "B",
+      "recommended_metadata": {
+        "id": "faturar-nota",
+        "title": "Como emitir uma NF-e",
+        "type": "guia",
+        "category": "Faturamento",
+        "description": null,
+        "difficulty": "média",
+        "screen_path": null,
+        "related_manual": [
+          "faturamento-nf"
+        ],
+        "related_guides": [
+          "cancelar-nfe",
+          "emitir-devolucao",
+          "emitir-carta-correcao"
+        ]
+      },
+      "current_assets": [
+        "docs/assets/images/guias/faturamento_emitir_nfe.png",
+        "docs/assets/videos/faturamento_nfe.mp4"
+      ],
+      "asset_moves": [
+        {
+          "kind": "image",
+          "from": "docs/assets/images/guias/faturamento_emitir_nfe.png",
+          "to": "docs/assets/images/guias/faturar-nota/faturamento_emitir_nfe.png",
+          "already_in_v1_location": false
+        },
+        {
+          "kind": "video",
+          "from": "docs/assets/videos/faturamento_nfe.mp4",
+          "to": "docs/assets/videos/guias/faturar-nota/faturamento_nfe.mp4",
+          "markdown_after_migration": "[Assistir video](../assets/videos/guias/faturar-nota/faturamento_nfe.mp4){ .wc-video-link }",
+          "already_in_v1_location": false
+        }
+      ],
+      "html_to_convert": [
+        {
+          "type": "wc-prereq-list",
+          "action": "converter wrapper HTML para lista Markdown preservando os itens atuais"
+        },
+        {
+          "type": "video",
+          "action": "converter tag <video>/<source> para link Markdown com .wc-video-link",
+          "count": 1
+        },
+        {
+          "type": "br",
+          "action": "remover <br> e manter quebras naturais em Markdown"
+        }
+      ],
+      "related_resolution": {
+        "related_manual": [
+          "faturamento-nf"
+        ],
+        "related_guides": [
+          "cancelar-nfe",
+          "emitir-devolucao",
+          "emitir-carta-correcao"
+        ],
+        "deferred_or_blocked": [],
+        "unresolved_or_non_content": []
+      },
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- Cliente cadastrado<br>",
+        "[Como cadastrar um cliente.](cadastrar-cliente.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Material cadastrado<br>",
+        "[Como cadastrar um material.](cadastrar-material.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Natureza de operação cadastrada<br>",
+        "[Como cadastrar uma natureza de operação.](cadastrar-natureza-operacao.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Pedido criado, quando a emissão for por pedido<br>",
+        "[Como gerar um pedido](fazer-pedido-venda.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Certificado e parâmetros fiscais configurados",
+        "</div>"
+      ],
+      "risks_or_human_review": [
+        "description deve ficar vazia ou ser revisada; nao ha paragrafo introdutorio claro",
+        "assets precisam ser movidos para pasta previsivel por conteudo",
+        "video HTML exige conferencia visual apos build real",
+        "front matter legado de erro deve ser removido se nao tiver uso no padrao V1"
+      ]
+    },
+    {
+      "path": "docs/como-fazer/cancelar-nfe.md",
+      "title": "Como cancelar uma NF-e",
+      "nav_title": "Como cancelar uma NF-e",
+      "type": "Guia",
+      "category": "Faturamento",
+      "class": "B",
+      "recommended_metadata": {
+        "id": "cancelar-nfe",
+        "title": "Como cancelar uma NF-e",
+        "type": "guia",
+        "category": "Faturamento",
+        "description": null,
+        "difficulty": "média",
+        "screen_path": null,
+        "related_manual": [
+          "faturamento-nf"
+        ],
+        "related_guides": [
+          "faturar-nota",
+          "emitir-devolucao"
+        ]
+      },
+      "current_assets": [
+        "docs/assets/videos/faturamento_cancelar_nfe.mp4"
+      ],
+      "asset_moves": [
+        {
+          "kind": "video",
+          "from": "docs/assets/videos/faturamento_cancelar_nfe.mp4",
+          "to": "docs/assets/videos/guias/cancelar-nfe/faturamento_cancelar_nfe.mp4",
+          "markdown_after_migration": "[Assistir video](../assets/videos/guias/cancelar-nfe/faturamento_cancelar_nfe.mp4){ .wc-video-link }",
+          "already_in_v1_location": false
+        }
+      ],
+      "html_to_convert": [
+        {
+          "type": "wc-prereq-list",
+          "action": "converter wrapper HTML para lista Markdown preservando os itens atuais"
+        },
+        {
+          "type": "video",
+          "action": "converter tag <video>/<source> para link Markdown com .wc-video-link",
+          "count": 1
+        }
+      ],
+      "related_resolution": {
+        "related_manual": [
+          "faturamento-nf"
+        ],
+        "related_guides": [
+          "faturar-nota",
+          "emitir-devolucao"
+        ],
+        "deferred_or_blocked": [],
+        "unresolved_or_non_content": []
+      },
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- NF-e autorizada e localizada",
+        "- Prazo e regra fiscal de cancelamento confirmados",
+        "- Motivo do cancelamento definido",
+        "</div>"
+      ],
+      "risks_or_human_review": [
+        "description deve ficar vazia ou ser revisada; nao ha paragrafo introdutorio claro",
+        "assets precisam ser movidos para pasta previsivel por conteudo",
+        "video HTML exige conferencia visual apos build real",
+        "front matter legado de erro deve ser removido se nao tiver uso no padrao V1"
+      ]
+    },
+    {
+      "path": "docs/como-fazer/emitir-devolucao.md",
+      "title": "Como emitir uma devolução",
+      "nav_title": "Como emitir uma devolução",
+      "type": "Guia",
+      "category": "Faturamento",
+      "class": "B",
+      "recommended_metadata": {
+        "id": "emitir-devolucao",
+        "title": "Como emitir uma devolução",
+        "type": "guia",
+        "category": "Faturamento",
+        "description": null,
+        "difficulty": "média",
+        "screen_path": null,
+        "related_manual": [],
+        "related_guides": [
+          "faturar-nota",
+          "cancelar-nfe"
+        ]
+      },
+      "current_assets": [],
+      "asset_moves": [],
+      "html_to_convert": [
+        {
+          "type": "wc-prereq-list",
+          "action": "converter wrapper HTML para lista Markdown preservando os itens atuais"
+        },
+        {
+          "type": "br",
+          "action": "remover <br> e manter quebras naturais em Markdown"
+        }
+      ],
+      "related_resolution": {
+        "related_manual": [],
+        "related_guides": [
+          "faturar-nota",
+          "cancelar-nfe"
+        ],
+        "deferred_or_blocked": [
+          {
+            "href": "../comercial/devolucao.md",
+            "path": "docs/comercial/devolucao.md",
+            "id": "devolucao",
+            "class": "D",
+            "title": "Devolução"
+          }
+        ],
+        "unresolved_or_non_content": []
+      },
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- Documento fiscal original localizado",
+        "- Cliente ou fornecedor cadastrado<br>",
+        "[Como cadastrar um cliente.](cadastrar-cliente.md){: target=\"_blank\" rel=\"noopener\" } ou [Como cadastrar um fornecedor.](cadastrar-fornecedor.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Material cadastrado<br>",
+        "[Como cadastrar um material.](cadastrar-material.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Natureza de operação para devolução cadastrada<br>",
+        "[Como cadastrar uma natureza de operação.](cadastrar-natureza-operacao.md){: target=\"_blank\" rel=\"noopener\" }",
+        "</div>"
+      ],
+      "risks_or_human_review": [
+        "description deve ficar vazia ou ser revisada; nao ha paragrafo introdutorio claro",
+        "ha relacionados apontando para Classe C/D; nao migrar esses links automaticamente nesta etapa",
+        "front matter legado de erro deve ser removido se nao tiver uso no padrao V1"
+      ]
+    },
+    {
+      "path": "docs/como-fazer/emitir-carta-correcao.md",
+      "title": "Como emitir uma carta de correção",
+      "nav_title": "Como emitir uma carta de correção",
+      "type": "Guia",
+      "category": "Faturamento",
+      "class": "B",
+      "recommended_metadata": {
+        "id": "emitir-carta-correcao",
+        "title": "Como emitir uma carta de correção",
+        "type": "guia",
+        "category": "Faturamento",
+        "description": null,
+        "difficulty": "média",
+        "screen_path": null,
+        "related_manual": [],
+        "related_guides": [
+          "faturar-nota",
+          "cancelar-nfe"
+        ]
+      },
+      "current_assets": [
+        "docs/assets/videos/faturamento_carta_correcao.mp4"
+      ],
+      "asset_moves": [
+        {
+          "kind": "video",
+          "from": "docs/assets/videos/faturamento_carta_correcao.mp4",
+          "to": "docs/assets/videos/guias/emitir-carta-correcao/faturamento_carta_correcao.mp4",
+          "markdown_after_migration": "[Assistir video](../assets/videos/guias/emitir-carta-correcao/faturamento_carta_correcao.mp4){ .wc-video-link }",
+          "already_in_v1_location": false
+        }
+      ],
+      "html_to_convert": [
+        {
+          "type": "wc-prereq-list",
+          "action": "converter wrapper HTML para lista Markdown preservando os itens atuais"
+        },
+        {
+          "type": "video",
+          "action": "converter tag <video>/<source> para link Markdown com .wc-video-link",
+          "count": 1
+        }
+      ],
+      "related_resolution": {
+        "related_manual": [],
+        "related_guides": [
+          "faturar-nota",
+          "cancelar-nfe"
+        ],
+        "deferred_or_blocked": [
+          {
+            "href": "../faturamento/carta-correcao.md",
+            "path": "docs/faturamento/carta-correcao.md",
+            "id": "carta-correcao",
+            "class": "D",
+            "title": "Carta de Correção"
+          }
+        ],
+        "unresolved_or_non_content": []
+      },
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- NF-e autorizada e localizada",
+        "- Texto de correção validado",
+        "</div>"
+      ],
+      "risks_or_human_review": [
+        "description deve ficar vazia ou ser revisada; nao ha paragrafo introdutorio claro",
+        "ha relacionados apontando para Classe C/D; nao migrar esses links automaticamente nesta etapa",
+        "assets precisam ser movidos para pasta previsivel por conteudo",
+        "video HTML exige conferencia visual apos build real",
+        "front matter legado de erro deve ser removido se nao tiver uso no padrao V1"
+      ]
+    },
+    {
+      "path": "docs/como-fazer/emitir-nota-complementar.md",
+      "title": "Como emitir uma nota complementar",
+      "nav_title": "Como emitir uma nota complementar",
+      "type": "Guia",
+      "category": "Faturamento",
+      "class": "B",
+      "recommended_metadata": {
+        "id": "emitir-nota-complementar",
+        "title": "Como emitir uma nota complementar",
+        "type": "guia",
+        "category": "Faturamento",
+        "description": null,
+        "difficulty": "média",
+        "screen_path": null,
+        "related_manual": [
+          "faturamento-nf"
+        ],
+        "related_guides": [
+          "faturar-nota",
+          "emitir-carta-correcao"
+        ]
+      },
+      "current_assets": [],
+      "asset_moves": [],
+      "html_to_convert": [
+        {
+          "type": "wc-prereq-list",
+          "action": "converter wrapper HTML para lista Markdown preservando os itens atuais"
+        },
+        {
+          "type": "br",
+          "action": "remover <br> e manter quebras naturais em Markdown"
+        }
+      ],
+      "related_resolution": {
+        "related_manual": [
+          "faturamento-nf"
+        ],
+        "related_guides": [
+          "faturar-nota",
+          "emitir-carta-correcao"
+        ],
+        "deferred_or_blocked": [],
+        "unresolved_or_non_content": []
+      },
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- NF-e original localizada",
+        "- Dados do complemento definidos",
+        "- Natureza de operação adequada para complemento cadastrada<br>",
+        "[Como cadastrar uma natureza de operação.](cadastrar-natureza-operacao.md){: target=\"_blank\" rel=\"noopener\" }",
+        "</div>"
+      ],
+      "risks_or_human_review": [
+        "description deve ficar vazia ou ser revisada; nao ha paragrafo introdutorio claro",
+        "front matter legado de erro deve ser removido se nao tiver uso no padrao V1"
+      ]
+    },
+    {
+      "path": "docs/como-fazer/importar-xml.md",
+      "title": "Como importar XML",
+      "nav_title": "Como importar XML",
+      "type": "Guia",
+      "category": "Compras",
+      "class": "B",
+      "recommended_metadata": {
+        "id": "importar-xml",
+        "title": "Como importar XML",
+        "type": "guia",
+        "category": "Compras",
+        "description": null,
+        "difficulty": "média",
+        "screen_path": null,
+        "related_manual": [],
+        "related_guides": [
+          "lancar-nota-entrada",
+          "criar-pedido-compra"
+        ]
+      },
+      "current_assets": [],
+      "asset_moves": [],
+      "html_to_convert": [
+        {
+          "type": "wc-prereq-list",
+          "action": "converter wrapper HTML para lista Markdown preservando os itens atuais"
+        },
+        {
+          "type": "br",
+          "action": "remover <br> e manter quebras naturais em Markdown"
+        }
+      ],
+      "related_resolution": {
+        "related_manual": [],
+        "related_guides": [
+          "lancar-nota-entrada",
+          "criar-pedido-compra"
+        ],
+        "deferred_or_blocked": [
+          {
+            "href": "../faturamento/entrada-nota-fiscal.md",
+            "path": "docs/faturamento/entrada-nota-fiscal.md",
+            "id": "entrada-nota-fiscal",
+            "class": "D",
+            "title": "Entrada de Nota Fiscal"
+          }
+        ],
+        "unresolved_or_non_content": []
+      },
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- Arquivo XML válido ou documento disponível para consulta",
+        "- Fornecedor cadastrado, quando ainda não existir<br>",
+        "[Como cadastrar um fornecedor.](cadastrar-fornecedor.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Material cadastrado, quando algum item ainda não existir<br>",
+        "[Como cadastrar um material.](cadastrar-material.md){: target=\"_blank\" rel=\"noopener\" }",
+        "</div>"
+      ],
+      "risks_or_human_review": [
+        "description deve ficar vazia ou ser revisada; nao ha paragrafo introdutorio claro",
+        "ha relacionados apontando para Classe C/D; nao migrar esses links automaticamente nesta etapa",
+        "front matter legado de erro deve ser removido se nao tiver uso no padrao V1"
+      ]
+    },
+    {
+      "path": "docs/como-fazer/lancar-nota-entrada.md",
+      "title": "Como lançar uma nota de entrada",
+      "nav_title": "Como lançar uma nota de entrada",
+      "type": "Guia",
+      "category": "Compras",
+      "class": "B",
+      "recommended_metadata": {
+        "id": "lancar-nota-entrada",
+        "title": "Como lançar uma nota de entrada",
+        "type": "guia",
+        "category": "Compras",
+        "description": null,
+        "difficulty": "média",
+        "screen_path": null,
+        "related_manual": [],
+        "related_guides": [
+          "importar-xml",
+          "criar-pedido-compra"
+        ]
+      },
+      "current_assets": [],
+      "asset_moves": [],
+      "html_to_convert": [
+        {
+          "type": "wc-prereq-list",
+          "action": "converter wrapper HTML para lista Markdown preservando os itens atuais"
+        },
+        {
+          "type": "br",
+          "action": "remover <br> e manter quebras naturais em Markdown"
+        }
+      ],
+      "related_resolution": {
+        "related_manual": [],
+        "related_guides": [
+          "importar-xml",
+          "criar-pedido-compra"
+        ],
+        "deferred_or_blocked": [
+          {
+            "href": "../faturamento/entrada-nota-fiscal.md",
+            "path": "docs/faturamento/entrada-nota-fiscal.md",
+            "id": "entrada-nota-fiscal",
+            "class": "D",
+            "title": "Entrada de Nota Fiscal"
+          }
+        ],
+        "unresolved_or_non_content": []
+      },
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- XML importado, quando houver arquivo disponível<br>",
+        "[Como importar XML](importar-xml.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Fornecedor cadastrado<br>",
+        "[Como cadastrar um fornecedor.](cadastrar-fornecedor.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Material cadastrado<br>",
+        "[Como cadastrar um material.](cadastrar-material.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Natureza de operação cadastrada<br>",
+        "[Como cadastrar uma natureza de operação.](cadastrar-natureza-operacao.md){: target=\"_blank\" rel=\"noopener\" }",
+        "</div>"
+      ],
+      "risks_or_human_review": [
+        "description deve ficar vazia ou ser revisada; nao ha paragrafo introdutorio claro",
+        "ha relacionados apontando para Classe C/D; nao migrar esses links automaticamente nesta etapa",
+        "front matter legado de erro deve ser removido se nao tiver uso no padrao V1"
+      ]
+    },
+    {
+      "path": "docs/como-fazer/criar-pedido-compra.md",
+      "title": "Como criar um pedido de compra",
+      "nav_title": "Como criar um pedido de compra",
+      "type": "Guia",
+      "category": "Compras",
+      "class": "B",
+      "recommended_metadata": {
+        "id": "criar-pedido-compra",
+        "title": "Como criar um pedido de compra",
+        "type": "guia",
+        "category": "Compras",
+        "description": null,
+        "difficulty": "média",
+        "screen_path": null,
+        "related_manual": [],
+        "related_guides": [
+          "lancar-nota-entrada",
+          "importar-xml"
+        ]
+      },
+      "current_assets": [],
+      "asset_moves": [],
+      "html_to_convert": [
+        {
+          "type": "wc-prereq-list",
+          "action": "converter wrapper HTML para lista Markdown preservando os itens atuais"
+        },
+        {
+          "type": "br",
+          "action": "remover <br> e manter quebras naturais em Markdown"
+        }
+      ],
+      "related_resolution": {
+        "related_manual": [],
+        "related_guides": [
+          "lancar-nota-entrada",
+          "importar-xml"
+        ],
+        "deferred_or_blocked": [
+          {
+            "href": "../compras/pedido-compra.md",
+            "path": "docs/compras/pedido-compra.md",
+            "id": "pedido-compra",
+            "class": "D",
+            "title": "Pedido de Compra"
+          }
+        ],
+        "unresolved_or_non_content": []
+      },
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- Fornecedor cadastrado<br>",
+        "[Como cadastrar um fornecedor.](cadastrar-fornecedor.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Material cadastrado<br>",
+        "[Como cadastrar um material.](cadastrar-material.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Condição comercial negociada",
+        "</div>"
+      ],
+      "risks_or_human_review": [
+        "description deve ficar vazia ou ser revisada; nao ha paragrafo introdutorio claro",
+        "ha relacionados apontando para Classe C/D; nao migrar esses links automaticamente nesta etapa",
+        "front matter legado de erro deve ser removido se nao tiver uso no padrao V1"
+      ]
+    },
+    {
+      "path": "docs/como-fazer/gerar-boleto.md",
+      "title": "Como gerar boleto",
+      "nav_title": "Como gerar boleto",
+      "type": "Guia",
+      "category": "Financeiro",
+      "class": "B",
+      "recommended_metadata": {
+        "id": "gerar-boleto",
+        "title": "Como gerar boleto",
+        "type": "guia",
+        "category": "Financeiro",
+        "description": null,
+        "difficulty": "média",
+        "screen_path": null,
+        "related_manual": [],
+        "related_guides": [
+          "baixar-titulo",
+          "faturar-nota"
+        ]
+      },
+      "current_assets": [],
+      "asset_moves": [],
+      "html_to_convert": [
+        {
+          "type": "wc-prereq-list",
+          "action": "converter wrapper HTML para lista Markdown preservando os itens atuais"
+        },
+        {
+          "type": "br",
+          "action": "remover <br> e manter quebras naturais em Markdown"
+        }
+      ],
+      "related_resolution": {
+        "related_manual": [],
+        "related_guides": [
+          "baixar-titulo",
+          "faturar-nota"
+        ],
+        "deferred_or_blocked": [
+          {
+            "href": "../financeiro/boleto.md",
+            "path": "docs/financeiro/boleto.md",
+            "id": "boleto",
+            "class": "D",
+            "title": "Boleto"
+          }
+        ],
+        "unresolved_or_non_content": []
+      },
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- Cliente cadastrado<br>",
+        "[Como cadastrar um cliente.](cadastrar-cliente.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Título a receber cadastrado",
+        "- Conta bancária e carteira configuradas",
+        "</div>"
+      ],
+      "risks_or_human_review": [
+        "description deve ficar vazia ou ser revisada; nao ha paragrafo introdutorio claro",
+        "ha relacionados apontando para Classe C/D; nao migrar esses links automaticamente nesta etapa",
+        "front matter legado de erro deve ser removido se nao tiver uso no padrao V1"
+      ]
+    },
+    {
+      "path": "docs/como-fazer/baixar-titulo.md",
+      "title": "Como baixar um título",
+      "nav_title": "Como baixar um título",
+      "type": "Guia",
+      "category": "Financeiro",
+      "class": "B",
+      "recommended_metadata": {
+        "id": "baixar-titulo",
+        "title": "Como baixar um título",
+        "type": "guia",
+        "category": "Financeiro",
+        "description": null,
+        "difficulty": "média",
+        "screen_path": null,
+        "related_manual": [],
+        "related_guides": [
+          "gerar-boleto",
+          "lancar-contas-a-pagar"
+        ]
+      },
+      "current_assets": [],
+      "asset_moves": [],
+      "html_to_convert": [
+        {
+          "type": "wc-prereq-list",
+          "action": "converter wrapper HTML para lista Markdown preservando os itens atuais"
+        }
+      ],
+      "related_resolution": {
+        "related_manual": [],
+        "related_guides": [
+          "gerar-boleto",
+          "lancar-contas-a-pagar"
+        ],
+        "deferred_or_blocked": [
+          {
+            "href": "../financeiro/contas-a-receber.md",
+            "path": "docs/financeiro/contas-a-receber.md",
+            "id": "contas-a-receber",
+            "class": "D",
+            "title": "Contas a Receber"
+          }
+        ],
+        "unresolved_or_non_content": []
+      },
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- Título financeiro localizado",
+        "- Conta, forma de pagamento e data de baixa definidos",
+        "- Valor pago ou recebido conferido",
+        "</div>"
+      ],
+      "risks_or_human_review": [
+        "description deve ficar vazia ou ser revisada; nao ha paragrafo introdutorio claro",
+        "ha relacionados apontando para Classe C/D; nao migrar esses links automaticamente nesta etapa",
+        "front matter legado de erro deve ser removido se nao tiver uso no padrao V1"
+      ]
+    },
+    {
+      "path": "docs/como-fazer/lancar-contas-a-pagar.md",
+      "title": "Como lançar contas a pagar",
+      "nav_title": "Como lançar contas a pagar",
+      "type": "Guia",
+      "category": "Financeiro",
+      "class": "B",
+      "recommended_metadata": {
+        "id": "lancar-contas-a-pagar",
+        "title": "Como lançar contas a pagar",
+        "type": "guia",
+        "category": "Financeiro",
+        "description": null,
+        "difficulty": "média",
+        "screen_path": null,
+        "related_manual": [],
+        "related_guides": [
+          "baixar-titulo",
+          "lancar-nota-entrada"
+        ]
+      },
+      "current_assets": [],
+      "asset_moves": [],
+      "html_to_convert": [
+        {
+          "type": "wc-prereq-list",
+          "action": "converter wrapper HTML para lista Markdown preservando os itens atuais"
+        },
+        {
+          "type": "br",
+          "action": "remover <br> e manter quebras naturais em Markdown"
+        }
+      ],
+      "related_resolution": {
+        "related_manual": [],
+        "related_guides": [
+          "baixar-titulo",
+          "lancar-nota-entrada"
+        ],
+        "deferred_or_blocked": [
+          {
+            "href": "../financeiro/contas-a-pagar.md",
+            "path": "docs/financeiro/contas-a-pagar.md",
+            "id": "contas-a-pagar",
+            "class": "D",
+            "title": "Contas a Pagar"
+          }
+        ],
+        "unresolved_or_non_content": []
+      },
+      "prerequisites": [
+        "<div class=\"wc-prereq-list\" markdown>",
+        "- Fornecedor cadastrado, quando ainda não existir<br>",
+        "[Como cadastrar um fornecedor.](cadastrar-fornecedor.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Documento de origem ou dados da despesa definidos",
+        "- Centro de custo definido, quando aplicável<br>",
+        "[Como cadastrar um Centro de Custo.](cadastrar-centro-custo.md){: target=\"_blank\" rel=\"noopener\" }",
+        "- Conta e vencimento definidos, quando aplicável",
+        "</div>"
+      ],
+      "risks_or_human_review": [
+        "description deve ficar vazia ou ser revisada; nao ha paragrafo introdutorio claro",
+        "ha relacionados apontando para Classe C/D; nao migrar esses links automaticamente nesta etapa",
+        "front matter legado de erro deve ser removido se nao tiver uso no padrao V1"
+      ]
+    },
+    {
+      "path": "docs/comercial/comercial-grupo-clientes.md",
+      "title": "Grupo de Clientes",
+      "nav_title": "Grupo de clientes",
+      "type": "Manual",
+      "category": "Comercial",
+      "class": "B",
+      "recommended_metadata": {
+        "id": "comercial-grupo-clientes",
+        "title": "Grupo de Clientes",
+        "type": "manual",
+        "category": "Comercial",
+        "description": null,
+        "difficulty": "média",
+        "screen_path": "Comercial > Grupo de Clientes",
+        "related_manual": [],
+        "related_guides": []
+      },
+      "current_assets": [
+        "docs/assets/comercial-grupo-clientes.png"
+      ],
+      "asset_moves": [
+        {
+          "kind": "image",
+          "from": "docs/assets/comercial-grupo-clientes.png",
+          "to": "docs/assets/images/manuais/comercial-grupo-clientes/comercial-grupo-clientes.png",
+          "already_in_v1_location": false
+        }
+      ],
+      "html_to_convert": [
+        {
+          "type": "wc-screen-block",
+          "action": "preservar imagem e converter/remover wrapper se o componente V1 ja renderizar o bloco automaticamente"
+        }
+      ],
+      "related_resolution": {
+        "related_manual": [],
+        "related_guides": [],
+        "deferred_or_blocked": [],
+        "unresolved_or_non_content": []
+      },
+      "prerequisites": [],
+      "risks_or_human_review": [
+        "description deve ficar vazia ou ser revisada; nao ha paragrafo introdutorio claro",
+        "assets precisam ser movidos para pasta previsivel por conteudo"
+      ]
+    },
+    {
+      "path": "docs/faturamento/faturamento-nf.md",
+      "title": "Nota Fiscal",
+      "nav_title": "Nota Fiscal",
+      "type": "Manual",
+      "category": "Faturamento",
+      "class": "B",
+      "recommended_metadata": {
+        "id": "faturamento-nf",
+        "title": "Nota Fiscal",
+        "type": "manual",
+        "category": "Faturamento",
+        "description": null,
+        "difficulty": "média",
+        "screen_path": "Faturamento > Nota Fiscal",
+        "related_manual": [],
+        "related_guides": [
+          "faturar-nota",
+          "cancelar-nfe",
+          "emitir-carta-correcao"
+        ]
+      },
+      "current_assets": [
+        "docs/assets/faturamento-nf.png",
+        "docs/assets/faturamento-nf-manual-pedidos.png",
+        "docs/assets/faturamento-nf-add-pedido.png",
+        "docs/assets/faturamento-nf-transmitir.png"
+      ],
+      "asset_moves": [
+        {
+          "kind": "image",
+          "from": "docs/assets/faturamento-nf.png",
+          "to": "docs/assets/images/manuais/faturamento-nf/faturamento-nf.png",
+          "already_in_v1_location": false
+        },
+        {
+          "kind": "image",
+          "from": "docs/assets/faturamento-nf-manual-pedidos.png",
+          "to": "docs/assets/images/manuais/faturamento-nf/faturamento-nf-manual-pedidos.png",
+          "already_in_v1_location": false
+        },
+        {
+          "kind": "image",
+          "from": "docs/assets/faturamento-nf-add-pedido.png",
+          "to": "docs/assets/images/manuais/faturamento-nf/faturamento-nf-add-pedido.png",
+          "already_in_v1_location": false
+        },
+        {
+          "kind": "image",
+          "from": "docs/assets/faturamento-nf-transmitir.png",
+          "to": "docs/assets/images/manuais/faturamento-nf/faturamento-nf-transmitir.png",
+          "already_in_v1_location": false
+        }
+      ],
+      "html_to_convert": [
+        {
+          "type": "wc-screen-block",
+          "action": "preservar imagem e converter/remover wrapper se o componente V1 ja renderizar o bloco automaticamente"
+        }
+      ],
+      "related_resolution": {
+        "related_manual": [],
+        "related_guides": [
+          "faturar-nota",
+          "cancelar-nfe",
+          "emitir-carta-correcao"
+        ],
+        "deferred_or_blocked": [],
+        "unresolved_or_non_content": []
+      },
+      "prerequisites": [],
+      "risks_or_human_review": [
+        "description deve ficar vazia ou ser revisada; nao ha paragrafo introdutorio claro",
+        "assets precisam ser movidos para pasta previsivel por conteudo",
+        "manual com tabelas deve preservar estrutura sem reformatacao editorial"
+      ]
+    },
+    {
+      "path": "docs/faturamento/faturamento-nfce.md",
+      "title": "Cupom Fiscal",
+      "nav_title": "Cupom Fiscal",
+      "type": "Manual",
+      "category": "Faturamento",
+      "class": "B",
+      "recommended_metadata": {
+        "id": "faturamento-nfce",
+        "title": "Cupom Fiscal",
+        "type": "manual",
+        "category": "Faturamento",
+        "description": null,
+        "difficulty": "baixa",
+        "screen_path": "Faturamento > Cupom Fiscal",
+        "related_manual": [],
+        "related_guides": []
+      },
+      "current_assets": [],
+      "asset_moves": [],
+      "html_to_convert": [],
+      "related_resolution": {
+        "related_manual": [],
+        "related_guides": [],
+        "deferred_or_blocked": [],
+        "unresolved_or_non_content": []
+      },
+      "prerequisites": [],
+      "risks_or_human_review": [
+        "description deve ficar vazia ou ser revisada; nao ha paragrafo introdutorio claro",
+        "manual com tabelas deve preservar estrutura sem reformatacao editorial"
+      ]
+    },
+    {
+      "path": "docs/faturamento/inutilizacao-nota-fiscal.md",
+      "title": "Inutilização Nota Fiscal",
+      "nav_title": "Inutilização Nota Fiscal",
+      "type": "Manual",
+      "category": "Faturamento",
+      "class": "B",
+      "recommended_metadata": {
+        "id": "inutilizacao-nota-fiscal",
+        "title": "Inutilização Nota Fiscal",
+        "type": "manual",
+        "category": "Faturamento",
+        "description": null,
+        "difficulty": "média",
+        "screen_path": "Faturamento > Inutilização Nota Fiscal",
+        "related_manual": [],
+        "related_guides": []
+      },
+      "current_assets": [
+        "docs/assets/videos/faturamento_inutilizacao_nota_fiscal.mp4"
+      ],
+      "asset_moves": [
+        {
+          "kind": "video",
+          "from": "docs/assets/videos/faturamento_inutilizacao_nota_fiscal.mp4",
+          "to": "docs/assets/videos/manuais/inutilizacao-nota-fiscal/faturamento_inutilizacao_nota_fiscal.mp4",
+          "markdown_after_migration": "[Assistir video](../assets/videos/manuais/inutilizacao-nota-fiscal/faturamento_inutilizacao_nota_fiscal.mp4){ .wc-video-link }",
+          "already_in_v1_location": false
+        }
+      ],
+      "html_to_convert": [
+        {
+          "type": "video",
+          "action": "converter tag <video>/<source> para link Markdown com .wc-video-link",
+          "count": 1
+        }
+      ],
+      "related_resolution": {
+        "related_manual": [],
+        "related_guides": [],
+        "deferred_or_blocked": [],
+        "unresolved_or_non_content": []
+      },
+      "prerequisites": [],
+      "risks_or_human_review": [
+        "description deve ficar vazia ou ser revisada; nao ha paragrafo introdutorio claro",
+        "assets precisam ser movidos para pasta previsivel por conteudo",
+        "video HTML exige conferencia visual apos build real",
+        "manual com tabelas deve preservar estrutura sem reformatacao editorial"
+      ]
+    },
+    {
+      "path": "docs/materiais/materiais.md",
+      "title": "Cadastro de Materiais",
+      "nav_title": "Materiais",
+      "type": "Manual",
+      "category": "Materiais",
+      "class": "B",
+      "recommended_metadata": {
+        "id": "materiais",
+        "title": "Cadastro de Materiais",
+        "type": "manual",
+        "category": "Materiais",
+        "description": null,
+        "difficulty": "média",
+        "screen_path": "Materiais > Cadastro de Materiais",
+        "related_manual": [],
+        "related_guides": []
+      },
+      "current_assets": [
+        "docs/assets/materiais-materiais.png"
+      ],
+      "asset_moves": [
+        {
+          "kind": "image",
+          "from": "docs/assets/materiais-materiais.png",
+          "to": "docs/assets/images/manuais/materiais/materiais-materiais.png",
+          "already_in_v1_location": false
+        }
+      ],
+      "html_to_convert": [
+        {
+          "type": "wc-screen-block",
+          "action": "preservar imagem e converter/remover wrapper se o componente V1 ja renderizar o bloco automaticamente"
+        }
+      ],
+      "related_resolution": {
+        "related_manual": [],
+        "related_guides": [],
+        "deferred_or_blocked": [],
+        "unresolved_or_non_content": []
+      },
+      "prerequisites": [],
+      "risks_or_human_review": [
+        "description deve ficar vazia ou ser revisada; nao ha paragrafo introdutorio claro",
+        "assets precisam ser movidos para pasta previsivel por conteudo"
+      ]
+    },
+    {
+      "path": "docs/materiais/lote-estoque.md",
+      "title": "Lote/Estoque",
+      "nav_title": "Lote/Estoque",
+      "type": "Manual",
+      "category": "Materiais",
+      "class": "B",
+      "recommended_metadata": {
+        "id": "lote-estoque",
+        "title": "Lote/Estoque",
+        "type": "manual",
+        "category": "Materiais",
+        "description": null,
+        "difficulty": "média",
+        "screen_path": "Materiais > Lote/Estoque",
+        "related_manual": [],
+        "related_guides": []
+      },
+      "current_assets": [
+        "docs/assets/materiais-lote-estoque.png"
+      ],
+      "asset_moves": [
+        {
+          "kind": "image",
+          "from": "docs/assets/materiais-lote-estoque.png",
+          "to": "docs/assets/images/manuais/lote-estoque/materiais-lote-estoque.png",
+          "already_in_v1_location": false
+        }
+      ],
+      "html_to_convert": [
+        {
+          "type": "wc-screen-block",
+          "action": "preservar imagem e converter/remover wrapper se o componente V1 ja renderizar o bloco automaticamente"
+        }
+      ],
+      "related_resolution": {
+        "related_manual": [],
+        "related_guides": [],
+        "deferred_or_blocked": [],
+        "unresolved_or_non_content": []
+      },
+      "prerequisites": [],
+      "risks_or_human_review": [
+        "description deve ficar vazia ou ser revisada; nao ha paragrafo introdutorio claro",
+        "assets precisam ser movidos para pasta previsivel por conteudo"
+      ]
+    },
+    {
+      "path": "docs/relatorios/xml-nfe.md",
+      "title": "XML(s) NFe",
+      "nav_title": "XML(s) NFe",
+      "type": "Manual",
+      "category": "Relatórios",
+      "class": "B",
+      "recommended_metadata": {
+        "id": "xml-nfe",
+        "title": "XML(s) NFe",
+        "type": "manual",
+        "category": "Relatórios",
+        "description": null,
+        "difficulty": "baixa",
+        "screen_path": "Relatórios > XML(s) NFe",
+        "related_manual": [],
+        "related_guides": []
+      },
+      "current_assets": [],
+      "asset_moves": [],
+      "html_to_convert": [],
+      "related_resolution": {
+        "related_manual": [],
+        "related_guides": [],
+        "deferred_or_blocked": [],
+        "unresolved_or_non_content": []
+      },
+      "prerequisites": [],
+      "risks_or_human_review": [
+        "description deve ficar vazia ou ser revisada; nao ha paragrafo introdutorio claro",
+        "manual com tabelas deve preservar estrutura sem reformatacao editorial"
+      ]
+    },
+    {
+      "path": "docs/administracao/usuarios.md",
+      "title": "Usuários",
+      "nav_title": "Usuários",
+      "type": "Manual",
+      "category": "Administração",
+      "class": "B",
+      "recommended_metadata": {
+        "id": "usuarios",
+        "title": "Usuários",
+        "type": "manual",
+        "category": "Administração",
+        "description": null,
+        "difficulty": "média",
+        "screen_path": "Administração > Usuários",
+        "related_manual": [],
+        "related_guides": []
+      },
+      "current_assets": [
+        "docs/assets/adm-usuarios.png"
+      ],
+      "asset_moves": [
+        {
+          "kind": "image",
+          "from": "docs/assets/adm-usuarios.png",
+          "to": "docs/assets/images/manuais/usuarios/adm-usuarios.png",
+          "already_in_v1_location": false
+        }
+      ],
+      "html_to_convert": [
+        {
+          "type": "wc-screen-block",
+          "action": "preservar imagem e converter/remover wrapper se o componente V1 ja renderizar o bloco automaticamente"
+        }
+      ],
+      "related_resolution": {
+        "related_manual": [],
+        "related_guides": [],
+        "deferred_or_blocked": [],
+        "unresolved_or_non_content": []
+      },
+      "prerequisites": [],
+      "risks_or_human_review": [
+        "description deve ficar vazia ou ser revisada; nao ha paragrafo introdutorio claro",
+        "assets precisam ser movidos para pasta previsivel por conteudo"
+      ]
+    },
+    {
+      "path": "docs/administracao/empresas.md",
+      "title": "Empresas",
+      "nav_title": "Empresas",
+      "type": "Manual",
+      "category": "Administração",
+      "class": "B",
+      "recommended_metadata": {
+        "id": "empresas",
+        "title": "Empresas",
+        "type": "manual",
+        "category": "Administração",
+        "description": null,
+        "difficulty": "baixa",
+        "screen_path": "Administração > Empresas",
+        "related_manual": [
+          "usuarios"
+        ],
+        "related_guides": []
+      },
+      "current_assets": [],
+      "asset_moves": [],
+      "html_to_convert": [],
+      "related_resolution": {
+        "related_manual": [
+          "usuarios"
+        ],
+        "related_guides": [],
+        "deferred_or_blocked": [],
+        "unresolved_or_non_content": [
+          {
+            "href": "parametros-sistema.md",
+            "resolved_path": "docs/administracao/parametros-sistema.md"
+          }
+        ]
+      },
+      "prerequisites": [],
+      "risks_or_human_review": [
+        "description deve ficar vazia ou ser revisada; nao ha paragrafo introdutorio claro",
+        "ha links de Veja tambem para paginas fora do escopo Guia/Manual ou nao resolvidas"
+      ]
+    }
+  ],
+  "rollback_strategy": [
+    "Executar migracao inicialmente em staging gerado fora de docs/ e revisar diff.",
+    "Aplicar por onda/modulo em commits pequenos.",
+    "Antes de cada onda, registrar git status e manter commit anterior como ponto de retorno.",
+    "Se o build real falhar, reverter apenas o commit da onda afetada.",
+    "Nao excluir assets antigos na mesma onda; manter duplicados ate confirmar search_index, paginas e midias no build real."
+  ]
+}

@@ -1,20 +1,19 @@
 ---
-error_area: "Financeiro"
-error_category: "Condições de pagamento"
-error_tags:
-  - "condicao de pagamento"
-  - "cadastro"
+id: cadastrar-condicao-pagamento
+title: Como cadastrar uma Condição de Pagamento
+type: guia
+category: Administração
+status: published
+tags:
+  - condicao de pagamento
+  - cadastro
 ---
 
 # Como cadastrar uma Condição de Pagamento
 
 ## Pré-requisitos
 
-<div class="wc-prereq-list" markdown>
-
 - Forma e prazo de pagamento definidos
-
-</div>
 
 ## Permissões
 
@@ -24,12 +23,11 @@ error_tags:
 
 `Administração > Condições de Pagamento`.
 
+![Onde encontrar](../assets/images/guias/caminhocadastrocondicaopagamento.png)
+
 ## Demonstração em vídeo
 
-<video class="wc-video" controls preload="auto" playsinline>
-  <source src="../../assets/videos/adm_condicao_pagamento.mp4" type="video/mp4">
-  Seu navegador não conseguiu reproduzir este vídeo.
-</video>
+[Demonstração do cadastro de condição de pagamento](../assets/videos/adm_condicao_pagamento.mp4){ .wc-video-link }
 
 ## Como fazer
 

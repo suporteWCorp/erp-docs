@@ -1,33 +1,71 @@
 # Entrada de Nota Fiscal
 
-!!! information "Conteúdo em atualização"
-    Este manual está sendo revisado e receberá informações adicionais em breve. Enquanto isso, consulte o [Guia relacionado](../como-fazer/importar-xml.md){: target="_blank" rel="noopener" } para acompanhar o passo a passo da operação.
-
-## Objetivo
-
-Registrar entrada de nota fiscal no WCorp, geralmente vinculada a compras, remessas ou movimentações de entrada.
+A tela **Entrada de Nota Fiscal** é utilizada para registrar documentos fiscais de entrada no WCorp, incluindo operações vinculadas a fornecedores ou clientes.
 
 ## Caminho
 
-`Faturamento > Entrada de Nota Fiscal`.
+`Faturamento > Entrada de Nota Fiscal`
 
-## Passo a passo
+## Informações obrigatórias
 
-1. Acesse a aba **Faturamento**.
-2. Clique em **Entrada de Nota Fiscal**.
-3. Informe os dados necessários para localizar, cadastrar ou executar a operação.
-4. Confira as informações antes de salvar, transmitir ou confirmar.
-5. Finalize a rotina conforme a ação disponível na tela.
+Para salvar uma Entrada de Nota Fiscal, é necessário informar:
 
-## Campos principais
+- **Fornecedor ou Cliente**
+- **Natureza de Operação**
+- **Número da Nota Fiscal**
+- **Série**
+- Pelo menos um **Material ou Serviço**
 
-| Campo | Descrição | Observações |
-| --- | --- | --- |
-| A definir | A definir | A definir |
+## Formas de importar os dados
 
-## Dúvidas frequentes
+A tela oferece opções para facilitar o preenchimento da entrada:
 
-| Dúvida | Orientação |
-| --- | --- |
-| Quando devo usar esta rotina? | Use quando o processo estiver relacionado a **Entrada de Nota Fiscal**. |
-| O que devo conferir antes de salvar? | Confira dados fiscais, documento de origem e mensagens exibidas pelo sistema. |
+- **Selecionar XML NFe:** permite selecionar um arquivo XML salvo no computador e carregar os dados da NF-e.
+- **Importar do Radar de NFe:** permite importar uma NF-e disponível no Radar de NFe.
+- **Preencher dados via Pedido de Compra:** permite utilizar um Pedido de Compra na rotina de preenchimento da entrada.
+
+## Informações da nota
+
+Além dos dados obrigatórios, a tela apresenta campos como:
+
+- Pedido de Compra
+- Chave de Acesso
+- Tipo
+- Data de Emissão
+- Data de Entrada
+- Data de Registro
+
+A tela também é organizada nas abas:
+
+- **Materiais**
+- **Serviços**
+- **Transporte**
+- **Parcelas (Contas a Pagar)**
+- **Inspeção**
+- **Arquivos**
+
+## Materiais
+
+Ao adicionar um material à Nota Fiscal de Entrada, é necessário informar:
+
+- **Material**
+- **Local de Armazenagem**
+- **CFOP**
+- **CFOP NF**
+- **CST**
+- **Quantidade**
+
+A tela do material também apresenta informações da Nota Fiscal, dados de entrada no sistema, impostos, lotes e saldos de estoque.
+
+Na aba **Materiais**, estão disponíveis as opções **Abastecer Estoque com Materiais** e **Atualizar Custo dos Materiais**.
+
+## Validações
+
+Ao salvar, o WCorp valida os dados necessários para a operação. Caso alguma informação obrigatória do material esteja ausente, o sistema pode apresentar a pendência antes de permitir a conclusão.
+
+Entre as validações identificadas estão:
+
+- CFOP do Material
+- CFOP da Nota Fiscal
+- CST
+

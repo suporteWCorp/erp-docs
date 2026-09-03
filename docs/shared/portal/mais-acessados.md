@@ -2,12 +2,12 @@
 
 ### Mais acessados
 
-- [Emitir NF-e](como-fazer/faturar-nota.md)
-- [Importar XML](como-fazer/importar-xml.md)
 - [Cadastrar Cliente](como-fazer/cadastrar-cliente.md)
-- [Cadastrar Material](como-fazer/cadastrar-material.md)
-- [Gerar Boleto](como-fazer/gerar-boleto.md)
 - [Ajuste de Estoque](como-fazer/ajustar-estoque.md)
-- [Cancelar NF-e](como-fazer/cancelar-nfe.md)
+- [Consultar Estoque](como-fazer/consultar-estoque.md)
+- [Consultar notas fiscais rejeitadas](como-fazer/consultar-nfe-rejeitada.md)
+- [Verificar CBenef](como-fazer/verificar-cbenef.md)
+- [Utilizar emissor de NF-e](como-fazer/usar-emissor.md)
+- [Consultar SPED Fiscal](como-fazer/consultar-sped-fiscal.md)
 
 </section>

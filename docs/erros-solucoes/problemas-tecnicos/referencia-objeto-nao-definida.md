@@ -6,6 +6,8 @@ mensagem_original: "Ocorreu um erro não esperado. Referência do objeto não de
 modulo_relacionado: "Pedidos"
 ---
 
+<div class="wcorp-inner-page wcorp-error-article-page" markdown>
+
 # Referência do objeto não definida para uma instância de um objeto
 
 ## Mensagem apresentada
@@ -21,3 +23,5 @@ Verifique se o lote de estoque utilizado para consumir estoque, no local de arma
 ## Observação
 
 Essa é uma verificação conhecida para esse cenário. Ela não deve ser tratada como regra universal para todas as ocorrências da mensagem.
+
+</div>

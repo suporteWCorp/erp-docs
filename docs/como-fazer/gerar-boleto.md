@@ -5,6 +5,8 @@ error_tags:
   - "boleto"
   - "cobranca"
   - "titulo"
+search:
+  exclude: true
 ---
 
 # Como gerar boleto

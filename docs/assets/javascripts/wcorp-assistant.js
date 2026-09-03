@@ -8,6 +8,233 @@
   const MIN_ASSISTANT_RESULT_SCORE = 35;
   const MIN_ASSISTANT_RELATED_SCORE = 70;
   const MAX_ASSISTANT_RELATED_RESULTS = 2;
+  const assistantDebugVersion =
+    "dom-audit-2026-08-30";
+
+  const assistantRectSnapshot = (element) => {
+    if (!element) {
+      return null;
+    }
+
+    const rect =
+      element.getBoundingClientRect();
+
+    return {
+      x: Number(rect.x.toFixed(2)),
+      y: Number(rect.y.toFixed(2)),
+      top: Number(rect.top.toFixed(2)),
+      right: Number(rect.right.toFixed(2)),
+      bottom: Number(rect.bottom.toFixed(2)),
+      left: Number(rect.left.toFixed(2)),
+      width: Number(rect.width.toFixed(2)),
+      height: Number(rect.height.toFixed(2))
+    };
+  };
+
+  const assistantStyleSnapshot = (element) => {
+    if (!element) {
+      return null;
+    }
+
+    const style =
+      window.getComputedStyle(element);
+
+    return {
+      display: style.display,
+      visibility: style.visibility,
+      opacity: style.opacity,
+      position: style.position,
+      top: style.top,
+      right: style.right,
+      bottom: style.bottom,
+      left: style.left,
+      transform: style.transform
+    };
+  };
+
+  const assistantElementLabel = (element) => {
+    if (!element) {
+      return null;
+    }
+
+    const parts = [
+      element.tagName.toLowerCase()
+    ];
+
+    if (element.id) {
+      parts.push(`#${element.id}`);
+    }
+
+    if (element.className) {
+      parts.push(
+        `.${String(element.className)
+          .trim()
+          .replace(/\s+/g, ".")}`
+      );
+    }
+
+    return parts.join("");
+  };
+
+  const assistantDomAudit = () => {
+    const assistants =
+      Array.from(
+        document.querySelectorAll(
+          ".wc-assistant"
+        )
+      );
+    const panels =
+      Array.from(
+        document.querySelectorAll(
+          ".wc-assistant__panel"
+        )
+      );
+    const launchers =
+      Array.from(
+        document.querySelectorAll(
+          ".wc-assistant__launcher"
+        )
+      );
+    const panelIds =
+      Array.from(
+        document.querySelectorAll(
+          "#wc-assistant-panel"
+        )
+      );
+
+    const instances =
+      assistants.map((assistant, index) => {
+        const panel =
+          assistant.querySelector(
+            ".wc-assistant__panel"
+          );
+        const launcher =
+          assistant.querySelector(
+            ".wc-assistant__launcher"
+          );
+        const button =
+          assistant.querySelector(
+            ".wc-assistant__button"
+          );
+        const bubble =
+          assistant.querySelector(
+            ".wc-assistant__bubble"
+          );
+
+        return {
+          index,
+          assistantConnected:
+            assistant.isConnected,
+          assistantClasses:
+            assistant.className,
+          assistantRect:
+            assistantRectSnapshot(assistant),
+          panelConnected:
+            Boolean(panel?.isConnected),
+          panelHidden:
+            panel?.hidden ?? null,
+          panelAriaHidden:
+            panel?.getAttribute("aria-hidden"),
+          panelRect:
+            assistantRectSnapshot(panel),
+          panelStyle:
+            assistantStyleSnapshot(panel),
+          launcherConnected:
+            Boolean(launcher?.isConnected),
+          launcherRect:
+            assistantRectSnapshot(launcher),
+          launcherStyle:
+            assistantStyleSnapshot(launcher),
+          buttonRect:
+            assistantRectSnapshot(button),
+          buttonAriaExpanded:
+            button?.getAttribute(
+              "aria-expanded"
+            ),
+          bubbleRect:
+            assistantRectSnapshot(bubble),
+          bubbleAriaExpanded:
+            bubble?.getAttribute(
+              "aria-expanded"
+            )
+        };
+      });
+
+    const orphanPanels =
+      panels.map((panel, index) => ({
+        index,
+        isConnected:
+          panel.isConnected,
+        hidden:
+          panel.hidden,
+        ariaHidden:
+          panel.getAttribute("aria-hidden"),
+        rect:
+          assistantRectSnapshot(panel),
+        style:
+          assistantStyleSnapshot(panel),
+        parent:
+          assistantElementLabel(
+            panel.parentElement
+          ),
+        closestAssistantClass:
+          panel.closest(".wc-assistant")
+            ?.className || null
+      }));
+
+    const audit = {
+      label: "Assistant DOM Audit",
+      version: assistantDebugVersion,
+      url: window.location.href,
+      readyState:
+        document.readyState,
+      navigationInstant:
+        Boolean(window.document$),
+      counts: {
+        assistants:
+          assistants.length,
+        panels:
+          panels.length,
+        launchers:
+          launchers.length,
+        panelIds:
+          panelIds.length
+      },
+      instances,
+      panels:
+        orphanPanels
+    };
+
+    console.info(
+      "[Assistant DOM Audit]",
+      audit
+    );
+
+    return audit;
+  };
+
+  window.__WC_ASSISTANT_DEBUG__ = {
+    version: assistantDebugVersion,
+    source:
+      "docs/assets/javascripts/wcorp-assistant.js",
+    positioning:
+      "fixed-bottom-anchor-current",
+    initializeCalls: 0,
+    skippedExistingInstances: 0,
+    audit:
+      assistantDomAudit
+  };
+
+  window.__WC_ASSISTANT_DOM_AUDIT__ =
+    assistantDomAudit;
+
+  if (!window.__WC_ASSISTANT_DEBUG_LOGGED__) {
+    window.__WC_ASSISTANT_DEBUG_LOGGED__ = true;
+    console.info(
+      `[WCorp Assistant] ${assistantDebugVersion} loaded`
+    );
+  }
+
   const manualPrefixes = new Set([
     "administracao",
     "colaboradores",
@@ -36,6 +263,7 @@
     "dos",
     "e",
     "em",
+    "eu",
     "na",
     "nas",
     "no",
@@ -48,7 +276,8 @@
     "um",
     "uma",
     "uns",
-    "umas"
+    "umas",
+    "wcorp"
   ]);
 
   const assistantAuxiliaryTerms = new Set([
@@ -56,6 +285,7 @@
     "ajuda",
     "ajudar",
     "alterar",
+    "cad",
     "cadastrar",
     "cadastro",
     "como",
@@ -65,13 +295,22 @@
     "emitir",
     "faturar",
     "faco",
+    "fica",
     "fazer",
     "gerar",
     "guia",
     "manual",
+    "onde",
+    "vejo",
+    "encontro",
+    "acesso",
     "preciso",
+    "qual",
+    "quais",
     "quero",
-    "realizar"
+    "realizar",
+    "usar",
+    "uso"
   ]);
 
   const assistantSpecificTermGroups = [
@@ -91,9 +330,101 @@
     { label: "ICMS", terms: ["icms"] },
     { label: "XML", terms: ["xml", "schema"] },
     { label: "ordem de serviço", terms: ["ordem de servico", "os"] },
+    { label: "ordem de produção", terms: ["ordem de producao", "ordem de produção"] },
+    { label: "ferramenta", terms: ["ferramenta", "ferramentas", "indicador de relatorio", "indicador de relatórios", "validador xml", "validar xml"] },
     { label: "CT-e", terms: ["cte"] },
     { label: "NFS-e", terms: ["nfse"] },
     { label: "MDF-e", terms: ["mdfe"] }
+  ];
+
+  const assistantSemanticActions = [
+    {
+      id: "emitir",
+      terms: ["emitir", "emissao", "emissão", "gerar", "faturar", "faturamento"]
+    },
+    {
+      id: "consultar",
+      terms: ["consultar", "consulta", "ver", "vejo", "verificar", "conferir", "localizar", "acompanhar"]
+    },
+    {
+      id: "cancelar",
+      terms: ["cancelar", "cancelamento", "cancela", "inutilizar", "inutilizacao", "inutilização"]
+    },
+    {
+      id: "cadastrar",
+      terms: ["cad", "cadastrar", "cadastro", "criar", "incluir"]
+    },
+    {
+      id: "configurar",
+      terms: ["configurar", "configuracao", "configuração", "ajustar", "parametrizar", "definir"]
+    },
+    {
+      id: "corrigir",
+      terms: ["corrigir", "correcao", "correção", "erro", "rejeicao", "rejeição", "rejeitada", "rejeitado", "schema"]
+    },
+    {
+      id: "entender",
+      terms: ["funciona", "funcionar", "serve", "campo", "campos", "tela", "manual", "significa"]
+    }
+  ];
+
+  const assistantSemanticObjects = [
+    {
+      id: "nota fiscal",
+      terms: ["nota fiscal", "notas fiscais", "nota", "notas", "nfe", "nf", "nf-e"]
+    },
+    {
+      id: "ordem de produção",
+      terms: ["ordem de producao", "ordem de produção"]
+    },
+    {
+      id: "cliente",
+      terms: ["cliente", "clientes"]
+    },
+    {
+      id: "pedido",
+      terms: ["pedido", "pedidos", "pedido venda", "pedido de venda"]
+    },
+    {
+      id: "estoque",
+      terms: ["estoque", "estoques"]
+    },
+    {
+      id: "regra fiscal",
+      terms: ["regra fiscal", "regras fiscais", "regra", "regras"]
+    },
+    {
+      id: "carta de correção",
+      terms: ["carta de correcao", "carta de correção", "correcao", "correção", "cce", "cc-e"]
+    },
+    {
+      id: "inutilização",
+      terms: ["inutilizacao", "inutilização", "inutilizar"]
+    },
+    {
+      id: "material",
+      terms: ["material", "materiais", "produto", "produtos"]
+    },
+    {
+      id: "fornecedor",
+      terms: ["fornecedor", "fornecedores"]
+    },
+    {
+      id: "boleto",
+      terms: ["boleto", "boletos"]
+    },
+    {
+      id: "relatório",
+      terms: ["relatorio", "relatórios", "relatorios"]
+    },
+    {
+      id: "xml",
+      terms: ["xml", "schema"]
+    },
+    {
+      id: "usuário",
+      terms: ["usuario", "usuário", "usuarios", "usuários", "logado", "logados"]
+    }
   ];
 
   const assistantPageProfiles = [
@@ -103,31 +434,6 @@
       audience: "user",
       assistantSearchable: true,
       tags: ["faturar nota", "faturar a nota", "faturar", "emitir nota", "emitir nfe", "nota fiscal", "nfe"]
-    },
-    {
-      path: "suporte/coleta-de-evidencias",
-      category: "Suporte",
-      audience: "support",
-      assistantSearchable: "conditional",
-      tags: [
-        "coleta de evidencias",
-        "coletar evidencias",
-        "evidencia",
-        "evidencias",
-        "enviar evidencias",
-        "enviar arquivos",
-        "arquivos do chamado",
-        "abrir chamado",
-        "suporte",
-        "chamado",
-        "print",
-        "prints",
-        "tirar print",
-        "xml",
-        "logs",
-        "log",
-        "erro no sistema"
-      ]
     },
     {
       path: "suporte/triagem",
@@ -150,12 +456,18 @@
       assistantSearchable: false,
       tags: []
     },
+  ];
+
+  const assistantAmbiguousPreferences = [
     {
-      path: "referencia/atualizacoes-fiscais",
-      category: "Referência",
-      audience: "review",
-      assistantSearchable: "conditional",
-      tags: ["atualizacao fiscal", "atualizacoes fiscais", "nota tecnica", "sefaz", "mudanca fiscal"]
+      terms: ["nota"],
+      path: "como-fazer/faturar-nota",
+      score: 420
+    },
+    {
+      terms: ["pedido"],
+      path: "comercial/pedidos",
+      score: 130
     }
   ];
 
@@ -167,14 +479,16 @@
   ];
 
   const suggestions = [
-    { label: "Como emitir uma NF-e?", href: "como-fazer/faturar-nota/" },
+    { label: "Como consultar notas rejeitadas?", href: "como-fazer/consultar-nfe-rejeitada/" },
     { label: "Como cadastrar um cliente?", href: "como-fazer/cadastrar-cliente/" },
-    { label: "Como gerar um pedido?", href: "como-fazer/fazer-pedido-venda/" },
-    { label: "Como cancelar uma nota?", href: "como-fazer/cancelar-nfe/" }
+    { label: "Como consultar estoque?", href: "como-fazer/consultar-estoque/" },
+    { label: "Como verificar CBenef?", href: "como-fazer/verificar-cbenef/" }
   ];
 
   let assistantSearchPromise = null;
   let assistantPublishedManualPaths = null;
+  let assistantPublishedGuidePaths = null;
+  let assistantPublishedGuidePromise = null;
 
   function rootUrl() {
     const logo = document.querySelector(".md-header__button.md-logo[href]");
@@ -338,6 +652,10 @@
   }
 
   function normalizeAssistantSearch(value) {
+    if (window.WCorpSearchUtils?.normalizeText) {
+      return window.WCorpSearchUtils.normalizeText(value);
+    }
+
     return (value || "")
       .toString()
       .normalize("NFD")
@@ -424,6 +742,60 @@
     return publishedPaths.size > 0 && !publishedPaths.has(path);
   }
 
+  function normalizeAssistantCatalogGuidePath(value) {
+    return assistantProfilePathKey(value)
+      .replace(/^\/+/, "")
+      .replace(/\/+$/, "");
+  }
+
+  async function loadAssistantPublishedGuidePaths() {
+    if (assistantPublishedGuidePaths) {
+      return assistantPublishedGuidePaths;
+    }
+
+    if (assistantPublishedGuidePromise) {
+      return assistantPublishedGuidePromise;
+    }
+
+    assistantPublishedGuidePromise = fetch(new URL("assets/data/content-catalog.json", rootUrl()))
+      .then((response) => response.ok ? response.json() : null)
+      .then((catalog) => {
+        const paths = new Set();
+
+        (catalog?.items || []).forEach((item) => {
+          if (
+            item.type === "guia" &&
+            item.status === "published" &&
+            Array.isArray(item.videos) &&
+            item.videos.length &&
+            item.url
+          ) {
+            paths.add(normalizeAssistantCatalogGuidePath(item.url));
+          }
+        });
+
+        assistantPublishedGuidePaths = paths;
+        return assistantPublishedGuidePaths;
+      })
+      .catch(() => {
+        assistantPublishedGuidePaths = new Set();
+        return assistantPublishedGuidePaths;
+      });
+
+    return assistantPublishedGuidePromise;
+  }
+
+  function isAssistantBlockedGuideDoc(doc) {
+    const key = normalizeAssistantCatalogGuidePath(assistantPageKey(doc.location));
+
+    if (!key.startsWith("como-fazer/")) {
+      return false;
+    }
+
+    return assistantPublishedGuidePaths?.size > 0 &&
+      !assistantPublishedGuidePaths.has(key);
+  }
+
   function assistantProfilePathKey(value) {
     return normalizeAssistantPath(value)
       .replace(/\/index\.html$/, "")
@@ -472,14 +844,6 @@
       return false;
     }
 
-    if (profile.path === "suporte/coleta-de-evidencias") {
-      const supportIntent =
-        /\b(suporte|chamado|evidencia|evidencias|print|prints|arquivo|arquivos|anexo|anexar|coletar|coleta)\b/.test(normalizedQuery) ||
-        /\b(o que|oque|quais)\b.*\b(enviar|mandar)\b/.test(normalizedQuery);
-
-      return supportIntent;
-    }
-
     return true;
   }
 
@@ -510,6 +874,125 @@
     }, 0);
   }
 
+  function assistantAmbiguousPreferenceScore(doc, analysis, intent) {
+    if (intent !== "ambiguous") {
+      return 0;
+    }
+
+    const words = new Set(analysis.words);
+    const pageKey = assistantPageKey(doc.location);
+
+    return assistantAmbiguousPreferences.reduce((score, preference) => {
+      const hasTerm = preference.terms.some((term) =>
+        words.has(normalizeAssistantSearch(term))
+      );
+
+      if (!hasTerm) {
+        return score;
+      }
+
+      return pageKey === preference.path || pageKey.startsWith(`${preference.path}/`)
+        ? score + preference.score
+        : score;
+    }, 0);
+  }
+
+  function assistantDefaultPageScore(doc, analysis, intent) {
+    const words = new Set(analysis.words);
+    const pageKey = assistantPageKey(doc.location);
+    const hasAny = (terms) => terms.some((term) => words.has(term));
+    const normalizedQuery = analysis.words.join(" ");
+
+    if (
+      assistantQueryHasFinalizedInvoiceContext(normalizedQuery) &&
+      (pageKey === "referencia/faq/alterar-nfe-autorizada" || pageKey.startsWith("referencia/faq/alterar-nfe-autorizada/"))
+    ) {
+      return 430;
+    }
+
+    if (
+      (intent === "guide" || intent === "ambiguous") &&
+      hasAny(["nota", "nfe", "nf"]) &&
+      !hasAny(["entrada", "complementar", "cancelar", "cancela", "baixar", "lancar", "alterar", "editar", "impostos", "valores"]) &&
+      (pageKey === "como-fazer/faturar-nota" || pageKey.startsWith("como-fazer/faturar-nota/"))
+    ) {
+      return 75;
+    }
+
+    if (
+      /\b(quem alterou|usuario que alterou|mudancas|registro de log|valor anterior|valor novo|historico|alteracoes)\b/.test(normalizedQuery) &&
+      (pageKey === "como-fazer/verificar-historico-alteracoes" || pageKey.startsWith("como-fazer/verificar-historico-alteracoes/"))
+    ) {
+      return 380;
+    }
+
+    if (
+      hasAny(["nota", "nfe", "nf"]) &&
+      hasAny(["alterar", "editar", "impostos", "valores"]) &&
+      !assistantQueryHasFinalizedInvoiceContext(normalizedQuery) &&
+      (pageKey === "como-fazer/editar-valores-nfe" || pageKey.startsWith("como-fazer/editar-valores-nfe/"))
+    ) {
+      return 390;
+    }
+
+    if (
+      hasAny(["ajustar", "quantidade", "material", "estoque", "inventario"]) &&
+      (pageKey === "como-fazer/ajustar-estoque" || pageKey.startsWith("como-fazer/ajustar-estoque/"))
+    ) {
+      return 360;
+    }
+
+    if (
+      intent === "error" &&
+      hasAny(["nota", "nfe", "nf"]) &&
+      hasAny(["rejeitada", "rejeitado", "rejeitadas", "rejeitados"]) &&
+      (pageKey === "como-fazer/consultar-nfe-rejeitada" || pageKey.startsWith("como-fazer/consultar-nfe-rejeitada/"))
+    ) {
+      return 360;
+    }
+
+    if (
+      intent === "manual" &&
+      hasAny(["nota", "nfe", "nf"]) &&
+      !hasAny(["entrada", "lote", "servico", "serviço", "inutilizacao", "inutilização", "inutilizar"]) &&
+      (pageKey === "faturamento/faturamento-nf" || pageKey.startsWith("faturamento/faturamento-nf/"))
+    ) {
+      return 260;
+    }
+
+    if (
+      hasAny(["inutilizacao", "inutilização", "inutilizar"]) &&
+      (pageKey === "faturamento/inutilizacao-nota-fiscal" || pageKey.startsWith("faturamento/inutilizacao-nota-fiscal/"))
+    ) {
+      return 340;
+    }
+
+    if (
+      hasAny(["regra", "regras"]) &&
+      hasAny(["fiscal", "fiscais", "ver", "vejo", "verificar", "consultar"]) &&
+      (pageKey === "como-fazer/verificar-regra-fiscal" || pageKey.startsWith("como-fazer/verificar-regra-fiscal/"))
+    ) {
+      return 280;
+    }
+
+    if (
+      (intent === "manual" || intent === "ambiguous") &&
+      words.has("pedido") &&
+      !hasAny(["compra", "compras", "separacao", "separar", "cancelar", "cancela"]) &&
+      (pageKey === "comercial/pedidos" || pageKey.startsWith("comercial/pedidos/"))
+    ) {
+      return 150;
+    }
+
+    return 0;
+  }
+
+  function assistantQueryHasFinalizedInvoiceContext(value) {
+    const normalized = normalizeAssistantSearch(value);
+
+    return /\b(ja emitid[ao]|autorizad[ao]|depois que .*emitid[ao])\b/.test(normalized);
+  }
+
   function getAssistantCategory(doc) {
     const profile = assistantPageProfile(doc);
     const location = normalizeAssistantPath(doc.location);
@@ -535,11 +1018,19 @@
       return "Rejeição";
     }
 
+    if (location.includes("problemas-tecnicos")) {
+      return "Problema Técnico";
+    }
+
     if (
       location.includes("erros-solucoes") ||
       location.includes("erros-e-solucoes")
     ) {
       return "Erro";
+    }
+
+    if (location.includes("ferramentas/")) {
+      return "Ferramenta";
     }
 
     if (
@@ -606,11 +1097,40 @@
       /-geral$/.test(segments[segments.length - 1] || "");
   }
 
+  function isAssistantGenericDoc(doc) {
+    const title = normalizeAssistantSearch(doc.title);
+    const segments = assistantPathSegments(doc.location);
+    const lastSegment = segments[segments.length - 1] || "";
+
+    return isAssistantIndexDoc(doc) ||
+      /(^|\s)(visao geral|introducao|inicio)(\s|$)/.test(title) ||
+      /(^|-)visao-geral$/.test(lastSegment) ||
+      /(^|-)introducao$/.test(lastSegment);
+  }
+
+  function assistantQueryNeedsSpecificContent(analysis) {
+    return Boolean(
+      analysis.codes.length ||
+      analysis.hasSpecificTerms ||
+      analysis.semantic.object ||
+      analysis.businessWords.length ||
+      analysis.meaningfulWords.length >= 3
+    );
+  }
+
   function extractRejectionCodes(value) {
+    if (window.WCorpSearchUtils?.extractCodes) {
+      return window.WCorpSearchUtils.extractCodes(value);
+    }
+
     return normalizeAssistantSearch(value).match(/\b\d{3,4}\b/g) || [];
   }
 
   function assistantSearchWords(value) {
+    if (window.WCorpSearchUtils?.tokenize) {
+      return window.WCorpSearchUtils.tokenize(value);
+    }
+
     return normalizeAssistantSearch(value)
       .match(/[a-z0-9]+/g)
       ?.filter((word) => word.length > 1 && !assistantStopWords.has(word)) || [];
@@ -666,6 +1186,273 @@
       .filter(Boolean);
   }
 
+  function assistantSemanticTermMatch(normalized, words, terms) {
+    return terms.some((term) => {
+      const normalizedTerm = normalizeAssistantSearch(term);
+
+      if (!normalizedTerm) {
+        return false;
+      }
+
+      if (normalizedTerm.includes(" ")) {
+        return normalized.includes(normalizedTerm);
+      }
+
+      return words.has(normalizedTerm);
+    });
+  }
+
+  function assistantSemanticAnalysis(value) {
+    const normalized = normalizeAssistantSearch(value);
+    const words = new Set(uniqueAssistantWords(normalized));
+    const action = assistantSemanticActions.find((item) =>
+      assistantSemanticTermMatch(normalized, words, item.terms)
+    )?.id || null;
+    const forcedObject = /\binutiliz/.test(normalized)
+      ? "inutilização"
+      : null;
+    const object = assistantSemanticObjects
+      .filter((item) =>
+        assistantSemanticTermMatch(normalized, words, item.terms)
+      )
+      .sort((left, right) => {
+        const longest = (item) => Math.max(
+          ...item.terms.map((term) =>
+            normalizeAssistantSearch(term).length
+          )
+        );
+
+        return longest(right) - longest(left);
+      })[0]?.id || null;
+
+    return {
+      action,
+      object: forcedObject || object
+    };
+  }
+
+  function assistantActionConflicts(queryAction, docAction) {
+    if (!queryAction || !docAction || queryAction === docAction) {
+      return false;
+    }
+
+    const conflicts = {
+      emitir: ["consultar", "cancelar", "corrigir", "entender"],
+      consultar: ["emitir", "cancelar", "cadastrar"],
+      cancelar: ["emitir", "consultar", "cadastrar", "configurar"],
+      cadastrar: ["consultar", "cancelar", "corrigir", "entender"],
+      configurar: ["consultar", "cancelar", "corrigir"],
+      corrigir: ["emitir", "cadastrar", "configurar", "entender"],
+      entender: ["emitir", "cadastrar", "cancelar", "corrigir"]
+    };
+
+    return conflicts[queryAction]?.includes(docAction) || false;
+  }
+
+  function assistantOperationalAction(action) {
+    return [
+      "emitir",
+      "cancelar",
+      "cadastrar",
+      "configurar",
+      "consultar"
+    ].includes(action);
+  }
+
+  function assistantContextSet(value, category, semantic = {}) {
+    const normalized = normalizeAssistantSearch(value);
+    const contexts = new Set();
+    const hasNotaFiscal =
+      semantic.object === "nota fiscal" ||
+      /\b(nota|nfe|nf)\b/.test(normalized);
+    [
+      ["entrada", /\b(entrada|importar|importacao|importação|radar)\b/],
+      ["cancelamento", /\b(cancelar|cancelamento|cancela)\b/],
+      ["carta_correcao", /\b(carta de correcao|carta de correção|cce|cc-e)\b/],
+      ["inutilizacao", /\b(inutilizar|inutilizacao|inutilização)\b/],
+      ["cadastro", /\b(cadastrar|cadastro|criar|incluir)\b/],
+      ["edicao", /\b(editar|edicao|edição|alterar|ajustar)\b/],
+      ["edicao_nfe_emitida", /\b(ja emitid[ao]|já emitid[ao]|autorizad[ao]|depois que .*emitid[ao])\b/],
+      ["ajuste_inventario", /\b(ajustar|ajuste)\b.*\b(estoque|inventario|inventário|quantidade|material)\b|\b(estoque|inventario|inventário|quantidade|material)\b.*\b(ajustar|ajuste)\b/],
+      ["historico_alteracoes", /\b(quem alterou|usuario que alterou|usuário que alterou|mudancas|mudanças|registro de log|valor anterior|valor novo|historico|histórico|alteracoes|alterações)\b/],
+      ["consulta", /\b(consultar|consulta|verificar|conferir|localizar|acompanhar)\b/],
+      ["emissor", /\b(emissor)\b/]
+    ].forEach(([context, pattern]) => {
+      if (pattern.test(normalized)) contexts.add(context);
+    });
+
+    if (["Rejeição", "Erro"].includes(category) || /\b(rejeicao|rejeição|rejeitad[ao]s?|erro fiscal|schema)\b/.test(normalized)) {
+      contexts.add("rejeicao");
+    }
+    if (hasNotaFiscal && /\b(emitir|emissao|emissão|gerar|faturar|saida|saída|transmitir)\b/.test(normalized)) {
+      contexts.add("emissao");
+    }
+    return contexts;
+  }
+
+  function assistantContextsConflict(baseContexts, candidateContexts) {
+    const incompatible = {
+      emissao: "entrada cancelamento rejeicao inutilizacao",
+      entrada: "emissao cancelamento rejeicao inutilizacao",
+      cancelamento: "entrada emissao rejeicao inutilizacao",
+      rejeicao: "entrada emissao cancelamento inutilizacao",
+      inutilizacao: "entrada emissao cancelamento rejeicao",
+      ajuste_inventario: "entrada",
+      edicao_nfe_emitida: "edicao"
+    };
+
+    return [...baseContexts].some((context) =>
+      incompatible[context]?.split(" ").some((blocked) => candidateContexts.has(blocked))
+    );
+  }
+
+  function assistantRelatedContextCompatible(primary, candidate, query) {
+    const querySemantic = analyzeAssistantQuery(query).semantic;
+    const contextFromDoc = (doc) => {
+      const text = `${doc.title || ""} ${doc.location || ""}`;
+      return assistantContextSet(text, getAssistantCategory(doc), assistantSemanticAnalysis(text));
+    };
+    const baseContexts = new Set([...assistantContextSet(query, "", querySemantic), ...contextFromDoc(primary.doc)]);
+    const candidateContexts = contextFromDoc(candidate.doc);
+
+    return !assistantContextsConflict(baseContexts, candidateContexts);
+  }
+
+  function assistantQueryAllowsIssueRelated(query, intent) {
+    const normalized = normalizeAssistantSearch(query);
+
+    return intent === "error" ||
+      extractRejectionCodes(query).length > 0 ||
+      /\b(erro|rejeicao|falha|problema|mensagem|codigo|nao consigo|nao consegue|nao esta|nao funciona|nao salva|nao autoriza|nao transmite|deu erro|retornou|aparece|bloqueado)\b/.test(normalized);
+  }
+
+  function assistantQueryAllowsRejectionRelated(query, intent) {
+    const normalized = normalizeAssistantSearch(query);
+
+    return extractRejectionCodes(query).length > 0 ||
+      /\b(rejeicao|rejeitad[ao]|codigo de rejeicao|sefaz|autorizacao|nao autoriza|transmissao|nao transmite|retornou rejeicao)\b/.test(normalized);
+  }
+
+  function assistantQueryAllowsSpecificRejection(query) {
+    const normalized = normalizeAssistantSearch(query);
+
+    return extractRejectionCodes(query).length > 0 ||
+      /\b(codigo de rejeicao|sefaz|nao autoriza|transmissao|nao transmite|retornou rejeicao|ausencia|troco|cfop|csosn|cst|ncm|icms|ipi|pis|cofins)\b/.test(normalized);
+  }
+
+  function assistantQueryIsGenericRejection(query) {
+    return assistantQueryAllowsRejectionRelated(query, "error") &&
+      !assistantQueryAllowsSpecificRejection(query);
+  }
+
+  function assistantSemanticScore(doc, queryAnalysis, intent) {
+    const category = getAssistantCategory(doc);
+    const docAnalysis = assistantSemanticAnalysis(
+      assistantDocText(doc)
+    );
+    const titleLocationAnalysis = assistantSemanticAnalysis(
+      `${doc.title || ""} ${doc.location || ""}`
+    );
+    const docAction = titleLocationAnalysis.action;
+    const docObject = titleLocationAnalysis.object || docAnalysis.object;
+    const actionMatchesIntent = !(
+      intent === "manual" &&
+      assistantOperationalAction(queryAnalysis.action)
+    );
+    const bonuses = [];
+    const penalties = [];
+    let score = 0;
+
+    if (!queryAnalysis.action && !queryAnalysis.object) {
+      return {
+        score,
+        action: null,
+        object: null,
+        bonuses,
+        penalties
+      };
+    }
+
+    if (queryAnalysis.object && docObject === queryAnalysis.object) {
+      score += 82;
+      bonuses.push("objeto");
+    } else if (queryAnalysis.object && docObject) {
+      score -= 42;
+      penalties.push("objeto_diferente");
+    }
+
+    if (actionMatchesIntent && queryAnalysis.action && docAction === queryAnalysis.action) {
+      score += 74;
+      bonuses.push("acao");
+    }
+
+    if (
+      actionMatchesIntent &&
+      queryAnalysis.action &&
+      queryAnalysis.object &&
+      docAction === queryAnalysis.action &&
+      docObject === queryAnalysis.object
+    ) {
+      score += 150;
+      bonuses.push("acao_objeto");
+    }
+
+    if (assistantActionConflicts(queryAnalysis.action, docAction)) {
+      const penalty =
+        queryAnalysis.object && docObject === queryAnalysis.object
+          ? 220
+          : 110;
+
+      score -= penalty;
+      penalties.push("conflito_acao");
+    }
+
+    if (
+      queryAnalysis.action === "emitir" &&
+      queryAnalysis.object === "nota fiscal" &&
+      /\b(rejeitad|rejeicao|rejeição|cancelar|cancelamento|inutiliz)\b/.test(
+        normalizeAssistantSearch(assistantDocText(doc))
+      )
+    ) {
+      score -= 190;
+      penalties.push("variante_de_nota_incompativel");
+    }
+
+    if (queryAnalysis.action === "entender") {
+      if (category === "Manual") {
+        score += 72;
+        bonuses.push("manual_para_entender");
+      } else if (category === "Guia") {
+        score -= 32;
+        penalties.push("guia_para_entender");
+      }
+    } else if (assistantOperationalAction(queryAnalysis.action)) {
+      if (intent === "manual") {
+        if (category === "Manual") {
+          score += 72;
+          bonuses.push("manual_para_localizacao");
+        } else if (category === "Guia") {
+          score -= 34;
+          penalties.push("guia_para_localizacao");
+        }
+      } else if (category === "Guia") {
+        score += 18;
+        bonuses.push("guia_operacional");
+      } else if (category === "Manual") {
+        score += 4;
+        bonuses.push("manual_relacionado_a_acao");
+      }
+    }
+
+    return {
+      score,
+      action: docAction,
+      object: docObject,
+      bonuses,
+      penalties
+    };
+  }
+
   function analyzeAssistantQuery(value) {
     const words = uniqueAssistantWords(value);
     const specificMatches = getAssistantSpecificMatches(value);
@@ -696,7 +1483,8 @@
       meaningfulWords,
       specificMatches,
       hasSpecificTerms: specificMatches.length > 0,
-      codes: extractRejectionCodes(value)
+      codes: extractRejectionCodes(value),
+      semantic: assistantSemanticAnalysis(value)
     };
   }
 
@@ -725,20 +1513,38 @@
     return new Set(expanded.map(assistantWordRoot));
   }
 
+  function assistantRootMatchCount(source, words) {
+    const tokens = assistantTokenSet(source);
+
+    return words.filter((word) =>
+      tokens.has(assistantWordRoot(word))
+    ).length;
+  }
+
   function assistantIntent(query) {
     const normalized = normalizeAssistantSearch(query);
     const words = uniqueAssistantWords(query);
     const wordSet = new Set(words);
 
     if (
+      /\b(indicador de relatorio|indicador de relatorios|validador xml|validar xml|ferramenta|ferramentas)\b/.test(normalized) ||
+      /\b(qual|quais|usar|uso|indicar|indica)\b.*\b(relatorio|relatorios)\b/.test(normalized) ||
+      /\b(relatorio|relatorios)\b.*\b(qual|quais|usar|uso|indicar|indica)\b/.test(normalized) ||
+      /\bxml\b.*\b(errado|erro|validar|validacao|analisar|conferir)\b/.test(normalized)
+    ) {
+      return "tool";
+    }
+
+    if (
       extractRejectionCodes(query).length ||
-      /\b(rejeicao|rejeicoes|erro|schema|sefaz|xml)\b/.test(normalized)
+      /\b(rejeicao|rejeicoes|rejeitad[ao]s?|erro|schema|sefaz|xml)\b/.test(normalized) ||
+      /\b(referencia objeto|objeto nao definid[ao])\b/.test(normalized)
     ) {
       return "error";
     }
 
     if (
-      /\b(onde fica|qual campo|quais campos|para que serve|o que significa|tela de)\b/.test(normalized)
+      /\b(onde fica|onde cadastro|onde cadastra|onde cadastrar|onde vejo|onde encontro|onde acesso|qual campo|quais campos|para que serve|o que e|o que significa|como funciona|funciona a tela|tela de)\b/.test(normalized)
     ) {
       return "manual";
     }
@@ -747,6 +1553,7 @@
       "ajustar",
       "alterar",
       "baixar",
+      "cad",
       "cadastrar",
       "cadastro",
       "cancelar",
@@ -765,7 +1572,7 @@
 
     if (
       normalized.includes("como") ||
-      /\b(ajustar|alterar|baixar|cadastrar|cadastro|cancelar|configurar|consultar|criar|emitir|faturar|fazer|gerar|importar|lancar|transferir)\b/.test(normalized) ||
+      /\b(ajustar|alterar|baixar|cad|cadastrar|cadastro|cancelar|configurar|consultar|criar|emitir|faturar|fazer|gerar|importar|lancar|transferir)\b/.test(normalized) ||
       words.some((word) => guideIntentWords.has(word)) ||
       /\bguia\b/.test(normalized)
     ) {
@@ -800,7 +1607,9 @@
     const location = normalizeAssistantSearch(doc.location);
     const combined = `${title} ${location} ${text}`;
     const segments = assistantPathSegments(doc.location);
+    const pageKey = assistantPageKey(doc.location);
     const isIndex = isAssistantIndexDoc(doc);
+    const isGeneric = isAssistantGenericDoc(doc);
     const analysis = analyzeAssistantQuery(query);
     const words = analysis.words;
     const profile = assistantPageProfile(doc);
@@ -808,6 +1617,7 @@
     const guideIntentWords = new Set([
       "ajustar",
       "baixar",
+      "cad",
       "cadastrar",
       "cadastro",
       "cancelar",
@@ -816,6 +1626,7 @@
       "criar",
       "emitir",
       "faturar",
+      "fazer",
       "gerar",
       "importar",
       "lancar",
@@ -829,6 +1640,7 @@
     let specificMatchScore = 0;
     let hasSpecificMatch = false;
     let codeMatchScore = 0;
+    let defaultPageScore = 0;
 
     let score = 0;
 
@@ -838,7 +1650,18 @@
 
     if (
       isAssistantBlockedManualDoc(doc) ||
+      isAssistantBlockedGuideDoc(doc) ||
       !assistantProfileMatchesQuery(profile, analysis, query)
+    ) {
+      return 0;
+    }
+
+    if (
+      assistantQueryHasFinalizedInvoiceContext(term) &&
+      (pageKey === "como-fazer/editar-valores-nfe" ||
+        pageKey.startsWith("como-fazer/editar-valores-nfe/") ||
+        pageKey === "como-fazer/faturar-nota" ||
+        pageKey.startsWith("como-fazer/faturar-nota/"))
     ) {
       return 0;
     }
@@ -848,11 +1671,11 @@
         const exactCode = new RegExp(`\\b${code}\\b`);
 
         if (exactCode.test(title)) {
-          codeMatchScore += 140;
+          codeMatchScore += 260;
         }
 
         if (exactCode.test(location)) {
-          codeMatchScore += 100;
+          codeMatchScore += 180;
         }
 
         if (exactCode.test(text)) {
@@ -899,6 +1722,10 @@
     }
 
     score += assistantProfileScore(profile, analysis, query);
+    score += assistantAmbiguousPreferenceScore(doc, analysis, intent);
+    defaultPageScore = assistantDefaultPageScore(doc, analysis, intent);
+    score += defaultPageScore;
+    score += assistantSemanticScore(doc, analysis.semantic, intent).score;
 
     if (title === query) {
       score += 100;
@@ -921,16 +1748,20 @@
     }
 
     if (isIndex) {
-      score -= 35;
+      score -= analysis.codes.length || analysis.meaningfulWords.length > 1 ? 130 : 35;
+    }
+
+    if (isGeneric && assistantQueryNeedsSpecificContent(analysis)) {
+      score -= analysis.hasSpecificTerms || analysis.semantic.object ? 115 : 80;
     }
 
     if (intent === "guide" || hasGuideIntent) {
       if (category === "Guia") {
-        score += 42;
+        score += 12;
       }
 
       if (category === "Manual") {
-        score += 8;
+        score += 6;
       }
 
       if (
@@ -943,20 +1774,33 @@
 
     if (intent === "manual") {
       if (category === "Manual") {
-        score += 46;
+        score += 72;
       }
 
       if (category === "Guia") {
-        score += 8;
+        score -= 4;
       }
 
       if (category === "FAQ") {
-        score -= 18;
+        score -= 120;
       }
     }
 
     if (intent === "error") {
-      if (category === "Rejeição" || category === "Erro") {
+      if (category === "Erro" && assistantQueryIsGenericRejection(term)) {
+        return 0;
+      }
+
+      if (
+        category === "Rejeição" &&
+        /\brejeicao\b/.test(location) &&
+        !isAssistantIndexDoc(doc) &&
+        !assistantQueryAllowsSpecificRejection(term)
+      ) {
+        return 0;
+      }
+
+      if (category === "Rejeição" || category === "Erro" || category === "Problema Técnico") {
         score += 72;
       } else if (category === "Guia" || category === "Manual") {
         score += 4;
@@ -965,16 +1809,78 @@
       }
     }
 
+    if (intent === "tool") {
+      if (category === "Ferramenta") {
+        score += 110;
+      } else if (category === "Guia" || category === "Manual") {
+        score -= 20;
+      } else if (category !== "FAQ") {
+        score -= 12;
+      }
+    }
+
     if (intent === "ambiguous" && category === "Manual") {
       score += 12;
     }
 
+    if (category === "Guia") {
+      score += 4;
+    } else if (category === "Manual") {
+      score += 4;
+    } else if (category === "FAQ") {
+      score += 3;
+    }
+
     const titleMatches = words.filter((word) => title.includes(word)).length;
     const locationMatches = words.filter((word) => location.includes(word)).length;
-    const matchedWords = words.filter((word) => combined.includes(word)).length;
+    const combinedTokens = assistantTokenSet(combined);
+    const combinedHasWord = (word) =>
+      combined.includes(word) || combinedTokens.has(assistantWordRoot(word));
+    const meaningfulTitleMatches = assistantRootMatchCount(
+      title,
+      analysis.meaningfulWords
+    );
+    const meaningfulLocationMatches = assistantRootMatchCount(
+      location,
+      analysis.meaningfulWords
+    );
+    const matchedWords = words.filter(combinedHasWord).length;
     const meaningfulMatches = analysis.meaningfulWords.filter((word) =>
-      combined.includes(word)
+      combinedHasWord(word)
     ).length;
+    const unmatchedMeaningfulWords = analysis.meaningfulWords.filter((word) =>
+      !combinedHasWord(word)
+    );
+
+    if (
+      !analysis.codes.length &&
+      !analysis.hasSpecificTerms &&
+      analysis.meaningfulWords.length &&
+      !meaningfulMatches &&
+      !defaultPageScore
+    ) {
+      return 0;
+    }
+
+    if (
+      !analysis.codes.length &&
+      analysis.meaningfulWords.length >= 3 &&
+      meaningfulMatches / analysis.meaningfulWords.length < 0.5 &&
+      !defaultPageScore
+    ) {
+      return 0;
+    }
+
+    if (
+      !analysis.codes.length &&
+      analysis.meaningfulWords.length <= 2 &&
+      unmatchedMeaningfulWords.length &&
+      meaningfulMatches <= 1 &&
+      matchedWords <= 1 &&
+      !defaultPageScore
+    ) {
+      return 0;
+    }
 
     if (analysis.meaningfulWords.length >= 2 && !meaningfulMatches) {
       score -= 80;
@@ -988,8 +1894,26 @@
       score += 45;
     }
 
+    if (
+      analysis.meaningfulWords.length &&
+      meaningfulTitleMatches === analysis.meaningfulWords.length
+    ) {
+      score += 76;
+    } else if (meaningfulTitleMatches >= 2) {
+      score += 38;
+    }
+
     if (words.length > 1 && locationMatches === words.length) {
       score += 24;
+    }
+
+    if (
+      analysis.meaningfulWords.length &&
+      meaningfulLocationMatches === analysis.meaningfulWords.length
+    ) {
+      score += 44;
+    } else if (meaningfulLocationMatches >= 2) {
+      score += 22;
     }
 
     words.forEach((word) => {
@@ -1012,6 +1936,22 @@
     });
 
     if (
+      category === "FAQ" &&
+      analysis.meaningfulWords.length >= 2 &&
+      analysis.meaningfulWords.every((word) => combined.includes(word))
+    ) {
+      score += 95;
+    }
+
+    if (window.WCorpSearchUtils?.scoreDocument) {
+      score += Math.round(window.WCorpSearchUtils.scoreDocument({
+        title: doc.title,
+        location: doc.location,
+        text: doc.text
+      }, term, { intent }) * 0.28);
+    }
+
+    if (
       !analysis.hasSpecificTerms &&
       !analysis.codes.length &&
       analysis.meaningfulWords.length === 0
@@ -1020,6 +1960,66 @@
     }
 
     return score;
+  }
+
+  function isAssistantReliableSpecificResult(item, query, intent) {
+    const doc = item?.doc;
+
+    if (
+      !doc ||
+      item.score < MIN_ASSISTANT_RESULT_SCORE ||
+      isAssistantGenericDoc(doc)
+    ) {
+      return false;
+    }
+
+    const analysis = analyzeAssistantQuery(query);
+    const semantic = assistantSemanticScore(doc, analysis.semantic, intent);
+
+    if (semantic.penalties.includes("conflito_acao")) {
+      return false;
+    }
+
+    const titleLocation = `${doc.title || ""} ${doc.location || ""}`;
+    const combined = `${titleLocation} ${doc.text || ""}`;
+    const titleLocationMatches = assistantRootMatchCount(
+      titleLocation,
+      analysis.meaningfulWords
+    );
+    const strongTitleLocationMatch =
+      analysis.meaningfulWords.length > 0 &&
+      titleLocationMatches >= Math.min(2, analysis.meaningfulWords.length);
+    const businessMatch =
+      analysis.businessWords.length > 0 &&
+      assistantRootMatchCount(titleLocation, analysis.businessWords) ===
+        analysis.businessWords.length;
+    const compatibleObject =
+      analysis.semantic.object &&
+      semantic.object === analysis.semantic.object;
+    const specificTermMatch =
+      analysis.hasSpecificTerms &&
+      analysis.specificMatches.some((match) =>
+        match.terms.some((term) => assistantContainsTerm(combined, term))
+      );
+
+    return Boolean(
+      strongTitleLocationMatch ||
+      specificTermMatch ||
+      businessMatch ||
+      compatibleObject
+    );
+  }
+
+  function selectAssistantPrimaryResult(ranked, query, intent) {
+    const first = ranked[0];
+
+    if (!first || !isAssistantGenericDoc(first.doc)) {
+      return first;
+    }
+
+    return ranked.find((item) =>
+      isAssistantReliableSpecificResult(item, query, intent)
+    ) || first;
   }
 
   function representativeAssistantDoc(docs, pageKey, fallback) {
@@ -1080,11 +2080,14 @@
       };
     }
 
-    const primary = ranked[0];
+    const primary = selectAssistantPrimaryResult(ranked, query, intent);
+    const relatedCandidates = ranked.filter((item) =>
+      item.pageKey !== primary.pageKey
+    );
 
     return {
       primary,
-      related: getAssistantRelatedResults(primary, ranked.slice(1), query, intent),
+      related: getAssistantRelatedResults(primary, relatedCandidates, query, intent),
       intent,
       ambiguous: isAmbiguousAssistantQuery(query, intent)
     };
@@ -1109,8 +2112,26 @@
     const candidateDoc = candidate.doc;
     const primaryCategory = getAssistantCategory(primaryDoc);
     const candidateCategory = getAssistantCategory(candidateDoc);
+    const querySemantic = analyzeAssistantQuery(query).semantic;
+    const candidateSemantic = assistantSemanticScore(
+      candidateDoc,
+      querySemantic,
+      intent
+    );
 
     if (primary.pageKey === candidate.pageKey || isAssistantIndexDoc(candidateDoc)) {
+      return -Infinity;
+    }
+
+    if (candidateSemantic.penalties.includes("conflito_acao")) {
+      return -Infinity;
+    }
+
+    if (
+      querySemantic.object &&
+      candidateSemantic.object &&
+      candidateSemantic.object !== querySemantic.object
+    ) {
       return -Infinity;
     }
 
@@ -1137,24 +2158,74 @@
       assistantDocText(candidateDoc)
     ) * 16;
     score += Math.min(candidate.score / 4, 28);
+    score += Math.min(candidateSemantic.score / 3, 60);
 
     if (candidateCategory === "FAQ" && score < 82) {
       score -= 22;
+    }
+
+    if (candidateCategory === "Ferramenta" && intent !== "tool") {
+      return -Infinity;
+    }
+
+    if (candidateCategory === "Conteúdo") {
+      return -Infinity;
     }
 
     return score;
   }
 
   function getAssistantRelatedResults(primary, candidates, query, intent) {
+    const usedCategories = new Set([getAssistantCategory(primary.doc)]);
+
     return candidates
       .map((candidate) => ({
         ...candidate,
         relatedScore: scoreAssistantRelatedResult(primary, candidate, query, intent)
       }))
-      .filter((candidate) => candidate.relatedScore >= MIN_ASSISTANT_RELATED_SCORE)
+      .filter((candidate) => {
+        const category = getAssistantCategory(candidate.doc);
+        const pageKey = candidate.pageKey || assistantPageKey(candidate.doc.location);
+
+        return candidate.score >= MIN_ASSISTANT_RESULT_SCORE &&
+          candidate.relatedScore >= MIN_ASSISTANT_RELATED_SCORE &&
+          !(
+            assistantQueryHasFinalizedInvoiceContext(query) &&
+            getAssistantCategory(primary.doc) === "FAQ"
+          ) &&
+          (category !== "Erro" || (
+            assistantQueryAllowsIssueRelated(query, intent) &&
+            !assistantQueryIsGenericRejection(query)
+          )) &&
+          (category !== "Rejeição" || (
+            assistantQueryAllowsRejectionRelated(query, intent) &&
+            (isAssistantIndexDoc(candidate.doc) || assistantQueryAllowsSpecificRejection(query))
+          )) &&
+          !(category === "FAQ" &&
+            !/\b(complementar|complemento)\b/.test(normalizeAssistantSearch(query)) &&
+            /\b(complementar|complemento)\b/.test(normalizeAssistantSearch(candidate.doc.title))) &&
+          !(pageKey.includes("registrar-entrada-material") && assistantContextSet(query, "", analyzeAssistantQuery(query).semantic).has("ajuste_inventario")) &&
+          assistantRelatedContextCompatible(primary, candidate, query);
+      })
       .sort((a, b) => {
         if (b.relatedScore !== a.relatedScore) return b.relatedScore - a.relatedScore;
+
+        const priorityDelta =
+          assistantContentTypePriority(getAssistantCategory(a.doc)) -
+          assistantContentTypePriority(getAssistantCategory(b.doc));
+
+        if (priorityDelta !== 0) return priorityDelta;
         return b.score - a.score;
+      })
+      .filter((candidate) => {
+        const category = getAssistantCategory(candidate.doc);
+
+        if (usedCategories.has(category)) {
+          return false;
+        }
+
+        usedCategories.add(category);
+        return true;
       })
       .slice(0, MAX_ASSISTANT_RELATED_RESULTS);
   }
@@ -1171,7 +2242,20 @@
   function assistantContentTypeLabel(category) {
     if (category === "Rejeição") return "REJEIÇÃO";
     if (category === "Erro") return "ERRO";
+    if (category === "Problema Técnico") return "PROBLEMA TÉCNICO";
+    if (category === "Ferramenta") return "FERRAMENTA";
     return category.toUpperCase();
+  }
+
+  function assistantContentTypePriority(category) {
+    if (category === "Guia") return 0;
+    if (category === "Manual") return 1;
+    if (category === "FAQ") return 2;
+    return 10;
+  }
+
+  function assistantOrderResultCards(cards) {
+    return cards;
   }
 
   function assistantActionLabel(category) {
@@ -1188,6 +2272,9 @@
 
       case "FAQ":
         return "Ver resposta →";
+
+      case "Ferramenta":
+        return "Abrir ferramenta →";
 
       default:
         return "Abrir conteúdo →";
@@ -1209,40 +2296,175 @@
   const assistantPhraseHistory = {};
 
   const assistantIntroPhrases = {
-    general: [
-      "Separei o conteúdo mais alinhado com {assunto}.",
-      "Encontrei uma orientação que combina com {assunto}.",
-      "Achei um caminho útil para {assunto}.",
-      "Tenho uma referência boa para {assunto}.",
-      "Esse conteúdo deve ajudar com {assunto}."
+    execute: [
+      "Este guia mostra o passo a passo para {assunto}.",
+      "Para executar essa rotina, consulte este conteúdo.",
+      "O caminho mais direto para {assunto} está aqui.",
+      "Esse guia responde melhor ao processo solicitado.",
+      "Para fazer isso no WCorp, este é o conteúdo indicado.",
+      "Separei o guia operacional mais próximo da sua dúvida.",
+      "Use este conteúdo para seguir com {assunto}.",
+      "Esse passo a passo deve atender ao que você pediu.",
+      "Para realizar essa ação, comece por aqui."
     ],
-    guide: [
-      "Separei o guia mais direto para {assunto}.",
-      "Encontrei o passo a passo de {assunto}.",
-      "Achei o guia que melhor responde sobre {assunto}.",
-      "Para {assunto}, este guia é o melhor ponto de partida.",
-      "O guia abaixo parece ser o caminho certo para {assunto}."
+    consult: [
+      "Você pode consultar essa informação por aqui.",
+      "Para verificar isso, este conteúdo é o mais indicado.",
+      "Esse material mostra onde conferir {assunto}.",
+      "A consulta mais relacionada está neste conteúdo.",
+      "Para localizar essa informação, veja este material.",
+      "Esse conteúdo ajuda a conferir o ponto solicitado.",
+      "Para essa consulta, recomendo começar por aqui.",
+      "Você encontra essa informação neste conteúdo.",
+      "Esse é o caminho mais direto para verificar {assunto}."
     ],
-    manual: [
-      "Encontrei o manual da tela relacionada a {assunto}.",
-      "Separei a documentação da tela para {assunto}.",
-      "Para consultar {assunto}, este manual é o mais adequado.",
-      "Achei o manual que descreve {assunto}.",
-      "Este manual deve ajudar a localizar {assunto} no WCorp."
+    configure: [
+      "Para cadastrar isso, use este guia.",
+      "Esse conteúdo mostra a configuração necessária.",
+      "O passo a passo de cadastro está aqui.",
+      "Para criar esse registro, consulte este conteúdo.",
+      "Esse guia é o mais direto para o cadastro.",
+      "Para configurar {assunto}, comece por aqui.",
+      "Separei a orientação mais adequada para esse cadastro.",
+      "Este conteúdo mostra como preparar essa informação.",
+      "Use este material para ajustar o cadastro no WCorp."
     ],
     error: [
       "Encontrei a orientação específica para essa rejeição.",
-      "Separei a solução mais próxima para esse erro.",
-      "Achei a página certa para conferir essa rejeição.",
-      "Essa orientação deve ajudar a validar o problema fiscal.",
-      "Para essa mensagem, a solução abaixo é a melhor correspondência."
+      "Para corrigir essa mensagem, consulte este conteúdo.",
+      "Essa solução é a orientação mais indicada para a mensagem.",
+      "Veja a orientação para tratar esse erro.",
+      "Esse conteúdo explica como validar a rejeição.",
+      "Para essa falha, esta é a página mais indicada.",
+      "Separei a orientação mais direta para o problema.",
+      "Esse material ajuda a conferir a causa do erro.",
+      "Use esta referência para analisar a mensagem retornada."
     ],
-    faq: [
-      "Encontrei uma resposta relacionada à sua dúvida.",
-      "Achei uma pergunta frequente que combina com {assunto}.",
-      "Essa resposta rápida deve ajudar com {assunto}.",
-      "Separei a FAQ mais próxima do que você perguntou.",
-      "Tenho uma resposta direta para essa dúvida."
+    technical: [
+      "Encontrei uma orientação para este problema técnico.",
+      "Separei a orientação técnica mais próxima da sua dúvida.",
+      "Esse conteúdo ajuda a analisar esse problema técnico."
+    ],
+    understand: [
+      "Este manual explica essa tela.",
+      "Para entender como funciona, consulte este conteúdo.",
+      "A documentação da funcionalidade está aqui.",
+      "Esse manual descreve os campos e o uso da tela.",
+      "Para conhecer essa rotina, veja este material.",
+      "Esse conteúdo ajuda a entender {assunto}.",
+      "Separei a referência mais adequada sobre a tela.",
+      "Para consultar os detalhes da funcionalidade, comece aqui.",
+      "Este material reúne a explicação mais próxima da dúvida."
+    ],
+    single: [
+      "Encontrei um conteúdo direto para sua dúvida.",
+      "Este conteúdo deve ajudar com a sua dúvida.",
+      "Este é o conteúdo mais alinhado com a pergunta.",
+      "A resposta mais direta está aqui.",
+      "Separei apenas a orientação mais útil.",
+      "Esse conteúdo é o melhor ponto de partida.",
+      "Para essa dúvida, este conteúdo é o mais adequado.",
+      "Encontrei uma orientação direta para você.",
+      "Este material deve responder melhor ao que você pediu."
+    ],
+    complementary: [
+      "Encontrei alguns conteúdos que podem ajudar.",
+      "Achei mais de uma orientação relacionada à sua dúvida.",
+      "Separei opções próximas ao que você perguntou.",
+      "Esses conteúdos parecem úteis para essa consulta.",
+      "Encontrei materiais relacionados ao tema.",
+      "Você pode consultar estas opções.",
+      "Achei caminhos úteis para seguir com a dúvida.",
+      "Separei conteúdos que tratam desse assunto.",
+      "Estas opções estão próximas da sua pergunta."
+    ],
+    guideOnly: [
+      "Encontrei este Guia para o que você precisa.",
+      "Este Guia é o conteúdo mais direto para {assunto}.",
+      "Você pode seguir este Guia para realizar o processo.",
+      "Esse processo está explicado neste Guia.",
+      "O Guia abaixo mostra o caminho para {assunto}.",
+      "Para essa operação, este Guia é o melhor ponto de partida.",
+      "Separei um Guia direto sobre {assunto}.",
+      "Use este Guia para seguir com a orientação.",
+      "A orientação para esse processo está neste Guia."
+    ],
+    manualOnly: [
+      "Encontrei o Manual dessa funcionalidade.",
+      "Este Manual reúne as informações relacionadas a {assunto}.",
+      "Você encontra os detalhes dessa funcionalidade neste Manual.",
+      "Essa informação está documentada neste Manual.",
+      "O Manual abaixo explica os pontos ligados a {assunto}.",
+      "Para entender essa tela, consulte este Manual.",
+      "Separei o Manual mais próximo da sua dúvida.",
+      "Os detalhes da funcionalidade estão neste Manual.",
+      "Este Manual deve ajudar na consulta."
+    ],
+    faqOnly: [
+      "Encontrei uma resposta na FAQ para essa dúvida.",
+      "Essa dúvida possui uma orientação na FAQ.",
+      "Há uma resposta na FAQ relacionada ao que você perguntou.",
+      "A FAQ abaixo deve ajudar com {assunto}.",
+      "Separei uma orientação da FAQ para essa pergunta.",
+      "Essa pergunta já tem uma resposta na FAQ.",
+      "Você pode consultar esta resposta da FAQ.",
+      "A orientação mais próxima está na FAQ.",
+      "Encontrei uma FAQ relacionada à sua dúvida."
+    ],
+    guideManual: [
+      "Encontrei um Guia e um Manual sobre esse assunto.",
+      "Achei dois conteúdos relacionados à sua dúvida.",
+      "Separei um Guia e um Manual que podem ajudar.",
+      "Você pode consultar estes dois conteúdos.",
+      "Há um Guia e um Manual próximos da sua pergunta.",
+      "Encontrei materiais úteis para {assunto}.",
+      "Essas opções tratam do tema que você perguntou.",
+      "Achei conteúdos relacionados para seguir com essa dúvida.",
+      "Separei estas orientações sobre {assunto}."
+    ],
+    guideFaq: [
+      "Encontrei um Guia e uma resposta da FAQ sobre isso.",
+      "Achei dois conteúdos relacionados à sua dúvida.",
+      "Separei um Guia e uma FAQ que podem ajudar.",
+      "Você pode consultar estas duas opções.",
+      "Há um Guia e uma FAQ próximos da pergunta.",
+      "Encontrei materiais úteis para {assunto}.",
+      "Essas orientações tratam do tema pesquisado.",
+      "Achei conteúdos relacionados para seguir com a dúvida.",
+      "Separei estas opções sobre {assunto}."
+    ],
+    manualFaq: [
+      "Encontrei um Manual e uma resposta da FAQ sobre isso.",
+      "Achei dois conteúdos relacionados à sua dúvida.",
+      "Separei um Manual e uma FAQ que podem ajudar.",
+      "Você pode consultar estas duas opções.",
+      "Há um Manual e uma FAQ próximos da pergunta.",
+      "Encontrei materiais úteis para {assunto}.",
+      "Essas orientações tratam do tema pesquisado.",
+      "Achei conteúdos relacionados para seguir com a dúvida.",
+      "Separei estas opções sobre {assunto}."
+    ],
+    guideManualFaq: [
+      "Encontrei um Guia, um Manual e uma FAQ sobre isso.",
+      "Achei três conteúdos relacionados à sua dúvida.",
+      "Separei um Guia, um Manual e uma FAQ que podem ajudar.",
+      "Você pode consultar estas opções.",
+      "Há conteúdos de Guia, Manual e FAQ próximos da pergunta.",
+      "Encontrei materiais úteis para {assunto}.",
+      "Essas orientações tratam do tema pesquisado.",
+      "Achei conteúdos relacionados para seguir com a dúvida.",
+      "Separei estas opções sobre {assunto}."
+    ],
+    noResult: [
+      "Não encontrei um conteúdo específico para essa dúvida.",
+      "Não achei um Guia, Manual ou FAQ que responda diretamente a isso.",
+      "Essa dúvida ainda não parece ter um conteúdo específico na Central.",
+      "Não tenho uma orientação específica para indicar agora.",
+      "Tente informar o nome da tela, processo ou mensagem completa.",
+      "Não encontrei uma orientação segura para recomendar.",
+      "Ainda não há um conteúdo claro para essa pergunta.",
+      "Não achei uma orientação direta o suficiente na Central.",
+      "Preciso de um termo mais específico para encontrar a orientação certa."
     ]
   };
 
@@ -1277,10 +2499,15 @@
     const matches = analyzeAssistantQuery(query).specificMatches;
     const firstLabel = matches[0]?.label;
 
-    if (!firstLabel && results?.primary?.doc?.title) {
-      return normalizeAssistantSearch(results.primary.doc.title)
-        .replace(/^como\s+/, "")
-        .replace(/\s+/g, " ");
+    if (
+      !firstLabel &&
+      results?.primary?.doc?.title &&
+      !isAssistantGenericDoc(results.primary.doc)
+    ) {
+      return String(results.primary.doc.title)
+        .replace(/^como\s+/i, "")
+        .replace(/\s+/g, " ")
+        .trim();
     }
 
     if (
@@ -1321,21 +2548,121 @@
     return firstLabel || "sua busca";
   }
 
-  function assistantIntro(category, query, results) {
+  function assistantIntroSubject(query, results) {
     const subject = assistantSubject(query, results);
+    return subject === "sua busca" ? "essa dúvida" : subject;
+  }
 
-    if (category === "Guia" && subject === "faturar a nota") {
-      return "Para faturar a nota, encontrei este guia sobre emissão de NF-e:";
+  function assistantCardCompositionKey(cards) {
+    const categories = new Set(cards.map((item) =>
+      getAssistantCategory(item.doc || item)
+    ));
+
+    if (
+      !categories.size ||
+      !Array.from(categories).every((category) =>
+        ["Guia", "Manual", "FAQ"].includes(category)
+      )
+    ) {
+      return null;
     }
 
-    const phraseKey =
-      category === "Rejeição" || category === "Erro"
-        ? "error"
-        : normalizeAssistantSearch(category).toLowerCase();
+    const hasGuide = categories.has("Guia");
+    const hasManual = categories.has("Manual");
+    const hasFaq = categories.has("FAQ");
+
+    if (hasGuide && hasManual && hasFaq) return "guideManualFaq";
+    if (hasGuide && hasManual) return "guideManual";
+    if (hasGuide && hasFaq) return "guideFaq";
+    if (hasManual && hasFaq) return "manualFaq";
+    if (hasGuide) return "guideOnly";
+    if (hasManual) return "manualOnly";
+    if (hasFaq) return "faqOnly";
+
+    return null;
+  }
+
+  function assistantOrderedCompositionIntro(cards, subject) {
+    const article = (category) => category === "FAQ" ? "uma FAQ" : `um ${category}`;
+    const demonstrative = (category) => category === "FAQ" ? "esta FAQ" : `este ${category}`;
+    const categories = cards
+      .map((item) => getAssistantCategory(item.doc || item))
+      .filter((category) => ["Guia", "Manual", "FAQ"].includes(category));
+
+    if (categories.length < 2) {
+      return "";
+    }
+
+    const primaryCategory = categories[0];
+    const rest = categories.slice(1).map(article);
+    const subjectText = subject === "essa dúvida" ? "" : ` sobre ${subject}`;
+
+    if (rest.length === 1) {
+      return `Encontrei ${demonstrative(primaryCategory)}${subjectText}. Também achei ${rest[0]} que pode ajudar.`;
+    }
+
+    return `Encontrei ${demonstrative(primaryCategory)}${subjectText}. Também achei ${rest.slice(0, -1).join(", ")} e ${rest[rest.length - 1]} que podem ajudar.`;
+  }
+
+  function assistantResponseFamily(category, query, results) {
+    const semantic = analyzeAssistantQuery(query).semantic;
+
+    if (results?.related?.length) {
+      return "complementary";
+    }
+
+    if (category === "Problema Técnico") {
+      return "technical";
+    }
+
+    if (category === "Rejeição" || category === "Erro" || semantic.action === "corrigir") {
+      return "error";
+    }
+
+    if (semantic.action === "consultar") {
+      return "consult";
+    }
+
+    if (semantic.action === "cadastrar" || semantic.action === "configurar") {
+      return "configure";
+    }
+
+    if (semantic.action === "entender" || category === "Manual") {
+      return "understand";
+    }
+
+    if (assistantOperationalAction(semantic.action) || category === "Guia") {
+      return "execute";
+    }
+
+    return "single";
+  }
+
+  function assistantIntro(category, query, results, cards) {
+    const subject = assistantIntroSubject(query, results);
+    const orderedIntro = assistantOrderedCompositionIntro(cards || [], subject);
+    const compositionKey = assistantCardCompositionKey(cards || []);
+
+    if (assistantQueryIsGenericRejection(query)) {
+      return "Informe o código ou a mensagem da rejeição para encontrar uma solução específica. Enquanto isso, consulte este conteúdo.";
+    }
+
+    if (orderedIntro) {
+      return orderedIntro;
+    }
+
+    if (compositionKey) {
+      return pickAssistantPhrase(
+        compositionKey,
+        assistantIntroPhrases[compositionKey]
+      ).replace("{assunto}", subject);
+    }
+
+    const phraseKey = assistantResponseFamily(category, query, results);
 
     const phrases =
       assistantIntroPhrases[phraseKey] ||
-      assistantIntroPhrases.general;
+      assistantIntroPhrases.single;
 
     return pickAssistantPhrase(phraseKey, phrases)
       .replace("{assunto}", subject);
@@ -1363,9 +2690,14 @@
 
   function createAssistantAnswer(query, results) {
     if (!results?.primary) {
+      const phrase = pickAssistantPhrase(
+        "noResult",
+        assistantIntroPhrases.noResult
+      );
+
       return {
         textHtml: `
-          <strong>Não encontrei uma orientação específica.</strong>
+          <strong>${escapeHtml(phrase)}</strong>
           <br>
           Tente informar o código, nome da tela ou mensagem completa.
           <br><br>
@@ -1375,11 +2707,11 @@
       };
     }
 
-    const category = getAssistantCategory(results.primary.doc);
-    const cards = [
+    const cards = assistantOrderResultCards([
       results.primary,
       ...results.related
-    ];
+    ]);
+    const category = getAssistantCategory(cards[0].doc);
     const cardsHtml = cards.length
       ? `
         <div class="wc-assistant__answer-cards">
@@ -1389,7 +2721,7 @@
       : "";
 
     return {
-      textHtml: `<strong>${escapeHtml(assistantIntro(category, query, results))}</strong>`,
+      textHtml: `<strong>${escapeHtml(assistantIntro(category, query, results, cards))}</strong>`,
       cardsHtml
     };
   }
@@ -1401,7 +2733,12 @@
    */
 
   function initializeAssistant() {
+    window.__WC_ASSISTANT_DEBUG__.initializeCalls +=
+      1;
+
     if (document.querySelector(".wc-assistant")) {
+      window.__WC_ASSISTANT_DEBUG__.skippedExistingInstances +=
+        1;
       return;
     }
 
@@ -1545,6 +2882,151 @@
     let closeTimer = 0;
     let restoredScrollTop = null;
     let assistantIsResponding = false;
+    const assistantViewportMargin = 12;
+    let lastLauncherAnchor = null;
+
+    const clampAssistantPanelPosition = (value, min, max) =>
+      Math.min(
+        Math.max(value, min),
+        Math.max(min, max)
+      );
+
+    const readPixelValue = (
+      value,
+      fallback
+    ) => {
+      const number =
+        Number.parseFloat(value);
+
+      return Number.isFinite(number)
+        ? number
+        : fallback;
+    };
+
+    const readAssistantFixedAnchor = () => {
+      const style =
+        window.getComputedStyle(assistant);
+      const right =
+        readPixelValue(
+          style.right,
+          assistantViewportMargin
+        );
+      const bottom =
+        readPixelValue(
+          style.bottom,
+          assistantViewportMargin
+        );
+
+      return {
+        right:
+          window.innerWidth - right,
+        bottom:
+          window.innerHeight - bottom
+      };
+    };
+
+    const readLauncherAnchor = () => {
+      if (
+        assistant.classList.contains(
+          "wc-assistant--open"
+        ) ||
+        assistant.classList.contains(
+          "wc-assistant--closing"
+        )
+      ) {
+        lastLauncherAnchor =
+          readAssistantFixedAnchor();
+
+        return lastLauncherAnchor;
+      }
+
+      const launcherRect =
+        launcher.getBoundingClientRect();
+
+      if (
+        launcherRect.width &&
+        launcherRect.height
+      ) {
+        lastLauncherAnchor = {
+          right:
+            launcherRect.right,
+          bottom:
+            launcherRect.bottom
+        };
+      }
+
+      return lastLauncherAnchor ||
+        readAssistantFixedAnchor();
+    };
+
+    const positionAssistantPanel = (
+      anchor = readLauncherAnchor()
+    ) => {
+      if (panel.hidden) {
+        return;
+      }
+
+      const panelWidth =
+        panel.offsetWidth;
+      const panelHeight =
+        panel.offsetHeight;
+
+      if (
+        !anchor ||
+        !panelWidth ||
+        !panelHeight
+      ) {
+        return;
+      }
+
+      const maxLeft =
+        window.innerWidth -
+        panelWidth -
+        assistantViewportMargin;
+      const desiredLeft =
+        anchor.right -
+        panelWidth;
+
+      const desiredBottom =
+        window.innerHeight -
+        anchor.bottom;
+
+      const maxBottom =
+        window.innerHeight -
+        assistantViewportMargin -
+        panelHeight;
+
+      const left =
+        clampAssistantPanelPosition(
+          desiredLeft,
+          assistantViewportMargin,
+          maxLeft
+        );
+
+      const bottom =
+        clampAssistantPanelPosition(
+          desiredBottom,
+          assistantViewportMargin,
+          maxBottom
+        );
+
+      panel.style.setProperty(
+        "--wc-assistant-panel-left",
+        `${Math.round(left)}px`
+      );
+      panel.style.setProperty(
+        "--wc-assistant-panel-bottom",
+        `${Math.round(bottom)}px`
+      );
+    };
+
+    const scheduleAssistantPanelPosition = () => {
+      window.requestAnimationFrame(() => {
+        window.requestAnimationFrame(() => {
+          positionAssistantPanel();
+        });
+      });
+    };
 
     /*
      * ============================
@@ -1719,10 +3201,17 @@
       );
 
       if (open) {
-        panel.hidden = false;
-
         assistant.classList.remove(
           "wc-assistant--closing"
+        );
+
+        const launcherAnchor =
+          readLauncherAnchor();
+
+        panel.hidden = false;
+
+        positionAssistantPanel(
+          launcherAnchor
         );
 
         assistant.classList.add(
@@ -1745,6 +3234,7 @@
         }, 80);
 
         scheduleConversationScrollToBottom();
+        scheduleAssistantPanelPosition();
 
         return;
       }
@@ -1883,7 +3373,10 @@
             )
           );
 
-          const docs = await loadSearchIndex();
+          const [docs] = await Promise.all([
+            loadSearchIndex(),
+            loadAssistantPublishedGuidePaths()
+          ]);
 
           const results =
             getAssistantResults(
@@ -1972,6 +3465,32 @@
         }
       }
     );
+
+    window.addEventListener(
+      "resize",
+      scheduleAssistantPanelPosition,
+      {
+        passive: true
+      }
+    );
+
+    window.addEventListener(
+      "orientationchange",
+      scheduleAssistantPanelPosition,
+      {
+        passive: true
+      }
+    );
+
+    if (
+      window.document$ &&
+      typeof window.document$.subscribe ===
+        "function"
+    ) {
+      window.document$.subscribe(
+        scheduleAssistantPanelPosition
+      );
+    }
 
     /*
      * ============================

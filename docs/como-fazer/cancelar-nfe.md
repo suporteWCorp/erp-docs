@@ -1,23 +1,22 @@
 ---
-error_area: "Documentos Fiscais"
-error_category: "NF-e"
-error_tags:
-  - "nfe"
-  - "cancelamento"
-  - "sefaz"
+id: cancelar-nfe
+title: Como cancelar uma NF-e
+type: guia
+category: Faturamento
+status: published
+tags:
+  - nfe
+  - cancelamento
+  - sefaz
 ---
 
 # Como cancelar uma NF-e
 
 ## Pré-requisitos
 
-<div class="wc-prereq-list" markdown>
-
 - NF-e autorizada e localizada
 - Prazo e regra fiscal de cancelamento confirmados
 - Motivo do cancelamento definido
-
-</div>
 
 ## Permissões
 
@@ -27,12 +26,11 @@ error_tags:
 
 `Faturamento > Nota Fiscal`.
 
+![Onde encontrar](../assets/images/guias/faturamento_emitir_nfe.png)
+
 ## Demonstração em vídeo
 
-<video class="wc-video" controls preload="auto" playsinline>
-  <source src="../../assets/videos/faturamento_cancelar_nfe.mp4" type="video/mp4">
-  Seu navegador não conseguiu reproduzir este vídeo.
-</video>
+[Demonstração do cancelamento de NF-e](../assets/videos/faturamento_cancelar_nfe.mp4){ .wc-video-link }
 
 ## Como fazer
 

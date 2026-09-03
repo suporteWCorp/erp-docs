@@ -1,0 +1,1063 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Auditoria do Assistente WCorp</title>
+  <link rel="stylesheet" href="../../docs/assets/stylesheets/assistant.css">
+</head>
+<body>
+  <a class="md-header__button md-logo" href="../../site/">WCorp</a>
+  <main>
+    <h1>Auditoria do Assistente WCorp</h1>
+    <pre id="assistant-audit-results" data-status="pending">Rodando auditoria...</pre>
+  </main>
+
+  <script src="../../docs/assets/javascripts/wcorp-search-utils.js"></script>
+  <script>
+    (async function () {
+      const output = document.querySelector("#assistant-audit-results");
+      const sourcePath = "../../docs/assets/javascripts/wcorp-assistant.js";
+
+      const tests = [
+        {
+          id: "Q01",
+          question: "como gerar nota",
+          expectedIntent: "guide",
+          expectedCategory: "Guia",
+          expectedTitleIncludes: "Como emitir uma NF-e",
+          expectedLocationIncludes: "como-fazer/faturar-nota",
+          expectedCatalogPath: "como-fazer/faturar-nota",
+          forbiddenLocationIncludes: "como-fazer/consultar-nfe-rejeitada",
+          expectedRelatedMax: 0
+        },
+        {
+          id: "Q02",
+          question: "como emitir uma nfe",
+          expectedIntent: "guide",
+          expectedCategory: "Guia",
+          expectedTitleIncludes: "Como emitir uma NF-e",
+          expectedLocationIncludes: "como-fazer/faturar-nota",
+          expectedCatalogPath: "como-fazer/faturar-nota",
+          forbiddenLocationIncludes: "como-fazer/consultar-nfe-rejeitada",
+          expectedRelatedMax: 0
+        },
+        {
+          id: "Q03",
+          question: "como consultar notas fiscais rejeitadas",
+          expectedIntent: "error",
+          expectedCategory: "Guia",
+          expectedTitleIncludes: "Como consultar notas fiscais rejeitadas",
+          expectedLocationIncludes: "como-fazer/consultar-nfe-rejeitada"
+        },
+        {
+          id: "Q04",
+          question: "minha nota foi rejeitada",
+          expectedIntent: "error",
+          expectedCategory: "Guia",
+          expectedTitleIncludes: "Como consultar notas fiscais rejeitadas",
+          expectedLocationIncludes: "como-fazer/consultar-nfe-rejeitada"
+        },
+        {
+          id: "Q05",
+          question: "como cancelar uma nota",
+          expectedIntent: "guide",
+          expectedCategory: "Guia",
+          expectedTitleIncludes: "Como cancelar uma NF-e",
+          expectedLocationIncludes: "como-fazer/cancelar-nfe",
+          expectedCatalogPath: "como-fazer/cancelar-nfe",
+          forbiddenLocationIncludes: "como-fazer/consultar-nfe-rejeitada"
+        },
+        {
+          id: "Q06",
+          question: "como fazer carta de correção",
+          expectedIntent: "guide",
+          expectedCategory: "Guia",
+          expectedTitleIncludes: "Como emitir uma carta de correção",
+          expectedLocationIncludes: "como-fazer/emitir-carta-correcao",
+          expectedCatalogPath: "como-fazer/emitir-carta-correcao"
+        },
+        {
+          id: "Q07",
+          question: "como inutilizar uma nota",
+          expectedIntent: "guide",
+          expectedCategory: "Manual",
+          expectedTitleIncludes: "Inutilização Nota Fiscal",
+          expectedLocationIncludes: "faturamento/inutilizacao-nota-fiscal"
+        },
+        {
+          id: "Q08",
+          question: "como cadastrar cliente",
+          expectedIntent: "guide",
+          expectedCategory: "Guia",
+          expectedTitleIncludes: "Como cadastrar um cliente",
+          expectedLocationIncludes: "como-fazer/cadastrar-cliente",
+          expectedRelatedMax: 0
+        },
+        {
+          id: "Q09",
+          question: "como gerar pedido",
+          expectedIntent: "guide",
+          expectedCategory: "Guia",
+          expectedTitleIncludes: "Como gerar um pedido",
+          expectedLocationIncludes: "como-fazer/fazer-pedido-venda",
+          expectedCatalogPath: "como-fazer/fazer-pedido-venda"
+        },
+        {
+          id: "Q10",
+          question: "como consultar estoque",
+          expectedIntent: "guide",
+          expectedCategory: "Guia",
+          expectedTitleIncludes: "Como consultar estoque",
+          expectedLocationIncludes: "como-fazer/consultar-estoque"
+        },
+        {
+          id: "Q11",
+          question: "como verificar usuários logados",
+          expectedIntent: "guide",
+          expectedCategory: "Guia",
+          expectedTitleIncludes: "Como verificar usuários logados",
+          expectedLocationIncludes: "como-fazer/verificar-usuarios-log"
+        },
+        {
+          id: "Q12",
+          question: "como ver uma regra",
+          expectedIntent: "guide",
+          expectedCategory: "Guia",
+          expectedTitleIncludes: "Como verificar regra fiscal",
+          expectedLocationIncludes: "como-fazer/verificar-regra-fiscal"
+        },
+        {
+          id: "Q13",
+          question: "onde vejo regra fiscal",
+          expectedIntent: "manual",
+          expectedCategory: "Guia",
+          expectedTitleIncludes: "Como verificar regra fiscal",
+          expectedLocationIncludes: "como-fazer/verificar-regra-fiscal"
+        },
+        {
+          id: "Q14",
+          question: "como funciona nota fiscal",
+          expectedIntent: "manual",
+          expectedCategory: "Manual",
+          expectedTitleIncludes: "Nota Fiscal",
+          expectedLocationIncludes: "faturamento/faturamento-nf"
+        },
+        {
+          id: "G01",
+          question: "como cadastrar cliente",
+          expectedIntent: "guide",
+          expectedCategory: "Guia",
+          expectedTitleIncludes: "Como cadastrar um cliente",
+          expectedLocationIncludes: "como-fazer/cadastrar-cliente"
+        },
+        {
+          id: "G02",
+          question: "onde cadastro cliente",
+          expectedIntent: "manual",
+          expectedCategory: "Manual",
+          expectedTitleIncludes: "Clientes",
+          expectedLocationIncludes: "comercial/comercial-clientes"
+        },
+        {
+          id: "G03",
+          question: "preciso cadastrar um cliente",
+          expectedIntent: "guide",
+          expectedCategory: "Guia",
+          expectedTitleIncludes: "Como cadastrar um cliente",
+          expectedLocationIncludes: "como-fazer/cadastrar-cliente"
+        },
+        {
+          id: "G04",
+          question: "cad cliente",
+          expectedIntent: "general",
+          expectedCategory: "Guia",
+          expectedTitleIncludes: "Como cadastrar um cliente",
+          expectedLocationIncludes: "como-fazer/cadastrar-cliente"
+        },
+        {
+          id: "G05",
+          question: "como faz cliente",
+          expectedIntent: "guide",
+          expectedCategory: "Guia",
+          expectedTitleIncludes: "Como cadastrar um cliente",
+          expectedLocationIncludes: "como-fazer/cadastrar-cliente"
+        },
+        {
+          id: "G06",
+          question: "como cadastrar fornecedor",
+          expectedIntent: "guide",
+          expectedNoInvalidGuide: true,
+          forbiddenLocationIncludes: "como-fazer/cadastrar-fornecedor"
+        },
+        {
+          id: "G07",
+          question: "cadastrar material",
+          expectedIntent: "guide",
+          expectedNoInvalidGuide: true,
+          forbiddenLocationIncludes: "como-fazer/cadastrar-material"
+        },
+        {
+          id: "G08",
+          question: "preciso gerar boleto",
+          expectedIntent: "guide",
+          expectedNoInvalidGuide: true,
+          forbiddenLocationIncludes: "como-fazer/gerar-boleto"
+        },
+        {
+          id: "G09",
+          question: "como baixar titulo",
+          expectedIntent: "guide",
+          expectedNoInvalidGuide: true,
+          forbiddenLocationIncludes: "como-fazer/baixar-titulo"
+        },
+        {
+          id: "G10",
+          question: "como lançar nota entrada",
+          expectedIntent: "guide",
+          expectedNoInvalidGuide: true,
+          forbiddenLocationIncludes: "como-fazer/lancar-nota-entrada"
+        },
+        {
+          id: "M01",
+          question: "onde fica contas a pagar",
+          expectedIntent: "manual",
+          expectedCategory: "Manual",
+          expectedTitleIncludes: "Contas a Pagar",
+          expectedLocationIncludes: "financeiro/contas-a-pagar"
+        },
+        {
+          id: "M02",
+          question: "tela de nota fiscal",
+          expectedIntent: "manual",
+          expectedCategory: "Manual",
+          expectedTitleIncludes: "Nota Fiscal",
+          expectedLocationIncludes: "faturamento/faturamento-nf"
+        },
+        {
+          id: "M03",
+          question: "qual campo de natureza operação",
+          expectedIntent: "manual",
+          expectedCategory: "Manual",
+          expectedTitleIncludes: "Natureza de Operação",
+          expectedLocationIncludes: "administracao/natureza-op"
+        },
+        {
+          id: "M04",
+          question: "manual pedido venda",
+          expectedIntent: "manual",
+          expectedCategory: "Manual",
+          expectedTitleIncludes: "Pedido",
+          expectedLocationIncludes: "comercial/pedidos"
+        },
+        {
+          id: "M05",
+          question: "ordem de producao material",
+          expectedIntent: "general",
+          expectedCategory: "Manual",
+          expectedTitleIncludes: "Ordem de Produção",
+          expectedLocationIncludes: "producao/ordem-producao"
+        },
+        {
+          id: "E01",
+          question: "rejeição 930",
+          expectedIntent: "error",
+          expectedCategory: "Rejeição",
+          expectedTitleIncludes: "CST com benefício fiscal",
+          expectedLocationIncludes: "erros-solucoes/rejeicoes-fiscais/rejeicao-930-cst-beneficio-fiscal-sem-codigo"
+        },
+        {
+          id: "E02",
+          question: "erro 225 schema",
+          expectedIntent: "error",
+          expectedCategory: "Rejeição",
+          expectedTitleIncludes: "Falha no Schema XML",
+          expectedLocationIncludes: "erros-solucoes/rejeicoes-fiscais/rejeicao-225-falha-schema-xml"
+        },
+        {
+          id: "E03",
+          question: "falha de schema xml",
+          expectedIntent: "error",
+          expectedCategory: "Rejeição",
+          expectedTitleIncludes: "Falha no Schema XML",
+          expectedLocationIncludes: "erros-solucoes/rejeicoes-fiscais/rejeicao-225-falha-schema-xml"
+        },
+        {
+          id: "E04",
+          question: "referencia objeto nao definida",
+          expectedIntent: "general",
+          expectedCategory: "Erro",
+          expectedTitleIncludes: "Referência do objeto não definida",
+          expectedLocationIncludes: "erros-solucoes/problemas-tecnicos/referencia-objeto"
+        },
+        {
+          id: "F01",
+          question: "cancelar nfe depois de 30 dias",
+          expectedIntent: "guide",
+          expectedCategory: "FAQ",
+          expectedTitleIncludes: "Tem como cancelar NF-e depois de 30 dias",
+          expectedLocationIncludes: "referencia/faq/cancelar-nfe-apos-prazo"
+        },
+        {
+          id: "F02",
+          question: "consigo bloquear venda cliente atraso",
+          expectedIntent: "guide",
+          expectedCategory: "FAQ",
+          expectedTitleIncludes: "Consigo bloquear a venda",
+          expectedLocationIncludes: "referencia/faq/bloquear-venda-cliente-inadimplente"
+        },
+        {
+          id: "F03",
+          question: "alterar ncm produto",
+          expectedIntent: "general",
+          expectedCategory: "FAQ",
+          expectedTitleIncludes: "Como altero o NCM",
+          expectedLocationIncludes: "referencia/faq/alterar-ncm-produto"
+        },
+        {
+          id: "T01",
+          question: "indicador de relatorio",
+          expectedIntent: "tool",
+          expectedCategory: "Ferramenta",
+          expectedTitleIncludes: "Indicador de Relatório",
+          expectedLocationIncludes: "ferramentas/indicador-relatorio"
+        },
+        {
+          id: "T02",
+          question: "validador xml",
+          expectedIntent: "tool",
+          expectedCategory: "Ferramenta",
+          expectedTitleIncludes: "Validador de XML",
+          expectedLocationIncludes: "ferramentas/validador-xml"
+        },
+        {
+          id: "R01",
+          question: "onde vejo cliente",
+          expectedIntent: "manual",
+          expectedCategory: "Manual",
+          expectedTitleIncludes: "Clientes",
+          expectedLocationIncludes: "comercial/comercial-clientes"
+        },
+        {
+          id: "R02",
+          question: "como faço uma nota",
+          expectedIntent: "guide",
+          expectedNoInvalidGuide: true,
+          forbiddenLocationIncludes: "como-fazer/faturar-nota"
+        },
+        {
+          id: "R03",
+          question: "erro na nota 930",
+          expectedIntent: "error",
+          expectedCategory: "Rejeição",
+          expectedTitleIncludes: "CST com benefício fiscal",
+          expectedLocationIncludes: "erros-solucoes/rejeicoes-fiscais/rejeicao-930-cst-beneficio-fiscal-sem-codigo"
+        },
+        {
+          id: "R04",
+          question: "me ajuda com rejeicao 225",
+          expectedIntent: "error",
+          expectedCategory: "Rejeição",
+          expectedTitleIncludes: "Falha no Schema XML",
+          expectedLocationIncludes: "erros-solucoes/rejeicoes-fiscais/rejeicao-225-falha-schema-xml"
+        },
+        {
+          id: "R05",
+          question: "onde fica pedido",
+          expectedIntent: "manual",
+          expectedCategory: "Manual",
+          expectedTitleIncludes: "Pedido",
+          expectedLocationIncludes: "comercial/pedidos"
+        },
+        {
+          id: "R06",
+          question: "preciso alterar ncm",
+          expectedIntent: "guide",
+          expectedCategory: "Guia",
+          expectedTitleIncludes: "Como alterar o NCM de um material",
+          expectedLocationIncludes: "como-fazer/alterar-ncm-material"
+        },
+        {
+          id: "R07",
+          question: "qual relatorio eu uso",
+          expectedIntent: "tool",
+          expectedCategory: "Ferramenta",
+          expectedTitleIncludes: "Indicador de Relatório",
+          expectedLocationIncludes: "ferramentas/indicador-relatorio"
+        },
+        {
+          id: "R08",
+          question: "abrir indicador de relatorios",
+          expectedIntent: "tool",
+          expectedCategory: "Ferramenta",
+          expectedTitleIncludes: "Indicador de Relatório",
+          expectedLocationIncludes: "ferramentas/indicador-relatorio"
+        },
+        {
+          id: "R09",
+          question: "validar xml",
+          expectedIntent: "tool",
+          expectedCategory: "Ferramenta",
+          expectedTitleIncludes: "Validador de XML",
+          expectedLocationIncludes: "ferramentas/validador-xml"
+        },
+        {
+          id: "R10",
+          question: "xml ta errado",
+          expectedIntent: "tool",
+          expectedCategory: "Ferramenta",
+          expectedTitleIncludes: "Validador de XML",
+          expectedLocationIncludes: "ferramentas/validador-xml"
+        },
+        {
+          id: "R11",
+          question: "tem como cancelar nota depois do prazo",
+          expectedIntent: "guide",
+          expectedCategory: "FAQ",
+          expectedTitleIncludes: "Tem como cancelar NF-e depois de 30 dias",
+          expectedLocationIncludes: "referencia/faq/cancelar-nfe-apos-prazo"
+        },
+        {
+          id: "A01",
+          question: "nota",
+          expectedIntent: "ambiguous",
+          expectedNoInvalidGuide: true,
+          forbiddenLocationIncludes: "como-fazer/faturar-nota"
+        },
+        {
+          id: "A02",
+          question: "pedido",
+          expectedIntent: "ambiguous",
+          expectedCategory: "Manual",
+          expectedTitleIncludes: "Pedido",
+          expectedLocationIncludes: "comercial/pedidos"
+        },
+        {
+          id: "N01",
+          question: "como alimentar dinossauro no wcorp",
+          expectedNoResult: true
+        },
+        {
+          id: "N02",
+          question: "qwerty zzz sem sentido",
+          expectedNoResult: true
+        },
+        {
+          id: "N03",
+          question: "rejeição 1026",
+          expectedNoResult: true
+        },
+        {
+          id: "N04",
+          question: "preciso cadastrar planeta no wcorp",
+          expectedNoResult: true
+        },
+        {
+          id: "N05",
+          question: "relatorio de cafe da manha",
+          expectedNoResult: true
+        },
+        {
+          id: "N06",
+          question: "erro 9999 inexistente",
+          expectedNoResult: true
+        },
+        {
+          id: "N07",
+          question: "onde configuro teletransporte",
+          expectedNoResult: true
+        },
+        {
+          id: "N08",
+          question: "pedido de pizza no wcorp",
+          expectedNoResult: true
+        }
+      ];
+
+      function normalize(value) {
+        return String(value || "")
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "")
+          .toLowerCase();
+      }
+
+      function checkIncludes(source, expected) {
+        return !expected || normalize(source).includes(normalize(expected));
+      }
+
+      function normalizePath(value) {
+        return String(value || "")
+          .split("#")[0]
+          .replace(/\.md$/, "")
+          .replace(/^\/+/, "")
+          .replace(/\/index\.html$/, "")
+          .replace(/\/+$/, "");
+      }
+
+      function stripHtml(value) {
+        const element = document.createElement("div");
+        element.innerHTML = String(value || "");
+        return element.textContent.trim().replace(/\s+/g, " ");
+      }
+
+      async function loadCatalogIntegrityErrors() {
+        const [mkdocsText, catalog] = await Promise.all([
+          fetch("../../mkdocs.yml").then((response) => response.ok ? response.text() : ""),
+          fetch("../../docs/assets/data/content-catalog.json")
+            .then((response) => response.ok ? response.json() : { items: [] })
+            .catch(() => ({ items: [] }))
+        ]);
+        const publishedGuides = new Set();
+        const catalogGuides = new Set();
+        const guidePattern = /como-fazer\/([^\s"')]+)\.md/g;
+        let match = guidePattern.exec(mkdocsText);
+
+        while (match) {
+          const path = normalizePath(`como-fazer/${match[1]}`);
+
+          if (path !== "como-fazer/index") {
+            publishedGuides.add(path);
+          }
+
+          match = guidePattern.exec(mkdocsText);
+        }
+
+        (catalog.items || []).forEach((item) => {
+          if (item.type === "guia" && item.status === "published" && item.url) {
+            catalogGuides.add(normalizePath(item.url));
+          }
+        });
+
+        return Array.from(publishedGuides)
+          .filter((path) => !catalogGuides.has(path))
+          .sort()
+          .map((path) => ({
+            code: "CATALOG_INTEGRITY_ERROR",
+            content: path,
+            reason: "Guia publicado no mkdocs.yml, mas ausente do catálogo usado pelo Assistente"
+          }));
+      }
+
+      function exposeAssistantInternals(source) {
+        return source.replace(
+          /\}\)\(\);\s*$/,
+          [
+            "window.__wcorpAssistantAuditInternals = {",
+            "normalizeAssistantSearch,",
+            "analyzeAssistantQuery,",
+            "assistantIntent,",
+            "assistantSemanticAnalysis,",
+            "assistantSemanticScore,",
+            "getAssistantCategory,",
+            "scoreAssistantResult,",
+            "getAssistantResults,",
+            "createAssistantAnswer,",
+            "getSearchIndexUrl,",
+            "loadSearchIndex,",
+            "loadAssistantPublishedGuidePaths,",
+            "isAssistantIndexDoc,",
+            "assistantPageProfile,",
+            "assistantPageLocation,",
+            "assistantPageKey,",
+            "assistantSubject,",
+            "initializeAssistant",
+            "};",
+            "initializeAssistant();",
+            "})();"
+          ].join("")
+        );
+      }
+
+      function rankTop(internals, docs, question, intent) {
+        const byPage = new Map();
+        const querySemantic = internals.analyzeAssistantQuery(question).semantic;
+
+        docs.forEach((doc) => {
+          const score = internals.scoreAssistantResult(doc, question, intent);
+          const semantic = internals.assistantSemanticScore(doc, querySemantic, intent);
+
+          if (score <= 0) return;
+
+          const pageKey = internals.assistantPageKey(doc.location);
+          const current = byPage.get(pageKey);
+
+          if (!current || score > current.score) {
+            byPage.set(pageKey, { doc, score, semantic });
+          }
+        });
+
+        return Array.from(byPage.values())
+          .sort((left, right) => right.score - left.score)
+          .slice(0, 3)
+          .map((item) => ({
+            title: item.doc.title,
+            location: item.doc.location,
+            category: internals.getAssistantCategory(item.doc),
+            score: item.score,
+            semantic: {
+              action: item.semantic.action,
+              object: item.semantic.object,
+              score: item.semantic.score,
+              bonuses: item.semantic.bonuses,
+              penalties: item.semantic.penalties
+            }
+          }));
+      }
+
+      async function askThroughChat(question) {
+        const bubble = document.querySelector(".wc-assistant__button");
+        const input = document.querySelector(".wc-assistant__input");
+        const form = document.querySelector(".wc-assistant__form");
+
+        if (!document.querySelector(".wc-assistant").classList.contains("wc-assistant--open")) {
+          bubble.click();
+          await new Promise((resolve) => setTimeout(resolve, 120));
+        }
+
+        input.value = question;
+        input.dispatchEvent(new Event("input", { bubbles: true }));
+        form.dispatchEvent(new Event("submit", { bubbles: true, cancelable: true }));
+
+        await new Promise((resolve) => setTimeout(resolve, 1500));
+
+        return Array.from(document.querySelectorAll(".wc-assistant__result")).map((card) => ({
+          type: card.querySelector(".wc-assistant__result-type")?.textContent.trim() || "",
+          title: card.querySelector(".wc-assistant__result-title")?.textContent.trim() || "",
+          href: card.querySelector(".wc-assistant__result-link")?.href || ""
+        }));
+      }
+
+      function fillAssistantVisualMessages(withHistory) {
+        const messages = document.querySelector(".wc-assistant__messages");
+
+        if (!messages) {
+          return;
+        }
+
+        messages.innerHTML = "";
+
+        const addMessage = (html, user = false) => {
+          const message = document.createElement("div");
+          message.className = `wc-assistant__message${user ? " wc-assistant__message--user" : ""}`;
+          message.innerHTML = html;
+          messages.appendChild(message);
+        };
+
+        addMessage("<strong>Olá! Sou o Assistente WCorp.</strong><br><strong>Qual é a sua dúvida hoje?</strong>");
+
+        if (!withHistory) {
+          messages.scrollTop = 0;
+          return;
+        }
+
+        const resultCards = `
+          <div class="wc-assistant__answer">
+            <div class="wc-assistant__answer-cards">
+              <div class="wc-assistant__result">
+                <span class="wc-assistant__result-type">GUIA</span>
+                <strong class="wc-assistant__result-title">Como emitir uma carta de correção</strong>
+                <a class="wc-assistant__result-link" href="#">Abrir guia →</a>
+              </div>
+              <div class="wc-assistant__result">
+                <span class="wc-assistant__result-type">MANUAL</span>
+                <strong class="wc-assistant__result-title">Carta de Correção</strong>
+                <a class="wc-assistant__result-link" href="#">Ver manual →</a>
+              </div>
+            </div>
+          </div>
+        `;
+
+        [
+          ["carta de correção", true],
+          [`<strong>Achei um caminho útil.</strong>${resultCards}`, false],
+          ["rejeição 930", true],
+          [`<strong>Encontrei a orientação específica para essa rejeição.</strong>${resultCards}`, false],
+          ["como cadastrar cliente", true],
+          [`<strong>Também encontrei este guia.</strong>${resultCards}`, false]
+        ].forEach(([html, user]) => addMessage(html, user));
+
+        messages.scrollTop = messages.scrollHeight;
+      }
+
+      async function prepareAssistantAnchorScenario(options) {
+        const assistant = document.querySelector(".wc-assistant");
+        const close = document.querySelector(".wc-assistant__close");
+
+        if (assistant?.classList.contains("wc-assistant--open")) {
+          close?.click();
+          await new Promise((resolve) => setTimeout(resolve, 220));
+        }
+
+        document.body.style.minHeight = "1800px";
+        fillAssistantVisualMessages(Boolean(options.history));
+
+        const maxScroll = Math.max(
+          0,
+          document.documentElement.scrollHeight - window.innerHeight
+        );
+
+        if (options.scrollMode === "top") {
+          window.scrollTo(0, 0);
+        } else if (options.scrollMode === "middle") {
+          window.scrollTo(0, Math.round(maxScroll / 2));
+        } else if (options.scrollMode === "bottom") {
+          window.scrollTo(0, maxScroll);
+        }
+
+        await new Promise((resolve) => setTimeout(resolve, 80));
+      }
+
+      async function collectAssistantAnchorMetric(options = {}) {
+        const name = options.name || "current";
+        const assistant = document.querySelector(".wc-assistant");
+        const launcher = document.querySelector(".wc-assistant__launcher");
+        const button = document.querySelector(".wc-assistant__button");
+        const panel = document.querySelector(".wc-assistant__panel");
+
+        if (!assistant || !launcher || !button || !panel) {
+          return {
+            viewport: {
+              name,
+              width: window.innerWidth,
+              height: window.innerHeight
+            },
+            status: "FAIL",
+            error: "Assistente, painel, launcher ou avatar não encontrados."
+          };
+        }
+
+        await prepareAssistantAnchorScenario(options);
+
+        const launcherRectBefore = launcher.getBoundingClientRect();
+        const buttonRectBefore = button.getBoundingClientRect();
+        const launcherStyleBefore = getComputedStyle(launcher);
+        const buttonStyleBefore = getComputedStyle(button);
+        const panelStyleBefore = getComputedStyle(panel);
+        const launcherVisibleBefore =
+          launcherRectBefore.width > 0 &&
+          launcherRectBefore.height > 0 &&
+          launcherStyleBefore.visibility !== "hidden" &&
+          launcherStyleBefore.display !== "none" &&
+          Number(launcherStyleBefore.opacity || 1) > 0.95;
+        const avatarVisibleBefore =
+          buttonRectBefore.width > 0 &&
+          buttonRectBefore.height > 0 &&
+          buttonStyleBefore.visibility !== "hidden" &&
+          buttonStyleBefore.display !== "none" &&
+          Number(buttonStyleBefore.opacity || 1) > 0.95;
+        const panelHiddenBefore =
+          panel.hidden ||
+          panelStyleBefore.display === "none";
+
+        button.click();
+
+        await new Promise((resolve) => setTimeout(resolve, 300));
+
+        const panelRect = panel.getBoundingClientRect();
+        const launcherRectAfter = launcher.getBoundingClientRect();
+        const buttonRectAfter = button.getBoundingClientRect();
+        const launcherStyleAfter = getComputedStyle(launcher);
+        const buttonStyleAfter = getComputedStyle(button);
+        const panelStyle = getComputedStyle(panel);
+        const deltaRight = Number((panelRect.right - launcherRectBefore.right).toFixed(2));
+        const deltaBottom = Number((panelRect.bottom - launcherRectBefore.bottom).toFixed(2));
+        const panelWithinViewport =
+          panelRect.left >= 0 &&
+          panelRect.top >= 0 &&
+          panelRect.right <= window.innerWidth &&
+          panelRect.bottom <= window.innerHeight;
+        const launcherWithinViewport =
+          launcherRectBefore.left >= 0 &&
+          launcherRectBefore.top >= 0 &&
+          launcherRectBefore.right <= window.innerWidth &&
+          launcherRectBefore.bottom <= window.innerHeight;
+        const launcherHiddenAfter =
+          launcherStyleAfter.visibility === "hidden" ||
+          Number(launcherStyleAfter.opacity || 1) <= 0.05 ||
+          launcherStyleAfter.pointerEvents === "none";
+        const avatarHiddenAfter =
+          buttonStyleAfter.visibility === "hidden" ||
+          Number(buttonStyleAfter.opacity || 1) <= 0.05 ||
+          launcherHiddenAfter;
+        const panelVisibleAfter =
+          !panel.hidden &&
+          panelStyle.display !== "none" &&
+          panelRect.width > 0 &&
+          panelRect.height > 0;
+        const rightAligned = Math.abs(deltaRight) <= 2;
+        const bottomAligned = Math.abs(deltaBottom) <= 6;
+
+        return {
+          viewport: {
+            name,
+            width: window.innerWidth,
+            height: window.innerHeight
+          },
+          launcherBefore: {
+            left: Number(launcherRectBefore.left.toFixed(2)),
+            top: Number(launcherRectBefore.top.toFixed(2)),
+            right: Number(launcherRectBefore.right.toFixed(2)),
+            bottom: Number(launcherRectBefore.bottom.toFixed(2)),
+            width: Number(launcherRectBefore.width.toFixed(2)),
+            height: Number(launcherRectBefore.height.toFixed(2))
+          },
+          buttonBefore: {
+            left: Number(buttonRectBefore.left.toFixed(2)),
+            top: Number(buttonRectBefore.top.toFixed(2)),
+            right: Number(buttonRectBefore.right.toFixed(2)),
+            bottom: Number(buttonRectBefore.bottom.toFixed(2)),
+            width: Number(buttonRectBefore.width.toFixed(2)),
+            height: Number(buttonRectBefore.height.toFixed(2))
+          },
+          panel: {
+            left: Number(panelRect.left.toFixed(2)),
+            top: Number(panelRect.top.toFixed(2)),
+            right: Number(panelRect.right.toFixed(2)),
+            bottom: Number(panelRect.bottom.toFixed(2)),
+            width: Number(panelRect.width.toFixed(2)),
+            height: Number(panelRect.height.toFixed(2))
+          },
+          launcherAfter: {
+            left: Number(launcherRectAfter.left.toFixed(2)),
+            top: Number(launcherRectAfter.top.toFixed(2)),
+            right: Number(launcherRectAfter.right.toFixed(2)),
+            bottom: Number(launcherRectAfter.bottom.toFixed(2)),
+            width: Number(launcherRectAfter.width.toFixed(2)),
+            height: Number(launcherRectAfter.height.toFixed(2))
+          },
+          buttonAfter: {
+            left: Number(buttonRectAfter.left.toFixed(2)),
+            top: Number(buttonRectAfter.top.toFixed(2)),
+            right: Number(buttonRectAfter.right.toFixed(2)),
+            bottom: Number(buttonRectAfter.bottom.toFixed(2)),
+            width: Number(buttonRectAfter.width.toFixed(2)),
+            height: Number(buttonRectAfter.height.toFixed(2))
+          },
+          scrollY: Math.round(window.scrollY),
+          history: Boolean(options.history),
+          scrollMode: options.scrollMode || "current",
+          panelOffsetHeight: panel.offsetHeight,
+          panelStyleHeight: panelStyle.height,
+          panelStyleMaxHeight: panelStyle.maxHeight,
+          panelStyleTop: panelStyle.top,
+          panelStyleBottom: panelStyle.bottom,
+          panelTransform: panelStyle.transform,
+          panelHidden: panel.hidden,
+          launcherRightBefore: Number(launcherRectBefore.right.toFixed(2)),
+          launcherBottomBefore: Number(launcherRectBefore.bottom.toFixed(2)),
+          panelRight: Number(panelRect.right.toFixed(2)),
+          panelBottom: Number(panelRect.bottom.toFixed(2)),
+          deltaRight,
+          deltaBottom,
+          panelWithinViewport,
+          launcherWithinViewport,
+          launcherVisibleBefore,
+          avatarVisibleBefore,
+          panelHiddenBefore,
+          launcherHiddenAfter,
+          avatarHiddenAfter,
+          panelVisibleAfter,
+          rightAligned,
+          bottomAligned,
+          status: panelWithinViewport &&
+            launcherWithinViewport &&
+            launcherVisibleBefore &&
+            avatarVisibleBefore &&
+            panelHiddenBefore &&
+            launcherHiddenAfter &&
+            avatarHiddenAfter &&
+            panelVisibleAfter &&
+            rightAligned &&
+            bottomAligned
+              ? "PASS"
+              : "FAIL"
+        };
+      }
+
+      try {
+        const source = await fetch(sourcePath).then((response) => response.text());
+        const script = document.createElement("script");
+        script.textContent = exposeAssistantInternals(source);
+        document.body.appendChild(script);
+
+        const internals = window.__wcorpAssistantAuditInternals;
+        const [docs] = await Promise.all([
+          internals.loadSearchIndex(),
+          internals.loadAssistantPublishedGuidePaths()
+        ]);
+        const guideEligibility = await fetch("../content-convention/latest-guide-publication-v1.json")
+          .then((response) => response.ok ? response.json() : { guides: [] })
+          .catch(() => ({ guides: [] }));
+        const invalidGuidePaths = (guideEligibility.guides || [])
+          .filter((guide) => !guide.publishedV1)
+          .map((guide) => normalizePath(guide.path));
+        const catalogIntegrityErrors = await loadCatalogIntegrityErrors();
+        const catalogMissingPaths = new Set(
+          catalogIntegrityErrors.map((error) => normalizePath(error.content))
+        );
+
+        const results = tests.map((test) => {
+          const intent = internals.assistantIntent(test.question);
+          const analysis = internals.analyzeAssistantQuery(test.question);
+          const assistantResults = internals.getAssistantResults(docs, test.question);
+          const primary = assistantResults.primary?.doc || null;
+          const primaryCategory = primary ? internals.getAssistantCategory(primary) : null;
+          const topRanked = rankTop(internals, docs, test.question, intent);
+          const answer = internals.createAssistantAnswer(test.question, assistantResults);
+          const phraseChosen = stripHtml(answer.textHtml).split(/\s{2,}/)[0] || stripHtml(answer.textHtml);
+          const obtained = primary
+            ? {
+              title: primary.title,
+              location: internals.assistantPageLocation(primary.location),
+              category: primaryCategory,
+              score: assistantResults.primary.score,
+              related: assistantResults.related.map((item) => ({
+                title: item.doc.title,
+                location: internals.assistantPageLocation(item.doc.location),
+                category: internals.getAssistantCategory(item.doc),
+                score: item.score,
+                relatedScore: item.relatedScore
+              }))
+            }
+            : null;
+
+          const forbiddenLocations = Array.isArray(test.forbiddenLocationIncludes)
+            ? test.forbiddenLocationIncludes
+            : test.forbiddenLocationIncludes
+              ? [test.forbiddenLocationIncludes]
+              : [];
+          const resultLocations = [
+            primary?.location || "",
+            ...(obtained?.related || []).map((item) => item.location),
+            ...topRanked.map((item) => item.location)
+          ].map(normalizePath);
+          const hasForbiddenGuide = forbiddenLocations.some((forbidden) =>
+            resultLocations.some((location) => checkIncludes(location, forbidden))
+          );
+          const relatedCount = obtained?.related?.length || 0;
+          const invalidGuideMatches = resultLocations.filter((location) =>
+            invalidGuidePaths.some((invalidPath) => location === invalidPath || location.startsWith(`${invalidPath}/`))
+          );
+          const catalogIntegrityError = test.expectedCatalogPath &&
+            catalogMissingPaths.has(normalizePath(test.expectedCatalogPath))
+              ? {
+                code: "CATALOG_INTEGRITY_ERROR",
+                content: normalizePath(test.expectedCatalogPath),
+                reason: "Guia publicado, mas ausente do catálogo usado pelo Assistente"
+              }
+              : null;
+
+          const checks = test.expectedNoResult
+            ? [!primary, !invalidGuideMatches.length]
+            : test.expectedNoInvalidGuide
+              ? [!hasForbiddenGuide, !invalidGuideMatches.length]
+              : [
+                primaryCategory === test.expectedCategory,
+                checkIncludes(primary?.title, test.expectedTitleIncludes),
+                checkIncludes(primary?.location, test.expectedLocationIncludes),
+                !invalidGuideMatches.length,
+                !hasForbiddenGuide,
+                typeof test.expectedRelatedMax === "number"
+                  ? relatedCount <= test.expectedRelatedMax
+                  : true
+              ];
+          const status = checks.every(Boolean)
+            ? "PASS"
+            : catalogIntegrityError && !hasForbiddenGuide
+              ? "CATALOG_INTEGRITY_ERROR"
+              : "FAIL";
+
+          return {
+            id: test.id,
+            question: test.question,
+            expectedIntent: test.expectedIntent || null,
+            identifiedIntent: intent,
+            detectedAction: analysis.semantic.action,
+            detectedObject: analysis.semantic.object,
+            intentMatchesExpectation: test.expectedIntent
+              ? intent === test.expectedIntent
+              : null,
+            expectedResult: test.expectedNoResult
+              ? "Sem resultado"
+              : test.expectedNoInvalidGuide
+                ? `Não retornar Guia inválido: ${forbiddenLocations.join(", ")}`
+                : `${test.expectedCategory}: ${test.expectedTitleIncludes} (${test.expectedLocationIncludes})`,
+            obtained,
+            topRanked,
+            diagnostics: topRanked.map((item, index) => ({
+              candidate: item.title,
+              score: item.score,
+              bonuses: item.semantic.bonuses,
+              penalties: item.semantic.penalties,
+              discardReason: index === 0
+                ? "resultado_final"
+                : item.semantic.penalties.includes("conflito_acao")
+                  ? "conflito_semantico"
+                  : "score_menor"
+            })),
+            relatedChosen: obtained?.related || [],
+            phraseChosen,
+            invalidGuideMatches,
+            catalogIntegrityError,
+            status
+          };
+        });
+
+        const chatProbe = await askThroughChat("como cadastrar cliente");
+        const visualMetrics = [];
+
+        const audit = {
+          generatedAt: new Date().toISOString(),
+          source: "docs/assets/javascripts/wcorp-assistant.js",
+          searchIndexUrl: internals.getSearchIndexUrl(),
+          docsInSearchIndex: docs.length,
+          catalogIntegrityErrors,
+          tests: results,
+          chatProbe,
+          visualMetrics,
+          anchorSummary: {
+            total: visualMetrics.length,
+            pass: visualMetrics.filter((metric) => metric.status === "PASS").length,
+            fail: visualMetrics.filter((metric) => metric.status === "FAIL").length
+          },
+          summary: {
+            total: results.length,
+            pass: results.filter((test) => test.status === "PASS").length,
+            fail: results.filter((test) => test.status === "FAIL").length,
+            catalogIntegrityError: results.filter((test) => test.status === "CATALOG_INTEGRITY_ERROR").length
+          }
+        };
+
+        output.dataset.status =
+          audit.summary.fail
+            ? "fail"
+            : "pass";
+        output.textContent = JSON.stringify(audit, null, 2);
+        window.__assistantAudit = audit;
+
+        if (new URLSearchParams(window.location.search).has("dump")) {
+          const params = new URLSearchParams(window.location.search);
+          const payload = params.has("summary")
+            ? {
+              summary: audit.summary,
+              catalogIntegrityErrors: audit.catalogIntegrityErrors,
+              failingTests: audit.tests.filter((test) => test.status === "FAIL"),
+              catalogTests: audit.tests.filter((test) => test.status === "CATALOG_INTEGRITY_ERROR")
+            }
+            : audit;
+          const compactOutput = document.createElement("pre");
+          compactOutput.id = "assistant-audit-results";
+          compactOutput.dataset.status = output.dataset.status;
+          compactOutput.textContent = JSON.stringify(payload, null, 2);
+          document.body.innerHTML = "";
+          document.body.appendChild(compactOutput);
+        }
+      } catch (error) {
+        output.dataset.status = "error";
+        output.textContent = JSON.stringify({ error: error.message, stack: error.stack }, null, 2);
+        window.__assistantAudit = { error: error.message };
+      }
+    })();
+  </script>
+</body>
+</html>

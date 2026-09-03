@@ -1,24 +1,23 @@
 ---
-error_area: "Estoque"
-error_category: "Consulta de estoque"
-error_tags:
-  - "estoque"
-  - "consulta"
-  - "saldo"
-  - "material"
+id: consultar-estoque
+title: Como consultar estoque
+type: guia
+category: Estoque
+description: Aprenda como consultar saldo, local e lote de materiais no WCorp.
+status: published
+tags:
+  - estoque
+  - saldo
+  - lote
+  - material
 ---
 
 # Como consultar estoque
 
 ## Pré-requisitos
 
-<div class="wc-prereq-list" markdown>
-
-- Material cadastrado<br>
-  [Como cadastrar um material.](cadastrar-material.md){: target="_blank" rel="noopener" }
+- Material cadastrado
 - Critério de busca definido
-
-</div>
 
 ## Permissões
 
@@ -26,7 +25,13 @@ error_tags:
 
 ## Caminho
 
-`Materiais > Lote/Estoque`.
+`Materiais > Materiais`.
+
+![Onde encontrar](../assets/images/guias/materiais_materiais.png)
+
+## Demonstração em vídeo
+
+[Demonstração da consulta de estoque](../assets/videos/guias/consultar-estoque/ver-estoque.mp4){ .wc-video-link }
 
 ## Como fazer
 
@@ -36,8 +41,6 @@ error_tags:
 4. Ajuste filtros se necessário.
 5. Abra o registro para detalhes, quando aplicável.
 
-## Veja também
+**Resultado esperado**
 
-- [Como ajustar estoque](ajustar-estoque.md){: target="_blank" rel="noopener" }
-- [Como transferir estoque](transferir-estoque.md){: target="_blank" rel="noopener" }
-- [Consultar manual de lote/estoque](../materiais/lote-estoque.md){: target="_blank" rel="noopener" }
+As informações de estoque ficam disponíveis para conferência antes de movimentações ou ajustes.

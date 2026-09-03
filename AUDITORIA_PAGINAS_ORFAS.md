@@ -10,20 +10,7 @@ Data: 2026-08-21
 - Páginas órfãs restantes: 103
 - Links internos quebrados em páginas finais: 0
 - Links quebrados restantes em snippets/modelos internos: 8
-- Conteúdo excluído nesta correção: nenhum
-
-## Causa do resultado indevido
-
-`suporte/coleta-de-evidencias.md` aparecia para consultas como "faturar nota" porque o Assistente usa o `search_index.json` completo do MkDocs. A página de coleta contém termos incidentais como "Nota fiscal", "XML", "cliente" e "pedido", então ela recebia pontos mesmo sendo uma página de suporte.
-
-Correção aplicada: a página ganhou perfil condicional no Assistente. Ela só entra no ranking quando a consulta indicar suporte, chamado, evidência, print, anexo, arquivo ou coleta.
-
-## Página Coleta de evidências
-
-- Arquivo: `docs/suporte/coleta-de-evidencias.md`
-- Decisão: manter pública e navegável pela página de Suporte.
-- Link adicionado em: `docs/suporte/index.md`
-- Busca/Assistente: condicional, somente para intenção de suporte/evidência.
+- Conteúdo excluído nesta correção: páginas obsoletas de Suporte/Referências removidas da experiência pública.
 
 ## Páginas internas
 
@@ -50,8 +37,8 @@ Decisão: manter como conteúdo interno/snippet/modelo. O Assistente bloqueia `c
 ## Duplicadas, obsoletas ou em revisão
 
 - `referencia/erros-comuns.md`: provável página antiga/duplicada da área atual `erros-solucoes`. Bloqueada no Assistente.
-- `referencia/atualizacoes-fiscais.md`: conteúdo futuro/em revisão. Mantida fora de buscas genéricas.
-- `suporte/base-de-erros.md`: página ponte navegável a partir de Suporte, aponta para Erros e Soluções. Não é órfã.
+- `referencia/atualizacoes-fiscais.md`: removida por estar vazia/editorial e fora da navegação pública.
+- `suporte/base-de-erros.md`: removida por ter sido substituída pela área atual `erros-solucoes`.
 - `favoritos.md`: utilitária, acessada pelo recurso de Favoritos. Não foi adicionada ao menu nem removida.
 
 ## Páginas órfãs restantes
@@ -147,7 +134,6 @@ Decisão geral para os manuais abaixo: manter no repositório como conteúdo em 
 
 ### Referência
 
-- `referencia/atualizacoes-fiscais.md`
 - `referencia/erros-comuns.md`
 
 ### Relatórios
@@ -221,4 +207,3 @@ Não foram encontrados links quebrados em páginas finais de navegação públic
 - `shared/portal/mais-acessados.md` -> `como-fazer/gerar-boleto.md`
 - `shared/portal/mais-acessados.md` -> `como-fazer/ajustar-estoque.md`
 - `shared/portal/mais-acessados.md` -> `como-fazer/cancelar-nfe.md`
-

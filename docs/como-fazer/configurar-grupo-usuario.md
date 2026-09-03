@@ -1,21 +1,20 @@
 ---
-error_area: "Administração"
-error_category: "Usuários e permissões"
-error_tags:
-  - "grupo de usuario"
-  - "usuario"
-  - "permissao"
+id: configurar-grupo-usuario
+title: Como configurar um Grupo de Usuário
+type: guia
+category: Administração
+status: published
+tags:
+  - grupo de usuario
+  - usuario
+  - permissao
 ---
 
 # Como configurar um Grupo de Usuário
 
 ## Pré-requisitos
 
-<div class="wc-prereq-list" markdown>
-
 - Usuário autorizado a administrar acessos
-
-</div>
 
 ## Permissões
 
@@ -25,12 +24,11 @@ error_tags:
 
 `Administração > Grupo Usuários`.
 
+![Onde encontrar](../assets/images/guias/caminhocadastrargrupousuario.png)
+
 ## Demonstração em vídeo
 
-<video class="wc-video" controls preload="auto" playsinline>
-  <source src="../../assets/videos/adm__grupo_usuario.mp4" type="video/mp4">
-  Seu navegador não conseguiu reproduzir este vídeo.
-</video>
+[Demonstração da configuração de grupo de usuário](../assets/videos/adm__grupo_usuario.mp4){ .wc-video-link }
 
 ## Como fazer
 

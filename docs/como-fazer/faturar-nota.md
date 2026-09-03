@@ -1,18 +1,19 @@
 ---
-error_area: "Documentos Fiscais"
-error_category: "NF-e"
-error_tags:
-  - "nfe"
-  - "sefaz"
-  - "faturamento"
-  - "transmissao"
+id: faturar-nota
+title: Como emitir uma NF-e
+type: guia
+category: Faturamento
+status: published
+tags:
+  - nfe
+  - sefaz
+  - faturamento
+  - transmissao
 ---
 
 # Como emitir uma NF-e
 
 ## Pré-requisitos
-
-<div class="wc-prereq-list" markdown>
 
 - Cliente cadastrado<br>
   [Como cadastrar um cliente.](cadastrar-cliente.md){: target="_blank" rel="noopener" }
@@ -24,8 +25,6 @@ error_tags:
   [Como gerar um pedido](fazer-pedido-venda.md){: target="_blank" rel="noopener" }
 - Certificado e parâmetros fiscais configurados
 
-</div>
-
 ## Permissões
 
 --8<-- "shared/avisos/permissoes.md"
@@ -36,10 +35,7 @@ error_tags:
 
 ## Demonstração em vídeo
 
-<video class="wc-video" controls preload="auto" playsinline>
-  <source src="../../assets/videos/faturamento_nfe.mp4" type="video/mp4">
-  Seu navegador não conseguiu reproduzir este vídeo.
-</video>
+[Demonstração da emissão de NF-e](../assets/videos/faturamento_nfe.mp4){ .wc-video-link }
 
 ## Como fazer
 

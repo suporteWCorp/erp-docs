@@ -5,6 +5,8 @@ error_tags:
   - "pedido"
   - "cancelamento"
   - "venda"
+search:
+  exclude: true
 ---
 
 # Como cancelar um pedido

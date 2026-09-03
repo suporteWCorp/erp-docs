@@ -5,6 +5,8 @@ error_tags:
   - "pedido de compra"
   - "compra"
   - "fornecedor"
+search:
+  exclude: true
 ---
 
 # Como criar um pedido de compra

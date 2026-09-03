@@ -1,21 +1,20 @@
 ---
-error_area: "Administração"
-error_category: "Usuários e permissões"
-error_tags:
-  - "usuario"
-  - "cadastro"
-  - "permissao"
+id: cadastrar-usuario
+title: Como cadastrar um usuário
+type: guia
+category: Administração
+status: published
+tags:
+  - usuario
+  - cadastro
+  - permissao
 ---
 
 # Como cadastrar um usuário
 
 ## Pré-requisitos
 
-<div class="wc-prereq-list" markdown>
-
 - Usuário administrador ou autorização do responsável da empresa
-
-</div>
 
 ## Permissões
 
@@ -25,12 +24,11 @@ error_tags:
 
 `Administração > Usuários`.
 
+![Onde encontrar](../assets/images/guias/caminhocadastrousuarios.png)
+
 ## Demonstração em vídeo
 
-<video class="wc-video" controls preload="auto" playsinline>
-  <source src="../../assets/videos/adm_cadastro_usuario.mp4" type="video/mp4">
-  Seu navegador não conseguiu reproduzir este vídeo.
-</video>
+[Demonstração do cadastro de usuário](../assets/videos/adm_cadastro_usuario.mp4){ .wc-video-link }
 
 ## Como fazer
 

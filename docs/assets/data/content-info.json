@@ -1,11 +1,11 @@
 {
   "como-fazer/ajustar-estoque": {
-    "title": "Como ajustar estoque",
+    "title": "Como ajustar inventário",
     "type": "guide",
     "readingTime": null,
     "difficulty": "intermediate",
     "popular": false,
-    "videoAvailable": false,
+    "videoAvailable": true,
     "videoDuration": null
   },
   "como-fazer/baixar-titulo": {
@@ -23,7 +23,7 @@
     "readingTime": null,
     "difficulty": "basic",
     "popular": false,
-    "videoAvailable": true,
+    "videoAvailable": false,
     "videoDuration": null
   },
   "como-fazer/cadastrar-cliente": {
@@ -41,7 +41,7 @@
     "readingTime": null,
     "difficulty": "basic",
     "popular": false,
-    "videoAvailable": true,
+    "videoAvailable": false,
     "videoDuration": null
   },
   "como-fazer/cadastrar-fornecedor": {
@@ -58,8 +58,8 @@
     "type": "guide",
     "readingTime": null,
     "difficulty": "intermediate",
-    "popular": true,
-    "videoAvailable": true,
+    "popular": false,
+    "videoAvailable": false,
     "videoDuration": null
   },
   "como-fazer/cadastrar-natureza-operacao": {
@@ -67,8 +67,8 @@
     "type": "guide",
     "readingTime": null,
     "difficulty": "advanced",
-    "popular": true,
-    "videoAvailable": true,
+    "popular": false,
+    "videoAvailable": false,
     "videoDuration": null
   },
   "como-fazer/cadastrar-usuario": {
@@ -77,7 +77,7 @@
     "readingTime": null,
     "difficulty": "intermediate",
     "popular": false,
-    "videoAvailable": true,
+    "videoAvailable": false,
     "videoDuration": null
   },
   "como-fazer/cancelar-nfe": {
@@ -85,8 +85,8 @@
     "type": "guide",
     "readingTime": null,
     "difficulty": "advanced",
-    "popular": true,
-    "videoAvailable": true,
+    "popular": false,
+    "videoAvailable": false,
     "videoDuration": null
   },
   "como-fazer/cancelar-pedido": {
@@ -104,7 +104,7 @@
     "readingTime": null,
     "difficulty": "advanced",
     "popular": false,
-    "videoAvailable": true,
+    "videoAvailable": false,
     "videoDuration": null
   },
   "como-fazer/consultar-estoque": {
@@ -113,7 +113,7 @@
     "readingTime": null,
     "difficulty": "intermediate",
     "popular": false,
-    "videoAvailable": false,
+    "videoAvailable": true,
     "videoDuration": null
   },
   "como-fazer/criar-orcamento": {
@@ -122,7 +122,7 @@
     "readingTime": null,
     "difficulty": "intermediate",
     "popular": false,
-    "videoAvailable": true,
+    "videoAvailable": false,
     "videoDuration": null
   },
   "como-fazer/criar-pedido-compra": {
@@ -140,7 +140,7 @@
     "readingTime": null,
     "difficulty": "advanced",
     "popular": false,
-    "videoAvailable": true,
+    "videoAvailable": false,
     "videoDuration": null
   },
   "como-fazer/emitir-devolucao": {
@@ -166,8 +166,8 @@
     "type": "guide",
     "readingTime": null,
     "difficulty": "advanced",
-    "popular": true,
-    "videoAvailable": true,
+    "popular": false,
+    "videoAvailable": false,
     "videoDuration": null
   },
   "como-fazer/fazer-inventario": {
@@ -184,8 +184,8 @@
     "type": "guide",
     "readingTime": null,
     "difficulty": "intermediate",
-    "popular": true,
-    "videoAvailable": true,
+    "popular": false,
+    "videoAvailable": false,
     "videoDuration": null
   },
   "como-fazer/gerar-boleto": {
@@ -193,7 +193,7 @@
     "type": "guide",
     "readingTime": null,
     "difficulty": "intermediate",
-    "popular": true,
+    "popular": false,
     "videoAvailable": false,
     "videoDuration": null
   },
@@ -202,7 +202,7 @@
     "type": "guide",
     "readingTime": null,
     "difficulty": "advanced",
-    "popular": true,
+    "popular": false,
     "videoAvailable": false,
     "videoDuration": null
   },

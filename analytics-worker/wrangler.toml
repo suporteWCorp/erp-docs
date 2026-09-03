@@ -1,0 +1,8 @@
+name = "wcorp-analytics"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+
+[[d1_databases]]
+binding = "ANALYTICS_DB"
+database_name = "wcorp_analytics"
+database_id = "dbc5f8d8-98bc-4dcd-80e8-030cbf4fd896"

@@ -1,5 +1,6 @@
 (function () {
   const dataPath = "assets/data/content-info.json";
+  const catalogPath = "assets/data/content-catalog.json";
   const manualPrefixes = [
     "administracao", "colaboradores", "comercial", "compras", "contratos", "faturamento",
     "financeiro", "fornecedores", "materiais", "producao", "relatorios", "servicos", "transportes"
@@ -11,6 +12,8 @@
   };
 
   let contentInfoCache = null;
+  let contentCatalogCache = null;
+  let renderVersion = 0;
 
   function rootUrl() {
     const logo = document.querySelector(".md-header__button.md-logo[href]");
@@ -32,6 +35,13 @@
       .replace(/\/+$/, "");
   }
 
+  function catalogKey(value = "") {
+    return String(value || "")
+      .replace(/^\/+/, "")
+      .replace(/\/index\.html$/, "")
+      .replace(/\/+$/, "");
+  }
+
   function pageType(path) {
     if (path.startsWith("como-fazer/") && path !== "como-fazer") return "guide";
     if (manualPrefixes.some((prefix) => path.startsWith(`${prefix}/`)) && !/-geral$/.test(path)) return "manual";
@@ -46,6 +56,97 @@
       .catch(() => ({}));
 
     return contentInfoCache;
+  }
+
+  function loadContentCatalog() {
+    if (contentCatalogCache) return contentCatalogCache;
+
+    contentCatalogCache = fetch(new URL(catalogPath, rootUrl()).href)
+      .then((response) => (response.ok ? response.json() : { items: [] }))
+      .catch(() => ({ items: [] }));
+
+    return contentCatalogCache;
+  }
+
+  function catalogItemByPath(catalog, path) {
+    const target = catalogKey(path);
+    return (catalog?.items || []).find((item) => catalogKey(item.url) === target) || null;
+  }
+
+  function catalogItemById(catalog, id) {
+    return (catalog?.items || []).find((item) => item.id === id) || null;
+  }
+
+  function guidePathById(catalog) {
+    const paths = new Map();
+    (catalog?.items || []).forEach((item) => {
+      if (item.id && item.type === "guia" && item.status === "published") {
+        paths.set(item.id, catalogKey(item.url));
+      }
+    });
+    return paths;
+  }
+
+  function contentInfoWithoutStaticGuidePopular(infoByPath, catalog) {
+    const merged = {};
+    Object.entries(infoByPath || {}).forEach(([path, data]) => {
+      merged[path] = {
+        ...data,
+        popular: path.startsWith("como-fazer/") ? false : data.popular,
+        popularityTotal: 0
+      };
+    });
+
+    guidePathById(catalog).forEach((path) => {
+      merged[path] = {
+        ...(merged[path] || {}),
+        popular: false,
+        popularityTotal: 0
+      };
+    });
+
+    return merged;
+  }
+
+  function applyGuidePopularity(infoByPath, catalog, popularity) {
+    const merged = contentInfoWithoutStaticGuidePopular(infoByPath, catalog);
+    const paths = guidePathById(catalog);
+
+    if (!popularity?.ok || !Array.isArray(popularity.items)) return merged;
+
+    popularity.items.forEach((item) => {
+      const path = paths.get(item.content_id);
+      if (!path) return;
+
+      merged[path] = {
+        ...(merged[path] || {}),
+        popular: Boolean(item.popular),
+        popularityTotal: Number(item.total) || 0
+      };
+    });
+
+    return merged;
+  }
+
+  function loadContentInfoWithPopularity(catalog) {
+    const catalogPromise = catalog ? Promise.resolve(catalog) : loadContentCatalog();
+
+    return Promise.all([loadContentInfo(), catalogPromise]).then(([infoByPath, loadedCatalog]) => {
+      const neutralInfo = contentInfoWithoutStaticGuidePopular(infoByPath, loadedCatalog);
+      if (!window.WCorpAnalytics?.getGuidePopularity) return neutralInfo;
+
+      return window.WCorpAnalytics.getGuidePopularity()
+        .then((popularity) => applyGuidePopularity(infoByPath, loadedCatalog, popularity))
+        .catch(() => neutralInfo);
+    });
+  }
+
+  function itemUrl(item) {
+    return new URL(catalogKey(item.url), rootUrl()).href;
+  }
+
+  function normalizeList(value) {
+    return Array.isArray(value) ? value.filter(Boolean) : [];
   }
 
   function cleanTextForReadingTime(content) {
@@ -170,6 +271,44 @@
       : createInfoItem("video", label, "Demonstração em vídeo disponível");
   }
 
+  function decorateVideoLinks(content) {
+    content.querySelectorAll("a.wc-video-link[href]").forEach((link) => {
+      if (link.dataset.wcVideoReady === "true") return;
+
+      const href = link.getAttribute("href") || "";
+      if (!/\.(mp4|webm|ogg)(?:[?#].*)?$/i.test(href)) return;
+
+      const video = document.createElement("video");
+      video.className = "wc-video";
+      video.controls = true;
+      video.preload = "auto";
+      video.playsInline = true;
+
+      if (link.dataset.poster) {
+        video.poster = link.dataset.poster;
+      }
+
+      if (link.id) {
+        video.id = link.id;
+      }
+
+      const source = document.createElement("source");
+      source.src = link.href;
+      source.type = href.toLowerCase().endsWith(".webm")
+        ? "video/webm"
+        : href.toLowerCase().endsWith(".ogg")
+          ? "video/ogg"
+          : "video/mp4";
+
+      video.appendChild(source);
+      video.append("Seu navegador não conseguiu reproduzir este vídeo.");
+      link.dataset.wcVideoReady = "true";
+      link.replaceWith(video);
+
+      window.WCorpVideo?.prepareSeekableVideo?.(video);
+    });
+  }
+
   function pageHasVideo(content) {
     return Boolean(content.querySelector("video, h2[id='demonstracao-em-video']"));
   }
@@ -231,6 +370,118 @@
       .replace(/[\u0300-\u036f]/g, "")
       .trim()
       .toLowerCase();
+  }
+
+  function removeSectionByHeading(content, headingText) {
+    const normalized = headingText
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .trim()
+      .toLowerCase();
+
+    const heading = Array.from(content.querySelectorAll(":scope > h2"))
+      .find((element) => normalizeHeadingText(element) === normalized);
+
+    if (!heading) return null;
+
+    let node = heading;
+
+    while (node && (node === heading || !(node.nodeType === 1 && /^H[12]$/.test(node.tagName)))) {
+      const next = node.nextSibling;
+      node.remove();
+      node = next;
+    }
+
+    return node;
+  }
+
+  function introInsertionPoint(content) {
+    const firstHeading = content.querySelector(":scope > h2");
+    if (!firstHeading) return null;
+    if (normalizeHeadingText(firstHeading) !== "objetivo") return firstHeading;
+
+    let node = firstHeading.nextSibling;
+    while (node && !(node.nodeType === 1 && /^H[12]$/.test(node.tagName))) {
+      node = node.nextSibling;
+    }
+
+    return node;
+  }
+
+  function decorateScreenPath(content, item) {
+    if (!item || item.type !== "manual") return;
+
+    const parts = normalizeList(item.screen_path);
+    if (!parts.length) return;
+
+    content.querySelectorAll(".wc-screen-path[data-wc-generated='true']").forEach((element) => element.remove());
+
+    const removedPoint = removeSectionByHeading(content, "caminho");
+    const section = document.createElement("section");
+    section.className = "wc-screen-path";
+    section.dataset.wcGenerated = "true";
+
+    const heading = document.createElement("h2");
+    heading.id = "caminho";
+    heading.textContent = "Caminho";
+
+    const paragraph = document.createElement("p");
+    const code = document.createElement("code");
+    code.textContent = parts.join(" > ");
+    paragraph.appendChild(code);
+
+    section.append(heading, paragraph);
+    content.insertBefore(section, removedPoint || introInsertionPoint(content));
+  }
+
+  function relatedIds(item) {
+    return [
+      ...normalizeList(item?.related_manual),
+      ...normalizeList(item?.related_guides)
+    ];
+  }
+
+  function relatedTypeLabel(type) {
+    if (type === "manual") return "Manual";
+    if (type === "guia") return "Guia";
+    return "Conteúdo";
+  }
+
+  function decorateRelatedContent(content, item, catalog) {
+    if (!item || !catalog) return;
+
+    const ids = relatedIds(item);
+    if (!ids.length) return;
+
+    content.querySelectorAll(".wc-related-content[data-wc-generated='true']").forEach((element) => element.remove());
+    removeSectionByHeading(content, "veja tambem");
+
+    const targets = ids
+      .map((id) => catalogItemById(catalog, id))
+      .filter(Boolean);
+
+    if (!targets.length) return;
+
+    const section = document.createElement("section");
+    section.className = "wc-related-content";
+    section.dataset.wcGenerated = "true";
+
+    const heading = document.createElement("h2");
+    heading.id = "veja-tambem";
+    heading.textContent = "Veja também";
+
+    const list = document.createElement("ul");
+    targets.forEach((target) => {
+      const itemElement = document.createElement("li");
+      const link = document.createElement("a");
+      link.href = itemUrl(target);
+      link.textContent = `${relatedTypeLabel(target.type)}: ${target.title}`;
+      itemElement.appendChild(link);
+      list.appendChild(itemElement);
+    });
+
+    section.append(heading, list);
+    content.appendChild(section);
   }
 
   function revealPrerequisiteCard(card) {
@@ -312,7 +563,7 @@
     });
   }
 
-  function decorateCurrentPage(infoByPath) {
+  function decorateCurrentPage(infoByPath, catalog) {
     const content = document.querySelector(".md-content__inner");
     const heading = content?.querySelector(":scope > h1");
     if (!content || !heading) return;
@@ -323,7 +574,12 @@
     const type = pageType(path);
     markGuidePage(path, type);
     if (!type) return;
+    decorateVideoLinks(content);
     if (type === "guide") decoratePrerequisites(content);
+
+    const catalogItem = catalogItemByPath(catalog, path);
+    decorateScreenPath(content, catalogItem);
+    decorateRelatedContent(content, catalogItem, catalog);
 
     const data = {
       type,
@@ -350,32 +606,45 @@
     markGuidePage(path, type);
 
     if (type === "guide") {
+      decorateVideoLinks(content);
       decoratePrerequisites(content);
     }
   }
 
   function decorateCards(infoByPath) {
-    document.querySelectorAll(".wc-card:not([data-wc-content-info-ready])").forEach((card) => {
+    document.querySelectorAll(".wc-card").forEach((card) => {
       const link = card.querySelector("a[href]");
       const heading = card.querySelector("h2, h3, h4");
       if (!link || !heading) return;
 
       const data = infoByPath[contentKey(link.href)];
       if (!data) return;
+      const isPopular = Boolean(data.popular);
+      if (
+        card.dataset.wcContentInfoReady === "true" &&
+        card.dataset.wcPopularState === String(isPopular)
+      ) {
+        return;
+      }
 
-      if (data.popular && !card.querySelector(".wc-card-popular")) {
+      card.querySelector(".wc-card-popular")?.remove();
+
+      if (isPopular) {
         heading.appendChild(PopularIndicator(true));
       }
 
       card.dataset.wcContentInfoReady = "true";
+      card.dataset.wcPopularState = String(isPopular);
     });
   }
 
   function initContentInfo() {
     prepareCurrentPageStructure();
+    const currentVersion = ++renderVersion;
 
-    loadContentInfo().then((infoByPath) => {
-      decorateCurrentPage(infoByPath);
+    loadContentCatalog().then((catalog) => loadContentInfoWithPopularity(catalog).then((infoByPath) => {
+      if (currentVersion !== renderVersion) return;
+      decorateCurrentPage(infoByPath, catalog);
       decorateCards(infoByPath);
 
       const content = document.querySelector(".md-content__inner");
@@ -384,7 +653,7 @@
         content.wcorpContentInfoObserver = new MutationObserver(() => decorateCards(infoByPath));
         content.wcorpContentInfoObserver.observe(content, { childList: true, subtree: true });
       }
-    });
+    }));
   }
 
   window.WCorpContentInfo = {
@@ -392,7 +661,8 @@
     ReadingTime,
     DifficultyIndicator,
     PopularIndicator,
-    VideoIndicator
+    VideoIndicator,
+    loadContentInfoWithPopularity
   };
 
   document.addEventListener("DOMContentLoaded", initContentInfo);

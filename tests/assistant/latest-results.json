@@ -1,0 +1,5360 @@
+{
+  "generatedAt": "2026-08-31T19:36:40.299Z",
+  "source": "docs/assets/javascripts/wcorp-assistant.js",
+  "searchIndexUrl": "file:///C:/Users/wavec/OneDrive/Documentos/GitHub/erp-docs/site/search/search_index.json",
+  "docsInSearchIndex": 1284,
+  "catalogIntegrityErrors": [
+    {
+      "code": "CATALOG_INTEGRITY_ERROR",
+      "content": "como-fazer/cadastrar-centro-custo",
+      "reason": "Guia publicado no mkdocs.yml, mas ausente do catálogo usado pelo Assistente"
+    },
+    {
+      "code": "CATALOG_INTEGRITY_ERROR",
+      "content": "como-fazer/cadastrar-condicao-pagamento",
+      "reason": "Guia publicado no mkdocs.yml, mas ausente do catálogo usado pelo Assistente"
+    },
+    {
+      "code": "CATALOG_INTEGRITY_ERROR",
+      "content": "como-fazer/cadastrar-material",
+      "reason": "Guia publicado no mkdocs.yml, mas ausente do catálogo usado pelo Assistente"
+    },
+    {
+      "code": "CATALOG_INTEGRITY_ERROR",
+      "content": "como-fazer/cadastrar-natureza-operacao",
+      "reason": "Guia publicado no mkdocs.yml, mas ausente do catálogo usado pelo Assistente"
+    },
+    {
+      "code": "CATALOG_INTEGRITY_ERROR",
+      "content": "como-fazer/cadastrar-usuario",
+      "reason": "Guia publicado no mkdocs.yml, mas ausente do catálogo usado pelo Assistente"
+    },
+    {
+      "code": "CATALOG_INTEGRITY_ERROR",
+      "content": "como-fazer/cancelar-nfe",
+      "reason": "Guia publicado no mkdocs.yml, mas ausente do catálogo usado pelo Assistente"
+    },
+    {
+      "code": "CATALOG_INTEGRITY_ERROR",
+      "content": "como-fazer/configurar-grupo-usuario",
+      "reason": "Guia publicado no mkdocs.yml, mas ausente do catálogo usado pelo Assistente"
+    },
+    {
+      "code": "CATALOG_INTEGRITY_ERROR",
+      "content": "como-fazer/criar-orcamento",
+      "reason": "Guia publicado no mkdocs.yml, mas ausente do catálogo usado pelo Assistente"
+    },
+    {
+      "code": "CATALOG_INTEGRITY_ERROR",
+      "content": "como-fazer/emitir-carta-correcao",
+      "reason": "Guia publicado no mkdocs.yml, mas ausente do catálogo usado pelo Assistente"
+    },
+    {
+      "code": "CATALOG_INTEGRITY_ERROR",
+      "content": "como-fazer/faturar-nota",
+      "reason": "Guia publicado no mkdocs.yml, mas ausente do catálogo usado pelo Assistente"
+    },
+    {
+      "code": "CATALOG_INTEGRITY_ERROR",
+      "content": "como-fazer/fazer-pedido-venda",
+      "reason": "Guia publicado no mkdocs.yml, mas ausente do catálogo usado pelo Assistente"
+    }
+  ],
+  "tests": [
+    {
+      "id": "Q01",
+      "question": "como gerar nota",
+      "expectedIntent": "guide",
+      "identifiedIntent": "guide",
+      "detectedAction": "emitir",
+      "detectedObject": "nota fiscal",
+      "intentMatchesExpectation": true,
+      "expectedResult": "Guia: Como emitir uma NF-e (como-fazer/faturar-nota)",
+      "obtained": {
+        "title": "Nota Fiscal",
+        "location": "faturamento/faturamento-nf/",
+        "category": "Manual",
+        "score": 383.59999999999997,
+        "related": []
+      },
+      "topRanked": [
+        {
+          "title": "Campos principais",
+          "location": "faturamento/faturamento-nf/#campos-principais",
+          "category": "Manual",
+          "score": 383.59999999999997,
+          "semantic": {
+            "action": "emitir",
+            "object": "nota fiscal",
+            "score": 288,
+            "bonuses": [
+              "objeto",
+              "acao",
+              "acao_objeto"
+            ],
+            "penalties": [
+              "manual_para_acao"
+            ]
+          }
+        },
+        {
+          "title": "Entrada de Nota Fiscal",
+          "location": "faturamento/entrada-nota-fiscal/",
+          "category": "Manual",
+          "score": 368,
+          "semantic": {
+            "action": "emitir",
+            "object": "nota fiscal",
+            "score": 288,
+            "bonuses": [
+              "objeto",
+              "acao",
+              "acao_objeto"
+            ],
+            "penalties": [
+              "manual_para_acao"
+            ]
+          }
+        },
+        {
+          "title": "Nota Fiscal (Lote)",
+          "location": "faturamento/nota-fiscal-lote/",
+          "category": "Manual",
+          "score": 368,
+          "semantic": {
+            "action": "emitir",
+            "object": "nota fiscal",
+            "score": 288,
+            "bonuses": [
+              "objeto",
+              "acao",
+              "acao_objeto"
+            ],
+            "penalties": [
+              "manual_para_acao"
+            ]
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Campos principais",
+          "score": 383.59999999999997,
+          "bonuses": [
+            "objeto",
+            "acao",
+            "acao_objeto"
+          ],
+          "penalties": [
+            "manual_para_acao"
+          ],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Entrada de Nota Fiscal",
+          "score": 368,
+          "bonuses": [
+            "objeto",
+            "acao",
+            "acao_objeto"
+          ],
+          "penalties": [
+            "manual_para_acao"
+          ],
+          "discardReason": "score_menor"
+        },
+        {
+          "candidate": "Nota Fiscal (Lote)",
+          "score": 368,
+          "bonuses": [
+            "objeto",
+            "acao",
+            "acao_objeto"
+          ],
+          "penalties": [
+            "manual_para_acao"
+          ],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [],
+      "phraseChosen": "Separei a referência mais adequada sobre a tela.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": {
+        "code": "CATALOG_INTEGRITY_ERROR",
+        "content": "como-fazer/faturar-nota",
+        "reason": "Guia publicado, mas ausente do catálogo usado pelo Assistente"
+      },
+      "status": "CATALOG_INTEGRITY_ERROR"
+    },
+    {
+      "id": "Q02",
+      "question": "como emitir uma nfe",
+      "expectedIntent": "guide",
+      "identifiedIntent": "guide",
+      "detectedAction": "emitir",
+      "detectedObject": "nota fiscal",
+      "intentMatchesExpectation": true,
+      "expectedResult": "Guia: Como emitir uma NF-e (como-fazer/faturar-nota)",
+      "obtained": {
+        "title": "Como utilizar emissor de NF-e",
+        "location": "como-fazer/usar-emissor/",
+        "category": "Guia",
+        "score": 391,
+        "related": [
+          {
+            "title": "Nota Fiscal",
+            "location": "faturamento/faturamento-nf/",
+            "category": "Manual",
+            "score": 381.59999999999997,
+            "relatedScore": 230
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Como utilizar emissor de NF-e",
+          "location": "como-fazer/usar-emissor/#como-utilizar-emissor-de-nf-e",
+          "category": "Guia",
+          "score": 391,
+          "semantic": {
+            "action": null,
+            "object": "nota fiscal",
+            "score": 140,
+            "bonuses": [
+              "objeto",
+              "guia_operacional"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Dúvidas frequentes",
+          "location": "faturamento/faturamento-nf/#duvidas-frequentes",
+          "category": "Manual",
+          "score": 381.59999999999997,
+          "semantic": {
+            "action": "emitir",
+            "object": "nota fiscal",
+            "score": 288,
+            "bonuses": [
+              "objeto",
+              "acao",
+              "acao_objeto"
+            ],
+            "penalties": [
+              "manual_para_acao"
+            ]
+          }
+        },
+        {
+          "title": "Como utilizar emissor de NF-e",
+          "location": "como-fazer/#como-utilizar-emissor-de-nf-e",
+          "category": "Guia",
+          "score": 331.4,
+          "semantic": {
+            "action": null,
+            "object": "nota fiscal",
+            "score": 140,
+            "bonuses": [
+              "objeto",
+              "guia_operacional"
+            ],
+            "penalties": []
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Como utilizar emissor de NF-e",
+          "score": 391,
+          "bonuses": [
+            "objeto",
+            "guia_operacional"
+          ],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Dúvidas frequentes",
+          "score": 381.59999999999997,
+          "bonuses": [
+            "objeto",
+            "acao",
+            "acao_objeto"
+          ],
+          "penalties": [
+            "manual_para_acao"
+          ],
+          "discardReason": "score_menor"
+        },
+        {
+          "candidate": "Como utilizar emissor de NF-e",
+          "score": 331.4,
+          "bonuses": [
+            "objeto",
+            "guia_operacional"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [
+        {
+          "title": "Nota Fiscal",
+          "location": "faturamento/faturamento-nf/",
+          "category": "Manual",
+          "score": 381.59999999999997,
+          "relatedScore": 230
+        }
+      ],
+      "phraseChosen": "O primeiro conteúdo responde; o segundo ajuda no contexto.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": {
+        "code": "CATALOG_INTEGRITY_ERROR",
+        "content": "como-fazer/faturar-nota",
+        "reason": "Guia publicado, mas ausente do catálogo usado pelo Assistente"
+      },
+      "status": "CATALOG_INTEGRITY_ERROR"
+    },
+    {
+      "id": "Q03",
+      "question": "como consultar notas fiscais rejeitadas",
+      "expectedIntent": "error",
+      "identifiedIntent": "error",
+      "detectedAction": "consultar",
+      "detectedObject": "nota fiscal",
+      "intentMatchesExpectation": true,
+      "expectedResult": "Guia: Como consultar notas fiscais rejeitadas (como-fazer/consultar-nfe-rejeitada)",
+      "obtained": {
+        "title": "Como consultar notas fiscais rejeitadas",
+        "location": "como-fazer/consultar-nfe-rejeitada/",
+        "category": "Guia",
+        "score": 1505,
+        "related": []
+      },
+      "topRanked": [
+        {
+          "title": "Como consultar notas fiscais rejeitadas",
+          "location": "como-fazer/consultar-nfe-rejeitada/#como-consultar-notas-fiscais-rejeitadas",
+          "category": "Guia",
+          "score": 1505,
+          "semantic": {
+            "action": "consultar",
+            "object": "nota fiscal",
+            "score": 364,
+            "bonuses": [
+              "objeto",
+              "acao",
+              "acao_objeto",
+              "guia_operacional"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Como consultar notas fiscais rejeitadas",
+          "location": "como-fazer/#como-consultar-notas-fiscais-rejeitadas",
+          "category": "Guia",
+          "score": 995,
+          "semantic": {
+            "action": "consultar",
+            "object": "nota fiscal",
+            "score": 364,
+            "bonuses": [
+              "objeto",
+              "acao",
+              "acao_objeto",
+              "guia_operacional"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Como verificar",
+          "location": "erros-solucoes/rejeicoes-fiscais/rejeicao-204-duplicidade-nfe/#como-verificar",
+          "category": "Rejeição",
+          "score": 532.8,
+          "semantic": {
+            "action": "consultar",
+            "object": "nota fiscal",
+            "score": 306,
+            "bonuses": [
+              "objeto",
+              "acao",
+              "acao_objeto"
+            ],
+            "penalties": []
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Como consultar notas fiscais rejeitadas",
+          "score": 1505,
+          "bonuses": [
+            "objeto",
+            "acao",
+            "acao_objeto",
+            "guia_operacional"
+          ],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Como consultar notas fiscais rejeitadas",
+          "score": 995,
+          "bonuses": [
+            "objeto",
+            "acao",
+            "acao_objeto",
+            "guia_operacional"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        },
+        {
+          "candidate": "Como verificar",
+          "score": 532.8,
+          "bonuses": [
+            "objeto",
+            "acao",
+            "acao_objeto"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [],
+      "phraseChosen": "A consulta mais relacionada está neste conteúdo.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "Q04",
+      "question": "minha nota foi rejeitada",
+      "expectedIntent": "error",
+      "identifiedIntent": "error",
+      "detectedAction": "corrigir",
+      "detectedObject": "nota fiscal",
+      "intentMatchesExpectation": true,
+      "expectedResult": "Guia: Como consultar notas fiscais rejeitadas (como-fazer/consultar-nfe-rejeitada)",
+      "obtained": {
+        "title": "Como consultar notas fiscais rejeitadas",
+        "location": "como-fazer/consultar-nfe-rejeitada/",
+        "category": "Guia",
+        "score": 606,
+        "related": [
+          {
+            "title": "Não é possível Salvar até que o cálculo da Nota Fiscal seja realizado com sucesso",
+            "location": "erros-solucoes/erros-operacionais/calculo-nota-fiscal-sem-sucesso/",
+            "category": "Erro",
+            "score": 519.8,
+            "relatedScore": 196
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Como consultar notas fiscais rejeitadas",
+          "location": "como-fazer/consultar-nfe-rejeitada/#como-consultar-notas-fiscais-rejeitadas",
+          "category": "Guia",
+          "score": 606,
+          "semantic": {
+            "action": "consultar",
+            "object": "nota fiscal",
+            "score": 82,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Por que ocorre",
+          "location": "erros-solucoes/erros-operacionais/calculo-nota-fiscal-sem-sucesso/#por-que-ocorre",
+          "category": "Erro",
+          "score": 519.8,
+          "semantic": {
+            "action": "corrigir",
+            "object": "nota fiscal",
+            "score": 306,
+            "bonuses": [
+              "objeto",
+              "acao",
+              "acao_objeto"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Como isso acontece no WCorp",
+          "location": "erros-solucoes/rejeicoes-fiscais/rejeicao-206-nfe-inutilizada/#como-isso-acontece-no-wcorp",
+          "category": "Rejeição",
+          "score": 226.8,
+          "semantic": {
+            "action": "corrigir",
+            "object": "inutilização",
+            "score": 32,
+            "bonuses": [
+              "acao"
+            ],
+            "penalties": [
+              "objeto_diferente"
+            ]
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Como consultar notas fiscais rejeitadas",
+          "score": 606,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Por que ocorre",
+          "score": 519.8,
+          "bonuses": [
+            "objeto",
+            "acao",
+            "acao_objeto"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        },
+        {
+          "candidate": "Como isso acontece no WCorp",
+          "score": 226.8,
+          "bonuses": [
+            "acao"
+          ],
+          "penalties": [
+            "objeto_diferente"
+          ],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [
+        {
+          "title": "Não é possível Salvar até que o cálculo da Nota Fiscal seja realizado com sucesso",
+          "location": "erros-solucoes/erros-operacionais/calculo-nota-fiscal-sem-sucesso/",
+          "category": "Erro",
+          "score": 519.8,
+          "relatedScore": 196
+        }
+      ],
+      "phraseChosen": "Além do resultado principal, deixei uma referência de apoio.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "Q05",
+      "question": "como cancelar uma nota",
+      "expectedIntent": "guide",
+      "identifiedIntent": "guide",
+      "detectedAction": "cancelar",
+      "detectedObject": "nota fiscal",
+      "intentMatchesExpectation": true,
+      "expectedResult": "Guia: Como cancelar uma NF-e (como-fazer/cancelar-nfe)",
+      "obtained": {
+        "title": "Tem como cancelar NF-e depois de 30 dias?",
+        "location": "referencia/faq/cancelar-nfe-apos-prazo/",
+        "category": "FAQ",
+        "score": 488.4,
+        "related": []
+      },
+      "topRanked": [
+        {
+          "title": "Tem como cancelar NF-e depois de 30 dias?",
+          "location": "referencia/faq/cancelar-nfe-apos-prazo/#tem-como-cancelar-nf-e-depois-de-30-dias",
+          "category": "FAQ",
+          "score": 488.4,
+          "semantic": {
+            "action": "cancelar",
+            "object": "nota fiscal",
+            "score": 306,
+            "bonuses": [
+              "objeto",
+              "acao",
+              "acao_objeto"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Como corrigir",
+          "location": "erros-solucoes/rejeicoes-fiscais/rejeicao-cancelamento-690-nfe-com-cte-mdfe/#como-corrigir",
+          "category": "Rejeição",
+          "score": 471.79999999999995,
+          "semantic": {
+            "action": "cancelar",
+            "object": "nota fiscal",
+            "score": 306,
+            "bonuses": [
+              "objeto",
+              "acao",
+              "acao_objeto"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Como corrigir",
+          "location": "erros-solucoes/erros-operacionais/calculo-nota-fiscal-sem-sucesso/#como-corrigir",
+          "category": "Erro",
+          "score": 243.4,
+          "semantic": {
+            "action": "corrigir",
+            "object": "nota fiscal",
+            "score": 82,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": []
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Tem como cancelar NF-e depois de 30 dias?",
+          "score": 488.4,
+          "bonuses": [
+            "objeto",
+            "acao",
+            "acao_objeto"
+          ],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Como corrigir",
+          "score": 471.79999999999995,
+          "bonuses": [
+            "objeto",
+            "acao",
+            "acao_objeto"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        },
+        {
+          "candidate": "Como corrigir",
+          "score": 243.4,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [],
+      "phraseChosen": "Para fazer isso no WCorp, este é o conteúdo indicado.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": {
+        "code": "CATALOG_INTEGRITY_ERROR",
+        "content": "como-fazer/cancelar-nfe",
+        "reason": "Guia publicado, mas ausente do catálogo usado pelo Assistente"
+      },
+      "status": "CATALOG_INTEGRITY_ERROR"
+    },
+    {
+      "id": "Q06",
+      "question": "como fazer carta de correção",
+      "expectedIntent": "guide",
+      "identifiedIntent": "guide",
+      "detectedAction": "corrigir",
+      "detectedObject": "carta de correção",
+      "intentMatchesExpectation": true,
+      "expectedResult": "Guia: Como emitir uma carta de correção (como-fazer/emitir-carta-correcao)",
+      "obtained": {
+        "title": "Carta de Correção",
+        "location": "transportes/carta-correcao/",
+        "category": "Manual",
+        "score": 439,
+        "related": []
+      },
+      "topRanked": [
+        {
+          "title": "Carta de Correção",
+          "location": "transportes/carta-correcao/",
+          "category": "Manual",
+          "score": 439,
+          "semantic": {
+            "action": "corrigir",
+            "object": "carta de correção",
+            "score": 306,
+            "bonuses": [
+              "objeto",
+              "acao",
+              "acao_objeto"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Avisos",
+          "location": "como-fazer/usar-emissor/#avisos",
+          "category": "Guia",
+          "score": 205.4,
+          "semantic": {
+            "action": null,
+            "object": "carta de correção",
+            "score": 82,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Como fazer",
+          "location": "como-fazer/consultar-nfe-rejeitada/#como-fazer",
+          "category": "Guia",
+          "score": 119.4,
+          "semantic": {
+            "action": "consultar",
+            "object": "nota fiscal",
+            "score": -42,
+            "bonuses": [],
+            "penalties": [
+              "objeto_diferente"
+            ]
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Carta de Correção",
+          "score": 439,
+          "bonuses": [
+            "objeto",
+            "acao",
+            "acao_objeto"
+          ],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Avisos",
+          "score": 205.4,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        },
+        {
+          "candidate": "Como fazer",
+          "score": 119.4,
+          "bonuses": [],
+          "penalties": [
+            "objeto_diferente"
+          ],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [],
+      "phraseChosen": "Veja a orientação para tratar esse erro.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": {
+        "code": "CATALOG_INTEGRITY_ERROR",
+        "content": "como-fazer/emitir-carta-correcao",
+        "reason": "Guia publicado, mas ausente do catálogo usado pelo Assistente"
+      },
+      "status": "CATALOG_INTEGRITY_ERROR"
+    },
+    {
+      "id": "Q07",
+      "question": "como inutilizar uma nota",
+      "expectedIntent": "guide",
+      "identifiedIntent": "guide",
+      "detectedAction": "cancelar",
+      "detectedObject": "inutilização",
+      "intentMatchesExpectation": true,
+      "expectedResult": "Manual: Inutilização Nota Fiscal (faturamento/inutilizacao-nota-fiscal)",
+      "obtained": {
+        "title": "Inutilização Nota Fiscal",
+        "location": "faturamento/inutilizacao-nota-fiscal/",
+        "category": "Manual",
+        "score": 300.79999999999995,
+        "related": [
+          {
+            "title": "NF-e já está inutilizada na Base de Dados da SEFAZ",
+            "location": "erros-solucoes/rejeicoes-fiscais/rejeicao-206-nfe-inutilizada/",
+            "category": "Rejeição",
+            "score": 224.4,
+            "relatedScore": 163.33333333333334
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Objetivo",
+          "location": "faturamento/inutilizacao-nota-fiscal/#objetivo",
+          "category": "Manual",
+          "score": 300.79999999999995,
+          "semantic": {
+            "action": "emitir",
+            "object": "inutilização",
+            "score": -156,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": [
+              "conflito_acao",
+              "manual_para_acao"
+            ]
+          }
+        },
+        {
+          "title": "Como isso acontece no WCorp",
+          "location": "erros-solucoes/rejeicoes-fiscais/rejeicao-206-nfe-inutilizada/#como-isso-acontece-no-wcorp",
+          "category": "Rejeição",
+          "score": 224.4,
+          "semantic": {
+            "action": "corrigir",
+            "object": "inutilização",
+            "score": 82,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Como corrigir",
+          "location": "erros-solucoes/rejeicoes-fiscais/rejeicao-cancelamento-690-nfe-com-cte-mdfe/#como-corrigir",
+          "category": "Rejeição",
+          "score": 174.4,
+          "semantic": {
+            "action": "cancelar",
+            "object": "nota fiscal",
+            "score": 32,
+            "bonuses": [
+              "acao"
+            ],
+            "penalties": [
+              "objeto_diferente"
+            ]
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Objetivo",
+          "score": 300.79999999999995,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [
+            "conflito_acao",
+            "manual_para_acao"
+          ],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Como isso acontece no WCorp",
+          "score": 224.4,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        },
+        {
+          "candidate": "Como corrigir",
+          "score": 174.4,
+          "bonuses": [
+            "acao"
+          ],
+          "penalties": [
+            "objeto_diferente"
+          ],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [
+        {
+          "title": "NF-e já está inutilizada na Base de Dados da SEFAZ",
+          "location": "erros-solucoes/rejeicoes-fiscais/rejeicao-206-nfe-inutilizada/",
+          "category": "Rejeição",
+          "score": 224.4,
+          "relatedScore": 163.33333333333334
+        }
+      ],
+      "phraseChosen": "Deixei também um material complementar bem próximo.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "Q08",
+      "question": "como cadastrar cliente",
+      "expectedIntent": "guide",
+      "identifiedIntent": "guide",
+      "detectedAction": "cadastrar",
+      "detectedObject": "cliente",
+      "intentMatchesExpectation": true,
+      "expectedResult": "Guia: Como cadastrar um cliente (como-fazer/cadastrar-cliente)",
+      "obtained": {
+        "title": "Como cadastrar um cliente",
+        "location": "como-fazer/cadastrar-cliente/",
+        "category": "Guia",
+        "score": 812,
+        "related": []
+      },
+      "topRanked": [
+        {
+          "title": "Como cadastrar um cliente",
+          "location": "como-fazer/cadastrar-cliente/",
+          "category": "Guia",
+          "score": 812,
+          "semantic": {
+            "action": "cadastrar",
+            "object": "cliente",
+            "score": 364,
+            "bonuses": [
+              "objeto",
+              "acao",
+              "acao_objeto",
+              "guia_operacional"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Como cadastrar um cliente",
+          "location": "como-fazer/#como-cadastrar-um-cliente",
+          "category": "Guia",
+          "score": 755.6,
+          "semantic": {
+            "action": "cadastrar",
+            "object": "cliente",
+            "score": 364,
+            "bonuses": [
+              "objeto",
+              "acao",
+              "acao_objeto",
+              "guia_operacional"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Tem como deixar um percentual de comissão definido para o cliente?",
+          "location": "referencia/faq/comissao-cliente/#tem-como-deixar-um-percentual-de-comissao-definido-para-o-cliente",
+          "category": "FAQ",
+          "score": 264.4,
+          "semantic": {
+            "action": null,
+            "object": "cliente",
+            "score": 82,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": []
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Como cadastrar um cliente",
+          "score": 812,
+          "bonuses": [
+            "objeto",
+            "acao",
+            "acao_objeto",
+            "guia_operacional"
+          ],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Como cadastrar um cliente",
+          "score": 755.6,
+          "bonuses": [
+            "objeto",
+            "acao",
+            "acao_objeto",
+            "guia_operacional"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        },
+        {
+          "candidate": "Tem como deixar um percentual de comissão definido para o cliente?",
+          "score": 264.4,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [],
+      "phraseChosen": "Para configurar cadastro de cliente, comece por aqui.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "Q09",
+      "question": "como gerar pedido",
+      "expectedIntent": "guide",
+      "identifiedIntent": "guide",
+      "detectedAction": "emitir",
+      "detectedObject": "pedido",
+      "intentMatchesExpectation": true,
+      "expectedResult": "Guia: Como gerar um pedido (como-fazer/fazer-pedido-venda)",
+      "obtained": {
+        "title": "Pedido",
+        "location": "comercial/pedidos/",
+        "category": "Manual",
+        "score": 230.6,
+        "related": [
+          {
+            "title": "Não estou conseguindo editar um pedido mesmo estando pendente. O que faço?",
+            "location": "referencia/faq/editar-pedido-bloqueado-workflow/",
+            "category": "FAQ",
+            "score": 128.4,
+            "relatedScore": 99.33333333333333
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Módulo Comercial - Separação de Pedido",
+          "location": "comercial/comercial-separacao-pedido/#modulo-comercial-separacao-de-pedido",
+          "category": "Manual",
+          "score": 230.6,
+          "semantic": {
+            "action": null,
+            "object": "pedido",
+            "score": 64,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": [
+              "manual_para_acao"
+            ]
+          }
+        },
+        {
+          "title": "Módulo Comercial - Pedido de Venda",
+          "location": "comercial/pedidos/#modulo-comercial-pedido-de-venda",
+          "category": "Manual",
+          "score": 230.6,
+          "semantic": {
+            "action": null,
+            "object": "pedido",
+            "score": 64,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": [
+              "manual_para_acao"
+            ]
+          }
+        },
+        {
+          "title": "Como fazer",
+          "location": "como-fazer/cadastrar-cliente/#como-fazer",
+          "category": "Guia",
+          "score": 164.4,
+          "semantic": {
+            "action": "cadastrar",
+            "object": "cliente",
+            "score": 16,
+            "bonuses": [
+              "guia_operacional"
+            ],
+            "penalties": [
+              "objeto_diferente"
+            ]
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Módulo Comercial - Separação de Pedido",
+          "score": 230.6,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [
+            "manual_para_acao"
+          ],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Módulo Comercial - Pedido de Venda",
+          "score": 230.6,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [
+            "manual_para_acao"
+          ],
+          "discardReason": "score_menor"
+        },
+        {
+          "candidate": "Como fazer",
+          "score": 164.4,
+          "bonuses": [
+            "guia_operacional"
+          ],
+          "penalties": [
+            "objeto_diferente"
+          ],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [
+        {
+          "title": "Não estou conseguindo editar um pedido mesmo estando pendente. O que faço?",
+          "location": "referencia/faq/editar-pedido-bloqueado-workflow/",
+          "category": "FAQ",
+          "score": 128.4,
+          "relatedScore": 99.33333333333333
+        }
+      ],
+      "phraseChosen": "A resposta principal está acompanhada de uma referência útil.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": {
+        "code": "CATALOG_INTEGRITY_ERROR",
+        "content": "como-fazer/fazer-pedido-venda",
+        "reason": "Guia publicado, mas ausente do catálogo usado pelo Assistente"
+      },
+      "status": "CATALOG_INTEGRITY_ERROR"
+    },
+    {
+      "id": "Q10",
+      "question": "como consultar estoque",
+      "expectedIntent": "guide",
+      "identifiedIntent": "guide",
+      "detectedAction": "consultar",
+      "detectedObject": "estoque",
+      "intentMatchesExpectation": true,
+      "expectedResult": "Guia: Como consultar estoque (como-fazer/consultar-estoque)",
+      "obtained": {
+        "title": "Como consultar estoque",
+        "location": "como-fazer/consultar-estoque/",
+        "category": "Guia",
+        "score": 1309,
+        "related": []
+      },
+      "topRanked": [
+        {
+          "title": "Como consultar estoque",
+          "location": "como-fazer/consultar-estoque/#como-consultar-estoque",
+          "category": "Guia",
+          "score": 1309,
+          "semantic": {
+            "action": "consultar",
+            "object": "estoque",
+            "score": 364,
+            "bonuses": [
+              "objeto",
+              "acao",
+              "acao_objeto",
+              "guia_operacional"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Como consultar estoque",
+          "location": "como-fazer/#como-consultar-estoque",
+          "category": "Guia",
+          "score": 1248.2,
+          "semantic": {
+            "action": "consultar",
+            "object": "estoque",
+            "score": 364,
+            "bonuses": [
+              "objeto",
+              "acao",
+              "acao_objeto",
+              "guia_operacional"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Como ajustar inventário",
+          "location": "como-fazer/ajustar-estoque/",
+          "category": "Guia",
+          "score": 340,
+          "semantic": {
+            "action": "configurar",
+            "object": "estoque",
+            "score": 140,
+            "bonuses": [
+              "objeto",
+              "guia_operacional"
+            ],
+            "penalties": []
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Como consultar estoque",
+          "score": 1309,
+          "bonuses": [
+            "objeto",
+            "acao",
+            "acao_objeto",
+            "guia_operacional"
+          ],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Como consultar estoque",
+          "score": 1248.2,
+          "bonuses": [
+            "objeto",
+            "acao",
+            "acao_objeto",
+            "guia_operacional"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        },
+        {
+          "candidate": "Como ajustar inventário",
+          "score": 340,
+          "bonuses": [
+            "objeto",
+            "guia_operacional"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [],
+      "phraseChosen": "Para localizar essa informação, veja este material.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "Q11",
+      "question": "como verificar usuários logados",
+      "expectedIntent": "guide",
+      "identifiedIntent": "guide",
+      "detectedAction": "consultar",
+      "detectedObject": "usuário",
+      "intentMatchesExpectation": true,
+      "expectedResult": "Guia: Como verificar usuários logados (como-fazer/verificar-usuarios-log)",
+      "obtained": {
+        "title": "Como verificar usuários logados",
+        "location": "como-fazer/verificar-usuarios-log/",
+        "category": "Guia",
+        "score": 1176,
+        "related": []
+      },
+      "topRanked": [
+        {
+          "title": "Como verificar usuários logados",
+          "location": "como-fazer/verificar-usuarios-log/#como-verificar-usuarios-logados",
+          "category": "Guia",
+          "score": 1176,
+          "semantic": {
+            "action": "consultar",
+            "object": "usuário",
+            "score": 364,
+            "bonuses": [
+              "objeto",
+              "acao",
+              "acao_objeto",
+              "guia_operacional"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Como verificar usuários logados",
+          "location": "como-fazer/#como-verificar-usuarios-logados",
+          "category": "Guia",
+          "score": 1023.8,
+          "semantic": {
+            "action": "consultar",
+            "object": "usuário",
+            "score": 364,
+            "bonuses": [
+              "objeto",
+              "acao",
+              "acao_objeto",
+              "guia_operacional"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Permissões",
+          "location": "como-fazer/verificar-cbenef/#permissoes",
+          "category": "Guia",
+          "score": 494.4,
+          "semantic": {
+            "action": "consultar",
+            "object": "usuário",
+            "score": 364,
+            "bonuses": [
+              "objeto",
+              "acao",
+              "acao_objeto",
+              "guia_operacional"
+            ],
+            "penalties": []
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Como verificar usuários logados",
+          "score": 1176,
+          "bonuses": [
+            "objeto",
+            "acao",
+            "acao_objeto",
+            "guia_operacional"
+          ],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Como verificar usuários logados",
+          "score": 1023.8,
+          "bonuses": [
+            "objeto",
+            "acao",
+            "acao_objeto",
+            "guia_operacional"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        },
+        {
+          "candidate": "Permissões",
+          "score": 494.4,
+          "bonuses": [
+            "objeto",
+            "acao",
+            "acao_objeto",
+            "guia_operacional"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [],
+      "phraseChosen": "Esse conteúdo ajuda a conferir o ponto solicitado.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "Q12",
+      "question": "como ver uma regra",
+      "expectedIntent": "guide",
+      "identifiedIntent": "guide",
+      "detectedAction": "consultar",
+      "detectedObject": "regra fiscal",
+      "intentMatchesExpectation": true,
+      "expectedResult": "Guia: Como verificar regra fiscal (como-fazer/verificar-regra-fiscal)",
+      "obtained": {
+        "title": "Como verificar regra fiscal",
+        "location": "como-fazer/verificar-regra-fiscal/",
+        "category": "Guia",
+        "score": 911,
+        "related": []
+      },
+      "topRanked": [
+        {
+          "title": "Como verificar regra fiscal",
+          "location": "como-fazer/verificar-regra-fiscal/",
+          "category": "Guia",
+          "score": 911,
+          "semantic": {
+            "action": "consultar",
+            "object": "regra fiscal",
+            "score": 364,
+            "bonuses": [
+              "objeto",
+              "acao",
+              "acao_objeto",
+              "guia_operacional"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Como fazer",
+          "location": "como-fazer/verificar-cbenef/#como-fazer",
+          "category": "Guia",
+          "score": 504.79999999999995,
+          "semantic": {
+            "action": "consultar",
+            "object": "regra fiscal",
+            "score": 364,
+            "bonuses": [
+              "objeto",
+              "acao",
+              "acao_objeto",
+              "guia_operacional"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Como verificar regra fiscal",
+          "location": "como-fazer/#como-verificar-regra-fiscal",
+          "category": "Guia",
+          "score": 476.4,
+          "semantic": {
+            "action": "consultar",
+            "object": "regra fiscal",
+            "score": 364,
+            "bonuses": [
+              "objeto",
+              "acao",
+              "acao_objeto",
+              "guia_operacional"
+            ],
+            "penalties": []
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Como verificar regra fiscal",
+          "score": 911,
+          "bonuses": [
+            "objeto",
+            "acao",
+            "acao_objeto",
+            "guia_operacional"
+          ],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Como fazer",
+          "score": 504.79999999999995,
+          "bonuses": [
+            "objeto",
+            "acao",
+            "acao_objeto",
+            "guia_operacional"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        },
+        {
+          "candidate": "Como verificar regra fiscal",
+          "score": 476.4,
+          "bonuses": [
+            "objeto",
+            "acao",
+            "acao_objeto",
+            "guia_operacional"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [],
+      "phraseChosen": "Para localizar essa informação, veja este material.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "Q13",
+      "question": "onde vejo regra fiscal",
+      "expectedIntent": "manual",
+      "identifiedIntent": "manual",
+      "detectedAction": "consultar",
+      "detectedObject": "regra fiscal",
+      "intentMatchesExpectation": true,
+      "expectedResult": "Guia: Como verificar regra fiscal (como-fazer/verificar-regra-fiscal)",
+      "obtained": {
+        "title": "Como verificar regra fiscal",
+        "location": "como-fazer/verificar-regra-fiscal/",
+        "category": "Guia",
+        "score": 449,
+        "related": [
+          {
+            "title": "Natureza de Operação",
+            "location": "administracao/natureza-op/",
+            "category": "Manual",
+            "score": 324.79999999999995,
+            "relatedScore": 86
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Como verificar regra fiscal",
+          "location": "como-fazer/verificar-regra-fiscal/",
+          "category": "Guia",
+          "score": 449,
+          "semantic": {
+            "action": "consultar",
+            "object": "regra fiscal",
+            "score": 48,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": [
+              "guia_para_localizacao"
+            ]
+          }
+        },
+        {
+          "title": "Adicionar Regra",
+          "location": "administracao/natureza-op/#adicionar-regra",
+          "category": "Manual",
+          "score": 324.79999999999995,
+          "semantic": {
+            "action": null,
+            "object": "regra fiscal",
+            "score": 154,
+            "bonuses": [
+              "objeto",
+              "manual_para_localizacao"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Como isso acontece no WCorp",
+          "location": "erros-solucoes/rejeicoes-fiscais/rejeicao-930-cst-beneficio-fiscal-sem-codigo/#como-isso-acontece-no-wcorp",
+          "category": "Rejeição",
+          "score": 136.8,
+          "semantic": {
+            "action": "corrigir",
+            "object": "regra fiscal",
+            "score": 82,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": []
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Como verificar regra fiscal",
+          "score": 449,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [
+            "guia_para_localizacao"
+          ],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Adicionar Regra",
+          "score": 324.79999999999995,
+          "bonuses": [
+            "objeto",
+            "manual_para_localizacao"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        },
+        {
+          "candidate": "Como isso acontece no WCorp",
+          "score": 136.8,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [
+        {
+          "title": "Natureza de Operação",
+          "location": "administracao/natureza-op/",
+          "category": "Manual",
+          "score": 324.79999999999995,
+          "relatedScore": 86
+        }
+      ],
+      "phraseChosen": "Esses conteúdos se complementam para essa dúvida.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "Q14",
+      "question": "como funciona nota fiscal",
+      "expectedIntent": "manual",
+      "identifiedIntent": "manual",
+      "detectedAction": "entender",
+      "detectedObject": "nota fiscal",
+      "intentMatchesExpectation": true,
+      "expectedResult": "Manual: Nota Fiscal (faturamento/faturamento-nf)",
+      "obtained": {
+        "title": "Nota Fiscal",
+        "location": "faturamento/faturamento-nf/",
+        "category": "Manual",
+        "score": 490,
+        "related": [
+          {
+            "title": "Como consultar notas fiscais rejeitadas",
+            "location": "como-fazer/consultar-nfe-rejeitada/",
+            "category": "Guia",
+            "score": 208.8,
+            "relatedScore": 206.66666666666666
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Nota Fiscal",
+          "location": "faturamento/faturamento-nf/#nota-fiscal",
+          "category": "Manual",
+          "score": 490,
+          "semantic": {
+            "action": "emitir",
+            "object": "nota fiscal",
+            "score": -66,
+            "bonuses": [
+              "objeto",
+              "manual_para_entender"
+            ],
+            "penalties": [
+              "conflito_acao"
+            ]
+          }
+        },
+        {
+          "title": "Objetivo",
+          "location": "comercial/importar-nfe-remessa/#objetivo",
+          "category": "Manual",
+          "score": 338.79999999999995,
+          "semantic": {
+            "action": null,
+            "object": "nota fiscal",
+            "score": 154,
+            "bonuses": [
+              "objeto",
+              "manual_para_entender"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Veja também",
+          "location": "administracao/natureza-op/#veja-tambem",
+          "category": "Manual",
+          "score": 306.99999999999994,
+          "semantic": {
+            "action": null,
+            "object": "nota fiscal",
+            "score": 154,
+            "bonuses": [
+              "objeto",
+              "manual_para_entender"
+            ],
+            "penalties": []
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Nota Fiscal",
+          "score": 490,
+          "bonuses": [
+            "objeto",
+            "manual_para_entender"
+          ],
+          "penalties": [
+            "conflito_acao"
+          ],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Objetivo",
+          "score": 338.79999999999995,
+          "bonuses": [
+            "objeto",
+            "manual_para_entender"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        },
+        {
+          "candidate": "Veja também",
+          "score": 306.99999999999994,
+          "bonuses": [
+            "objeto",
+            "manual_para_entender"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [
+        {
+          "title": "Como consultar notas fiscais rejeitadas",
+          "location": "como-fazer/consultar-nfe-rejeitada/",
+          "category": "Guia",
+          "score": 208.8,
+          "relatedScore": 206.66666666666666
+        }
+      ],
+      "phraseChosen": "Encontrei um conteúdo principal e um complemento útil.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "G01",
+      "question": "como cadastrar cliente",
+      "expectedIntent": "guide",
+      "identifiedIntent": "guide",
+      "detectedAction": "cadastrar",
+      "detectedObject": "cliente",
+      "intentMatchesExpectation": true,
+      "expectedResult": "Guia: Como cadastrar um cliente (como-fazer/cadastrar-cliente)",
+      "obtained": {
+        "title": "Como cadastrar um cliente",
+        "location": "como-fazer/cadastrar-cliente/",
+        "category": "Guia",
+        "score": 812,
+        "related": []
+      },
+      "topRanked": [
+        {
+          "title": "Como cadastrar um cliente",
+          "location": "como-fazer/cadastrar-cliente/",
+          "category": "Guia",
+          "score": 812,
+          "semantic": {
+            "action": "cadastrar",
+            "object": "cliente",
+            "score": 364,
+            "bonuses": [
+              "objeto",
+              "acao",
+              "acao_objeto",
+              "guia_operacional"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Como cadastrar um cliente",
+          "location": "como-fazer/#como-cadastrar-um-cliente",
+          "category": "Guia",
+          "score": 755.6,
+          "semantic": {
+            "action": "cadastrar",
+            "object": "cliente",
+            "score": 364,
+            "bonuses": [
+              "objeto",
+              "acao",
+              "acao_objeto",
+              "guia_operacional"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Tem como deixar um percentual de comissão definido para o cliente?",
+          "location": "referencia/faq/comissao-cliente/#tem-como-deixar-um-percentual-de-comissao-definido-para-o-cliente",
+          "category": "FAQ",
+          "score": 264.4,
+          "semantic": {
+            "action": null,
+            "object": "cliente",
+            "score": 82,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": []
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Como cadastrar um cliente",
+          "score": 812,
+          "bonuses": [
+            "objeto",
+            "acao",
+            "acao_objeto",
+            "guia_operacional"
+          ],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Como cadastrar um cliente",
+          "score": 755.6,
+          "bonuses": [
+            "objeto",
+            "acao",
+            "acao_objeto",
+            "guia_operacional"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        },
+        {
+          "candidate": "Tem como deixar um percentual de comissão definido para o cliente?",
+          "score": 264.4,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [],
+      "phraseChosen": "Separei a orientação mais adequada para esse cadastro.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "G02",
+      "question": "onde cadastro cliente",
+      "expectedIntent": "manual",
+      "identifiedIntent": "manual",
+      "detectedAction": "cadastrar",
+      "detectedObject": "cliente",
+      "intentMatchesExpectation": true,
+      "expectedResult": "Manual: Clientes (comercial/comercial-clientes)",
+      "obtained": {
+        "title": "Clientes",
+        "location": "comercial/comercial-clientes/",
+        "category": "Manual",
+        "score": 346.59999999999997,
+        "related": [
+          {
+            "title": "Como cadastrar um cliente",
+            "location": "como-fazer/cadastrar-cliente/",
+            "category": "Guia",
+            "score": 193.6,
+            "relatedScore": 114
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Passo a passo",
+          "location": "comercial/comercial-clientes/#passo-a-passo",
+          "category": "Manual",
+          "score": 346.59999999999997,
+          "semantic": {
+            "action": null,
+            "object": "cliente",
+            "score": 154,
+            "bonuses": [
+              "objeto",
+              "manual_para_localizacao"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Avisos",
+          "location": "comercial/comercial-grupo-clientes/#avisos",
+          "category": "Manual",
+          "score": 343.2,
+          "semantic": {
+            "action": null,
+            "object": "cliente",
+            "score": 154,
+            "bonuses": [
+              "objeto",
+              "manual_para_localizacao"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Passo a passo",
+          "location": "faturamento/faturamento-nfce/#passo-a-passo",
+          "category": "Manual",
+          "score": 221.4,
+          "semantic": {
+            "action": "emitir",
+            "object": "cliente",
+            "score": 154,
+            "bonuses": [
+              "objeto",
+              "manual_para_localizacao"
+            ],
+            "penalties": []
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Passo a passo",
+          "score": 346.59999999999997,
+          "bonuses": [
+            "objeto",
+            "manual_para_localizacao"
+          ],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Avisos",
+          "score": 343.2,
+          "bonuses": [
+            "objeto",
+            "manual_para_localizacao"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        },
+        {
+          "candidate": "Passo a passo",
+          "score": 221.4,
+          "bonuses": [
+            "objeto",
+            "manual_para_localizacao"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [
+        {
+          "title": "Como cadastrar um cliente",
+          "location": "como-fazer/cadastrar-cliente/",
+          "category": "Guia",
+          "score": 193.6,
+          "relatedScore": 114
+        }
+      ],
+      "phraseChosen": "Esses conteúdos se complementam para essa dúvida.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "G03",
+      "question": "preciso cadastrar um cliente",
+      "expectedIntent": "guide",
+      "identifiedIntent": "guide",
+      "detectedAction": "cadastrar",
+      "detectedObject": "cliente",
+      "intentMatchesExpectation": true,
+      "expectedResult": "Guia: Como cadastrar um cliente (como-fazer/cadastrar-cliente)",
+      "obtained": {
+        "title": "Como cadastrar um cliente",
+        "location": "como-fazer/cadastrar-cliente/",
+        "category": "Guia",
+        "score": 615,
+        "related": []
+      },
+      "topRanked": [
+        {
+          "title": "Como cadastrar um cliente",
+          "location": "como-fazer/cadastrar-cliente/",
+          "category": "Guia",
+          "score": 615,
+          "semantic": {
+            "action": "cadastrar",
+            "object": "cliente",
+            "score": 364,
+            "bonuses": [
+              "objeto",
+              "acao",
+              "acao_objeto",
+              "guia_operacional"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Como cadastrar um cliente",
+          "location": "como-fazer/#como-cadastrar-um-cliente",
+          "category": "Guia",
+          "score": 558.5999999999999,
+          "semantic": {
+            "action": "cadastrar",
+            "object": "cliente",
+            "score": 364,
+            "bonuses": [
+              "objeto",
+              "acao",
+              "acao_objeto",
+              "guia_operacional"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Dúvidas frequentes",
+          "location": "comercial/comercial-clientes/#duvidas-frequentes",
+          "category": "Manual",
+          "score": 190.79999999999998,
+          "semantic": {
+            "action": null,
+            "object": "cliente",
+            "score": 64,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": [
+              "manual_para_acao"
+            ]
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Como cadastrar um cliente",
+          "score": 615,
+          "bonuses": [
+            "objeto",
+            "acao",
+            "acao_objeto",
+            "guia_operacional"
+          ],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Como cadastrar um cliente",
+          "score": 558.5999999999999,
+          "bonuses": [
+            "objeto",
+            "acao",
+            "acao_objeto",
+            "guia_operacional"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        },
+        {
+          "candidate": "Dúvidas frequentes",
+          "score": 190.79999999999998,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [
+            "manual_para_acao"
+          ],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [],
+      "phraseChosen": "O passo a passo de cadastro está aqui.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "G04",
+      "question": "cad cliente",
+      "expectedIntent": "general",
+      "identifiedIntent": "guide",
+      "detectedAction": "cadastrar",
+      "detectedObject": "cliente",
+      "intentMatchesExpectation": false,
+      "expectedResult": "Guia: Como cadastrar um cliente (como-fazer/cadastrar-cliente)",
+      "obtained": {
+        "title": "Como cadastrar um cliente",
+        "location": "como-fazer/cadastrar-cliente/",
+        "category": "Guia",
+        "score": 659,
+        "related": []
+      },
+      "topRanked": [
+        {
+          "title": "Como cadastrar um cliente",
+          "location": "como-fazer/cadastrar-cliente/",
+          "category": "Guia",
+          "score": 659,
+          "semantic": {
+            "action": "cadastrar",
+            "object": "cliente",
+            "score": 364,
+            "bonuses": [
+              "objeto",
+              "acao",
+              "acao_objeto",
+              "guia_operacional"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Como cadastrar um cliente",
+          "location": "como-fazer/#como-cadastrar-um-cliente",
+          "category": "Guia",
+          "score": 599.6,
+          "semantic": {
+            "action": "cadastrar",
+            "object": "cliente",
+            "score": 364,
+            "bonuses": [
+              "objeto",
+              "acao",
+              "acao_objeto",
+              "guia_operacional"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Tem como deixar um percentual de comissão definido para o cliente?",
+          "location": "referencia/faq/comissao-cliente/#tem-como-deixar-um-percentual-de-comissao-definido-para-o-cliente",
+          "category": "FAQ",
+          "score": 233.6,
+          "semantic": {
+            "action": null,
+            "object": "cliente",
+            "score": 82,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": []
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Como cadastrar um cliente",
+          "score": 659,
+          "bonuses": [
+            "objeto",
+            "acao",
+            "acao_objeto",
+            "guia_operacional"
+          ],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Como cadastrar um cliente",
+          "score": 599.6,
+          "bonuses": [
+            "objeto",
+            "acao",
+            "acao_objeto",
+            "guia_operacional"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        },
+        {
+          "candidate": "Tem como deixar um percentual de comissão definido para o cliente?",
+          "score": 233.6,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [],
+      "phraseChosen": "Separei a orientação mais adequada para esse cadastro.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "G05",
+      "question": "como faz cliente",
+      "expectedIntent": "guide",
+      "identifiedIntent": "guide",
+      "detectedAction": null,
+      "detectedObject": "cliente",
+      "intentMatchesExpectation": true,
+      "expectedResult": "Guia: Como cadastrar um cliente (como-fazer/cadastrar-cliente)",
+      "obtained": {
+        "title": "Como cadastrar um cliente",
+        "location": "como-fazer/cadastrar-cliente/",
+        "category": "Guia",
+        "score": 366,
+        "related": [
+          {
+            "title": "Tem como deixar um percentual de comissão definido para o cliente?",
+            "location": "referencia/faq/comissao-cliente/",
+            "category": "FAQ",
+            "score": 264.4,
+            "relatedScore": 135.33333333333334
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Como cadastrar um cliente",
+          "location": "como-fazer/cadastrar-cliente/",
+          "category": "Guia",
+          "score": 366,
+          "semantic": {
+            "action": "cadastrar",
+            "object": "cliente",
+            "score": 82,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Tem como deixar um percentual de comissão definido para o cliente?",
+          "location": "referencia/faq/comissao-cliente/#tem-como-deixar-um-percentual-de-comissao-definido-para-o-cliente",
+          "category": "FAQ",
+          "score": 264.4,
+          "semantic": {
+            "action": null,
+            "object": "cliente",
+            "score": 82,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Como cadastrar um cliente",
+          "location": "como-fazer/#como-cadastrar-um-cliente",
+          "category": "Guia",
+          "score": 211.4,
+          "semantic": {
+            "action": "cadastrar",
+            "object": "cliente",
+            "score": 82,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": []
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Como cadastrar um cliente",
+          "score": 366,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Tem como deixar um percentual de comissão definido para o cliente?",
+          "score": 264.4,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        },
+        {
+          "candidate": "Como cadastrar um cliente",
+          "score": 211.4,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [
+        {
+          "title": "Tem como deixar um percentual de comissão definido para o cliente?",
+          "location": "referencia/faq/comissao-cliente/",
+          "category": "FAQ",
+          "score": 264.4,
+          "relatedScore": 135.33333333333334
+        }
+      ],
+      "phraseChosen": "O primeiro conteúdo responde; o segundo ajuda no contexto.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "G06",
+      "question": "como cadastrar fornecedor",
+      "expectedIntent": "guide",
+      "identifiedIntent": "guide",
+      "detectedAction": "cadastrar",
+      "detectedObject": "fornecedor",
+      "intentMatchesExpectation": true,
+      "expectedResult": "Não retornar Guia inválido: como-fazer/cadastrar-fornecedor",
+      "obtained": {
+        "title": "Categoria de Fornecedor",
+        "location": "fornecedores/categoria-fornecedor/",
+        "category": "Manual",
+        "score": 176.6,
+        "related": []
+      },
+      "topRanked": [
+        {
+          "title": "Objetivo",
+          "location": "fornecedores/categoria-fornecedor/#objetivo",
+          "category": "Manual",
+          "score": 176.6,
+          "semantic": {
+            "action": null,
+            "object": "fornecedor",
+            "score": 64,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": [
+              "manual_para_acao"
+            ]
+          }
+        },
+        {
+          "title": "Objetivo",
+          "location": "fornecedores/certificado/#objetivo",
+          "category": "Manual",
+          "score": 166.6,
+          "semantic": {
+            "action": null,
+            "object": "fornecedor",
+            "score": 64,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": [
+              "manual_para_acao"
+            ]
+          }
+        },
+        {
+          "title": "Objetivo",
+          "location": "fornecedores/fornecedores/#objetivo",
+          "category": "Manual",
+          "score": 166.6,
+          "semantic": {
+            "action": null,
+            "object": "fornecedor",
+            "score": 64,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": [
+              "manual_para_acao"
+            ]
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Objetivo",
+          "score": 176.6,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [
+            "manual_para_acao"
+          ],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Objetivo",
+          "score": 166.6,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [
+            "manual_para_acao"
+          ],
+          "discardReason": "score_menor"
+        },
+        {
+          "candidate": "Objetivo",
+          "score": 166.6,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [
+            "manual_para_acao"
+          ],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [],
+      "phraseChosen": "Para configurar cadastro de fornecedor, comece por aqui.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "G07",
+      "question": "cadastrar material",
+      "expectedIntent": "guide",
+      "identifiedIntent": "guide",
+      "detectedAction": "cadastrar",
+      "detectedObject": "material",
+      "intentMatchesExpectation": true,
+      "expectedResult": "Não retornar Guia inválido: como-fazer/cadastrar-material",
+      "obtained": {
+        "title": "Como alterar o NCM de um material",
+        "location": "como-fazer/alterar-ncm-material/",
+        "category": "Guia",
+        "score": 360,
+        "related": [
+          {
+            "title": "Como realizar entrada de material",
+            "location": "como-fazer/registrar-entrada-material/",
+            "category": "Guia",
+            "score": 360,
+            "relatedScore": 124.66666666666666
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Como alterar o NCM de um material",
+          "location": "como-fazer/alterar-ncm-material/",
+          "category": "Guia",
+          "score": 360,
+          "semantic": {
+            "action": null,
+            "object": "material",
+            "score": 140,
+            "bonuses": [
+              "objeto",
+              "guia_operacional"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Como realizar entrada de material",
+          "location": "como-fazer/registrar-entrada-material/",
+          "category": "Guia",
+          "score": 360,
+          "semantic": {
+            "action": null,
+            "object": "material",
+            "score": 140,
+            "bonuses": [
+              "objeto",
+              "guia_operacional"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Pré-requisitos",
+          "location": "como-fazer/empenhar-material/#pre-requisitos",
+          "category": "Guia",
+          "score": 312.4,
+          "semantic": {
+            "action": null,
+            "object": "material",
+            "score": 140,
+            "bonuses": [
+              "objeto",
+              "guia_operacional"
+            ],
+            "penalties": []
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Como alterar o NCM de um material",
+          "score": 360,
+          "bonuses": [
+            "objeto",
+            "guia_operacional"
+          ],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Como realizar entrada de material",
+          "score": 360,
+          "bonuses": [
+            "objeto",
+            "guia_operacional"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        },
+        {
+          "candidate": "Pré-requisitos",
+          "score": 312.4,
+          "bonuses": [
+            "objeto",
+            "guia_operacional"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [
+        {
+          "title": "Como realizar entrada de material",
+          "location": "como-fazer/registrar-entrada-material/",
+          "category": "Guia",
+          "score": 360,
+          "relatedScore": 124.66666666666666
+        }
+      ],
+      "phraseChosen": "Encontrei um conteúdo principal e um complemento útil.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "G08",
+      "question": "preciso gerar boleto",
+      "expectedIntent": "guide",
+      "identifiedIntent": "guide",
+      "detectedAction": "emitir",
+      "detectedObject": "boleto",
+      "intentMatchesExpectation": true,
+      "expectedResult": "Não retornar Guia inválido: como-fazer/gerar-boleto",
+      "obtained": {
+        "title": "Boleto",
+        "location": "financeiro/boleto/",
+        "category": "Manual",
+        "score": 176.6,
+        "related": []
+      },
+      "topRanked": [
+        {
+          "title": "Objetivo",
+          "location": "financeiro/boleto/#objetivo",
+          "category": "Manual",
+          "score": 176.6,
+          "semantic": {
+            "action": null,
+            "object": "boleto",
+            "score": 64,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": [
+              "manual_para_acao"
+            ]
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Objetivo",
+          "score": 176.6,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [
+            "manual_para_acao"
+          ],
+          "discardReason": "resultado_final"
+        }
+      ],
+      "relatedChosen": [],
+      "phraseChosen": "A documentação da funcionalidade está aqui.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "G09",
+      "question": "como baixar titulo",
+      "expectedIntent": "guide",
+      "identifiedIntent": "guide",
+      "detectedAction": null,
+      "detectedObject": null,
+      "intentMatchesExpectation": true,
+      "expectedResult": "Não retornar Guia inválido: como-fazer/baixar-titulo",
+      "obtained": null,
+      "topRanked": [
+        {
+          "title": "Texto e Subtítulos",
+          "location": "CONVENCAO_CONTEUDO/#texto-e-subtitulos",
+          "category": "Conteúdo",
+          "score": 25.2,
+          "semantic": {
+            "action": null,
+            "object": null,
+            "score": 0,
+            "bonuses": [],
+            "penalties": []
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Texto e Subtítulos",
+          "score": 25.2,
+          "bonuses": [],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        }
+      ],
+      "relatedChosen": [],
+      "phraseChosen": "Preciso de um termo mais específico para encontrar a orientação certa. Tente informar o código, nome da tela ou mensagem completa. Caso seja uma falha do sistema, você pode abrir um chamado no Suporte.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "G10",
+      "question": "como lançar nota entrada",
+      "expectedIntent": "guide",
+      "identifiedIntent": "guide",
+      "detectedAction": null,
+      "detectedObject": "nota fiscal",
+      "intentMatchesExpectation": true,
+      "expectedResult": "Não retornar Guia inválido: como-fazer/lancar-nota-entrada",
+      "obtained": {
+        "title": "Entrada de Nota Fiscal",
+        "location": "faturamento/entrada-nota-fiscal/",
+        "category": "Manual",
+        "score": 291,
+        "related": []
+      },
+      "topRanked": [
+        {
+          "title": "Entrada de Nota Fiscal",
+          "location": "faturamento/entrada-nota-fiscal/",
+          "category": "Manual",
+          "score": 291,
+          "semantic": {
+            "action": "emitir",
+            "object": "nota fiscal",
+            "score": 82,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": []
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Entrada de Nota Fiscal",
+          "score": 291,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        }
+      ],
+      "relatedChosen": [],
+      "phraseChosen": "Este material reúne a explicação mais próxima da dúvida.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "M01",
+      "question": "onde fica contas a pagar",
+      "expectedIntent": "manual",
+      "identifiedIntent": "manual",
+      "detectedAction": null,
+      "detectedObject": null,
+      "intentMatchesExpectation": true,
+      "expectedResult": "Manual: Contas a Pagar (financeiro/contas-a-pagar)",
+      "obtained": {
+        "title": "Contas a Pagar",
+        "location": "financeiro/contas-a-pagar/",
+        "category": "Manual",
+        "score": 212,
+        "related": []
+      },
+      "topRanked": [
+        {
+          "title": "Contas a Pagar",
+          "location": "financeiro/contas-a-pagar/",
+          "category": "Manual",
+          "score": 212,
+          "semantic": {
+            "action": null,
+            "object": null,
+            "score": 0,
+            "bonuses": [],
+            "penalties": []
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Contas a Pagar",
+          "score": 212,
+          "bonuses": [],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        }
+      ],
+      "relatedChosen": [],
+      "phraseChosen": "Para entender como funciona, consulte este conteúdo.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "M02",
+      "question": "tela de nota fiscal",
+      "expectedIntent": "manual",
+      "identifiedIntent": "manual",
+      "detectedAction": "entender",
+      "detectedObject": "nota fiscal",
+      "intentMatchesExpectation": true,
+      "expectedResult": "Manual: Nota Fiscal (faturamento/faturamento-nf)",
+      "obtained": {
+        "title": "Nota Fiscal",
+        "location": "faturamento/faturamento-nf/",
+        "category": "Manual",
+        "score": 482,
+        "related": [
+          {
+            "title": "Como consultar notas fiscais rejeitadas",
+            "location": "como-fazer/consultar-nfe-rejeitada/",
+            "category": "Guia",
+            "score": 134.8,
+            "relatedScore": 186.66666666666666
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Nota Fiscal",
+          "location": "faturamento/faturamento-nf/#nota-fiscal",
+          "category": "Manual",
+          "score": 482,
+          "semantic": {
+            "action": "emitir",
+            "object": "nota fiscal",
+            "score": -66,
+            "bonuses": [
+              "objeto",
+              "manual_para_entender"
+            ],
+            "penalties": [
+              "conflito_acao"
+            ]
+          }
+        },
+        {
+          "title": "Objetivo",
+          "location": "comercial/importar-nfe-remessa/#objetivo",
+          "category": "Manual",
+          "score": 330.79999999999995,
+          "semantic": {
+            "action": null,
+            "object": "nota fiscal",
+            "score": 154,
+            "bonuses": [
+              "objeto",
+              "manual_para_entender"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Veja também",
+          "location": "administracao/natureza-op/#veja-tambem",
+          "category": "Manual",
+          "score": 296.79999999999995,
+          "semantic": {
+            "action": null,
+            "object": "nota fiscal",
+            "score": 154,
+            "bonuses": [
+              "objeto",
+              "manual_para_entender"
+            ],
+            "penalties": []
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Nota Fiscal",
+          "score": 482,
+          "bonuses": [
+            "objeto",
+            "manual_para_entender"
+          ],
+          "penalties": [
+            "conflito_acao"
+          ],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Objetivo",
+          "score": 330.79999999999995,
+          "bonuses": [
+            "objeto",
+            "manual_para_entender"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        },
+        {
+          "candidate": "Veja também",
+          "score": 296.79999999999995,
+          "bonuses": [
+            "objeto",
+            "manual_para_entender"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [
+        {
+          "title": "Como consultar notas fiscais rejeitadas",
+          "location": "como-fazer/consultar-nfe-rejeitada/",
+          "category": "Guia",
+          "score": 134.8,
+          "relatedScore": 186.66666666666666
+        }
+      ],
+      "phraseChosen": "Separei a orientação principal e um conteúdo relacionado.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "M03",
+      "question": "qual campo de natureza operação",
+      "expectedIntent": "manual",
+      "identifiedIntent": "manual",
+      "detectedAction": "entender",
+      "detectedObject": null,
+      "intentMatchesExpectation": true,
+      "expectedResult": "Manual: Natureza de Operação (administracao/natureza-op)",
+      "obtained": {
+        "title": "Natureza de Operação",
+        "location": "administracao/natureza-op/",
+        "category": "Manual",
+        "score": 288.4,
+        "related": []
+      },
+      "topRanked": [
+        {
+          "title": "Natureza de Operação",
+          "location": "administracao/natureza-op/#natureza-de-operacao",
+          "category": "Manual",
+          "score": 288.4,
+          "semantic": {
+            "action": null,
+            "object": null,
+            "score": 72,
+            "bonuses": [
+              "manual_para_entender"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Veja também",
+          "location": "administracao/ncms/#veja-tambem",
+          "category": "Manual",
+          "score": 194.8,
+          "semantic": {
+            "action": null,
+            "object": "material",
+            "score": 72,
+            "bonuses": [
+              "manual_para_entender"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Dúvidas frequentes",
+          "location": "comercial/comercial-clientes/#duvidas-frequentes",
+          "category": "Manual",
+          "score": 192.8,
+          "semantic": {
+            "action": null,
+            "object": "cliente",
+            "score": 72,
+            "bonuses": [
+              "manual_para_entender"
+            ],
+            "penalties": []
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Natureza de Operação",
+          "score": 288.4,
+          "bonuses": [
+            "manual_para_entender"
+          ],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Veja também",
+          "score": 194.8,
+          "bonuses": [
+            "manual_para_entender"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        },
+        {
+          "candidate": "Dúvidas frequentes",
+          "score": 192.8,
+          "bonuses": [
+            "manual_para_entender"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [],
+      "phraseChosen": "Esse manual descreve os campos e o uso da tela.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "M04",
+      "question": "manual pedido venda",
+      "expectedIntent": "manual",
+      "identifiedIntent": "manual",
+      "detectedAction": "entender",
+      "detectedObject": "pedido",
+      "intentMatchesExpectation": true,
+      "expectedResult": "Manual: Pedido (comercial/pedidos)",
+      "obtained": {
+        "title": "Pedido",
+        "location": "comercial/pedidos/",
+        "category": "Manual",
+        "score": 621.9999999999999,
+        "related": [
+          {
+            "title": "Módulo Comercial - Separação de Pedido",
+            "location": "comercial/comercial-separacao-pedido/",
+            "category": "Manual",
+            "score": 400.79999999999995,
+            "relatedScore": 113.33333333333334
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Módulo Comercial - Pedido de Venda",
+          "location": "comercial/pedidos/#modulo-comercial-pedido-de-venda",
+          "category": "Manual",
+          "score": 621.9999999999999,
+          "semantic": {
+            "action": null,
+            "object": "pedido",
+            "score": 154,
+            "bonuses": [
+              "objeto",
+              "manual_para_entender"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Módulo Comercial - Separação de Pedido",
+          "location": "comercial/comercial-separacao-pedido/#modulo-comercial-separacao-de-pedido",
+          "category": "Manual",
+          "score": 400.79999999999995,
+          "semantic": {
+            "action": null,
+            "object": "pedido",
+            "score": 154,
+            "bonuses": [
+              "objeto",
+              "manual_para_entender"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Pedido de Compra",
+          "location": "compras/pedido-compra/#pedido-de-compra",
+          "category": "Manual",
+          "score": 396.2,
+          "semantic": {
+            "action": null,
+            "object": "pedido",
+            "score": 154,
+            "bonuses": [
+              "objeto",
+              "manual_para_entender"
+            ],
+            "penalties": []
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Módulo Comercial - Pedido de Venda",
+          "score": 621.9999999999999,
+          "bonuses": [
+            "objeto",
+            "manual_para_entender"
+          ],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Módulo Comercial - Separação de Pedido",
+          "score": 400.79999999999995,
+          "bonuses": [
+            "objeto",
+            "manual_para_entender"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        },
+        {
+          "candidate": "Pedido de Compra",
+          "score": 396.2,
+          "bonuses": [
+            "objeto",
+            "manual_para_entender"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [
+        {
+          "title": "Módulo Comercial - Separação de Pedido",
+          "location": "comercial/comercial-separacao-pedido/",
+          "category": "Manual",
+          "score": 400.79999999999995,
+          "relatedScore": 113.33333333333334
+        }
+      ],
+      "phraseChosen": "Encontrei um conteúdo principal e um complemento útil.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "M05",
+      "question": "ordem de producao material",
+      "expectedIntent": "general",
+      "identifiedIntent": "general",
+      "detectedAction": null,
+      "detectedObject": "ordem de produção",
+      "intentMatchesExpectation": true,
+      "expectedResult": "Manual: Ordem de Produção (producao/ordem-producao)",
+      "obtained": {
+        "title": "Ordem de Produção",
+        "location": "producao/ordem-producao/",
+        "category": "Manual",
+        "score": 283,
+        "related": []
+      },
+      "topRanked": [
+        {
+          "title": "Ordem de Produção",
+          "location": "producao/ordem-producao/",
+          "category": "Manual",
+          "score": 283,
+          "semantic": {
+            "action": null,
+            "object": "ordem de produção",
+            "score": 82,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Separar Material",
+          "location": "producao/separar-material/",
+          "category": "Manual",
+          "score": 130,
+          "semantic": {
+            "action": null,
+            "object": "material",
+            "score": -42,
+            "bonuses": [],
+            "penalties": [
+              "objeto_diferente"
+            ]
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Ordem de Produção",
+          "score": 283,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Separar Material",
+          "score": 130,
+          "bonuses": [],
+          "penalties": [
+            "objeto_diferente"
+          ],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [],
+      "phraseChosen": "Este material reúne a explicação mais próxima da dúvida.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "E01",
+      "question": "rejeição 930",
+      "expectedIntent": "error",
+      "identifiedIntent": "error",
+      "detectedAction": "corrigir",
+      "detectedObject": null,
+      "intentMatchesExpectation": true,
+      "expectedResult": "Rejeição: CST com benefício fiscal (erros-solucoes/rejeicoes-fiscais/rejeicao-930-cst-beneficio-fiscal-sem-codigo)",
+      "obtained": {
+        "title": "CST com benefício fiscal e não informado o código de benefício fiscal",
+        "location": "erros-solucoes/rejeicoes-fiscais/rejeicao-930-cst-beneficio-fiscal-sem-codigo/",
+        "category": "Rejeição",
+        "score": 1539.8,
+        "related": []
+      },
+      "topRanked": [
+        {
+          "title": "Rejeição 930 — CST com benefício fiscal e não informado o código de benefício fiscal",
+          "location": "erros-solucoes/rejeicoes-fiscais/rejeicao-930-cst-beneficio-fiscal-sem-codigo/#rejeicao-930-cst-com-beneficio-fiscal-e-nao-informado-o-codigo-de-beneficio-fiscal",
+          "category": "Rejeição",
+          "score": 1539.8,
+          "semantic": {
+            "action": "corrigir",
+            "object": "nota fiscal",
+            "score": 74,
+            "bonuses": [
+              "acao"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Rejeições Fiscais",
+          "location": "erros-solucoes/rejeicoes-fiscais/#rejeicoes-fiscais",
+          "category": "Rejeição",
+          "score": 74.8,
+          "semantic": {
+            "action": "corrigir",
+            "object": "inutilização",
+            "score": 74,
+            "bonuses": [
+              "acao"
+            ],
+            "penalties": []
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Rejeição 930 — CST com benefício fiscal e não informado o código de benefício fiscal",
+          "score": 1539.8,
+          "bonuses": [
+            "acao"
+          ],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Rejeições Fiscais",
+          "score": 74.8,
+          "bonuses": [
+            "acao"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [],
+      "phraseChosen": "Para essa falha, esta é a página mais indicada.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "E02",
+      "question": "erro 225 schema",
+      "expectedIntent": "error",
+      "identifiedIntent": "error",
+      "detectedAction": "corrigir",
+      "detectedObject": "xml",
+      "intentMatchesExpectation": true,
+      "expectedResult": "Rejeição: Falha no Schema XML (erros-solucoes/rejeicoes-fiscais/rejeicao-225-falha-schema-xml)",
+      "obtained": {
+        "title": "Falha no Schema XML",
+        "location": "erros-solucoes/rejeicoes-fiscais/rejeicao-225-falha-schema-xml/",
+        "category": "Rejeição",
+        "score": 1427.8000000000002,
+        "related": []
+      },
+      "topRanked": [
+        {
+          "title": "Rejeição 225 — Falha no Schema XML",
+          "location": "erros-solucoes/rejeicoes-fiscais/rejeicao-225-falha-schema-xml/#rejeicao-225-falha-no-schema-xml",
+          "category": "Rejeição",
+          "score": 1427.8000000000002,
+          "semantic": {
+            "action": "corrigir",
+            "object": "xml",
+            "score": 306,
+            "bonuses": [
+              "objeto",
+              "acao",
+              "acao_objeto"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Rejeições Fiscais",
+          "location": "erros-solucoes/rejeicoes-fiscais/#rejeicoes-fiscais",
+          "category": "Rejeição",
+          "score": 42.8,
+          "semantic": {
+            "action": "corrigir",
+            "object": "inutilização",
+            "score": 32,
+            "bonuses": [
+              "acao"
+            ],
+            "penalties": [
+              "objeto_diferente"
+            ]
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Rejeição 225 — Falha no Schema XML",
+          "score": 1427.8000000000002,
+          "bonuses": [
+            "objeto",
+            "acao",
+            "acao_objeto"
+          ],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Rejeições Fiscais",
+          "score": 42.8,
+          "bonuses": [
+            "acao"
+          ],
+          "penalties": [
+            "objeto_diferente"
+          ],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [],
+      "phraseChosen": "Separei a orientação mais direta para o problema.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "E03",
+      "question": "falha de schema xml",
+      "expectedIntent": "error",
+      "identifiedIntent": "error",
+      "detectedAction": "corrigir",
+      "detectedObject": "xml",
+      "intentMatchesExpectation": true,
+      "expectedResult": "Rejeição: Falha no Schema XML (erros-solucoes/rejeicoes-fiscais/rejeicao-225-falha-schema-xml)",
+      "obtained": {
+        "title": "Falha no Schema XML",
+        "location": "erros-solucoes/rejeicoes-fiscais/rejeicao-225-falha-schema-xml/",
+        "category": "Rejeição",
+        "score": 837.1999999999999,
+        "related": []
+      },
+      "topRanked": [
+        {
+          "title": "Rejeição 225 — Falha no Schema XML",
+          "location": "erros-solucoes/rejeicoes-fiscais/rejeicao-225-falha-schema-xml/#rejeicao-225-falha-no-schema-xml",
+          "category": "Rejeição",
+          "score": 837.1999999999999,
+          "semantic": {
+            "action": "corrigir",
+            "object": "xml",
+            "score": 306,
+            "bonuses": [
+              "objeto",
+              "acao",
+              "acao_objeto"
+            ],
+            "penalties": []
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Rejeição 225 — Falha no Schema XML",
+          "score": 837.1999999999999,
+          "bonuses": [
+            "objeto",
+            "acao",
+            "acao_objeto"
+          ],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        }
+      ],
+      "relatedChosen": [],
+      "phraseChosen": "Para corrigir essa mensagem, consulte este conteúdo.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "E04",
+      "question": "referencia objeto nao definida",
+      "expectedIntent": "general",
+      "identifiedIntent": "error",
+      "detectedAction": null,
+      "detectedObject": null,
+      "intentMatchesExpectation": false,
+      "expectedResult": "Erro: Referência do objeto não definida (erros-solucoes/problemas-tecnicos/referencia-objeto)",
+      "obtained": {
+        "title": "Referência do objeto não definida para uma instância de um objeto",
+        "location": "erros-solucoes/problemas-tecnicos/referencia-objeto-nao-definida/",
+        "category": "Erro",
+        "score": 578,
+        "related": [
+          {
+            "title": "Não estou conseguindo editar um pedido mesmo estando pendente. O que faço?",
+            "location": "referencia/faq/editar-pedido-bloqueado-workflow/",
+            "category": "FAQ",
+            "score": 72,
+            "relatedScore": 98
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Referência do objeto não definida para uma instância de um objeto",
+          "location": "erros-solucoes/problemas-tecnicos/referencia-objeto-nao-definida/",
+          "category": "Erro",
+          "score": 578,
+          "semantic": {
+            "action": null,
+            "object": null,
+            "score": 0,
+            "bonuses": [],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Não estou conseguindo editar um pedido mesmo estando pendente. O que faço?",
+          "location": "referencia/faq/editar-pedido-bloqueado-workflow/#nao-estou-conseguindo-editar-um-pedido-mesmo-estando-pendente-o-que-faco",
+          "category": "FAQ",
+          "score": 72,
+          "semantic": {
+            "action": null,
+            "object": null,
+            "score": 0,
+            "bonuses": [],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Outras perguntas",
+          "location": "referencia/faq/#outras-perguntas",
+          "category": "FAQ",
+          "score": 30.8,
+          "semantic": {
+            "action": null,
+            "object": null,
+            "score": 0,
+            "bonuses": [],
+            "penalties": []
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Referência do objeto não definida para uma instância de um objeto",
+          "score": 578,
+          "bonuses": [],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Não estou conseguindo editar um pedido mesmo estando pendente. O que faço?",
+          "score": 72,
+          "bonuses": [],
+          "penalties": [],
+          "discardReason": "score_menor"
+        },
+        {
+          "candidate": "Outras perguntas",
+          "score": 30.8,
+          "bonuses": [],
+          "penalties": [],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [
+        {
+          "title": "Não estou conseguindo editar um pedido mesmo estando pendente. O que faço?",
+          "location": "referencia/faq/editar-pedido-bloqueado-workflow/",
+          "category": "FAQ",
+          "score": 72,
+          "relatedScore": 98
+        }
+      ],
+      "phraseChosen": "Deixei também um material complementar bem próximo.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "F01",
+      "question": "cancelar nfe depois de 30 dias",
+      "expectedIntent": "guide",
+      "identifiedIntent": "guide",
+      "detectedAction": "cancelar",
+      "detectedObject": "nota fiscal",
+      "intentMatchesExpectation": true,
+      "expectedResult": "FAQ: Tem como cancelar NF-e depois de 30 dias (referencia/faq/cancelar-nfe-apos-prazo)",
+      "obtained": {
+        "title": "Tem como cancelar NF-e depois de 30 dias?",
+        "location": "referencia/faq/cancelar-nfe-apos-prazo/",
+        "category": "FAQ",
+        "score": 1129.6,
+        "related": []
+      },
+      "topRanked": [
+        {
+          "title": "Tem como cancelar NF-e depois de 30 dias?",
+          "location": "referencia/faq/cancelar-nfe-apos-prazo/#tem-como-cancelar-nf-e-depois-de-30-dias",
+          "category": "FAQ",
+          "score": 1129.6,
+          "semantic": {
+            "action": "cancelar",
+            "object": "nota fiscal",
+            "score": 306,
+            "bonuses": [
+              "objeto",
+              "acao",
+              "acao_objeto"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Como corrigir",
+          "location": "erros-solucoes/rejeicoes-fiscais/rejeicao-cancelamento-690-nfe-com-cte-mdfe/#como-corrigir",
+          "category": "Rejeição",
+          "score": 443.19999999999993,
+          "semantic": {
+            "action": "cancelar",
+            "object": "nota fiscal",
+            "score": 306,
+            "bonuses": [
+              "objeto",
+              "acao",
+              "acao_objeto"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Perguntas frequentes",
+          "location": "referencia/faq/#perguntas-frequentes",
+          "category": "FAQ",
+          "score": 119,
+          "semantic": {
+            "action": null,
+            "object": "pedido",
+            "score": -42,
+            "bonuses": [],
+            "penalties": [
+              "objeto_diferente"
+            ]
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Tem como cancelar NF-e depois de 30 dias?",
+          "score": 1129.6,
+          "bonuses": [
+            "objeto",
+            "acao",
+            "acao_objeto"
+          ],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Como corrigir",
+          "score": 443.19999999999993,
+          "bonuses": [
+            "objeto",
+            "acao",
+            "acao_objeto"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        },
+        {
+          "candidate": "Perguntas frequentes",
+          "score": 119,
+          "bonuses": [],
+          "penalties": [
+            "objeto_diferente"
+          ],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [],
+      "phraseChosen": "Para realizar essa ação, comece por aqui.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "F02",
+      "question": "consigo bloquear venda cliente atraso",
+      "expectedIntent": "guide",
+      "identifiedIntent": "general",
+      "detectedAction": null,
+      "detectedObject": "cliente",
+      "intentMatchesExpectation": false,
+      "expectedResult": "FAQ: Consigo bloquear a venda (referencia/faq/bloquear-venda-cliente-inadimplente)",
+      "obtained": {
+        "title": "Consigo bloquear a venda se o cliente tiver pagamentos em atraso?",
+        "location": "referencia/faq/bloquear-venda-cliente-inadimplente/",
+        "category": "FAQ",
+        "score": 692.4,
+        "related": []
+      },
+      "topRanked": [
+        {
+          "title": "Consigo bloquear a venda se o cliente tiver pagamentos em atraso?",
+          "location": "referencia/faq/bloquear-venda-cliente-inadimplente/#consigo-bloquear-a-venda-se-o-cliente-tiver-pagamentos-em-atraso",
+          "category": "FAQ",
+          "score": 692.4,
+          "semantic": {
+            "action": null,
+            "object": "cliente",
+            "score": 82,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Perguntas frequentes",
+          "location": "referencia/faq/#perguntas-frequentes",
+          "category": "FAQ",
+          "score": 139,
+          "semantic": {
+            "action": null,
+            "object": "pedido",
+            "score": -42,
+            "bonuses": [],
+            "penalties": [
+              "objeto_diferente"
+            ]
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Consigo bloquear a venda se o cliente tiver pagamentos em atraso?",
+          "score": 692.4,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Perguntas frequentes",
+          "score": 139,
+          "bonuses": [],
+          "penalties": [
+            "objeto_diferente"
+          ],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [],
+      "phraseChosen": "A resposta mais direta está aqui.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "F03",
+      "question": "alterar ncm produto",
+      "expectedIntent": "general",
+      "identifiedIntent": "guide",
+      "detectedAction": null,
+      "detectedObject": "material",
+      "intentMatchesExpectation": false,
+      "expectedResult": "FAQ: Como altero o NCM (referencia/faq/alterar-ncm-produto)",
+      "obtained": {
+        "title": "Como altero o NCM de um produto?",
+        "location": "referencia/faq/alterar-ncm-produto/",
+        "category": "FAQ",
+        "score": 543.4,
+        "related": [
+          {
+            "title": "Precisava mudar CFOP e CST de um produto. Como faço?",
+            "location": "referencia/faq/alterar-cfop-cst/",
+            "category": "FAQ",
+            "score": 242,
+            "relatedScore": 183.33333333333334
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Como altero o NCM de um produto?",
+          "location": "referencia/faq/alterar-ncm-produto/#como-altero-o-ncm-de-um-produto",
+          "category": "FAQ",
+          "score": 543.4,
+          "semantic": {
+            "action": null,
+            "object": "material",
+            "score": 82,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Como alterar o NCM de um material",
+          "location": "como-fazer/alterar-ncm-material/",
+          "category": "Guia",
+          "score": 333,
+          "semantic": {
+            "action": null,
+            "object": "material",
+            "score": 82,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Precisava mudar CFOP e CSOSN de um produto. Como faço?",
+          "location": "referencia/faq/alterar-cfop-csosn/#precisava-mudar-cfop-e-csosn-de-um-produto-como-faco",
+          "category": "FAQ",
+          "score": 242,
+          "semantic": {
+            "action": null,
+            "object": "material",
+            "score": 82,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": []
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Como altero o NCM de um produto?",
+          "score": 543.4,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Como alterar o NCM de um material",
+          "score": 333,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        },
+        {
+          "candidate": "Precisava mudar CFOP e CSOSN de um produto. Como faço?",
+          "score": 242,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [
+        {
+          "title": "Precisava mudar CFOP e CST de um produto. Como faço?",
+          "location": "referencia/faq/alterar-cfop-cst/",
+          "category": "FAQ",
+          "score": 242,
+          "relatedScore": 183.33333333333334
+        }
+      ],
+      "phraseChosen": "O resultado principal vem primeiro, com apoio logo abaixo.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "T01",
+      "question": "indicador de relatorio",
+      "expectedIntent": "tool",
+      "identifiedIntent": "tool",
+      "detectedAction": null,
+      "detectedObject": "relatório",
+      "intentMatchesExpectation": true,
+      "expectedResult": "Ferramenta: Indicador de Relatório (ferramentas/indicador-relatorio)",
+      "obtained": {
+        "title": "Indicador de Relatório",
+        "location": "ferramentas/indicador-relatorio/",
+        "category": "Ferramenta",
+        "score": 1136.8,
+        "related": []
+      },
+      "topRanked": [
+        {
+          "title": "Indicador de Relatório",
+          "location": "ferramentas/indicador-relatorio/#indicador-de-relatorio",
+          "category": "Ferramenta",
+          "score": 1136.8,
+          "semantic": {
+            "action": null,
+            "object": "relatório",
+            "score": 82,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Ferramentas",
+          "location": "ferramentas/#ferramentas",
+          "category": "Ferramenta",
+          "score": 252.79999999999995,
+          "semantic": {
+            "action": null,
+            "object": "relatório",
+            "score": 82,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": []
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Indicador de Relatório",
+          "score": 1136.8,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Ferramentas",
+          "score": 252.79999999999995,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [],
+      "phraseChosen": "Esse conteúdo é o melhor ponto de partida.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "T02",
+      "question": "validador xml",
+      "expectedIntent": "tool",
+      "identifiedIntent": "tool",
+      "detectedAction": null,
+      "detectedObject": "xml",
+      "intentMatchesExpectation": true,
+      "expectedResult": "Ferramenta: Validador de XML (ferramentas/validador-xml)",
+      "obtained": {
+        "title": "Validador de XML",
+        "location": "ferramentas/validador-xml/",
+        "category": "Ferramenta",
+        "score": 701.4,
+        "related": []
+      },
+      "topRanked": [
+        {
+          "title": "Validador de XML",
+          "location": "ferramentas/validador-xml/#validador-de-xml",
+          "category": "Ferramenta",
+          "score": 701.4,
+          "semantic": {
+            "action": null,
+            "object": "xml",
+            "score": 82,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Ferramentas",
+          "location": "ferramentas/#ferramentas",
+          "category": "Ferramenta",
+          "score": 117.80000000000001,
+          "semantic": {
+            "action": null,
+            "object": "relatório",
+            "score": -42,
+            "bonuses": [],
+            "penalties": [
+              "objeto_diferente"
+            ]
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Validador de XML",
+          "score": 701.4,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Ferramentas",
+          "score": 117.80000000000001,
+          "bonuses": [],
+          "penalties": [
+            "objeto_diferente"
+          ],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [],
+      "phraseChosen": "Encontrei um conteúdo direto para sua dúvida.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "R01",
+      "question": "onde vejo cliente",
+      "expectedIntent": "manual",
+      "identifiedIntent": "manual",
+      "detectedAction": "consultar",
+      "detectedObject": "cliente",
+      "intentMatchesExpectation": true,
+      "expectedResult": "Manual: Clientes (comercial/comercial-clientes)",
+      "obtained": {
+        "title": "Clientes",
+        "location": "comercial/comercial-clientes/",
+        "category": "Manual",
+        "score": 288,
+        "related": [
+          {
+            "title": "Grupo de clientes",
+            "location": "comercial/comercial-grupo-clientes/",
+            "category": "Manual",
+            "score": 288,
+            "relatedScore": 113.33333333333334
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Clientes",
+          "location": "comercial/comercial-clientes/",
+          "category": "Manual",
+          "score": 288,
+          "semantic": {
+            "action": null,
+            "object": "cliente",
+            "score": 154,
+            "bonuses": [
+              "objeto",
+              "manual_para_localizacao"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Grupo de clientes",
+          "location": "comercial/comercial-grupo-clientes/",
+          "category": "Manual",
+          "score": 288,
+          "semantic": {
+            "action": null,
+            "object": "cliente",
+            "score": 154,
+            "bonuses": [
+              "objeto",
+              "manual_para_localizacao"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Vídeos",
+          "location": "CONVENCAO_CONTEUDO/#videos",
+          "category": "Conteúdo",
+          "score": 121.60000000000001,
+          "semantic": {
+            "action": null,
+            "object": "cliente",
+            "score": 82,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": []
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Clientes",
+          "score": 288,
+          "bonuses": [
+            "objeto",
+            "manual_para_localizacao"
+          ],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Grupo de clientes",
+          "score": 288,
+          "bonuses": [
+            "objeto",
+            "manual_para_localizacao"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        },
+        {
+          "candidate": "Vídeos",
+          "score": 121.60000000000001,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [
+        {
+          "title": "Grupo de clientes",
+          "location": "comercial/comercial-grupo-clientes/",
+          "category": "Manual",
+          "score": 288,
+          "relatedScore": 113.33333333333334
+        }
+      ],
+      "phraseChosen": "Esses conteúdos se complementam para essa dúvida.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "R02",
+      "question": "como faço uma nota",
+      "expectedIntent": "guide",
+      "identifiedIntent": "guide",
+      "detectedAction": null,
+      "detectedObject": "nota fiscal",
+      "intentMatchesExpectation": true,
+      "expectedResult": "Não retornar Guia inválido: como-fazer/faturar-nota",
+      "obtained": {
+        "title": "Como consultar notas fiscais rejeitadas",
+        "location": "como-fazer/consultar-nfe-rejeitada/",
+        "category": "Guia",
+        "score": 308,
+        "related": [
+          {
+            "title": "Nota Fiscal",
+            "location": "faturamento/faturamento-nf/",
+            "category": "Manual",
+            "score": 162,
+            "relatedScore": 197.33333333333334
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Como consultar notas fiscais rejeitadas",
+          "location": "como-fazer/consultar-nfe-rejeitada/#como-consultar-notas-fiscais-rejeitadas",
+          "category": "Guia",
+          "score": 308,
+          "semantic": {
+            "action": "consultar",
+            "object": "nota fiscal",
+            "score": 82,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Como consultar notas fiscais rejeitadas",
+          "location": "como-fazer/#como-consultar-notas-fiscais-rejeitadas",
+          "category": "Guia",
+          "score": 246.4,
+          "semantic": {
+            "action": "consultar",
+            "object": "nota fiscal",
+            "score": 82,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Como corrigir",
+          "location": "erros-solucoes/erros-operacionais/calculo-nota-fiscal-sem-sucesso/#como-corrigir",
+          "category": "Erro",
+          "score": 243.4,
+          "semantic": {
+            "action": "corrigir",
+            "object": "nota fiscal",
+            "score": 82,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": []
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Como consultar notas fiscais rejeitadas",
+          "score": 308,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Como consultar notas fiscais rejeitadas",
+          "score": 246.4,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        },
+        {
+          "candidate": "Como corrigir",
+          "score": 243.4,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [
+        {
+          "title": "Nota Fiscal",
+          "location": "faturamento/faturamento-nf/",
+          "category": "Manual",
+          "score": 162,
+          "relatedScore": 197.33333333333334
+        }
+      ],
+      "phraseChosen": "Além do resultado principal, deixei uma referência de apoio.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "R03",
+      "question": "erro na nota 930",
+      "expectedIntent": "error",
+      "identifiedIntent": "error",
+      "detectedAction": "corrigir",
+      "detectedObject": "nota fiscal",
+      "intentMatchesExpectation": true,
+      "expectedResult": "Rejeição: CST com benefício fiscal (erros-solucoes/rejeicoes-fiscais/rejeicao-930-cst-beneficio-fiscal-sem-codigo)",
+      "obtained": {
+        "title": "CST com benefício fiscal e não informado o código de benefício fiscal",
+        "location": "erros-solucoes/rejeicoes-fiscais/rejeicao-930-cst-beneficio-fiscal-sem-codigo/",
+        "category": "Rejeição",
+        "score": 1295.4,
+        "related": []
+      },
+      "topRanked": [
+        {
+          "title": "Rejeição 930 — CST com benefício fiscal e não informado o código de benefício fiscal",
+          "location": "erros-solucoes/rejeicoes-fiscais/rejeicao-930-cst-beneficio-fiscal-sem-codigo/#rejeicao-930-cst-com-beneficio-fiscal-e-nao-informado-o-codigo-de-beneficio-fiscal",
+          "category": "Rejeição",
+          "score": 1295.4,
+          "semantic": {
+            "action": "corrigir",
+            "object": "nota fiscal",
+            "score": 306,
+            "bonuses": [
+              "objeto",
+              "acao",
+              "acao_objeto"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Rejeições Fiscais",
+          "location": "erros-solucoes/rejeicoes-fiscais/#rejeicoes-fiscais",
+          "category": "Rejeição",
+          "score": 39.4,
+          "semantic": {
+            "action": "corrigir",
+            "object": "inutilização",
+            "score": 32,
+            "bonuses": [
+              "acao"
+            ],
+            "penalties": [
+              "objeto_diferente"
+            ]
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Rejeição 930 — CST com benefício fiscal e não informado o código de benefício fiscal",
+          "score": 1295.4,
+          "bonuses": [
+            "objeto",
+            "acao",
+            "acao_objeto"
+          ],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Rejeições Fiscais",
+          "score": 39.4,
+          "bonuses": [
+            "acao"
+          ],
+          "penalties": [
+            "objeto_diferente"
+          ],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [],
+      "phraseChosen": "Veja a orientação para tratar esse erro.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "R04",
+      "question": "me ajuda com rejeicao 225",
+      "expectedIntent": "error",
+      "identifiedIntent": "error",
+      "detectedAction": "corrigir",
+      "detectedObject": null,
+      "intentMatchesExpectation": true,
+      "expectedResult": "Rejeição: Falha no Schema XML (erros-solucoes/rejeicoes-fiscais/rejeicao-225-falha-schema-xml)",
+      "obtained": {
+        "title": "Falha no Schema XML",
+        "location": "erros-solucoes/rejeicoes-fiscais/rejeicao-225-falha-schema-xml/",
+        "category": "Rejeição",
+        "score": 1086.1999999999998,
+        "related": []
+      },
+      "topRanked": [
+        {
+          "title": "Rejeição 225 — Falha no Schema XML",
+          "location": "erros-solucoes/rejeicoes-fiscais/rejeicao-225-falha-schema-xml/#rejeicao-225-falha-no-schema-xml",
+          "category": "Rejeição",
+          "score": 1086.1999999999998,
+          "semantic": {
+            "action": "corrigir",
+            "object": "xml",
+            "score": 74,
+            "bonuses": [
+              "acao"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Rejeições Fiscais",
+          "location": "erros-solucoes/rejeicoes-fiscais/#rejeicoes-fiscais",
+          "category": "Rejeição",
+          "score": 60.599999999999994,
+          "semantic": {
+            "action": "corrigir",
+            "object": "inutilização",
+            "score": 74,
+            "bonuses": [
+              "acao"
+            ],
+            "penalties": []
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Rejeição 225 — Falha no Schema XML",
+          "score": 1086.1999999999998,
+          "bonuses": [
+            "acao"
+          ],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Rejeições Fiscais",
+          "score": 60.599999999999994,
+          "bonuses": [
+            "acao"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [],
+      "phraseChosen": "Para corrigir essa mensagem, consulte este conteúdo.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "R05",
+      "question": "onde fica pedido",
+      "expectedIntent": "manual",
+      "identifiedIntent": "manual",
+      "detectedAction": null,
+      "detectedObject": "pedido",
+      "intentMatchesExpectation": true,
+      "expectedResult": "Manual: Pedido (comercial/pedidos)",
+      "obtained": {
+        "title": "Pedido",
+        "location": "comercial/pedidos/",
+        "category": "Manual",
+        "score": 395.4,
+        "related": [
+          {
+            "title": "Não estou conseguindo editar um pedido mesmo estando pendente. O que faço?",
+            "location": "referencia/faq/editar-pedido-bloqueado-workflow/",
+            "category": "FAQ",
+            "score": 145.60000000000002,
+            "relatedScore": 99.33333333333333
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Módulo Comercial - Pedido de Venda",
+          "location": "comercial/pedidos/#modulo-comercial-pedido-de-venda",
+          "category": "Manual",
+          "score": 395.4,
+          "semantic": {
+            "action": null,
+            "object": "pedido",
+            "score": 82,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Módulo Comercial - Separação de Pedido",
+          "location": "comercial/comercial-separacao-pedido/#modulo-comercial-separacao-de-pedido",
+          "category": "Manual",
+          "score": 245.4,
+          "semantic": {
+            "action": null,
+            "object": "pedido",
+            "score": 82,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Pedido de Compra",
+          "location": "compras/pedido-compra/",
+          "category": "Manual",
+          "score": 242,
+          "semantic": {
+            "action": null,
+            "object": "pedido",
+            "score": 82,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": []
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Módulo Comercial - Pedido de Venda",
+          "score": 395.4,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Módulo Comercial - Separação de Pedido",
+          "score": 245.4,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        },
+        {
+          "candidate": "Pedido de Compra",
+          "score": 242,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [
+        {
+          "title": "Não estou conseguindo editar um pedido mesmo estando pendente. O que faço?",
+          "location": "referencia/faq/editar-pedido-bloqueado-workflow/",
+          "category": "FAQ",
+          "score": 145.60000000000002,
+          "relatedScore": 99.33333333333333
+        }
+      ],
+      "phraseChosen": "Separei a orientação principal e um conteúdo relacionado.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "R06",
+      "question": "preciso alterar ncm",
+      "expectedIntent": "guide",
+      "identifiedIntent": "guide",
+      "detectedAction": null,
+      "detectedObject": null,
+      "intentMatchesExpectation": true,
+      "expectedResult": "Guia: Como alterar o NCM de um material (como-fazer/alterar-ncm-material)",
+      "obtained": {
+        "title": "Como alterar o NCM de um material",
+        "location": "como-fazer/alterar-ncm-material/",
+        "category": "Guia",
+        "score": 175,
+        "related": [
+          {
+            "title": "Como altero o NCM de um produto?",
+            "location": "referencia/faq/alterar-ncm-produto/",
+            "category": "FAQ",
+            "score": 87.4,
+            "relatedScore": 117.85
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Como alterar o NCM de um material",
+          "location": "como-fazer/alterar-ncm-material/",
+          "category": "Guia",
+          "score": 175,
+          "semantic": {
+            "action": null,
+            "object": null,
+            "score": 0,
+            "bonuses": [],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Como alterar o NCM de um material",
+          "location": "como-fazer/#como-alterar-o-ncm-de-um-material",
+          "category": "Guia",
+          "score": 118.6,
+          "semantic": {
+            "action": null,
+            "object": null,
+            "score": 0,
+            "bonuses": [],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Como altero o NCM de um produto?",
+          "location": "referencia/faq/alterar-ncm-produto/#como-altero-o-ncm-de-um-produto",
+          "category": "FAQ",
+          "score": 87.4,
+          "semantic": {
+            "action": null,
+            "object": null,
+            "score": 0,
+            "bonuses": [],
+            "penalties": []
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Como alterar o NCM de um material",
+          "score": 175,
+          "bonuses": [],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Como alterar o NCM de um material",
+          "score": 118.6,
+          "bonuses": [],
+          "penalties": [],
+          "discardReason": "score_menor"
+        },
+        {
+          "candidate": "Como altero o NCM de um produto?",
+          "score": 87.4,
+          "bonuses": [],
+          "penalties": [],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [
+        {
+          "title": "Como altero o NCM de um produto?",
+          "location": "referencia/faq/alterar-ncm-produto/",
+          "category": "FAQ",
+          "score": 87.4,
+          "relatedScore": 117.85
+        }
+      ],
+      "phraseChosen": "Além do resultado principal, deixei uma referência de apoio.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "R07",
+      "question": "qual relatorio eu uso",
+      "expectedIntent": "tool",
+      "identifiedIntent": "tool",
+      "detectedAction": null,
+      "detectedObject": "relatório",
+      "intentMatchesExpectation": true,
+      "expectedResult": "Ferramenta: Indicador de Relatório (ferramentas/indicador-relatorio)",
+      "obtained": {
+        "title": "Indicador de Relatório",
+        "location": "ferramentas/indicador-relatorio/",
+        "category": "Ferramenta",
+        "score": 265.4,
+        "related": [
+          {
+            "title": "Relatório WhatsApp",
+            "location": "relatorios/relatorio-whatsapp/",
+            "category": "Manual",
+            "score": 134,
+            "relatedScore": 91.33333333333333
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Indicador de Relatório",
+          "location": "ferramentas/indicador-relatorio/#indicador-de-relatorio",
+          "category": "Ferramenta",
+          "score": 265.4,
+          "semantic": {
+            "action": null,
+            "object": "relatório",
+            "score": 82,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Relatório de Não Conformidade",
+          "location": "relatorios/relatorio-nao-conformidade/",
+          "category": "Manual",
+          "score": 134,
+          "semantic": {
+            "action": null,
+            "object": "relatório",
+            "score": 82,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Relatório de Ocorrência",
+          "location": "relatorios/relatorio-ocorrencia/",
+          "category": "Manual",
+          "score": 134,
+          "semantic": {
+            "action": null,
+            "object": "relatório",
+            "score": 82,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": []
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Indicador de Relatório",
+          "score": 265.4,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Relatório de Não Conformidade",
+          "score": 134,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        },
+        {
+          "candidate": "Relatório de Ocorrência",
+          "score": 134,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [
+        {
+          "title": "Relatório WhatsApp",
+          "location": "relatorios/relatorio-whatsapp/",
+          "category": "Manual",
+          "score": 134,
+          "relatedScore": 91.33333333333333
+        }
+      ],
+      "phraseChosen": "O resultado principal vem primeiro, com apoio logo abaixo.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "R08",
+      "question": "abrir indicador de relatorios",
+      "expectedIntent": "tool",
+      "identifiedIntent": "tool",
+      "detectedAction": null,
+      "detectedObject": "relatório",
+      "intentMatchesExpectation": true,
+      "expectedResult": "Ferramenta: Indicador de Relatório (ferramentas/indicador-relatorio)",
+      "obtained": {
+        "title": "Indicador de Relatório",
+        "location": "ferramentas/indicador-relatorio/",
+        "category": "Ferramenta",
+        "score": 473.79999999999995,
+        "related": []
+      },
+      "topRanked": [
+        {
+          "title": "Indicador de Relatório",
+          "location": "ferramentas/indicador-relatorio/#indicador-de-relatorio",
+          "category": "Ferramenta",
+          "score": 473.79999999999995,
+          "semantic": {
+            "action": null,
+            "object": "relatório",
+            "score": 82,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Ferramentas",
+          "location": "ferramentas/#ferramentas",
+          "category": "Ferramenta",
+          "score": 246.19999999999993,
+          "semantic": {
+            "action": null,
+            "object": "relatório",
+            "score": 82,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Outras perguntas",
+          "location": "referencia/faq/#outras-perguntas",
+          "category": "FAQ",
+          "score": 10.8,
+          "semantic": {
+            "action": null,
+            "object": "nota fiscal",
+            "score": -42,
+            "bonuses": [],
+            "penalties": [
+              "objeto_diferente"
+            ]
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Indicador de Relatório",
+          "score": 473.79999999999995,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Ferramentas",
+          "score": 246.19999999999993,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        },
+        {
+          "candidate": "Outras perguntas",
+          "score": 10.8,
+          "bonuses": [],
+          "penalties": [
+            "objeto_diferente"
+          ],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [],
+      "phraseChosen": "O melhor resultado encontrado é este.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "R09",
+      "question": "validar xml",
+      "expectedIntent": "tool",
+      "identifiedIntent": "tool",
+      "detectedAction": null,
+      "detectedObject": "xml",
+      "intentMatchesExpectation": true,
+      "expectedResult": "Ferramenta: Validador de XML (ferramentas/validador-xml)",
+      "obtained": {
+        "title": "Validador de XML",
+        "location": "ferramentas/validador-xml/",
+        "category": "Ferramenta",
+        "score": 435.79999999999995,
+        "related": []
+      },
+      "topRanked": [
+        {
+          "title": "Validador de XML",
+          "location": "ferramentas/validador-xml/#validador-de-xml",
+          "category": "Ferramenta",
+          "score": 435.79999999999995,
+          "semantic": {
+            "action": null,
+            "object": "xml",
+            "score": 82,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": []
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Validador de XML",
+          "score": 435.79999999999995,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        }
+      ],
+      "relatedChosen": [],
+      "phraseChosen": "Este material deve responder melhor ao que você pediu.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "R10",
+      "question": "xml ta errado",
+      "expectedIntent": "tool",
+      "identifiedIntent": "tool",
+      "detectedAction": null,
+      "detectedObject": "xml",
+      "intentMatchesExpectation": true,
+      "expectedResult": "Ferramenta: Validador de XML (ferramentas/validador-xml)",
+      "obtained": {
+        "title": "Validador de XML",
+        "location": "ferramentas/validador-xml/",
+        "category": "Ferramenta",
+        "score": 358.79999999999995,
+        "related": [
+          {
+            "title": "Falha no Schema XML",
+            "location": "erros-solucoes/rejeicoes-fiscais/rejeicao-225-falha-schema-xml/",
+            "category": "Rejeição",
+            "score": 197.4,
+            "relatedScore": 91.33333333333333
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Validador de XML",
+          "location": "ferramentas/validador-xml/#validador-de-xml",
+          "category": "Ferramenta",
+          "score": 358.79999999999995,
+          "semantic": {
+            "action": null,
+            "object": "xml",
+            "score": 82,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Como a SEFAZ interpreta",
+          "location": "erros-solucoes/rejeicoes-fiscais/rejeicao-225-falha-schema-xml/#como-a-sefaz-interpreta",
+          "category": "Rejeição",
+          "score": 197.4,
+          "semantic": {
+            "action": "corrigir",
+            "object": "xml",
+            "score": 82,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Dúvidas frequentes",
+          "location": "relatorios/xml-cfe/#duvidas-frequentes",
+          "category": "Manual",
+          "score": 43.8,
+          "semantic": {
+            "action": null,
+            "object": "relatório",
+            "score": -42,
+            "bonuses": [],
+            "penalties": [
+              "objeto_diferente"
+            ]
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Validador de XML",
+          "score": 358.79999999999995,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Como a SEFAZ interpreta",
+          "score": 197.4,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        },
+        {
+          "candidate": "Dúvidas frequentes",
+          "score": 43.8,
+          "bonuses": [],
+          "penalties": [
+            "objeto_diferente"
+          ],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [
+        {
+          "title": "Falha no Schema XML",
+          "location": "erros-solucoes/rejeicoes-fiscais/rejeicao-225-falha-schema-xml/",
+          "category": "Rejeição",
+          "score": 197.4,
+          "relatedScore": 91.33333333333333
+        }
+      ],
+      "phraseChosen": "Encontrei um conteúdo principal e um complemento útil.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "R11",
+      "question": "tem como cancelar nota depois do prazo",
+      "expectedIntent": "guide",
+      "identifiedIntent": "guide",
+      "detectedAction": "cancelar",
+      "detectedObject": "nota fiscal",
+      "intentMatchesExpectation": true,
+      "expectedResult": "FAQ: Tem como cancelar NF-e depois de 30 dias (referencia/faq/cancelar-nfe-apos-prazo)",
+      "obtained": {
+        "title": "Tem como cancelar NF-e depois de 30 dias?",
+        "location": "referencia/faq/cancelar-nfe-apos-prazo/",
+        "category": "FAQ",
+        "score": 605.8,
+        "related": []
+      },
+      "topRanked": [
+        {
+          "title": "Tem como cancelar NF-e depois de 30 dias?",
+          "location": "referencia/faq/cancelar-nfe-apos-prazo/#tem-como-cancelar-nf-e-depois-de-30-dias",
+          "category": "FAQ",
+          "score": 605.8,
+          "semantic": {
+            "action": "cancelar",
+            "object": "nota fiscal",
+            "score": 306,
+            "bonuses": [
+              "objeto",
+              "acao",
+              "acao_objeto"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Como corrigir",
+          "location": "erros-solucoes/rejeicoes-fiscais/rejeicao-cancelamento-690-nfe-com-cte-mdfe/#como-corrigir",
+          "category": "Rejeição",
+          "score": 455.19999999999993,
+          "semantic": {
+            "action": "cancelar",
+            "object": "nota fiscal",
+            "score": 306,
+            "bonuses": [
+              "objeto",
+              "acao",
+              "acao_objeto"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Perguntas frequentes",
+          "location": "referencia/faq/#perguntas-frequentes",
+          "category": "FAQ",
+          "score": 111.19999999999999,
+          "semantic": {
+            "action": null,
+            "object": "pedido",
+            "score": -42,
+            "bonuses": [],
+            "penalties": [
+              "objeto_diferente"
+            ]
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Tem como cancelar NF-e depois de 30 dias?",
+          "score": 605.8,
+          "bonuses": [
+            "objeto",
+            "acao",
+            "acao_objeto"
+          ],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Como corrigir",
+          "score": 455.19999999999993,
+          "bonuses": [
+            "objeto",
+            "acao",
+            "acao_objeto"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        },
+        {
+          "candidate": "Perguntas frequentes",
+          "score": 111.19999999999999,
+          "bonuses": [],
+          "penalties": [
+            "objeto_diferente"
+          ],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [],
+      "phraseChosen": "Esse passo a passo deve atender ao que você pediu.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "A01",
+      "question": "nota",
+      "expectedIntent": "ambiguous",
+      "identifiedIntent": "ambiguous",
+      "detectedAction": null,
+      "detectedObject": "nota fiscal",
+      "intentMatchesExpectation": true,
+      "expectedResult": "Não retornar Guia inválido: como-fazer/faturar-nota",
+      "obtained": {
+        "title": "Nota Fiscal",
+        "location": "faturamento/faturamento-nf/",
+        "category": "Manual",
+        "score": 545,
+        "related": [
+          {
+            "title": "Como consultar notas fiscais rejeitadas",
+            "location": "como-fazer/consultar-nfe-rejeitada/",
+            "category": "Guia",
+            "score": 415,
+            "relatedScore": 197.33333333333334
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Nota Fiscal",
+          "location": "faturamento/faturamento-nf/#nota-fiscal",
+          "category": "Manual",
+          "score": 545,
+          "semantic": {
+            "action": "emitir",
+            "object": "nota fiscal",
+            "score": 82,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Nota Fiscal (Lote)",
+          "location": "faturamento/nota-fiscal-lote/",
+          "category": "Manual",
+          "score": 545,
+          "semantic": {
+            "action": "emitir",
+            "object": "nota fiscal",
+            "score": 82,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Nota Fiscal de Serviço",
+          "location": "faturamento/nota-fiscal-servico/",
+          "category": "Manual",
+          "score": 545,
+          "semantic": {
+            "action": "emitir",
+            "object": "nota fiscal",
+            "score": 82,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": []
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Nota Fiscal",
+          "score": 545,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Nota Fiscal (Lote)",
+          "score": 545,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        },
+        {
+          "candidate": "Nota Fiscal de Serviço",
+          "score": 545,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [
+        {
+          "title": "Como consultar notas fiscais rejeitadas",
+          "location": "como-fazer/consultar-nfe-rejeitada/",
+          "category": "Guia",
+          "score": 415,
+          "relatedScore": 197.33333333333334
+        }
+      ],
+      "phraseChosen": "Além do resultado principal, deixei uma referência de apoio.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "A02",
+      "question": "pedido",
+      "expectedIntent": "ambiguous",
+      "identifiedIntent": "ambiguous",
+      "detectedAction": null,
+      "detectedObject": "pedido",
+      "intentMatchesExpectation": true,
+      "expectedResult": "Manual: Pedido (comercial/pedidos)",
+      "obtained": {
+        "title": "Pedido",
+        "location": "comercial/pedidos/",
+        "category": "Manual",
+        "score": 1033,
+        "related": [
+          {
+            "title": "Módulo Comercial - Separação de Pedido",
+            "location": "comercial/comercial-separacao-pedido/",
+            "category": "Manual",
+            "score": 486.4,
+            "relatedScore": 107.33333333333333
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Pedido",
+          "location": "comercial/pedidos/",
+          "category": "Manual",
+          "score": 1033,
+          "semantic": {
+            "action": null,
+            "object": "pedido",
+            "score": 82,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Pedido de Compra",
+          "location": "compras/pedido-compra/",
+          "category": "Manual",
+          "score": 545,
+          "semantic": {
+            "action": null,
+            "object": "pedido",
+            "score": 82,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": []
+          }
+        },
+        {
+          "title": "Módulo Comercial - Separação de Pedido",
+          "location": "comercial/comercial-separacao-pedido/#modulo-comercial-separacao-de-pedido",
+          "category": "Manual",
+          "score": 486.4,
+          "semantic": {
+            "action": null,
+            "object": "pedido",
+            "score": 82,
+            "bonuses": [
+              "objeto"
+            ],
+            "penalties": []
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "candidate": "Pedido",
+          "score": 1033,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [],
+          "discardReason": "resultado_final"
+        },
+        {
+          "candidate": "Pedido de Compra",
+          "score": 545,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        },
+        {
+          "candidate": "Módulo Comercial - Separação de Pedido",
+          "score": 486.4,
+          "bonuses": [
+            "objeto"
+          ],
+          "penalties": [],
+          "discardReason": "score_menor"
+        }
+      ],
+      "relatedChosen": [
+        {
+          "title": "Módulo Comercial - Separação de Pedido",
+          "location": "comercial/comercial-separacao-pedido/",
+          "category": "Manual",
+          "score": 486.4,
+          "relatedScore": 107.33333333333333
+        }
+      ],
+      "phraseChosen": "Esses conteúdos se complementam para essa dúvida.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "N01",
+      "question": "como alimentar dinossauro no wcorp",
+      "expectedIntent": null,
+      "identifiedIntent": "guide",
+      "detectedAction": null,
+      "detectedObject": null,
+      "intentMatchesExpectation": null,
+      "expectedResult": "Sem resultado",
+      "obtained": null,
+      "topRanked": [],
+      "diagnostics": [],
+      "relatedChosen": [],
+      "phraseChosen": "Não tenho um resultado confiável para indicar agora. Tente informar o código, nome da tela ou mensagem completa. Caso seja uma falha do sistema, você pode abrir um chamado no Suporte.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "N02",
+      "question": "qwerty zzz sem sentido",
+      "expectedIntent": null,
+      "identifiedIntent": "general",
+      "detectedAction": null,
+      "detectedObject": null,
+      "intentMatchesExpectation": null,
+      "expectedResult": "Sem resultado",
+      "obtained": null,
+      "topRanked": [],
+      "diagnostics": [],
+      "relatedChosen": [],
+      "phraseChosen": "Essa dúvida ainda não parece ter um conteúdo específico na Central. Tente informar o código, nome da tela ou mensagem completa. Caso seja uma falha do sistema, você pode abrir um chamado no Suporte.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "N03",
+      "question": "rejeição 1026",
+      "expectedIntent": null,
+      "identifiedIntent": "error",
+      "detectedAction": "corrigir",
+      "detectedObject": null,
+      "intentMatchesExpectation": null,
+      "expectedResult": "Sem resultado",
+      "obtained": null,
+      "topRanked": [],
+      "diagnostics": [],
+      "relatedChosen": [],
+      "phraseChosen": "Não tenho um resultado confiável para indicar agora. Tente informar o código, nome da tela ou mensagem completa. Caso seja uma falha do sistema, você pode abrir um chamado no Suporte.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "N04",
+      "question": "preciso cadastrar planeta no wcorp",
+      "expectedIntent": null,
+      "identifiedIntent": "guide",
+      "detectedAction": "cadastrar",
+      "detectedObject": null,
+      "intentMatchesExpectation": null,
+      "expectedResult": "Sem resultado",
+      "obtained": null,
+      "topRanked": [],
+      "diagnostics": [],
+      "relatedChosen": [],
+      "phraseChosen": "Não encontrei uma correspondência segura para recomendar. Tente informar o código, nome da tela ou mensagem completa. Caso seja uma falha do sistema, você pode abrir um chamado no Suporte.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "N05",
+      "question": "relatorio de cafe da manha",
+      "expectedIntent": null,
+      "identifiedIntent": "general",
+      "detectedAction": null,
+      "detectedObject": "relatório",
+      "intentMatchesExpectation": null,
+      "expectedResult": "Sem resultado",
+      "obtained": null,
+      "topRanked": [],
+      "diagnostics": [],
+      "relatedChosen": [],
+      "phraseChosen": "Essa dúvida ainda não parece ter um conteúdo específico na Central. Tente informar o código, nome da tela ou mensagem completa. Caso seja uma falha do sistema, você pode abrir um chamado no Suporte.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "N06",
+      "question": "erro 9999 inexistente",
+      "expectedIntent": null,
+      "identifiedIntent": "error",
+      "detectedAction": "corrigir",
+      "detectedObject": null,
+      "intentMatchesExpectation": null,
+      "expectedResult": "Sem resultado",
+      "obtained": null,
+      "topRanked": [],
+      "diagnostics": [],
+      "relatedChosen": [],
+      "phraseChosen": "Não encontrei uma correspondência segura para recomendar. Tente informar o código, nome da tela ou mensagem completa. Caso seja uma falha do sistema, você pode abrir um chamado no Suporte.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "N07",
+      "question": "onde configuro teletransporte",
+      "expectedIntent": null,
+      "identifiedIntent": "general",
+      "detectedAction": null,
+      "detectedObject": null,
+      "intentMatchesExpectation": null,
+      "expectedResult": "Sem resultado",
+      "obtained": null,
+      "topRanked": [],
+      "diagnostics": [],
+      "relatedChosen": [],
+      "phraseChosen": "Essa dúvida ainda não parece ter um conteúdo específico na Central. Tente informar o código, nome da tela ou mensagem completa. Caso seja uma falha do sistema, você pode abrir um chamado no Suporte.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    },
+    {
+      "id": "N08",
+      "question": "pedido de pizza no wcorp",
+      "expectedIntent": null,
+      "identifiedIntent": "general",
+      "detectedAction": null,
+      "detectedObject": "pedido",
+      "intentMatchesExpectation": null,
+      "expectedResult": "Sem resultado",
+      "obtained": null,
+      "topRanked": [],
+      "diagnostics": [],
+      "relatedChosen": [],
+      "phraseChosen": "Não tenho um resultado confiável para indicar agora. Tente informar o código, nome da tela ou mensagem completa. Caso seja uma falha do sistema, você pode abrir um chamado no Suporte.",
+      "invalidGuideMatches": [],
+      "catalogIntegrityError": null,
+      "status": "PASS"
+    }
+  ],
+  "chatProbe": [
+    {
+      "type": "GUIA",
+      "title": "Como cadastrar um cliente",
+      "href": "file:///C:/Users/wavec/OneDrive/Documentos/GitHub/erp-docs/site/como-fazer/cadastrar-cliente/"
+    }
+  ],
+  "visualMetrics": [],
+  "anchorSummary": {
+    "total": 0,
+    "pass": 0,
+    "fail": 0
+  },
+  "summary": {
+    "total": 59,
+    "pass": 54,
+    "fail": 0,
+    "catalogIntegrityError": 5
+  }
+}

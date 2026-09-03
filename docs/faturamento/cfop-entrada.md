@@ -1,33 +1,50 @@
 # CFOP Entrada
 
-!!! information "Conteúdo em atualização"
-    Este manual está sendo revisado e receberá informações adicionais em breve. Enquanto isso, consulte o [Guia relacionado](../como-fazer/cadastrar-natureza-operacao.md){: target="_blank" rel="noopener" } para acompanhar o passo a passo da operação.
-
-## Objetivo
-
-Consultar ou configurar CFOPs utilizados em operações de entrada.
+A tela **CFOP Entrada** é utilizada para configurar a conversão de CFOPs nas operações de entrada do WCorp.
 
 ## Caminho
 
-`Faturamento > CFOP Entrada`.
+`Faturamento > CFOP Entrada`
 
-## Passo a passo
+## Como funciona
 
-1. Acesse a aba **Faturamento**.
-2. Clique em **CFOP Entrada**.
-3. Informe os dados necessários para localizar, cadastrar ou executar a operação.
-4. Confira as informações antes de salvar, transmitir ou confirmar.
-5. Finalize a rotina conforme a ação disponível na tela.
+A configuração relaciona um CFOP de origem a um CFOP de destino:
 
-## Campos principais
+- **De:** CFOP de origem.
+- **Para:** CFOP que será utilizado pelo WCorp na conversão da entrada.
 
-| Campo | Descrição | Observações |
-| --- | --- | --- |
-| A definir | A definir | A definir |
+O campo **NCM** pode ser utilizado na conversão para relacionar a regra ao NCM informado.
 
-## Dúvidas frequentes
+## Campos e opções
 
-| Dúvida | Orientação |
+| Campo / opção | Descrição |
 | --- | --- |
-| Quando devo usar esta rotina? | Use quando o processo estiver relacionado a **CFOP Entrada**. |
-| O que devo conferir antes de salvar? | Confira dados fiscais, documento de origem e mensagens exibidas pelo sistema. |
+| **NCM** | NCM utilizado na configuração da conversão. |
+| **De** | CFOP de origem. |
+| **Para** | CFOP de destino utilizado na conversão. |
+| **Apresentar no Relatório de Apuração de Impostos** | Define se a configuração será apresentada no Relatório de Apuração de Impostos. |
+| **Gerar Crédito de ICMS** | Define se a configuração deve gerar crédito de ICMS. |
+| **Gerar Crédito de PIS** | Define se a configuração deve gerar crédito de PIS. |
+| **Gerar Crédito de COFINS** | Define se a configuração deve gerar crédito de COFINS. |
+| **Gerar Crédito de IPI** | Define se a configuração deve gerar crédito de IPI. |
+
+## Base Tributária
+
+A tela também apresenta a seção **Base Tributária**, com os campos:
+
+- **Código**
+- **Descrição**
+
+## Cadastro
+
+1. Acesse **Faturamento > CFOP Entrada**.
+2. Clique em **Adicionar (F1)**.
+3. Informe o CFOP de origem no campo **De**.
+4. Informe o CFOP de destino no campo **Para**.
+5. Quando aplicável à conversão, informe o **NCM**.
+6. Marque as opções de crédito de impostos que devem ser consideradas na configuração.
+7. Defina as demais opções necessárias e clique em **Salvar (F2)**.
+
+## Consulta
+
+Na parte superior da tela é possível consultar as configurações já cadastradas. A listagem apresenta o CFOP de origem, o CFOP de destino e a indicação de apresentação no Relatório de Apuração de Impostos.

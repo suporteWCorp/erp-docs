@@ -7,6 +7,10 @@
   }
 
   function normalize(value) {
+    if (window.WCorpSearchUtils?.normalizeText) {
+      return window.WCorpSearchUtils.normalizeText(value);
+    }
+
     return String(value || "")
       .normalize("NFD")
       .replace(/[\u0300-\u036f]/g, "")
@@ -56,6 +60,48 @@
       error.observations,
       ...(error.tags || [])
     ].join(" "));
+  }
+
+  function errorSearchScore(card, query) {
+    if (!query) return 0;
+
+    const title = card.querySelector(".wc-error-card__heading h2")?.textContent || "";
+    const text = card.dataset.search || "";
+
+    if (window.WCorpSearchUtils?.scoreDocument) {
+      return window.WCorpSearchUtils.scoreDocument({
+        title,
+        location: card.id,
+        text
+      }, query, { intent: "error" });
+    }
+
+    return text.includes(normalize(query)) ? 1 : 0;
+  }
+
+  function matchesErrorSearch(card, query) {
+    if (!query) return true;
+
+    const normalizedQuery = normalize(query);
+    const text = card.dataset.search || "";
+    const tokens = window.WCorpSearchUtils?.tokenize?.(query) ||
+      normalizedQuery.match(/[a-z0-9]+/g) ||
+      [];
+    const codes = window.WCorpSearchUtils?.extractCodes?.(query) ||
+      normalizedQuery.match(/\b\d{3,4}\b/g) ||
+      [];
+
+    if (text.includes(normalizedQuery)) {
+      return true;
+    }
+
+    if (codes.length && !codes.every((code) => new RegExp(`\\b${code}\\b`).test(text))) {
+      return false;
+    }
+
+    return tokens.length > 0 && tokens.every((token) =>
+      text.includes(token) || window.WCorpSearchUtils?.includesWord?.(text, token)
+    );
   }
 
   function appendDetail(content, title, value, className) {
@@ -208,7 +254,8 @@
     results.append(resultsHeading, controls, list, empty);
 
     function filterArticles() {
-      const query = normalize(search.value.trim());
+      const query = search.value.trim();
+      const visibleCards = [];
       let visible = 0;
 
       cards.forEach((card) => {
@@ -216,10 +263,20 @@
         const matchesCategory = state.relatedTags.length
           ? state.relatedTags.some((tag) => card.dataset.search.includes(tag))
           : card.dataset.category === state.category;
-        const matchesSearch = !query || card.dataset.search.includes(query);
+        const matchesSearch = matchesErrorSearch(card, query);
         card.hidden = !(matchesArea && matchesCategory && matchesSearch);
-        if (!card.hidden) visible += 1;
+        if (!card.hidden) {
+          visibleCards.push({
+            card,
+            score: errorSearchScore(card, query)
+          });
+          visible += 1;
+        }
       });
+
+      visibleCards
+        .sort((first, second) => second.score - first.score)
+        .forEach(({ card }) => list.appendChild(card));
 
       status.textContent = articleCountLabel(visible);
       empty.hidden = visible !== 0;

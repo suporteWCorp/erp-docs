@@ -1,22 +1,21 @@
 ---
-error_area: "Estoque"
-error_category: "Materiais"
-error_tags:
-  - "material"
-  - "produto"
-  - "cadastro"
-  - "estoque"
+id: cadastrar-material
+title: Como cadastrar um material
+type: guia
+category: Estoque
+status: published
+tags:
+  - material
+  - produto
+  - cadastro
+  - estoque
 ---
 
 # Como cadastrar um material
 
 ## Pré-requisitos
 
-<div class="wc-prereq-list" markdown>
-
 - Descrição, unidade, categoria e dados fiscais ou comerciais do material definidos
-
-</div>
 
 ## Permissões
 
@@ -28,10 +27,7 @@ error_tags:
 
 ## Demonstração em vídeo
 
-<video class="wc-video" controls preload="auto" playsinline poster="../../assets/images/guias/materiais_materiais.png">
-  <source src="../../assets/videos/materiais_materiais.mp4" type="video/mp4">
-  Seu navegador não conseguiu reproduzir este vídeo.
-</video>
+[Demonstração do cadastro de material](../assets/videos/materiais_materiais.mp4){ .wc-video-link data-poster="../assets/images/guias/materiais_materiais.png" }
 
 ## Como fazer
 

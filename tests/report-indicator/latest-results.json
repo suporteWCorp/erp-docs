@@ -1,0 +1,1714 @@
+{
+  "generatedAt": "2026-08-28T18:54:15.950Z",
+  "source": "docs/assets/javascripts/wcorp-tools.js",
+  "catalogSource": "docs/assets/data/report-indicator-catalog.json",
+  "matchRule": "Um relatório atende somente quando contém todas as informações selecionadas.",
+  "reportCount": 65,
+  "fieldCount": 34,
+  "fields": [
+    {
+      "id": "client",
+      "label": "Cliente"
+    },
+    {
+      "id": "material",
+      "label": "Material"
+    },
+    {
+      "id": "supplier",
+      "label": "Fornecedor"
+    },
+    {
+      "id": "invoice",
+      "label": "Nota fiscal"
+    },
+    {
+      "id": "order",
+      "label": "Pedido"
+    },
+    {
+      "id": "productionOrder",
+      "label": "Ordem de produção"
+    },
+    {
+      "id": "contract",
+      "label": "Contrato"
+    },
+    {
+      "id": "quantity",
+      "label": "Quantidade"
+    },
+    {
+      "id": "value",
+      "label": "Valor"
+    },
+    {
+      "id": "date",
+      "label": "Data"
+    },
+    {
+      "id": "status",
+      "label": "Status"
+    },
+    {
+      "id": "seller",
+      "label": "Vendedor"
+    },
+    {
+      "id": "employee",
+      "label": "Funcionário"
+    },
+    {
+      "id": "serviceOrder",
+      "label": "Ordem de serviço"
+    },
+    {
+      "id": "service",
+      "label": "Serviço"
+    },
+    {
+      "id": "stock",
+      "label": "Estoque"
+    },
+    {
+      "id": "batch",
+      "label": "Lote"
+    },
+    {
+      "id": "storageLocation",
+      "label": "Local de armazenagem"
+    },
+    {
+      "id": "cost",
+      "label": "Custo"
+    },
+    {
+      "id": "profitability",
+      "label": "Preço/Lucratividade"
+    },
+    {
+      "id": "paymentCondition",
+      "label": "Condição de pagamento"
+    },
+    {
+      "id": "payment",
+      "label": "Recebimento/Pagamento"
+    },
+    {
+      "id": "dueDate",
+      "label": "Vencimento"
+    },
+    {
+      "id": "costCenter",
+      "label": "Centro de custo"
+    },
+    {
+      "id": "tax",
+      "label": "Impostos"
+    },
+    {
+      "id": "cfop",
+      "label": "CFOP"
+    },
+    {
+      "id": "commission",
+      "label": "Comissão"
+    },
+    {
+      "id": "equipment",
+      "label": "Equipamento"
+    },
+    {
+      "id": "process",
+      "label": "Processo"
+    },
+    {
+      "id": "scrap",
+      "label": "Sucata"
+    },
+    {
+      "id": "freight",
+      "label": "Transporte/Frete"
+    },
+    {
+      "id": "weight",
+      "label": "Peso"
+    },
+    {
+      "id": "document",
+      "label": "Documento"
+    },
+    {
+      "id": "maintenance",
+      "label": "Manutenção"
+    }
+  ],
+  "reports": [
+    {
+      "name": "Movimentação de Material",
+      "category": "Materiais",
+      "fields": [
+        "material",
+        "quantity",
+        "date",
+        "stock",
+        "batch",
+        "storageLocation"
+      ]
+    },
+    {
+      "name": "Estoque Sintético",
+      "category": "Materiais",
+      "fields": [
+        "material",
+        "quantity",
+        "value",
+        "stock",
+        "batch",
+        "cost"
+      ]
+    },
+    {
+      "name": "Estoque Sintético com Material Relacionado",
+      "category": "Materiais",
+      "fields": [
+        "material",
+        "quantity",
+        "value",
+        "stock",
+        "batch",
+        "cost"
+      ]
+    },
+    {
+      "name": "Estoque Analítico",
+      "category": "Materiais",
+      "fields": [
+        "material",
+        "value",
+        "stock",
+        "cost",
+        "date"
+      ]
+    },
+    {
+      "name": "Histórico de Compras",
+      "category": "Materiais",
+      "fields": [
+        "material",
+        "supplier",
+        "order",
+        "value",
+        "date",
+        "cost"
+      ]
+    },
+    {
+      "name": "Tabela de Preço",
+      "category": "Materiais",
+      "fields": [
+        "client",
+        "material",
+        "value",
+        "profitability"
+      ]
+    },
+    {
+      "name": "Consumo de Lote",
+      "category": "Materiais",
+      "fields": [
+        "material",
+        "supplier",
+        "client",
+        "invoice",
+        "productionOrder",
+        "quantity",
+        "value",
+        "date",
+        "batch",
+        "stock"
+      ]
+    },
+    {
+      "name": "Ordem de Produção Sintético",
+      "category": "Ordem de Produção",
+      "fields": [
+        "client",
+        "material",
+        "productionOrder",
+        "contract",
+        "quantity",
+        "date",
+        "status",
+        "weight",
+        "scrap",
+        "process"
+      ]
+    },
+    {
+      "name": "Ordem de Produção Analítico",
+      "category": "Ordem de Produção",
+      "fields": [
+        "client",
+        "material",
+        "invoice",
+        "order",
+        "productionOrder",
+        "contract",
+        "quantity",
+        "date",
+        "status",
+        "batch"
+      ]
+    },
+    {
+      "name": "Ordem de Produção Diária",
+      "category": "Ordem de Produção",
+      "fields": [
+        "client",
+        "material",
+        "productionOrder",
+        "quantity",
+        "date",
+        "weight",
+        "scrap",
+        "process"
+      ]
+    },
+    {
+      "name": "Ordem de Produção por Processo Realizado",
+      "category": "Ordem de Produção",
+      "fields": [
+        "material",
+        "productionOrder",
+        "quantity",
+        "date",
+        "equipment",
+        "process",
+        "scrap",
+        "weight"
+      ]
+    },
+    {
+      "name": "Apontamento de Sucatas Analítico",
+      "category": "Ordem de Produção",
+      "fields": [
+        "material",
+        "productionOrder",
+        "quantity",
+        "date",
+        "equipment",
+        "scrap"
+      ]
+    },
+    {
+      "name": "Ordem de Produção Equipamento",
+      "category": "Ordem de Produção",
+      "fields": [
+        "material",
+        "productionOrder",
+        "quantity",
+        "date",
+        "equipment",
+        "process"
+      ]
+    },
+    {
+      "name": "Equipamento Manutenção",
+      "category": "Ordem de Produção",
+      "fields": [
+        "supplier",
+        "date",
+        "equipment",
+        "maintenance"
+      ]
+    },
+    {
+      "name": "Ordem de Serviço Sintético",
+      "category": "Ordem de Serviço",
+      "fields": [
+        "client",
+        "contract",
+        "serviceOrder",
+        "date",
+        "status"
+      ]
+    },
+    {
+      "name": "Ordem de Serviço Analítico",
+      "category": "Ordem de Serviço",
+      "fields": [
+        "client",
+        "contract",
+        "serviceOrder",
+        "order",
+        "date",
+        "status"
+      ]
+    },
+    {
+      "name": "Ordem de Serviço X Recebimento Sintético",
+      "category": "Ordem de Serviço",
+      "fields": [
+        "client",
+        "contract",
+        "serviceOrder",
+        "value",
+        "date",
+        "status",
+        "payment"
+      ]
+    },
+    {
+      "name": "Ordem de Serviço X Recebimento Analítico",
+      "category": "Ordem de Serviço",
+      "fields": [
+        "client",
+        "contract",
+        "serviceOrder",
+        "value",
+        "date",
+        "status",
+        "payment"
+      ]
+    },
+    {
+      "name": "Fatura por Serviço",
+      "category": "Ordem de Serviço",
+      "fields": [
+        "client",
+        "service",
+        "value",
+        "date",
+        "payment",
+        "dueDate"
+      ]
+    },
+    {
+      "name": "Orçamentos Analítico",
+      "category": "Vendas",
+      "fields": [
+        "client",
+        "contract",
+        "value",
+        "date",
+        "status",
+        "seller",
+        "paymentCondition",
+        "freight"
+      ]
+    },
+    {
+      "name": "Pedidos Sintético",
+      "category": "Vendas",
+      "fields": [
+        "client",
+        "invoice",
+        "order",
+        "quantity",
+        "value",
+        "date",
+        "status",
+        "seller",
+        "paymentCondition",
+        "payment"
+      ]
+    },
+    {
+      "name": "Pedidos Analítico",
+      "category": "Vendas",
+      "fields": [
+        "client",
+        "material",
+        "invoice",
+        "order",
+        "productionOrder",
+        "contract",
+        "quantity",
+        "value",
+        "date",
+        "status",
+        "seller",
+        "paymentCondition",
+        "freight"
+      ]
+    },
+    {
+      "name": "Vendas X Lucratividade",
+      "category": "Vendas",
+      "fields": [
+        "client",
+        "material",
+        "order",
+        "contract",
+        "quantity",
+        "value",
+        "date",
+        "status",
+        "employee",
+        "serviceOrder",
+        "cost",
+        "profitability"
+      ]
+    },
+    {
+      "name": "Pedidos - Movimentação do Caixa",
+      "category": "Vendas",
+      "fields": [
+        "client",
+        "order",
+        "contract",
+        "value",
+        "date",
+        "status",
+        "seller",
+        "paymentCondition",
+        "freight"
+      ]
+    },
+    {
+      "name": "Pedidos Disponíveis para Faturamento",
+      "category": "Vendas",
+      "fields": [
+        "client",
+        "order",
+        "contract",
+        "date",
+        "seller"
+      ]
+    },
+    {
+      "name": "Materiais Mais Vendidos",
+      "category": "Vendas",
+      "fields": [
+        "material",
+        "quantity",
+        "value",
+        "stock",
+        "batch"
+      ]
+    },
+    {
+      "name": "Vendas de Material por Cliente",
+      "category": "Vendas",
+      "fields": [
+        "client",
+        "material",
+        "invoice",
+        "order",
+        "quantity",
+        "value",
+        "date",
+        "status"
+      ]
+    },
+    {
+      "name": "Vendas por Dia/Hora",
+      "category": "Vendas",
+      "fields": [
+        "order",
+        "value",
+        "date"
+      ]
+    },
+    {
+      "name": "Demonstrativo de Vendas por Material",
+      "category": "Vendas",
+      "fields": [
+        "material",
+        "quantity",
+        "value"
+      ]
+    },
+    {
+      "name": "Comissões",
+      "category": "Vendas",
+      "fields": [
+        "client",
+        "material",
+        "invoice",
+        "order",
+        "contract",
+        "quantity",
+        "value",
+        "date",
+        "seller",
+        "employee",
+        "serviceOrder",
+        "service",
+        "commission",
+        "freight"
+      ]
+    },
+    {
+      "name": "Comissões por Recebimento",
+      "category": "Vendas",
+      "fields": [
+        "client",
+        "invoice",
+        "order",
+        "contract",
+        "value",
+        "date",
+        "commission",
+        "payment"
+      ]
+    },
+    {
+      "name": "Pedidos X Recebimento Sintético",
+      "category": "Vendas",
+      "fields": [
+        "client",
+        "order",
+        "contract",
+        "value",
+        "date",
+        "status",
+        "paymentCondition",
+        "payment"
+      ]
+    },
+    {
+      "name": "Pedidos X Recebimento Analítico",
+      "category": "Vendas",
+      "fields": [
+        "client",
+        "order",
+        "contract",
+        "value",
+        "date",
+        "status",
+        "paymentCondition",
+        "payment"
+      ]
+    },
+    {
+      "name": "Pedidos Analítico por Data de Entrega",
+      "category": "Vendas",
+      "fields": [
+        "client",
+        "material",
+        "order",
+        "contract",
+        "quantity",
+        "value",
+        "date",
+        "status",
+        "seller",
+        "paymentCondition"
+      ]
+    },
+    {
+      "name": "Pedidos X Ficha Técnica",
+      "category": "Vendas",
+      "fields": [
+        "client",
+        "material",
+        "order",
+        "productionOrder",
+        "quantity",
+        "date",
+        "status",
+        "seller"
+      ]
+    },
+    {
+      "name": "Pedido X Ordem Produção",
+      "category": "Vendas",
+      "fields": [
+        "client",
+        "material",
+        "order",
+        "productionOrder",
+        "quantity",
+        "value",
+        "date",
+        "status",
+        "process"
+      ]
+    },
+    {
+      "name": "Despacho",
+      "category": "Vendas",
+      "fields": [
+        "client",
+        "supplier",
+        "invoice",
+        "order",
+        "value",
+        "date",
+        "freight",
+        "weight",
+        "tax"
+      ]
+    },
+    {
+      "name": "Despacho por Pedido",
+      "category": "Vendas",
+      "fields": [
+        "client",
+        "invoice",
+        "order",
+        "value",
+        "date",
+        "freight",
+        "tax"
+      ]
+    },
+    {
+      "name": "Ranking de Vendas por Cliente",
+      "category": "Vendas",
+      "fields": [
+        "client",
+        "order",
+        "quantity",
+        "value",
+        "seller",
+        "profitability"
+      ]
+    },
+    {
+      "name": "Clientes que não compraram",
+      "category": "Vendas",
+      "fields": [
+        "client",
+        "order",
+        "quantity",
+        "date",
+        "seller"
+      ]
+    },
+    {
+      "name": "Devoluções",
+      "category": "Vendas",
+      "fields": [
+        "client",
+        "material",
+        "invoice",
+        "order",
+        "quantity",
+        "value",
+        "date"
+      ]
+    },
+    {
+      "name": "Nota Fiscal Sintético",
+      "category": "Faturamento",
+      "fields": [
+        "client",
+        "invoice",
+        "value",
+        "date",
+        "status",
+        "tax",
+        "freight",
+        "weight"
+      ]
+    },
+    {
+      "name": "Nota Fiscal Analítico",
+      "category": "Faturamento",
+      "fields": [
+        "client",
+        "material",
+        "invoice",
+        "quantity",
+        "value",
+        "date",
+        "status",
+        "tax",
+        "cfop",
+        "freight",
+        "weight"
+      ]
+    },
+    {
+      "name": "Entrada Nota Fiscal Sintético",
+      "category": "Faturamento",
+      "fields": [
+        "supplier",
+        "invoice",
+        "value",
+        "date"
+      ]
+    },
+    {
+      "name": "Entrada Nota Fiscal Analítico",
+      "category": "Faturamento",
+      "fields": [
+        "material",
+        "supplier",
+        "invoice",
+        "order",
+        "quantity",
+        "value",
+        "date",
+        "tax",
+        "cfop"
+      ]
+    },
+    {
+      "name": "Cupom Fiscal Sintético",
+      "category": "Faturamento",
+      "fields": [
+        "client",
+        "invoice",
+        "order",
+        "value",
+        "date",
+        "status",
+        "tax",
+        "freight"
+      ]
+    },
+    {
+      "name": "Cupom Fiscal Analítico",
+      "category": "Faturamento",
+      "fields": [
+        "client",
+        "invoice",
+        "order",
+        "value",
+        "date",
+        "status",
+        "tax",
+        "freight"
+      ]
+    },
+    {
+      "name": "Nota Fiscal Serviço Sintético",
+      "category": "Faturamento",
+      "fields": [
+        "client",
+        "invoice",
+        "service",
+        "value",
+        "date",
+        "status",
+        "tax"
+      ]
+    },
+    {
+      "name": "Nota Fiscal Apuração de Impostos",
+      "category": "Faturamento",
+      "fields": [
+        "client",
+        "supplier",
+        "invoice",
+        "value",
+        "date",
+        "tax",
+        "cfop"
+      ]
+    },
+    {
+      "name": "Apuração de Impostos por CFOP",
+      "category": "Faturamento",
+      "fields": [
+        "value",
+        "tax",
+        "cfop"
+      ]
+    },
+    {
+      "name": "Contas a Pagar",
+      "category": "Contas a Pagar",
+      "fields": [
+        "supplier",
+        "invoice",
+        "contract",
+        "value",
+        "date",
+        "status",
+        "employee",
+        "payment",
+        "dueDate",
+        "costCenter"
+      ]
+    },
+    {
+      "name": "Contas a Pagar por Centro de Custo",
+      "category": "Contas a Pagar",
+      "fields": [
+        "supplier",
+        "invoice",
+        "contract",
+        "value",
+        "date",
+        "status",
+        "employee",
+        "payment",
+        "dueDate",
+        "costCenter"
+      ]
+    },
+    {
+      "name": "Contas a Receber",
+      "category": "Contas a Receber",
+      "fields": [
+        "client",
+        "supplier",
+        "invoice",
+        "order",
+        "contract",
+        "value",
+        "date",
+        "status",
+        "employee",
+        "payment",
+        "dueDate"
+      ]
+    },
+    {
+      "name": "Contas a Receber por Centro de Custo",
+      "category": "Contas a Receber",
+      "fields": [
+        "client",
+        "supplier",
+        "invoice",
+        "contract",
+        "value",
+        "date",
+        "status",
+        "employee",
+        "payment",
+        "dueDate",
+        "costCenter"
+      ]
+    },
+    {
+      "name": "Movimentação de Contas",
+      "category": "Financeiro",
+      "fields": [
+        "client",
+        "supplier",
+        "invoice",
+        "value",
+        "date",
+        "employee",
+        "costCenter"
+      ]
+    },
+    {
+      "name": "Cheques",
+      "category": "Financeiro",
+      "fields": [
+        "client",
+        "supplier",
+        "value",
+        "date",
+        "status",
+        "employee",
+        "payment",
+        "dueDate",
+        "costCenter"
+      ]
+    },
+    {
+      "name": "Solicitação de Pagamento",
+      "category": "Financeiro",
+      "fields": [
+        "client",
+        "supplier",
+        "contract",
+        "date",
+        "employee",
+        "payment"
+      ]
+    },
+    {
+      "name": "Pedidos de Compra Sintético",
+      "category": "Compras",
+      "fields": [
+        "client",
+        "supplier",
+        "invoice",
+        "order",
+        "contract",
+        "value",
+        "date",
+        "status",
+        "freight"
+      ]
+    },
+    {
+      "name": "Pedidos de Compra Analítico",
+      "category": "Compras",
+      "fields": [
+        "client",
+        "material",
+        "supplier",
+        "order",
+        "contract",
+        "quantity",
+        "value",
+        "date",
+        "status",
+        "freight",
+        "tax",
+        "service"
+      ]
+    },
+    {
+      "name": "Conhecimento de Transporte Sintético",
+      "category": "Transporte",
+      "fields": [
+        "client",
+        "supplier",
+        "invoice",
+        "quantity",
+        "value",
+        "date",
+        "status",
+        "freight"
+      ]
+    },
+    {
+      "name": "Faturamento Sintético",
+      "category": "Transporte",
+      "fields": [
+        "client",
+        "value",
+        "date",
+        "dueDate",
+        "payment"
+      ]
+    },
+    {
+      "name": "Faturamento Analítico",
+      "category": "Transporte",
+      "fields": [
+        "client",
+        "value",
+        "date",
+        "dueDate",
+        "payment"
+      ]
+    },
+    {
+      "name": "Estatístico de Conhecimento de Transporte",
+      "category": "Transporte",
+      "fields": [
+        "quantity",
+        "value",
+        "date",
+        "tax",
+        "freight",
+        "weight"
+      ]
+    },
+    {
+      "name": "Documentos do Funcionário",
+      "category": "Funcionário",
+      "fields": [
+        "date",
+        "employee",
+        "document",
+        "dueDate"
+      ]
+    },
+    {
+      "name": "Rendimento do Funcionário",
+      "category": "Funcionário",
+      "fields": [
+        "quantity",
+        "date",
+        "employee"
+      ]
+    }
+  ],
+  "catalogValidation": {
+    "status": "PASS",
+    "meaning": "PASS indica apenas equivalencia estrutural com o mapeamento atual; nao confirma operacionalmente as informacoes no WCorp.",
+    "reportCount": 65,
+    "expectedReportCount": 65,
+    "associationCount": 482,
+    "confirmedAssociations": 0,
+    "unconfirmedAssociations": 482,
+    "duplicateIds": [],
+    "duplicateReports": [],
+    "duplicateFieldsByReport": [],
+    "errors": [],
+    "warnings": []
+  },
+  "tests": [
+    {
+      "id": "Q01",
+      "query": "Cliente",
+      "selectedFields": [
+        "Cliente"
+      ],
+      "expected": [
+        "Tabela de Preço",
+        "Consumo de Lote",
+        "Ordem de Produção Sintético",
+        "Ordem de Produção Analítico",
+        "Ordem de Produção Diária",
+        "Ordem de Serviço Sintético",
+        "Ordem de Serviço Analítico",
+        "Ordem de Serviço X Recebimento Sintético",
+        "Ordem de Serviço X Recebimento Analítico",
+        "Fatura por Serviço",
+        "Orçamentos Analítico",
+        "Pedidos Sintético",
+        "Pedidos Analítico",
+        "Vendas X Lucratividade",
+        "Pedidos - Movimentação do Caixa",
+        "Pedidos Disponíveis para Faturamento",
+        "Vendas de Material por Cliente",
+        "Comissões",
+        "Comissões por Recebimento",
+        "Pedidos X Recebimento Sintético",
+        "Pedidos X Recebimento Analítico",
+        "Pedidos Analítico por Data de Entrega",
+        "Pedidos X Ficha Técnica",
+        "Pedido X Ordem Produção",
+        "Despacho",
+        "Despacho por Pedido",
+        "Ranking de Vendas por Cliente",
+        "Clientes que não compraram",
+        "Devoluções",
+        "Nota Fiscal Sintético",
+        "Nota Fiscal Analítico",
+        "Cupom Fiscal Sintético",
+        "Cupom Fiscal Analítico",
+        "Nota Fiscal Serviço Sintético",
+        "Nota Fiscal Apuração de Impostos",
+        "Contas a Receber",
+        "Contas a Receber por Centro de Custo",
+        "Movimentação de Contas",
+        "Cheques",
+        "Solicitação de Pagamento",
+        "Pedidos de Compra Sintético",
+        "Pedidos de Compra Analítico",
+        "Conhecimento de Transporte Sintético",
+        "Faturamento Sintético",
+        "Faturamento Analítico"
+      ],
+      "obtained": [
+        "Tabela de Preço",
+        "Consumo de Lote",
+        "Ordem de Produção Sintético",
+        "Ordem de Produção Analítico",
+        "Ordem de Produção Diária",
+        "Ordem de Serviço Sintético",
+        "Ordem de Serviço Analítico",
+        "Ordem de Serviço X Recebimento Sintético",
+        "Ordem de Serviço X Recebimento Analítico",
+        "Fatura por Serviço",
+        "Orçamentos Analítico",
+        "Pedidos Sintético",
+        "Pedidos Analítico",
+        "Vendas X Lucratividade",
+        "Pedidos - Movimentação do Caixa",
+        "Pedidos Disponíveis para Faturamento",
+        "Vendas de Material por Cliente",
+        "Comissões",
+        "Comissões por Recebimento",
+        "Pedidos X Recebimento Sintético",
+        "Pedidos X Recebimento Analítico",
+        "Pedidos Analítico por Data de Entrega",
+        "Pedidos X Ficha Técnica",
+        "Pedido X Ordem Produção",
+        "Despacho",
+        "Despacho por Pedido",
+        "Ranking de Vendas por Cliente",
+        "Clientes que não compraram",
+        "Devoluções",
+        "Nota Fiscal Sintético",
+        "Nota Fiscal Analítico",
+        "Cupom Fiscal Sintético",
+        "Cupom Fiscal Analítico",
+        "Nota Fiscal Serviço Sintético",
+        "Nota Fiscal Apuração de Impostos",
+        "Contas a Receber",
+        "Contas a Receber por Centro de Custo",
+        "Movimentação de Contas",
+        "Cheques",
+        "Solicitação de Pagamento",
+        "Pedidos de Compra Sintético",
+        "Pedidos de Compra Analítico",
+        "Conhecimento de Transporte Sintético",
+        "Faturamento Sintético",
+        "Faturamento Analítico"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "Q02",
+      "query": "Material",
+      "selectedFields": [
+        "Material"
+      ],
+      "expected": [
+        "Movimentação de Material",
+        "Estoque Sintético",
+        "Estoque Sintético com Material Relacionado",
+        "Estoque Analítico",
+        "Histórico de Compras",
+        "Tabela de Preço",
+        "Consumo de Lote",
+        "Ordem de Produção Sintético",
+        "Ordem de Produção Analítico",
+        "Ordem de Produção Diária",
+        "Ordem de Produção por Processo Realizado",
+        "Apontamento de Sucatas Analítico",
+        "Ordem de Produção Equipamento",
+        "Pedidos Analítico",
+        "Vendas X Lucratividade",
+        "Materiais Mais Vendidos",
+        "Vendas de Material por Cliente",
+        "Demonstrativo de Vendas por Material",
+        "Comissões",
+        "Pedidos Analítico por Data de Entrega",
+        "Pedidos X Ficha Técnica",
+        "Pedido X Ordem Produção",
+        "Devoluções",
+        "Nota Fiscal Analítico",
+        "Entrada Nota Fiscal Analítico",
+        "Pedidos de Compra Analítico"
+      ],
+      "obtained": [
+        "Movimentação de Material",
+        "Estoque Sintético",
+        "Estoque Sintético com Material Relacionado",
+        "Estoque Analítico",
+        "Histórico de Compras",
+        "Tabela de Preço",
+        "Consumo de Lote",
+        "Ordem de Produção Sintético",
+        "Ordem de Produção Analítico",
+        "Ordem de Produção Diária",
+        "Ordem de Produção por Processo Realizado",
+        "Apontamento de Sucatas Analítico",
+        "Ordem de Produção Equipamento",
+        "Pedidos Analítico",
+        "Vendas X Lucratividade",
+        "Materiais Mais Vendidos",
+        "Vendas de Material por Cliente",
+        "Demonstrativo de Vendas por Material",
+        "Comissões",
+        "Pedidos Analítico por Data de Entrega",
+        "Pedidos X Ficha Técnica",
+        "Pedido X Ordem Produção",
+        "Devoluções",
+        "Nota Fiscal Analítico",
+        "Entrada Nota Fiscal Analítico",
+        "Pedidos de Compra Analítico"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "Q03",
+      "query": "Nota fiscal",
+      "selectedFields": [
+        "Nota fiscal"
+      ],
+      "expected": [
+        "Consumo de Lote",
+        "Ordem de Produção Analítico",
+        "Pedidos Sintético",
+        "Pedidos Analítico",
+        "Vendas de Material por Cliente",
+        "Comissões",
+        "Comissões por Recebimento",
+        "Despacho",
+        "Despacho por Pedido",
+        "Devoluções",
+        "Nota Fiscal Sintético",
+        "Nota Fiscal Analítico",
+        "Entrada Nota Fiscal Sintético",
+        "Entrada Nota Fiscal Analítico",
+        "Cupom Fiscal Sintético",
+        "Cupom Fiscal Analítico",
+        "Nota Fiscal Serviço Sintético",
+        "Nota Fiscal Apuração de Impostos",
+        "Contas a Pagar",
+        "Contas a Pagar por Centro de Custo",
+        "Contas a Receber",
+        "Contas a Receber por Centro de Custo",
+        "Movimentação de Contas",
+        "Pedidos de Compra Sintético",
+        "Conhecimento de Transporte Sintético"
+      ],
+      "obtained": [
+        "Consumo de Lote",
+        "Ordem de Produção Analítico",
+        "Pedidos Sintético",
+        "Pedidos Analítico",
+        "Vendas de Material por Cliente",
+        "Comissões",
+        "Comissões por Recebimento",
+        "Despacho",
+        "Despacho por Pedido",
+        "Devoluções",
+        "Nota Fiscal Sintético",
+        "Nota Fiscal Analítico",
+        "Entrada Nota Fiscal Sintético",
+        "Entrada Nota Fiscal Analítico",
+        "Cupom Fiscal Sintético",
+        "Cupom Fiscal Analítico",
+        "Nota Fiscal Serviço Sintético",
+        "Nota Fiscal Apuração de Impostos",
+        "Contas a Pagar",
+        "Contas a Pagar por Centro de Custo",
+        "Contas a Receber",
+        "Contas a Receber por Centro de Custo",
+        "Movimentação de Contas",
+        "Pedidos de Compra Sintético",
+        "Conhecimento de Transporte Sintético"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "Q04",
+      "query": "Pedido",
+      "selectedFields": [
+        "Pedido"
+      ],
+      "expected": [
+        "Histórico de Compras",
+        "Ordem de Produção Analítico",
+        "Ordem de Serviço Analítico",
+        "Pedidos Sintético",
+        "Pedidos Analítico",
+        "Vendas X Lucratividade",
+        "Pedidos - Movimentação do Caixa",
+        "Pedidos Disponíveis para Faturamento",
+        "Vendas de Material por Cliente",
+        "Vendas por Dia/Hora",
+        "Comissões",
+        "Comissões por Recebimento",
+        "Pedidos X Recebimento Sintético",
+        "Pedidos X Recebimento Analítico",
+        "Pedidos Analítico por Data de Entrega",
+        "Pedidos X Ficha Técnica",
+        "Pedido X Ordem Produção",
+        "Despacho",
+        "Despacho por Pedido",
+        "Ranking de Vendas por Cliente",
+        "Clientes que não compraram",
+        "Devoluções",
+        "Entrada Nota Fiscal Analítico",
+        "Cupom Fiscal Sintético",
+        "Cupom Fiscal Analítico",
+        "Contas a Receber",
+        "Pedidos de Compra Sintético",
+        "Pedidos de Compra Analítico"
+      ],
+      "obtained": [
+        "Histórico de Compras",
+        "Ordem de Produção Analítico",
+        "Ordem de Serviço Analítico",
+        "Pedidos Sintético",
+        "Pedidos Analítico",
+        "Vendas X Lucratividade",
+        "Pedidos - Movimentação do Caixa",
+        "Pedidos Disponíveis para Faturamento",
+        "Vendas de Material por Cliente",
+        "Vendas por Dia/Hora",
+        "Comissões",
+        "Comissões por Recebimento",
+        "Pedidos X Recebimento Sintético",
+        "Pedidos X Recebimento Analítico",
+        "Pedidos Analítico por Data de Entrega",
+        "Pedidos X Ficha Técnica",
+        "Pedido X Ordem Produção",
+        "Despacho",
+        "Despacho por Pedido",
+        "Ranking de Vendas por Cliente",
+        "Clientes que não compraram",
+        "Devoluções",
+        "Entrada Nota Fiscal Analítico",
+        "Cupom Fiscal Sintético",
+        "Cupom Fiscal Analítico",
+        "Contas a Receber",
+        "Pedidos de Compra Sintético",
+        "Pedidos de Compra Analítico"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "Q05",
+      "query": "Cliente + Material",
+      "selectedFields": [
+        "Cliente",
+        "Material"
+      ],
+      "expected": [
+        "Tabela de Preço",
+        "Consumo de Lote",
+        "Ordem de Produção Sintético",
+        "Ordem de Produção Analítico",
+        "Ordem de Produção Diária",
+        "Pedidos Analítico",
+        "Vendas X Lucratividade",
+        "Vendas de Material por Cliente",
+        "Comissões",
+        "Pedidos Analítico por Data de Entrega",
+        "Pedidos X Ficha Técnica",
+        "Pedido X Ordem Produção",
+        "Devoluções",
+        "Nota Fiscal Analítico",
+        "Pedidos de Compra Analítico"
+      ],
+      "obtained": [
+        "Tabela de Preço",
+        "Consumo de Lote",
+        "Ordem de Produção Sintético",
+        "Ordem de Produção Analítico",
+        "Ordem de Produção Diária",
+        "Pedidos Analítico",
+        "Vendas X Lucratividade",
+        "Vendas de Material por Cliente",
+        "Comissões",
+        "Pedidos Analítico por Data de Entrega",
+        "Pedidos X Ficha Técnica",
+        "Pedido X Ordem Produção",
+        "Devoluções",
+        "Nota Fiscal Analítico",
+        "Pedidos de Compra Analítico"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "Q06",
+      "query": "Cliente + Nota fiscal",
+      "selectedFields": [
+        "Cliente",
+        "Nota fiscal"
+      ],
+      "expected": [
+        "Consumo de Lote",
+        "Ordem de Produção Analítico",
+        "Pedidos Sintético",
+        "Pedidos Analítico",
+        "Vendas de Material por Cliente",
+        "Comissões",
+        "Comissões por Recebimento",
+        "Despacho",
+        "Despacho por Pedido",
+        "Devoluções",
+        "Nota Fiscal Sintético",
+        "Nota Fiscal Analítico",
+        "Cupom Fiscal Sintético",
+        "Cupom Fiscal Analítico",
+        "Nota Fiscal Serviço Sintético",
+        "Nota Fiscal Apuração de Impostos",
+        "Contas a Receber",
+        "Contas a Receber por Centro de Custo",
+        "Movimentação de Contas",
+        "Pedidos de Compra Sintético",
+        "Conhecimento de Transporte Sintético"
+      ],
+      "obtained": [
+        "Consumo de Lote",
+        "Ordem de Produção Analítico",
+        "Pedidos Sintético",
+        "Pedidos Analítico",
+        "Vendas de Material por Cliente",
+        "Comissões",
+        "Comissões por Recebimento",
+        "Despacho",
+        "Despacho por Pedido",
+        "Devoluções",
+        "Nota Fiscal Sintético",
+        "Nota Fiscal Analítico",
+        "Cupom Fiscal Sintético",
+        "Cupom Fiscal Analítico",
+        "Nota Fiscal Serviço Sintético",
+        "Nota Fiscal Apuração de Impostos",
+        "Contas a Receber",
+        "Contas a Receber por Centro de Custo",
+        "Movimentação de Contas",
+        "Pedidos de Compra Sintético",
+        "Conhecimento de Transporte Sintético"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "Q07",
+      "query": "Cliente + Material + Nota fiscal",
+      "selectedFields": [
+        "Cliente",
+        "Material",
+        "Nota fiscal"
+      ],
+      "expected": [
+        "Consumo de Lote",
+        "Ordem de Produção Analítico",
+        "Pedidos Analítico",
+        "Vendas de Material por Cliente",
+        "Comissões",
+        "Devoluções",
+        "Nota Fiscal Analítico"
+      ],
+      "obtained": [
+        "Consumo de Lote",
+        "Ordem de Produção Analítico",
+        "Pedidos Analítico",
+        "Vendas de Material por Cliente",
+        "Comissões",
+        "Devoluções",
+        "Nota Fiscal Analítico"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "Q08",
+      "query": "Cliente + Material + Nota fiscal + Pedido",
+      "selectedFields": [
+        "Cliente",
+        "Material",
+        "Nota fiscal",
+        "Pedido"
+      ],
+      "expected": [
+        "Ordem de Produção Analítico",
+        "Pedidos Analítico",
+        "Vendas de Material por Cliente",
+        "Comissões",
+        "Devoluções"
+      ],
+      "obtained": [
+        "Ordem de Produção Analítico",
+        "Pedidos Analítico",
+        "Vendas de Material por Cliente",
+        "Comissões",
+        "Devoluções"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "Q09",
+      "query": "Fornecedor + Nota fiscal",
+      "selectedFields": [
+        "Fornecedor",
+        "Nota fiscal"
+      ],
+      "expected": [
+        "Consumo de Lote",
+        "Despacho",
+        "Entrada Nota Fiscal Sintético",
+        "Entrada Nota Fiscal Analítico",
+        "Nota Fiscal Apuração de Impostos",
+        "Contas a Pagar",
+        "Contas a Pagar por Centro de Custo",
+        "Contas a Receber",
+        "Contas a Receber por Centro de Custo",
+        "Movimentação de Contas",
+        "Pedidos de Compra Sintético",
+        "Conhecimento de Transporte Sintético"
+      ],
+      "obtained": [
+        "Consumo de Lote",
+        "Despacho",
+        "Entrada Nota Fiscal Sintético",
+        "Entrada Nota Fiscal Analítico",
+        "Nota Fiscal Apuração de Impostos",
+        "Contas a Pagar",
+        "Contas a Pagar por Centro de Custo",
+        "Contas a Receber",
+        "Contas a Receber por Centro de Custo",
+        "Movimentação de Contas",
+        "Pedidos de Compra Sintético",
+        "Conhecimento de Transporte Sintético"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "Q10",
+      "query": "Vendedor + Cliente",
+      "selectedFields": [
+        "Vendedor",
+        "Cliente"
+      ],
+      "expected": [
+        "Orçamentos Analítico",
+        "Pedidos Sintético",
+        "Pedidos Analítico",
+        "Pedidos - Movimentação do Caixa",
+        "Pedidos Disponíveis para Faturamento",
+        "Comissões",
+        "Pedidos Analítico por Data de Entrega",
+        "Pedidos X Ficha Técnica",
+        "Ranking de Vendas por Cliente",
+        "Clientes que não compraram"
+      ],
+      "obtained": [
+        "Orçamentos Analítico",
+        "Pedidos Sintético",
+        "Pedidos Analítico",
+        "Pedidos - Movimentação do Caixa",
+        "Pedidos Disponíveis para Faturamento",
+        "Comissões",
+        "Pedidos Analítico por Data de Entrega",
+        "Pedidos X Ficha Técnica",
+        "Ranking de Vendas por Cliente",
+        "Clientes que não compraram"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "Q11",
+      "query": "Estoque + Lote",
+      "selectedFields": [
+        "Estoque",
+        "Lote"
+      ],
+      "expected": [
+        "Movimentação de Material",
+        "Estoque Sintético",
+        "Estoque Sintético com Material Relacionado",
+        "Consumo de Lote",
+        "Materiais Mais Vendidos"
+      ],
+      "obtained": [
+        "Movimentação de Material",
+        "Estoque Sintético",
+        "Estoque Sintético com Material Relacionado",
+        "Consumo de Lote",
+        "Materiais Mais Vendidos"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "Q12",
+      "query": "Ordem de produção + Material",
+      "selectedFields": [
+        "Ordem de produção",
+        "Material"
+      ],
+      "expected": [
+        "Consumo de Lote",
+        "Ordem de Produção Sintético",
+        "Ordem de Produção Analítico",
+        "Ordem de Produção Diária",
+        "Ordem de Produção por Processo Realizado",
+        "Apontamento de Sucatas Analítico",
+        "Ordem de Produção Equipamento",
+        "Pedidos Analítico",
+        "Pedidos X Ficha Técnica",
+        "Pedido X Ordem Produção"
+      ],
+      "obtained": [
+        "Consumo de Lote",
+        "Ordem de Produção Sintético",
+        "Ordem de Produção Analítico",
+        "Ordem de Produção Diária",
+        "Ordem de Produção por Processo Realizado",
+        "Apontamento de Sucatas Analítico",
+        "Ordem de Produção Equipamento",
+        "Pedidos Analítico",
+        "Pedidos X Ficha Técnica",
+        "Pedido X Ordem Produção"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "Q13",
+      "query": "Serviço + Ordem de serviço",
+      "selectedFields": [
+        "Serviço",
+        "Ordem de serviço"
+      ],
+      "expected": [
+        "Comissões"
+      ],
+      "obtained": [
+        "Comissões"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "Q14",
+      "query": "CFOP + Impostos",
+      "selectedFields": [
+        "CFOP",
+        "Impostos"
+      ],
+      "expected": [
+        "Nota Fiscal Analítico",
+        "Entrada Nota Fiscal Analítico",
+        "Nota Fiscal Apuração de Impostos",
+        "Apuração de Impostos por CFOP"
+      ],
+      "obtained": [
+        "Nota Fiscal Analítico",
+        "Entrada Nota Fiscal Analítico",
+        "Nota Fiscal Apuração de Impostos",
+        "Apuração de Impostos por CFOP"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "Q15",
+      "query": "Recebimento/Pagamento + Vencimento",
+      "selectedFields": [
+        "Recebimento/Pagamento",
+        "Vencimento"
+      ],
+      "expected": [
+        "Fatura por Serviço",
+        "Contas a Pagar",
+        "Contas a Pagar por Centro de Custo",
+        "Contas a Receber",
+        "Contas a Receber por Centro de Custo",
+        "Cheques",
+        "Faturamento Sintético",
+        "Faturamento Analítico"
+      ],
+      "obtained": [
+        "Fatura por Serviço",
+        "Contas a Pagar",
+        "Contas a Pagar por Centro de Custo",
+        "Contas a Receber",
+        "Contas a Receber por Centro de Custo",
+        "Cheques",
+        "Faturamento Sintético",
+        "Faturamento Analítico"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "N01",
+      "query": "Local de armazenagem + Comissão",
+      "selectedFields": [
+        "Local de armazenagem",
+        "Comissão"
+      ],
+      "expected": [],
+      "obtained": [],
+      "status": "PASS"
+    },
+    {
+      "id": "N02",
+      "query": "Manutenção + Cliente",
+      "selectedFields": [
+        "Manutenção",
+        "Cliente"
+      ],
+      "expected": [],
+      "obtained": [],
+      "status": "PASS"
+    },
+    {
+      "id": "N03",
+      "query": "Documento + Nota fiscal",
+      "selectedFields": [
+        "Documento",
+        "Nota fiscal"
+      ],
+      "expected": [],
+      "obtained": [],
+      "status": "PASS"
+    }
+  ],
+  "summary": {
+    "functionalPass": 18,
+    "functionalFail": 0,
+    "catalogEquivalence": "PASS",
+    "pass": 19,
+    "fail": 0
+  }
+}

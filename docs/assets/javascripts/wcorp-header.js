@@ -1,4 +1,13 @@
 (function () {
+  const topThreshold = 420;
+
+  function updateTopButtonVisibility() {
+    const topButton = document.querySelector(".md-top");
+    if (!topButton) return;
+
+    topButton.classList.toggle("wc-top-ready", window.scrollY > topThreshold);
+  }
+
   function updateHeader() {
     const headerInner = document.querySelector(".md-header__inner");
     if (!headerInner) return;
@@ -17,11 +26,17 @@
 
     searchInput.placeholder = "Buscar tela, processo, guia ou mensagem de erro...";
     searchInput.setAttribute("aria-label", "Buscar tela, processo, guia ou mensagem de erro");
+
+    updateTopButtonVisibility();
   }
 
   document.addEventListener("DOMContentLoaded", updateHeader);
+  window.addEventListener("scroll", updateTopButtonVisibility, { passive: true });
 
   if (window.document$ && typeof window.document$.subscribe === "function") {
-    window.document$.subscribe(updateHeader);
+    window.document$.subscribe(() => {
+      updateHeader();
+      requestAnimationFrame(updateTopButtonVisibility);
+    });
   }
 })();

@@ -1,0 +1,1461 @@
+{
+  "generatedAt": "2026-08-28T18:29:21.595Z",
+  "source": "docs/assets/javascripts/wcorp-assistant.js",
+  "searchIndexUrl": "file:///C:/Users/wavec/OneDrive/Documentos/GitHub/erp-docs/site/search/search_index.json",
+  "docsInSearchIndex": 1363,
+  "tests": [
+    {
+      "id": "G01",
+      "question": "como cadastrar cliente",
+      "expectedIntent": "guide",
+      "identifiedIntent": "guide",
+      "expectedResult": "Guia: Como cadastrar um cliente (como-fazer/cadastrar-cliente)",
+      "obtained": {
+        "title": "Como cadastrar um cliente",
+        "location": "como-fazer/cadastrar-cliente/",
+        "category": "Guia",
+        "score": 454.6,
+        "related": [
+          {
+            "title": "Tem como deixar um percentual de comissão definido para o cliente?",
+            "location": "referencia/faq/comissao-cliente/",
+            "category": "FAQ",
+            "score": 182.4,
+            "relatedScore": 108
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Como cadastrar um cliente",
+          "location": "como-fazer/cadastrar-cliente/#como-cadastrar-um-cliente",
+          "category": "Guia",
+          "score": 454.6
+        },
+        {
+          "title": "Como cadastrar um cliente",
+          "location": "como-fazer/#como-cadastrar-um-cliente",
+          "category": "Guia",
+          "score": 391.6
+        },
+        {
+          "title": "Como cadastrar uma Natureza de Operação",
+          "location": "como-fazer/cadastrar-natureza-operacao/#como-cadastrar-uma-natureza-de-operacao",
+          "category": "Guia",
+          "score": 203.60000000000002
+        },
+        {
+          "title": "Tem como deixar um percentual de comissão definido para o cliente?",
+          "location": "referencia/faq/comissao-cliente/#tem-como-deixar-um-percentual-de-comissao-definido-para-o-cliente",
+          "category": "FAQ",
+          "score": 182.4
+        },
+        {
+          "title": "Como criar um orçamento",
+          "location": "como-fazer/criar-orcamento/#como-criar-um-orcamento",
+          "category": "Guia",
+          "score": 174.8
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "G02",
+      "question": "onde cadastro cliente",
+      "expectedIntent": "manual",
+      "identifiedIntent": "guide",
+      "expectedResult": "Manual: Clientes (comercial/comercial-clientes)",
+      "obtained": {
+        "title": "Como cadastrar um cliente",
+        "location": "como-fazer/cadastrar-cliente/",
+        "category": "Guia",
+        "score": 225.6,
+        "related": [
+          {
+            "title": "Clientes",
+            "location": "comercial/comercial-clientes/",
+            "category": "Manual",
+            "score": 140.6,
+            "relatedScore": 98
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Como cadastrar um cliente",
+          "location": "como-fazer/cadastrar-cliente/#como-cadastrar-um-cliente",
+          "category": "Guia",
+          "score": 225.6
+        },
+        {
+          "title": "Tem como deixar um percentual de comissão definido para o cliente?",
+          "location": "referencia/faq/comissao-cliente/#tem-como-deixar-um-percentual-de-comissao-definido-para-o-cliente",
+          "category": "FAQ",
+          "score": 153.60000000000002
+        },
+        {
+          "title": "Clientes",
+          "location": "comercial/comercial-clientes/#clientes",
+          "category": "Manual",
+          "score": 140.6
+        },
+        {
+          "title": "Grupo de Clientes",
+          "location": "comercial/comercial-grupo-clientes/#grupo-de-clientes",
+          "category": "Manual",
+          "score": 140.6
+        },
+        {
+          "title": "Consigo bloquear a venda se o cliente tiver pagamentos em atraso?",
+          "location": "referencia/faq/bloquear-venda-cliente-inadimplente/#consigo-bloquear-a-venda-se-o-cliente-tiver-pagamentos-em-atraso",
+          "category": "FAQ",
+          "score": 128.60000000000002
+        }
+      ],
+      "status": "FAIL"
+    },
+    {
+      "id": "G03",
+      "question": "preciso cadastrar um cliente",
+      "expectedIntent": "guide",
+      "identifiedIntent": "guide",
+      "expectedResult": "Guia: Como cadastrar um cliente (como-fazer/cadastrar-cliente)",
+      "obtained": {
+        "title": "Como cadastrar um cliente",
+        "location": "como-fazer/cadastrar-cliente/",
+        "category": "Guia",
+        "score": 254.4,
+        "related": [
+          {
+            "title": "Clientes",
+            "location": "comercial/comercial-clientes/",
+            "category": "Manual",
+            "score": 162.8,
+            "relatedScore": 98
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Como cadastrar um cliente",
+          "location": "como-fazer/cadastrar-cliente/#como-cadastrar-um-cliente",
+          "category": "Guia",
+          "score": 254.4
+        },
+        {
+          "title": "Como cadastrar um cliente",
+          "location": "como-fazer/#como-cadastrar-um-cliente",
+          "category": "Guia",
+          "score": 194.60000000000002
+        },
+        {
+          "title": "Clientes",
+          "location": "comercial/comercial-clientes/#clientes",
+          "category": "Manual",
+          "score": 162.8
+        },
+        {
+          "title": "Como cadastrar uma Natureza de Operação",
+          "location": "como-fazer/cadastrar-natureza-operacao/#como-cadastrar-uma-natureza-de-operacao",
+          "category": "Guia",
+          "score": 150.4
+        },
+        {
+          "title": "Grupo de Clientes",
+          "location": "comercial/comercial-grupo-clientes/#grupo-de-clientes",
+          "category": "Manual",
+          "score": 140.6
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "G04",
+      "question": "cad cliente",
+      "expectedIntent": "general",
+      "identifiedIntent": "general",
+      "expectedResult": "Guia: Como cadastrar um cliente (como-fazer/cadastrar-cliente)",
+      "obtained": {
+        "title": "Como cadastrar um cliente",
+        "location": "como-fazer/cadastrar-cliente/",
+        "category": "Guia",
+        "score": 249.8,
+        "related": [
+          {
+            "title": "Clientes",
+            "location": "comercial/comercial-clientes/",
+            "category": "Manual",
+            "score": 131.8,
+            "relatedScore": 98
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Como cadastrar um cliente",
+          "location": "como-fazer/cadastrar-cliente/#como-cadastrar-um-cliente",
+          "category": "Guia",
+          "score": 249.8
+        },
+        {
+          "title": "Consigo bloquear a venda se o cliente tiver pagamentos em atraso?",
+          "location": "referencia/faq/bloquear-venda-cliente-inadimplente/#consigo-bloquear-a-venda-se-o-cliente-tiver-pagamentos-em-atraso",
+          "category": "FAQ",
+          "score": 157.8
+        },
+        {
+          "title": "Tem como deixar um percentual de comissão definido para o cliente?",
+          "location": "referencia/faq/comissao-cliente/#tem-como-deixar-um-percentual-de-comissao-definido-para-o-cliente",
+          "category": "FAQ",
+          "score": 157.8
+        },
+        {
+          "title": "Clientes",
+          "location": "comercial/comercial-clientes/#clientes",
+          "category": "Manual",
+          "score": 131.8
+        },
+        {
+          "title": "Grupo de Clientes",
+          "location": "comercial/comercial-grupo-clientes/#grupo-de-clientes",
+          "category": "Manual",
+          "score": 131.8
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "G05",
+      "question": "como faz cliente",
+      "expectedIntent": "guide",
+      "identifiedIntent": "guide",
+      "expectedResult": "Guia: Como cadastrar um cliente (como-fazer/cadastrar-cliente)",
+      "obtained": {
+        "title": "Como cadastrar um cliente",
+        "location": "como-fazer/cadastrar-cliente/",
+        "category": "Guia",
+        "score": 292,
+        "related": [
+          {
+            "title": "Tem como deixar um percentual de comissão definido para o cliente?",
+            "location": "referencia/faq/comissao-cliente/",
+            "category": "FAQ",
+            "score": 182.4,
+            "relatedScore": 108
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Como cadastrar um cliente",
+          "location": "como-fazer/cadastrar-cliente/#como-cadastrar-um-cliente",
+          "category": "Guia",
+          "score": 292
+        },
+        {
+          "title": "Tem como deixar um percentual de comissão definido para o cliente?",
+          "location": "referencia/faq/comissao-cliente/#tem-como-deixar-um-percentual-de-comissao-definido-para-o-cliente",
+          "category": "FAQ",
+          "score": 182.4
+        },
+        {
+          "title": "Como fazer",
+          "location": "como-fazer/faturar-nota/#como-fazer",
+          "category": "Guia",
+          "score": 174.8
+        },
+        {
+          "title": "Como fazer",
+          "location": "como-fazer/cadastrar-natureza-operacao/#como-fazer",
+          "category": "Guia",
+          "score": 173.4
+        },
+        {
+          "title": "Como fazer",
+          "location": "como-fazer/cancelar-pedido/#como-fazer",
+          "category": "Guia",
+          "score": 173.4
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "G06",
+      "question": "como cadastrar fornecedor",
+      "expectedIntent": "guide",
+      "identifiedIntent": "guide",
+      "expectedResult": "Guia: Como cadastrar um fornecedor (como-fazer/cadastrar-fornecedor)",
+      "obtained": {
+        "title": "Como cadastrar um fornecedor",
+        "location": "como-fazer/cadastrar-fornecedor/",
+        "category": "Guia",
+        "score": 454.6,
+        "related": [
+          {
+            "title": "Categoria de Fornecedor",
+            "location": "fornecedores/categoria-fornecedor/",
+            "category": "Manual",
+            "score": 166.6,
+            "relatedScore": 98
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Como cadastrar um fornecedor",
+          "location": "como-fazer/cadastrar-fornecedor/#como-cadastrar-um-fornecedor",
+          "category": "Guia",
+          "score": 454.6
+        },
+        {
+          "title": "Como criar um pedido de compra",
+          "location": "como-fazer/criar-pedido-compra/#como-criar-um-pedido-de-compra",
+          "category": "Guia",
+          "score": 174.8
+        },
+        {
+          "title": "Como emitir uma devolução",
+          "location": "como-fazer/emitir-devolucao/#como-emitir-uma-devolucao",
+          "category": "Guia",
+          "score": 174.8
+        },
+        {
+          "title": "Como importar XML",
+          "location": "como-fazer/importar-xml/#como-importar-xml",
+          "category": "Guia",
+          "score": 174.8
+        },
+        {
+          "title": "Como lançar contas a pagar",
+          "location": "como-fazer/lancar-contas-a-pagar/#como-lancar-contas-a-pagar",
+          "category": "Guia",
+          "score": 174.8
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "G07",
+      "question": "cadastrar material",
+      "expectedIntent": "guide",
+      "identifiedIntent": "guide",
+      "expectedResult": "Guia: Como cadastrar um material (como-fazer/cadastrar-material)",
+      "obtained": {
+        "title": "Como cadastrar um material",
+        "location": "como-fazer/cadastrar-material/",
+        "category": "Guia",
+        "score": 505.4,
+        "related": [
+          {
+            "title": "Separar Material",
+            "location": "producao/separar-material/",
+            "category": "Manual",
+            "score": 164.4,
+            "relatedScore": 98
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Como cadastrar um material",
+          "location": "como-fazer/cadastrar-material/#como-cadastrar-um-material",
+          "category": "Guia",
+          "score": 505.4
+        },
+        {
+          "title": "Cadastro de Material",
+          "location": "como-fazer/#cadastro-de-material",
+          "category": "Guia",
+          "score": 179.2
+        },
+        {
+          "title": "Como cadastrar uma Natureza de Operação",
+          "location": "como-fazer/cadastrar-natureza-operacao/#como-cadastrar-uma-natureza-de-operacao",
+          "category": "Guia",
+          "score": 170.4
+        },
+        {
+          "title": "Ficha Técnica de Material",
+          "location": "comercial/ficha-tecnica-material/#ficha-tecnica-de-material",
+          "category": "Manual",
+          "score": 164.4
+        },
+        {
+          "title": "Entrada de Material",
+          "location": "materiais/entrada-material/#entrada-de-material",
+          "category": "Manual",
+          "score": 164.4
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "G08",
+      "question": "preciso gerar boleto",
+      "expectedIntent": "guide",
+      "identifiedIntent": "guide",
+      "expectedResult": "Guia: Como gerar boleto (como-fazer/gerar-boleto)",
+      "obtained": {
+        "title": "Como gerar boleto",
+        "location": "como-fazer/gerar-boleto/",
+        "category": "Guia",
+        "score": 254.4,
+        "related": [
+          {
+            "title": "Boleto",
+            "location": "financeiro/boleto/",
+            "category": "Manual",
+            "score": 166.6,
+            "relatedScore": 98
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Como gerar boleto",
+          "location": "como-fazer/gerar-boleto/#como-gerar-boleto",
+          "category": "Guia",
+          "score": 254.4
+        },
+        {
+          "title": "Como gerar boleto",
+          "location": "como-fazer/#como-gerar-boleto",
+          "category": "Guia",
+          "score": 194.60000000000002
+        },
+        {
+          "title": "Boleto",
+          "location": "financeiro/boleto/#boleto",
+          "category": "Manual",
+          "score": 166.6
+        },
+        {
+          "title": "Como baixar um título",
+          "location": "como-fazer/baixar-titulo/#como-baixar-um-titulo",
+          "category": "Guia",
+          "score": 121.60000000000001
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "G09",
+      "question": "como baixar titulo",
+      "expectedIntent": "guide",
+      "identifiedIntent": "guide",
+      "expectedResult": "Guia: Como baixar um título (como-fazer/baixar-titulo)",
+      "obtained": {
+        "title": "Como baixar um título",
+        "location": "como-fazer/baixar-titulo/",
+        "category": "Guia",
+        "score": 395.6,
+        "related": []
+      },
+      "topRanked": [
+        {
+          "title": "Como baixar um título",
+          "location": "como-fazer/baixar-titulo/#como-baixar-um-titulo",
+          "category": "Guia",
+          "score": 395.6
+        },
+        {
+          "title": "Como gerar boleto",
+          "location": "como-fazer/gerar-boleto/#como-gerar-boleto",
+          "category": "Guia",
+          "score": 156
+        },
+        {
+          "title": "Como lançar contas a pagar",
+          "location": "como-fazer/lancar-contas-a-pagar/#como-lancar-contas-a-pagar",
+          "category": "Guia",
+          "score": 156
+        },
+        {
+          "title": "Como ajustar estoque",
+          "location": "como-fazer/ajustar-estoque/#como-ajustar-estoque",
+          "category": "Guia",
+          "score": 49.2
+        },
+        {
+          "title": "Como cadastrar um Centro de Custo",
+          "location": "como-fazer/cadastrar-centro-custo/#como-cadastrar-um-centro-de-custo",
+          "category": "Guia",
+          "score": 49.2
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "G10",
+      "question": "como lançar nota entrada",
+      "expectedIntent": "guide",
+      "identifiedIntent": "guide",
+      "expectedResult": "Guia: Como lançar uma nota de entrada (como-fazer/lancar-nota-entrada)",
+      "obtained": {
+        "title": "Como lançar uma nota de entrada",
+        "location": "como-fazer/lancar-nota-entrada/",
+        "category": "Guia",
+        "score": 523,
+        "related": [
+          {
+            "title": "Entrada de Nota Fiscal",
+            "location": "faturamento/entrada-nota-fiscal/",
+            "category": "Manual",
+            "score": 215.8,
+            "relatedScore": 206
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Como lançar uma nota de entrada",
+          "location": "como-fazer/lancar-nota-entrada/#como-lancar-uma-nota-de-entrada",
+          "category": "Guia",
+          "score": 523
+        },
+        {
+          "title": "Como emitir uma nota complementar",
+          "location": "como-fazer/emitir-nota-complementar/#como-emitir-uma-nota-complementar",
+          "category": "Guia",
+          "score": 257.6
+        },
+        {
+          "title": "Como lançar contas a pagar",
+          "location": "como-fazer/lancar-contas-a-pagar/#como-lancar-contas-a-pagar",
+          "category": "Guia",
+          "score": 228.40000000000003
+        },
+        {
+          "title": "Como emitir uma NF-e",
+          "location": "como-fazer/faturar-nota/#como-emitir-uma-nf-e",
+          "category": "Guia",
+          "score": 227.6
+        },
+        {
+          "title": "Entrada de Nota Fiscal",
+          "location": "faturamento/entrada-nota-fiscal/#entrada-de-nota-fiscal",
+          "category": "Manual",
+          "score": 215.8
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "M01",
+      "question": "onde fica contas a pagar",
+      "expectedIntent": "manual",
+      "identifiedIntent": "manual",
+      "expectedResult": "Manual: Contas a Pagar (financeiro/contas-a-pagar)",
+      "obtained": {
+        "title": "Contas a Pagar",
+        "location": "financeiro/contas-a-pagar/",
+        "category": "Manual",
+        "score": 193.8,
+        "related": [
+          {
+            "title": "Como lançar contas a pagar",
+            "location": "como-fazer/lancar-contas-a-pagar/",
+            "category": "Guia",
+            "score": 139.8,
+            "relatedScore": 134
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Contas a Pagar",
+          "location": "financeiro/contas-a-pagar/#contas-a-pagar",
+          "category": "Manual",
+          "score": 193.8
+        },
+        {
+          "title": "Como lançar contas a pagar",
+          "location": "como-fazer/lancar-contas-a-pagar/#como-lancar-contas-a-pagar",
+          "category": "Guia",
+          "score": 139.8
+        },
+        {
+          "title": "Onde verificar",
+          "location": "referencia/faq/editar-pedido-bloqueado-workflow/#onde-verificar",
+          "category": "FAQ",
+          "score": 100.4
+        },
+        {
+          "title": "Onde verificar",
+          "location": "erros-solucoes/erros-operacionais/aprovacao-desconto-pendente/#onde-verificar",
+          "category": "Erro",
+          "score": 99
+        },
+        {
+          "title": "Onde verificar",
+          "location": "erros-solucoes/erros-operacionais/calculo-nota-fiscal-sem-sucesso/#onde-verificar",
+          "category": "Erro",
+          "score": 99
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "M02",
+      "question": "tela de nota fiscal",
+      "expectedIntent": "manual",
+      "identifiedIntent": "manual",
+      "expectedResult": "Manual: Nota Fiscal (faturamento/faturamento-nf)",
+      "obtained": {
+        "title": "Nota Fiscal",
+        "location": "faturamento/faturamento-nf/",
+        "category": "Manual",
+        "score": 293.20000000000005,
+        "related": [
+          {
+            "title": "Como emitir uma NF-e",
+            "location": "como-fazer/faturar-nota/",
+            "category": "Guia",
+            "score": 228.8,
+            "relatedScore": 170
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Entrada de Nota Fiscal",
+          "location": "faturamento/entrada-nota-fiscal/#entrada-de-nota-fiscal",
+          "category": "Manual",
+          "score": 293.20000000000005
+        },
+        {
+          "title": "Nota Fiscal",
+          "location": "faturamento/faturamento-nf/#nota-fiscal",
+          "category": "Manual",
+          "score": 293.20000000000005
+        },
+        {
+          "title": "Inutilização Nota Fiscal",
+          "location": "faturamento/inutilizacao-nota-fiscal/#inutilizacao-nota-fiscal",
+          "category": "Manual",
+          "score": 293.20000000000005
+        },
+        {
+          "title": "Nota Fiscal (Lote)",
+          "location": "faturamento/nota-fiscal-lote/#nota-fiscal-lote",
+          "category": "Manual",
+          "score": 293.20000000000005
+        },
+        {
+          "title": "Nota Fiscal de Serviço",
+          "location": "faturamento/nota-fiscal-servico/#nota-fiscal-de-servico",
+          "category": "Manual",
+          "score": 293.20000000000005
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "M03",
+      "question": "qual campo de natureza operação",
+      "expectedIntent": "manual",
+      "identifiedIntent": "manual",
+      "expectedResult": "Manual: Natureza de Operação (administracao/natureza-op)",
+      "obtained": {
+        "title": "Natureza de Operação",
+        "location": "administracao/natureza-op/",
+        "category": "Manual",
+        "score": 220.60000000000002,
+        "related": [
+          {
+            "title": "Como cadastrar uma Natureza de Operação",
+            "location": "como-fazer/cadastrar-natureza-operacao/",
+            "category": "Guia",
+            "score": 141.2,
+            "relatedScore": 134
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Natureza de Operação",
+          "location": "administracao/natureza-op/#natureza-de-operacao",
+          "category": "Manual",
+          "score": 220.60000000000002
+        },
+        {
+          "title": "Como cadastrar uma Natureza de Operação",
+          "location": "como-fazer/cadastrar-natureza-operacao/#como-cadastrar-uma-natureza-de-operacao",
+          "category": "Guia",
+          "score": 141.2
+        },
+        {
+          "title": "Campos principais",
+          "location": "compras/planilha-equalizacao/#campos-principais",
+          "category": "Manual",
+          "score": 125.4
+        },
+        {
+          "title": "Campos principais",
+          "location": "producao/qualidade/#campos-principais",
+          "category": "Manual",
+          "score": 125.4
+        },
+        {
+          "title": "NCMS",
+          "location": "administracao/ncms/#ncms",
+          "category": "Manual",
+          "score": 98.20000000000002
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "M04",
+      "question": "manual pedido venda",
+      "expectedIntent": "manual",
+      "identifiedIntent": "manual",
+      "expectedResult": "Manual: Pedido de Venda (comercial/pedidos)",
+      "obtained": {
+        "title": "Módulo Comercial - Pedido de Venda",
+        "location": "comercial/pedidos/",
+        "category": "Manual",
+        "score": 292,
+        "related": [
+          {
+            "title": "Como gerar um pedido",
+            "location": "como-fazer/fazer-pedido-venda/",
+            "category": "Guia",
+            "score": 183.4,
+            "relatedScore": 134
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Módulo Comercial - Pedido de Venda",
+          "location": "comercial/pedidos/#modulo-comercial-pedido-de-venda",
+          "category": "Manual",
+          "score": 292
+        },
+        {
+          "title": "Módulo Comercial - Separação de Pedido",
+          "location": "comercial/comercial-separacao-pedido/#modulo-comercial-separacao-de-pedido",
+          "category": "Manual",
+          "score": 220.8
+        },
+        {
+          "title": "Pedido de Compra",
+          "location": "compras/pedido-compra/#pedido-de-compra",
+          "category": "Manual",
+          "score": 219.6
+        },
+        {
+          "title": "Como gerar um pedido",
+          "location": "como-fazer/fazer-pedido-venda/#como-gerar-um-pedido",
+          "category": "Guia",
+          "score": 183.4
+        },
+        {
+          "title": "Como cancelar um pedido",
+          "location": "como-fazer/cancelar-pedido/#como-cancelar-um-pedido",
+          "category": "Guia",
+          "score": 166.6
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "M05",
+      "question": "ordem de producao material",
+      "expectedIntent": "general",
+      "identifiedIntent": "general",
+      "expectedResult": "Manual: Ordem de Produção (producao/ordem-producao)",
+      "obtained": {
+        "title": "Separar Material",
+        "location": "producao/separar-material/",
+        "category": "Manual",
+        "score": 178.8,
+        "related": [
+          {
+            "title": "Como cadastrar um material",
+            "location": "como-fazer/cadastrar-material/",
+            "category": "Guia",
+            "score": 76.4,
+            "relatedScore": 89.1
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Separar Material",
+          "location": "producao/separar-material/#separar-material",
+          "category": "Manual",
+          "score": 178.8
+        },
+        {
+          "title": "Ficha Técnica de Material",
+          "location": "comercial/ficha-tecnica-material/#ficha-tecnica-de-material",
+          "category": "Manual",
+          "score": 76.4
+        },
+        {
+          "title": "Como cadastrar um material",
+          "location": "como-fazer/cadastrar-material/#como-cadastrar-um-material",
+          "category": "Guia",
+          "score": 76.4
+        },
+        {
+          "title": "Entrada de Material",
+          "location": "materiais/entrada-material/#entrada-de-material",
+          "category": "Manual",
+          "score": 76.4
+        },
+        {
+          "title": "Categoria de Materiais",
+          "location": "materiais/categoria-materiais/#categoria-de-materiais",
+          "category": "Manual",
+          "score": 27.4
+        }
+      ],
+      "status": "FAIL"
+    },
+    {
+      "id": "E01",
+      "question": "rejeição 930",
+      "expectedIntent": "error",
+      "identifiedIntent": "error",
+      "expectedResult": "Rejeição: Rejeição 930 (erros-solucoes/rejeicoes-fiscais/rejeicao-930)",
+      "obtained": {
+        "title": "Rejeição 930 — CST com benefício fiscal e não informado o código de benefício fiscal",
+        "location": "erros-solucoes/rejeicoes-fiscais/rejeicao-930-cst-beneficio-fiscal-sem-codigo/",
+        "category": "Rejeição",
+        "score": 1467.8,
+        "related": []
+      },
+      "topRanked": [
+        {
+          "title": "Rejeição 930 — CST com benefício fiscal e não informado o código de benefício fiscal",
+          "location": "erros-solucoes/rejeicoes-fiscais/rejeicao-930-cst-beneficio-fiscal-sem-codigo/#rejeicao-930-cst-com-beneficio-fiscal-e-nao-informado-o-codigo-de-beneficio-fiscal",
+          "category": "Rejeição",
+          "score": 1467.8
+        },
+        {
+          "title": "Rejeições Fiscais",
+          "location": "erros-solucoes/rejeicoes-fiscais/#rejeicoes-fiscais",
+          "category": "Rejeição",
+          "score": 0.7999999999999972
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "E02",
+      "question": "erro 225 schema",
+      "expectedIntent": "error",
+      "identifiedIntent": "error",
+      "expectedResult": "Rejeição: Rejeição 225 (erros-solucoes/rejeicoes-fiscais/rejeicao-225)",
+      "obtained": {
+        "title": "Rejeição 225 — Falha no Schema XML",
+        "location": "erros-solucoes/rejeicoes-fiscais/rejeicao-225-falha-schema-xml/",
+        "category": "Rejeição",
+        "score": 1121.8,
+        "related": []
+      },
+      "topRanked": [
+        {
+          "title": "Rejeição 225 — Falha no Schema XML",
+          "location": "erros-solucoes/rejeicoes-fiscais/rejeicao-225-falha-schema-xml/#rejeicao-225-falha-no-schema-xml",
+          "category": "Rejeição",
+          "score": 1121.8
+        },
+        {
+          "title": "Rejeições Fiscais",
+          "location": "erros-solucoes/rejeicoes-fiscais/#rejeicoes-fiscais",
+          "category": "Rejeição",
+          "score": 10.8
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "E03",
+      "question": "falha de schema xml",
+      "expectedIntent": "error",
+      "identifiedIntent": "error",
+      "expectedResult": "Rejeição: Rejeição 225 (erros-solucoes/rejeicoes-fiscais/rejeicao-225)",
+      "obtained": {
+        "title": "Rejeição 225 — Falha no Schema XML",
+        "location": "erros-solucoes/rejeicoes-fiscais/rejeicao-225-falha-schema-xml/",
+        "category": "Rejeição",
+        "score": 531.1999999999999,
+        "related": [
+          {
+            "title": "XML(s) NFe",
+            "location": "relatorios/xml-nfe/",
+            "category": "Manual",
+            "score": 80.4,
+            "relatedScore": 98.1
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Rejeição 225 — Falha no Schema XML",
+          "location": "erros-solucoes/rejeicoes-fiscais/rejeicao-225-falha-schema-xml/#rejeicao-225-falha-no-schema-xml",
+          "category": "Rejeição",
+          "score": 531.1999999999999
+        },
+        {
+          "title": "Como importar XML",
+          "location": "como-fazer/importar-xml/#como-importar-xml",
+          "category": "Guia",
+          "score": 80.4
+        },
+        {
+          "title": "XML(s) CFe",
+          "location": "relatorios/xml-cfe/#xmls-cfe",
+          "category": "Manual",
+          "score": 80.4
+        },
+        {
+          "title": "XML(s) CTe",
+          "location": "relatorios/xml-cte/#xmls-cte",
+          "category": "Manual",
+          "score": 80.4
+        },
+        {
+          "title": "XML(s) NFe",
+          "location": "relatorios/xml-nfe/#xmls-nfe",
+          "category": "Manual",
+          "score": 80.4
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "E04",
+      "question": "referencia objeto nao definida",
+      "expectedIntent": "general",
+      "identifiedIntent": "general",
+      "expectedResult": "Erro: Referência do objeto não definida (erros-solucoes/problemas-tecnicos/referencia-objeto)",
+      "obtained": {
+        "title": "Referência do objeto não definida para uma instância de um objeto",
+        "location": "erros-solucoes/problemas-tecnicos/referencia-objeto-nao-definida/",
+        "category": "Erro",
+        "score": 486.6,
+        "related": [
+          {
+            "title": "Não estou conseguindo editar um pedido mesmo estando pendente. O que faço?",
+            "location": "referencia/faq/editar-pedido-bloqueado-workflow/",
+            "category": "FAQ",
+            "score": 96,
+            "relatedScore": 104
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Referência do objeto não definida para uma instância de um objeto",
+          "location": "erros-solucoes/problemas-tecnicos/referencia-objeto-nao-definida/#referencia-do-objeto-nao-definida-para-uma-instancia-de-um-objeto",
+          "category": "Erro",
+          "score": 486.6
+        },
+        {
+          "title": "Não estou conseguindo editar um pedido mesmo estando pendente. O que faço?",
+          "location": "referencia/faq/editar-pedido-bloqueado-workflow/#nao-estou-conseguindo-editar-um-pedido-mesmo-estando-pendente-o-que-faco",
+          "category": "FAQ",
+          "score": 96
+        },
+        {
+          "title": "Outras perguntas",
+          "location": "referencia/faq/#outras-perguntas",
+          "category": "FAQ",
+          "score": 54.8
+        },
+        {
+          "title": "Clientes",
+          "location": "comercial/comercial-clientes/#clientes",
+          "category": "Manual",
+          "score": 34.8
+        },
+        {
+          "title": "Como cadastrar uma Natureza de Operação",
+          "location": "como-fazer/cadastrar-natureza-operacao/#como-cadastrar-uma-natureza-de-operacao",
+          "category": "Guia",
+          "score": 34.8
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "F01",
+      "question": "cancelar nfe depois de 30 dias",
+      "expectedIntent": "guide",
+      "identifiedIntent": "guide",
+      "expectedResult": "FAQ: Tem como cancelar NF-e depois de 30 dias (referencia/faq/cancelar-nfe-apos-prazo)",
+      "obtained": {
+        "title": "Tem como cancelar NF-e depois de 30 dias?",
+        "location": "referencia/faq/cancelar-nfe-apos-prazo/",
+        "category": "FAQ",
+        "score": 728.5999999999999,
+        "related": [
+          {
+            "title": "Como cancelar uma NF-e",
+            "location": "como-fazer/cancelar-nfe/",
+            "category": "Guia",
+            "score": 191.4,
+            "relatedScore": 188
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Tem como cancelar NF-e depois de 30 dias?",
+          "location": "referencia/faq/cancelar-nfe-apos-prazo/#tem-como-cancelar-nf-e-depois-de-30-dias",
+          "category": "FAQ",
+          "score": 728.5999999999999
+        },
+        {
+          "title": "Como cancelar uma NF-e",
+          "location": "como-fazer/cancelar-nfe/#como-cancelar-uma-nf-e",
+          "category": "Guia",
+          "score": 191.4
+        },
+        {
+          "title": "Como emitir uma NF-e",
+          "location": "como-fazer/faturar-nota/#como-emitir-uma-nf-e",
+          "category": "Guia",
+          "score": 172.8
+        },
+        {
+          "title": "Rejeição Cancelamento 690 — Pedido de cancelamento para NF-e com CT-e ou MDF-e",
+          "location": "erros-solucoes/rejeicoes-fiscais/rejeicao-cancelamento-690-nfe-com-cte-mdfe/#rejeicao-cancelamento-690-pedido-de-cancelamento-para-nf-e-com-ct-e-ou-mdf-e",
+          "category": "Rejeição",
+          "score": 163.20000000000002
+        },
+        {
+          "title": "Como emitir uma nota complementar",
+          "location": "como-fazer/emitir-nota-complementar/#como-emitir-uma-nota-complementar",
+          "category": "Guia",
+          "score": 94.4
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "F02",
+      "question": "consigo bloquear venda cliente atraso",
+      "expectedIntent": "guide",
+      "identifiedIntent": "general",
+      "expectedResult": "FAQ: Consigo bloquear a venda (referencia/faq/bloquear-venda-cliente-inadimplente)",
+      "obtained": {
+        "title": "Consigo bloquear a venda se o cliente tiver pagamentos em atraso?",
+        "location": "referencia/faq/bloquear-venda-cliente-inadimplente/",
+        "category": "FAQ",
+        "score": 524.5999999999999,
+        "related": [
+          {
+            "title": "Tem como deixar um percentual de comissão definido para o cliente?",
+            "location": "referencia/faq/comissao-cliente/",
+            "category": "FAQ",
+            "score": 76.4,
+            "relatedScore": 95.1
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Consigo bloquear a venda se o cliente tiver pagamentos em atraso?",
+          "location": "referencia/faq/bloquear-venda-cliente-inadimplente/#consigo-bloquear-a-venda-se-o-cliente-tiver-pagamentos-em-atraso",
+          "category": "FAQ",
+          "score": 524.5999999999999
+        },
+        {
+          "title": "Perguntas frequentes",
+          "location": "referencia/faq/#perguntas-frequentes",
+          "category": "FAQ",
+          "score": 86
+        },
+        {
+          "title": "Como cadastrar um cliente",
+          "location": "como-fazer/cadastrar-cliente/#como-cadastrar-um-cliente",
+          "category": "Guia",
+          "score": 76.4
+        },
+        {
+          "title": "Tem como deixar um percentual de comissão definido para o cliente?",
+          "location": "referencia/faq/comissao-cliente/#tem-como-deixar-um-percentual-de-comissao-definido-para-o-cliente",
+          "category": "FAQ",
+          "score": 76.4
+        },
+        {
+          "title": "Clientes",
+          "location": "comercial/comercial-clientes/#clientes",
+          "category": "Manual",
+          "score": 50.4
+        }
+      ],
+      "status": "FAIL"
+    },
+    {
+      "id": "F03",
+      "question": "alterar ncm produto",
+      "expectedIntent": "general",
+      "identifiedIntent": "guide",
+      "expectedResult": "FAQ: Como altero o NCM (referencia/faq/alterar-ncm-produto)",
+      "obtained": {
+        "title": "Como altero o NCM de um produto?",
+        "location": "referencia/faq/alterar-ncm-produto/",
+        "category": "FAQ",
+        "score": 366.4,
+        "related": [
+          {
+            "title": "Precisava mudar CFOP e CST de um produto. Como faço?",
+            "location": "referencia/faq/alterar-cfop-cst/",
+            "category": "FAQ",
+            "score": 160,
+            "relatedScore": 156
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Como altero o NCM de um produto?",
+          "location": "referencia/faq/alterar-ncm-produto/#como-altero-o-ncm-de-um-produto",
+          "category": "FAQ",
+          "score": 366.4
+        },
+        {
+          "title": "Precisava mudar CFOP e CSOSN de um produto. Como faço?",
+          "location": "referencia/faq/alterar-cfop-csosn/#precisava-mudar-cfop-e-csosn-de-um-produto-como-faco",
+          "category": "FAQ",
+          "score": 160
+        },
+        {
+          "title": "Precisava mudar CFOP e CST de um produto. Como faço?",
+          "location": "referencia/faq/alterar-cfop-cst/#precisava-mudar-cfop-e-cst-de-um-produto-como-faco",
+          "category": "FAQ",
+          "score": 160
+        },
+        {
+          "title": "Como cadastrar um material",
+          "location": "como-fazer/cadastrar-material/",
+          "category": "Guia",
+          "score": 91
+        },
+        {
+          "title": "Rejeição 564 — Total do Produto / Serviço difere do somatório dos itens",
+          "location": "erros-solucoes/rejeicoes-fiscais/rejeicao-564-total-produto-servico/#rejeicao-564-total-do-produto-servico-difere-do-somatorio-dos-itens",
+          "category": "Rejeição",
+          "score": 76.4
+        }
+      ],
+      "status": "FAIL"
+    },
+    {
+      "id": "T01",
+      "question": "indicador de relatorio",
+      "expectedIntent": "general",
+      "identifiedIntent": "general",
+      "expectedResult": "Conteúdo: Indicador de Relatório (ferramentas/indicador-relatorio)",
+      "obtained": {
+        "title": "Indicador de Relatório",
+        "location": "ferramentas/indicador-relatorio/",
+        "category": "Conteúdo",
+        "score": 870.8,
+        "related": []
+      },
+      "topRanked": [
+        {
+          "title": "Indicador de Relatório",
+          "location": "ferramentas/indicador-relatorio/#indicador-de-relatorio",
+          "category": "Conteúdo",
+          "score": 870.8
+        },
+        {
+          "title": "Relatório de Não Conformidade",
+          "location": "relatorios/relatorio-nao-conformidade/#relatorio-de-nao-conformidade",
+          "category": "Manual",
+          "score": 156.4
+        },
+        {
+          "title": "Relatório de Ocorrência",
+          "location": "relatorios/relatorio-ocorrencia/#relatorio-de-ocorrencia",
+          "category": "Manual",
+          "score": 156.4
+        },
+        {
+          "title": "Relatório WhatsApp",
+          "location": "relatorios/relatorio-whatsapp/#relatorio-whatsapp",
+          "category": "Manual",
+          "score": 156.4
+        },
+        {
+          "title": "Relatórios",
+          "location": "relatorios/relatorios/#relatorios",
+          "category": "Manual",
+          "score": 128.4
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "T02",
+      "question": "validador xml",
+      "expectedIntent": "error",
+      "identifiedIntent": "error",
+      "expectedResult": "Conteúdo: Validador de XML (ferramentas/validador-xml)",
+      "obtained": {
+        "title": "Validador de XML",
+        "location": "ferramentas/validador-xml/",
+        "category": "Conteúdo",
+        "score": 431.4,
+        "related": []
+      },
+      "topRanked": [
+        {
+          "title": "Validador de XML",
+          "location": "ferramentas/validador-xml/#validador-de-xml",
+          "category": "Conteúdo",
+          "score": 431.4
+        },
+        {
+          "title": "Rejeição 225 — Falha no Schema XML",
+          "location": "erros-solucoes/rejeicoes-fiscais/rejeicao-225-falha-schema-xml/#rejeicao-225-falha-no-schema-xml",
+          "category": "Rejeição",
+          "score": 261.4
+        },
+        {
+          "title": "Como importar XML",
+          "location": "como-fazer/importar-xml/#como-importar-xml",
+          "category": "Guia",
+          "score": 160.4
+        },
+        {
+          "title": "XML(s) CFe",
+          "location": "relatorios/xml-cfe/#xmls-cfe",
+          "category": "Manual",
+          "score": 160.4
+        },
+        {
+          "title": "XML(s) CTe",
+          "location": "relatorios/xml-cte/#xmls-cte",
+          "category": "Manual",
+          "score": 160.4
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "A01",
+      "question": "nota",
+      "expectedIntent": "ambiguous",
+      "identifiedIntent": "ambiguous",
+      "expectedResult": "Guia: Como emitir uma NF-e (como-fazer/faturar-nota)",
+      "obtained": {
+        "title": "Nota Fiscal",
+        "location": "faturamento/faturamento-nf/",
+        "category": "Manual",
+        "score": 477.4,
+        "related": [
+          {
+            "title": "Como lançar uma nota de entrada",
+            "location": "como-fazer/lancar-nota-entrada/",
+            "category": "Guia",
+            "score": 392.4,
+            "relatedScore": 170
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Nota Fiscal",
+          "location": "faturamento/faturamento-nf/#nota-fiscal",
+          "category": "Manual",
+          "score": 477.4
+        },
+        {
+          "title": "Nota Fiscal (Lote)",
+          "location": "faturamento/nota-fiscal-lote/#nota-fiscal-lote",
+          "category": "Manual",
+          "score": 477.4
+        },
+        {
+          "title": "Nota Fiscal de Serviço",
+          "location": "faturamento/nota-fiscal-servico/#nota-fiscal-de-servico",
+          "category": "Manual",
+          "score": 477.4
+        },
+        {
+          "title": "Entrada de Nota Fiscal",
+          "location": "faturamento/entrada-nota-fiscal/#entrada-de-nota-fiscal",
+          "category": "Manual",
+          "score": 404.4
+        },
+        {
+          "title": "Inutilização Nota Fiscal",
+          "location": "faturamento/inutilizacao-nota-fiscal/#inutilizacao-nota-fiscal",
+          "category": "Manual",
+          "score": 404.4
+        }
+      ],
+      "status": "FAIL"
+    },
+    {
+      "id": "A02",
+      "question": "pedido",
+      "expectedIntent": "ambiguous",
+      "identifiedIntent": "ambiguous",
+      "expectedResult": "Manual: Pedido de Venda (comercial/pedidos)",
+      "obtained": {
+        "title": "Pedido de Compra",
+        "location": "compras/pedido-compra/",
+        "category": "Manual",
+        "score": 477.4,
+        "related": [
+          {
+            "title": "Como criar um pedido de compra",
+            "location": "como-fazer/criar-pedido-compra/",
+            "category": "Guia",
+            "score": 392.4,
+            "relatedScore": 114
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Pedido de Compra",
+          "location": "compras/pedido-compra/#pedido-de-compra",
+          "category": "Manual",
+          "score": 477.4
+        },
+        {
+          "title": "Módulo Comercial - Separação de Pedido",
+          "location": "comercial/comercial-separacao-pedido/#modulo-comercial-separacao-de-pedido",
+          "category": "Manual",
+          "score": 404.4
+        },
+        {
+          "title": "Módulo Comercial - Pedido de Venda",
+          "location": "comercial/pedidos/#modulo-comercial-pedido-de-venda",
+          "category": "Manual",
+          "score": 404.4
+        },
+        {
+          "title": "Como cancelar um pedido",
+          "location": "como-fazer/cancelar-pedido/#como-cancelar-um-pedido",
+          "category": "Guia",
+          "score": 392.4
+        },
+        {
+          "title": "Como criar um pedido de compra",
+          "location": "como-fazer/criar-pedido-compra/#como-criar-um-pedido-de-compra",
+          "category": "Guia",
+          "score": 392.4
+        }
+      ],
+      "status": "FAIL"
+    },
+    {
+      "id": "N01",
+      "question": "como alimentar dinossauro no wcorp",
+      "expectedIntent": null,
+      "identifiedIntent": "guide",
+      "expectedResult": "Sem resultado",
+      "obtained": {
+        "title": "Rejeição 600 — CSOSN incompatível na operação com Não Contribuinte",
+        "location": "erros-solucoes/rejeicoes-fiscais/rejeicao-600-csosn-nao-contribuinte/",
+        "category": "Rejeição",
+        "score": 135.2,
+        "related": [
+          {
+            "title": "Rejeição 930 — CST com benefício fiscal e não informado o código de benefício fiscal",
+            "location": "erros-solucoes/rejeicoes-fiscais/rejeicao-930-cst-beneficio-fiscal-sem-codigo/",
+            "category": "Rejeição",
+            "score": 133,
+            "relatedScore": 106
+          }
+        ]
+      },
+      "topRanked": [
+        {
+          "title": "Como isso acontece no WCorp",
+          "location": "erros-solucoes/rejeicoes-fiscais/rejeicao-600-csosn-nao-contribuinte/#como-isso-acontece-no-wcorp",
+          "category": "Rejeição",
+          "score": 135.2
+        },
+        {
+          "title": "Como isso acontece no WCorp",
+          "location": "erros-solucoes/rejeicoes-fiscais/rejeicao-109-servico-paralisado/#como-isso-acontece-no-wcorp",
+          "category": "Rejeição",
+          "score": 133
+        },
+        {
+          "title": "Como isso acontece no WCorp",
+          "location": "erros-solucoes/rejeicoes-fiscais/rejeicao-204-duplicidade-nfe/#como-isso-acontece-no-wcorp",
+          "category": "Rejeição",
+          "score": 133
+        },
+        {
+          "title": "Como isso acontece no WCorp",
+          "location": "erros-solucoes/rejeicoes-fiscais/rejeicao-206-nfe-inutilizada/#como-isso-acontece-no-wcorp",
+          "category": "Rejeição",
+          "score": 133
+        },
+        {
+          "title": "Como isso acontece no WCorp",
+          "location": "erros-solucoes/rejeicoes-fiscais/rejeicao-225-falha-schema-xml/#como-isso-acontece-no-wcorp",
+          "category": "Rejeição",
+          "score": 133
+        }
+      ],
+      "status": "FAIL"
+    },
+    {
+      "id": "N02",
+      "question": "qwerty zzz sem sentido",
+      "expectedIntent": null,
+      "identifiedIntent": "general",
+      "expectedResult": "Sem resultado",
+      "obtained": null,
+      "topRanked": [
+        {
+          "title": "Rejeição 109 — Serviço Paralisado sem Previsão",
+          "location": "erros-solucoes/rejeicoes-fiscais/rejeicao-109-servico-paralisado/#rejeicao-109-servico-paralisado-sem-previsao",
+          "category": "Rejeição",
+          "score": 0.3999999999999986
+        },
+        {
+          "title": "Rejeição 928 — Informado código de benefício fiscal para CST sem benefício fiscal",
+          "location": "erros-solucoes/rejeicoes-fiscais/rejeicao-928-codigo-beneficio-cst-sem-beneficio/#rejeicao-928-informado-codigo-de-beneficio-fiscal-para-cst-sem-beneficio-fiscal",
+          "category": "Rejeição",
+          "score": 0.3999999999999986
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "N03",
+      "question": "rejeição 1026",
+      "expectedIntent": null,
+      "identifiedIntent": "error",
+      "expectedResult": "Sem resultado",
+      "obtained": null,
+      "topRanked": [],
+      "status": "PASS"
+    }
+  ],
+  "chatProbe": [
+    {
+      "type": "GUIA",
+      "title": "Como cadastrar um cliente",
+      "href": "file:///C:/Users/wavec/OneDrive/Documentos/GitHub/erp-docs/site/como-fazer/cadastrar-cliente/"
+    },
+    {
+      "type": "FAQ",
+      "title": "Tem como deixar um percentual de comissão definido para o cliente?",
+      "href": "file:///C:/Users/wavec/OneDrive/Documentos/GitHub/erp-docs/site/referencia/faq/comissao-cliente/"
+    }
+  ],
+  "summary": {
+    "total": 29,
+    "pass": 22,
+    "fail": 7
+  }
+}

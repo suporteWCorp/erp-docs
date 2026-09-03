@@ -648,6 +648,11 @@ body.wc-guide-page .md-typeset h2#como-fazer + ol > li > b:first-child {
     z-index: 7;
 }
 
+.md-top:not(.wc-top-ready) {
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
 @media screen and (min-width: 76.25em) {
     .md-sidebar--secondary .md-nav--secondary {
         display: none;
@@ -1159,6 +1164,84 @@ body.wc-faq-page .wc-faq-link {
     margin-top: 0.12rem;
 }
 
+/* Páginas individuais de FAQ. */
+body.wc-faq-article-page .md-content__inner {
+    box-sizing: border-box;
+    max-width: 50rem;
+    padding-left: clamp(1rem, 2.6vw, 2.2rem);
+    padding-right: clamp(1rem, 2vw, 1.8rem);
+}
+
+body.wc-faq-article-page .wc-breadcrumb-bar {
+    margin-bottom: 0.92rem;
+}
+
+body.wc-faq-article-page .md-typeset > .wc-breadcrumb-bar + h1,
+body.wc-faq-article-page .md-typeset > h1:first-child {
+    color: #005f66 !important;
+    font-size: 1.58rem;
+    font-weight: 760;
+    line-height: 1.18;
+    margin-bottom: 1rem;
+}
+
+body.wc-faq-article-page .md-typeset > .wc-breadcrumb-bar + h1::before,
+body.wc-faq-article-page .md-typeset > h1:first-child::before {
+    align-items: center;
+    background: rgba(2, 128, 144, 0.1);
+    border: 1px solid rgba(2, 128, 144, 0.22);
+    border-radius: 999px;
+    color: #006b73;
+    content: "FAQ";
+    display: flex;
+    font-size: 0.62rem;
+    font-weight: 800;
+    letter-spacing: 0;
+    line-height: 1;
+    margin-bottom: 0.7rem;
+    padding: 0.34rem 0.62rem;
+    width: fit-content;
+}
+
+body.wc-faq-article-page .md-typeset > h1 + p {
+    background: rgba(2, 128, 144, 0.055);
+    border: 1px solid rgba(2, 128, 144, 0.18);
+    border-left: 4px solid #028090;
+    border-radius: 7px;
+    color: #2f4858;
+    font-size: 0.84rem;
+    line-height: 1.68;
+    margin: 0 0 1.35rem;
+    padding: 1rem 1.1rem;
+}
+
+body.wc-faq-article-page .md-typeset > h1 + p::before {
+    color: #006b73;
+    content: "RESPOSTA";
+    display: block;
+    font-size: 0.66rem;
+    font-weight: 820;
+    line-height: 1;
+    margin-bottom: 0.48rem;
+}
+
+body.wc-faq-article-page .md-typeset h2 {
+    color: #005f66 !important;
+    font-size: 0.98rem;
+    font-weight: 760;
+    line-height: 1.25;
+    margin: 1.35rem 0 0.48rem;
+}
+
+body.wc-faq-article-page .md-typeset h2 + p,
+body.wc-faq-article-page .md-typeset h2 + ul,
+body.wc-faq-article-page .md-typeset h2 + ol {
+    color: #425d6f;
+    font-size: 0.8rem;
+    line-height: 1.65;
+    margin-top: 0;
+}
+
 @media (prefers-reduced-motion: reduce) {
     body.wc-faq-page .wc-faq-item > summary,
     body.wc-faq-page .wc-faq-item > summary::after {
@@ -1222,9 +1305,9 @@ body.wc-guide-index .md-typeset .wc-home-grid {
 
 body.wc-home-index .md-typeset .wc-home-grid {
     gap: 1.25rem;
-    grid-template-columns: repeat(2, minmax(17rem, 1fr));
+    grid-template-columns: repeat(2, minmax(280px, 330px));
     margin-top: 0;
-    max-width: 56rem;
+    max-width: calc(660px + 1.25rem);
 }
 
 /* Revitalização visual das páginas de Manual. */

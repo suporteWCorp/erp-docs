@@ -143,27 +143,6 @@
         }
       ],
       "tags": ["certificado", "digital", "fiscal", "transmissão", "validade"]
-    },
-    {
-      "id": "rejeicao-sefaz",
-      "title": "Rejeição da SEFAZ",
-      "area": "Documentos Fiscais",
-      "category": "NF-e",
-      "description": "A SEFAZ recusou a autorização da nota e retornou uma mensagem de rejeição.",
-      "cause": "Dados fiscais, cadastrais ou tributários da nota não passaram pela validação da SEFAZ.",
-      "resolution": "Leia o retorno completo, identifique a origem da informação e corrija o cadastro ou documento antes de transmitir novamente.",
-      "observations": "Registre o código e a mensagem completos. A correção depende da rejeição recebida.",
-      "links": [
-        {
-          "label": "Como emitir uma NF-e",
-          "url": "como-fazer/faturar-nota/"
-        },
-        {
-          "label": "Manual de Nota Fiscal",
-          "url": "faturamento/faturamento-nf/"
-        }
-      ],
-      "tags": ["sefaz", "rejeição", "nota fiscal", "nfe", "fiscal"]
     }
   ]
 }

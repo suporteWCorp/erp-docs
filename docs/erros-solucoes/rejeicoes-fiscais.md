@@ -1,3 +1,5 @@
+<div class="wcorp-inner-page wcorp-error-topic-page" markdown>
+
 # Rejeições Fiscais
 
 Digite o código da rejeição ou cole a mensagem completa para encontrar a orientação correspondente.
@@ -15,75 +17,33 @@ Digite o código da rejeição ou cole a mensagem completa para encontrar a orie
 <section class="wc-solution-category" data-wc-solution-group>
   <button class="wc-solution-category__toggle" type="button" aria-expanded="false" aria-controls="rejeicoes-nfe">
     <span class="wc-solution-category__title">NF-e</span>
-    <span class="wc-solution-category__count">21</span>
+    <span class="wc-solution-category__count">29</span>
     <span class="wc-solution-category__arrow" aria-hidden="true">›</span>
   </button>
   <div id="rejeicoes-nfe" class="wc-solution-category__panel">
     <div class="wc-solution-category__content">
       <div class="wc-rejection-list">
-        <a class="wc-rejection-item" href="rejeicao-930-cst-beneficio-fiscal-sem-codigo/" data-search="930 rejeição cst benefício fiscal não informado código benefício fiscal nf-e nfe natureza operação regra fiscal cfop material contabilidade">
-          <span class="wc-rejection-item__code">930</span>
-          <span class="wc-rejection-item__title">CST com benefício fiscal sem código de benefício</span>
-          <span class="wc-rejection-item__document">NF-e</span>
-          <span class="wc-rejection-item__arrow" aria-hidden="true">›</span>
-        </a>
-        <a class="wc-rejection-item" href="rejeicao-928-codigo-beneficio-cst-sem-beneficio/" data-search="928 rejeição informado código benefício fiscal cst sem benefício fiscal nf-e nfe natureza operação regra fiscal cfop contabilidade icms">
-          <span class="wc-rejection-item__code">928</span>
-          <span class="wc-rejection-item__title">Código de benefício fiscal para CST sem benefício</span>
-          <span class="wc-rejection-item__document">NF-e</span>
-          <span class="wc-rejection-item__arrow" aria-hidden="true">›</span>
-        </a>
-        <a class="wc-rejection-item" href="rejeicao-656-consumo-indevido/" data-search="656 rejeição consumo indevido sefaz nf-e nfe transmissao mensagem retornada">
-          <span class="wc-rejection-item__code">656</span>
-          <span class="wc-rejection-item__title">Consumo indevido</span>
-          <span class="wc-rejection-item__document">NF-e</span>
-          <span class="wc-rejection-item__arrow" aria-hidden="true">›</span>
-        </a>
-        <a class="wc-rejection-item" href="rejeicao-866-ausencia-troco/" data-search="866 rejeição ausência troco pagamentos maior total nota parcela imposto nf-e nfe">
-          <span class="wc-rejection-item__code">866</span>
-          <span class="wc-rejection-item__title">Ausência de troco</span>
-          <span class="wc-rejection-item__document">NF-e</span>
-          <span class="wc-rejection-item__arrow" aria-hidden="true">›</span>
-        </a>
-        <a class="wc-rejection-item" href="rejeicao-904-valor-pagamento-informado-indevidamente/" data-search="904 rejeição informado indevidamente campo valor pagamento devolução parcelas nf-e nfe">
-          <span class="wc-rejection-item__code">904</span>
-          <span class="wc-rejection-item__title">Valor de pagamento informado indevidamente</span>
-          <span class="wc-rejection-item__document">NF-e</span>
-          <span class="wc-rejection-item__arrow" aria-hidden="true">›</span>
-        </a>
-        <a class="wc-rejection-item" href="rejeicao-564-total-produto-servico/" data-search="564 rejeição total produto serviço difere somatório itens aba imposto nf-e nfe">
-          <span class="wc-rejection-item__code">564</span>
-          <span class="wc-rejection-item__title">Total do Produto / Serviço difere do somatório dos itens</span>
-          <span class="wc-rejection-item__document">NF-e</span>
-          <span class="wc-rejection-item__arrow" aria-hidden="true">›</span>
-        </a>
-        <a class="wc-rejection-item" href="rejeicao-862-total-fcp-st/" data-search="862 rejeição total fcp st difere somatório itens fundo combate pobreza impostos nf-e nfe">
-          <span class="wc-rejection-item__code">862</span>
-          <span class="wc-rejection-item__title">Total do FCP ST difere do somatório dos itens</span>
-          <span class="wc-rejection-item__document">NF-e</span>
-          <span class="wc-rejection-item__arrow" aria-hidden="true">›</span>
-        </a>
         <a class="wc-rejection-item" href="rejeicao-109-servico-paralisado/" data-search="109 rejeição serviço paralisado sem previsão sefaz instabilidade nf-e nfe">
           <span class="wc-rejection-item__code">109</span>
           <span class="wc-rejection-item__title">Serviço Paralisado sem Previsão</span>
           <span class="wc-rejection-item__document">NF-e</span>
           <span class="wc-rejection-item__arrow" aria-hidden="true">›</span>
         </a>
-        <a class="wc-rejection-item" href="rejeicao-600-csosn-nao-contribuinte/" data-search="600 rejeição csosn incompatível operação não contribuinte indicador ie contabilidade nf-e nfe">
-          <span class="wc-rejection-item__code">600</span>
-          <span class="wc-rejection-item__title">CSOSN incompatível na operação com Não Contribuinte</span>
-          <span class="wc-rejection-item__document">NF-e</span>
-          <span class="wc-rejection-item__arrow" aria-hidden="true">›</span>
-        </a>
-        <a class="wc-rejection-item" href="rejeicao-733-cfop-operacao-interna-iddest/" data-search="733 rejeição cfop operação interna iddest natureza operação regra fiscal operação interna interestadual nf-e nfe">
-          <span class="wc-rejection-item__code">733</span>
-          <span class="wc-rejection-item__title">CFOP de operação interna e idDest &lt;&gt; 1</span>
+        <a class="wc-rejection-item" href="rejeicao-204-duplicidade-nfe/" data-search="204 rejeição duplicidade nf-e numeração série cnpj emitente modelo sefaz id nota fiscal">
+          <span class="wc-rejection-item__code">204</span>
+          <span class="wc-rejection-item__title">Duplicidade de NF-e</span>
           <span class="wc-rejection-item__document">NF-e</span>
           <span class="wc-rejection-item__arrow" aria-hidden="true">›</span>
         </a>
         <a class="wc-rejection-item" href="rejeicao-206-nfe-inutilizada/" data-search="206 rejeição nf-e já está inutilizada base dados sefaz numeração desativar refazer">
           <span class="wc-rejection-item__code">206</span>
           <span class="wc-rejection-item__title">NF-e já está inutilizada na Base de Dados da SEFAZ</span>
+          <span class="wc-rejection-item__document">NF-e</span>
+          <span class="wc-rejection-item__arrow" aria-hidden="true">›</span>
+        </a>
+        <a class="wc-rejection-item" href="rejeicao-225-falha-schema-xml/" data-search="225 rejeição falha schema xml layout sefaz id nota fiscal nf-e nfe">
+          <span class="wc-rejection-item__code">225</span>
+          <span class="wc-rejection-item__title">Falha no Schema XML</span>
           <span class="wc-rejection-item__document">NF-e</span>
           <span class="wc-rejection-item__arrow" aria-hidden="true">›</span>
         </a>
@@ -99,6 +59,18 @@ Digite o código da rejeição ou cole a mensagem completa para encontrar a orie
           <span class="wc-rejection-item__document">NF-e</span>
           <span class="wc-rejection-item__arrow" aria-hidden="true">›</span>
         </a>
+        <a class="wc-rejection-item" href="rejeicao-382-cfop-cst/" data-search="382 rejeição cfop não permitido cst informado natureza operação regra fiscal tributação nf-e nfe">
+          <span class="wc-rejection-item__code">382</span>
+          <span class="wc-rejection-item__title">CFOP não permitido para o CST informado</span>
+          <span class="wc-rejection-item__document">NF-e</span>
+          <span class="wc-rejection-item__arrow" aria-hidden="true">›</span>
+        </a>
+        <a class="wc-rejection-item" href="rejeicao-386-cfop-csosn/" data-search="386 rejeição cfop não permitido csosn informado natureza operação regra fiscal tributação simples nacional nf-e nfe">
+          <span class="wc-rejection-item__code">386</span>
+          <span class="wc-rejection-item__title">CFOP não permitido para o CSOSN informado</span>
+          <span class="wc-rejection-item__document">NF-e</span>
+          <span class="wc-rejection-item__arrow" aria-hidden="true">›</span>
+        </a>
         <a class="wc-rejection-item" href="rejeicao-481-gtin-invalido/" data-search="481 rejeição código gtin inválido código barras ean ean tributário material nf-e nfe">
           <span class="wc-rejection-item__code">481</span>
           <span class="wc-rejection-item__title">Código GTIN inválido</span>
@@ -108,6 +80,18 @@ Digite o código da rejeição ou cole a mensagem completa para encontrar a orie
         <a class="wc-rejection-item" href="rejeicao-531-total-base-icms/" data-search="531 rejeição total base cálculo icms difere somatório itens impostos materiais nf-e nfe">
           <span class="wc-rejection-item__code">531</span>
           <span class="wc-rejection-item__title">Total da Base de Cálculo do ICMS difere do somatório dos itens</span>
+          <span class="wc-rejection-item__document">NF-e</span>
+          <span class="wc-rejection-item__arrow" aria-hidden="true">›</span>
+        </a>
+        <a class="wc-rejection-item" href="rejeicao-533-total-bc-icms-st/" data-search="533 rejeição total bc icms st base cálculo difere somatório itens impostos materiais vbcst nf-e nfe">
+          <span class="wc-rejection-item__code">533</span>
+          <span class="wc-rejection-item__title">Total da BC ICMS-ST difere do somatório dos itens</span>
+          <span class="wc-rejection-item__document">NF-e</span>
+          <span class="wc-rejection-item__arrow" aria-hidden="true">›</span>
+        </a>
+        <a class="wc-rejection-item" href="rejeicao-535-total-frete/" data-search="535 rejeição total frete difere somatório itens impostos materiais vfrete nf-e nfe">
+          <span class="wc-rejection-item__code">535</span>
+          <span class="wc-rejection-item__title">Total do Frete difere do somatório dos itens</span>
           <span class="wc-rejection-item__document">NF-e</span>
           <span class="wc-rejection-item__arrow" aria-hidden="true">›</span>
         </a>
@@ -123,9 +107,45 @@ Digite o código da rejeição ou cole a mensagem completa para encontrar a orie
           <span class="wc-rejection-item__document">NF-e</span>
           <span class="wc-rejection-item__arrow" aria-hidden="true">›</span>
         </a>
+        <a class="wc-rejection-item" href="rejeicao-564-total-produto-servico/" data-search="564 rejeição total produto serviço difere somatório itens aba imposto nf-e nfe">
+          <span class="wc-rejection-item__code">564</span>
+          <span class="wc-rejection-item__title">Total do Produto / Serviço difere do somatório dos itens</span>
+          <span class="wc-rejection-item__document">NF-e</span>
+          <span class="wc-rejection-item__arrow" aria-hidden="true">›</span>
+        </a>
+        <a class="wc-rejection-item" href="rejeicao-591-csosn-simples-nacional/" data-search="591 rejeição csosn emitente não optante simples nacional crt regime tributário regra fiscal nf-e nfe">
+          <span class="wc-rejection-item__code">591</span>
+          <span class="wc-rejection-item__title">CSOSN informado para emitente que não é optante do Simples Nacional</span>
+          <span class="wc-rejection-item__document">NF-e</span>
+          <span class="wc-rejection-item__arrow" aria-hidden="true">›</span>
+        </a>
+        <a class="wc-rejection-item" href="rejeicao-600-csosn-nao-contribuinte/" data-search="600 rejeição csosn incompatível operação não contribuinte indicador ie contabilidade nf-e nfe">
+          <span class="wc-rejection-item__code">600</span>
+          <span class="wc-rejection-item__title">CSOSN incompatível na operação com Não Contribuinte</span>
+          <span class="wc-rejection-item__document">NF-e</span>
+          <span class="wc-rejection-item__arrow" aria-hidden="true">›</span>
+        </a>
+        <a class="wc-rejection-item" href="rejeicao-602-total-pis/" data-search="602 rejeição total pis difere somatório itens impostos materiais nf-e nfe">
+          <span class="wc-rejection-item__code">602</span>
+          <span class="wc-rejection-item__title">Total do PIS difere do somatório dos itens</span>
+          <span class="wc-rejection-item__document">NF-e</span>
+          <span class="wc-rejection-item__arrow" aria-hidden="true">›</span>
+        </a>
+        <a class="wc-rejection-item" href="rejeicao-603-total-cofins/" data-search="603 rejeição total cofins difere somatório itens impostos materiais nf-e nfe">
+          <span class="wc-rejection-item__code">603</span>
+          <span class="wc-rejection-item__title">Total do COFINS difere do somatório dos itens</span>
+          <span class="wc-rejection-item__document">NF-e</span>
+          <span class="wc-rejection-item__arrow" aria-hidden="true">›</span>
+        </a>
         <a class="wc-rejection-item" href="rejeicao-610-total-nfe/" data-search="610 rejeição total nfe difere somatório valores compõe valor total materiais impostos frete seguro despesas desconto nf-e">
           <span class="wc-rejection-item__code">610</span>
           <span class="wc-rejection-item__title">Total da NF-e difere do somatório dos valores</span>
+          <span class="wc-rejection-item__document">NF-e</span>
+          <span class="wc-rejection-item__arrow" aria-hidden="true">›</span>
+        </a>
+        <a class="wc-rejection-item" href="rejeicao-656-consumo-indevido/" data-search="656 rejeição consumo indevido sefaz nf-e nfe transmissao mensagem retornada">
+          <span class="wc-rejection-item__code">656</span>
+          <span class="wc-rejection-item__title">Consumo indevido</span>
           <span class="wc-rejection-item__document">NF-e</span>
           <span class="wc-rejection-item__arrow" aria-hidden="true">›</span>
         </a>
@@ -135,36 +155,46 @@ Digite o código da rejeição ou cole a mensagem completa para encontrar a orie
           <span class="wc-rejection-item__document">Cancelamento</span>
           <span class="wc-rejection-item__arrow" aria-hidden="true">›</span>
         </a>
-        <a class="wc-rejection-item" href="rejeicao-225-falha-schema-xml/" data-search="225 rejeição falha schema xml layout sefaz id nota fiscal nf-e nfe">
-          <span class="wc-rejection-item__code">225</span>
-          <span class="wc-rejection-item__title">Falha no Schema XML</span>
+        <a class="wc-rejection-item" href="rejeicao-733-cfop-operacao-interna-iddest/" data-search="733 rejeição cfop operação interna iddest natureza operação regra fiscal operação interna interestadual nf-e nfe">
+          <span class="wc-rejection-item__code">733</span>
+          <span class="wc-rejection-item__title">CFOP de operação interna e idDest &lt;&gt; 1</span>
           <span class="wc-rejection-item__document">NF-e</span>
           <span class="wc-rejection-item__arrow" aria-hidden="true">›</span>
         </a>
-        <a class="wc-rejection-item" href="rejeicao-204-duplicidade-nfe/" data-search="204 rejeição duplicidade nf-e numeração série cnpj emitente modelo sefaz id nota fiscal">
-          <span class="wc-rejection-item__code">204</span>
-          <span class="wc-rejection-item__title">Duplicidade de NF-e</span>
+        <a class="wc-rejection-item" href="rejeicao-778-ncm-inexistente/" data-search="778 rejeição ncm inexistente material produto cadastro classificação fiscal nf-e nfe">
+          <span class="wc-rejection-item__code">778</span>
+          <span class="wc-rejection-item__title">NCM inexistente</span>
           <span class="wc-rejection-item__document">NF-e</span>
           <span class="wc-rejection-item__arrow" aria-hidden="true">›</span>
         </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="wc-solution-category" data-wc-solution-group>
-  <button class="wc-solution-category__toggle" type="button" aria-expanded="false" aria-controls="rejeicoes-autorizadores">
-    <span class="wc-solution-category__title">SEFAZ e autorizadores</span>
-    <span class="wc-solution-category__count">1</span>
-    <span class="wc-solution-category__arrow" aria-hidden="true">›</span>
-  </button>
-  <div id="rejeicoes-autorizadores" class="wc-solution-category__panel">
-    <div class="wc-solution-category__content">
-      <div class="wc-rejection-list">
-        <a class="wc-rejection-item" href="rejeicao-sefaz/" data-search="rejeição sefaz nota fiscal nfe fiscal autorizador retorno mensagem retornada">
-          <span class="wc-rejection-item__code">Geral</span>
-          <span class="wc-rejection-item__title">Rejeição da SEFAZ</span>
-          <span class="wc-rejection-item__document">Fiscal</span>
+        <a class="wc-rejection-item" href="rejeicao-862-total-fcp-st/" data-search="862 rejeição total fcp st difere somatório itens fundo combate pobreza impostos nf-e nfe">
+          <span class="wc-rejection-item__code">862</span>
+          <span class="wc-rejection-item__title">Total do FCP ST difere do somatório dos itens</span>
+          <span class="wc-rejection-item__document">NF-e</span>
+          <span class="wc-rejection-item__arrow" aria-hidden="true">›</span>
+        </a>
+        <a class="wc-rejection-item" href="rejeicao-866-ausencia-troco/" data-search="866 rejeição ausência troco pagamentos maior total nota parcela imposto nf-e nfe">
+          <span class="wc-rejection-item__code">866</span>
+          <span class="wc-rejection-item__title">Ausência de troco</span>
+          <span class="wc-rejection-item__document">NF-e</span>
+          <span class="wc-rejection-item__arrow" aria-hidden="true">›</span>
+        </a>
+        <a class="wc-rejection-item" href="rejeicao-904-valor-pagamento-informado-indevidamente/" data-search="904 rejeição informado indevidamente campo valor pagamento devolução parcelas nf-e nfe">
+          <span class="wc-rejection-item__code">904</span>
+          <span class="wc-rejection-item__title">Valor de pagamento informado indevidamente</span>
+          <span class="wc-rejection-item__document">NF-e</span>
+          <span class="wc-rejection-item__arrow" aria-hidden="true">›</span>
+        </a>
+        <a class="wc-rejection-item" href="rejeicao-928-codigo-beneficio-cst-sem-beneficio/" data-search="928 rejeição informado código benefício fiscal cst sem benefício fiscal nf-e nfe natureza operação regra fiscal cfop contabilidade icms">
+          <span class="wc-rejection-item__code">928</span>
+          <span class="wc-rejection-item__title">Código de benefício fiscal para CST sem benefício</span>
+          <span class="wc-rejection-item__document">NF-e</span>
+          <span class="wc-rejection-item__arrow" aria-hidden="true">›</span>
+        </a>
+        <a class="wc-rejection-item" href="rejeicao-930-cst-beneficio-fiscal-sem-codigo/" data-search="930 rejeição cst benefício fiscal não informado código benefício fiscal nf-e nfe natureza operação regra fiscal cfop material contabilidade">
+          <span class="wc-rejection-item__code">930</span>
+          <span class="wc-rejection-item__title">CST com benefício fiscal sem código de benefício</span>
+          <span class="wc-rejection-item__document">NF-e</span>
           <span class="wc-rejection-item__arrow" aria-hidden="true">›</span>
         </a>
       </div>
@@ -190,5 +220,7 @@ Digite o código da rejeição ou cole a mensagem completa para encontrar a orie
 Caso a mensagem não esteja cadastrada ou o problema continue após as verificações, entre em contato com a equipe de Suporte.
 
 [Solicitar suporte](../suporte/index.md){ .md-button .md-button--primary }
+
+</div>
 
 </div>

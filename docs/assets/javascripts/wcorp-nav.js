@@ -31,6 +31,9 @@
     const home = targetPath === normalizedPagePath(rootUrl());
     const manualIndex = targetPath === normalizedPagePath(new URL("manual/", rootUrl()));
     const faq = /\/referencia\/faq$/.test(cleanPath);
+    const faqArticle = /\/referencia\/faq\/[^/]+$/.test(cleanPath);
+    const operationalErrorArticle = /\/erros-solucoes\/erros-operacionais\/[^/]+$/.test(cleanPath);
+    const technicalIssueArticle = /\/erros-solucoes\/problemas-tecnicos\/[^/]+$/.test(cleanPath);
     const tools = /\/ferramentas$/.test(cleanPath) || cleanPath.includes("/ferramentas/");
     const guideIndex = /\/como-fazer$/.test(cleanPath);
     const guide = cleanPath.includes("/como-fazer/") || guideIndex;
@@ -46,6 +49,9 @@
     document.body?.classList.toggle("wc-manual-tabs", manual);
     document.body?.classList.toggle("wc-manual-index", manualIndex);
     document.body?.classList.toggle("wc-faq-page", faq);
+    document.body?.classList.toggle("wc-faq-article-page", faqArticle);
+    document.body?.classList.toggle("wc-operational-error-article-page", operationalErrorArticle);
+    document.body?.classList.toggle("wc-technical-issue-article-page", technicalIssueArticle);
     if (!manual) document.querySelector(".wc-manual-subnav")?.remove();
   }
 
@@ -115,7 +121,7 @@
         event.stopImmediatePropagation();
         document.documentElement.classList.remove("wc-ui-loading", "wcorp-preparing", "wc-route-transition", "wc-route-home", "wc-route-guide", "wc-route-guide-index", "wc-route-manual", "wc-route-manual-index", "wc-route-faq", "wc-route-tools");
         document.documentElement.classList.add("wcorp-ready");
-        document.body?.classList.remove("wc-home-index", "wc-guide-index", "wc-manual-tabs", "wc-manual-index", "wc-faq-page");
+        document.body?.classList.remove("wc-home-index", "wc-guide-index", "wc-manual-tabs", "wc-manual-index", "wc-faq-page", "wc-faq-article-page", "wc-operational-error-article-page", "wc-technical-issue-article-page");
         document.querySelector(".wc-manual-subnav")?.remove();
         if (isSamePage(root) || isEquivalentPage(root)) {
           updateRouteClasses(root.href);
@@ -166,7 +172,7 @@
 
     if (routeTitles[relativePath]) return routeTitles[relativePath];
 
-    const heading = document.querySelector(".md-content__inner > h1");
+    const heading = document.querySelector(".md-content__inner > h1, .md-content__inner > .wcorp-error-article-page > h1");
     if (!heading) return "";
 
     const copy = heading.cloneNode(true);
@@ -182,7 +188,7 @@
     const relativePath = relativePortalPath();
 
     const content = document.querySelector(".md-content__inner");
-    const heading = content ? content.querySelector(":scope > h1") : null;
+    const heading = content ? content.querySelector(":scope > h1, :scope > .wcorp-error-article-page > h1") : null;
     if (!content || !heading) return;
 
     let section = null;
@@ -225,6 +231,11 @@
     const title = currentPageTitle();
     if (section) {
       const manualModule = isManualPage() ? manualModuleForCurrentPage() : null;
+      const errorTopic = [
+        { path: "/erros-solucoes/rejeicoes-fiscais", label: "Rejeições Fiscais", href: "erros-solucoes/rejeicoes-fiscais/" },
+        { path: "/erros-solucoes/erros-operacionais", label: "Erros Operacionais", href: "erros-solucoes/erros-operacionais/" },
+        { path: "/erros-solucoes/problemas-tecnicos", label: "Problemas Técnicos", href: "erros-solucoes/problemas-tecnicos/" }
+      ].find((item) => relativePath === item.path || relativePath.startsWith(`${item.path}/`));
 
       if (relativePath === section.path) {
         addItem(section.label, null, true);
@@ -232,7 +243,12 @@
         addItem(section.label, section.href);
         if (relativePath.startsWith("/erros-solucoes/")) {
           addItem("Erros e Soluções", "erros-solucoes/");
-          addItem(title, null, true);
+          if (errorTopic && relativePath !== errorTopic.path) {
+            addItem(errorTopic.label, errorTopic.href);
+            addItem(title, null, true);
+          } else {
+            addItem(title, null, true);
+          }
         } else if (manualModule) {
           const moduleHref = new URL(manualModule.href, rootUrl()).href;
           const isModuleOverview = normalizedPagePath(window.location.href) === normalizedPagePath(moduleHref);
@@ -255,7 +271,9 @@
     bar.className = "wc-breadcrumb-bar";
     breadcrumb.appendChild(list);
     bar.appendChild(breadcrumb);
-    heading.insertAdjacentElement("beforebegin", bar);
+    const wrapper = heading.closest(".wcorp-error-article-page");
+    const anchor = wrapper?.parentElement === content ? wrapper : heading;
+    anchor.insertAdjacentElement("beforebegin", bar);
   }
 
   function isManualPage() {
@@ -625,10 +643,7 @@
   function globalSidebarItems() {
     const relativePath = relativePortalPath();
     const root = rootUrl();
-    const navigationPaths = [...new Set(Array.from(document.querySelectorAll("a[href]"), (link) => (
-      new URL(link.href, window.location.href).pathname.replace(/\/index\.html$/, "").replace(/\/+$/, "")
-    )))];
-    const guideCount = navigationPaths.filter((path) => path.includes("/como-fazer/")).length;
+    const guideCount = guideSidebarItems().reduce((count, module) => count + (module.children || []).length, 0);
     const manualCount = manualModules().reduce((count, module) => count + module.screens.length, 0);
 
     return [

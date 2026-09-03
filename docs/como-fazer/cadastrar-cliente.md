@@ -1,4 +1,18 @@
 ---
+id: cadastrar-cliente
+title: Como cadastrar um cliente
+type: guia
+category: Comercial
+description: Aprenda como realizar o cadastro de um cliente no WCorp.
+difficulty: facil
+status: published
+related_manual:
+  - comercial-clientes
+tags:
+  - cliente
+  - cadastro
+  - pedido
+  - faturamento
 error_area: "Comercial"
 error_category: "Clientes"
 error_tags:
@@ -12,11 +26,7 @@ error_tags:
 
 ## Pré-requisitos
 
-<div class="wc-prereq-list" markdown>
-
 - CNPJ, CPF ou dados cadastrais do cliente em mãos
-
-</div>
 
 ## Permissões
 
@@ -24,14 +34,11 @@ error_tags:
 
 ## Caminho
 
-![Onde encontrar](../assets/images/guias/comercial_clientes.png)
+![Onde encontrar](../assets/images/guias/cadastrar-cliente/comercial_clientes.png)
 
 ## Demonstração em vídeo
 
-<video class="wc-video" controls preload="auto" playsinline poster="../../assets/images/guias/comercial_clientes.png">
-  <source src="../../assets/videos/comercial_clientes.mp4" type="video/mp4">
-  Seu navegador não conseguiu reproduzir este vídeo.
-</video>
+[Demonstração do cadastro de cliente](../assets/videos/guias/cadastrar-cliente/comercial_clientes.mp4){ .wc-video-link data-poster="../assets/images/guias/cadastrar-cliente/comercial_clientes.png" }
 
 ## Como fazer
 
@@ -45,10 +52,3 @@ error_tags:
 **Resultado esperado**
 
 O cliente fica salvo e disponível para seleção em pedidos, faturamento, financeiro e consultas.
-
-## Veja também
-
-- [Consultar CNPJ](../referencia/links-uteis.md){: target="_blank" rel="noopener" }
-- [Como gerar um pedido](fazer-pedido-venda.md){: target="_blank" rel="noopener" }
-- [Como emitir uma NF-e](faturar-nota.md){: target="_blank" rel="noopener" }
-- [Consultar manual de clientes](../comercial/comercial-clientes.md){: target="_blank" rel="noopener" }

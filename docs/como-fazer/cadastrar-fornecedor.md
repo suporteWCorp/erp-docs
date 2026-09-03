@@ -4,6 +4,8 @@ error_category: "Fornecedores"
 error_tags:
   - "fornecedor"
   - "cadastro"
+search:
+  exclude: true
 ---
 
 # Como cadastrar um fornecedor

@@ -6,6 +6,8 @@ error_tags:
   - "baixa"
   - "pagamento"
   - "recebimento"
+search:
+  exclude: true
 ---
 
 # Como baixar um título

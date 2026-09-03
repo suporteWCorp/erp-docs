@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Auditoria do Indicador de Relatórios</title>
+</head>
+<body>
+  <main>
+    <h1>Auditoria do Indicador de Relatórios</h1>
+
+    <div class="wc-tool-panel wc-report-finder" data-wc-report-finder>
+      <section class="wc-report-selector" aria-labelledby="wc-report-selector-title">
+        <div class="wc-report-selector__header">
+          <h2 id="wc-report-selector-title">Quais informações devem constar no relatório?</h2>
+          <button class="wc-report-clear" type="button" data-wc-report-clear hidden>Limpar seleção</button>
+        </div>
+        <div class="wc-report-field-groups" data-wc-report-fields></div>
+      </section>
+
+      <section class="wc-tool-results wc-report-results" aria-labelledby="wc-report-results-title">
+        <h2 id="wc-report-results-title">Relatórios indicados</h2>
+        <div data-wc-report-results aria-live="polite"></div>
+      </section>
+    </div>
+
+    <pre id="report-indicator-results" data-status="pending">Rodando auditoria...</pre>
+  </main>
+
+  <script src="../../docs/assets/javascripts/wcorp-tools.js"></script>
+  <script>
+    (async function () {
+      const output = document.querySelector("#report-indicator-results");
+      const sourcePath = "../../docs/assets/javascripts/wcorp-tools.js";
+      const catalogPath = "../../docs/assets/data/report-indicator-catalog.json";
+
+      const testQueries = [
+        { id: "Q01", label: "Cliente", fields: ["client"] },
+        { id: "Q02", label: "Material", fields: ["material"] },
+        { id: "Q03", label: "Nota fiscal", fields: ["invoice"] },
+        { id: "Q04", label: "Pedido", fields: ["order"] },
+        { id: "Q05", label: "Cliente + Material", fields: ["client", "material"] },
+        { id: "Q06", label: "Cliente + Nota fiscal", fields: ["client", "invoice"] },
+        { id: "Q07", label: "Cliente + Material + Nota fiscal", fields: ["client", "material", "invoice"] },
+        { id: "Q08", label: "Cliente + Material + Nota fiscal + Pedido", fields: ["client", "material", "invoice", "order"] },
+        { id: "Q09", label: "Fornecedor + Nota fiscal", fields: ["supplier", "invoice"] },
+        { id: "Q10", label: "Vendedor + Cliente", fields: ["seller", "client"] },
+        { id: "Q11", label: "Estoque + Lote", fields: ["stock", "batch"] },
+        { id: "Q12", label: "Ordem de produção + Material", fields: ["productionOrder", "material"] },
+        { id: "Q13", label: "Serviço + Ordem de serviço", fields: ["service", "serviceOrder"] },
+        { id: "Q14", label: "CFOP + Impostos", fields: ["cfop", "tax"] },
+        { id: "Q15", label: "Recebimento/Pagamento + Vencimento", fields: ["payment", "dueDate"] },
+        { id: "N01", label: "Local de armazenagem + Comissão", fields: ["storageLocation", "commission"], expectNone: true },
+        { id: "N02", label: "Manutenção + Cliente", fields: ["maintenance", "client"], expectNone: true },
+        { id: "N03", label: "Documento + Nota fiscal", fields: ["document", "invoice"], expectNone: true }
+      ];
+
+      function evaluateLiteral(text) {
+        return Function('"use strict"; return (' + text + ");")();
+      }
+
+      function extractArray(source, name) {
+        const pattern = new RegExp("const\\s+" + name + "\\s*=\\s*\\[([\\s\\S]*?)\\];");
+        const match = source.match(pattern);
+        if (!match) throw new Error("Array nao encontrado: " + name);
+        return evaluateLiteral("[" + match[1] + "]");
+      }
+
+      function extractReports(source) {
+        const reportPattern = /report\("([^"]+)",\s*"([^"]+)",\s*(\[[^\]]*\])\)/g;
+        const items = [];
+        let match;
+        while ((match = reportPattern.exec(source))) {
+          items.push({
+            name: match[1],
+            category: match[2],
+            fields: evaluateLiteral(match[3])
+          });
+        }
+        return items;
+      }
+
+      function waitForFields() {
+        return new Promise((resolve, reject) => {
+          const startedAt = Date.now();
+          const tick = () => {
+            const fields = document.querySelectorAll("[data-wc-report-field]");
+            if (fields.length) {
+              resolve(fields);
+              return;
+            }
+            if (Date.now() - startedAt > 3000) {
+              reject(new Error("Campos do indicador nao foram renderizados."));
+              return;
+            }
+            requestAnimationFrame(tick);
+          };
+          tick();
+        });
+      }
+
+      function collectFieldLabels() {
+        return Array.from(document.querySelectorAll(".wc-report-field")).reduce((acc, label) => {
+          const input = label.querySelector("[data-wc-report-field]");
+          const text = label.querySelector("span");
+          if (input && text) acc[input.value] = text.textContent.trim();
+          return acc;
+        }, {});
+      }
+
+      function setSelectedFields(fields) {
+        document.querySelectorAll("[data-wc-report-field]").forEach((input) => {
+          input.checked = fields.includes(input.value);
+        });
+        document.querySelector("[data-wc-report-fields]").dispatchEvent(new Event("change", { bubbles: true }));
+      }
+
+      function obtainedReportNames() {
+        return Array.from(document.querySelectorAll(".wc-report-card__title")).map((title) => title.textContent.trim());
+      }
+
+      function arraysEqual(left, right) {
+        return left.length === right.length && left.every((item, index) => item === right[index]);
+      }
+
+      function normalizeReportName(value) {
+        return String(value || "")
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "")
+          .toLowerCase()
+          .replace(/&/g, " e ")
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/^-+|-+$/g, "");
+      }
+
+      function findDuplicates(items) {
+        const seen = new Set();
+        const duplicates = new Set();
+
+        items.forEach((item) => {
+          if (seen.has(item)) duplicates.add(item);
+          seen.add(item);
+        });
+
+        return [...duplicates];
+      }
+
+      function sortedUnique(items) {
+        return [...new Set(items)].sort();
+      }
+
+      function compareLists(expected, obtained) {
+        return {
+          missing: expected.filter((item) => !obtained.includes(item)),
+          extra: obtained.filter((item) => !expected.includes(item))
+        };
+      }
+
+      function validateCatalogMigration(catalog, reports, fieldIds) {
+        const errors = [];
+        const warnings = [];
+        const catalogReports = Array.isArray(catalog.relatorios) ? catalog.relatorios : [];
+        const validFieldIds = new Set(fieldIds);
+        const currentReports = reports.map((report) => ({
+          id: normalizeReportName(report.name),
+          name: report.name,
+          category: report.category,
+          fields: report.fields
+        }));
+
+        if (!Array.isArray(catalog.relatorios)) {
+          errors.push("catalogo_sem_array_relatorios");
+        }
+
+        findDuplicates(catalogReports.map((report) => report.id)).forEach((id) => {
+          errors.push(`id_duplicado:${id}`);
+        });
+
+        findDuplicates(catalogReports.map((report) => report.nome)).forEach((name) => {
+          errors.push(`relatorio_duplicado_catalogo:${name}`);
+        });
+
+        findDuplicates(currentReports.map((report) => report.name)).forEach((name) => {
+          errors.push(`relatorio_duplicado_produto:${name}`);
+        });
+
+        const expectedIds = currentReports.map((report) => report.id);
+        const obtainedIds = catalogReports.map((report) => report.id);
+        const idComparison = compareLists(expectedIds, obtainedIds);
+
+        idComparison.missing.forEach((id) => errors.push(`relatorio_faltando:${id}`));
+        idComparison.extra.forEach((id) => errors.push(`relatorio_extra:${id}`));
+
+        currentReports.forEach((current) => {
+          const catalogReport = catalogReports.find((report) => report.id === current.id);
+
+          if (!catalogReport) {
+            return;
+          }
+
+          if (catalogReport.nome !== current.name) {
+            errors.push(`nome_divergente:${current.id}`);
+          }
+
+          if (catalogReport.area !== current.category) {
+            errors.push(`area_divergente:${current.id}`);
+          }
+
+          const catalogFields = (catalogReport.informacoes || []).map((field) => field.id);
+          const fieldComparison = compareLists(
+            sortedUnique(current.fields),
+            sortedUnique(catalogFields)
+          );
+
+          fieldComparison.missing.forEach((field) => {
+            errors.push(`informacao_faltando:${current.id}:${field}`);
+          });
+
+          fieldComparison.extra.forEach((field) => {
+            errors.push(`informacao_extra:${current.id}:${field}`);
+          });
+
+          findDuplicates(catalogFields).forEach((field) => {
+            errors.push(`informacao_duplicada:${current.id}:${field}`);
+          });
+
+          catalogFields.forEach((field) => {
+            if (!validFieldIds.has(field)) {
+              errors.push(`informacao_desconhecida:${current.id}:${field}`);
+            }
+          });
+
+          (catalogReport.informacoes || []).forEach((field) => {
+            if (!["confirmado", "nao_confirmado"].includes(field.status)) {
+              errors.push(`status_invalido:${current.id}:${field.id}`);
+            }
+
+            if (field.status === "confirmado" && !field.fonte) {
+              warnings.push(`confirmado_sem_fonte:${current.id}:${field.id}`);
+            }
+          });
+        });
+
+        const associationStatuses = catalogReports
+          .flatMap((report) => report.informacoes || [])
+          .reduce((acc, field) => {
+            acc[field.status] = (acc[field.status] || 0) + 1;
+            return acc;
+          }, {});
+
+        return {
+          status: errors.length ? "FAIL" : "PASS",
+          meaning: "PASS indica apenas equivalencia estrutural com o mapeamento atual; nao confirma operacionalmente as informacoes no WCorp.",
+          reportCount: catalogReports.length,
+          expectedReportCount: reports.length,
+          associationCount: catalogReports.reduce((sum, report) => sum + (report.informacoes || []).length, 0),
+          confirmedAssociations: associationStatuses.confirmado || 0,
+          unconfirmedAssociations: associationStatuses.nao_confirmado || 0,
+          duplicateIds: findDuplicates(catalogReports.map((report) => report.id)),
+          duplicateReports: findDuplicates(catalogReports.map((report) => report.nome)),
+          duplicateFieldsByReport: catalogReports
+            .map((report) => ({
+              report: report.nome,
+              fields: findDuplicates((report.informacoes || []).map((field) => field.id))
+            }))
+            .filter((item) => item.fields.length),
+          errors,
+          warnings
+        };
+      }
+
+      try {
+        const source = await fetch(sourcePath).then((response) => response.text());
+        const catalog = await fetch(catalogPath).then((response) => response.json());
+        const primaryFieldIds = extractArray(source, "primaryFieldIds");
+        const additionalFieldIds = extractArray(source, "additionalFieldIds");
+        const fieldIds = [...primaryFieldIds, ...additionalFieldIds];
+        const reports = extractReports(source);
+        const catalogValidation = validateCatalogMigration(catalog, reports, fieldIds);
+        await waitForFields();
+        const fieldLabels = collectFieldLabels();
+
+        const tests = testQueries.map((query) => {
+          setSelectedFields(query.fields);
+          const expected = reports
+            .filter((report) => query.fields.every((field) => report.fields.includes(field)))
+            .map((report) => report.name);
+          const obtained = obtainedReportNames();
+          const pass = query.expectNone ? obtained.length === 0 && expected.length === 0 : arraysEqual(expected, obtained);
+          return {
+            id: query.id,
+            query: query.label,
+            selectedFields: query.fields.map((field) => fieldLabels[field] || field),
+            expected,
+            obtained,
+            status: pass ? "PASS" : "FAIL"
+          };
+        });
+
+        const result = {
+          generatedAt: new Date().toISOString(),
+          source: "docs/assets/javascripts/wcorp-tools.js",
+          catalogSource: "docs/assets/data/report-indicator-catalog.json",
+          matchRule: "Um relatório atende somente quando contém todas as informações selecionadas.",
+          reportCount: reports.length,
+          fieldCount: fieldIds.length,
+          fields: fieldIds.map((id) => ({ id, label: fieldLabels[id] || id })),
+          reports,
+          catalogValidation,
+          tests,
+          summary: {
+            functionalPass: tests.filter((test) => test.status === "PASS").length,
+            functionalFail: tests.filter((test) => test.status === "FAIL").length,
+            catalogEquivalence: catalogValidation.status,
+            pass: tests.filter((test) => test.status === "PASS").length + (catalogValidation.status === "PASS" ? 1 : 0),
+            fail: tests.filter((test) => test.status === "FAIL").length + (catalogValidation.status === "FAIL" ? 1 : 0)
+          }
+        };
+
+        output.dataset.status = result.summary.fail ? "fail" : "pass";
+        output.textContent = JSON.stringify(result, null, 2);
+        window.__reportIndicatorAudit = result;
+      } catch (error) {
+        output.dataset.status = "error";
+        output.textContent = JSON.stringify({ error: error.message, stack: error.stack }, null, 2);
+        window.__reportIndicatorAudit = { error: error.message };
+      }
+    })();
+  </script>
+</body>
+</html>

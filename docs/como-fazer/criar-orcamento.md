@@ -1,26 +1,25 @@
 ---
-error_area: "Comercial"
-error_category: "Orçamentos"
-error_tags:
-  - "orcamento"
-  - "cliente"
-  - "material"
-  - "venda"
+id: criar-orcamento
+title: Como criar um orçamento
+type: guia
+category: Comercial
+status: published
+tags:
+  - orcamento
+  - cliente
+  - material
+  - venda
 ---
 
 # Como criar um orçamento
 
 ## Pré-requisitos
 
-<div class="wc-prereq-list" markdown>
-
 - Cliente cadastrado<br>
   [Como cadastrar um cliente.](cadastrar-cliente.md){: target="_blank" rel="noopener" }
 - Material cadastrado<br>
   [Como cadastrar um material.](cadastrar-material.md){: target="_blank" rel="noopener" }
 - Condição comercial definida
-
-</div>
 
 ## Permissões
 
@@ -30,12 +29,11 @@ error_tags:
 
 `Comercial > Orçamento`.
 
+![Onde encontrar](../assets/images/guias/caminhocadastroorcamento.png)
+
 ## Demonstração em vídeo
 
-<video class="wc-video" controls preload="auto" playsinline>
-  <source src="../../assets/videos/comercial_orcamento.mp4" type="video/mp4">
-  Seu navegador não conseguiu reproduzir este vídeo.
-</video>
+[Demonstração da criação de orçamento](../assets/videos/comercial_orcamento.mp4){ .wc-video-link }
 
 ## Como fazer
 
