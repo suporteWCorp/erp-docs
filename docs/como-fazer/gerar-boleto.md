@@ -11,6 +11,7 @@ search:
 
 # Como gerar boleto
 
+
 ## Pré-requisitos
 
 <div class="wc-prereq-list" markdown>
@@ -29,7 +30,6 @@ search:
 ## Caminho
 
 `Financeiro > Boleto`.
-
 ## Como fazer
 
 1. Acesse **Financeiro > Boleto**.

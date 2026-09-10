@@ -24,6 +24,7 @@ error_tags:
 
 # Como cadastrar um cliente
 
+
 ## Pré-requisitos
 
 - CNPJ, CPF ou dados cadastrais do cliente em mãos
@@ -35,7 +36,6 @@ error_tags:
 ## Caminho
 
 ![Onde encontrar](../assets/images/guias/cadastrar-cliente/comercial_clientes.png)
-
 ## Demonstração em vídeo
 
 [Demonstração do cadastro de cliente](../assets/videos/guias/cadastrar-cliente/comercial_clientes.mp4){ .wc-video-link data-poster="../assets/images/guias/cadastrar-cliente/comercial_clientes.png" }
@@ -48,7 +48,3 @@ error_tags:
 4. Confira os dados retornados.
 5. Complete os campos obrigatórios que faltarem.
 6. Salve o cadastro.
-
-**Resultado esperado**
-
-O cliente fica salvo e disponível para seleção em pedidos, faturamento, financeiro e consultas.

@@ -13,6 +13,7 @@ tags:
 
 # Como emitir uma NF-e
 
+
 ## Pré-requisitos
 
 - Cliente cadastrado<br>
@@ -23,7 +24,7 @@ tags:
   [Como cadastrar uma natureza de operação.](cadastrar-natureza-operacao.md){: target="_blank" rel="noopener" }
 - Pedido criado, quando a emissão for por pedido<br>
   [Como gerar um pedido](fazer-pedido-venda.md){: target="_blank" rel="noopener" }
-- Certificado e parâmetros fiscais configurados
+- Serie definida pelo fiscal
 
 ## Permissões
 
@@ -32,7 +33,6 @@ tags:
 ## Caminho
 
 ![Onde encontrar](../assets/images/guias/faturamento_emitir_nfe.png)
-
 ## Demonstração em vídeo
 
 [Demonstração da emissão de NF-e](../assets/videos/faturamento_nfe.mp4){ .wc-video-link }
@@ -42,20 +42,10 @@ tags:
 1. Acesse **Faturamento > Nota Fiscal**.
 2. Escolha emissão manual ou por pedido.
 3. Se for por pedido, adicione o pedido correspondente.
-4. Salve a nota.
-5. Clique em **Transmitir**.
-6. Confira o retorno da SEFAZ.
-
-**O que conferir antes de salvar ou enviar**
-
-- Cliente.
-- Itens e quantidades.
-- Valores.
-- Impostos aplicados.
-
-**Resultado esperado**
-
-A NF-e é transmitida e, quando os dados são aceitos pela SEFAZ, fica autorizada para consulta.
+4. Selecione a natureza de operação correspondente à operação.
+5. Salve a nota.
+6. Clique em **Transmitir**.
+7. Confira o retorno da SEFAZ.
 
 ## Avisos
 

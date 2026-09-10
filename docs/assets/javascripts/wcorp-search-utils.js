@@ -155,6 +155,7 @@
     const title = normalizeText(doc?.title);
     const location = normalizeText(doc?.location || doc?.url || doc?.path);
     const text = normalizeText(doc?.text);
+
     const combined = `${title} ${location} ${text}`;
     const tokens = tokenize(query);
     const meaningfulTokens = tokens.filter((token) => !stopWords.has(token));
@@ -229,6 +230,23 @@
       score -= 260;
     } else if (indexDoc) {
       score -= 100;
+    }
+
+    /* Distinção semântica consulta vs ajuste (não hardcodado) — assess depois de score existir */
+    const queryLower = (query || '').toLowerCase();
+    const isConsultQuery = /(consultar|verificar|visualizar|ver|vejo|veja|vê|conferir|saldo|posição).*estoque|(estoque.*(consultar|verificar|visualizar|ver|vejo|veja|vê|conferir|saldo))/.test(queryLower);
+    const isAdjustQuery = /(ajustar|corrigir|acertar).*estoque|(estoque.*(ajustar|corrigir|acertar))/.test(queryLower) || /(inventário|contagem)/.test(queryLower);
+    if (isConsultQuery && doc?.location && doc.location.includes('consultar-estoque')) score += 3.0;
+    if (isConsultQuery && doc?.location && doc.location.includes('ajustar-estoque')) score -= 2.0;
+    if (isAdjustQuery && doc?.location && doc.location.includes('ajustar-estoque')) score += 3.0;
+    if (isAdjustQuery && doc?.location && doc.location.includes('consultar-estoque')) score -= 2.0;
+    /* Penalizar FAQ estoque-negativo em query genérica (sem 'negativo') */
+    if (queryLower.includes('estoque') && !queryLower.includes('negativo')) {
+      if (doc?.location && doc.location.includes('estoque-negativo')) score -= 80;
+    }
+    /* Remover expansão errada: inventário ≠ consultar */
+    if (queryLower.includes('verificar') || queryLower.includes('consultar')) {
+      if (doc?.title && doc.title.toLowerCase().includes('inventário') && !doc.title.toLowerCase().includes('consultar')) score -= 1.5;
     }
 
     return score;

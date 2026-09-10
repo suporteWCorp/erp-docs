@@ -11,7 +11,7 @@ Guias práticos para executar os principais processos do WCorp. Selecione uma ca
 
 ### Como cadastrar uma Natureza de Operação
 
-Cadastrar uma Natureza de Operação para definir regras e critérios das operações no WCorp.
+Saiba como cadastrar uma Natureza de Operação no WCorp para definir regras e critérios das operações.
 
 [Consultar guia](cadastrar-natureza-operacao.md){ .md-button .md-button--primary }
 
@@ -21,7 +21,7 @@ Cadastrar uma Natureza de Operação para definir regras e critérios das opera�
 
 ### Como cadastrar uma Condição de Pagamento
 
-Cadastrar uma condição de pagamento para utilização nas rotinas comerciais e financeiras.
+Saiba como cadastrar uma condição de pagamento para uso nas rotinas comerciais e financeiras.
 
 [Consultar guia](cadastrar-condicao-pagamento.md){ .md-button .md-button--primary }
 
@@ -31,7 +31,7 @@ Cadastrar uma condição de pagamento para utilização nas rotinas comerciais e
 
 ### Como cadastrar um Centro de Custo
 
-Cadastrar um Centro de Custo para classificação e controle das movimentações.
+Aprenda a cadastrar um Centro de Custo para classificação e controle das movimentações.
 
 [Consultar guia](cadastrar-centro-custo.md){ .md-button .md-button--primary }
 
@@ -41,7 +41,7 @@ Cadastrar um Centro de Custo para classificação e controle das movimentações
 
 ### Como cadastrar um usuário
 
-Cadastrar um usuário para acesso ao WCorp.
+Aprenda a cadastrar um usuário para acesso ao WCorp com as permissões necessárias.
 
 [Consultar guia](cadastrar-usuario.md){ .md-button .md-button--primary }
 
@@ -51,7 +51,7 @@ Cadastrar um usuário para acesso ao WCorp.
 
 ### Como configurar um Grupo de Usuário
 
-Configurar grupos de usuário e suas permissões no WCorp.
+Aprenda a configurar grupos de usuário e suas permissões no WCorp.
 
 [Consultar guia](configurar-grupo-usuario.md){ .md-button .md-button--primary }
 
@@ -61,7 +61,7 @@ Configurar grupos de usuário e suas permissões no WCorp.
 
 ### Como verificar usuários logados
 
-Consultar usuários logados para análise administrativa ou suporte.
+Saiba como consultar usuários logados para análise administrativa ou suporte.
 
 [Consultar guia](verificar-usuarios-log.md){ .md-button .md-button--primary }
 
@@ -77,7 +77,7 @@ Consultar usuários logados para análise administrativa ou suporte.
 
 ### Como cadastrar um cliente
 
-Cadastrar um cliente pesquisando pelo CNPJ e deixar o registro pronto para pedidos, faturamento e consultas.
+Veja como cadastrar um cliente pelo CNPJ e deixar o registro pronto para pedidos, faturamento e consultas.
 
 [Consultar guia](cadastrar-cliente.md){ .md-button .md-button--primary }
 
@@ -87,7 +87,7 @@ Cadastrar um cliente pesquisando pelo CNPJ e deixar o registro pronto para pedid
 
 ### Como criar um orçamento
 
-Criar um orçamento comercial no WCorp.
+Aprenda a criar um orçamento comercial no WCorp, preenchendo as principais informações da negociação.
 
 [Consultar guia](criar-orcamento.md){ .md-button .md-button--primary }
 
@@ -97,7 +97,7 @@ Criar um orçamento comercial no WCorp.
 
 ### Como gerar um pedido
 
-Gerar um pedido de venda no WCorp.
+Veja como gerar um pedido de venda no WCorp com cliente e itens definidos.
 
 [Consultar guia](fazer-pedido-venda.md){ .md-button .md-button--primary }
 
@@ -113,7 +113,7 @@ Gerar um pedido de venda no WCorp.
 
 ### Como cadastrar um material
 
-Cadastrar um material para utilização nas rotinas de estoque, vendas e faturamento.
+Aprenda a cadastrar um material para uso nas rotinas de estoque, vendas e faturamento.
 
 [Consultar guia](cadastrar-material.md){ .md-button .md-button--primary }
 
@@ -123,7 +123,7 @@ Cadastrar um material para utilização nas rotinas de estoque, vendas e faturam
 
 ### Como alterar o NCM de um material
 
-Alterar o NCM no cadastro do material após validação fiscal.
+Veja como alterar o NCM no cadastro do material após validação fiscal.
 
 [Consultar guia](alterar-ncm-material.md){ .md-button .md-button--primary }
 
@@ -133,7 +133,7 @@ Alterar o NCM no cadastro do material após validação fiscal.
 
 ### Como consultar estoque
 
-Consultar saldo, local e lote de materiais.
+Saiba como consultar saldo, local e lote de materiais no controle de estoque.
 
 [Consultar guia](consultar-estoque.md){ .md-button .md-button--primary }
 
@@ -143,7 +143,7 @@ Consultar saldo, local e lote de materiais.
 
 ### Como ajustar inventário
 
-Registrar ajustes de inventário para corrigir saldos.
+Aprenda a registrar ajustes de inventário para corrigir saldos no estoque.
 
 [Consultar guia](ajustar-estoque.md){ .md-button .md-button--primary }
 
@@ -153,7 +153,7 @@ Registrar ajustes de inventário para corrigir saldos.
 
 ### Como verificar o empenho de material
 
-Acompanhar o processo de empenho de material.
+Veja como acompanhar o processo de empenho de material.
 
 [Consultar guia](empenhar-material.md){ .md-button .md-button--primary }
 
@@ -163,7 +163,7 @@ Acompanhar o processo de empenho de material.
 
 ### Como realizar entrada de material
 
-Registrar entrada de material nas rotinas de estoque.
+Saiba como registrar entrada de material nas rotinas de estoque.
 
 [Consultar guia](registrar-entrada-material.md){ .md-button .md-button--primary }
 
@@ -173,7 +173,7 @@ Registrar entrada de material nas rotinas de estoque.
 
 ### Como configurar lote padrão
 
-Configurar lote padrão para uso nas rotinas compatíveis.
+Aprenda a configurar lote padrão para uso nas rotinas compatíveis.
 
 [Consultar guia](configurar-lote-padrao.md){ .md-button .md-button--primary }
 
@@ -183,7 +183,7 @@ Configurar lote padrão para uso nas rotinas compatíveis.
 
 ### Como criar romaneio
 
-Registrar romaneio para apoiar o processo de materiais.
+Veja como criar um romaneio no WCorp para organizar e agrupar materiais durante o processo.
 
 [Consultar guia](criar-romaneio.md){ .md-button .md-button--primary }
 
@@ -199,7 +199,7 @@ Registrar romaneio para apoiar o processo de materiais.
 
 ### Como emitir uma NF-e
 
-Emitir uma NF-e no WCorp.
+Aprenda a emitir uma NF-e no WCorp seguindo as etapas da rotina de faturamento.
 
 [Consultar guia](faturar-nota.md){ .md-button .md-button--primary }
 
@@ -209,7 +209,7 @@ Emitir uma NF-e no WCorp.
 
 ### Como editar valores manualmente em uma NF-e
 
-Editar manualmente valores, impostos e totalizadores em uma NF-e.
+Veja como editar manualmente valores, impostos e totalizadores em uma NF-e.
 
 [Consultar guia](editar-valores-nfe.md){ .md-button .md-button--primary }
 
@@ -219,7 +219,7 @@ Editar manualmente valores, impostos e totalizadores em uma NF-e.
 
 ### Como cancelar uma NF-e
 
-Cancelar uma NF-e conforme as condições permitidas para o documento.
+Saiba como cancelar uma NF-e conforme as condições permitidas para o documento.
 
 [Consultar guia](cancelar-nfe.md){ .md-button .md-button--primary }
 
@@ -229,7 +229,7 @@ Cancelar uma NF-e conforme as condições permitidas para o documento.
 
 ### Como emitir uma carta de correção
 
-Emitir uma Carta de Correção para uma NF-e quando aplicável.
+Aprenda a emitir uma Carta de Correção para uma NF-e quando aplicável.
 
 [Consultar guia](emitir-carta-correcao.md){ .md-button .md-button--primary }
 
@@ -239,7 +239,7 @@ Emitir uma Carta de Correção para uma NF-e quando aplicável.
 
 ### Como consultar notas fiscais rejeitadas
 
-Localizar notas fiscais rejeitadas e consultar o retorno da SEFAZ.
+Veja como localizar notas rejeitadas e consultar o retorno da SEFAZ.
 
 [Consultar guia](consultar-nfe-rejeitada.md){ .md-button .md-button--primary }
 
@@ -249,7 +249,7 @@ Localizar notas fiscais rejeitadas e consultar o retorno da SEFAZ.
 
 ### Como utilizar emissor de NF-e
 
-Abrir o emissor de NF-e e verificar mensagens relacionadas ao envio fiscal.
+Saiba como abrir o emissor de NF-e e verificar mensagens relacionadas ao envio fiscal.
 
 [Consultar guia](usar-emissor.md){ .md-button .md-button--primary }
 
@@ -259,7 +259,7 @@ Abrir o emissor de NF-e e verificar mensagens relacionadas ao envio fiscal.
 
 ### Como verificar CBenef
 
-Conferir o código de benefício fiscal usado na operação.
+Aprenda a conferir o código de benefício fiscal usado na operação.
 
 [Consultar guia](verificar-cbenef.md){ .md-button .md-button--primary }
 
@@ -269,7 +269,7 @@ Conferir o código de benefício fiscal usado na operação.
 
 ### Como verificar regra fiscal
 
-Identificar a regra fiscal utilizada no processo de faturamento.
+Veja como identificar a regra fiscal utilizada no processo de faturamento.
 
 [Consultar guia](verificar-regra-fiscal.md){ .md-button .md-button--primary }
 
@@ -285,7 +285,7 @@ Identificar a regra fiscal utilizada no processo de faturamento.
 
 ### Como desativar componentes
 
-Desativar componentes, cadastros ou registros quando a ação estiver disponível.
+Saiba como desativar componentes, cadastros ou registros quando disponível.
 
 [Consultar guia](desativar-componentes.md){ .md-button .md-button--primary }
 
@@ -295,7 +295,7 @@ Desativar componentes, cadastros ou registros quando a ação estiver disponíve
 
 ### Como exportar e editar tabela
 
-Exportar ou editar informações em tabelas do WCorp.
+Aprenda a exportar ou editar informações em tabelas do WCorp.
 
 [Consultar guia](exportar-editar-tabela.md){ .md-button .md-button--primary }
 
@@ -305,7 +305,7 @@ Exportar ou editar informações em tabelas do WCorp.
 
 ### Como verificar o histórico de alterações
 
-Consultar o histórico de alterações em telas que disponibilizam esse recurso.
+Veja como consultar o histórico de alterações nas telas do WCorp que disponibilizam esse recurso.
 
 [Consultar guia](verificar-historico-alteracoes.md){ .md-button .md-button--primary }
 
@@ -321,7 +321,7 @@ Consultar o histórico de alterações em telas que disponibilizam esse recurso.
 
 ### Como consultar SPED Fiscal
 
-Acessar informações relacionadas ao SPED Fiscal.
+Saiba como consultar informações relacionadas ao SPED Fiscal no WCorp.
 
 [Consultar guia](consultar-sped-fiscal.md){ .md-button .md-button--primary }
 

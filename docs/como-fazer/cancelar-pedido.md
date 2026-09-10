@@ -11,6 +11,7 @@ search:
 
 # Como cancelar um pedido
 
+
 ## Pré-requisitos
 
 <div class="wc-prereq-list" markdown>
@@ -28,7 +29,6 @@ search:
 ## Caminho
 
 `Comercial > Pedido`.
-
 ## Como fazer
 
 1. Acesse **Comercial > Pedido**.

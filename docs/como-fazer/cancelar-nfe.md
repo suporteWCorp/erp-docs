@@ -12,10 +12,11 @@ tags:
 
 # Como cancelar uma NF-e
 
+
 ## Pré-requisitos
 
 - NF-e autorizada e localizada
-- Prazo e regra fiscal de cancelamento confirmados
+- Verificar se o cancelamento está dentro do prazo permitido
 - Motivo do cancelamento definido
 
 ## Permissões
@@ -27,7 +28,6 @@ tags:
 `Faturamento > Nota Fiscal`.
 
 ![Onde encontrar](../assets/images/guias/faturamento_emitir_nfe.png)
-
 ## Demonstração em vídeo
 
 [Demonstração do cancelamento de NF-e](../assets/videos/faturamento_cancelar_nfe.mp4){ .wc-video-link }

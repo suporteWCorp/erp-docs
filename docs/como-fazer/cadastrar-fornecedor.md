@@ -10,6 +10,7 @@ search:
 
 # Como cadastrar um fornecedor
 
+
 ## Pré-requisitos
 
 <div class="wc-prereq-list" markdown>
@@ -26,7 +27,6 @@ search:
 ## Caminho
 
 `Fornecedores > Fornecedores`.
-
 ## Como fazer
 
 1. Acesse **Fornecedores > Fornecedores**.

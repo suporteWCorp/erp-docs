@@ -114,20 +114,23 @@ a.wc-content-info__item:focus-visible {
 .wc-prereq-card__icon {
     align-items: center;
     background: rgba(2, 128, 144, 0.08);
-    border: 1px solid rgba(2, 128, 144, 0.12);
-    border-radius: 7px;
+    border: 1.5px solid rgba(2, 128, 144, 0.2);
+    border-radius: 50%;
     color: #007f86;
     display: inline-flex;
     flex: 0 0 auto;
-    height: 1.72rem;
+    height: 2rem;
     justify-content: center;
-    width: 1.72rem;
+    width: 2rem;
+    box-shadow: 0 0 0 3px rgba(2,128,144,0.06);
 }
 
 .wc-prereq-card__icon svg {
     fill: currentColor;
-    height: 0.98rem;
-    width: 0.98rem;
+    height: 1.05rem;
+    width: 1.05rem;
+    display: block;
+    margin: auto;
 }
 
 .md-typeset .wc-prereq-card__title {
@@ -256,4 +259,61 @@ a.wc-content-info__item:focus-visible {
     .wc-prereq-card--visible .wc-prereq-card__item {
         transition: none;
     }
+}
+
+/* Reutilização do componente visual de Pré-requisitos aos demais títulos de seção de Guia */
+body.wc-guide-page .md-typeset h2#caminho,
+body.wc-guide-page .md-typeset h2#demonstracao-em-video,
+body.wc-guide-page .md-typeset h2#como-fazer,
+body.wc-guide-page .md-typeset h2#observacoes,
+body.wc-guide-page .md-typeset h2#observacao,
+body.wc-guide-page .md-typeset h2#veja-tambem {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    color: #006b73;
+    font-size: 0.96rem;
+    font-weight: 750;
+    line-height: 1.25;
+    margin: 0 0 0.58rem 0;
+    border-bottom: none;
+    background: transparent;
+}
+
+/* Caixa de ícone igual à de Pré-requisitos */
+body.wc-guide-page .md-typeset h2#caminho::before,
+body.wc-guide-page .md-typeset h2#demonstracao-em-video::before,
+body.wc-guide-page .md-typeset h2#como-fazer::before,
+body.wc-guide-page .md-typeset h2#observacoes::before,
+body.wc-guide-page .md-typeset h2#observacao::before,
+body.wc-guide-page .md-typeset h2#veja-tambem::before {
+    content: "";
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    height: 1.72rem;
+    width: 1.72rem;
+    background: rgba(2, 128, 144, 0.08);
+    border: 1px solid rgba(2, 128, 144, 0.12);
+    border-radius: 7px;
+    color: #007f86;
+}
+
+/* Ícones SVG inline via background (simples, sem biblioteca nova) */
+body.wc-guide-page .md-typeset h2#caminho::before {
+    background: rgba(2,128,144,0.08) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23007f86" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>') center/0.98rem no-repeat;
+}
+body.wc-guide-page .md-typeset h2#demonstracao-em-video::before {
+    background: rgba(2,128,144,0.08) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23007f86"><path d="M8 5v14l11-7z"/></svg>') center/0.98rem no-repeat;
+}
+body.wc-guide-page .md-typeset h2#como-fazer::before {
+    background: rgba(2,128,144,0.08) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23007f86" stroke-width="2"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>') center/0.98rem no-repeat;
+}
+body.wc-guide-page .md-typeset h2#observacoes::before,
+body.wc-guide-page .md-typeset h2#observacao::before {
+    background: rgba(2,128,144,0.08) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23007f86" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>') center/0.98rem no-repeat;
+}
+body.wc-guide-page .md-typeset h2#veja-tambem::before {
+    background: rgba(2,128,144,0.08) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23007f86" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>') center/0.98rem no-repeat;
 }

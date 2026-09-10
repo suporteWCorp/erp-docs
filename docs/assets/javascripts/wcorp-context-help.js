@@ -99,44 +99,10 @@
     return url.href;
   }
 
-  function createHelpBlock(context) {
-    const block = document.createElement("aside");
-    block.className = "wc-context-help";
-    block.setAttribute("aria-labelledby", "wc-context-help-title");
-
-    const text = document.createElement("div");
-    text.className = "wc-context-help__text";
-    const title = document.createElement("h2");
-    title.id = "wc-context-help-title";
-    title.textContent = "Precisa de ajuda com esta página?";
-    const description = document.createElement("p");
-    description.textContent = "Consulte problemas e soluções relacionados a esta tela ou procedimento.";
-    text.append(title, description);
-
-    const link = document.createElement("a");
-    link.className = "wc-context-help__link";
-    link.href = buildErrorsUrl(context);
-    link.textContent = "Consultar problemas relacionados";
-
-    block.append(text, link);
-    return block;
-  }
-
   function initializeContextHelp() {
     const content = document.querySelector(".md-content__inner");
     if (!content) return;
     content.querySelector(".wc-context-help")?.remove();
-
-    const context = pageContext();
-    if (!context || !context.area) return;
-
-    const block = createHelpBlock(context);
-    const contact = content.querySelector(".wc-support-footer");
-    if (contact) {
-      content.insertBefore(block, contact);
-    } else {
-      content.appendChild(block);
-    }
   }
 
   document.addEventListener("DOMContentLoaded", initializeContextHelp);

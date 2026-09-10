@@ -14,6 +14,7 @@ tags:
 
 # Como ajustar inventário
 
+
 ## Pré-requisitos
 
 - Estoque consultado
@@ -29,7 +30,6 @@ tags:
 `Materiais > Ajustar Inventário`.
 
 ![Onde encontrar](../assets/images/guias/caminhoconfigurarlotepadrao.png)
-
 ## Demonstração em vídeo
 
 [Demonstração do ajuste de inventário](../assets/videos/guias/ajustar-estoque/ajuste-inventario.mp4){ .wc-video-link }
@@ -43,6 +43,3 @@ tags:
 5. Revise o impacto no saldo.
 6. Salve o ajuste.
 
-**Resultado esperado**
-
-O saldo do material é atualizado conforme o ajuste registrado.

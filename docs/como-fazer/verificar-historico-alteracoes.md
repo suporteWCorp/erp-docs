@@ -40,10 +40,6 @@ tags:
 6. Verifique dados como **Data/Hora**, **Usuário**, **Tabela**, **Campo**, **Valor Anterior** e **Valor Novo**, quando disponíveis.
 7. Feche a janela de histórico ao concluir a conferência.
 
-**Resultado esperado**
-
-O histórico do registro é apresentado para conferência das alterações registradas no WCorp.
-
 !!! note "Exemplos"
     A demonstração mostra a consulta do histórico em telas como **Comercial > Clientes** e **Faturamento > Nota Fiscal**.
 

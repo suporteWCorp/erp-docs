@@ -12,6 +12,7 @@ search:
 
 # Como fazer inventário
 
+
 ## Pré-requisitos
 
 <div class="wc-prereq-list" markdown>
@@ -30,10 +31,9 @@ search:
 ## Caminho
 
 `Materiais > Ajustar Inventário`.
-
 ## Como fazer
 
-1. Defina o escopo do inventário.
+1. Acesse Materiais > Ajustar Inventário.
 2. Consulte o saldo atual no WCorp.
 3. Realize a contagem física.
 4. Compare contagem física e saldo do sistema.

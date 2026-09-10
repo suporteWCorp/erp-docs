@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-02T21:08:22.698Z",
+  "generatedAt": "2026-09-10T00:00:00.000Z",
   "source": "Gerado a partir do front matter dos conteudos adotados pela convencao interna.",
-  "status": "catalogo tecnico para resolucao de IDs; nao substitui build real do MkDocs.",
+  "status": "catalogo tecnico para resolucao de IDs; 31 manuais tematicos; nao substitui build real do MkDocs.",
   "items": [
     {
       "id": "ajustar-estoque",
@@ -13,7 +13,9 @@
       "status": "published",
       "url": "como-fazer/ajustar-estoque/",
       "screen_path": [],
-      "related_manual": [],
+      "related_manual": [
+        "materiais-materiais"
+      ],
       "related_guides": [],
       "videos": [
         "../assets/videos/guias/ajustar-estoque/ajuste-inventario.mp4"
@@ -35,7 +37,9 @@
       "status": "published",
       "url": "como-fazer/alterar-ncm-material/",
       "screen_path": [],
-      "related_manual": [],
+      "related_manual": [
+        "faturamento-nf"
+      ],
       "related_guides": [],
       "videos": [
         "../assets/videos/guias/alterar-ncm-material/alterar-ncm-material.mp4"
@@ -57,7 +61,9 @@
       "status": "published",
       "url": "como-fazer/cadastrar-centro-custo/",
       "screen_path": [],
-      "related_manual": [],
+      "related_manual": [
+        "administracao-centro-custo"
+      ],
       "related_guides": [],
       "videos": [
         "../assets/videos/adm_centro_custo.mp4"
@@ -101,7 +107,9 @@
       "status": "published",
       "url": "como-fazer/cadastrar-condicao-pagamento/",
       "screen_path": [],
-      "related_manual": [],
+      "related_manual": [
+        "administracao-condicoes-pagamento"
+      ],
       "related_guides": [],
       "videos": [
         "../assets/videos/adm_condicao_pagamento.mp4"
@@ -121,7 +129,9 @@
       "status": "published",
       "url": "como-fazer/cadastrar-material/",
       "screen_path": [],
-      "related_manual": [],
+      "related_manual": [
+        "materiais-materiais"
+      ],
       "related_guides": [],
       "videos": [
         "../assets/videos/materiais_materiais.mp4"
@@ -251,7 +261,9 @@
       "status": "published",
       "url": "como-fazer/configurar-lote-padrao/",
       "screen_path": [],
-      "related_manual": [],
+      "related_manual": [
+        "materiais-lote-estoque"
+      ],
       "related_guides": [],
       "videos": [
         "../assets/videos/guias/configurar-lote-padrao/lote-padrao.mp4"
@@ -272,7 +284,10 @@
       "status": "published",
       "url": "como-fazer/consultar-estoque/",
       "screen_path": [],
-      "related_manual": [],
+      "related_manual": [
+        "materiais-materiais",
+        "materiais-ajustar-inventario"
+      ],
       "related_guides": [],
       "videos": [
         "../assets/videos/guias/consultar-estoque/ver-estoque.mp4"
@@ -294,7 +309,9 @@
       "status": "published",
       "url": "como-fazer/consultar-nfe-rejeitada/",
       "screen_path": [],
-      "related_manual": [],
+      "related_manual": [
+        "faturamento-nf"
+      ],
       "related_guides": [],
       "videos": [
         "../assets/videos/guias/consultar-nfe-rejeitada/consultar-nfe-rejeitada.mp4"
@@ -316,7 +333,9 @@
       "status": "published",
       "url": "como-fazer/consultar-sped-fiscal/",
       "screen_path": [],
-      "related_manual": [],
+      "related_manual": [
+        "relatorios-xml-nfe"
+      ],
       "related_guides": [],
       "videos": [
         "../assets/videos/guias/consultar-sped-fiscal/sped-fiscal.mp4"
@@ -359,7 +378,9 @@
       "status": "published",
       "url": "como-fazer/criar-romaneio/",
       "screen_path": [],
-      "related_manual": [],
+      "related_manual": [
+        "comercial-pedidos"
+      ],
       "related_guides": [],
       "videos": [
         "../assets/videos/guias/criar-romaneio/romaneio.mp4"
@@ -402,7 +423,9 @@
       "status": "published",
       "url": "como-fazer/editar-valores-nfe/",
       "screen_path": [],
-      "related_manual": [],
+      "related_manual": [
+        "faturamento-nf"
+      ],
       "related_guides": [
         "faturar-nota"
       ],
@@ -491,7 +514,9 @@
       "status": "published",
       "url": "como-fazer/faturar-nota/",
       "screen_path": [],
-      "related_manual": [],
+      "related_manual": [
+        "faturamento-nf"
+      ],
       "related_guides": [],
       "videos": [
         "../assets/videos/faturamento_nfe.mp4"
@@ -536,7 +561,9 @@
       "status": "published",
       "url": "como-fazer/inutilizar-nfe/",
       "screen_path": [],
-      "related_manual": [],
+      "related_manual": [
+        "faturamento-inutilizacao-nota-fiscal"
+      ],
       "related_guides": [],
       "videos": [
         "../assets/videos/faturamento_inutilizacao_nota_fiscal.mp4"
@@ -558,7 +585,9 @@
       "status": "published",
       "url": "como-fazer/registrar-entrada-material/",
       "screen_path": [],
-      "related_manual": [],
+      "related_manual": [
+        "materiais-materiais"
+      ],
       "related_guides": [],
       "videos": [
         "../assets/videos/guias/registrar-entrada-material/entrada-material.mp4"
@@ -649,7 +678,9 @@
       "status": "published",
       "url": "como-fazer/verificar-regra-fiscal/",
       "screen_path": [],
-      "related_manual": [],
+      "related_manual": [
+        "administracao-ncms"
+      ],
       "related_guides": [],
       "videos": [
         "../assets/videos/guias/verificar-regra-fiscal/ver-regra-fiscal.mp4",
@@ -672,7 +703,9 @@
       "status": "published",
       "url": "como-fazer/verificar-usuarios-log/",
       "screen_path": [],
-      "related_manual": [],
+      "related_manual": [
+        "administracao-usuarios"
+      ],
       "related_guides": [],
       "videos": [
         "../assets/videos/guias/verificar-usuarios-log/verificar-usuarios-log.mp4"
@@ -683,6 +716,246 @@
         "administracao",
         "acesso"
       ]
+    },
+    {
+      "id": "administracao-centro-custo",
+      "type": "manual",
+      "title": "Centro de Custo",
+      "url": "administracao/centro-custo/",
+      "status": "published",
+      "related_manual": []
+    },
+    {
+      "id": "administracao-condicoes-pagamento",
+      "type": "manual",
+      "title": "Condições de Pagamento",
+      "url": "administracao/condicoes-pagamento/",
+      "status": "published",
+      "related_manual": []
+    },
+    {
+      "id": "administracao-empresas",
+      "type": "manual",
+      "title": "Empresas",
+      "url": "administracao/empresas/",
+      "status": "published",
+      "related_manual": []
+    },
+    {
+      "id": "administracao-grupo-usuarios",
+      "type": "manual",
+      "title": "Grupo Usuários",
+      "url": "administracao/grupo-usuarios/",
+      "status": "published",
+      "related_manual": []
+    },
+    {
+      "id": "administracao-natureza-op",
+      "type": "manual",
+      "title": "Natureza de Operação",
+      "url": "administracao/natureza-op/",
+      "status": "published",
+      "related_manual": []
+    },
+    {
+      "id": "administracao-ncms",
+      "type": "manual",
+      "title": "NCMS",
+      "url": "administracao/ncms/",
+      "status": "published",
+      "related_manual": []
+    },
+    {
+      "id": "administracao-unidades",
+      "type": "manual",
+      "title": "Unidades",
+      "url": "administracao/unidades/",
+      "status": "published",
+      "related_manual": []
+    },
+    {
+      "id": "administracao-usuarios",
+      "type": "manual",
+      "title": "Usuários",
+      "url": "administracao/usuarios/",
+      "status": "published",
+      "related_manual": []
+    },
+    {
+      "id": "comercial-devolucao",
+      "type": "manual",
+      "title": "Devolução",
+      "url": "comercial/devolucao/",
+      "status": "published",
+      "related_manual": []
+    },
+    {
+      "id": "comercial-grupo-clientes",
+      "type": "manual",
+      "title": "Grupo de Clientes",
+      "url": "comercial/comercial-grupo-clientes/",
+      "status": "published",
+      "related_manual": []
+    },
+    {
+      "id": "comercial-orcamento",
+      "type": "manual",
+      "title": "Módulo Comercial - Orçamentos",
+      "url": "comercial/comercial-orcamento/",
+      "status": "published",
+      "related_manual": []
+    },
+    {
+      "id": "comercial-pedidos",
+      "type": "manual",
+      "title": "Módulo Comercial - Pedido de Venda",
+      "url": "comercial/pedidos/",
+      "status": "published",
+      "related_manual": []
+    },
+    {
+      "id": "compras-pedido-compra",
+      "type": "manual",
+      "title": "Pedido de Compra",
+      "url": "compras/pedido-compra/",
+      "status": "published",
+      "related_manual": []
+    },
+    {
+      "id": "faturamento-carta-correcao",
+      "type": "manual",
+      "title": "Carta de Correção",
+      "url": "faturamento/carta-correcao/",
+      "status": "published",
+      "related_manual": []
+    },
+    {
+      "id": "faturamento-cfop-entrada",
+      "type": "manual",
+      "title": "CFOP Entrada",
+      "url": "faturamento/cfop-entrada/",
+      "status": "published",
+      "related_manual": []
+    },
+    {
+      "id": "faturamento-entrada-nota-fiscal",
+      "type": "manual",
+      "title": "Entrada de Nota Fiscal",
+      "url": "faturamento/entrada-nota-fiscal/",
+      "status": "published",
+      "related_manual": []
+    },
+    {
+      "id": "faturamento-inutilizacao-nota-fiscal",
+      "type": "manual",
+      "title": "Inutilização Nota Fiscal",
+      "url": "faturamento/inutilizacao-nota-fiscal/",
+      "status": "published",
+      "related_manual": []
+    },
+    {
+      "id": "faturamento-nf",
+      "type": "manual",
+      "title": "Nota Fiscal",
+      "url": "faturamento/faturamento-nf/",
+      "status": "published",
+      "related_manual": []
+    },
+    {
+      "id": "faturamento-nfce",
+      "type": "manual",
+      "title": "Cupom Fiscal",
+      "url": "faturamento/faturamento-nfce/",
+      "status": "published",
+      "related_manual": []
+    },
+    {
+      "id": "financeiro-boleto",
+      "type": "manual",
+      "title": "Boleto",
+      "url": "financeiro/boleto/",
+      "status": "published",
+      "related_manual": []
+    },
+    {
+      "id": "financeiro-contas",
+      "type": "manual",
+      "title": "Contas",
+      "url": "financeiro/contas/",
+      "status": "published",
+      "related_manual": []
+    },
+    {
+      "id": "financeiro-contas-a-pagar",
+      "type": "manual",
+      "title": "Contas a Pagar",
+      "url": "financeiro/contas-a-pagar/",
+      "status": "published",
+      "related_manual": []
+    },
+    {
+      "id": "financeiro-contas-a-receber",
+      "type": "manual",
+      "title": "Contas a Receber",
+      "url": "financeiro/contas-a-receber/",
+      "status": "published",
+      "related_manual": []
+    },
+    {
+      "id": "fornecedores-fornecedores",
+      "type": "manual",
+      "title": "Fornecedores",
+      "url": "fornecedores/fornecedores/",
+      "status": "published",
+      "related_manual": []
+    },
+    {
+      "id": "materiais-ajustar-inventario",
+      "type": "manual",
+      "title": "Ajustar Inventário",
+      "url": "materiais/ajustar-inventario/",
+      "status": "published",
+      "related_manual": []
+    },
+    {
+      "id": "materiais-categoria-materiais",
+      "type": "manual",
+      "title": "Categoria de Materiais",
+      "url": "materiais/categoria-materiais/",
+      "status": "published",
+      "related_manual": []
+    },
+    {
+      "id": "materiais-locais-armazenagem",
+      "type": "manual",
+      "title": "Locais de Armazenagem",
+      "url": "materiais/locais-armazenagem/",
+      "status": "published",
+      "related_manual": []
+    },
+    {
+      "id": "materiais-lote-estoque",
+      "type": "manual",
+      "title": "Lote/Estoque",
+      "url": "materiais/lote-estoque/",
+      "status": "published",
+      "related_manual": []
+    },
+    {
+      "id": "materiais-materiais",
+      "type": "manual",
+      "title": "Cadastro de Materiais",
+      "url": "materiais/materiais/",
+      "status": "published",
+      "related_manual": []
+    },
+    {
+      "id": "relatorios-xml-nfe",
+      "type": "manual",
+      "title": "XML(s) NFe",
+      "url": "relatorios/xml-nfe/",
+      "status": "published",
+      "related_manual": []
     }
   ]
 }

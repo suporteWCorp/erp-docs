@@ -36,7 +36,3 @@ tags:
 ## Avisos
 
 --8<-- "shared/avisos/validacao-fiscal.md"
-
-**Resultado esperado**
-
-As informações do SPED Fiscal ficam disponíveis para conferência ou geração conforme o processo da empresa.

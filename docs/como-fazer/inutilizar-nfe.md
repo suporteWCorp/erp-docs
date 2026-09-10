@@ -14,6 +14,7 @@ tags:
 
 # Como inutilizar uma NF-e
 
+
 ## Pré-requisitos
 
 - Numeração ou faixa de NF-e que será inutilizada definida
@@ -27,7 +28,6 @@ tags:
 ## Caminho
 
 `Faturamento > Inutilização Nota Fiscal`.
-
 ## Demonstração em vídeo
 
 [Demonstração da inutilização de NF-e](../assets/videos/faturamento_inutilizacao_nota_fiscal.mp4){ .wc-video-link }
@@ -45,13 +45,9 @@ tags:
 9. Clique em **Transmitir para o Sefaz**.
 10. Acompanhe o **Status** da inutilização.
 
-**Observação**
+## Observação
 
 Para inutilizar somente uma numeração, informe o mesmo número nos campos **Número NFe Inicial** e **Número NFe Final**.
-
-**Resultado esperado**
-
-A inutilização é enviada para a SEFAZ e o status fica disponível para acompanhamento na própria tela.
 
 ## Avisos
 

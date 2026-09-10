@@ -1699,13 +1699,13 @@
     const grid = createNode("div", "wc-xml-doc-info__grid");
     const numberSeries = info.number ? `NF · ${info.number}${info.series ? ` / Série · ${info.series}` : ""}` : "";
     const entries = [
-      ["Número / Série", numberSeries],
+      ["Número / Série", numberSeries, "compact"],
+      ["Emissão", info.emission, "compact"],
+      ["Operação", info.operation, "compact"],
       ["Chave de acesso", info.accessKey, "full", info.accessKeyRaw],
       ["Endereço", info.address, "full"],
-      ["Emissão", info.emission],
-      ["Operação", info.operation],
-      ["Emitente", info.emitter, "wide"],
-      ["Destinatário", info.recipient, "wide"],
+      ["Emitente", info.emitter, "half"],
+      ["Destinatário", info.recipient, "half"],
       ["Natureza da operação", info.operationNature, "full"],
     ].filter((entry) => entry[1]);
 
@@ -1888,11 +1888,10 @@
     summary.appendChild(counters);
     renderXmlCategoryChips(summary, analysis);
     summary.appendChild(createNode("p", "wc-xml-summary__note", "Esta análise não substitui a validação/autorização da SEFAZ."));
-    container.appendChild(summary);
-
     renderXmlDocumentInfo(container, analysis.documentInfo);
-    renderXmlIssues(container, analysis);
+    container.appendChild(summary);
     renderXmlChecks(container, analysis);
+    renderXmlIssues(container, analysis);
   }
 
   function findXmlTreeLineByPath(tree, path) {
@@ -1976,8 +1975,9 @@
       if (actions) actions.hidden = state !== "view";
       if (editorTitle) editorTitle.textContent = state === "view" ? "XML analisado" : "Conteúdo do XML";
 
-      button.hidden = state === "view";
+      button.hidden = false;
       button.disabled = state === "loading";
+      if (state === "edit") button.textContent = "Validar XML";
     };
 
     const clearTree = () => {
@@ -2009,6 +2009,7 @@
       textarea.value = originalXml || textarea.value;
       clearTree();
       setEditorState("edit");
+      button.textContent = "Validar XML";
       try {
         textarea.focus({ preventScroll: true });
       } catch (error) {
@@ -2158,6 +2159,7 @@
       if (!file.name.toLowerCase().endsWith(".xml")) {
         setXmlResult(result, "error", "Selecione um arquivo com extensão .xml.");
         setEditorState("edit");
+      button.textContent = "Validar XML";
         fileInput.value = "";
         return;
       }
@@ -2168,6 +2170,7 @@
         originalXml = textarea.value;
         clearTree();
         setEditorState("edit");
+      button.textContent = "Validar XML";
         setXmlResult(result, "info", "Arquivo carregado. Clique em Validar XML para analisar a estrutura.");
       });
       reader.addEventListener("error", () => {
@@ -2199,6 +2202,11 @@
     }
 
     button.addEventListener("click", () => {
+      if (button.textContent === "Ver XML") {
+        scrollXmlEditorIntoView();
+        return;
+      }
+
       originalXml = textarea.value;
       const content = originalXml.trim();
 
@@ -2206,6 +2214,7 @@
         setXmlResult(result, "error", "Informe um XML para validar.");
         clearTree();
         setEditorState("edit");
+      button.textContent = "Validar XML";
         return;
       }
 
@@ -2226,6 +2235,7 @@
           renderXmlCodeFallback(tree, originalXml);
           setEditorState("view");
           renderXmlAnalysisResult(result, analysis);
+          button.textContent = "Ver XML";
           scheduleXmlResultScroll();
           return;
         }
@@ -2234,6 +2244,7 @@
         setAllTreeNodes(false);
         setEditorState("view");
         renderXmlAnalysisResult(result, analysis);
+        button.textContent = "Ver XML";
         scheduleXmlResultScroll();
       };
 

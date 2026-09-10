@@ -11,7 +11,7 @@ body.wc-search-open .md-header {
 
 .md-header__button.md-logo {
     align-items: center;
-    background: url("../wcorp-logo-header-display.png") center / auto 4.35rem no-repeat;
+    background: none;
     display: flex;
     flex: 0 0 clamp(9.25rem, 13.5vw, 11.75rem);
     height: 3.85rem;
@@ -24,12 +24,12 @@ body.wc-search-open .md-header {
 }
 
 .md-header__button.md-logo img {
-    height: 3.85rem !important;
-    margin: 0;
+    height: auto !important;
     max-height: 3.85rem;
-    min-height: 0;
-    opacity: 0;
-    width: 100% !important;
+    object-fit: contain;
+    opacity: 1 !important;
+    width: auto !important;
+    max-width: 11rem;
 }
 
 .md-header__inner {
@@ -508,13 +508,16 @@ body.wc-search-open .wc-favorites-panel {
 
 @media screen and (min-width: 76.25em) and (max-width: 88em) {
     .md-header__button.md-logo {
-        background-size: auto 4.05rem;
         flex-basis: 9.75rem;
         width: 9.75rem;
     }
 
     .md-header__button.md-logo img {
-        width: 100% !important;
+        height: auto !important;
+        max-height: 3.21rem;
+        opacity: 1 !important;
+        width: auto !important;
+        max-width: 10rem;
     }
 
     .md-header__title {
@@ -526,7 +529,6 @@ body.wc-search-open .wc-favorites-panel {
 
 @media screen and (max-width: 59.9844em) {
     .md-header__button.md-logo {
-        background-size: auto 3.65rem;
         flex-basis: 8.45rem;
         height: 3.45rem;
         margin-left: 0.55rem;
@@ -534,8 +536,11 @@ body.wc-search-open .wc-favorites-panel {
     }
 
     .md-header__button.md-logo img {
-        height: 3.45rem !important;
-        max-height: 3.45rem;
+        height: auto !important;
+        max-height: 2.89rem;
+        opacity: 1 !important;
+        width: auto !important;
+        max-width: 8.5rem;
     }
 
     .md-header__inner {

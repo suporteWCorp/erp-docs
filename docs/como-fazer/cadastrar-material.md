@@ -13,6 +13,7 @@ tags:
 
 # Como cadastrar um material
 
+
 ## Pré-requisitos
 
 - Descrição, unidade, categoria e dados fiscais ou comerciais do material definidos
@@ -24,7 +25,6 @@ tags:
 ## Caminho
 
 ![Onde encontrar](../assets/images/guias/materiais_materiais.png)
-
 ## Demonstração em vídeo
 
 [Demonstração do cadastro de material](../assets/videos/materiais_materiais.mp4){ .wc-video-link data-poster="../assets/images/guias/materiais_materiais.png" }
@@ -37,10 +37,6 @@ tags:
 4. Informe dados fiscais, comerciais e de estoque quando aplicável.
 5. Revise os campos obrigatórios.
 6. Salve o cadastro.
-
-**Resultado esperado**
-
-O material fica salvo e disponível para uso nas movimentações compatíveis com seu cadastro.
 
 ## Veja também
 

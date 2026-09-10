@@ -13,9 +13,11 @@ tags:
 
 # Como criar um orçamento
 
+
 ## Pré-requisitos
 
-- Cliente cadastrado<br>
+- Cliente cadastrado
+- Condição de pagamento definida<br>
   [Como cadastrar um cliente.](cadastrar-cliente.md){: target="_blank" rel="noopener" }
 - Material cadastrado<br>
   [Como cadastrar um material.](cadastrar-material.md){: target="_blank" rel="noopener" }
@@ -30,7 +32,6 @@ tags:
 `Comercial > Orçamento`.
 
 ![Onde encontrar](../assets/images/guias/caminhocadastroorcamento.png)
-
 ## Demonstração em vídeo
 
 [Demonstração da criação de orçamento](../assets/videos/comercial_orcamento.mp4){ .wc-video-link }

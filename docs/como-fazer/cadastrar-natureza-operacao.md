@@ -12,6 +12,7 @@ tags:
 
 # Como cadastrar uma Natureza de Operação
 
+
 ## Pré-requisitos
 
 - Operação que será realizada definida
@@ -27,7 +28,6 @@ tags:
 `Administração > Natureza de Operação`.
 
 ![Onde encontrar](../assets/images/guias/caminhocadastronaturezaop.png)
-
 ## Demonstração em vídeo
 
 [Demonstração do cadastro de natureza de operação](../assets/videos/adm_natureza_operacao.mp4){ .wc-video-link }
@@ -55,6 +55,8 @@ tags:
 10. Salve a Regra Fiscal.
 11. Caso a Natureza exija outros cenários de cálculo, use novamente **Adicionar Regra**. Cada Natureza de Operação pode possuir uma ou mais Regras Fiscais.
 12. Teste a Natureza em uma operação controlada antes de liberar seu uso.
+
+## Observação
 
 Durante o faturamento, o WCorp compara os dados da operação com os critérios das Regras vinculadas à Natureza selecionada e utiliza a Regra Fiscal compatível para realizar o cálculo da nota.
 

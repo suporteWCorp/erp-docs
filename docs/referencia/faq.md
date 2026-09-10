@@ -174,15 +174,4 @@ Consulte a identificação de versão exibida no WCorp. Caso ela não esteja vis
 
 </details>
 
-<details class="wc-faq-item" markdown>
-<summary>Como abrir um chamado?</summary>
-
-<p class="wc-faq-answer"><span class="wc-faq-answer__label">Resposta rápida</span></p>
-
-Informe o módulo, a tela, o usuário afetado, o que ocorreu, o resultado esperado, a mensagem completa e as evidências disponíveis.
-
-[Consultar o modelo de abertura de chamado](../suporte/abertura-de-chamado.md){: target="_blank" rel="noopener" .wc-faq-link }
-
-</details>
-
 </div>

@@ -12,6 +12,7 @@ tags:
 
 # Como cadastrar um usuário
 
+
 ## Pré-requisitos
 
 - Usuário administrador ou autorização do responsável da empresa
@@ -25,7 +26,6 @@ tags:
 `Administração > Usuários`.
 
 ![Onde encontrar](../assets/images/guias/caminhocadastrousuarios.png)
-
 ## Demonstração em vídeo
 
 [Demonstração do cadastro de usuário](../assets/videos/adm_cadastro_usuario.mp4){ .wc-video-link }

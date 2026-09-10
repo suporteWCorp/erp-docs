@@ -11,9 +11,12 @@ tags:
 
 # Como cadastrar uma Condição de Pagamento
 
+
 ## Pré-requisitos
 
-- Forma e prazo de pagamento definidos
+- Forma de pagamento
+- Número de parcelas definido
+- Prazo de pagamento por parcela definido
 
 ## Permissões
 
@@ -24,7 +27,6 @@ tags:
 `Administração > Condições de Pagamento`.
 
 ![Onde encontrar](../assets/images/guias/caminhocadastrocondicaopagamento.png)
-
 ## Demonstração em vídeo
 
 [Demonstração do cadastro de condição de pagamento](../assets/videos/adm_condicao_pagamento.mp4){ .wc-video-link }
@@ -36,7 +38,6 @@ tags:
 3. Preencha os campos obrigatórios conforme a condição utilizada pela empresa.
 4. Revise as informações cadastradas.
 5. Salve a condição de pagamento.
-6. Faça uma validação controlada antes de disponibilizá-la para uso.
 
 ## Veja também
 

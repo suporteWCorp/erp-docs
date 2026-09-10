@@ -12,6 +12,7 @@ search:
 
 # Como importar XML
 
+
 ## Pré-requisitos
 
 <div class="wc-prereq-list" markdown>
@@ -31,7 +32,6 @@ search:
 ## Caminho
 
 `Faturamento > Entrada de Nota Fiscal ou Radar de Nota Fiscal`.
-
 ## Como fazer
 
 1. Acesse a rotina de entrada ou radar de nota fiscal.

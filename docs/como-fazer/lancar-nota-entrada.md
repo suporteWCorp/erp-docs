@@ -12,6 +12,7 @@ search:
 
 # Como lançar uma nota de entrada
 
+
 ## Pré-requisitos
 
 <div class="wc-prereq-list" markdown>
@@ -34,7 +35,6 @@ search:
 ## Caminho
 
 `Faturamento > Entrada de Nota Fiscal`.
-
 ## Como fazer
 
 1. Acesse **Faturamento > Entrada de Nota Fiscal**.

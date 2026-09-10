@@ -13,6 +13,7 @@ tags:
 
 # Como criar romaneio
 
+
 ## Pré-requisitos
 
 - Processo ou materiais que serão agrupados no romaneio definidos
@@ -26,7 +27,6 @@ tags:
 `Materiais > Romaneio`.
 
 ![Onde encontrar](../assets/images/guias/caminhocomocriarromaneio.png)
-
 ## Demonstração em vídeo
 
 [Demonstração de romaneio](../assets/videos/guias/criar-romaneio/romaneio.mp4){ .wc-video-link }
@@ -38,7 +38,3 @@ tags:
 3. Informe os dados necessários conforme o processo.
 4. Revise as informações antes de salvar.
 5. Finalize a rotina conforme a ação disponível.
-
-**Resultado esperado**
-
-O romaneio fica registrado para apoiar o processo correspondente.

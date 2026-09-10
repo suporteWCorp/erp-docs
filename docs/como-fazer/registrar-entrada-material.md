@@ -13,6 +13,7 @@ tags:
 
 # Como realizar entrada de material
 
+
 ## Pré-requisitos
 
 - Material cadastrado
@@ -27,7 +28,6 @@ tags:
 `Materiais > Entrada de Material`.
 
 ![Onde encontrar](../assets/images/guias/caminhoentradamaterial.png)
-
 ## Demonstração em vídeo
 
 [Demonstração de entrada de material](../assets/videos/guias/registrar-entrada-material/entrada-material.mp4){ .wc-video-link }
@@ -40,6 +40,3 @@ tags:
 4. Confira materiais, quantidades e demais informações exibidas.
 5. Salve ou finalize a rotina conforme a ação disponível.
 
-**Resultado esperado**
-
-A entrada de material fica registrada para movimentar ou documentar o estoque.

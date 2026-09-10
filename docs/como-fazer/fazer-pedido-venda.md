@@ -13,6 +13,7 @@ tags:
 
 # Como gerar um pedido
 
+
 ## Pré-requisitos
 
 - Cliente cadastrado<br>
@@ -29,7 +30,6 @@ tags:
 ## Caminho
 
 ![Onde encontrar](../assets/images/guias/comercial_pedido.png)
-
 ## Demonstração em vídeo
 
 [Demonstração da criação de pedido](../assets/videos/comercial_pedido.mp4){ .wc-video-link data-poster="../assets/images/guias/comercial_pedido.png" }

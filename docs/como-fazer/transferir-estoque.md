@@ -12,6 +12,7 @@ search:
 
 # Como transferir estoque
 
+
 ## Pré-requisitos
 
 <div class="wc-prereq-list" markdown>
@@ -30,10 +31,9 @@ search:
 ## Caminho
 
 `Materiais > Lote/Estoque`.
-
 ## Como fazer
 
-1. Consulte o saldo do material.
+1. Acesse Materiais > Lote/Estoque.
 2. Acesse a rotina de transferência ou movimentação de estoque.
 3. Informe material, origem e destino.
 4. Informe quantidade.

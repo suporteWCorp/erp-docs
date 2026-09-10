@@ -1269,8 +1269,8 @@ body:is(.wc-home-index, .wc-guide-index, .wc-manual-index) .wc-breadcrumb-bar {
     }
 }
 
-body:is(.wc-home-index, .wc-guide-index, .wc-manual-index) .md-typeset > .wc-breadcrumb-bar + h1,
-body:is(.wc-home-index, .wc-guide-index, .wc-manual-index) .md-typeset > h1:first-child {
+body:is(.wc-home-index, .wc-guide-index, .wc-manual-index, .wc-reference-index, .wc-tools-index) .md-typeset > .wc-breadcrumb-bar + h1,
+body:is(.wc-home-index, .wc-guide-index, .wc-manual-index, .wc-reference-index, .wc-tools-index) .md-typeset > h1:first-child {
     color: #005f66 !important;
     font-size: 1.58rem;
     font-weight: 760;
@@ -1278,7 +1278,7 @@ body:is(.wc-home-index, .wc-guide-index, .wc-manual-index) .md-typeset > h1:firs
     margin-bottom: 0.54rem;
 }
 
-body:is(.wc-guide-index, .wc-manual-index) .md-typeset .wc-listing-intro,
+body:is(.wc-guide-index, .wc-manual-index, .wc-reference-index, .wc-tools-index) .md-typeset .wc-listing-intro,
 body.wc-home-index .md-typeset .wc-home-secondary-action--intro {
     color: #425d6f;
     font-size: 0.82rem;
@@ -1287,7 +1287,7 @@ body.wc-home-index .md-typeset .wc-home-secondary-action--intro {
     max-width: 40rem;
 }
 
-body:is(.wc-guide-index, .wc-manual-index) .md-typeset .wc-listing-intro + h2,
+body:is(.wc-guide-index, .wc-manual-index, .wc-reference-index, .wc-tools-index) .md-typeset .wc-listing-intro + h2,
 body.wc-guide-index .md-typeset > h2 {
     color: #005f66 !important;
     font-size: 1.02rem;
@@ -1524,4 +1524,65 @@ body.wc-manual-index.wc-context-manual .md-typeset .wc-listing-intro + h2 {
         grid-template-columns: 1fr;
         max-width: 100%;
     }
+}
+
+/* Observação / Observações — identidade visual própria, discreta e informativa */
+body.wc-guide-page .md-typeset h2#observacao,
+body.wc-guide-page .md-typeset h2#observacoes {
+    color: #006b73;
+    font-size: 0.96rem;
+    font-weight: 750;
+    line-height: 1.25;
+    margin-top: 2rem;
+    margin-bottom: 0.35rem;
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+}
+body.wc-guide-page .md-typeset h2#observacao::before,
+body.wc-guide-page .md-typeset h2#observacoes::before {
+    content: "";
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    height: 1.72rem;
+    width: 1.72rem;
+    background: rgba(2, 128, 144, 0.08);
+    border: 1px solid rgba(2, 128, 144, 0.12);
+    border-radius: 7px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23007f86" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>');
+    background-size: 0.98rem;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Caixa leve para conteúdo de observação (próximo elemento após o título) */
+body.wc-guide-page .md-typeset h2#observacao + p,
+body.wc-guide-page .md-typeset h2#observacoes + p {
+    background: rgba(2, 128, 144, 0.045);
+    border-left: 3px solid rgba(2, 128, 144, 0.35);
+    border-radius: 0 6px 6px 0;
+    color: #435d66;
+    font-size: 0.85rem;
+    line-height: 1.55;
+    margin: 0.25rem 0 1.2rem 0;
+    padding: 0.55rem 0.85rem;
+}
+=== CSS ===
+/* Avisos — integrado ao padrão teal da Central (escopo Guia apenas) */
+body.wc-guide-page .md-typeset .admonition.fiscal {
+    background: rgba(2, 128, 144, 0.045) !important;
+    border-color: rgba(2, 128, 144, 0.28) !important;
+    border-left-color: rgba(2, 128, 144, 0.35) !important;
+}
+body.wc-guide-page .md-typeset .admonition.fiscal .admonition-title {
+    color: #006b73 !important;
+    background: rgba(2, 128, 144, 0.08) !important;
+    border-bottom-color: rgba(2, 128, 144, 0.25) !important;
+}
+body.wc-guide-page .md-typeset .admonition.fiscal::before {
+    color: #007f86 !important;
+    background: rgba(2, 128, 144, 0.08) !important;
+    border-color: rgba(2, 128, 144, 0.12) !important;
 }

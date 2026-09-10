@@ -14,6 +14,7 @@ tags:
 
 # Como verificar regra fiscal
 
+
 ## Pré-requisitos
 
 - Operação fiscal identificada
@@ -28,7 +29,6 @@ tags:
 `Administração > Natureza de Operação`.
 
 ![Onde encontrar](../assets/images/guias/caminhocadastronaturezaop.png)
-
 ## Verificar pela operação
 
 [Demonstração da verificação da regra fiscal](../assets/videos/guias/verificar-regra-fiscal/ver-regra-fiscal.mp4){ .wc-video-link }
@@ -39,7 +39,7 @@ tags:
 
 ## Como fazer
 
-1. Identifique a operação ou documento que precisa de conferência.
+1. Acesse Administração > Natureza de Operação.
 2. Localize a Natureza de Operação ou a regra fiscal relacionada.
 3. Confira os critérios da regra aplicada.
 4. Valide os dados fiscais antes de alterar qualquer configuração.
@@ -48,6 +48,3 @@ tags:
 
 --8<-- "shared/avisos/validacao-fiscal.md"
 
-**Resultado esperado**
-
-A regra fiscal utilizada no processo fica identificada para conferência ou ajuste.
