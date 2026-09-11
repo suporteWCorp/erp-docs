@@ -267,7 +267,8 @@ body.wc-guide-page .md-typeset h2#demonstracao-em-video,
 body.wc-guide-page .md-typeset h2#como-fazer,
 body.wc-guide-page .md-typeset h2#observacoes,
 body.wc-guide-page .md-typeset h2#observacao,
-body.wc-guide-page .md-typeset h2#veja-tambem {
+body.wc-guide-page .md-typeset h2#veja-tambem,
+body.wc-guide-page .md-typeset h2#avisos {
     display: flex;
     align-items: center;
     gap: 0.55rem;
@@ -286,7 +287,8 @@ body.wc-guide-page .md-typeset h2#demonstracao-em-video::before,
 body.wc-guide-page .md-typeset h2#como-fazer::before,
 body.wc-guide-page .md-typeset h2#observacoes::before,
 body.wc-guide-page .md-typeset h2#observacao::before,
-body.wc-guide-page .md-typeset h2#veja-tambem::before {
+body.wc-guide-page .md-typeset h2#veja-tambem::before,
+body.wc-guide-page .md-typeset h2#avisos::before {
     content: "";
     display: inline-flex;
     align-items: center;
@@ -316,4 +318,7 @@ body.wc-guide-page .md-typeset h2#observacao::before {
 }
 body.wc-guide-page .md-typeset h2#veja-tambem::before {
     background: rgba(2,128,144,0.08) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23007f86" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>') center/0.98rem no-repeat;
+}
+body.wc-guide-page .md-typeset h2#avisos::before {
+    background: rgba(2,128,144,0.08) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23007f86" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>') center/0.98rem no-repeat;
 }

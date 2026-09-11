@@ -305,6 +305,7 @@
 
     document.body.classList.add("wc-manual-tabs");
     tabsList.classList.add("wc-erp-tabs");
+    tabsList.closest("nav").setAttribute("aria-label", "Módulos dos Manuais");
 
     if (!tabsList.dataset.wcErpMenu || tabsList.querySelectorAll("[data-wc-module]").length !== modules.length) {
       const fragment = document.createDocumentFragment();
@@ -333,11 +334,24 @@
       link.classList.toggle("md-tabs__link--active", isActive);
 
       if (isActive) {
-        link.setAttribute("aria-current", "page");
+        link.setAttribute("aria-current", "location");
       } else {
         link.removeAttribute("aria-current");
       }
     });
+    revealActiveManualLink(tabsList);
+  }
+
+  function revealActiveManualLink(container) {
+    const active = container.querySelector("[aria-current]");
+    if (!active || !container.clientWidth) return;
+
+    const bounds = container.getBoundingClientRect();
+    const linkBounds = active.getBoundingClientRect();
+    if (linkBounds.left < bounds.left || linkBounds.right > bounds.right) {
+      container.scrollLeft += linkBounds.left - bounds.left -
+        (container.clientWidth - linkBounds.width) / 2;
+    }
   }
 
   function normalizedPagePath(url) {
@@ -439,6 +453,7 @@
     if (!existing) {
       tabs.insertAdjacentElement("afterend", subnav);
     }
+    revealActiveManualLink(inner);
   }
 
   function addSupportFooter() {
@@ -965,13 +980,12 @@
   }
 
   watchInternalNavigation();
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initWcorpUi);
-  } else {
-    initWcorpUi();
-  }
-
+  // O observable do Material já emite o documento inicial e as navegações.
   if (window.document$ && typeof window.document$.subscribe === "function") {
     window.document$.subscribe(initWcorpUi);
+  } else if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initWcorpUi, { once: true });
+  } else {
+    initWcorpUi();
   }
 })();
