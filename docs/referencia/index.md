@@ -1,4 +1,4 @@
-# Referências
+# Referências {.wc-listing-title}
 
 Consultas rápidas e materiais de apoio para o uso do WCorp.
 { .wc-listing-intro }
