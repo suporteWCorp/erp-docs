@@ -837,7 +837,7 @@ body:not(.wc-manual-tabs) .wc-manual-subnav {
 
 /* Funcionalidades do módulo selecionado no Manual */
 .wc-manual-subnav {
-    background: var(--wc-manual-surface);
+    background: var(--wc-manual-accent);
     border-bottom: 1px solid var(--wc-manual-border);
     border-top: 0;
     box-shadow: none;
@@ -864,10 +864,10 @@ body:not(.wc-manual-tabs) .wc-manual-subnav {
 
 .wc-manual-subnav__link {
     align-items: center;
-    background: #ffffff;
-    border: 1px solid var(--wc-manual-border);
+    background: transparent;
+    border: 1px solid transparent;
     border-radius: 6px;
-    color: #365566;
+    color: #ffffff;
     display: inline-flex;
     flex: 0 0 auto;
     font-size: 0.65rem;
@@ -881,16 +881,16 @@ body:not(.wc-manual-tabs) .wc-manual-subnav {
 
 .wc-manual-subnav__link:hover,
 .wc-manual-subnav__link:focus-visible {
-    background: #e5f2f3;
-    border-color: var(--wc-manual-accent);
-    color: #005f66;
+    background: rgba(255, 255, 255, 0.14);
+    border-color: transparent;
+    color: #ffffff;
 }
 
 .wc-manual-subnav__link--active,
 .wc-manual-subnav__link--active:hover {
-    background: var(--wc-manual-accent);
-    border-color: var(--wc-manual-accent);
-    color: #ffffff;
+    background: #ffffff;
+    border-color: #ffffff;
+    color: var(--wc-manual-accent);
     box-shadow: none;
 }
 
