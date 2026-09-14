@@ -543,6 +543,250 @@
     return message;
   }
 
+  function safeAssistantLink(value) {
+    try {
+      const internalPath = String(value || "")
+        .trim()
+        .replace(/^<|>$/g, "");
+      const isExternal = /^(?:https?:|mailto:)/i.test(internalPath);
+      const [pathPart, suffix = ""] = internalPath.split(/(?=[?#])/);
+      const markdownPath = pathPart
+        .replace(/^\/?(?:sources\/central-ajuda\/)?docs\//i, "")
+        .replace(/^(?:\.\.\/|\.\/)+/, "")
+        .replace(/\.md$/i, "")
+        .replace(/\/index$/i, "")
+        .replace(/^\/+|\/+$/g, "");
+      const normalizedValue = !isExternal && /(?:\.md|(?:^|\/)docs\/)/i.test(internalPath)
+        ? new URL(`${markdownPath}/${suffix}`, rootUrl()).href
+        : internalPath;
+      const url = new URL(normalizedValue, window.location.href);
+
+      return ["http:", "https:", "mailto:"].includes(url.protocol)
+        ? url.href
+        : null;
+    } catch (_error) {
+      return null;
+    }
+  }
+
+  function isAssistantInternalLink(value) {
+    return !/^(?:https?:|mailto:)/i.test(value || "") &&
+      /(?:\.md(?:[#?].*)?|(?:^|\/)docs\/)/i.test(value || "");
+  }
+
+  function appendAssistantMarkdownInline(parent, value) {
+    const pattern = /(`([^`\n]+)`|\*\*([^*\n]+)\*\*|\*([^*\n]+)\*|\[([^\]\n]+)\]\(([^)\n]+)\))/g;
+    let position = 0;
+    let match;
+
+    while ((match = pattern.exec(value)) !== null) {
+      parent.appendChild(
+        document.createTextNode(
+          value.slice(position, match.index)
+        )
+      );
+
+      if (match[2]) {
+        const code = document.createElement("code");
+
+        code.textContent = match[2];
+        parent.appendChild(code);
+      } else if (match[3]) {
+        const strong = document.createElement("strong");
+
+        strong.textContent = match[3];
+        parent.appendChild(strong);
+      } else if (match[4]) {
+        const emphasis = document.createElement("em");
+
+        emphasis.textContent = match[4];
+        parent.appendChild(emphasis);
+      } else {
+        const href = safeAssistantLink(match[6].trim());
+
+        if (href) {
+          const link = document.createElement("a");
+
+          link.href = href;
+          link.textContent = match[5];
+          parent.appendChild(link);
+        } else {
+          parent.appendChild(
+            document.createTextNode(match[5])
+          );
+        }
+      }
+
+      position = pattern.lastIndex;
+    }
+
+    parent.appendChild(
+      document.createTextNode(value.slice(position))
+    );
+  }
+
+  function createMarkdownMessage(markdown) {
+    const message = document.createElement("div");
+    const cleanedMarkdown = String(markdown || "")
+      .replace(/\s*\{:\s*[^}\n]*(?:target\s*=\s*["']_blank["']|rel\s*=\s*["']noopener["'])[^}\n]*\}/gi, "")
+      .trim();
+    const lines = cleanedMarkdown.replace(/\r\n?/g, "\n").split("\n");
+    let paragraphLines = [];
+    let listStack = [];
+    let complementarySection = false;
+
+    message.className = "wc-assistant__message";
+
+    const flushParagraph = () => {
+      if (!paragraphLines.length) {
+        return;
+      }
+
+      const paragraph = document.createElement("p");
+
+      appendAssistantMarkdownInline(
+        paragraph,
+        paragraphLines.join(" ")
+      );
+      message.appendChild(paragraph);
+      paragraphLines = [];
+    };
+
+    const resetLists = () => {
+      listStack = [];
+    };
+
+    const createComplementaryCard = (label, href, sectionTitle) => {
+      const card = document.createElement("article");
+      const type = document.createElement("span");
+      const title = document.createElement("strong");
+      const action = document.createElement("a");
+
+      card.className = "wc-assistant__markdown-card";
+      type.className = "wc-assistant__result-type";
+      type.textContent = sectionTitle;
+      title.className = "wc-assistant__result-title";
+      title.textContent = label;
+      action.className = "wc-assistant__result-link";
+      action.href = href;
+      action.textContent = "Ver guia completo →";
+
+      card.append(type, title, action);
+      return card;
+    };
+
+    const appendListItem = (line, orderedItem, unorderedItem) => {
+      const indent = line.match(/^\s*/)[0].length;
+      const listTag = orderedItem ? "ol" : "ul";
+
+      flushParagraph();
+
+      while (
+        listStack.length &&
+        indent < listStack[listStack.length - 1].indent
+      ) {
+        listStack.pop();
+      }
+
+      if (
+        listStack.length &&
+        indent === listStack[listStack.length - 1].indent &&
+        listStack[listStack.length - 1].type !== listTag
+      ) {
+        listStack.pop();
+      }
+
+      let current = listStack[listStack.length - 1];
+
+      if (!current || indent > current.indent) {
+        const list = document.createElement(listTag);
+        const parent = current?.item || message;
+
+        parent.appendChild(list);
+        current = {
+          indent,
+          item: null,
+          list,
+          type: listTag
+        };
+        listStack.push(current);
+      }
+
+      const listItem = document.createElement("li");
+
+      appendAssistantMarkdownInline(
+        listItem,
+        (orderedItem || unorderedItem)[1]
+      );
+      current.list.appendChild(listItem);
+      current.item = listItem;
+    };
+
+    lines.forEach((line) => {
+      const heading = line.trim().replace(/^#+\s*/, "");
+      const orderedItem = line.match(/^\s*\d+[.)]\s+(.+)$/);
+      const unorderedItem = line.match(/^\s*[-*+]\s+(.+)$/);
+      const item = orderedItem || unorderedItem;
+
+      if (/^(documenta[cç][aã]o complementar|guia recomendado|leia tamb[eé]m|materiais complementares)$/i.test(heading)) {
+        flushParagraph();
+        resetLists();
+        complementarySection = heading;
+        const section = document.createElement("div");
+
+        section.className = "wc-assistant__markdown-links";
+        section.setAttribute("data-section-title", heading);
+        message.appendChild(section);
+        return;
+      }
+
+      if (item) {
+        const linkMatch = item[1].match(/^\[([^\]]+)\]\(([^)]+)\)\s*$/);
+        const section = message.lastElementChild;
+
+        if (
+          complementarySection &&
+          section?.classList.contains("wc-assistant__markdown-links") &&
+          linkMatch &&
+          isAssistantInternalLink(linkMatch[2])
+        ) {
+          const href = safeAssistantLink(linkMatch[2]);
+
+          if (href) {
+            section.appendChild(
+              createComplementaryCard(
+                linkMatch[1],
+                href,
+                complementarySection
+              )
+            );
+            return;
+          }
+        }
+
+        appendListItem(line, orderedItem, unorderedItem);
+        return;
+      }
+
+      resetLists();
+
+      if (!line.trim()) {
+        flushParagraph();
+        return;
+      }
+
+      if (complementarySection) {
+        complementarySection = false;
+      }
+
+      paragraphLines.push(line.trim());
+    });
+
+    flushParagraph();
+
+    return message;
+  }
+
   function createHtmlMessage(html) {
     const message = document.createElement("div");
 
@@ -3039,6 +3283,9 @@
         if (
           element.classList.contains(
             "wc-assistant__typing"
+          ) ||
+          element.classList.contains(
+            "wc-assistant__message--temporary"
           )
         ) {
           return null;
@@ -3340,6 +3587,10 @@
           return;
         }
 
+        const isFirstUserMessage = !messages.querySelector(
+          ".wc-assistant__message--user"
+        );
+
         messages.appendChild(
           createMessage(
             value,
@@ -3355,81 +3606,84 @@
 
         const typingMessage =
           createTypingMessage();
-        let cardsTypingMessage = null;
+        const consultationMessage = isFirstUserMessage
+          ? createMessage(
+              "Opa! Sou o Assistente WCorp. Já vou verificar isso pra você."
+            )
+          : null;
+
+        consultationMessage?.classList.add(
+          "wc-assistant__message--temporary"
+        );
 
         setAssistantBusy(true);
 
-        messages.appendChild(
-          typingMessage
-        );
+        if (consultationMessage) {
+          messages.appendChild(consultationMessage);
+        }
+        messages.appendChild(typingMessage);
 
         scrollConversationToBottom();
 
         try {
-          const textDelay = assistantWait(
-            assistantRandomDelay(
-              MIN_TEXT_RESPONSE_DELAY,
-              MAX_TEXT_RESPONSE_DELAY
-            )
+          const response = await fetch(
+            "http://127.0.0.1:8642/v1/chat/completions",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer wcorp-hermes-local"
+              },
+              body: JSON.stringify({
+                model: "hermes-agent",
+                messages: [
+                  {
+                    role: "user",
+                    content: value
+                  }
+                ]
+              })
+            }
           );
 
-          const [docs] = await Promise.all([
-            loadSearchIndex(),
-            loadAssistantPublishedGuidePaths()
-          ]);
-
-          const results =
-            getAssistantResults(
-              docs,
-              value
+          if (!response.ok) {
+            throw new Error(
+              `Hermes respondeu com HTTP ${response.status}`
             );
+          }
 
-          await textDelay;
+          const data =
+            await response.json();
 
-          const answer =
-            createAssistantAnswer(
-              value,
-              results
-            );
+          const hermesAnswer =
+            data?.choices?.[0]?.message?.content ||
+            "Não foi possível obter uma resposta do Assistente.";
 
+          consultationMessage?.remove();
           typingMessage.remove();
 
           messages.appendChild(
-            createHtmlMessage(
-              answer.textHtml
+            createMarkdownMessage(
+              hermesAnswer
             )
           );
+        } catch (error) {
+          console.error(
+            "Erro ao consultar Hermes:",
+            error
+          );
 
-          scrollConversationToBottom();
-
-          if (answer.cardsHtml) {
-            cardsTypingMessage =
-              createTypingMessage();
-
-            messages.appendChild(
-              cardsTypingMessage
-            );
-
-            scrollConversationToBottom();
-
-            await assistantWait(
-              assistantRandomDelay(
-                MIN_CARDS_RESPONSE_DELAY,
-                MAX_CARDS_RESPONSE_DELAY
-              )
-            );
-
-            cardsTypingMessage.remove();
-
-            messages.appendChild(
-              createHtmlMessage(
-                answer.cardsHtml
-              )
-            );
-          }
-        } finally {
+          consultationMessage?.remove();
           typingMessage.remove();
-          cardsTypingMessage?.remove();
+
+          messages.appendChild(
+            createMessage(
+              "Não consegui me conectar ao Hermes neste momento."
+            )
+          );
+        } finally {
+          consultationMessage?.remove();
+          typingMessage.remove();
           setAssistantBusy(false);
         }
 
