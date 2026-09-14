@@ -13,9 +13,21 @@ Use esta rotina para organizar permissões de acesso por perfil, função ou ár
 
 `Administração > Grupo Usuários`.
 
+## Quando usar
+
+<!-- TODO: adicionar Quando usar -->
+
+## Como usar
+
+<!-- TODO: adicionar Como usar -->
+
 ## Avisos
 
 O detalhamento dos campos e regras desta tela ainda precisa ser complementado.
+
+## Dúvidas frequentes
+
+<!-- TODO: adicionar Dúvidas frequentes -->
 
 ## Veja também
 

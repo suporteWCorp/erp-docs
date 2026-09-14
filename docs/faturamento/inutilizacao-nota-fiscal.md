@@ -2,13 +2,19 @@
 
 ## Objetivo
 
-A tela **Inutilização Nota Fiscal** é utilizada para inutilizar numerações de Nota Fiscal que não serão utilizadas, como em casos de quebra de sequência.
+A tela **Inutilização Nota Fiscal** é utilizada para inutilizar numerações de NF-e que não serão utilizadas, como em casos de quebra de sequência.
 
 ## Caminho
 
-`Faturamento > Inutilização Nota Fiscal`
+`Faturamento > Inutilização Nota Fiscal`.
 
-## Campos principais
+## Quando usar
+
+Use esta tela quando uma ou mais numerações de NF-e não forem utilizadas, como em casos de quebra de sequência, e for necessário registrar e transmitir a inutilização.
+
+## Como usar
+
+### Campos principais
 
 | Campo | Descrição |
 | --- | --- |
@@ -19,25 +25,14 @@ A tela **Inutilização Nota Fiscal** é utilizada para inutilizar numerações 
 | **Status** | Situação atual da inutilização. |
 | **Justificativa** | Motivo da inutilização da numeração informada. |
 
-## Funcionamento
+## Avisos
 
-1. Clique em **Adicionar (F1)**.
-2. Informe o **Número NFe Inicial** e o **Número NFe Final**.
-3. Informe a **Série** e selecione o **Tipo**.
-4. Preencha a **Justificativa**.
-5. Clique em **Salvar (F2)**.
-6. Clique em **Transmitir para o Sefaz** para enviar a inutilização.
+<!-- TODO: adicionar Avisos -->
 
-Quando apenas uma numeração precisar ser inutilizada, informe o mesmo número nos campos **Número NFe Inicial** e **Número NFe Final**.
+## Dúvidas frequentes
 
-Após a transmissão, acompanhe o **Status** da inutilização na própria tela.
-
-## Outras ações
-
-A opção **Salvar XML** permite salvar o XML relacionado à inutilização.
-
-Na parte superior da tela é possível consultar as inutilizações já cadastradas, incluindo a numeração inicial, numeração final e série.
+<!-- TODO: adicionar Dúvidas frequentes -->
 
 ## Veja também
 
-Para acompanhar a demonstração da operação, consulte o [Guia: Como inutilizar uma NF-e](../como-fazer/inutilizar-nfe.md){: target="_blank" rel="noopener" }.
+- [Como inutilizar uma NF-e](../como-fazer/inutilizar-nfe.md){: target="_blank" rel="noopener" }

@@ -16,11 +16,29 @@ Cadastrar grupos de clientes para organização e classificação comercial.
 
 </div>
 
-## Campos principais
+## Quando usar
+
+<!-- TODO: adicionar Quando usar -->
+
+## Como usar
+
+### Campos principais
 
 Para cadastrar um grupo de cliente é necessário preencher o nome. O restante das opções ficam a critério da decisão e do funcionamento da empresa do usuário.
+
+### Ações disponíveis
+
+<!-- TODO: adicionar Ações disponíveis -->
 
 ## Avisos
 
 !!! info "Cadastro"
     O cadastro deve ser feito pelo usuário.
+
+## Dúvidas frequentes
+
+<!-- TODO: adicionar Dúvidas frequentes -->
+
+## Veja também
+
+<!-- TODO: adicionar Veja também -->

@@ -20,6 +20,10 @@ tags:
 
 Cadastrar e consultar clientes no WCorp para uso em pedidos, orçamentos, faturamento e demais funcionalidades.
 
+## Caminho
+
+<!-- TODO: adicionar Caminho -->
+
 ## Print da tela
 
 <div class="wc-screen-block" markdown>
@@ -28,7 +32,13 @@ Cadastrar e consultar clientes no WCorp para uso em pedidos, orçamentos, fatura
 
 </div>
 
-## Passo a passo
+## Quando usar
+
+<!-- TODO: adicionar Quando usar -->
+
+## Como usar
+
+### Consulta
 
 1. Acesse a aba **Comercial**.
 2. Clique em **Clientes**.
@@ -38,26 +48,24 @@ Cadastrar e consultar clientes no WCorp para uso em pedidos, orçamentos, fatura
 6. Preencha manualmente os campos que faltarem.
 7. Clique em **Salvar**.
 
-### Vídeo de referência
+### Campos principais
 
-O trecho de **1:20 até 2:00** mostra o acesso e o cadastro de cliente pela aba Comercial.
+| Campo | Descrição |
+| --- | --- |
+| CNPJ | Documento da empresa cliente. Pode ser usado com a lupa para buscar dados automaticamente. |
+| Razão social / Nome | Identificação principal do cliente. Conferir antes de salvar. |
+| Endereço | Dados de localização do cliente. Importante para faturamento e entrega. |
+| Contato | Telefone, e-mail ou responsável. Ajuda em atendimento e cobrança. |
+| Dados fiscais | Informações usadas no faturamento. Conferir quando houver emissão de nota. |
 
-[Assistir no YouTube a partir de 1:20](https://www.youtube.com/watch?v=osiFPSfEOrc&list=PLouJpYsMKL1fizkcacjs-UdhTCnxnrMOO&t=80s)
+### Ações disponíveis
+
+<!-- TODO: adicionar Ações disponíveis -->
 
 ## Avisos
 
 !!! info "Consulta de CNPJ"
     Caso seja um CNPJ recém-cadastrado, a atualização na base da SEFAZ pode levar mais de 30 dias. Nesses casos, pode ser necessário preencher as informações manualmente.
-
-## Campos principais
-
-| Campo | Descrição | Observações |
-| --- | --- | --- |
-| CNPJ | Documento da empresa cliente | Pode ser usado com a lupa para buscar dados automaticamente |
-| Razão social / Nome | Identificação principal do cliente | Conferir antes de salvar |
-| Endereço | Dados de localização do cliente | Importante para faturamento e entrega |
-| Contato | Telefone, e-mail ou responsável | Ajuda em atendimento e cobrança |
-| Dados fiscais | Informações usadas no faturamento | Conferir quando houver emissão de nota |
 
 ## Dúvidas frequentes
 
@@ -67,3 +75,7 @@ O trecho de **1:20 até 2:00** mostra o acesso e o cadastro de cliente pela aba 
 | O CNPJ não retornou dados pela lupa. O que fazer? | Se for CNPJ recente, pode ainda não estar atualizado na base da SEFAZ. Preencha manualmente. |
 | Preciso preencher todos os campos? | Preencha os campos obrigatórios e os dados necessários para a operação que será feita. |
 | O cliente não aparece no pedido | Verifique se o cadastro foi salvo corretamente e se não há filtros ou bloqueios aplicados. |
+
+## Veja também
+
+<!-- TODO: adicionar Veja também -->

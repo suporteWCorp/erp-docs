@@ -11,7 +11,13 @@ Cadastrar ou consultar locais utilizados para controle físico e lógico do esto
 
 `Materiais > Locais de Armazenagem`.
 
-## Passo a passo
+## Quando usar
+
+<!-- TODO: adicionar Quando usar -->
+
+## Como usar
+
+### Consulta
 
 1. Acesse a aba **Materiais**.
 2. Clique em **Locais de Armazenagem**.
@@ -19,15 +25,22 @@ Cadastrar ou consultar locais utilizados para controle físico e lógico do esto
 4. Confira material, quantidade, unidade, lote ou local de armazenagem, quando aplicável.
 5. Salve, confirme ou finalize conforme a ação disponível na tela.
 
-## Campos principais
+### Campos principais
 
-| Campo | Descrição | Observações |
-| --- | --- | --- |
-| A definir | A definir | A definir |
+<!-- TODO: adicionar Campos principais -->
+
+### Ações disponíveis
+
+<!-- TODO: adicionar Ações disponíveis -->
+
+## Avisos
+
+<!-- TODO: adicionar Avisos -->
 
 ## Dúvidas frequentes
 
-| Dúvida | Orientação |
-| --- | --- |
-| Quando devo usar esta rotina? | Use quando o processo estiver relacionado a **Locais de Armazenagem**. |
-| O que devo conferir antes de salvar? | Confira material, unidade, quantidade, lote, local e tipo de operação, quando aplicável. |
+<!-- TODO: adicionar Dúvidas frequentes -->
+
+## Veja também
+
+<!-- TODO: adicionar Veja também -->

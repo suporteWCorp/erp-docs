@@ -11,7 +11,13 @@ Ajustar quantidades de inventário conforme conferência física ou necessidade 
 
 `Materiais > Ajustar Inventário`.
 
-## Passo a passo
+## Quando usar
+
+<!-- TODO: adicionar Quando usar -->
+
+## Como usar
+
+### Consulta
 
 1. Acesse a aba **Materiais**.
 2. Clique em **Ajustar Inventário**.
@@ -19,15 +25,22 @@ Ajustar quantidades de inventário conforme conferência física ou necessidade 
 4. Confira material, quantidade, unidade, lote ou local de armazenagem, quando aplicável.
 5. Salve, confirme ou finalize conforme a ação disponível na tela.
 
-## Campos principais
+### Campos principais
 
-| Campo | Descrição | Observações |
-| --- | --- | --- |
-| A definir | A definir | A definir |
+<!-- TODO: adicionar Campos principais -->
+
+### Ações disponíveis
+
+<!-- TODO: adicionar Ações disponíveis -->
+
+## Avisos
+
+<!-- TODO: adicionar Avisos -->
 
 ## Dúvidas frequentes
 
-| Dúvida | Orientação |
-| --- | --- |
-| Quando devo usar esta rotina? | Use quando o processo estiver relacionado a **Ajustar Inventário**. |
-| O que devo conferir antes de salvar? | Confira material, unidade, quantidade, lote, local e tipo de operação, quando aplicável. |
+<!-- TODO: adicionar Dúvidas frequentes -->
+
+## Veja também
+
+<!-- TODO: adicionar Veja também -->

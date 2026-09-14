@@ -1,38 +1,42 @@
-# Módulo Comercial - Orçamentos
+# Orçamento
 
-O **Cadastro de Orçamento** é utilizado para registrar propostas comerciais e, quando necessário, gerar um Pedido de Venda a partir do orçamento.
+## Objetivo
 
-## Informações obrigatórias
+Registrar propostas comerciais e gerar Pedido de Venda a partir do orçamento.
 
-Para salvar um orçamento, é necessário informar:
+## Caminho
 
-- **Cliente**
-- **Material**
+<!-- TODO: adicionar Caminho -->
 
-## Informações da tela
+## Quando usar
 
-Além das informações obrigatórias, a tela permite consultar ou preencher dados como:
+<!-- TODO: adicionar Quando usar -->
 
-- Data do Orçamento
-- Status do Orçamento
-- Workflow
-- Revisão
-- Meio de Atendimento
-- Nível
-- Cliente ou Contrato
-- Vendedor
-- Condição de Pagamento
-- Transportadora
-- Frete por Conta
-- Valor do Frete
-- Endereço de Entrega
+## Como usar
 
-Na área de materiais, é possível pesquisar e consultar informações como código, nome, descrição, lote, unidade, local de armazenagem, preço e estoque.
+### Campos principais
 
-## Ações disponíveis
+| Campo | Descrição |
+| --- | --- |
+| Cliente | Cliente referenciado no orçamento. |
+| Material | Material incluído no orçamento. |
 
-A tela também possui ações como **Ticket**, **Imprimir** e **Criar Pedido**.
+Informe também: Data do Orçamento, Status do Orçamento, Workflow, Revisão, Meio de Atendimento, Nível, Cliente ou Contrato, Vendedor, Condição de Pagamento, Transportadora, Frete por Conta, Valor do Frete, Endereço de Entrega.
 
-A opção **Criar Pedido** permite gerar um Pedido de Venda a partir do orçamento.
+### Ações disponíveis
 
-Para acompanhar o passo a passo da operação, consulte o [Guia: Como criar um orçamento](../como-fazer/criar-orcamento.md){: target="_blank" rel="noopener" }.
+- **Ticket**
+- **Imprimir**
+- **Criar Pedido** — gera um Pedido de Venda a partir do orçamento.
+
+## Avisos
+
+<!-- TODO: adicionar Avisos -->
+
+## Dúvidas frequentes
+
+<!-- TODO: adicionar Dúvidas frequentes -->
+
+## Veja também
+
+- [Guia: Como criar um orçamento](../como-fazer/criar-orcamento.md){: target="_blank" rel="noopener" }

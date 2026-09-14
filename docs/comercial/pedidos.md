@@ -1,53 +1,54 @@
-# Módulo Comercial - Pedido de Venda
+# Pedido
 
-O **Cadastro de Pedido de Venda** é utilizado para registrar pedidos comerciais no WCorp.
+## Objetivo
 
-## Informações obrigatórias
+Registrar pedidos comerciais no WCorp.
 
-Para salvar um Pedido de Venda, é necessário informar:
+## Caminho
 
-- **Cliente**
-- **Material**
-- **Condição de Pagamento**
+<!-- TODO: adicionar Caminho -->
 
-## Informações da tela
+## Quando usar
 
-Além das informações obrigatórias, a tela permite consultar ou preencher dados como:
+<!-- TODO: adicionar Quando usar -->
 
-- Tipo de Pedido
-- Destino
-- Data do Pedido
-- Status do Pedido
-- Workflow
-- Cliente ou Contrato
-- Vendedor
-- Transportadora
-- Frete por Conta
-- Frete
-- Volumes
-- Data de Entrega
-- Endereço de Entrega
+## Como usar
 
-A tela também possui as opções **Remover Comissão** e **Calcular Automaticamente Impostos**.
+### Campos principais
 
-## Itens e parcelas
+| Campo | Descrição |
+| --- | --- |
+| Cliente | Cliente referenciado no pedido. |
+| Material | Material incluído no pedido. |
+| Condição de Pagamento | Forma de pagamento do pedido. |
 
-Na aba **Itens do Pedido**, são exibidas informações dos materiais do pedido, incluindo quantidade, valor unitário, percentual de desconto, valor total, status, Nota Fiscal, Ordem de Produção, data de entrega e separação.
+Informe também: Tipo de Pedido, Destino, Data do Pedido, Status do Pedido, Workflow, Cliente ou Contrato, Vendedor, Transportadora, Frete por Conta, Frete, Volumes, Data de Entrega, Endereço de Entrega.
 
-A aba **Parcelas** reúne as informações relacionadas às parcelas do pedido.
+### Itens e parcelas
 
-## Ações disponíveis
+- **Itens do Pedido**: quantidade, valor unitário, percentual de desconto, valor total, status, Nota Fiscal, Ordem de Produção, data de entrega e separação.
+- **Parcelas**: informações relacionadas às parcelas do pedido.
 
-A tela apresenta ações como:
+### Ações disponíveis
 
-- Pedido
-- Expedição
-- Devolução
-- Calcular FIFO p/ Materiais
-- Autorizar Desconto
-- Gerar Ordem de Produção
-- Ler XML NFe de Remessa
+- **Pedido**
+- **Expedição**
+- **Devolução**
+- **Calcular FIFO p/ Materiais**
+- **Autorizar Desconto**
+- **Gerar Ordem de Produção**
+- **Ler XML NFe de Remessa**
 
 A disponibilidade dessas ações pode variar conforme o pedido e as configurações utilizadas.
 
-Para acompanhar o passo a passo da operação, consulte o [Guia: Como gerar um pedido](../como-fazer/fazer-pedido-venda.md){: target="_blank" rel="noopener" }.
+## Avisos
+
+<!-- TODO: adicionar Avisos -->
+
+## Dúvidas frequentes
+
+<!-- TODO: adicionar Dúvidas frequentes -->
+
+## Veja também
+
+- [Guia: Como gerar um pedido](../como-fazer/fazer-pedido-venda.md){: target="_blank" rel="noopener" }
