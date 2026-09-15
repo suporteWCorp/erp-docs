@@ -103,6 +103,16 @@ Veja como gerar um pedido de venda no WCorp com cliente e itens definidos.
 
 </div>
 
+<div class="wc-card" markdown>
+
+### Como cancelar um pedido
+
+Acesse **Comercial > Pedido**.
+
+[Consultar guia](cancelar-pedido.md){ .md-button .md-button--primary }
+
+</div>
+
 </div>
 
 ## Estoque
@@ -186,6 +196,26 @@ Aprenda a configurar lote padrão para uso nas rotinas compatíveis.
 Veja como criar um romaneio no WCorp para organizar e agrupar materiais durante o processo.
 
 [Consultar guia](criar-romaneio.md){ .md-button .md-button--primary }
+
+</div>
+
+<div class="wc-card" markdown>
+
+### Como fazer inventário
+
+Acesse Materiais > Ajustar Inventário.
+
+[Consultar guia](fazer-inventario.md){ .md-button .md-button--primary }
+
+</div>
+
+<div class="wc-card" markdown>
+
+### Como transferir estoque
+
+Acesse Materiais > Lote/Estoque.
+
+[Consultar guia](transferir-estoque.md){ .md-button .md-button--primary }
 
 </div>
 
@@ -275,6 +305,16 @@ Veja como identificar a regra fiscal utilizada no processo de faturamento.
 
 </div>
 
+<div class="wc-card" markdown>
+
+### Como inutilizar uma NF-e
+
+Aprenda como inutilizar uma numeração ou faixa de NF-e no WCorp.
+
+[Consultar guia](inutilizar-nfe.md){ .md-button .md-button--primary }
+
+</div>
+
 </div>
 
 ## Funcionalidades
@@ -324,6 +364,120 @@ Veja como consultar o histórico de alterações nas telas do WCorp que disponib
 Saiba como consultar informações relacionadas ao SPED Fiscal no WCorp.
 
 [Consultar guia](consultar-sped-fiscal.md){ .md-button .md-button--primary }
+
+</div>
+
+</div>
+
+## Financeiro
+
+<div class="wc-home-grid" markdown>
+
+<div class="wc-card" markdown>
+
+### Como baixar um título
+
+Acesse a rotina de contas a receber ou contas a pagar.
+
+[Consultar guia](baixar-titulo.md){ .md-button .md-button--primary }
+
+</div>
+
+<div class="wc-card" markdown>
+
+### Como gerar boleto
+
+Acesse **Financeiro > Boleto**.
+
+[Consultar guia](gerar-boleto.md){ .md-button .md-button--primary }
+
+</div>
+
+<div class="wc-card" markdown>
+
+### Como lançar contas a pagar
+
+Acesse **Financeiro > Contas a Pagar**.
+
+[Consultar guia](lancar-contas-a-pagar.md){ .md-button .md-button--primary }
+
+</div>
+
+</div>
+
+## Cadastros
+
+<div class="wc-home-grid" markdown>
+
+<div class="wc-card" markdown>
+
+### Como cadastrar um fornecedor
+
+Acesse **Fornecedores > Fornecedores**.
+
+[Consultar guia](cadastrar-fornecedor.md){ .md-button .md-button--primary }
+
+</div>
+
+</div>
+
+## Compras
+
+<div class="wc-home-grid" markdown>
+
+<div class="wc-card" markdown>
+
+### Como criar um pedido de compra
+
+Acesse **Compras > Pedido de Compra**.
+
+[Consultar guia](criar-pedido-compra.md){ .md-button .md-button--primary }
+
+</div>
+
+</div>
+
+## Documentos Fiscais
+
+<div class="wc-home-grid" markdown>
+
+<div class="wc-card" markdown>
+
+### Como emitir uma devolução
+
+Acesse Comercial > Devolução ou Faturamento.
+
+[Consultar guia](emitir-devolucao.md){ .md-button .md-button--primary }
+
+</div>
+
+<div class="wc-card" markdown>
+
+### Como emitir uma nota complementar
+
+Acesse **Faturamento > Nota Fiscal**.
+
+[Consultar guia](emitir-nota-complementar.md){ .md-button .md-button--primary }
+
+</div>
+
+<div class="wc-card" markdown>
+
+### Como importar XML
+
+Acesse a rotina de entrada ou radar de nota fiscal.
+
+[Consultar guia](importar-xml.md){ .md-button .md-button--primary }
+
+</div>
+
+<div class="wc-card" markdown>
+
+### Como lançar uma nota de entrada
+
+Acesse **Faturamento > Entrada de Nota Fiscal**.
+
+[Consultar guia](lancar-nota-entrada.md){ .md-button .md-button--primary }
 
 </div>
 
