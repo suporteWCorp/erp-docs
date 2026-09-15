@@ -12,6 +12,7 @@ search:
 
 # Como baixar um título
 
+
 ## Pré-requisitos
 
 <div class="wc-prereq-list" markdown>
@@ -29,7 +30,6 @@ search:
 ## Caminho
 
 `Financeiro > Contas a Receber / Contas a Pagar`.
-
 ## Como fazer
 
 1. Acesse a rotina de contas a receber ou contas a pagar.

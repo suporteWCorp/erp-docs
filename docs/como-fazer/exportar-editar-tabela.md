@@ -16,7 +16,7 @@ tags:
 
 ## Pré-requisitos
 
-- Tela ou tabela que será consultada definida
+- Dados necessários para a planilha em mãos
 - Permissão para exportar ou editar informações
 
 ## Permissões
@@ -34,6 +34,3 @@ tags:
 3. Revise as informações antes de confirmar qualquer alteração.
 4. Salve ou exporte conforme a necessidade do processo.
 
-**Resultado esperado**
-
-A tabela é exportada ou editada conforme a ação executada na tela.

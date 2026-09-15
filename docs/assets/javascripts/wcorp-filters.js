@@ -96,7 +96,7 @@
   }
 
   function cardPopularity(card, infoByPath, useRealTotal = false) {
-    const link = card.querySelector("a[href]");
+    const link = card.querySelector("a.md-button[href], a[href]:not(.headerlink)");
     if (!link) return 0;
     const data = infoByPath[contentKey(link.href)];
     return useRealTotal ? Number(data?.popularityTotal) || 0 : data?.popular ? 1 : 0;
@@ -268,7 +268,7 @@
           items: cards.map((card, cardIndex) => ({
             card,
             originalIndex: cardIndex,
-            popularity: cardPopularity(card, infoByPath, true),
+            popularity: cardPopularity(card, infoByPath),
             title: cardTitle(card)
           })),
           sectionIndex

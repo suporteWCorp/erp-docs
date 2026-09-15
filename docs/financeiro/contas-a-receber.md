@@ -11,7 +11,13 @@ Cadastrar, consultar e acompanhar títulos que a empresa tem a receber.
 
 `Financeiro > Contas a Receber`.
 
-## Passo a passo
+## Quando usar
+
+<!-- TODO: adicionar Quando usar -->
+
+## Como usar
+
+### Consulta
 
 1. Acesse a aba **Financeiro**.
 2. Clique em **Contas a Receber**.
@@ -19,15 +25,22 @@ Cadastrar, consultar e acompanhar títulos que a empresa tem a receber.
 4. Confira empresa, conta, valor, vencimento e status, quando aplicável.
 5. Salve, confirme ou finalize conforme a ação desejada na tela.
 
-## Campos principais
+### Campos principais
 
-| Campo | Descrição | Observações |
-| --- | --- | --- |
-| A definir | A definir | A definir |
+<!-- TODO: adicionar Campos principais -->
+
+### Ações disponíveis
+
+<!-- TODO: adicionar Ações disponíveis -->
+
+## Avisos
+
+<!-- TODO: adicionar Avisos -->
 
 ## Dúvidas frequentes
 
-| Dúvida | Orientação |
-| --- | --- |
-| Quando devo usar esta rotina? | Use quando o processo estiver relacionado a **Contas a Receber**. |
-| O que devo conferir antes de salvar? | Confira empresa, conta, valor, vencimento, status e dados do participante envolvido. |
+<!-- TODO: adicionar Dúvidas frequentes -->
+
+## Veja também
+
+<!-- TODO: adicionar Veja também -->

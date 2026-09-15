@@ -14,6 +14,7 @@ tags:
 
 # Como consultar estoque
 
+
 ## Pré-requisitos
 
 - Material cadastrado
@@ -28,7 +29,6 @@ tags:
 `Materiais > Materiais`.
 
 ![Onde encontrar](../assets/images/guias/materiais_materiais.png)
-
 ## Demonstração em vídeo
 
 [Demonstração da consulta de estoque](../assets/videos/guias/consultar-estoque/ver-estoque.mp4){ .wc-video-link }
@@ -40,7 +40,3 @@ tags:
 3. Consulte saldo, local, lote e movimentações.
 4. Ajuste filtros se necessário.
 5. Abra o registro para detalhes, quando aplicável.
-
-**Resultado esperado**
-
-As informações de estoque ficam disponíveis para conferência antes de movimentações ou ajustes.

@@ -12,6 +12,7 @@ tags:
 
 # Como emitir uma carta de correção
 
+
 ## Pré-requisitos
 
 - NF-e autorizada e localizada
@@ -26,7 +27,6 @@ tags:
 `Faturamento > Carta de Correção`.
 
 ![Onde encontrar](../assets/images/guias/caminhoemitircartacorrecao.png)
-
 ## Demonstração em vídeo
 
 [Demonstração da emissão de carta de correção](../assets/videos/faturamento_carta_correcao.mp4){ .wc-video-link }

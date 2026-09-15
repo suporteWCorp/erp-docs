@@ -14,9 +14,10 @@ tags:
 
 # Como consultar notas fiscais rejeitadas
 
+
 ## Pré-requisitos
 
-- NF-e já emitida ou transmitida
+- NFe já transmitida para a SEFAZ
 - Retorno de rejeição disponível para consulta
 
 ## Permissões
@@ -28,7 +29,6 @@ tags:
 `Faturamento > Nota Fiscal`.
 
 ![Onde encontrar](../assets/images/guias/faturamento_emitir_nfe.png)
-
 ## Demonstração em vídeo
 
 [Demonstração da consulta de NF-e rejeitada](../assets/videos/guias/consultar-nfe-rejeitada/consultar-nfe-rejeitada.mp4){ .wc-video-link }
@@ -46,6 +46,3 @@ tags:
 
 --8<-- "shared/avisos/validacao-fiscal.md"
 
-**Resultado esperado**
-
-A rejeição fica identificada para que a correção seja feita antes de nova transmissão.

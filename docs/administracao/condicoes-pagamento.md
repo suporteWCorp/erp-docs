@@ -13,9 +13,21 @@ Use esta rotina para cadastrar, consultar ou revisar formas e prazos de pagament
 
 `Administração > Condições de Pagamento`.
 
+## Quando usar
+
+<!-- TODO: adicionar Quando usar -->
+
+## Como usar
+
+<!-- TODO: adicionar Como usar -->
+
 ## Avisos
 
 O detalhamento dos campos e regras desta tela ainda precisa ser complementado.
+
+## Dúvidas frequentes
+
+<!-- TODO: adicionar Dúvidas frequentes -->
 
 ## Veja também
 

@@ -11,9 +11,12 @@ tags:
 
 # Como cadastrar um Centro de Custo
 
+
 ## Pré-requisitos
 
-- Nome e finalidade do centro de custo definidos
+- Nome e código do centro de custo definidos
+- Definir se possui nó pai ou se é um centro de custo raiz
+- Tipo do Centro de Custo definido
 
 ## Permissões
 
@@ -24,7 +27,6 @@ tags:
 `Administração > Centro de Custo`.
 
 ![Onde encontrar](../assets/images/guias/caminhocadastrocentrocusto.png)
-
 ## Demonstração em vídeo
 
 [Demonstração do cadastro de centro de custo](../assets/videos/adm_centro_custo.mp4){ .wc-video-link }

@@ -11,6 +11,7 @@ search:
 
 # Como lançar contas a pagar
 
+
 ## Pré-requisitos
 
 <div class="wc-prereq-list" markdown>
@@ -31,7 +32,6 @@ search:
 ## Caminho
 
 `Financeiro > Contas a Pagar`.
-
 ## Como fazer
 
 1. Acesse **Financeiro > Contas a Pagar**.

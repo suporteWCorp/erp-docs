@@ -314,7 +314,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.45rem;
-    margin: 0.1rem 0 0.65rem;
+    margin: 0.05rem 0 0.7rem;
 }
 
 .wc-rejection-code-badge,
@@ -325,11 +325,11 @@
     border-radius: 999px;
     color: #006b73;
     display: inline-flex;
-    font-size: 0.62rem;
+    font-size: 0.6rem;
     font-weight: 750;
     line-height: 1;
-    min-height: 1.35rem;
-    padding: 0.24rem 0.52rem;
+    min-height: 1.28rem;
+    padding: 0.22rem 0.5rem;
 }
 
 .wc-rejection-code-badge {
@@ -346,15 +346,15 @@
 }
 
 .wc-rejection-message {
-    background: #f8fbfb;
-    border: 1px solid rgba(82, 99, 105, 0.14);
+    background: #f3fbfb;
+    border: 1px solid rgba(2, 128, 144, 0.16);
     border-left: 3px solid #028090;
     border-radius: 8px;
-    color: #334e5a;
-    font-size: 0.74rem;
-    line-height: 1.55;
-    margin: 0.8rem 0 1.15rem;
-    padding: 0.72rem 0.85rem;
+    color: #223c4a;
+    font-size: 0.78rem;
+    line-height: 1.6;
+    margin: 1rem 0 1.25rem;
+    padding: 0.82rem 0.92rem;
 }
 
 .wc-rejection-message strong {
@@ -385,8 +385,8 @@ body:is(.wc-operational-error-article-page, .wc-technical-issue-article-page) .w
     font-weight: 800;
     letter-spacing: 0;
     line-height: 1;
-    margin-bottom: 0.65rem;
-    padding: 0.28rem 0.56rem;
+    margin-bottom: 0.68rem;
+    padding: 0.24rem 0.54rem;
     width: fit-content;
 }
 
@@ -499,6 +499,104 @@ body.wc-operational-error-article-page .wcorp-error-article-page figure.wc-opera
     color: #334e5a;
     margin-top: 0;
     padding: 0.2rem 0.9rem 0.82rem;
+}
+
+.wc-error-section {
+    border-top: 1px solid rgba(2, 128, 144, 0.12);
+    margin: 1rem 0 0;
+    padding-top: 0.78rem;
+}
+
+.wc-error-section > h2 {
+    color: #005f66;
+    font-size: 0.9rem !important;
+    font-weight: 760 !important;
+    margin: 0 0 0.45rem !important;
+}
+
+.wc-error-section > p,
+.wc-error-section > ul,
+.wc-error-section > ol,
+.wc-error-section > blockquote {
+    margin-bottom: 0.65rem;
+}
+
+.wc-error-section--message {
+    background: #f3fbfb;
+    border: 1px solid rgba(2, 128, 144, 0.16);
+    border-left: 3px solid #028090;
+    border-radius: 8px;
+    margin-top: 1rem;
+    padding: 0.82rem 0.92rem;
+}
+
+.wc-error-section--message > h2 {
+    color: #006b73 !important;
+    font-size: 0.64rem !important;
+    font-weight: 820 !important;
+    margin-bottom: 0.28rem !important;
+    text-transform: uppercase;
+}
+
+.wc-error-section--message > p {
+    color: #334e5a;
+    font-size: 0.76rem;
+    line-height: 1.6;
+    margin: 0 0 0.52rem;
+}
+
+.wc-error-section--message > blockquote {
+    background: rgba(255, 255, 255, 0.72);
+    border-color: rgba(2, 128, 144, 0.2);
+    border-radius: 7px;
+    color: #223c4a;
+    font-size: 0.78rem;
+    margin: 0.55rem 0 0;
+    padding: 0.58rem 0.72rem;
+}
+
+.wc-error-section--message > .wc-operational-error-print {
+    margin-bottom: 0;
+}
+
+.wc-error-section--fix {
+    background: #f7fbfb;
+    border: 1px solid rgba(2, 128, 144, 0.18);
+    border-left: 3px solid #028090;
+    border-radius: 9px;
+    margin-top: 1.15rem;
+    padding: 0.82rem 0.9rem;
+}
+
+.wc-error-section--fix > h2 {
+    color: #004f55 !important;
+}
+
+.wc-error-section--secondary {
+    background: #fbfcfc;
+    border: 1px solid rgba(82, 99, 105, 0.12);
+    border-radius: 8px;
+    padding: 0.72rem 0.82rem;
+}
+
+.wc-error-section--secondary > h2 {
+    color: #4d6670 !important;
+}
+
+.wc-rejection-section > ol,
+.wc-error-section > ol {
+    padding-left: 1.08rem;
+}
+
+.wc-rejection-section > ol > li,
+.wc-error-section > ol > li {
+    padding-left: 0.18rem;
+}
+
+.wc-rejection-section > ol > li::marker,
+.wc-error-section > ol > li::marker {
+    color: #028090;
+    font-weight: 800;
 }
 
 .wc-rejection-section {

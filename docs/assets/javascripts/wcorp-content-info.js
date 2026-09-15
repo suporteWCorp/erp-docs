@@ -481,7 +481,12 @@
     });
 
     section.append(heading, list);
-    content.appendChild(section);
+    const footer = content.querySelector(':scope > .wc-support-footer');
+    if (footer) {
+      content.insertBefore(section, footer);
+    } else {
+      content.appendChild(section);
+    }
   }
 
   function revealPrerequisiteCard(card) {
@@ -613,7 +618,7 @@
 
   function decorateCards(infoByPath) {
     document.querySelectorAll(".wc-card").forEach((card) => {
-      const link = card.querySelector("a[href]");
+      const link = card.querySelector("a.md-button[href], a[href]:not(.headerlink)");
       const heading = card.querySelector("h2, h3, h4");
       if (!link || !heading) return;
 
@@ -630,7 +635,7 @@
       card.querySelector(".wc-card-popular")?.remove();
 
       if (isPopular) {
-        heading.appendChild(PopularIndicator(true));
+        // Indicador visual removido; popular mantido nos dados
       }
 
       card.dataset.wcContentInfoReady = "true";
@@ -650,7 +655,7 @@
       const content = document.querySelector(".md-content__inner");
       if (content) {
         content.wcorpContentInfoObserver?.disconnect();
-        content.wcorpContentInfoObserver = new MutationObserver(() => decorateCards(infoByPath));
+        content.wcorpContentInfoObserver = new MutationObserver(() => { decorateCards(infoByPath); const guides = document.querySelectorAll('.wc-card[data-wc-card-type="Guias"]'); if (guides.length > 0) { if(typeof classifyGuideCards==='function') classifyGuideCards(); if(typeof equalizeRowLevels==='function') equalizeRowLevels(); } });
         content.wcorpContentInfoObserver.observe(content, { childList: true, subtree: true });
       }
     }));
@@ -665,8 +670,77 @@
     loadContentInfoWithPopularity
   };
 
-  document.addEventListener("DOMContentLoaded", initContentInfo);
+  // Gatilho determinístico: após layout/fonte estável (load) + SPA (document$/observer)
+  window.addEventListener('load', () => {
+    requestAnimationFrame(() => {
+      if (typeof classifyGuideCards === 'function') classifyGuideCards();
+      if (typeof equalizeRowLevels === 'function') equalizeRowLevels();
+    });
+  });
+
+  const content = document.querySelector('.md-content__inner');
+  if (content && !content.wcorpContentInfoObserver) {
+    content.wcorpContentInfoObserver = new MutationObserver(() => {
+      const guides = document.querySelectorAll('.wc-card[data-wc-card-type="Guias"]');
+      if (guides.length > 0) {
+        if (typeof classifyGuideCards === 'function') classifyGuideCards();
+        if (typeof equalizeRowLevels === 'function') equalizeRowLevels();
+      }
+    });
+    content.wcorpContentInfoObserver.observe(content, { childList: true, subtree: true });
+  }
+  document.addEventListener('DOMContentLoaded', () => {
+    requestAnimationFrame(() => {
+      if (typeof classifyGuideCards === 'function') classifyGuideCards();
+      if (typeof equalizeRowLevels === 'function') equalizeRowLevels();
+    });
+    initContentInfo();
+  });
   if (window.document$ && typeof window.document$.subscribe === "function") {
     window.document$.subscribe(initContentInfo);
   }
 })();
+
+/* Classificação automática de cards de Guia por conteúdo real */
+function classifyGuideCards() {
+  document.querySelectorAll('.wc-card[data-wc-card-type="Guias"]').forEach(card => {
+    const h3 = card.querySelector('h3');
+    const p = card.querySelector('p:not(:has(> .md-button))');
+    const footer = card.querySelector('.wc-card-footer-compact');
+    const textLen = (h3 ? h3.textContent.length : 0) + (p ? p.textContent.length : 0);
+    let size = 'compact';
+    if (textLen > 120 || (footer && footer.textContent.length > 30)) size = 'medium';
+    if (textLen > 200 || (h3 && h3.textContent.length > 60)) size = 'large';
+    card.setAttribute('data-wc-card-size', size);
+  });
+}
+
+/* Equalização por linha: todos os cards da mesma linha assumem o maior nível */
+function equalizeRowLevels() {
+  document.querySelectorAll('.wc-home-grid').forEach(grid => {
+    const hasGuide = grid.querySelector('.wc-card[data-wc-card-type="Guias"]');
+    if (!hasGuide) return;
+    const cards = Array.from(grid.children).filter(c => c.classList && c.classList.contains('wc-card'));
+    if (cards.length === 0) return;
+    const levels = { compact: 1, medium: 2, large: 3 };
+    let max = 1;
+    cards.forEach(c => {
+      const s = c.getAttribute('data-wc-card-size') || 'compact';
+      if (levels[s] > max) max = levels[s];
+    });
+    const target = max === 3 ? 'large' : max === 2 ? 'medium' : 'compact';
+    cards.forEach(c => c.setAttribute('data-wc-card-size', target));
+  });
+}
+
+/* Recalcular após mudança de largura */
+window.addEventListener('resize', () => {
+  classifyGuideCards();
+  equalizeRowLevels();
+});
+
+/* Inicializar */
+document.addEventListener('DOMContentLoaded', () => {
+  classifyGuideCards();
+  equalizeRowLevels();
+});

@@ -14,6 +14,7 @@ tags:
 
 # Como alterar o NCM de um material
 
+
 ## Pré-requisitos
 
 - Material cadastrado
@@ -28,7 +29,6 @@ tags:
 `Materiais > Materiais`.
 
 ![Onde encontrar](../assets/images/guias/materiais_materiais.png)
-
 ## Demonstração em vídeo
 
 [Demonstração da alteração de NCM](../assets/videos/guias/alterar-ncm-material/alterar-ncm-material.mp4){ .wc-video-link }
@@ -45,7 +45,3 @@ tags:
 ## Avisos
 
 --8<-- "shared/avisos/validacao-fiscal.md"
-
-**Resultado esperado**
-
-O material passa a usar o NCM informado nas rotinas compatíveis.

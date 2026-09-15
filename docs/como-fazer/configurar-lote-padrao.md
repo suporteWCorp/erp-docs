@@ -13,6 +13,7 @@ tags:
 
 # Como configurar lote padrão
 
+
 ## Pré-requisitos
 
 - Material cadastrado
@@ -27,7 +28,6 @@ tags:
 `Materiais > Ajustar Inventário`.
 
 ![Onde encontrar](../assets/images/guias/caminhoconfigurarlotepadrao.png)
-
 ## Demonstração em vídeo
 
 [Demonstração de lote padrão](../assets/videos/guias/configurar-lote-padrao/lote-padrao.mp4){ .wc-video-link }
@@ -38,7 +38,3 @@ tags:
 2. Localize o material ou cadastro relacionado ao lote.
 3. Informe ou revise o lote padrão conforme o processo da empresa.
 4. Salve a configuração.
-
-**Resultado esperado**
-
-O lote padrão fica definido para uso nas rotinas compatíveis.

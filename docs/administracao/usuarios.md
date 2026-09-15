@@ -16,15 +16,32 @@ Cadastrar e consultar usuários que acessam o WCorp.
 
 </div>
 
-## Campos principais
+## Quando usar
 
-Para cadastrar um usuário é necessário preencher o Nome, Login, Senha e Grupo de Usuário.
-O restante das opções fica a critério do usuário administrador.
+<!-- TODO: adicionar Quando usar -->
+
+## Como usar
+
+### Campos principais
+
+Para cadastrar um usuário é necessário preencher o Nome, Login, Senha e Grupo de Usuário. O restante das opções fica a critério do usuário administrador.
+
+### Ações disponíveis
+
+<!-- TODO: adicionar Ações disponíveis -->
 
 ## Avisos
 
 !!! info "Dica"
     Se o usuário novo for atrelado a algum vendedor ou cliente somente selecionar algum vendedor ou cliente já cadastrado.
-	
+
 !!! caution "Cadastro autorizado"
     O cadastro do usuário sempre deve ser feito pelo usuário administrador ou mediante autorização de algum responsável
+
+## Dúvidas frequentes
+
+<!-- TODO: adicionar Dúvidas frequentes -->
+
+## Veja também
+
+<!-- TODO: adicionar Veja também -->

@@ -55,14 +55,13 @@ Antes de abrir um chamado, tenha em mãos:
 
 <ul class="wc-support-checklist">
   <li>descrição clara do problema;</li>
-  <li>rotina ou tela onde ocorreu;</li>
   <li>prints da tela ou da mensagem apresentada;</li>
   <li>caso envolva NF-e, NFC-e, NFS-e, CT-e ou MDF-e, o número ou ID do documento;</li>
   <li>quais testes ou tentativas já foram realizados;</li>
   <li>sempre que possível, como reproduzir o problema.</li>
 </ul>
 
-Isso ajuda o suporte a identificar o problema mais rapidamente.
+<div class="wc-support-note">Isso ajuda o suporte a identificar o problema mais rapidamente.</div>
 
 [Preciso de ajuda](https://wa.me/5512991583055){ .md-button .md-button--primary target="_blank" rel="noopener" }
 

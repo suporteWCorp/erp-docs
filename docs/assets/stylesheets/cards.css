@@ -31,27 +31,10 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    min-height: 184px;
+    min-height: 0;
+    align-items: stretch;
     padding: 1.18rem 1.2rem;
     transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
-}
-
-.wc-card[data-wc-card-type="Guias"] {
-    background: #ffffff;
-    border-color: rgba(125, 145, 166, 0.3);
-}
-
-.wc-card[data-wc-card-type="Manuais"] {
-    background: #ffffff;
-    border-color: rgba(125, 145, 166, 0.3);
-}
-
-.wc-card[data-wc-card-type="Referências"],
-.wc-card[data-wc-card-type="FAQ"],
-.wc-card[data-wc-card-type="Links úteis"],
-.wc-card[data-wc-card-type="Apoio"] {
-    background: #ffffff;
-    border-color: rgba(82, 99, 105, 0.24);
 }
 
 .wc-card h3 {
@@ -78,7 +61,7 @@
 .wc-card > p:has(> .md-button) {
     margin-bottom: 0;
     margin-top: auto;
-    padding-top: 1.15rem;
+    padding-top: 0.7rem;
 }
 
 .wc-card > p:has(> .md-button) .md-button {
@@ -125,14 +108,6 @@ body.wc-context-support .md-typeset .md-button:active {
 .wc-reference-grid {
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     max-width: 56rem;
-}
-
-.wc-home-grid--actions .wc-card {
-    min-height: 176px;
-}
-
-.wc-manual-category-grid .wc-card {
-    min-height: 172px;
 }
 
 .wc-manual-category-grid {
@@ -1110,12 +1085,6 @@ body.wc-context-support .md-typeset .md-button:active {
 .wcorp-errors-page .wc-home-grid {
     gap: 0.9rem;
     margin-top: 0.95rem;
-}
-
-.wcorp-errors-page .wc-card {
-    border-color: rgba(125, 145, 166, 0.22);
-    min-height: 9.5rem;
-    padding: 1rem;
 }
 
 .wcorp-errors-page .wc-card p {

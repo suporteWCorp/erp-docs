@@ -140,11 +140,11 @@
     if (headerlink) heading.appendChild(headerlink);
   }
 
-  function wrapRejectionSection(heading, modifier) {
-    if (heading.parentElement?.classList.contains("wc-rejection-section")) return;
+  function wrapArticleSection(heading, baseClass, modifier) {
+    if (heading.parentElement?.classList.contains(baseClass)) return;
 
     const section = document.createElement("section");
-    section.className = `wc-rejection-section ${modifier}`.trim();
+    section.className = `${baseClass} ${modifier}`.trim();
     heading.parentNode.insertBefore(section, heading);
 
     let node = heading;
@@ -154,6 +154,10 @@
       if (next?.nodeType === Node.ELEMENT_NODE && next.matches("h2")) break;
       node = next;
     }
+  }
+
+  function wrapRejectionSection(heading, modifier) {
+    wrapArticleSection(heading, "wc-rejection-section", modifier);
   }
 
   function initializeRejectionArticles() {
@@ -196,13 +200,34 @@
     });
   }
 
+  function initializeErrorArticles() {
+    const content = document.querySelector(".md-content__inner .wcorp-error-article-page");
+    if (!content || content.classList.contains("wc-rejection-article-page") || content.dataset.wcErrorArticleReady === "true") return;
+
+    content.dataset.wcErrorArticleReady = "true";
+
+    Array.from(content.querySelectorAll("h2")).forEach((sectionHeading) => {
+      const current = normalize(headingText(sectionHeading));
+      const modifier = current === "mensagem apresentada"
+        ? "wc-error-section--message"
+        : current === "como corrigir"
+          ? "wc-error-section--fix"
+          : /^(observacao|observacoes)$/.test(current)
+            ? "wc-error-section--secondary"
+            : "";
+      wrapArticleSection(sectionHeading, "wc-error-section", modifier);
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", initializeSolutionLists);
   document.addEventListener("DOMContentLoaded", initializeRejectionArticles);
+  document.addEventListener("DOMContentLoaded", initializeErrorArticles);
 
   if (window.document$ && typeof window.document$.subscribe === "function") {
     window.document$.subscribe(() => {
       initializeSolutionLists();
       initializeRejectionArticles();
+      initializeErrorArticles();
     });
   }
 })();

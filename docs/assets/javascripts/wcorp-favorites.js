@@ -268,16 +268,16 @@
 
     const version = document.createElement("span");
     version.className = "wc-header-version";
-    version.textContent = "Build 07.2026";
-    version.title = "Build da documentação: julho de 2026";
-    version.setAttribute("aria-label", "Build da documentação, julho de 2026");
+    version.textContent = "v1.0";
+    version.title = "Versão da documentação: v1.0";
+    version.setAttribute("aria-label", "Versão da documentação, v1.0");
 
     const panel = document.createElement("div");
     panel.className = "wc-favorites-panel";
     panel.hidden = true;
     const panelHeading = document.createElement("div");
     panelHeading.className = "wc-favorites-panel__heading";
-    panelHeading.innerHTML = `<strong>Favoritos recentes</strong><a class="wc-favorites-panel__all" href="${new URL("favoritos/", rootUrl()).href}">Ver todos</a>`;
+    panelHeading.innerHTML = `<strong>Favoritos recentes</strong><a class="wc-favorites-panel__all" href="${new URL("favoritos/", rootUrl()).href}">Ver todos <span aria-hidden="true">→</span></a>`;
     const panelContent = document.createElement("div");
     panelContent.className = "wc-favorites-panel__content";
     panel.append(panelHeading, panelContent);

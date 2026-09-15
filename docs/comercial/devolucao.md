@@ -11,33 +11,38 @@ Registrar e acompanhar devoluções vinculadas ao fluxo comercial.
 
 `Comercial > Devolução`.
 
-## Passo a passo
+## Quando usar
+
+<!-- TODO: adicionar Quando usar -->
+
+## Como usar
+
+### Consulta
 
 1. Acesse a aba **Comercial**.
 2. Clique em **Devolução**.
 3. Preencha ou consulte as informações necessárias.
 4. Salve, confirme ou finalize a operação conforme o fluxo da tela.
 
-## Campos principais
+### Campos principais
 
-| Campo | Descrição | Obrigatório | Observações |
-| --- | --- | --- | --- |
-| A definir | A definir | A definir | A definir |
+<!-- TODO: adicionar Campos principais -->
 
-### Resultado esperado
+### Ações disponíveis
 
-Descreva aqui o que deve acontecer quando a rotina for concluída corretamente.
+<!-- TODO: adicionar Ações disponíveis -->
 
 ## Avisos
 
 Use esta seção para registrar:
-
 - Mensagens de erro recorrentes.
 - Dados necessários para abertura de chamado.
 - Como identificar se é dúvida de uso, erro de cadastro, permissão ou possível bug.
 
 ## Dúvidas frequentes
 
-| Dúvida | Orientação |
-| --- | --- |
-| A definir | A definir |
+<!-- TODO: adicionar Dúvidas frequentes -->
+
+## Veja também
+
+<!-- TODO: adicionar Veja também -->

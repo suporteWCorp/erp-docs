@@ -281,3 +281,61 @@
         padding: 0 0.48rem;
     }
 }
+
+/* Refinamento visual do popover Favoritos recentes */
+.wc-favorites-panel__heading strong {
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+.wc-favorites-panel__all {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #006b73;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+    padding: 0.15rem 0.35rem;
+    border-radius: 4px;
+    transition: background 120ms ease;
+}
+.wc-favorites-panel__all:hover,
+.wc-favorites-panel__all:focus-visible {
+    background: rgba(2, 128, 144, 0.08);
+    text-decoration: none;
+}
+.wc-favorites-panel__all span[aria-hidden="true"] {
+    font-size: 0.8rem;
+    transition: transform 120ms ease;
+}
+.wc-favorites-panel__all:hover span[aria-hidden="true"] {
+    transform: translateX(1.5px);
+}
+
+.wc-favorites-list li {
+    border-bottom: 1px solid rgba(2, 128, 144, 0.08);
+    padding: 0.05rem 0;
+}
+.wc-favorites-list li:last-child {
+    border-bottom: 0;
+}
+.wc-favorites-list a {
+    font-size: 0.78rem;
+    padding: 0.35rem 0;
+    border-radius: 4px;
+    transition: background 100ms ease, color 100ms ease;
+}
+.wc-favorites-list a:hover,
+.wc-favorites-list a:focus-visible {
+    background: rgba(2, 128, 144, 0.06);
+    color: #005f66;
+    text-decoration: none;
+}
+
+.wc-favorites-panel {
+    box-shadow: 0 14px 32px rgba(0, 48, 52, 0.14), 0 2px 6px rgba(0,48,52,0.08);
+    border-radius: 10px;
+    padding: 0.8rem;
+}

@@ -12,6 +12,7 @@ tags:
 
 # Como configurar um Grupo de Usuário
 
+
 ## Pré-requisitos
 
 - Usuário autorizado a administrar acessos
@@ -25,7 +26,6 @@ tags:
 `Administração > Grupo Usuários`.
 
 ![Onde encontrar](../assets/images/guias/caminhocadastrargrupousuario.png)
-
 ## Demonstração em vídeo
 
 [Demonstração da configuração de grupo de usuário](../assets/videos/adm__grupo_usuario.mp4){ .wc-video-link }

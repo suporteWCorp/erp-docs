@@ -10,7 +10,7 @@ theme:
   custom_dir: overrides
   language: pt-BR
   logo: assets/wcorp-logo-header-display.png
-  favicon: assets/wcorp-logo-header.png
+  favicon: assets/wcorp-favicon.png
   palette:
     - scheme: default
       primary: teal

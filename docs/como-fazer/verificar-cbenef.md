@@ -14,6 +14,7 @@ tags:
 
 # Como verificar CBenef
 
+
 ## Pré-requisitos
 
 - Nota fiscal ou regra fiscal a ser conferida
@@ -28,14 +29,13 @@ tags:
 `Administração > Natureza de Operação`.
 
 ![Onde encontrar](../assets/images/guias/caminhocadastronaturezaop.png)
-
 ## Demonstração em vídeo
 
 [Demonstração da verificação de CBenef](../assets/videos/guias/verificar-cbenef/verificar-cbenef.mp4){ .wc-video-link }
 
 ## Como fazer
 
-1. Identifique a nota ou operação que precisa de conferência fiscal.
+1. Acesse Administração > Natureza de Operação.
 2. Localize a regra fiscal ou cadastro relacionado.
 3. Verifique o código de benefício fiscal informado.
 4. Confira se o CST e o CBenef utilizados estão coerentes.
@@ -45,6 +45,3 @@ tags:
 
 --8<-- "shared/avisos/validacao-fiscal.md"
 
-**Resultado esperado**
-
-O CBenef fica conferido antes de nova emissão ou transmissão.

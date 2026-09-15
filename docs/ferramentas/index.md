@@ -1,4 +1,4 @@
-# Ferramentas
+# Ferramentas {.wc-listing-title}
 
 Utilitários rápidos para consultar relatórios, analisar arquivos e apoiar processos do WCorp.
 { .wc-listing-intro }

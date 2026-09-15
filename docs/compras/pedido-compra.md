@@ -11,7 +11,13 @@ Criar, consultar ou acompanhar pedidos de compra.
 
 `Compras > Pedido de Compra`.
 
-## Passo a passo
+## Quando usar
+
+<!-- TODO: adicionar Quando usar -->
+
+## Como usar
+
+### Consulta
 
 1. Acesse a aba **Compras**.
 2. Clique em **Pedido de Compra**.
@@ -19,15 +25,22 @@ Criar, consultar ou acompanhar pedidos de compra.
 4. Confira as informações antes de salvar, confirmar ou finalizar.
 5. Finalize conforme a ação disponível na tela.
 
-## Campos principais
+### Campos principais
 
-| Campo | Descrição | Observações |
-| --- | --- | --- |
-| A definir | A definir | A definir |
+<!-- TODO: adicionar Campos principais -->
+
+### Ações disponíveis
+
+<!-- TODO: adicionar Ações disponíveis -->
+
+## Avisos
+
+<!-- TODO: adicionar Avisos -->
 
 ## Dúvidas frequentes
 
-| Dúvida | Orientação |
-| --- | --- |
-| Quando devo usar esta rotina? | Use quando o processo estiver relacionado a **Pedido de Compra**. |
-| O que devo conferir antes de salvar? | Confira os dados obrigatórios, filtros e mensagens exibidas pelo sistema. |
+<!-- TODO: adicionar Dúvidas frequentes -->
+
+## Veja também
+
+<!-- TODO: adicionar Veja também -->

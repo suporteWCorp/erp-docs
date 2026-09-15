@@ -11,6 +11,7 @@ search:
 
 # Como criar um pedido de compra
 
+
 ## Pré-requisitos
 
 <div class="wc-prereq-list" markdown>
@@ -30,7 +31,6 @@ search:
 ## Caminho
 
 `Compras > Pedido de Compra`.
-
 ## Como fazer
 
 1. Acesse **Compras > Pedido de Compra**.

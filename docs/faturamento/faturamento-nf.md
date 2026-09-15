@@ -2,72 +2,61 @@
 
 ## Objetivo
 
-A tela **Nota Fiscal** é utilizada para emitir Notas Fiscais de saída no WCorp, de forma manual ou a partir de um **Pedido, Ordem de Serviço ou Pedido de Compra**.
+A tela **Nota Fiscal** permite emitir NF-e de saída no WCorp de forma manual ou a partir de um **Pedido**, uma **Ordem de Serviço** ou um **Pedido de Compra**.
 
 ## Caminho
 
-`Faturamento > Nota Fiscal`
+`Faturamento > Nota Fiscal`.
 
-Ao iniciar uma nova Nota Fiscal, o sistema permite escolher entre:
+## Quando usar
 
+- Emitir uma NF-e de saída manualmente.
+- Gerar uma NF-e a partir de um pedido, uma ordem de serviço ou um pedido de compra.
+- Consultar as notas fiscais cadastradas e acompanhar seu status.
+
+## Como usar
+
+### Tipo de documento
+
+Ao iniciar uma nova NF-e, o sistema permite escolher entre:
 - **Pedido / Ordem de Serviço / Pedido de Compra**
 - **Manualmente**
 
-## Formas de emissão
+#### Pedido / Ordem de Serviço / Pedido de Compra
 
-### Pedido / Ordem de Serviço / Pedido de Compra
+O WCorp utiliza os dados do documento de origem para montar a NF-e e carregar as informações vinculadas ao pedido, à ordem de serviço ou ao pedido de compra.
 
-Nesta opção, o WCorp utiliza os dados do documento de origem para montar a Nota Fiscal, trazendo as informações vinculadas ao pedido, ordem de serviço ou pedido de compra.
+#### Manualmente
 
-### Manualmente
+Na emissão manual, informe os dados da NF-e diretamente no cadastro. Para uma emissão manual básica, são obrigatórios: **Natureza de Operação**, **Cliente** e **Material**. Quando necessário, informe também as parcelas e as demais informações disponíveis na tela.
 
-Na emissão manual, os dados da Nota Fiscal são informados diretamente no cadastro.
+### Campos e áreas principais
 
-Para uma emissão manual básica, são obrigatórios:
-
+- **Status**
 - **Natureza de Operação**
-- **Cliente**
-- **Material**
+- **Tipo de Operação Presencial**
+- **Meio de Pagamento**
+- **Operação Destinatário**
+- **Número**
+- **Série**
+- **Data/Hora de Emissão**
+- **Data/Hora de Saída**
+- **Dados do Destinatário**
+- **Endereço do Destinatário**
 
-Quando necessário, também podem ser informadas parcelas e outras informações disponíveis na Nota Fiscal.
+Abas: **Materiais**, **Endereço de Envio**, **Transportador**, **Impostos**, **Parcelas**, **NFe Referenciada**.
 
-## Campos e áreas principais
-
-A tela apresenta informações como:
-
-- Status
-- Natureza de Operação
-- Tipo de Operação Presencial
-- Meio de Pagamento
-- Operação Destinatário
-- Número
-- Série
-- Data/Hora de Emissão
-- Data/Hora de Saída
-- Dados do Destinatário
-- Endereço do Destinatário
-
-O cadastro também possui as abas:
-
-- **Materiais**
-- **Endereço de Envio**
-- **Transportador**
-- **Impostos**
-- **Parcelas**
-- **NFe Referenciada**
-
-## Cálculo automático da Nota Fiscal
+### Cálculo automático da Nota Fiscal
 
 A opção **Ativar Cálculo da Nota Fiscal Automaticamente** controla o cálculo automático da Nota Fiscal.
+- Marcada: o sistema calcula os impostos automaticamente nas NF-e criadas manualmente e nas geradas a partir de pedido, ordem de serviço ou pedido de compra.
+- Desmarcada: o cálculo automático não é realizado.
 
-Quando a opção está marcada, o cálculo de impostos é realizado automaticamente pelo sistema tanto nas Notas Fiscais criadas manualmente quanto nas geradas a partir de Pedido, Ordem de Serviço ou Pedido de Compra.
+### Consulta e ações disponíveis
 
-Quando a opção está desmarcada, o cálculo automático não é realizado.
+Na parte superior da tela, consulte as notas fiscais cadastradas e acompanhe informações como número, data de emissão, destinatário, CNPJ, total e status.
 
-## Ações da Nota Fiscal
-
-Conforme a situação da Nota Fiscal, a tela disponibiliza ações como:
-
+Conforme a situação da NF-e, a tela disponibiliza ações como:
 - **Transmitir para o Sefaz**
 - **Cancelar NFe**
 - **Pedidos / OS / Pedidos de Compra da NFe**
@@ -75,7 +64,13 @@ Conforme a situação da Nota Fiscal, a tela disponibiliza ações como:
 - **Salvar XML da NFe**
 - **Pré-Visualizar DANFE**
 
-Na parte superior da tela também é possível consultar as Notas Fiscais cadastradas e acompanhar informações como número, data de emissão, destinatário, CNPJ, total e status.
+## Avisos
+
+<!-- TODO: adicionar Avisos -->
+
+## Dúvidas frequentes
+
+<!-- TODO: adicionar Dúvidas frequentes -->
 
 ## Veja também
 

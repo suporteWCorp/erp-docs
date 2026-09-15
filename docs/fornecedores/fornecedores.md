@@ -11,7 +11,13 @@ Cadastrar, consultar ou alterar fornecedores usados em compras, entradas e rotin
 
 `Fornecedores > Fornecedores`.
 
-## Passo a passo
+## Quando usar
+
+<!-- TODO: adicionar Quando usar -->
+
+## Como usar
+
+### Consulta
 
 1. Acesse a aba **Fornecedores**.
 2. Clique em **Fornecedores**.
@@ -19,15 +25,22 @@ Cadastrar, consultar ou alterar fornecedores usados em compras, entradas e rotin
 4. Confira as informações antes de salvar ou confirmar.
 5. Finalize conforme a ação disponível na tela.
 
-## Campos principais
+### Campos principais
 
-| Campo | Descrição | Observações |
-| --- | --- | --- |
-| A definir | A definir | A definir |
+<!-- TODO: adicionar Campos principais -->
+
+### Ações disponíveis
+
+<!-- TODO: adicionar Ações disponíveis -->
+
+## Avisos
+
+<!-- TODO: adicionar Avisos -->
 
 ## Dúvidas frequentes
 
-| Dúvida | Orientação |
-| --- | --- |
-| Quando devo usar esta rotina? | Use quando o processo estiver relacionado a **Fornecedores**. |
-| O que devo conferir antes de salvar? | Confira documento, cadastro, categoria e informações obrigatórias da tela. |
+<!-- TODO: adicionar Dúvidas frequentes -->
+
+## Veja também
+
+<!-- TODO: adicionar Veja também -->

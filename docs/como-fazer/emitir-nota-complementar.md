@@ -11,6 +11,7 @@ search:
 
 # Como emitir uma nota complementar
 
+
 ## Pré-requisitos
 
 <div class="wc-prereq-list" markdown>
@@ -29,7 +30,6 @@ search:
 ## Caminho
 
 `Faturamento > Nota Fiscal`.
-
 ## Como fazer
 
 1. Acesse **Faturamento > Nota Fiscal**.

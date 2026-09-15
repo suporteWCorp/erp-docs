@@ -36,10 +36,6 @@ tags:
 5. Leia a mensagem de confirmação apresentada pelo WCorp.
 6. Confirme a desativação se tiver certeza da ação.
 
-**Resultado esperado**
-
-O registro selecionado é desativado conforme as regras da tela e deixa de ficar disponível para uso normal no processo.
-
 !!! warning "Atenção"
     A ação **Desativar** depende da tela, da situação do registro e das permissões do usuário. Antes de confirmar, verifique se o registro selecionado é o correto.
 

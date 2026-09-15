@@ -14,6 +14,7 @@ tags:
 
 # Como verificar usuários logados
 
+
 ## Pré-requisitos
 
 - Acesso administrativo liberado
@@ -28,18 +29,14 @@ tags:
 `Administração > Usuários`.
 
 ![Onde encontrar](../assets/images/guias/caminhoverificarusuarioslogados.png)
-
 ## Demonstração em vídeo
 
 [Demonstração da consulta de usuários e log](../assets/videos/guias/verificar-usuarios-log/verificar-usuarios-log.mp4){ .wc-video-link }
 
 ## Como fazer
 
-1. Acesse a rotina administrativa relacionada a usuários ou log.
-2. Localize o usuário, evento ou registro que será conferido.
+1. Acesse Administração > Empresas.
+2. Visualize os usuários que estão logados.
 3. Consulte as informações exibidas.
 4. Use o resultado para análise administrativa ou suporte.
 
-**Resultado esperado**
-
-As informações de usuário ou log ficam disponíveis para conferência.

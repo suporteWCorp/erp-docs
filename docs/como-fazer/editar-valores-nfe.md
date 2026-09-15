@@ -17,6 +17,7 @@ tags:
 
 # Como editar valores manualmente em uma NF-e
 
+
 ## Pré-requisitos
 
 - NF-e localizada na tela **Nota Fiscal**
@@ -32,7 +33,6 @@ tags:
 `Faturamento > Nota Fiscal`.
 
 ![Onde encontrar](../assets/images/guias/faturamento_emitir_nfe.png)
-
 ## Demonstração em vídeo
 
 [Demonstração da edição manual de valores da NF-e](../assets/videos/guias/editar-valores-nfe/editar-valores-nfe.mp4){ .wc-video-link }
@@ -49,10 +49,6 @@ tags:
 8. Acesse a aba **Impostos** da NF-e.
 9. Confira os valores e totalizadores apresentados, como bases, impostos, frete, desconto, total dos produtos e total da nota.
 10. Clique em **Salvar (F2)** depois de concluir a revisão.
-
-**Resultado esperado**
-
-A NF-e fica salva com os valores informados manualmente, conforme os dados revisados na tela.
 
 !!! warning "Atenção"
     A edição manual de valores fiscais deve ser feita somente quando os dados forem conhecidos e validados. Se houver dúvida sobre impostos, CFOP, NCM ou totalizadores, confirme com o responsável fiscal antes de salvar.

@@ -46,6 +46,3 @@ tags:
 
 --8<-- "shared/avisos/validacao-fiscal.md"
 
-**Resultado esperado**
-
-O retorno do Emissor fica visível para análise e correção quando necessário.

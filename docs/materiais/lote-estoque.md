@@ -16,7 +16,13 @@ Cadastrar e consultar lotes de estoque vinculados aos materiais.
 
 </div>
 
-## Campos principais
+## Quando usar
+
+<!-- TODO: adicionar Quando usar -->
+
+## Como usar
+
+### Campos principais
 
 Para cadastrar um Lote novo é necessário preencher as informações obrigatórias.
 Primeiro selecionar o material, após isso selecionar o local de armazenagem e informar o nome do Lote.
@@ -26,7 +32,19 @@ Depois de configurado é possível selecionar o lote referente ao pedido, exempl
 O pedido 150 com material SACOLA PLASTICA com código 25 utiliza o lote 111A //
 O pedido 151 com material SACOLA PLASTICA com código 25 utiliza o lote 222B //
 
+### Ações disponíveis
+
+<!-- TODO: adicionar Ações disponíveis -->
+
 ## Avisos
 
 !!! info "Lote padrão"
     Caso se tratar de um lote padrão, marcar a caixa 'Lote padrão do Material'
+
+## Dúvidas frequentes
+
+<!-- TODO: adicionar Dúvidas frequentes -->
+
+## Veja também
+
+<!-- TODO: adicionar Veja também -->

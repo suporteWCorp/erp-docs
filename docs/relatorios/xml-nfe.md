@@ -8,7 +8,13 @@ Consultar ou exportar XMLs de NF-e.
 
 `Relatórios > XML(s) NFe`.
 
-## Passo a passo
+## Quando usar
+
+<!-- TODO: adicionar Quando usar -->
+
+## Como usar
+
+### Consulta
 
 1. Acesse a aba **Relatórios**.
 2. Clique em **XML(s) NFe**.
@@ -16,15 +22,22 @@ Consultar ou exportar XMLs de NF-e.
 4. Confira as informações antes de salvar, confirmar ou finalizar.
 5. Finalize conforme a ação disponível na tela.
 
-## Campos principais
+### Campos principais
 
-| Campo | Descrição | Observações |
-| --- | --- | --- |
-| A definir | A definir | A definir |
+<!-- TODO: adicionar Campos principais -->
+
+### Ações disponíveis
+
+<!-- TODO: adicionar Ações disponíveis -->
+
+## Avisos
+
+<!-- TODO: adicionar Avisos -->
 
 ## Dúvidas frequentes
 
-| Dúvida | Orientação |
-| --- | --- |
-| Quando devo usar esta rotina? | Use quando o processo estiver relacionado a **XML(s) NFe**. |
-| O que devo conferir antes de salvar? | Confira os dados obrigatórios, filtros e mensagens exibidas pelo sistema. |
+<!-- TODO: adicionar Dúvidas frequentes -->
+
+## Veja também
+
+<!-- TODO: adicionar Veja também -->

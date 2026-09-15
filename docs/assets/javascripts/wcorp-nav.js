@@ -37,6 +37,8 @@
     const tools = /\/ferramentas$/.test(cleanPath) || cleanPath.includes("/ferramentas/");
     const guideIndex = /\/como-fazer$/.test(cleanPath);
     const guide = cleanPath.includes("/como-fazer/") || guideIndex;
+    const reference = cleanPath.includes("/referencia") || cleanPath === "/referencia" || cleanPath === "/referencia/";
+    const referenceIndex = cleanPath === "/referencia" || cleanPath === "/referencia/";
     document.documentElement.classList.toggle("wc-route-home", home);
     document.documentElement.classList.toggle("wc-route-guide", guide);
     document.documentElement.classList.toggle("wc-route-guide-index", guideIndex);
@@ -44,10 +46,14 @@
     document.documentElement.classList.toggle("wc-route-manual-index", manualIndex);
     document.documentElement.classList.toggle("wc-route-faq", faq);
     document.documentElement.classList.toggle("wc-route-tools", tools);
+    document.documentElement.classList.toggle("wc-route-reference", reference);
     document.body?.classList.toggle("wc-home-index", home);
     document.body?.classList.toggle("wc-guide-index", guideIndex);
     document.body?.classList.toggle("wc-manual-tabs", manual);
     document.body?.classList.toggle("wc-manual-index", manualIndex);
+    const toolsIndex = cleanPath === "/ferramentas" || cleanPath === "/ferramentas/";
+    document.body?.classList.toggle("wc-reference-index", referenceIndex);
+    document.body?.classList.toggle("wc-tools-index", toolsIndex);
     document.body?.classList.toggle("wc-faq-page", faq);
     document.body?.classList.toggle("wc-faq-article-page", faqArticle);
     document.body?.classList.toggle("wc-operational-error-article-page", operationalErrorArticle);
@@ -121,7 +127,7 @@
         event.stopImmediatePropagation();
         document.documentElement.classList.remove("wc-ui-loading", "wcorp-preparing", "wc-route-transition", "wc-route-home", "wc-route-guide", "wc-route-guide-index", "wc-route-manual", "wc-route-manual-index", "wc-route-faq", "wc-route-tools");
         document.documentElement.classList.add("wcorp-ready");
-        document.body?.classList.remove("wc-home-index", "wc-guide-index", "wc-manual-tabs", "wc-manual-index", "wc-faq-page", "wc-faq-article-page", "wc-operational-error-article-page", "wc-technical-issue-article-page");
+        document.body?.classList.remove("wc-home-index", "wc-guide-index", "wc-manual-tabs", "wc-manual-index", "wc-reference-index", "wc-tools-index", "wc-faq-page", "wc-faq-article-page", "wc-operational-error-article-page", "wc-technical-issue-article-page");
         document.querySelector(".wc-manual-subnav")?.remove();
         if (isSamePage(root) || isEquivalentPage(root)) {
           updateRouteClasses(root.href);
@@ -299,6 +305,7 @@
 
     document.body.classList.add("wc-manual-tabs");
     tabsList.classList.add("wc-erp-tabs");
+    tabsList.closest("nav").setAttribute("aria-label", "Módulos dos Manuais");
 
     if (!tabsList.dataset.wcErpMenu || tabsList.querySelectorAll("[data-wc-module]").length !== modules.length) {
       const fragment = document.createDocumentFragment();
@@ -327,11 +334,24 @@
       link.classList.toggle("md-tabs__link--active", isActive);
 
       if (isActive) {
-        link.setAttribute("aria-current", "page");
+        link.setAttribute("aria-current", "location");
       } else {
         link.removeAttribute("aria-current");
       }
     });
+    revealActiveManualLink(tabsList);
+  }
+
+  function revealActiveManualLink(container) {
+    const active = container.querySelector("[aria-current]");
+    if (!active || !container.clientWidth) return;
+
+    const bounds = container.getBoundingClientRect();
+    const linkBounds = active.getBoundingClientRect();
+    if (linkBounds.left < bounds.left || linkBounds.right > bounds.right) {
+      container.scrollLeft += linkBounds.left - bounds.left -
+        (container.clientWidth - linkBounds.width) / 2;
+    }
   }
 
   function normalizedPagePath(url) {
@@ -433,6 +453,7 @@
     if (!existing) {
       tabs.insertAdjacentElement("afterend", subnav);
     }
+    revealActiveManualLink(inner);
   }
 
   function addSupportFooter() {
@@ -959,13 +980,12 @@
   }
 
   watchInternalNavigation();
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initWcorpUi);
-  } else {
-    initWcorpUi();
-  }
-
+  // O observable do Material já emite o documento inicial e as navegações.
   if (window.document$ && typeof window.document$.subscribe === "function") {
     window.document$.subscribe(initWcorpUi);
+  } else if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initWcorpUi, { once: true });
+  } else {
+    initWcorpUi();
   }
 })();

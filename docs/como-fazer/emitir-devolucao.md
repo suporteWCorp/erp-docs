@@ -11,6 +11,7 @@ search:
 
 # Como emitir uma devolução
 
+
 ## Pré-requisitos
 
 <div class="wc-prereq-list" markdown>
@@ -32,10 +33,9 @@ search:
 ## Caminho
 
 `Comercial > Devolução ou Faturamento > Nota Fiscal`.
-
 ## Como fazer
 
-1. Localize o documento fiscal original.
+1. Acesse Comercial > Devolução ou Faturamento.
 2. Acesse a rotina de devolução ou nota fiscal.
 3. Informe participante, itens e quantidades devolvidas.
 4. Selecione a natureza de operação de devolução.
