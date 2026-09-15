@@ -1,0 +1,134 @@
+{
+  "version": "1.0.0",
+  "purpose": "Vocabulário semântico do Assistente WCorp. As rotas apenas influenciam o ranking entre páginas públicas; não tornam páginas ocultas elegíveis.",
+  "actions": [
+    {
+      "id": "desativar",
+      "terms": [
+        "desativar",
+        "desativo",
+        "desativa",
+        "desativacao",
+        "desativação"
+      ],
+      "operational": true,
+      "conflicts": [
+        "emitir",
+        "cancelar",
+        "inutilizar",
+        "entrada",
+        "devolver",
+        "transferir"
+      ]
+    },
+    {
+      "id": "inutilizar",
+      "terms": [
+        "inutilizar",
+        "inutilizo",
+        "inutilizacao",
+        "inutilização"
+      ],
+      "operational": true,
+      "conflicts": [
+        "emitir",
+        "cancelar",
+        "desativar",
+        "entrada"
+      ]
+    },
+    {
+      "id": "transferir",
+      "terms": [
+        "transferir",
+        "transfiro",
+        "transferencia",
+        "transferência",
+        "mover de um estoque para outro"
+      ],
+      "operational": true,
+      "conflicts": [
+        "entrada",
+        "emitir",
+        "cancelar",
+        "desativar"
+      ]
+    },
+    {
+      "id": "devolver",
+      "terms": [
+        "devolver",
+        "devolucao",
+        "devolução",
+        "fazer devolucao",
+        "fazer devolução"
+      ],
+      "operational": true,
+      "conflicts": [
+        "emitir",
+        "cancelar",
+        "desativar"
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "nota complementar",
+      "terms": [
+        "nota complementar",
+        "nfe complementar",
+        "nf complementar"
+      ]
+    },
+    {
+      "id": "lote padrão",
+      "terms": [
+        "lote padrao",
+        "lote padrão"
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "action": "desativar",
+      "object": "nota fiscal",
+      "path": "como-fazer/desativar-componentes",
+      "score": 720
+    },
+    {
+      "action": "cancelar",
+      "object": "pedido",
+      "path": "comercial/pedidos",
+      "score": 680
+    },
+    {
+      "action": "consultar",
+      "object": "estoque",
+      "path": "como-fazer/consultar-estoque",
+      "score": 720
+    },
+    {
+      "action": "inutilizar",
+      "object": "nota fiscal",
+      "path": "como-fazer/inutilizar-nfe",
+      "score": 720
+    },
+    {
+      "action": "transferir",
+      "object": "material",
+      "path": "materiais/lote-estoque",
+      "score": 680
+    },
+    {
+      "action": "transferir",
+      "object": "estoque",
+      "path": "materiais/lote-estoque",
+      "score": 680
+    },
+    {
+      "action": "devolver",
+      "path": "comercial/devolucao",
+      "score": 660
+    }
+  ]
+}

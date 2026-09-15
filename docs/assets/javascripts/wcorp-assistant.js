@@ -8,8 +8,11 @@
   const MIN_ASSISTANT_RESULT_SCORE = 35;
   const MIN_ASSISTANT_RELATED_SCORE = 70;
   const MAX_ASSISTANT_RELATED_RESULTS = 2;
+  const MAX_ASSISTANT_RAG_SOURCES = 2;
+  const MAX_ASSISTANT_RAG_PRIMARY_CHARS = 6500;
+  const MAX_ASSISTANT_RAG_RELATED_CHARS = 3500;
   const assistantDebugVersion =
-    "dom-audit-2026-08-30";
+    "rag-v13-glossario-2026-09-15";
 
   const assistantRectSnapshot = (element) => {
     if (!element) {
@@ -235,6 +238,13 @@
     );
   }
 
+  let assistantGlossary = {
+    actions: [],
+    objects: [],
+    routes: []
+  };
+  let assistantGlossaryPromise = null;
+
   const manualPrefixes = new Set([
     "administracao",
     "colaboradores",
@@ -348,7 +358,10 @@
     },
     {
       id: "cancelar",
-      terms: ["cancelar", "cancelamento", "cancela", "inutilizar", "inutilizacao", "inutilização"]
+      terms: [
+        "cancelar", "cancelamento", "cancela", "cancelo", "cancelei",
+        "inutilizar", "inutilizacao", "inutilização"
+      ]
     },
     {
       id: "cadastrar",
@@ -356,7 +369,18 @@
     },
     {
       id: "configurar",
-      terms: ["configurar", "configuracao", "configuração", "ajustar", "parametrizar", "definir"]
+      terms: [
+        "configurar", "configuracao", "configuração",
+        "ajustar", "ajusto", "parametrizar", "definir",
+        "alterar", "altero", "mudar", "mudo", "trocar", "troco"
+      ]
+    },
+    {
+      id: "entrada",
+      terms: [
+        "entrada", "dar entrada", "dou entrada",
+        "registrar entrada", "realizar entrada", "receber material"
+      ]
     },
     {
       id: "corrigir",
@@ -382,6 +406,15 @@
       terms: ["cliente", "clientes"]
     },
     {
+      id: "pedido de compra",
+      terms: [
+        "pedido de compra",
+        "pedido compra",
+        "pedidos de compra",
+        "pedidos compra"
+      ]
+    },
+    {
       id: "pedido",
       terms: ["pedido", "pedidos", "pedido venda", "pedido de venda"]
     },
@@ -400,6 +433,10 @@
     {
       id: "inutilização",
       terms: ["inutilizacao", "inutilização", "inutilizar"]
+    },
+    {
+      id: "ncm",
+      terms: ["ncm", "ncm do material", "ncm do produto"]
     },
     {
       id: "material",
@@ -489,6 +526,7 @@
   let assistantPublishedManualPaths = null;
   let assistantPublishedGuidePaths = null;
   let assistantPublishedGuidePromise = null;
+  let assistantPublishedNavigationPaths = null;
 
   function rootUrl() {
     const logo = document.querySelector(".md-header__button.md-logo[href]");
@@ -863,6 +901,58 @@
     ).href;
   }
 
+  function getAssistantGlossaryUrl() {
+    return new URL(
+      "assets/data/assistant-glossary.json",
+      rootUrl()
+    ).href;
+  }
+
+  function loadAssistantGlossary() {
+    if (assistantGlossaryPromise) {
+      return assistantGlossaryPromise;
+    }
+
+    assistantGlossaryPromise = fetch(
+      getAssistantGlossaryUrl(),
+      { credentials: "same-origin" }
+    )
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(
+            `Falha ao carregar glossário: ${response.status}`
+          );
+        }
+
+        return response.json();
+      })
+      .then((data) => {
+        assistantGlossary = {
+          actions: Array.isArray(data?.actions)
+            ? data.actions
+            : [],
+          objects: Array.isArray(data?.objects)
+            ? data.objects
+            : [],
+          routes: Array.isArray(data?.routes)
+            ? data.routes
+            : []
+        };
+
+        return assistantGlossary;
+      })
+      .catch((error) => {
+        console.warn(
+          "Assistente WCorp: glossário não pôde ser carregado; usando regras internas.",
+          error
+        );
+
+        return assistantGlossary;
+      });
+
+    return assistantGlossaryPromise;
+  }
+
   async function loadSearchIndex() {
     if (assistantSearchPromise) {
       return assistantSearchPromise;
@@ -1141,6 +1231,55 @@
     }, 0);
   }
 
+  function assistantGlossaryRouteScore(doc, analysis, intent) {
+    const semantic = analysis?.semantic || {};
+    const pageKey = assistantPageKey(doc.location);
+
+    return (assistantGlossary.routes || [])
+      .reduce((bestScore, route) => {
+        if (
+          route.action &&
+          route.action !== semantic.action
+        ) {
+          return bestScore;
+        }
+
+        if (
+          route.object &&
+          route.object !== semantic.object
+        ) {
+          return bestScore;
+        }
+
+        if (
+          Array.isArray(route.intents) &&
+          route.intents.length &&
+          !route.intents.includes(intent)
+        ) {
+          return bestScore;
+        }
+
+        const path = normalizeAssistantPath(
+          route.path || ""
+        ).replace(/^\/+|\/+$/g, "");
+
+        if (!path) {
+          return bestScore;
+        }
+
+        const matches =
+          pageKey === path ||
+          pageKey.startsWith(`${path}/`);
+
+        return matches
+          ? Math.max(
+              bestScore,
+              Number(route.score) || 500
+            )
+          : bestScore;
+      }, 0);
+  }
+
   function assistantDefaultPageScore(doc, analysis, intent) {
     const words = new Set(analysis.words);
     const pageKey = assistantPageKey(doc.location);
@@ -1164,6 +1303,72 @@
     }
 
     if (
+      hasAny(["corrigir", "correcao", "correção"]) &&
+      hasAny(["nota", "nfe", "nf"]) &&
+      !hasAny(["valor", "valores", "imposto", "impostos", "editar", "edicao", "edição"]) &&
+      (
+        pageKey === "como-fazer/emitir-carta-correcao" ||
+        pageKey.startsWith("como-fazer/emitir-carta-correcao/")
+      )
+    ) {
+      return 520;
+    }
+
+    if (
+      hasAny(["cancelar", "cancelamento", "cancela", "cancelo", "cancelei"]) &&
+      hasAny(["nota", "nfe", "nf"]) &&
+      (
+        pageKey === "como-fazer/cancelar-nfe" ||
+        pageKey.startsWith("como-fazer/cancelar-nfe/")
+      )
+    ) {
+      return 520;
+    }
+
+    if (
+      hasAny(["ncm"]) &&
+      (
+        pageKey === "como-fazer/alterar-ncm-material" ||
+        pageKey.startsWith("como-fazer/alterar-ncm-material/")
+      )
+    ) {
+      return 520;
+    }
+
+    if (
+      hasAny(["entrada"]) &&
+      hasAny(["material", "materiais", "produto", "produtos"]) &&
+      (
+        pageKey === "como-fazer/registrar-entrada-material" ||
+        pageKey.startsWith("como-fazer/registrar-entrada-material/")
+      )
+    ) {
+      return 520;
+    }
+
+    if (
+      hasAny(["pedido", "pedidos"]) &&
+      hasAny(["compra", "compras"]) &&
+      (
+        pageKey === "compras/pedido-compra" ||
+        pageKey.startsWith("compras/pedido-compra/")
+      )
+    ) {
+      return 620;
+    }
+
+    if (
+      hasAny(["entrada"]) &&
+      hasAny(["nota", "nfe", "nf"]) &&
+      (
+        pageKey === "faturamento/entrada-nota-fiscal" ||
+        pageKey.startsWith("faturamento/entrada-nota-fiscal/")
+      )
+    ) {
+      return 620;
+    }
+
+    if (
       /\b(quem alterou|usuario que alterou|mudancas|registro de log|valor anterior|valor novo|historico|alteracoes)\b/.test(normalizedQuery) &&
       (pageKey === "como-fazer/verificar-historico-alteracoes" || pageKey.startsWith("como-fazer/verificar-historico-alteracoes/"))
     ) {
@@ -1180,7 +1385,14 @@
     }
 
     if (
-      hasAny(["ajustar", "quantidade", "material", "estoque", "inventario"]) &&
+      (
+        hasAny(["inventario", "inventário"]) ||
+        (
+          hasAny(["ajustar", "ajusto", "ajuste", "acertar", "corrigir"]) &&
+          hasAny(["quantidade", "estoque", "saldo", "inventario", "inventário"])
+        )
+      ) &&
+      !hasAny(["entrada", "ncm"]) &&
       (pageKey === "como-fazer/ajustar-estoque" || pageKey.startsWith("como-fazer/ajustar-estoque/"))
     ) {
       return 360;
@@ -1198,7 +1410,11 @@
     if (
       intent === "manual" &&
       hasAny(["nota", "nfe", "nf"]) &&
-      !hasAny(["entrada", "lote", "servico", "serviço", "inutilizacao", "inutilização", "inutilizar"]) &&
+      !hasAny([
+        "entrada", "lote", "servico", "serviço",
+        "inutilizacao", "inutilização", "inutilizar",
+        "compra", "compras"
+      ]) &&
       (pageKey === "faturamento/faturamento-nf" || pageKey.startsWith("faturamento/faturamento-nf/"))
     ) {
       return 260;
@@ -1449,19 +1665,37 @@
   function assistantSemanticAnalysis(value) {
     const normalized = normalizeAssistantSearch(value);
     const words = new Set(uniqueAssistantWords(normalized));
-    const action = assistantSemanticActions.find((item) =>
-      assistantSemanticTermMatch(normalized, words, item.terms)
+    const actionCatalog = [
+      ...(assistantGlossary.actions || []),
+      ...assistantSemanticActions
+    ];
+    const objectCatalog = [
+      ...(assistantGlossary.objects || []),
+      ...assistantSemanticObjects
+    ];
+
+    const action = actionCatalog.find((item) =>
+      assistantSemanticTermMatch(
+        normalized,
+        words,
+        item.terms || []
+      )
     )?.id || null;
-    const forcedObject = /\binutiliz/.test(normalized)
-      ? "inutilização"
-      : null;
-    const object = assistantSemanticObjects
+
+    const object = objectCatalog
       .filter((item) =>
-        assistantSemanticTermMatch(normalized, words, item.terms)
+        assistantSemanticTermMatch(
+          normalized,
+          words,
+          item.terms || []
+        )
       )
       .sort((left, right) => {
         const longest = (item) => Math.max(
-          ...item.terms.map((term) =>
+          0,
+          ...(item.terms || []).filter((term) =>
+            assistantSemanticTermMatch(normalized, words, [term])
+          ).map((term) =>
             normalizeAssistantSearch(term).length
           )
         );
@@ -1471,7 +1705,7 @@
 
     return {
       action,
-      object: forcedObject || object
+      object
     };
   }
 
@@ -1480,12 +1714,23 @@
       return false;
     }
 
+    const glossaryAction = (assistantGlossary.actions || [])
+      .find((item) => item.id === queryAction);
+
+    if (
+      Array.isArray(glossaryAction?.conflicts) &&
+      glossaryAction.conflicts.includes(docAction)
+    ) {
+      return true;
+    }
+
     const conflicts = {
       emitir: ["consultar", "cancelar", "corrigir", "entender"],
       consultar: ["emitir", "cancelar", "cadastrar"],
       cancelar: ["emitir", "consultar", "cadastrar", "configurar"],
       cadastrar: ["consultar", "cancelar", "corrigir", "entender"],
-      configurar: ["consultar", "cancelar", "corrigir"],
+      configurar: ["consultar", "cancelar", "corrigir", "entrada"],
+      entrada: ["emitir", "configurar", "cadastrar", "consultar", "cancelar"],
       corrigir: ["emitir", "cadastrar", "configurar", "entender"],
       entender: ["emitir", "cadastrar", "cancelar", "corrigir"]
     };
@@ -1494,12 +1739,20 @@
   }
 
   function assistantOperationalAction(action) {
+    const glossaryAction = (assistantGlossary.actions || [])
+      .find((item) => item.id === action);
+
+    if (typeof glossaryAction?.operational === "boolean") {
+      return glossaryAction.operational;
+    }
+
     return [
       "emitir",
       "cancelar",
       "cadastrar",
       "configurar",
-      "consultar"
+      "consultar",
+      "entrada"
     ].includes(action);
   }
 
@@ -1510,7 +1763,7 @@
       semantic.object === "nota fiscal" ||
       /\b(nota|nfe|nf)\b/.test(normalized);
     [
-      ["entrada", /\b(entrada|importar|importacao|importação|radar)\b/],
+      ["entrada", /\b(entrada|dar entrada|dou entrada|registrar entrada|importar|importacao|importação|radar)\b/],
       ["cancelamento", /\b(cancelar|cancelamento|cancela)\b/],
       ["carta_correcao", /\b(carta de correcao|carta de correção|cce|cc-e)\b/],
       ["inutilizacao", /\b(inutilizar|inutilizacao|inutilização)\b/],
@@ -1795,14 +2048,18 @@
 
     const guideIntentWords = new Set([
       "ajustar",
+      "ajusto",
       "alterar",
+      "altero",
       "baixar",
       "cad",
       "cadastrar",
       "cadastro",
       "cancelar",
+      "cancelo",
       "configurar",
       "consultar",
+      "corrigir",
       "criar",
       "emitir",
       "faturar",
@@ -1816,7 +2073,7 @@
 
     if (
       normalized.includes("como") ||
-      /\b(ajustar|alterar|baixar|cad|cadastrar|cadastro|cancelar|configurar|consultar|criar|emitir|faturar|fazer|gerar|importar|lancar|transferir)\b/.test(normalized) ||
+      /\b(ajustar|ajusto|alterar|altero|baixar|cad|cadastrar|cadastro|cancelar|cancelo|configurar|consultar|corrigir|criar|emitir|faturar|fazer|gerar|importar|lancar|transferir)\b/.test(normalized) ||
       words.some((word) => guideIntentWords.has(word)) ||
       /\bguia\b/.test(normalized)
     ) {
@@ -1865,8 +2122,10 @@
       "cadastrar",
       "cadastro",
       "cancelar",
+      "cancelo",
       "configurar",
       "consultar",
+      "corrigir",
       "criar",
       "emitir",
       "faturar",
@@ -1967,6 +2226,7 @@
 
     score += assistantProfileScore(profile, analysis, query);
     score += assistantAmbiguousPreferenceScore(doc, analysis, intent);
+    score += assistantGlossaryRouteScore(doc, analysis, intent);
     defaultPageScore = assistantDefaultPageScore(doc, analysis, intent);
     score += defaultPageScore;
     score += assistantSemanticScore(doc, analysis.semantic, intent).score;
@@ -2276,6 +2536,19 @@
 
   function getAssistantResults(docs, query) {
     const intent = assistantIntent(query);
+    const analysis = analyzeAssistantQuery(query);
+    // Explicit semantic routes precede lexical scoring and its early exclusions.
+    const routed = docs.filter(isAssistantPublishedNavigationDoc)
+      .map((doc) => ({doc, pageKey: assistantPageKey(doc.location),
+        score: assistantGlossaryRouteScore(doc, analysis, intent)}))
+      .filter((item) => item.score > 0)
+      .sort((a, b) => b.score - a.score)[0];
+    if (routed) {
+      return {
+        primary: {...routed, doc: representativeAssistantDoc(docs, routed.pageKey, routed.doc)},
+        related: [], intent, ambiguous: false
+      };
+    }
     const byPage = new Map();
 
     docs.forEach((doc) => {
@@ -2335,6 +2608,908 @@
       intent,
       ambiguous: isAmbiguousAssistantQuery(query, intent)
     };
+  }
+
+  function assistantPublishedNavigationPagePaths() {
+    if (assistantPublishedNavigationPaths) {
+      return assistantPublishedNavigationPaths;
+    }
+
+    const paths = new Set();
+
+    document
+      .querySelectorAll(".md-sidebar--primary .md-nav--primary a.md-nav__link[href]")
+      .forEach((link) => {
+        try {
+          paths.add(
+            assistantPortalPath(
+              new URL(link.href, window.location.href)
+            )
+          );
+        } catch (_error) {
+          // Ignora links temporários ou inválidos da navegação.
+        }
+      });
+
+    assistantPublishedNavigationPaths = paths;
+    return assistantPublishedNavigationPaths;
+  }
+
+  function isAssistantPublishedNavigationDoc(doc) {
+    const publishedPaths = assistantPublishedNavigationPagePaths();
+
+    if (!publishedPaths.size) {
+      return true;
+    }
+
+    const path = assistantManualPathFromLocation(doc?.location || "");
+    return Boolean(path && publishedPaths.has(path));
+  }
+
+  function assistantRagClip(value, limit) {
+    const text = String(value || "")
+      .replace(/\s+/g, " ")
+      .trim();
+
+    if (text.length <= limit) {
+      return text;
+    }
+
+    return `${text.slice(0, limit).trim()}…`;
+  }
+
+  function assistantRagPublicUrl(doc) {
+    try {
+      return new URL(
+        assistantPageLocation(doc?.location || ""),
+        rootUrl()
+      ).href;
+    } catch (_error) {
+      return "";
+    }
+  }
+
+  function assistantRagSource(item, index) {
+    const doc = item?.doc;
+
+    if (!doc) {
+      return null;
+    }
+
+    const limit = index === 0
+      ? MAX_ASSISTANT_RAG_PRIMARY_CHARS
+      : MAX_ASSISTANT_RAG_RELATED_CHARS;
+
+    return {
+      title: String(doc.title || "Documento WCorp")
+        .replace(/\\\*/g, "")
+        .replace(/\*\*/g, "")
+        .replace(/__/g, "")
+        .trim(),
+      category: getAssistantCategory(doc),
+      location: assistantPageLocation(doc.location || ""),
+      url: assistantRagPublicUrl(doc),
+      text: assistantRagClip(doc.text || "", limit),
+      score: Number(item.score || 0)
+    };
+  }
+
+  function assistantRagSources(results) {
+    if (!results?.primary) {
+      return [];
+    }
+
+    return [results.primary, ...(results.related || [])]
+      .slice(0, MAX_ASSISTANT_RAG_SOURCES)
+      .map(assistantRagSource)
+      .filter(Boolean);
+  }
+
+  function assistantRagCleanVisibleText(value) {
+    return String(value || "")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function assistantRagHeadingLevel(element) {
+    const match = String(element?.tagName || "").match(/^H([1-6])$/i);
+    return match ? Number(match[1]) : 0;
+  }
+
+  function assistantRagExtractOfficialSteps(html) {
+    try {
+      const parsed = new DOMParser().parseFromString(
+        String(html || ""),
+        "text/html"
+      );
+      const headings = Array.from(
+        parsed.querySelectorAll("h1,h2,h3,h4,h5,h6")
+      );
+      const target = headings.find((heading) => {
+        const label = normalizeAssistantSearch(
+          heading.textContent || ""
+        );
+
+        return label === "como fazer" ||
+          label === "passo a passo" ||
+          label === "passo a passo da operacao";
+      });
+
+      if (!target) {
+        return [];
+      }
+
+      const targetLevel = assistantRagHeadingLevel(target);
+      let current = target.nextElementSibling;
+
+      while (current) {
+        const currentLevel = assistantRagHeadingLevel(current);
+
+        if (currentLevel && currentLevel <= targetLevel) {
+          break;
+        }
+
+        const lists = current.matches?.("ol,ul")
+          ? [current]
+          : Array.from(current.querySelectorAll?.("ol,ul") || []);
+
+        for (const list of lists) {
+          const items = Array.from(list.children)
+            .filter((item) => item.tagName === "LI")
+            .map((item) =>
+              assistantRagCleanVisibleText(item.textContent)
+            )
+            .filter(Boolean);
+
+          if (items.length) {
+            return items;
+          }
+        }
+
+        current = current.nextElementSibling;
+      }
+
+      return [];
+    } catch (_error) {
+      return [];
+    }
+  }
+
+  function assistantRagManualStopWords() {
+    return new Set([
+      "a", "ao", "aos", "as", "com", "como", "da", "das", "de", "do", "dos",
+      "e", "em", "encontro", "essa", "esse", "esta", "este", "na", "nas", "no",
+      "nos", "o", "os", "para", "por", "que", "qual", "quais", "serve", "tela",
+      "um", "uma"
+    ]);
+  }
+
+  function assistantRagMeaningfulTokens(value) {
+    const stopWords = assistantRagManualStopWords();
+
+    return normalizeAssistantSearch(value)
+      .split(/\s+/)
+      .map((token) => token.trim())
+      .filter((token) =>
+        token.length >= 3 &&
+        !stopWords.has(token)
+      );
+  }
+
+  function assistantRagIsWeakManualBlock(value) {
+    const normalized = normalizeAssistantSearch(value);
+
+    if (!normalized || normalized.length < 18) {
+      return true;
+    }
+
+    if (
+      /\b(conteudo em atualizacao|conteudo sera atualizado|em atualizacao|em breve|a definir|pagina em construcao)\b/.test(normalized)
+    ) {
+      return true;
+    }
+
+    if (
+      /\b(veja|consulte|acesse)\b.*\bguia\b/.test(normalized) ||
+      /\bguia\b.*\b(como cadastrar|como lancar|passo a passo)\b/.test(normalized)
+    ) {
+      return true;
+    }
+
+    // Frases genéricas de template não descrevem de fato a tela.
+    if (
+      /\binforme (os )?(filtros|dados) (ou )?(os )?dados necessarios\b/.test(normalized) ||
+      /\bfinalize conforme a acao disponivel na tela\b/.test(normalized) ||
+      /\bconfirme as informacoes antes de salvar ou confirmar\b/.test(normalized) ||
+      /\bconfira as informacoes antes de (salvar|confirmar|finalizar)(?:,? (?:confirmar|finalizar))*(?: ou (?:salvar|confirmar|finalizar))?\b/.test(normalized) ||
+      /\bconfira os dados antes de (salvar|confirmar|finalizar)\b/.test(normalized) ||
+      /\brevise as informacoes antes de (salvar|confirmar|finalizar)\b/.test(normalized) ||
+      /\bverifique os dados (informados|inseridos)\b/.test(normalized) ||
+      /\bpreencha os campos (necessarios|obrigatorios)\b/.test(normalized) ||
+      /\bselecione a opcao desejada\b/.test(normalized) ||
+      /\bsiga as orientacoes exibidas na tela\b/.test(normalized)
+    ) {
+      return true;
+    }
+
+    return false;
+  }
+
+  function assistantRagExtractManualBlocks(html) {
+    try {
+      const parsed = new DOMParser().parseFromString(
+        String(html || ""),
+        "text/html"
+      );
+      const root =
+        parsed.querySelector(".md-content__inner") ||
+        parsed.querySelector("article") ||
+        parsed.querySelector("main");
+
+      if (!root) {
+        return [];
+      }
+
+      root.querySelectorAll(
+        "script,style,nav,.md-content__button,.headerlink,.md-source-file,.md-footer,.md-sidebar,.md-nav,.md-search"
+      ).forEach((element) => element.remove());
+
+      let currentHeading = "";
+      const blocks = [];
+      const nodes = Array.from(
+        root.querySelectorAll("h1,h2,h3,h4,p,li,tr")
+      );
+
+      nodes.forEach((node) => {
+        if (/^H[1-4]$/i.test(node.tagName)) {
+          currentHeading = assistantRagCleanVisibleText(
+            node.textContent
+          );
+          return;
+        }
+
+        // Evita duplicar texto de listas/tabelas capturando o pai e o filho.
+        if (
+          node.tagName === "LI" &&
+          node.parentElement?.closest("li") !== null
+        ) {
+          return;
+        }
+
+        const rawText = assistantRagCleanVisibleText(
+          node.textContent
+        );
+
+        if (assistantRagIsWeakManualBlock(rawText)) {
+          return;
+        }
+
+        const normalizedText = normalizeAssistantSearch(rawText);
+
+        // Ignora blocos que sejam apenas título/cabeçalho repetido.
+        if (
+          normalizedText === normalizeAssistantSearch(currentHeading)
+        ) {
+          return;
+        }
+
+        blocks.push({
+          heading: currentHeading,
+          text: rawText
+        });
+      });
+
+      const seen = new Set();
+
+      return blocks.filter((block) => {
+        const key = normalizeAssistantSearch(block.text);
+
+        if (!key || seen.has(key)) {
+          return false;
+        }
+
+        seen.add(key);
+        return true;
+      });
+    } catch (_error) {
+      return [];
+    }
+  }
+
+  function assistantRagManualQuestionType(query) {
+    const normalized = normalizeAssistantSearch(query);
+
+    if (
+      /\b(o que e|o que significa|qual a definicao|qual definicao|conceito de)\b/.test(normalized)
+    ) {
+      return "definition";
+    }
+
+    if (
+      /\b(para que serve|qual a funcao|qual funcao|qual o objetivo|qual objetivo|finalidade)\b/.test(normalized)
+    ) {
+      return "purpose";
+    }
+
+    if (
+      /\b(o que encontro|o que tem|o que aparece|quais campos|quais informacoes|quais dados|quais acoes|o que posso fazer)\b/.test(normalized)
+    ) {
+      return "screen";
+    }
+
+    if (
+      /\b(onde fica|onde encontro|onde vejo|onde ver|onde posso ver|onde consulto|onde consultar|como acesso|como acessar|qual caminho|qual menu|onde acesso)\b/.test(normalized)
+    ) {
+      return "access";
+    }
+
+    return "general";
+  }
+
+  function assistantRagManualHeadingRole(heading) {
+    const normalized = normalizeAssistantSearch(heading);
+
+    if (
+      /\b(o que e|conceito|definicao|descricao|sobre)\b/.test(normalized)
+    ) {
+      return "definition";
+    }
+
+    if (
+      /\b(objetivo|finalidade|para que serve|funcao)\b/.test(normalized)
+    ) {
+      return "purpose";
+    }
+
+    if (
+      /\b(campos|informacoes|dados|acoes|funcionalidades|recursos|tela|colunas|filtros)\b/.test(normalized)
+    ) {
+      return "screen";
+    }
+
+    if (
+      /\b(acesso|como acessar|onde encontrar|caminho|navegacao|menu)\b/.test(normalized)
+    ) {
+      return "access";
+    }
+
+    return "other";
+  }
+
+  function assistantRagManualTextRole(textValue) {
+    const normalized = normalizeAssistantSearch(textValue);
+
+    if (
+      /\b(e|representa|significa|refere se|consiste em)\b/.test(normalized) &&
+      normalized.length >= 45
+    ) {
+      return "definition";
+    }
+
+    if (
+      /\b(serve para|permite|utilizado para|usado para|tem como objetivo|finalidade)\b/.test(normalized)
+    ) {
+      return "purpose";
+    }
+
+    if (
+      /\b(campo|campos|filtro|filtros|coluna|colunas|botao|botoes|acao|acoes|lista|grade|tabela|status)\b/.test(normalized)
+    ) {
+      const genericScreenOnly =
+        /^(?:informe|preencha|confira|verifique|finalize|selecione|utilize|use)\b/.test(normalized) &&
+        !/\b(cnpj|cpf|razao social|nome fantasia|codigo|descricao|data|valor|vencimento|fornecedor|cliente|material|numero|situacao|emissao|documento|natureza|categoria|unidade|estoque|ncm|telefone|email|endereco)\b/.test(normalized);
+
+      if (!genericScreenOnly) {
+        return "screen";
+      }
+    }
+
+    if (
+      /\b(clique em|acesse|acessar)\b/.test(normalized) ||
+      normalized.includes(" > ")
+    ) {
+      return "access";
+    }
+
+    return "other";
+  }
+
+  function assistantRagSelectManualEvidence(blocks, query, sourceTitle) {
+    const questionType =
+      assistantRagManualQuestionType(query);
+    const queryTokens =
+      assistantRagMeaningfulTokens(query);
+    const titleTokens =
+      assistantRagMeaningfulTokens(sourceTitle);
+
+    if (!Array.isArray(blocks) || !blocks.length) {
+      return [];
+    }
+
+    const scored = blocks.map((block, index) => {
+      const body =
+        normalizeAssistantSearch(block.text);
+      const heading =
+        normalizeAssistantSearch(block.heading);
+      const headingRole =
+        assistantRagManualHeadingRole(block.heading);
+      const textRole =
+        assistantRagManualTextRole(block.text);
+
+      let score = 0;
+      let queryMatches = 0;
+
+      queryTokens.forEach((token) => {
+        if (body.includes(token)) {
+          score += 3;
+          queryMatches += 1;
+        }
+
+        if (heading.includes(token)) {
+          score += 2;
+        }
+      });
+
+      titleTokens.forEach((token) => {
+        if (body.includes(token)) {
+          score += 1;
+        }
+      });
+
+      if (headingRole === questionType) {
+        score += 12;
+      }
+
+      if (textRole === questionType) {
+        score += 8;
+      }
+
+      // Para perguntas específicas, evidência de outro tipo não responde.
+      if (
+        questionType !== "general" &&
+        headingRole !== questionType &&
+        textRole !== questionType
+      ) {
+        score -= 20;
+      }
+
+      // Caminhos de menu e instruções de acesso não servem como
+      // definição, finalidade nem descrição de conteúdo da tela.
+      if (
+        ["definition", "purpose", "screen"].includes(questionType) &&
+        textRole === "access"
+      ) {
+        score -= 30;
+      }
+
+      // Objetivo genérico ("Cadastrar ou consultar...") não é definição.
+      if (
+        questionType === "definition" &&
+        headingRole === "purpose" &&
+        textRole !== "definition"
+      ) {
+        score -= 18;
+      }
+
+      // Para "o que encontro na tela", exige conteúdo de tela de fato.
+      if (
+        questionType === "screen" &&
+        headingRole !== "screen" &&
+        textRole !== "screen"
+      ) {
+        score -= 25;
+      }
+
+      if (block.text.length >= 55) {
+        score += 1;
+      }
+
+      return {
+        ...block,
+        score,
+        queryMatches,
+        headingRole,
+        textRole,
+        index
+      };
+    });
+
+    let candidates;
+
+    if (questionType === "general") {
+      const minimumMatches =
+        queryTokens.length >= 2 ? 2 : 1;
+
+      candidates = scored.filter((block) =>
+        block.queryMatches >= minimumMatches &&
+        block.score >= (minimumMatches * 3)
+      );
+    } else {
+      candidates = scored.filter((block) => {
+        const roleMatches =
+          block.headingRole === questionType ||
+          block.textRole === questionType;
+
+        if (!roleMatches || block.score < 8) {
+          return false;
+        }
+
+        if (questionType === "screen") {
+          const normalizedBlock =
+            normalizeAssistantSearch(block.text);
+
+          const hasConcreteScreenDetail =
+            /\b(cnpj|cpf|razao social|nome fantasia|codigo|descricao|data|valor|vencimento|fornecedor|cliente|material|numero|situacao|emissao|documento|natureza|categoria|unidade|estoque|ncm|telefone|email|endereco|campo [a-z0-9]|coluna [a-z0-9]|botao [a-z0-9])\b/.test(normalizedBlock);
+
+          if (!hasConcreteScreenDetail) {
+            return false;
+          }
+        }
+
+        return true;
+      });
+    }
+
+    return candidates
+      .sort((a, b) => {
+        if (b.score !== a.score) {
+          return b.score - a.score;
+        }
+
+        return a.index - b.index;
+      })
+      .slice(0, questionType === "screen" ? 4 : 2)
+      .sort((a, b) => a.index - b.index)
+      .map((block) => ({
+        heading: block.heading,
+        text: assistantRagClip(block.text, 520),
+        role: questionType
+      }));
+  }
+
+  async function assistantRagEnrichSource(source, query = "") {
+    if (
+      !source?.url ||
+      !["Guia", "Manual"].includes(source.category)
+    ) {
+      return source;
+    }
+
+    try {
+      const response = await fetch(source.url, {
+        credentials: "same-origin"
+      });
+
+      if (!response.ok) {
+        return source;
+      }
+
+      const html = await response.text();
+
+      if (source.category === "Guia") {
+        return {
+          ...source,
+          officialSteps:
+            assistantRagExtractOfficialSteps(html)
+        };
+      }
+
+      const manualBlocks =
+        assistantRagExtractManualBlocks(html);
+
+      return {
+        ...source,
+        manualEvidence:
+          assistantRagSelectManualEvidence(
+            manualBlocks,
+            query,
+            source.title
+          )
+      };
+    } catch (_error) {
+      return source;
+    }
+  }
+
+  function assistantRagDirectGuideAnswer(results, sources) {
+    const source = sources?.[0];
+
+    if (
+      !["guide", "error"].includes(results?.intent) ||
+      source?.category !== "Guia" ||
+      !Array.isArray(source.officialSteps) ||
+      !source.officialSteps.length
+    ) {
+      return "";
+    }
+
+    const action = String(source.title || "")
+      .replace(/^como\s+/i, "")
+      .trim();
+    const naturalAction = action
+      ? action.charAt(0).toLowerCase() + action.slice(1)
+      : "realizar este procedimento";
+
+    return [
+      `Para ${naturalAction}:`,
+      "",
+      ...source.officialSteps.map(
+        (step, index) => `${index + 1}. ${step}`
+      )
+    ].join("\n");
+  }
+
+  function assistantRagDirectManualAnswer(results, sources) {
+    const source = sources?.[0];
+
+    if (
+      source?.category !== "Manual" ||
+      results?.intent === "guide"
+    ) {
+      return "";
+    }
+
+    const evidence = Array.isArray(source.manualEvidence)
+      ? source.manualEvidence
+      : [];
+
+    if (!evidence.length) {
+      const questionType =
+        assistantRagManualQuestionType(
+          results?.query || ""
+        );
+
+      if (questionType === "definition") {
+        return "Não encontrei uma definição segura na Central para responder a essa pergunta.";
+      }
+
+      if (questionType === "purpose") {
+        return "Não encontrei uma explicação segura na Central sobre a finalidade dessa rotina.";
+      }
+
+      if (questionType === "screen") {
+        return "O Manual não detalha com segurança os campos, informações ou ações disponíveis nessa tela.";
+      }
+
+      if (questionType === "access") {
+        return "Não encontrei um caminho de acesso seguro na Central para responder a essa pergunta.";
+      }
+
+      return "Não encontrei orientação segura na Central para responder a essa pergunta.";
+    }
+
+    return evidence
+      .map((item) => item.text)
+      .filter(Boolean)
+      .join("\n\n");
+  }
+
+  function buildAssistantRagPrompt(query, sources) {
+    const sourceText = sources
+      .map((source, index) => {
+        const parts = [
+          `### FONTE ${index + 1}`,
+          `Título: ${source.title}`,
+          `Tipo: ${source.category}`,
+          `Página: ${source.url || source.location}`
+        ];
+
+        if (
+          Array.isArray(source.officialSteps) &&
+          source.officialSteps.length
+        ) {
+          parts.push(
+            "PROCEDIMENTO OFICIAL:",
+            ...source.officialSteps.map(
+              (step, stepIndex) =>
+                `${stepIndex + 1}. ${step}`
+            ),
+            "REGRA: estes são os passos oficiais. Não altere, acrescente, remova ou reordene etapas."
+          );
+        }
+
+        if (
+          Array.isArray(source.manualEvidence) &&
+          source.manualEvidence.length
+        ) {
+          parts.push(
+            "EVIDÊNCIAS DO MANUAL:",
+            ...source.manualEvidence.map(
+              (item, evidenceIndex) =>
+                `${evidenceIndex + 1}. ${item.text}`
+            ),
+            "REGRA: para esta pergunta, use somente as evidências acima. Não complete lacunas."
+          );
+        }
+
+        parts.push(
+          "Conteúdo:",
+          source.text
+        );
+
+        return parts.join("\n");
+      })
+      .join("\n\n");
+
+    return [
+      "[WCORP_RAG_CONTEXT]",
+      "Responda à pergunta do usuário usando SOMENTE as fontes oficiais fornecidas abaixo.",
+      "As fontes já foram localizadas e filtradas pelo sistema. Não use ferramentas, terminal, busca em arquivos, internet ou conhecimento externo para complementar a resposta.",
+      "Não invente passos, campos, telas, botões, nomes de módulos, confirmações, causas, regras ou links.",
+      "",
+      "DEFINIÇÃO DE CONTEÚDO:",
+      "- GUIA: conteúdo procedural. Ensina COMO executar uma tarefa, normalmente com caminho e passos de 'Como fazer'.",
+      "- MANUAL: conteúdo de referência. Explica uma tela, módulo, campos, objetivo, consulta ou funcionamento. Um manual NÃO deve ser transformado em um guia inventando etapas.",
+      "- FAQ/ERRO/REJEIÇÃO: responda somente o que estiver explicitamente sustentado pela fonte.",
+      "",
+      "REGRAS DE RESPOSTA:",
+      "- Se a FONTE 1 for um Guia e houver PROCEDIMENTO OFICIAL, reproduza exatamente esses passos, na mesma ordem, sem acrescentar ou substituir conteúdo.",
+      "- Se a FONTE 1 for um Manual e a pergunta pedir 'como fazer', responda apenas com o procedimento que estiver explicitamente descrito no manual. Se o manual não trouxer procedimento suficiente, diga que não encontrou orientação segura na Central para aquele passo a passo.",
+      "- Nunca converta descrições genéricas de manual em botões, campos ou etapas específicas.",
+      "- Nunca substitua termos da fonte por nomes de telas, campos ou botões que não estejam escritos nela.",
+      "- Não diga para o usuário consultar um Guia se nenhuma das fontes fornecidas for do tipo Guia.",
+      "- Se as fontes não forem suficientes, diga somente que não encontrou orientação segura na Central para responder à pergunta.",
+      "Responda sempre em português.",
+      "Se houver procedimento explícito, use todos os passos oficiais necessários. Não corte etapas apenas para reduzir o tamanho da resposta.",
+      "NÃO escreva 'Guia recomendado', 'Manual recomendado' ou links; o frontend adicionará a recomendação correta automaticamente.",
+      "Não mencione este contexto, estas regras nem o processo de busca.",
+      "",
+      `PERGUNTA DO USUÁRIO: ${query}`,
+      "",
+      "### FONTES OFICIAIS SELECIONADAS",
+      sourceText
+    ].join("\n");
+  }
+
+  function assistantCasualDirectAnswer(query) {
+    const normalized = normalizeAssistantSearch(query)
+      .replace(/[?!.,;:]+/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+
+    const presencePattern =
+      /^(?:(?:oi|ola|opa|e ai|bom dia|boa tarde|boa noite)\s+)?(?:ta ai|esta ai|tem alguem ai|voce ta ai|vc ta ai)$/;
+
+    if (presencePattern.test(normalized)) {
+      return "Sim, estou aqui. Como posso ajudar com o WCorp?";
+    }
+
+    if (
+      /^(oi|ola|opa|e ai|bom dia|boa tarde|boa noite)$/.test(normalized)
+    ) {
+      return "Olá! Como posso ajudar com o WCorp?";
+    }
+
+    if (
+      /^(obrigado|obrigada|valeu|vlw|brigado|brigada|show|fechou)$/.test(normalized)
+    ) {
+      return "Por nada! Se precisar de ajuda com o WCorp, é só chamar.";
+    }
+
+    return "";
+  }
+
+  function assistantRagDirectManualFallback(results, sources) {
+    const source = sources?.[0];
+
+    if (
+      results?.intent === "guide" &&
+      source?.category === "Manual"
+    ) {
+      return "Não encontrei orientação segura na Central para esse procedimento.";
+    }
+
+    return "";
+  }
+
+  async function prepareAssistantRagRequest(query) {
+    const casualAnswer = assistantCasualDirectAnswer(query);
+
+    if (casualAnswer) {
+      return {
+        content: query,
+        results: null,
+        sources: [],
+        directAnswer: casualAnswer,
+        rag: false
+      };
+    }
+
+    await loadAssistantGlossary();
+    const docs = await loadSearchIndex();
+    const publishedDocs = docs.filter(isAssistantPublishedNavigationDoc);
+    const results = getAssistantResults(publishedDocs, query);
+    if (results) {
+      results.query = query;
+    }
+    const baseSources = assistantRagSources(results);
+    const sources = await Promise.all(
+      baseSources.map((source) => assistantRagEnrichSource(source, query))
+    );
+
+    if (!sources.length) {
+      const noSourceDirectAnswer =
+        results?.intent === "guide"
+          ? "Não encontrei orientação segura na Central para esse procedimento."
+          : "";
+
+      return {
+        content: query,
+        results,
+        sources: [],
+        directAnswer: noSourceDirectAnswer,
+        rag: false
+      };
+    }
+
+    return {
+      content: buildAssistantRagPrompt(query, sources),
+      results,
+      sources,
+      directAnswer:
+        assistantRagDirectGuideAnswer(
+          results,
+          sources
+        ) ||
+        assistantRagDirectManualFallback(
+          results,
+          sources
+        ) ||
+        assistantRagDirectManualAnswer(
+          results,
+          sources
+        ),
+      rag: true
+    };
+  }
+
+  function stripAssistantGuideRecommendation(markdown) {
+    return String(markdown || "")
+      .replace(/(?:^|\n)\s*(?:Guia|Manual|FAQ) recomendado\s*:\s*[^\n]*(?=\n|$)/gi, "\n")
+      .replace(/\n{3,}/g, "\n\n")
+      .trim();
+  }
+
+  function finalizeAssistantRagAnswer(answer, ragRequest) {
+    const cleaned = stripAssistantGuideRecommendation(answer);
+    const primary = ragRequest?.results?.primary;
+    const source = ragRequest?.sources?.[0];
+
+    if (!ragRequest?.rag || !primary || !source) {
+      return cleaned;
+    }
+
+    const category = getAssistantCategory(primary.doc);
+    const intent = ragRequest.results?.intent;
+    const shouldRecommend =
+      intent === "guide" ||
+      intent === "manual" ||
+      (intent === "error" && category === "Guia") ||
+      (intent === "general" && ["Guia", "Manual", "FAQ"].includes(category));
+
+    if (!shouldRecommend || !source.url) {
+      return cleaned;
+    }
+
+    const recommendationLabel =
+      category === "Guia"
+        ? "Guia recomendado"
+        : category === "Manual"
+          ? "Manual recomendado"
+          : category === "FAQ"
+            ? "FAQ recomendado"
+            : "Documentação recomendada";
+
+    const recommendationTitle = String(
+      source.title || "Documentação WCorp"
+    )
+      .replace(/\\\*/g, "")
+      .replace(/\*+/g, "")
+      .replace(/_+/g, "")
+      .replace(/^\[|\]$/g, "")
+      .trim();
+
+    return `${cleaned}\n\n${recommendationLabel}: [${recommendationTitle}](${source.url})`;
   }
 
   function sharedAssistantTokenScore(source, target) {
@@ -3626,45 +4801,57 @@
         scrollConversationToBottom();
 
         try {
-          const response = await fetch(
-            "http://127.0.0.1:8642/v1/chat/completions",
-            {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-                "Authorization": "Bearer wcorp-hermes-local"
-              },
-              body: JSON.stringify({
-                model: "hermes-agent",
-                messages: [
-                  {
-                    role: "user",
-                    content: value
-                  }
-                ]
-              })
-            }
-          );
+          const ragRequest = await prepareAssistantRagRequest(value);
+          let rawAnswer = ragRequest.directAnswer || "";
 
-          if (!response.ok) {
-            throw new Error(
-              `Hermes respondeu com HTTP ${response.status}`
+          if (!rawAnswer) {
+            const response = await fetch(
+              "http://127.0.0.1:8642/v1/chat/completions",
+              {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                  "Authorization": "Bearer wcorp-hermes-local"
+                },
+                body: JSON.stringify({
+                  model: "hermes-agent",
+                  temperature: 0.1,
+                  max_tokens: 700,
+                  messages: [
+                    {
+                      role: "user",
+                      content: ragRequest.content
+                    }
+                  ]
+                })
+              }
             );
+
+            if (!response.ok) {
+              throw new Error(
+                `Hermes respondeu com HTTP ${response.status}`
+              );
+            }
+
+            const data =
+              await response.json();
+
+            rawAnswer =
+              data?.choices?.[0]?.message?.content ||
+              "Não foi possível obter uma resposta do Assistente.";
           }
 
-          const data =
-            await response.json();
-
-          const hermesAnswer =
-            data?.choices?.[0]?.message?.content ||
-            "Não foi possível obter uma resposta do Assistente.";
+          const finalAnswer = finalizeAssistantRagAnswer(
+            rawAnswer,
+            ragRequest
+          );
 
           consultationMessage?.remove();
           typingMessage.remove();
 
           messages.appendChild(
             createMarkdownMessage(
-              hermesAnswer
+              finalAnswer
             )
           );
         } catch (error) {
