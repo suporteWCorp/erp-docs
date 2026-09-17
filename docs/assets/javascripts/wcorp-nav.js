@@ -669,8 +669,8 @@
 
     return [
       { label: "Início", icon: "home", href: root, active: relativePath === "/" },
-      { label: "Guia", count: guideCount, icon: "guide", href: new URL("como-fazer/", root).href, active: relativePath.startsWith("/como-fazer") },
-      { label: "Manual", count: manualCount, icon: "manual", href: new URL("manual/", root).href, active: isManualPage() },
+      { label: "Guias", count: guideCount, icon: "guide", href: new URL("como-fazer/", root).href, active: relativePath.startsWith("/como-fazer") },
+      { label: "Manuais", count: manualCount, icon: "manual", href: new URL("manual/", root).href, active: isManualPage() },
       { label: "Referências", icon: "reference", href: new URL("referencia/", root).href, active: relativePath.startsWith("/referencia") || relativePath.startsWith("/erros-solucoes") },
       { label: "Ferramentas", icon: "tools", href: new URL("ferramentas/", root).href, active: relativePath.startsWith("/ferramentas") },
       { label: "Suporte", icon: "support", href: new URL("suporte/", root).href, active: relativePath.startsWith("/suporte") }
