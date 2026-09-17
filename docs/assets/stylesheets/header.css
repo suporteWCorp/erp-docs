@@ -1,7 +1,6 @@
 /* Identidade e pesquisa do cabeçalho WCorp. */
 .md-header {
-    background-color: #009688;
-    z-index: 120;
+    background: linear-gradient(135deg, #008f83, #028090);
 }
 
 body.wc-search-open .md-header {

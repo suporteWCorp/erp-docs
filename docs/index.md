@@ -20,7 +20,7 @@ Bem-vindo à central de ajuda do **WCorp**. Escolha a forma de consulta mais ade
 
 <div class="wc-card" markdown>
 
-### Guia
+### Guias
 
 Aprenda a realizar os principais processos e rotinas do WCorp.
 
@@ -30,7 +30,7 @@ Aprenda a realizar os principais processos e rotinas do WCorp.
 
 <div class="wc-card" markdown>
 
-### Manual
+### Manuais
 
 Use o manual por abas do WCorp, seguindo a mesma organização visual do sistema.
 

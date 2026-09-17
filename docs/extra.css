@@ -733,8 +733,9 @@ body.wc-guide-page .md-typeset h2#como-fazer + ol > li > b:first-child {
 /* Navegação dos Manuais: módulos e rotinas compartilham a mesma paleta. */
 .wc-manual-tabs {
     --wc-manual-accent: #007f86;
+    --wc-manual-accent-gradient: linear-gradient(135deg, #007f86, #028090);
     --wc-manual-border: #cde1e4;
-    --wc-manual-surface: #f4f8f9;
+    --wc-manual-surface: #008f835e;
 }
 
 .wc-manual-tabs .md-tabs {
@@ -837,7 +838,7 @@ body:not(.wc-manual-tabs) .wc-manual-subnav {
 
 /* Funcionalidades do módulo selecionado no Manual */
 .wc-manual-subnav {
-    background: var(--wc-manual-accent);
+    background: var(--wc-manual-accent-gradient);
     border-bottom: 1px solid var(--wc-manual-border);
     border-top: 0;
     box-shadow: none;

@@ -46,24 +46,19 @@
       .find((item) => normalizedText(item).includes(text)) || null;
   }
 
-  function cardByHeading(text) {
-    return Array.from(document.querySelectorAll(".wc-card"))
-      .find((card) => normalizedText(card.querySelector("h2, h3, h4") || card).includes(text)) || null;
-  }
-
   function findGuideTarget() {
-    return linkByText(".wc-global-nav", "guia") ||
-      document.querySelector('.wc-card a[href*="como-fazer"]')?.closest(".wc-card") ||
-      cardByHeading("guia");
+    return linkByText(".wc-global-nav", "guias");
   }
 
   function findManualTarget() {
-    return linkByText(".wc-global-nav", "manual") ||
-      document.querySelector('.wc-card a[href*="manual"]')?.closest(".wc-card") ||
-      cardByHeading("manual");
+    return linkByText(".wc-global-nav", "manuais");
   }
 
   function findToolsTarget() {
+    return linkByText(".wc-global-nav", "ferramentas");
+  }
+
+  function findQuickHelpTarget() {
     return document.querySelector(".md-header .md-search") ||
       document.querySelector(".wc-assistant__launcher") ||
       document.querySelector(".wc-header-actions");
@@ -90,9 +85,15 @@
     },
     {
       id: "tools",
-      title: "Use as ferramentas da Central",
-      text: "Encontre recursos que ajudam a localizar informações e resolver problemas com mais rapidez.",
+      title: "Explore as Ferramentas",
+      text: "Acesse utilitários para consultar relatórios, analisar arquivos e apoiar os processos do WCorp.",
       target: findToolsTarget
+    },
+    {
+      id: "quick-help",
+      title: "Busque e acesse ajuda rapidamente",
+      text: "Use a busca e os recursos rápidos da Central para localizar informações e resolver problemas.",
+      target: findQuickHelpTarget
     }
   ];
 
@@ -220,7 +221,16 @@
     tour.root.classList.remove("wc-tour--connector");
   }
 
+  function isSidebarStep(step) {
+    return step?.id === "guide" || step?.id === "manual" || step?.id === "tools";
+  }
+
   function positionConnector(tour, step, placement) {
+    if (isSidebarStep(step)) {
+      hideConnector(tour);
+      return;
+    }
+
     if (!step.element || !placement || window.matchMedia("(max-width: 44em)").matches) {
       hideConnector(tour);
       return;
@@ -232,19 +242,20 @@
     let startY = targetRect.top + targetRect.height / 2;
     let endX = cardRect.left + cardRect.width / 2;
     let endY = cardRect.top + cardRect.height / 2;
+    const endpointOffset = isSidebarStep(step) ? 0 : 6;
 
     if (placement === "right") {
-      startX = targetRect.right + 6;
-      endX = cardRect.left - 6;
+      startX = targetRect.right + endpointOffset;
+      endX = cardRect.left - endpointOffset;
     } else if (placement === "left") {
-      startX = targetRect.left - 6;
-      endX = cardRect.right + 6;
+      startX = targetRect.left - endpointOffset;
+      endX = cardRect.right + endpointOffset;
     } else if (placement === "below") {
-      startY = targetRect.bottom + 6;
-      endY = cardRect.top - 6;
+      startY = targetRect.bottom + endpointOffset;
+      endY = cardRect.top - endpointOffset;
     } else if (placement === "above") {
-      startY = targetRect.top - 6;
-      endY = cardRect.bottom + 6;
+      startY = targetRect.top - endpointOffset;
+      endY = cardRect.bottom + endpointOffset;
     }
 
     const width = Math.hypot(endX - startX, endY - startY);
@@ -259,6 +270,25 @@
     tour.connector.style.setProperty("--wc-tour-connector-width", `${width}px`);
     tour.connector.style.setProperty("--wc-tour-connector-angle", `${angle}deg`);
     tour.root.classList.add("wc-tour--connector");
+  }
+
+  function scheduleConnector(tour, step, placement) {
+    if (tour.connectorTimer) window.clearTimeout(tour.connectorTimer);
+    tour.connectorTimer = null;
+    hideConnector(tour);
+
+    const updateConnector = () => {
+      tour.connectorTimer = null;
+      if (activeTour !== tour || tour.steps[tour.index] !== step) return;
+      positionConnector(tour, step, placement);
+    };
+
+    if (reducedMotion()) {
+      requestAnimationFrame(updateConnector);
+      return;
+    }
+
+    tour.connectorTimer = window.setTimeout(updateConnector, 170);
   }
 
   function setPlacementClass(card, placement) {
@@ -290,7 +320,7 @@
 
     const rect = step.element.getBoundingClientRect();
     const cardRect = card.getBoundingClientRect();
-    const gap = 14;
+    const gap = isSidebarStep(step) ? 32 : 14;
     const margin = 16;
     const viewportWidth = window.innerWidth;
     const viewportHeight = window.innerHeight;
@@ -335,7 +365,11 @@
     card.style.setProperty("--wc-tour-card-top", `${top}px`);
     setPlacementClass(card, placement.name);
 
-    requestAnimationFrame(() => positionConnector(tour, step, placement.name));
+    if (isSidebarStep(step)) {
+      scheduleConnector(tour, step, placement.name);
+    } else {
+      requestAnimationFrame(() => positionConnector(tour, step, placement.name));
+    }
   }
 
   function renderStep(tour) {
@@ -380,6 +414,7 @@
     window.removeEventListener("resize", tour.handleResize);
     window.removeEventListener("scroll", tour.handleScroll, true);
     document.removeEventListener("keydown", tour.handleKeydown, true);
+    if (tour.connectorTimer) window.clearTimeout(tour.connectorTimer);
     tour.root.remove();
     activeTour = null;
 
@@ -418,6 +453,7 @@
       steps,
       index: 0,
       previousFocus: document.activeElement,
+      connectorTimer: null,
       handleResize: () => activeTour && positionCard(activeTour, activeTour.steps[activeTour.index]),
       handleScroll: () => activeTour && positionCard(activeTour, activeTour.steps[activeTour.index]),
       handleKeydown: null
