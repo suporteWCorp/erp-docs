@@ -308,6 +308,23 @@ body.wc-context-sidebar-active:not(.wc-context-sidebar-custom) .wc-context-sideb
     font-weight: 700;
 }
 
+@media screen and (max-width: 76.2344em) {
+    /* A sidebar WCorp usa acordeões, não os painéis sobrepostos do Material. */
+    .wc-context-sidebar-host .md-nav {
+        position: static;
+        height: auto;
+        width: auto;
+    }
+
+    .wc-context-sidebar-host .wc-context-nav__children {
+        display: none;
+    }
+
+    .wc-context-sidebar-host .wc-context-nav__group--open > .wc-context-nav__children {
+        display: block;
+    }
+}
+
 @media screen and (min-width: 76.25em) {
     .md-sidebar--primary {
         width: 11.3rem;
@@ -591,7 +608,6 @@ body.wc-guide-page .md-typeset h2#como-fazer + ol > li > b:first-child {
 }
 
 .md-top {
-    top: var(--wc-breadcrumb-offset) !important;
     z-index: 7;
 }
 
@@ -601,6 +617,10 @@ body.wc-guide-page .md-typeset h2#como-fazer + ol > li > b:first-child {
 }
 
 @media screen and (min-width: 76.25em) {
+    .md-top {
+        top: var(--wc-breadcrumb-offset) !important;
+    }
+
     .md-sidebar--secondary .md-nav--secondary {
         display: none;
     }
@@ -610,10 +630,6 @@ body.wc-guide-page .md-typeset h2#como-fazer + ol > li > b:first-child {
     :root {
         --wc-breadcrumb-height: 0rem;
         --wc-breadcrumb-offset: calc(var(--wc-header-height) + 0.75rem);
-    }
-
-    .md-top {
-        top: var(--wc-breadcrumb-offset) !important;
     }
 }
 

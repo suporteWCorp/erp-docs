@@ -137,7 +137,10 @@
         return;
       }
 
-      if (!isPageNavigationLink(link, target, root) || isSamePageHash(target)) return;
+      if (!isPageNavigationLink(link, target, root)) return;
+      // Inclusive no link da página atual, cujo clique é consumido abaixo.
+      if (link.closest(".md-sidebar--primary")) closeDrawer();
+      if (isSamePageHash(target)) return;
       if (isSamePage(target) || isEquivalentPage(target)) {
         event.preventDefault();
         event.stopImmediatePropagation();
@@ -149,6 +152,14 @@
     }, true);
 
     window.addEventListener("popstate", () => markUiLoading(window.location.href));
+  }
+
+  function closeDrawer() {
+    const drawer = document.getElementById("__drawer");
+    if (!drawer?.checked) return;
+    drawer.checked = false;
+    // Notifica o Material para liberar seu overlay e bloqueio de scroll.
+    drawer.dispatchEvent(new Event("change", { bubbles: true }));
   }
 
   function manualModuleForCurrentPage() {
@@ -805,7 +816,12 @@
     const primarySidebar = document.querySelector(".md-sidebar--primary .md-sidebar__inner");
     if (!primarySidebar) return;
 
-    primarySidebar.querySelector(".wc-context-sidebar-host")?.remove();
+    const config = contextSidebarConfig();
+    const globalItems = globalSidebarItems();
+    const sidebarKey = JSON.stringify({ config, globalItems });
+    const existing = primarySidebar.querySelector(".wc-context-sidebar-host");
+    if (existing?.dataset.wcSidebarKey === sidebarKey) return;
+    existing?.remove();
     document.body.classList.remove(
       "wc-context-sidebar-active",
       "wc-context-sidebar-custom",
@@ -819,11 +835,11 @@
       "wc-context-favorites"
     );
 
-    const config = contextSidebarConfig();
     const host = document.createElement("div");
     host.className = "wc-context-sidebar-host";
+    host.dataset.wcSidebarKey = sidebarKey;
 
-    host.appendChild(createSidebarNav("Navegar", globalSidebarItems(), "wc-global-nav"));
+    host.appendChild(createSidebarNav("Navegar", globalItems, "wc-global-nav"));
     if (config) {
       if (config.items.length) {
         host.appendChild(createSidebarNav(config.title, config.items, "wc-page-nav"));
@@ -835,13 +851,8 @@
     document.body.classList.add("wc-context-sidebar-active");
 
     const scrollContainer = primarySidebar.closest(".md-sidebar__scrollwrap") || primarySidebar;
-    const resetScroll = () => {
-      primarySidebar.scrollTop = 0;
-      scrollContainer.scrollTop = 0;
-    };
-    resetScroll();
-    requestAnimationFrame(resetScroll);
-    window.setTimeout(resetScroll, 120);
+    primarySidebar.scrollTop = 0;
+    scrollContainer.scrollTop = 0;
   }
 
   function isGuideOverview() {
@@ -966,7 +977,19 @@
     sidebar.replaceChildren(nav);
   }
 
+  let initializedContent;
+  let initializedSidebar;
+  let initializedPath;
+
   function initWcorpUi() {
+    const content = document.querySelector(".md-content__inner");
+    const sidebar = document.querySelector(".md-sidebar--primary .md-sidebar__inner");
+    const path = window.location.pathname + window.location.search;
+    if (content === initializedContent && sidebar === initializedSidebar && path === initializedPath) {
+      markUiReady();
+      return;
+    }
+    closeDrawer();
     updateRouteClasses();
     addBreadcrumb();
     replaceTabsWithErpMenu();
@@ -976,6 +999,9 @@
     focusGuideSidebar();
     replaceGuideOverviewToc();
     addSupportFooter();
+    initializedContent = content;
+    initializedSidebar = sidebar;
+    initializedPath = path;
     markUiReady();
   }
 

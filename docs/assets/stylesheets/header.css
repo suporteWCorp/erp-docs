@@ -528,9 +528,10 @@ body.wc-search-open .wc-favorites-panel {
 
 @media screen and (max-width: 59.9844em) {
     .md-header__button.md-logo {
-        flex-basis: 8.45rem;
+        flex: 0 1 8.45rem;
         height: 3.45rem;
         margin-left: 0.55rem;
+        min-width: 0;
         width: 8.45rem;
     }
 
@@ -539,11 +540,20 @@ body.wc-search-open .wc-favorites-panel {
         max-height: 2.89rem;
         opacity: 1 !important;
         width: auto !important;
-        max-width: 8.5rem;
+        max-width: min(100%, 8.5rem);
     }
 
     .md-header__inner {
         min-height: 3.7rem;
+    }
+
+    /* O título já é oculto; suas margens nativas não devem ocupar a linha. */
+    .md-header__title {
+        display: none;
+    }
+
+    .md-header .md-search__inner {
+        transform: none;
     }
 
     .md-header .md-search {
@@ -562,7 +572,14 @@ body.wc-search-open .wc-favorites-panel {
         right: 0;
         top: 0;
         transform: none;
-        width: 100vw !important;
+        width: auto !important;
+    }
+
+    .md-header .md-search.md-search--active .md-search__overlay,
+    [data-md-toggle="search"]:checked ~ .md-header .md-search .md-search__overlay {
+        /* O overlay já preenche a tela: não ampliar com o scale nativo. */
+        transform: none;
+        width: auto;
     }
 
     .md-header .md-search.md-search--active .md-search__inner,

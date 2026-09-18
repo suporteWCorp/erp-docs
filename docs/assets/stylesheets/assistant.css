@@ -527,14 +527,14 @@ body:has([data-md-toggle="search"]:checked) .wc-assistant {
 
 @media screen and (max-width: 44em) {
     .wc-assistant {
-        bottom: 0.8rem;
-        right: 0.8rem;
+        bottom: calc(0.8rem + env(safe-area-inset-bottom, 0px));
+        right: calc(0.8rem + env(safe-area-inset-right, 0px));
     }
 
     .wc-assistant__panel {
-        height: min(500px, calc(100vh - 96px));
-        max-height: min(500px, calc(100vh - 96px));
-        width: min(340px, calc(100vw - 1.6rem));
+        height: min(500px, calc(100vh - 96px - env(safe-area-inset-bottom, 0px) - env(safe-area-inset-top, 0px)));
+        max-height: min(500px, calc(100vh - 96px - env(safe-area-inset-bottom, 0px) - env(safe-area-inset-top, 0px)));
+        width: min(340px, calc(100vw - 1.6rem - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px)));
     }
 
     .wc-assistant__bubble {
