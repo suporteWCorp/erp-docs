@@ -1,0 +1,286 @@
+/* Tutorial de primeira visita da Central WCorp. */
+body.wc-tour-active {
+    overflow: hidden;
+}
+
+.wc-tour {
+    inset: 0;
+    pointer-events: none;
+    position: fixed;
+    z-index: 900;
+}
+
+.wc-tour__overlay {
+    animation: wc-tour-fade 150ms ease-out both;
+    background: rgba(15, 23, 42, 0.9);
+    inset: 0;
+    pointer-events: auto;
+    position: absolute;
+}
+
+.wc-tour--spotlight .wc-tour__overlay {
+    background: transparent;
+}
+
+.wc-tour__spotlight {
+    border-radius: 8px;
+    box-shadow:
+        0 0 0 9999px rgba(15, 23, 42, 0.9),
+        0 0 0 1px rgba(255, 255, 255, 0.88),
+        0 0 0 2px rgba(2, 128, 144, 0.18),
+        0 0 18px rgba(2, 128, 144, 0.24),
+        0 12px 30px rgba(15, 23, 42, 0.14);
+    display: none;
+    height: var(--wc-tour-spotlight-height, 0);
+    left: var(--wc-tour-spotlight-left, 0);
+    pointer-events: none;
+    position: fixed;
+    top: var(--wc-tour-spotlight-top, 0);
+    width: var(--wc-tour-spotlight-width, 0);
+    z-index: 910;
+    transition:
+        height 140ms ease,
+        left 140ms ease,
+        top 140ms ease,
+        width 140ms ease;
+}
+
+.wc-tour--spotlight .wc-tour__spotlight {
+    display: block;
+}
+
+.wc-tour-target {
+    pointer-events: none;
+    position: relative;
+    z-index: 920 !important;
+}
+
+.wc-tour__card {
+    animation: wc-tour-card-in 170ms ease-out both;
+    background: #ffffff;
+    border: 1px solid rgba(2, 128, 144, 0.16);
+    border-radius: 8px;
+    box-shadow: 0 18px 44px rgba(15, 23, 42, 0.16);
+    color: #334155;
+    left: var(--wc-tour-card-left, 50%);
+    max-width: min(21rem, calc(100vw - 2rem));
+    padding: 0.82rem 0.88rem 0.88rem;
+    pointer-events: auto;
+    position: fixed;
+    top: var(--wc-tour-card-top, 50%);
+    transform: translate(0, 0) scale(1);
+    transition:
+        left 150ms ease,
+        top 150ms ease,
+        transform 150ms ease;
+    width: 21rem;
+    z-index: 940;
+}
+
+.wc-tour__card--center {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.wc-tour__progress {
+    display: grid;
+    gap: 0.32rem;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+    margin-bottom: 0.64rem;
+}
+
+.wc-tour__progress-segment {
+    background: #e4eeee;
+    border-radius: 999px;
+    height: 0.12rem;
+    overflow: hidden;
+}
+
+.wc-tour__progress-segment::before {
+    background: #008f83;
+    content: "";
+    display: block;
+    height: 100%;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 160ms ease;
+}
+
+.wc-tour__progress-segment--active::before {
+    transform: scaleX(1);
+}
+
+.wc-tour__eyebrow {
+    color: #008276;
+    display: block;
+    font-size: 0.58rem;
+    font-weight: 760;
+    letter-spacing: 0;
+    margin-bottom: 0.3rem;
+    text-transform: uppercase;
+}
+
+.wc-tour__title {
+    color: #005f66;
+    font-size: 0.98rem;
+    font-weight: 760;
+    line-height: 1.25;
+    margin: 0;
+}
+
+.wc-tour__text {
+    color: #52636b;
+    font-size: 0.72rem;
+    line-height: 1.55;
+    margin: 0.48rem 0 0;
+}
+
+.wc-tour__actions {
+    align-items: center;
+    display: flex;
+    gap: 0.55rem;
+    justify-content: space-between;
+    margin-top: 0.82rem;
+}
+
+.wc-tour__button {
+    align-items: center;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 0.64rem;
+    font-weight: 750;
+    justify-content: center;
+    line-height: 1;
+    min-height: 1.86rem;
+    padding: 0.48rem 0.64rem;
+}
+
+.wc-tour__button--primary {
+    background: #008f83;
+    border: 1px solid #008f83;
+    color: #ffffff;
+}
+
+.wc-tour__button--secondary {
+    background: #ffffff;
+    border: 1px solid rgba(2, 128, 144, 0.18);
+    color: #42545d;
+}
+
+.wc-tour__button:hover,
+.wc-tour__button:focus-visible {
+    box-shadow: 0 0 0 3px rgba(2, 128, 144, 0.15);
+    outline: 0;
+}
+
+.wc-tour__button--primary:hover,
+.wc-tour__button--primary:focus-visible {
+    background: #006f68;
+    border-color: #006f68;
+}
+
+.wc-tour__connector {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(2, 128, 144, 0.64));
+    display: none;
+    height: 1px;
+    left: var(--wc-tour-connector-left, 0);
+    pointer-events: none;
+    position: fixed;
+    top: var(--wc-tour-connector-top, 0);
+    transform: rotate(var(--wc-tour-connector-angle, 0deg));
+    transform-origin: left center;
+    width: var(--wc-tour-connector-width, 0);
+    z-index: 930;
+}
+
+.wc-tour__connector::after {
+    border-bottom: 0.22rem solid transparent;
+    border-left: 0.34rem solid rgba(2, 128, 144, 0.68);
+    border-top: 0.22rem solid transparent;
+    content: "";
+    position: absolute;
+    right: -0.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.wc-tour--connector .wc-tour__connector {
+    display: block;
+}
+
+@keyframes wc-tour-fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes wc-tour-card-in {
+    from {
+        opacity: 0;
+        transform: translate(0, 0) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+.wc-tour__card--center {
+    animation-name: wc-tour-card-center-in;
+}
+
+@keyframes wc-tour-card-center-in {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@media screen and (max-width: 44em) {
+    .wc-tour__card,
+    .wc-tour__card--center {
+        bottom: 0.8rem;
+        left: 0.8rem;
+        max-width: none;
+        right: 0.8rem;
+        top: auto;
+        transform: none;
+        width: auto;
+    }
+
+    .wc-tour__connector {
+        display: none !important;
+    }
+
+    .wc-tour__actions {
+        justify-content: space-between;
+    }
+
+    .wc-tour__button {
+        flex: 1 1 auto;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .wc-tour__overlay,
+    .wc-tour__card {
+        animation: none;
+    }
+
+    .wc-tour__spotlight,
+    .wc-tour__card,
+    .wc-tour__progress-segment::before {
+        transition: none;
+    }
+}

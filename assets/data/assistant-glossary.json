@@ -1,0 +1,1027 @@
+{
+  "version": "2.0.0",
+  "purpose": "Aliases e rotas de recuperação WCorp. Publicação é autorizada exclusivamente por assistant-public-pages.json. aliases sugerem candidatos ao Hermes; somente termos explícitos podem autorizar uma resposta direta.",
+  "actions": [
+    {
+      "id": "desativar",
+      "terms": [
+        "desativar",
+        "desativo",
+        "desativa",
+        "desativacao"
+      ],
+      "aliases": [
+        "tirar de uso",
+        "deixar de usar sem excluir",
+        {
+          "all": [
+            "tirar",
+            "de uso",
+            "sem excluir"
+          ]
+        }
+      ],
+      "priority": 100
+    },
+    {
+      "id": "inutilizar",
+      "terms": [
+        "inutilizar",
+        "inutilizo",
+        "inutilizacao"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "transferir",
+      "terms": [
+        "transferir",
+        "transfiro",
+        "transferencia"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "devolver",
+      "terms": [
+        "devolver",
+        "devolucao"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "entrada",
+      "terms": [
+        "entrada",
+        "receber material"
+      ],
+      "priority": 90
+    },
+    {
+      "id": "cancelar",
+      "terms": [
+        "cancelar",
+        "cancelo",
+        "cancela",
+        "cancelamento"
+      ],
+      "priority": 90
+    },
+    {
+      "id": "corrigir",
+      "terms": [
+        "corrigir",
+        "correcao"
+      ],
+      "priority": 80
+    },
+    {
+      "id": "configurar",
+      "terms": [
+        "configurar",
+        "configuro",
+        "alterar",
+        "altero",
+        "mudar",
+        "mudo",
+        "ajustar",
+        "ajusto",
+        "editar",
+        "trocar",
+        "troco"
+      ],
+      "priority": 80
+    },
+    {
+      "id": "consultar",
+      "terms": [
+        "consultar",
+        "consulta",
+        "ver",
+        "vejo",
+        "verificar",
+        "conferir",
+        "acompanhar",
+        "localizar"
+      ],
+      "priority": 70
+    },
+    {
+      "id": "cadastrar",
+      "terms": [
+        "cadastrar",
+        "cadastro",
+        "cad",
+        "criar",
+        "incluir",
+        "colocar",
+        "coloco"
+      ],
+      "priority": 40
+    },
+    {
+      "id": "emitir",
+      "terms": [
+        "emitir",
+        "emito",
+        "emissao",
+        "gerar",
+        "gero",
+        "faturar"
+      ],
+      "priority": 60
+    },
+    {
+      "id": "fazer",
+      "terms": [
+        "fazer",
+        "faco",
+        "faz"
+      ],
+      "generic": true,
+      "priority": 0
+    },
+    {
+      "id": "baixar",
+      "terms": [
+        "baixar",
+        "baixo"
+      ],
+      "priority": 60
+    }
+  ],
+  "objects": [
+    {
+      "id": "nota complementar",
+      "terms": [
+        "nota complementar",
+        "nota fiscal complementar",
+        "nfe complementar"
+      ],
+      "priority": 160,
+      "aliases": []
+    },
+    {
+      "id": "pedido de compra",
+      "terms": [
+        "pedido de compra",
+        "pedidos de compra",
+        "pedido compra"
+      ],
+      "priority": 150,
+      "aliases": []
+    },
+    {
+      "id": "histórico",
+      "terms": [
+        "historico",
+        "historico de alteracoes",
+        "auditoria",
+        "registro de log"
+      ],
+      "priority": 140,
+      "aliases": [
+        "quem alterou",
+        "quem mexeu",
+        "quem mudou",
+        {
+          "all": [
+            "quem",
+            "mexeu"
+          ]
+        },
+        {
+          "all": [
+            "quem",
+            "mudou"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rejeitada",
+      "terms": [
+        "rejeitada",
+        "rejeitado",
+        "rejeitadas",
+        "rejeitados"
+      ],
+      "priority": 130,
+      "aliases": [],
+      "contextObjects": "nota fiscal"
+    },
+    {
+      "id": "ncm",
+      "terms": [
+        "ncm",
+        "ncms"
+      ],
+      "priority": 120,
+      "aliases": [],
+      "contextObjects": "material"
+    },
+    {
+      "id": "carta de correção",
+      "terms": [
+        "carta de correcao",
+        "cce"
+      ],
+      "priority": 120,
+      "aliases": []
+    },
+    {
+      "id": "usuários logados",
+      "terms": [
+        "usuarios logados",
+        "usuario logado"
+      ],
+      "priority": 120,
+      "aliases": []
+    },
+    {
+      "id": "grupo de usuário",
+      "terms": [
+        "grupo de usuario",
+        "grupo usuario",
+        "grupos de usuario"
+      ],
+      "priority": 120,
+      "aliases": []
+    },
+    {
+      "id": "natureza de operação",
+      "terms": [
+        "natureza de operacao",
+        "natureza operacao"
+      ],
+      "priority": 110,
+      "aliases": []
+    },
+    {
+      "id": "condição de pagamento",
+      "terms": [
+        "condicao de pagamento",
+        "condicao pagamento"
+      ],
+      "priority": 110,
+      "aliases": []
+    },
+    {
+      "id": "centro de custo",
+      "terms": [
+        "centro de custo",
+        "centro custo"
+      ],
+      "priority": 110,
+      "aliases": []
+    },
+    {
+      "id": "contas a pagar",
+      "terms": [
+        "contas a pagar",
+        "conta a pagar"
+      ],
+      "priority": 110,
+      "aliases": []
+    },
+    {
+      "id": "contas a receber",
+      "terms": [
+        "contas a receber",
+        "conta a receber"
+      ],
+      "priority": 110,
+      "aliases": []
+    },
+    {
+      "id": "lote padrão",
+      "terms": [
+        "lote padrao"
+      ],
+      "priority": 110,
+      "aliases": [],
+      "contextObjects": "material"
+    },
+    {
+      "id": "regra fiscal",
+      "terms": [
+        "regra fiscal",
+        "regras fiscais",
+        "regra"
+      ],
+      "priority": 100,
+      "aliases": []
+    },
+    {
+      "id": "inventário",
+      "terms": [
+        "inventario",
+        "contagem"
+      ],
+      "priority": 100,
+      "aliases": [],
+      "contextObjects": "material"
+    },
+    {
+      "id": "empenho",
+      "terms": [
+        "empenho",
+        "empenhar"
+      ],
+      "priority": 100,
+      "aliases": [],
+      "contextObjects": "material"
+    },
+    {
+      "id": "romaneio",
+      "terms": [
+        "romaneio"
+      ],
+      "priority": 100,
+      "aliases": []
+    },
+    {
+      "id": "sped",
+      "terms": [
+        "sped",
+        "sped fiscal"
+      ],
+      "priority": 100,
+      "aliases": []
+    },
+    {
+      "id": "cbenef",
+      "terms": [
+        "cbenef",
+        "beneficio fiscal"
+      ],
+      "priority": 100,
+      "aliases": []
+    },
+    {
+      "id": "emissor",
+      "terms": [
+        "emissor"
+      ],
+      "priority": 100,
+      "aliases": []
+    },
+    {
+      "id": "tabela",
+      "terms": [
+        "tabela",
+        "exportar tabela"
+      ],
+      "priority": 100,
+      "aliases": []
+    },
+    {
+      "id": "estoque",
+      "terms": [
+        "estoque",
+        "estoques",
+        "saldo"
+      ],
+      "priority": 90,
+      "aliases": [],
+      "contextObjects": "material"
+    },
+    {
+      "id": "ordem de produção",
+      "terms": [
+        "ordem de producao"
+      ],
+      "priority": 90,
+      "aliases": []
+    },
+    {
+      "id": "devolução",
+      "terms": [
+        "devolucao"
+      ],
+      "priority": 90,
+      "aliases": []
+    },
+    {
+      "id": "nota fiscal",
+      "terms": [
+        "nota fiscal",
+        "notas fiscais",
+        "nota",
+        "notas",
+        "nfe",
+        "nf"
+      ],
+      "priority": 40,
+      "aliases": []
+    },
+    {
+      "id": "pedido",
+      "terms": [
+        "pedido de venda",
+        "pedido venda",
+        "pedido",
+        "pedidos"
+      ],
+      "priority": 30,
+      "aliases": []
+    },
+    {
+      "id": "material",
+      "terms": [
+        "material",
+        "materiais",
+        "produto",
+        "produtos"
+      ],
+      "priority": 20,
+      "aliases": []
+    },
+    {
+      "id": "cliente",
+      "terms": [
+        "cliente",
+        "clientes"
+      ],
+      "priority": 20,
+      "aliases": []
+    },
+    {
+      "id": "fornecedor",
+      "terms": [
+        "fornecedor",
+        "fornecedores"
+      ],
+      "priority": 20,
+      "aliases": []
+    },
+    {
+      "id": "boleto",
+      "terms": [
+        "boleto",
+        "boletos"
+      ],
+      "priority": 20,
+      "aliases": []
+    },
+    {
+      "id": "usuário",
+      "terms": [
+        "usuario",
+        "usuarios"
+      ],
+      "priority": 20,
+      "aliases": []
+    },
+    {
+      "id": "orçamento",
+      "terms": [
+        "orcamento",
+        "orcamentos"
+      ],
+      "priority": 20,
+      "aliases": []
+    },
+    {
+      "id": "componente",
+      "terms": [
+        "componente",
+        "componentes",
+        "cadastro",
+        "registro"
+      ],
+      "priority": 5,
+      "aliases": [],
+      "generic": true
+    },
+    {
+      "id": "relatório",
+      "terms": [
+        "indicador de relatorio",
+        "indicador de relatorios",
+        "relatorio",
+        "relatorios"
+      ],
+      "priority": 20,
+      "aliases": []
+    },
+    {
+      "id": "xml",
+      "terms": [
+        "validador xml",
+        "validador de xml",
+        "xml"
+      ],
+      "priority": 20,
+      "aliases": []
+    },
+    {
+      "id": "título",
+      "terms": [
+        "titulo",
+        "titulos"
+      ],
+      "priority": 20,
+      "aliases": []
+    }
+  ],
+  "routes": [
+    {
+      "path": "como-fazer/desativar-componentes",
+      "objects": [
+        "componente",
+        "nota fiscal",
+        "material",
+        "cliente",
+        "fornecedor"
+      ],
+      "actions": [
+        "desativar"
+      ],
+      "priority": 50
+    },
+    {
+      "path": "como-fazer/inutilizar-nfe",
+      "objects": [
+        "nota fiscal"
+      ],
+      "actions": [
+        "inutilizar"
+      ],
+      "priority": 50
+    },
+    {
+      "path": "como-fazer/cancelar-nfe",
+      "objects": [
+        "nota fiscal"
+      ],
+      "actions": [
+        "cancelar"
+      ],
+      "priority": 50
+    },
+    {
+      "path": "como-fazer/faturar-nota",
+      "objects": [
+        "nota fiscal"
+      ],
+      "actions": [
+        "emitir",
+        "fazer"
+      ],
+      "priority": 50
+    },
+    {
+      "path": "como-fazer/emitir-carta-correcao",
+      "objects": [
+        "nota fiscal"
+      ],
+      "actions": [
+        "corrigir"
+      ],
+      "priority": 50
+    },
+    {
+      "path": "como-fazer/emitir-carta-correcao",
+      "objects": [
+        "carta de correção"
+      ],
+      "actions": [
+        "emitir",
+        "fazer",
+        "corrigir"
+      ],
+      "priority": 50
+    },
+    {
+      "path": "como-fazer/editar-valores-nfe",
+      "objects": [
+        "nota fiscal"
+      ],
+      "actions": [
+        "configurar"
+      ],
+      "priority": 50
+    },
+    {
+      "path": "como-fazer/consultar-nfe-rejeitada",
+      "objects": [
+        "rejeitada"
+      ],
+      "actions": null,
+      "priority": 50
+    },
+    {
+      "path": "como-fazer/alterar-ncm-material",
+      "objects": [
+        "ncm"
+      ],
+      "actions": [
+        "configurar"
+      ],
+      "priority": 50
+    },
+    {
+      "path": "como-fazer/cadastrar-material",
+      "objects": [
+        "material"
+      ],
+      "actions": [
+        "cadastrar",
+        "fazer"
+      ],
+      "priority": 50
+    },
+    {
+      "path": "como-fazer/registrar-entrada-material",
+      "objects": [
+        "material"
+      ],
+      "actions": [
+        "entrada"
+      ],
+      "priority": 50
+    },
+    {
+      "path": "como-fazer/consultar-estoque",
+      "objects": [
+        "estoque"
+      ],
+      "actions": [
+        "consultar"
+      ],
+      "priority": 50
+    },
+    {
+      "path": "como-fazer/ajustar-estoque",
+      "objects": [
+        "estoque",
+        "inventário"
+      ],
+      "actions": [
+        "configurar",
+        "corrigir",
+        "fazer"
+      ],
+      "priority": 50
+    },
+    {
+      "path": "como-fazer/configurar-lote-padrao",
+      "objects": [
+        "lote padrão"
+      ],
+      "actions": [
+        "configurar"
+      ],
+      "priority": 50
+    },
+    {
+      "path": "como-fazer/empenhar-material",
+      "objects": [
+        "empenho"
+      ],
+      "actions": [
+        "consultar",
+        "fazer"
+      ],
+      "priority": 50
+    },
+    {
+      "path": "como-fazer/criar-romaneio",
+      "objects": [
+        "romaneio"
+      ],
+      "actions": [
+        "cadastrar",
+        "fazer",
+        "emitir"
+      ],
+      "priority": 50
+    },
+    {
+      "path": "como-fazer/fazer-pedido-venda",
+      "objects": [
+        "pedido"
+      ],
+      "actions": [
+        "fazer",
+        "emitir",
+        "cadastrar"
+      ],
+      "priority": 50
+    },
+    {
+      "path": "como-fazer/cadastrar-cliente",
+      "objects": [
+        "cliente"
+      ],
+      "actions": [
+        "cadastrar",
+        "fazer"
+      ],
+      "priority": 50
+    },
+    {
+      "path": "como-fazer/criar-orcamento",
+      "objects": [
+        "orçamento"
+      ],
+      "actions": [
+        "cadastrar",
+        "fazer",
+        "emitir"
+      ],
+      "priority": 50
+    },
+    {
+      "path": "como-fazer/cadastrar-usuario",
+      "objects": [
+        "usuário"
+      ],
+      "actions": [
+        "cadastrar",
+        "fazer"
+      ],
+      "priority": 50
+    },
+    {
+      "path": "como-fazer/configurar-grupo-usuario",
+      "objects": [
+        "grupo de usuário"
+      ],
+      "actions": [
+        "configurar",
+        "cadastrar"
+      ],
+      "priority": 50
+    },
+    {
+      "path": "como-fazer/cadastrar-natureza-operacao",
+      "objects": [
+        "natureza de operação"
+      ],
+      "actions": [
+        "cadastrar"
+      ],
+      "priority": 50
+    },
+    {
+      "path": "como-fazer/cadastrar-condicao-pagamento",
+      "objects": [
+        "condição de pagamento"
+      ],
+      "actions": [
+        "cadastrar"
+      ],
+      "priority": 50
+    },
+    {
+      "path": "como-fazer/cadastrar-centro-custo",
+      "objects": [
+        "centro de custo"
+      ],
+      "actions": [
+        "cadastrar"
+      ],
+      "priority": 50
+    },
+    {
+      "path": "como-fazer/verificar-usuarios-log",
+      "objects": [
+        "usuários logados"
+      ],
+      "actions": [
+        "consultar"
+      ],
+      "priority": 50
+    },
+    {
+      "path": "como-fazer/verificar-historico-alteracoes",
+      "objects": [
+        "histórico"
+      ],
+      "actions": null,
+      "priority": 50
+    },
+    {
+      "path": "como-fazer/verificar-regra-fiscal",
+      "objects": [
+        "regra fiscal"
+      ],
+      "actions": null,
+      "priority": 50
+    },
+    {
+      "path": "como-fazer/verificar-cbenef",
+      "objects": [
+        "cbenef"
+      ],
+      "actions": null,
+      "priority": 50
+    },
+    {
+      "path": "como-fazer/consultar-sped-fiscal",
+      "objects": [
+        "sped"
+      ],
+      "actions": [
+        "consultar"
+      ],
+      "priority": 50
+    },
+    {
+      "path": "como-fazer/usar-emissor",
+      "objects": [
+        "emissor"
+      ],
+      "actions": null,
+      "priority": 50
+    },
+    {
+      "path": "como-fazer/exportar-editar-tabela",
+      "objects": [
+        "tabela"
+      ],
+      "actions": null,
+      "priority": 50
+    },
+    {
+      "path": "faturamento/faturamento-nf",
+      "objects": [
+        "nota fiscal"
+      ],
+      "priority": 0
+    },
+    {
+      "path": "faturamento/entrada-nota-fiscal",
+      "objects": [
+        "nota fiscal"
+      ],
+      "priority": 100,
+      "actions": [
+        "entrada"
+      ]
+    },
+    {
+      "path": "faturamento/carta-correcao",
+      "objects": [
+        "carta de correção"
+      ],
+      "priority": 0
+    },
+    {
+      "path": "comercial/pedidos",
+      "objects": [
+        "pedido"
+      ],
+      "priority": 0
+    },
+    {
+      "path": "comercial/comercial-clientes",
+      "objects": [
+        "cliente"
+      ],
+      "priority": 0
+    },
+    {
+      "path": "comercial/comercial-orcamento",
+      "objects": [
+        "orçamento"
+      ],
+      "priority": 0
+    },
+    {
+      "path": "comercial/devolucao",
+      "objects": [
+        "devolução"
+      ],
+      "priority": 0
+    },
+    {
+      "path": "compras/pedido-compra",
+      "objects": [
+        "pedido de compra"
+      ],
+      "priority": 0
+    },
+    {
+      "path": "fornecedores/fornecedores",
+      "objects": [
+        "fornecedor"
+      ],
+      "priority": 0
+    },
+    {
+      "path": "materiais/materiais",
+      "objects": [
+        "material"
+      ],
+      "priority": 0
+    },
+    {
+      "path": "materiais/lote-estoque",
+      "objects": [
+        "estoque"
+      ],
+      "priority": 0
+    },
+    {
+      "path": "materiais/lote-estoque",
+      "objects": [
+        "estoque",
+        "material"
+      ],
+      "priority": 100,
+      "actions": [
+        "transferir"
+      ]
+    },
+    {
+      "path": "materiais/ajustar-inventario",
+      "objects": [
+        "inventário"
+      ],
+      "priority": 0
+    },
+    {
+      "path": "administracao/usuarios",
+      "objects": [
+        "usuário"
+      ],
+      "priority": 0
+    },
+    {
+      "path": "administracao/grupo-usuarios",
+      "objects": [
+        "grupo de usuário"
+      ],
+      "priority": 0
+    },
+    {
+      "path": "administracao/natureza-op",
+      "objects": [
+        "natureza de operação"
+      ],
+      "priority": 0
+    },
+    {
+      "path": "administracao/condicoes-pagamento",
+      "objects": [
+        "condição de pagamento"
+      ],
+      "priority": 0
+    },
+    {
+      "path": "administracao/centro-custo",
+      "objects": [
+        "centro de custo"
+      ],
+      "priority": 0
+    },
+    {
+      "path": "administracao/ncms",
+      "objects": [
+        "ncm"
+      ],
+      "priority": 0
+    },
+    {
+      "path": "financeiro/boleto",
+      "objects": [
+        "boleto"
+      ],
+      "priority": 0
+    },
+    {
+      "path": "financeiro/contas-a-pagar",
+      "objects": [
+        "contas a pagar"
+      ],
+      "priority": 0
+    },
+    {
+      "path": "financeiro/contas-a-receber",
+      "objects": [
+        "contas a receber",
+        "título"
+      ],
+      "priority": 0
+    },
+    {
+      "path": "ferramentas/indicador-relatorio",
+      "objects": [
+        "relatório"
+      ],
+      "priority": 0,
+      "direct": false
+    },
+    {
+      "path": "ferramentas/validador-xml",
+      "objects": [
+        "xml"
+      ],
+      "priority": 0,
+      "direct": false
+    }
+  ]
+}

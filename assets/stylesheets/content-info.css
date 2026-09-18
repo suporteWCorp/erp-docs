@@ -1,0 +1,330 @@
+/* Informações rápidas do conteúdo em Guias e Manuais. */
+.wc-content-info {
+    align-items: center;
+    color: #667085;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.64rem;
+    gap: 0.22rem 0.5rem;
+    line-height: 1.35;
+    margin: -0.18rem 0 1.2rem;
+}
+
+.wc-content-info__item {
+    align-items: center;
+    display: inline-flex;
+    font-weight: 600;
+    gap: 0.22rem;
+    min-height: 1rem;
+    white-space: nowrap;
+}
+
+a.wc-content-info__item {
+    border-radius: 999px;
+    color: inherit;
+    text-decoration: none !important;
+    transition: background-color 140ms ease, color 140ms ease;
+}
+
+a.wc-content-info__item:hover,
+a.wc-content-info__item:focus-visible {
+    background: rgba(2, 128, 144, 0.08);
+    color: #005f66;
+    outline: 0;
+}
+
+.wc-content-info__item + .wc-content-info__item::before {
+    background: rgba(102, 112, 133, 0.45);
+    border-radius: 50%;
+    content: "";
+    display: inline-block;
+    height: 0.16rem;
+    margin-right: 0.28rem;
+    width: 0.16rem;
+}
+
+.wc-content-info__icon {
+    fill: currentColor;
+    height: 0.76rem;
+    opacity: 0.78;
+    width: 0.76rem;
+}
+
+.wc-content-info__item--popular {
+    color: #087b5c;
+    font-weight: 750;
+}
+
+.wc-content-info__item--video {
+    color: #006b73;
+}
+
+.wc-content-info__item--time {
+    color: #52636b;
+}
+
+.wc-content-info__item--difficulty > .wc-content-info__icon {
+    display: none;
+}
+
+.wc-difficulty {
+    align-items: center;
+    display: inline-flex;
+    gap: 0.12rem;
+}
+
+.wc-difficulty__dot {
+    background: #d0d5dd;
+    box-shadow: inset 0 0 0 1px rgba(102, 112, 133, 0.08);
+    border-radius: 50%;
+    display: inline-block;
+    height: 0.34rem;
+    width: 0.34rem;
+}
+
+.wc-difficulty--basic .wc-difficulty__dot--active {
+    background: #067647;
+}
+
+.wc-difficulty--intermediate .wc-difficulty__dot--active {
+    background: #dc6803;
+}
+
+.wc-difficulty--advanced .wc-difficulty__dot--active {
+    background: #b93815;
+}
+
+.wc-prereq-card {
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 1rem 0 1.55rem;
+    overflow: visible;
+    padding: 0;
+}
+
+.wc-prereq-card__header {
+    align-items: center;
+    display: flex;
+    gap: 0.55rem;
+    margin-bottom: 0.58rem;
+}
+
+.wc-prereq-card__icon {
+    align-items: center;
+    background: rgba(2, 128, 144, 0.08);
+    border: 1.5px solid rgba(2, 128, 144, 0.2);
+    border-radius: 50%;
+    color: #007f86;
+    display: inline-flex;
+    flex: 0 0 auto;
+    height: 2rem;
+    justify-content: center;
+    width: 2rem;
+    box-shadow: 0 0 0 3px rgba(2,128,144,0.06);
+}
+
+.wc-prereq-card__icon svg {
+    fill: currentColor;
+    height: 1.05rem;
+    width: 1.05rem;
+    display: block;
+    margin: auto;
+}
+
+.md-typeset .wc-prereq-card__title {
+    color: #006b73;
+    font-size: 0.96rem;
+    font-weight: 750;
+    line-height: 1.25;
+    margin: 0;
+}
+
+.wc-prereq-card__body > :first-child {
+    margin-top: 0;
+}
+
+.wc-prereq-card__body > :last-child {
+    margin-bottom: 0;
+}
+
+.md-typeset .wc-prereq-card__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.md-typeset .wc-prereq-card__item {
+    border-top: 1px solid rgba(16, 24, 40, 0.1);
+    color: #2f3b43;
+    font-size: 0.78rem;
+    line-height: 1.55;
+    margin: 0;
+    opacity: 0;
+    padding: 0.68rem 0 0.68rem 1.92rem;
+    position: relative;
+    transform: translateY(0.28rem);
+}
+
+.md-typeset .wc-prereq-card__item:first-child {
+    border-top: 0;
+}
+
+.md-typeset .wc-prereq-card__item::before {
+    background: #008b84;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgba(2, 128, 144, 0.08);
+    content: "";
+    height: 0.72rem;
+    left: 0.16rem;
+    position: absolute;
+    top: 0.92rem;
+    width: 0.72rem;
+}
+
+.md-typeset .wc-prereq-card__item::after {
+    border-bottom: 0.09rem solid #ffffff;
+    border-right: 0.09rem solid #ffffff;
+    content: "";
+    height: 0.28rem;
+    left: 0.4rem;
+    position: absolute;
+    top: 1.05rem;
+    transform: rotate(45deg);
+    width: 0.15rem;
+}
+
+.wc-prereq-card--visible .wc-prereq-card__item {
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+        opacity 160ms ease,
+        transform 160ms ease;
+    transition-delay: var(--wc-prereq-delay, 0ms);
+}
+
+.wc-card-popular {
+    align-items: center;
+    color: #006b73;
+    display: inline-flex;
+    height: 1rem;
+    justify-content: center;
+    margin-left: 0.32rem;
+    opacity: 0.82;
+    vertical-align: middle;
+    width: 1rem;
+}
+
+.wc-card-popular .wc-content-info__icon {
+    height: 0.78rem;
+    width: 0.78rem;
+}
+
+.wc-card > h3 {
+    align-items: flex-start;
+    display: flex;
+    gap: 0.25rem;
+}
+
+.wc-card > h3 .wc-card-popular {
+    flex: 0 0 auto;
+    margin-left: auto;
+}
+
+@media screen and (max-width: 44em) {
+    .wc-content-info {
+        gap: 0.28rem 0.46rem;
+    }
+
+    .wc-prereq-card {
+        padding: 0;
+    }
+
+    .wc-prereq-card__header {
+        align-items: flex-start;
+    }
+
+    .md-typeset .wc-prereq-card__item {
+        padding-right: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .md-typeset .wc-prereq-card__item {
+        opacity: 1;
+        transform: none;
+    }
+
+    .wc-prereq-card--visible .wc-prereq-card__item {
+        transition: none;
+    }
+}
+
+/* Títulos de seção de Guia e conteúdos relacionados de Manual compartilham o mesmo visual. */
+body.wc-guide-page .md-typeset h2#caminho,
+body.wc-guide-page .md-typeset h2#demonstracao-em-video,
+body.wc-guide-page .md-typeset h2#como-fazer,
+body.wc-guide-page .md-typeset h2#observacoes,
+body.wc-guide-page .md-typeset h2#observacao,
+body.wc-guide-page .md-typeset h2#veja-tambem,
+body.wc-context-manual .md-typeset h2#veja-tambem,
+body.wc-context-manual .md-typeset h2#conteudos-relacionados,
+body.wc-guide-page .md-typeset h2#avisos {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    color: #006b73;
+    font-size: 0.96rem;
+    font-weight: 750;
+    line-height: 1.25;
+    margin: 0 0 0.58rem 0;
+    border-bottom: none;
+    background: transparent;
+}
+
+/* Caixa de ícone igual à de Pré-requisitos */
+body.wc-guide-page .md-typeset h2#caminho::before,
+body.wc-guide-page .md-typeset h2#demonstracao-em-video::before,
+body.wc-guide-page .md-typeset h2#como-fazer::before,
+body.wc-guide-page .md-typeset h2#observacoes::before,
+body.wc-guide-page .md-typeset h2#observacao::before,
+body.wc-guide-page .md-typeset h2#veja-tambem::before,
+body.wc-context-manual .md-typeset h2#veja-tambem::before,
+body.wc-context-manual .md-typeset h2#conteudos-relacionados::before,
+body.wc-guide-page .md-typeset h2#avisos::before {
+    content: "";
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    height: 1.72rem;
+    width: 1.72rem;
+    background: rgba(2, 128, 144, 0.08);
+    border: 1px solid rgba(2, 128, 144, 0.12);
+    border-radius: 7px;
+    color: #007f86;
+}
+
+/* Ícones SVG inline via background (simples, sem biblioteca nova) */
+body.wc-guide-page .md-typeset h2#caminho::before {
+    background: rgba(2,128,144,0.08) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23007f86" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>') center/0.98rem no-repeat;
+}
+body.wc-guide-page .md-typeset h2#demonstracao-em-video::before {
+    background: rgba(2,128,144,0.08) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23007f86"><path d="M8 5v14l11-7z"/></svg>') center/0.98rem no-repeat;
+}
+body.wc-guide-page .md-typeset h2#como-fazer::before {
+    background: rgba(2,128,144,0.08) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23007f86" stroke-width="2"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>') center/0.98rem no-repeat;
+}
+body.wc-guide-page .md-typeset h2#observacoes::before,
+body.wc-guide-page .md-typeset h2#observacao::before {
+    background: rgba(2,128,144,0.08) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23007f86" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>') center/0.98rem no-repeat;
+}
+body.wc-guide-page .md-typeset h2#veja-tambem::before,
+body.wc-context-manual .md-typeset h2#veja-tambem::before,
+body.wc-context-manual .md-typeset h2#conteudos-relacionados::before {
+    background: rgba(2,128,144,0.08) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23007f86" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>') center/0.98rem no-repeat;
+}
+body.wc-guide-page .md-typeset h2#avisos::before {
+    background: rgba(2,128,144,0.08) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23007f86" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>') center/0.98rem no-repeat;
+}

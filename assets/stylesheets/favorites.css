@@ -1,0 +1,564 @@
+/* Favoritos compartilhados entre cards, páginas, header e menu lateral. */
+.wc-favorite-toggle {
+    align-items: center;
+    background: transparent;
+    border: 0;
+    border-radius: 50%;
+    color: #718096;
+    cursor: pointer;
+    display: inline-flex;
+    height: 1.8rem;
+    justify-content: center;
+    padding: 0;
+    transition: background-color 120ms ease, color 120ms ease;
+    width: 1.8rem;
+}
+
+.wc-favorite-toggle:hover,
+.wc-favorite-toggle:focus-visible {
+    background: rgba(2, 128, 144, 0.09);
+    color: #007c75;
+    outline: none;
+}
+
+.wc-favorite-toggle.is-favorite {
+    color: #c58a00;
+}
+
+.wc-favorite-toggle svg {
+    fill: none;
+    height: 1rem;
+    stroke: currentColor;
+    stroke-linejoin: round;
+    stroke-width: 1.8;
+    width: 1rem;
+}
+
+.wc-favorite-toggle.is-favorite svg {
+    fill: currentColor;
+}
+
+.wc-card,
+.wc-link-item {
+    position: relative;
+}
+
+.wc-card > .wc-favorite-toggle,
+.wc-link-item > .wc-favorite-toggle {
+    background: rgba(255, 255, 255, 0.68);
+    height: 1.48rem;
+    position: absolute;
+    right: 0.7rem;
+    top: 0.7rem;
+    width: 1.48rem;
+    z-index: 2;
+}
+
+.wc-card > .wc-favorite-toggle svg,
+.wc-link-item > .wc-favorite-toggle svg {
+    height: 0.78rem;
+    width: 0.78rem;
+}
+
+.wc-card > h3 {
+    padding-right: 1.45rem;
+}
+
+.wc-link-item > h3 {
+    padding-right: 1.7rem;
+}
+
+.wc-category-count {
+    background: rgba(2, 128, 144, 0.1);
+    border-radius: 999px;
+    color: #557579;
+    display: inline-block;
+    font-size: 0.58rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-left: 0.42rem;
+    min-width: 1.25rem;
+    padding: 0.12rem 0.32rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.wc-page-favorite {
+    float: right;
+    margin-top: -2.75rem;
+}
+
+.wc-header-actions {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 0.62rem;
+    margin-left: 0;
+    order: 5;
+    position: relative;
+    z-index: 95;
+}
+
+.wc-header-action {
+    align-items: center;
+    background: rgba(0, 82, 78, 0.28);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 0.66rem;
+    font-weight: 700;
+    gap: 0.3rem;
+    height: 2rem;
+    min-width: 6.2rem;
+    padding: 0 0.58rem;
+    white-space: nowrap;
+}
+
+.wc-header-favorites {
+    padding-left: 0.74rem;
+    padding-right: 0.78rem;
+}
+
+.wc-header-action:hover,
+.wc-header-action:focus-visible {
+    background: rgba(0, 82, 78, 0.42);
+    outline: 2px solid rgba(255, 255, 255, 0.45);
+    outline-offset: 1px;
+}
+
+.wc-header-action svg {
+    fill: none;
+    height: 0.82rem;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    width: 0.82rem;
+}
+
+.wc-header-version {
+    align-items: center;
+    color: rgba(255, 255, 255, 0.72);
+    cursor: default;
+    display: inline-flex;
+    font-size: 0.6rem;
+    font-weight: 600;
+    height: 2rem;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.wc-favorites-panel {
+    background: var(--md-default-bg-color);
+    border: 1px solid rgba(2, 128, 144, 0.25);
+    border-radius: 7px;
+    box-shadow: 0 12px 28px rgba(0, 48, 52, 0.2);
+    color: var(--md-default-fg-color);
+    max-height: min(70vh, 31rem);
+    overflow: auto;
+    padding: 0.7rem;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 0.45rem);
+    width: min(21rem, calc(100vw - 1rem));
+    z-index: 96;
+}
+
+.wc-favorites-panel[hidden] {
+    display: none;
+}
+
+.wc-favorites-panel__heading {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.wc-favorites-panel__heading strong {
+    color: #005f66;
+    font-size: 0.78rem;
+}
+
+.wc-favorites-panel__all {
+    font-size: 0.64rem;
+    font-weight: 700;
+}
+
+.wc-favorites-group + .wc-favorites-group {
+    border-top: 1px solid rgba(2, 128, 144, 0.14);
+    margin-top: 0.55rem;
+    padding-top: 0.55rem;
+}
+
+.wc-favorites-group h2,
+.wc-favorites-group h3 {
+    color: #69757a !important;
+    font-size: 0.6rem;
+    letter-spacing: 0.04em;
+    margin: 0 0 0.3rem;
+    text-transform: uppercase;
+}
+
+.wc-favorites-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.wc-favorites-list li {
+    align-items: center;
+    display: flex;
+    gap: 0.35rem;
+    margin: 0;
+}
+
+.wc-favorites-list a {
+    flex: 1;
+    font-size: 0.68rem;
+    line-height: 1.35;
+    padding: 0.28rem 0;
+}
+
+.wc-favorites-list .wc-favorite-toggle {
+    flex: 0 0 1.65rem;
+    height: 1.65rem;
+    width: 1.65rem;
+}
+
+.wc-favorites-empty {
+    color: var(--md-default-fg-color--light);
+    font-size: 0.7rem;
+    margin: 0.35rem 0;
+}
+
+.wc-favorites-page {
+    margin-top: 1.1rem;
+}
+
+.wc-favorites-page .wc-favorites-group {
+    border-top: 1px solid rgba(2, 128, 144, 0.16);
+    margin-top: 0.9rem;
+    padding-top: 0.8rem;
+}
+
+.wc-favorites-page .wc-favorites-group h2 {
+    font-size: 0.72rem;
+}
+
+.wc-error-card {
+    position: relative;
+}
+
+.wc-error-card > .wc-favorite-toggle {
+    position: absolute;
+    right: 2.35rem;
+    top: 0.65rem;
+    z-index: 2;
+}
+
+@media screen and (max-width: 76.2344em) {
+    .wc-header-actions {
+        margin-left: 0;
+    }
+
+    .wc-header-version {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 44em) {
+    .md-header .md-header__option {
+        display: none;
+    }
+
+    .wc-header-action__label {
+        display: none;
+    }
+
+    .wc-header-action {
+        min-width: 0;
+        padding: 0 0.48rem;
+    }
+}
+
+/* Refinamento visual do popover Favoritos recentes */
+.wc-favorites-panel__heading strong {
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+.wc-favorites-panel__all {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #006b73;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+    padding: 0.15rem 0.35rem;
+    border-radius: 4px;
+    transition: background 120ms ease;
+}
+.wc-favorites-panel__all:hover,
+.wc-favorites-panel__all:focus-visible {
+    background: rgba(2, 128, 144, 0.08);
+    text-decoration: none;
+}
+.wc-favorites-panel__all span[aria-hidden="true"] {
+    font-size: 0.8rem;
+    transition: transform 120ms ease;
+}
+.wc-favorites-panel__all:hover span[aria-hidden="true"] {
+    transform: translateX(1.5px);
+}
+
+.wc-favorites-list li {
+    border-bottom: 1px solid rgba(2, 128, 144, 0.08);
+    padding: 0.05rem 0;
+}
+.wc-favorites-list li:last-child {
+    border-bottom: 0;
+}
+.wc-favorites-list a {
+    font-size: 0.78rem;
+    padding: 0.35rem 0;
+    border-radius: 4px;
+    transition: background 100ms ease, color 100ms ease;
+}
+.wc-favorites-list a:hover,
+.wc-favorites-list a:focus-visible {
+    background: rgba(2, 128, 144, 0.06);
+    color: #005f66;
+    text-decoration: none;
+}
+
+.wc-favorites-panel {
+    box-shadow: 0 14px 32px rgba(0, 48, 52, 0.14), 0 2px 6px rgba(0,48,52,0.08);
+    border-radius: 10px;
+    padding: 0.8rem;
+}
+
+/* Página de Favoritos */
+.wc-favorites-hero,
+.wc-favorites-page {
+    max-width: 38rem;
+    width: 100%;
+}
+
+.wc-favorites-hero {
+    border-left: 3px solid rgba(2, 128, 144, 0.72);
+    margin: 0 0 0.9rem;
+    padding: 0.04rem 0 0.08rem 0.72rem;
+}
+
+.md-typeset .wc-favorites-hero > h1 {
+    color: var(--md-default-fg-color);
+    font-size: 1.55rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin: 0 0 0.22rem;
+}
+
+.md-typeset .wc-favorites-hero > p {
+    color: #526a72;
+    font-size: 0.74rem;
+    line-height: 1.45;
+    margin: 0;
+    max-width: 34rem;
+}
+
+.wc-favorites-page {
+    margin-top: 0;
+}
+
+.wc-favorites-page .wc-favorites-group {
+    border-top: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.wc-favorites-page .wc-favorites-group + .wc-favorites-group {
+    border-top: 0;
+    margin-top: 0.9rem;
+    padding-top: 0;
+}
+
+.md-typeset .wc-favorites-page .wc-favorites-group h2 {
+    align-items: center;
+    color: #315e63 !important;
+    display: flex;
+    font-size: 0.64rem;
+    font-weight: 700;
+    gap: 0.38rem;
+    letter-spacing: 0.07em;
+    line-height: 1.3;
+    margin: 0 0 0.35rem;
+    text-transform: uppercase;
+}
+
+.wc-favorites-page .wc-favorites-group h2::before {
+    background: #028090;
+    border-radius: 999px;
+    content: "";
+    flex: 0 0 0.16rem;
+    height: 0.66rem;
+}
+
+.md-typeset .wc-favorites-page .wc-favorites-list {
+    display: grid;
+    gap: 0.3rem;
+    grid-template-columns: minmax(0, 1fr);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.md-typeset .wc-favorites-page .wc-favorites-list > li {
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid rgba(125, 145, 166, 0.24);
+    border-radius: 6px;
+    box-sizing: border-box;
+    box-shadow: none;
+    display: grid;
+    gap: 0.25rem;
+    grid-template-columns: minmax(0, 1fr) 1.8rem;
+    margin: 0;
+    min-height: 2.35rem;
+    padding: 0.08rem 0.28rem 0.08rem 0.65rem;
+    transition: background-color 140ms ease, border-color 140ms ease;
+    width: 100%;
+}
+
+.md-typeset .wc-favorites-page .wc-favorites-list a {
+    background: transparent;
+    color: #163b4a;
+    display: block;
+    font-size: 0.73rem;
+    font-weight: 600;
+    line-height: 1.35;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    padding: 0.32rem 0;
+    text-decoration: none;
+}
+
+.md-typeset .wc-favorites-page .wc-favorites-list a:hover,
+.md-typeset .wc-favorites-page .wc-favorites-list a:focus-visible {
+    background: transparent;
+    color: #00776f;
+    text-decoration: none;
+}
+
+.wc-favorites-page .wc-favorites-list li:focus-within {
+    border-color: rgba(2, 128, 144, 0.48);
+    box-shadow: 0 0 0 2px rgba(2, 128, 144, 0.08);
+    outline: none;
+}
+
+.wc-favorites-page .wc-favorites-list a:focus-visible,
+.wc-favorites-page .wc-favorites-list .wc-favorite-toggle:focus-visible {
+    outline: none;
+}
+
+.wc-favorites-page .wc-favorites-list .wc-favorite-toggle {
+    align-self: center;
+    background: transparent;
+    border-radius: 5px;
+    flex: none;
+    height: 1.8rem;
+    width: 1.8rem;
+}
+
+.wc-favorites-page .wc-favorites-list .wc-favorite-toggle:hover,
+.wc-favorites-page .wc-favorites-list .wc-favorite-toggle:focus-visible {
+    background: rgba(2, 128, 144, 0.085);
+}
+
+.wc-favorites-page .wc-favorites-list .wc-favorite-toggle.is-favorite:hover,
+.wc-favorites-page .wc-favorites-list .wc-favorite-toggle.is-favorite:focus-visible {
+    background: rgba(197, 138, 0, 0.1);
+    color: #a97200;
+}
+
+.wc-favorites-page .wc-favorites-list .wc-favorite-toggle svg {
+    height: 0.95rem;
+    width: 0.95rem;
+}
+
+.wc-favorites-page .wc-favorites-empty {
+    align-items: center;
+    background: rgba(2, 128, 144, 0.035);
+    border: 1px dashed rgba(2, 128, 144, 0.28);
+    border-radius: 6px;
+    color: #5b7077;
+    display: flex;
+    flex-direction: row;
+    font-size: 0.72rem;
+    gap: 0.45rem;
+    justify-content: center;
+    line-height: 1.5;
+    margin: 0;
+    min-height: 0;
+    padding: 0.72rem 0.85rem;
+    text-align: center;
+}
+
+.wc-favorites-page .wc-favorites-empty::before {
+    align-items: center;
+    background: rgba(2, 128, 144, 0.08);
+    border: 1px solid rgba(2, 128, 144, 0.14);
+    border-radius: 50%;
+    color: #82999c;
+    content: "\2606";
+    display: inline-flex;
+    font-size: 0.9rem;
+    height: 1.6rem;
+    justify-content: center;
+    line-height: 1;
+    width: 1.6rem;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .wc-favorites-page .wc-favorites-list li:hover {
+        background: rgba(2, 128, 144, 0.025);
+        border-color: rgba(2, 128, 144, 0.3);
+        transform: none;
+    }
+}
+
+@media screen and (max-width: 44em) {
+    .wc-favorites-hero {
+        margin-bottom: 0.8rem;
+        padding: 0.02rem 0 0.06rem 0.58rem;
+    }
+
+    .md-typeset .wc-favorites-hero > h1 {
+        font-size: 1.4rem;
+    }
+
+    .wc-favorites-page .wc-favorites-group + .wc-favorites-group {
+        margin-top: 0.8rem;
+    }
+
+    .md-typeset .wc-favorites-page .wc-favorites-list > li {
+        gap: 0.25rem;
+        grid-template-columns: minmax(0, 1fr) 1.9rem;
+        padding-left: 0.58rem;
+        padding-right: 0.2rem;
+    }
+
+    .wc-favorites-page .wc-favorites-list .wc-favorite-toggle {
+        height: 1.9rem;
+        width: 1.9rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .wc-favorites-page .wc-favorites-list li {
+        transition: none;
+    }
+}
