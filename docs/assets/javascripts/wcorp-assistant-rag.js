@@ -175,6 +175,18 @@
         return cache.get(source.sourceId);
       }));
     }
+    function sanitizeAnswerMessage(message) {
+      return message
+        .split(/\r?\n/)
+        .filter((line) => {
+          const text = line.trim();
+          return !/^(?:[>*_`\-\s]*)fontes?(?:[*_`]*)\s*:/i.test(text);
+        })
+        .join("\n")
+        .replace(/\n{3,}/g, "\n\n")
+        .trim();
+    }
+
     function validateMessage(message, savedIds = []) {
       // Contract validation before rendering, not text removal. Only model output
       // is checked; the user's question and semantic history are not rewritten.
@@ -200,6 +212,7 @@
       if (value.kind === "chat" && (typeof value.chatType !== "string" || !Object.hasOwn(CHAT_REPLIES, value.chatType))) throw new Error("Invalid chat type");
       if (fields.includes("message")) {
         if (typeof value.message !== "string" || !value.message.trim() || value.message.length > 16000) throw new Error("Invalid message");
+        if (stage === "answer") value.message = sanitizeAnswerMessage(value.message);
         validateMessage(value.message);
       }
       if (fields.includes("ack")) {
