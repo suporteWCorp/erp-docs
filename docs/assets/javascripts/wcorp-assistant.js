@@ -452,16 +452,17 @@
   }
 
   function appendOfficialSources(message, sources) {
-    if (!sources.length) return;
+    const recommendedSources = sources.filter((source) => source.type === "guia" || source.type === "manual");
+    if (!recommendedSources.length) return;
     const recommendation = document.createElement("div");
     recommendation.className = "wc-assistant__message wc-assistant__message--source";
-    for (const source of sources) {
+    for (const source of recommendedSources) {
       const result = document.createElement("div");
       result.className = "wc-assistant__result";
       const type = document.createElement("span");
       type.className = "wc-assistant__result-type";
       const link = document.createElement("a");
-      const label = source.type === "guia" ? "Guia recomendado" : source.type === "manual" ? "Manual recomendado" : "Documentação recomendada";
+      const label = source.type === "guia" ? "Guia recomendado" : "Manual recomendado";
       type.textContent = label;
       link.className = "wc-assistant__result-title";
       link.textContent = source.title;
@@ -1210,7 +1211,15 @@
         scrollConversationToBottom();
 
         try {
-          const finalAnswer = await conversation.send(value);
+          const finalAnswer = await conversation.send(value, {
+            onAck(ack) {
+              typingMessage.remove();
+              const acknowledgement = createMessage(ack);
+              acknowledgement.dataset.kind = "ack";
+              messages.append(acknowledgement, typingMessage);
+              scrollConversationToBottom();
+            }
+          });
 
           typingMessage.remove();
 

@@ -1,4 +1,4 @@
-site_name: Guia WCorp
+site_name: Central de Ajuda
 site_description: Central de ajuda do WCorp para usuários, suporte e desenvolvimento.
 site_author: WCorp
 site_url: https://suportewcorp.github.io/erp-docs/
@@ -31,7 +31,7 @@ theme:
 nav:
   - Início: index.md
   - Guia:
-      - Visão geral: como-fazer/index.md
+      - Guias: como-fazer/index.md
       - Administração:
           - Como cadastrar uma Natureza de Operação: como-fazer/cadastrar-natureza-operacao.md
           - Como cadastrar uma Condição de Pagamento: como-fazer/cadastrar-condicao-pagamento.md
@@ -68,8 +68,9 @@ nav:
           - Como verificar o histórico de alterações: como-fazer/verificar-historico-alteracoes.md
       - Relatórios:
           - Como consultar SPED Fiscal: como-fazer/consultar-sped-fiscal.md
+
   - Manual:
-      - Visão geral: manual/index.md
+      - Manuais: manual/index.md
       - Comercial:
           - Visão geral: comercial/comercial-geral.md
           - Clientes: comercial/comercial-clientes.md
@@ -127,8 +128,9 @@ nav:
           - NCMS: administracao/ncms.md
           - Centro de Custo: administracao/centro-custo.md
           - Condições de Pagamento: administracao/condicoes-pagamento.md
+
   - Referências:
-      - Visão geral: referencia/index.md
+      - Referências: referencia/index.md
       - FAQ: referencia/faq.md
       - Links úteis: referencia/links-uteis.md
       - Contato do suporte: referencia/contato-suporte.md
@@ -137,11 +139,14 @@ nav:
           - Rejeições Fiscais: erros-solucoes/rejeicoes-fiscais.md
           - Erros Operacionais: erros-solucoes/erros-operacionais.md
           - Problemas Técnicos: erros-solucoes/problemas-tecnicos.md
+
   - Ferramentas:
-      - Visão geral: ferramentas/index.md
+      - Ferramentas: ferramentas/index.md
       - Indicador de Relatório: ferramentas/indicador-relatorio.md
       - Validador de XML: ferramentas/validador-xml.md
+
   - Suporte: suporte/index.md
+
 markdown_extensions:
   - admonition
   - attr_list
