@@ -12,7 +12,7 @@ theme:
   custom_dir: overrides
   language: pt-BR
   logo: assets/wcorp-logo-header-display.png
-  favicon: assets/wcorp-favicon.png
+  favicon: assets/wcorp-favicon-v2.png
   palette:
     - scheme: default
       primary: teal
@@ -40,13 +40,10 @@ nav:
           - Como configurar um Grupo de Usuário: como-fazer/configurar-grupo-usuario.md
           - Como verificar usuários logados: como-fazer/verificar-usuarios-log.md
       - Comercial:
-          - Como cancelar um pedido: como-fazer/cancelar-pedido.md
           - Como cadastrar um cliente: como-fazer/cadastrar-cliente.md
           - Como criar um orçamento: como-fazer/criar-orcamento.md
           - Como gerar um pedido: como-fazer/fazer-pedido-venda.md
       - Estoque:
-          - Como fazer inventário: como-fazer/fazer-inventario.md
-          - Como transferir estoque: como-fazer/transferir-estoque.md
           - Como cadastrar um material: como-fazer/cadastrar-material.md
           - Como alterar o NCM de um material: como-fazer/alterar-ncm-material.md
           - Como consultar estoque: como-fazer/consultar-estoque.md
@@ -71,19 +68,6 @@ nav:
           - Como verificar o histórico de alterações: como-fazer/verificar-historico-alteracoes.md
       - Relatórios:
           - Como consultar SPED Fiscal: como-fazer/consultar-sped-fiscal.md
-      - Financeiro:
-          - Como baixar um título: como-fazer/baixar-titulo.md
-          - Como gerar boleto: como-fazer/gerar-boleto.md
-          - Como lançar contas a pagar: como-fazer/lancar-contas-a-pagar.md
-      - Cadastros:
-          - Como cadastrar um fornecedor: como-fazer/cadastrar-fornecedor.md
-      - Compras:
-          - Como criar um pedido de compra: como-fazer/criar-pedido-compra.md
-      - Documentos Fiscais:
-          - Como emitir uma devolução: como-fazer/emitir-devolucao.md
-          - Como emitir uma nota complementar: como-fazer/emitir-nota-complementar.md
-          - Como importar XML: como-fazer/importar-xml.md
-          - Como lançar uma nota de entrada: como-fazer/lancar-nota-entrada.md
   - Manual:
       - Visão geral: manual/index.md
       - Comercial:
@@ -203,6 +187,7 @@ extra_javascript:
   - assets/javascripts/wcorp-favorites.js
   - assets/javascripts/wcorp-content-info.js
   - assets/javascripts/wcorp-analytics.js
+  - assets/javascripts/wcorp-assistant-rag.js
   - assets/javascripts/wcorp-assistant.js
   - assets/javascripts/wcorp-search.js
   - assets/javascripts/wcorp-filters.js

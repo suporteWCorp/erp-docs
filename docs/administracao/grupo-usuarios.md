@@ -32,4 +32,4 @@ O detalhamento dos campos e regras desta tela ainda precisa ser complementado.
 ## Veja também
 
 - [Como configurar um Grupo de Usuário](../como-fazer/configurar-grupo-usuario.md){: target="_blank" rel="noopener" }
-- [Manual > Administração > Usuários](usuarios.md){: target="_blank" rel="noopener" }
+- [Consultar manual de Usuários](usuarios.md){: target="_blank" rel="noopener" }

@@ -39,4 +39,4 @@ Informe também: Data do Orçamento, Status do Orçamento, Workflow, Revisão, M
 
 ## Veja também
 
-- [Guia: Como criar um orçamento](../como-fazer/criar-orcamento.md){: target="_blank" rel="noopener" }
+- [Como criar um orçamento](../como-fazer/criar-orcamento.md){: target="_blank" rel="noopener" }

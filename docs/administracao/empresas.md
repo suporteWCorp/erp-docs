@@ -28,5 +28,5 @@ O detalhamento dos campos e regras desta tela ainda precisa ser complementado.
 
 ## Veja também
 
-- [Manual > Administração > Parâmetros Sistema](parametros-sistema.md){: target="_blank" rel="noopener" }
-- [Manual > Administração > Usuários](usuarios.md){: target="_blank" rel="noopener" }
+- [Consultar manual de Parâmetros do Sistema](parametros-sistema.md){: target="_blank" rel="noopener" }
+- [Consultar manual de Usuários](usuarios.md){: target="_blank" rel="noopener" }

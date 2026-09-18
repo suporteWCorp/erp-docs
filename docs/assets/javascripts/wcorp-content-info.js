@@ -475,7 +475,9 @@
       const itemElement = document.createElement("li");
       const link = document.createElement("a");
       link.href = itemUrl(target);
-      link.textContent = `${relatedTypeLabel(target.type)}: ${target.title}`;
+      link.textContent = item.type === "manual"
+        ? target.title
+        : `${relatedTypeLabel(target.type)}: ${target.title}`;
       itemElement.appendChild(link);
       list.appendChild(itemElement);
     });

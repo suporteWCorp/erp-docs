@@ -740,7 +740,7 @@ body.wc-guide-page .md-typeset h2#como-fazer + ol > li > b:first-child {
 
 .wc-manual-tabs .md-tabs {
     background: #ffffff;
-    border-bottom: 2px solid var(--wc-manual-accent);
+    border-bottom: 2px solid #cde1e4;
     border-top: 0;
     box-shadow: none;
     display: block;
@@ -1288,7 +1288,7 @@ body.wc-context-manual .wc-content-info {
     padding-bottom: 0.78rem;
 }
 
-body.wc-context-manual .md-typeset h2 {
+body.wc-context-manual .md-typeset h2:not(:where(#veja-tambem, #conteudos-relacionados)) {
     color: #005f66 !important;
     font-size: 0.96rem;
     font-weight: 750;
@@ -1386,27 +1386,6 @@ body.wc-context-manual .md-typeset h2#acoes-disponiveis + ol {
     color: #465b65;
     line-height: 1.62;
     padding-left: 1.05rem;
-}
-
-body.wc-context-manual .md-typeset h2#veja-tambem + ul,
-body.wc-context-manual .md-typeset h2#conteudos-relacionados + ul {
-    border-top: 1px solid rgba(2, 128, 144, 0.14);
-    list-style: none;
-    margin-left: 0;
-    padding: 0.55rem 0 0;
-}
-
-body.wc-context-manual .md-typeset h2#veja-tambem + ul li,
-body.wc-context-manual .md-typeset h2#conteudos-relacionados + ul li {
-    margin: 0.28rem 0;
-    padding-left: 0;
-}
-
-body.wc-context-manual .md-typeset h2#veja-tambem + ul a,
-body.wc-context-manual .md-typeset h2#conteudos-relacionados + ul a {
-    color: #006b73;
-    font-weight: 700;
-    text-decoration: none;
 }
 
 body.wc-manual-index.wc-context-manual .md-typeset > .wc-breadcrumb-bar + h1,

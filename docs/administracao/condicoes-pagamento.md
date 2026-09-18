@@ -32,4 +32,4 @@ O detalhamento dos campos e regras desta tela ainda precisa ser complementado.
 ## Veja também
 
 - [Como cadastrar uma Condição de Pagamento](../como-fazer/cadastrar-condicao-pagamento.md){: target="_blank" rel="noopener" }
-- [Manual > Financeiro > Contas a Receber](../financeiro/contas-a-receber.md){: target="_blank" rel="noopener" }
+- [Consultar manual de Contas a Receber](../financeiro/contas-a-receber.md){: target="_blank" rel="noopener" }

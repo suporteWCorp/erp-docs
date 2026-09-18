@@ -51,4 +51,4 @@ A disponibilidade dessas ações pode variar conforme o pedido e as configuraç�
 
 ## Veja também
 
-- [Guia: Como gerar um pedido](../como-fazer/fazer-pedido-venda.md){: target="_blank" rel="noopener" }
+- [Como gerar um pedido](../como-fazer/fazer-pedido-venda.md){: target="_blank" rel="noopener" }

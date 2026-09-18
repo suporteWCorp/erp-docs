@@ -77,4 +77,4 @@ Defina o conteúdo fiscal de cada campo conforme a orientação do responsável 
 
 - [Como cadastrar uma Natureza de Operação](../como-fazer/cadastrar-natureza-operacao.md){: target="_blank" rel="noopener" }
 - [Como emitir uma NF-e](../como-fazer/faturar-nota.md){: target="_blank" rel="noopener" }
-- [Manual > Faturamento > Nota Fiscal](../faturamento/faturamento-nf.md){: target="_blank" rel="noopener" }
+- [Consultar manual de Nota Fiscal](../faturamento/faturamento-nf.md){: target="_blank" rel="noopener" }

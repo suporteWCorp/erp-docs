@@ -32,4 +32,4 @@ O detalhamento dos campos e regras desta tela ainda precisa ser complementado.
 ## Veja também
 
 - [Como cadastrar um material](../como-fazer/cadastrar-material.md){: target="_blank" rel="noopener" }
-- [Manual > Administração > Natureza de Operação](natureza-op.md){: target="_blank" rel="noopener" }
+- [Consultar manual de Natureza de Operação](natureza-op.md){: target="_blank" rel="noopener" }
