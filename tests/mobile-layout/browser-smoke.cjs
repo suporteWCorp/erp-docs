@@ -180,6 +180,9 @@ async function until(fn, label) {
     baseline = true; const before = await desktopGeometry();
     baseline = false; const after = await desktopGeometry();
     assert.deepEqual(after, before, 'desktop geometry/styles changed');
+    if (process.env.ASSISTANT_VISUAL === '1') {
+      await require('../assistant/visual-scenarios.cjs')({send,evaluate,origin,until,sleep,root});
+    }
     assert.deepEqual(exceptions, [], 'browser exceptions');
     assert.deepEqual(hermesRequests, [], 'layout tests must not invoke Hermes');
     const report = {browser:'Edge/Chromium touch emulation (not native Safari)',results,

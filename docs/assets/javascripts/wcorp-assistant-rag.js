@@ -29,7 +29,11 @@
     'Se a documentação for insuficiente: {"kind":"support","message":"explique a insuficiência e recomende entrar em contato com o suporte"}.',
     "Quando houver procedimento, preserve todas as etapas necessárias, sua ordem e significado, incluindo condições e observações. Não invente etapas, configurações ou ações.",
     "Guia é procedural; Manual é referência. Não transforme um Manual sem procedimento em passo a passo artificial.",
-    "Use apenas sourceIds nas referências; não escreva URLs nem rótulos de Guia/Manual recomendado no message."
+    "Use apenas sourceIds nas referências; não escreva URLs nem rótulos de Guia/Manual recomendado no message.",
+    "Nunca escreva Fonte: no campo message. Nunca escreva sourceId nem exponha identificadores internos como como-fazer/fazer-pedido-venda no campo message.",
+    "As referências oficiais devem aparecer somente no campo sourceIds da resposta answer. O frontend é responsável por renderizar Guia/Manual recomendado com título oficial e URL validada.",
+    "Contrato de saída: message contém somente a resposta final destinada ao usuário, nunca referências técnicas, identificadores internos, caminhos de sourceId ou URLs de documentação. sourceIds é o único campo permitido para referências documentais.",
+    "São proibidos em message: Fonte:, Fontes:, sourceId, sourceIds, caminhos como como-fazer/... e manual/..., IDs internos equivalentes e metadados do protocolo (kind, stage, catalog, sources). Não acrescente referências ao final da resposta."
   ].join("\n");
 
   function shortHistory(history) {
@@ -157,6 +161,18 @@
         return cache.get(source.sourceId);
       }));
     }
+    function validateMessage(message, savedIds = []) {
+      // Contract validation before rendering, not text removal. Only model output
+      // is checked; the user's question and semantic history are not rewritten.
+      const knownId = [...(resources?.pages || []), ...savedIds].some((id) => typeof id === "string" && id.includes("/") &&
+        new RegExp("(?:^|[^\\w-])" + id.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "(?![\\w-])", "i").test(message));
+      if (/^\s*(?:[>#*`_-]\s*)*fontes?\s*(?:[*_`]\s*)*:/im.test(message) ||
+          /\bsourceIds?\b|\b(?:como-fazer|manual)\/[\w-]+|\[WCORP_RAG_CONTEXT\]/i.test(message) ||
+          /["'](?:kind|stage|catalog|sources)["']\s*:/.test(message) ||
+          message.includes(base.href) || knownId) {
+        throw new Error("Internal reference in message; use sourceIds only");
+      }
+    }
     function parse(raw, stage) {
       if (typeof raw !== "string") throw new Error("Hermes returned no JSON content");
       const value = JSON.parse(raw);
@@ -166,6 +182,7 @@
       const fields = value.kind === "retrieve" ? ["kind", "sourceIds"] : value.kind === "answer" ? ["kind", "message", "sourceIds"] : ["kind", "message"];
       if (Object.keys(value).length !== fields.length || fields.some((key) => !Object.hasOwn(value, key))) throw new Error("Invalid JSON fields");
       if (fields.includes("message") && (typeof value.message !== "string" || !value.message.trim() || value.message.length > 16000)) throw new Error("Invalid message");
+      if (fields.includes("message")) validateMessage(value.message);
       if (fields.includes("sourceIds") && (!Array.isArray(value.sourceIds) || !value.sourceIds.length || value.sourceIds.length > MAX_SOURCES ||
         value.sourceIds.some((id) => typeof id !== "string"))) throw new Error("Expected 1-3 source IDs");
       return value;
@@ -197,7 +214,7 @@
         repairBudget.remaining--;
       }
       // One repair per user request, retaining evidence but not echoing invalid model output.
-      raw = await completion([...messages, {role: "user", content: "Sua resposta anterior violou o protocolo. Retorne somente o objeto JSON válido da etapa atual, com os campos exigidos e sem campos extras."}], stage);
+      raw = await completion([...messages, {role: "user", content: "Sua resposta anterior violou o protocolo. Retorne somente o JSON válido da etapa. message deve conter apenas a resposta ao usuário, sem Fonte/Fontes, IDs, URLs ou metadados; referências somente em sourceIds, quando permitido."}], stage);
       return parse(raw, stage);
     }
     async function ask(question, history = []) {
@@ -214,7 +231,7 @@
       const ids = authorize(result.sourceIds, new Set(selected));
       return {...result, sourceIds: ids, sources: references(ids)};
     }
-    return {ask, initialize, publicPage, pageKey, references};
+    return {ask, initialize, publicPage, pageKey, references, validateMessage};
   }
 
   // History stores conversation text only, never catalog payloads or fetched documents.

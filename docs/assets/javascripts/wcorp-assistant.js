@@ -448,21 +448,50 @@
     flushParagraph();
     message.dataset.text = String(markdown || "");
     message.dataset.sourceIds = JSON.stringify(sources.map((source) => source.sourceId));
-    appendOfficialSources(message, sources);
     return message;
   }
 
   function appendOfficialSources(message, sources) {
+    if (!sources.length) return;
+    const recommendation = document.createElement("div");
+    recommendation.className = "wc-assistant__message wc-assistant__message--source";
     for (const source of sources) {
-      const paragraph = document.createElement("p");
+      const result = document.createElement("div");
+      result.className = "wc-assistant__result";
+      const type = document.createElement("span");
+      type.className = "wc-assistant__result-type";
       const link = document.createElement("a");
       const label = source.type === "guia" ? "Guia recomendado" : source.type === "manual" ? "Manual recomendado" : "Documentação recomendada";
-      paragraph.appendChild(document.createTextNode(label + ": "));
+      type.textContent = label;
+      link.className = "wc-assistant__result-title";
       link.textContent = source.title;
       link.href = source.url;
-      paragraph.appendChild(link);
-      message.appendChild(paragraph);
+      result.append(type, link);
+      recommendation.appendChild(result);
     }
+    message.after(recommendation);
+  }
+
+  const followUps = [
+    "Ficou alguma dúvida?",
+    "Posso ajudar com mais alguma coisa?",
+    "Precisa de mais alguma informação?",
+    "Tem mais alguma dúvida sobre isso?"
+  ];
+  function appendFollowUp(message) {
+    const followUp = document.createElement("div");
+    followUp.className = "wc-assistant__message wc-assistant__message--followup";
+    followUp.textContent = followUps[Math.floor(Math.random() * followUps.length)];
+    message.after(followUp);
+  }
+
+  function appendAssistantResponse(messages, result) {
+    const message = createMarkdownMessage(result.message, result.sources || []);
+    if (result.kind) message.dataset.kind = result.kind;
+    messages.appendChild(message);
+    if (result.kind === "answer") appendFollowUp(message);
+    appendOfficialSources(message, result.sources || []);
+    return message;
   }
 
   function createHtmlMessage(html) {
@@ -840,6 +869,7 @@
     const serializeConversation = () =>
       Array.from(messages.children).map((element) => {
         if (
+          element.matches(".wc-assistant__message--source, .wc-assistant__message--followup") ||
           element.classList.contains(
             "wc-assistant__typing"
           ) ||
@@ -868,6 +898,7 @@
             : "assistant",
 
           text: element.dataset.text || element.textContent,
+          kind: element.dataset.kind,
           sourceIds: JSON.parse(element.dataset.sourceIds || "[]")
         };
       }).filter(Boolean);
@@ -949,13 +980,25 @@
           return;
         }
 
-        const message = item.type === "user"
-          ? createMessage(String(item.text || ""), true)
-          : createMarkdownMessage(String(item.text || ""));
-        messages.appendChild(message);
-        if (item.type === "assistant" && Array.isArray(item.sourceIds) && item.sourceIds.length) {
+        if (item.type === "user") {
+          messages.appendChild(createMessage(String(item.text || ""), true));
+          return;
+        }
+        const ids = Array.isArray(item.sourceIds) ? item.sourceIds : [];
+        // Saved assistant text is also untrusted; never rewrite the user's text.
+        try { getAssistantPipeline().validateMessage(String(item.text || ""), ids); }
+        catch (_) {
+          messages.appendChild(createMessage(window.WCorpAssistantRag.TECHNICAL_ERROR));
+          return;
+        }
+        const message = appendAssistantResponse(messages, {message: String(item.text || ""), kind: item.kind});
+        if (ids.length) {
           getAssistantPipeline().initialize().then(() => {
-            const sources = getAssistantPipeline().references(item.sourceIds);
+            const sources = getAssistantPipeline().references(ids);
+            if (!item.kind) {
+              message.dataset.kind = "answer";
+              appendFollowUp(message);
+            }
             appendOfficialSources(message, sources);
             message.dataset.sourceIds = JSON.stringify(sources.map((source) => source.sourceId));
             saveState();
@@ -1171,11 +1214,7 @@
 
           typingMessage.remove();
 
-          messages.appendChild(
-            createMarkdownMessage(
-              finalAnswer.message, finalAnswer.sources
-            )
-          );
+          appendAssistantResponse(messages, finalAnswer);
         } catch (error) {
           console.error(
             "Erro ao consultar Hermes:",
