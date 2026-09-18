@@ -134,7 +134,7 @@ body:has([data-md-toggle="search"]:checked) .wc-assistant {
 }
 
 .wc-assistant__messages {
-    background: linear-gradient(180deg, #f6fbfb 0%, #f2f8f9 100%);
+    background: linear-gradient(180deg, #c2d9d9 0%, #f2f8f9 100%);
     display: flex;
     flex: 1 1 auto;
     flex-direction: column;
@@ -207,7 +207,7 @@ body:has([data-md-toggle="search"]:checked) .wc-assistant {
     border: 1px solid rgba(82, 99, 105, 0.1);
     border-radius: 16px 16px 16px 6px;
     box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
-    color: #3f5560;
+    color: #000000e6;
     font-size: 0.76rem;
     line-height: 1.58;
     max-width: 88%;
@@ -352,6 +352,44 @@ body:has([data-md-toggle="search"]:checked) .wc-assistant {
     width: fit-content;
 }
 
+.wc-assistant__message--support {
+    background: #f8fcfc;
+    border-color: rgba(2, 128, 144, 0.2);
+    box-shadow: none;
+    display: grid;
+    gap: 0.5rem;
+}
+
+.wc-assistant__support-title {
+    color: #006f78 !important;
+}
+
+.wc-assistant__support-details {
+    display: grid;
+    font-size: 0.7rem;
+    gap: 0.18rem;
+}
+
+.wc-assistant__support-action {
+    align-items: center;
+    align-self: start;
+    background: #007b80;
+    border-radius: 7px;
+    color: #ffffff !important;
+    display: inline-flex;
+    font-size: 0.69rem;
+    font-weight: 700;
+    justify-self: start;
+    padding: 0.38rem 0.62rem;
+    text-decoration: none !important;
+}
+
+.wc-assistant__support-action:hover,
+.wc-assistant__support-action:focus-visible {
+    background: #00656b;
+    color: #ffffff !important;
+}
+
 .wc-assistant__result-type {
     color: #6b7d86;
     font-size: 0.56rem;
@@ -398,11 +436,11 @@ body:has([data-md-toggle="search"]:checked) .wc-assistant {
 /* Mensagem do usuário */
 .wc-assistant__message--user {
     align-self: flex-end;
-    background: #e8f5f3;
+    background: #59a4c1;
     border-color: transparent;
     border-radius: 16px 16px 6px 16px;
     box-shadow: none;
-    color: #005f66;
+    color: #e9e9e9;
 }
 
 .wc-assistant__message--user strong {
